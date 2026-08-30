@@ -1,1 +1,165 @@
-# tripboard-web
+# TripBoard
+
+TripBoard is a private, shared, mobile-first trip manager PWA for a small travelling group. It keeps the live itinerary, must-do checklist, food goals, bookings, local wallet balances, budgets, and actual consumption in one shared operational view.
+
+The initial seed represents a Hong Kong and Macau trip from 25 December 2026 through 2 January 2027. Trip content is imported data, not hard-coded into route components.
+
+## Architecture
+
+- React 19 + TypeScript strict mode
+- Vite with Vinext route entries and Cloudflare Worker-compatible ESM output
+- Tailwind CSS plus product-specific responsive styles
+- TanStack Query boundary for server state
+- Supabase Postgres, Auth, Realtime, Storage, Edge Functions, and RLS
+- Dexie/IndexedDB for cached trip records and the offline mutation queue
+- Decimal.js for frontend money previews; Postgres `numeric` for authority
+- Luxon for trip-timezone calculations
+- Zod for seed and unsafe input validation
+- Vitest for domain rules and Playwright for critical browser journeys
+
+See [architecture](docs/architecture.md) and the [financial model](docs/financial-model.md) for the detailed design.
+
+## Prerequisites
+
+- Node.js 22.13 or newer
+- pnpm 11
+- A Supabase project
+- Supabase CLI for local database migrations and database tests
+
+## Local setup
+
+1. Install dependencies:
+
+   ```bash
+   pnpm install
+   ```
+
+2. Copy `.env.example` to `.env.local` and fill in the browser-safe Supabase URL and anonymous key.
+
+3. Start the application:
+
+   ```bash
+   pnpm dev
+   ```
+
+Without Supabase variables the app intentionally opens with clearly labelled preview data. It does not pretend that preview changes are shared remotely.
+
+## Supabase setup
+
+Create a Supabase project, then link the local repository:
+
+```bash
+supabase login
+supabase link --project-ref YOUR_PROJECT_REF
+supabase db push
+```
+
+The migration creates enums, tables, indexes, RLS policies, private booking storage, audit triggers, Realtime publication entries, financial views, and transactional RPC functions. Do not recreate them manually in the Dashboard.
+
+In Supabase Auth email templates, include `{{ .Token }}` so travellers receive the six-digit email OTP. The app deliberately uses code entry rather than requiring a magic link or password.
+
+### Environment variables
+
+Browser-safe:
+
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- `NEXT_PUBLIC_VAPID_PUBLIC_KEY` (safe public Web Push key)
+
+Seed script only:
+
+- `SUPABASE_URL`
+- `SUPABASE_SERVICE_ROLE_KEY`
+- `TRIPBOARD_SEED_OWNER_EMAIL`
+
+Notification Edge Function only:
+
+- `SUPABASE_URL`
+- `SUPABASE_SERVICE_ROLE_KEY`
+- `VAPID_PUBLIC_KEY`
+- `VAPID_PRIVATE_KEY`
+- `VAPID_SUBJECT`
+
+Never expose `SUPABASE_SERVICE_ROLE_KEY` or the VAPID private key to browser code.
+
+## Seed the Hong Kong trip
+
+Sign in once with the owner email so an Auth user exists, configure the seed-only environment variables, then run:
+
+```bash
+pnpm seed:trip
+```
+
+The script validates `seed/hong-kong-2026.json` with Zod and imports the trip, days, places, checklist, bookings, itinerary, payment accounts, and budgets.
+
+After changing the JSON itinerary for an already seeded trip, run the explicit itinerary sync:
+
+```bash
+pnpm sync:itinerary
+```
+
+This replaces that trip's itinerary entries with the JSON version, including removing entries no longer in the file. It preserves the trip's checklist, places, bookings, accounts, budgets, and financial records.
+
+## Commands
+
+```bash
+pnpm dev          # local PWA
+pnpm lint         # source lint
+pnpm typecheck    # strict TypeScript
+pnpm test         # unit tests, including all financial acceptance cases
+pnpm build        # production build
+pnpm check        # lint + typecheck + tests + build
+pnpm seed:trip    # validated developer trip import
+pnpm sync:itinerary # replace an existing seed trip's itinerary from JSON
+```
+
+Run critical browser journeys with:
+
+```bash
+pnpm exec playwright test
+```
+
+Database tests require a running local Supabase stack:
+
+```bash
+supabase start
+supabase test db
+```
+
+## PWA installation
+
+Android/Chromium browsers show the install action when the browser raises the install prompt. On iPhone or iPad, open TripBoard in Safari, use Share, then choose **Add to Home Screen**. Installation is optional; every screen remains a normal URL.
+
+The service worker caches the app shell and previously opened routes. IndexedDB queues mutations and retries them on reconnect and focus. Browser Background Sync is treated only as an optional enhancement.
+
+## Push configuration
+
+Deploy `supabase/functions/evaluate-notifications` with the server-only secrets above. Schedule it approximately every five minutes using Supabase Cron. The evaluator inserts deduplicated in-app notifications, rechecks current trip state, and sends visible Web Push only to configured device subscriptions.
+
+Notification permission is never requested during initial page load. Each device must use **More → Trip alerts → Enable trip alerts**.
+
+## Deployment
+
+### Sites
+
+The included Vite configuration emits a Cloudflare Worker-compatible build and uses the Sites plugin. Configure the public Supabase values in the hosted runtime, build, and publish through the Sites workflow.
+
+### Vercel
+
+Supabase and all domain code are hosting-provider independent. If deploying to Vercel, configure the same public environment variables, use `pnpm build`, and preserve normal route fallback behavior. Keep the service worker at the origin root.
+
+## Browser and PWA limitations
+
+- Offline mode cannot provide offline turn-by-turn maps; addresses and transport notes remain available.
+- Booking files are cached only after the browser has opened them and cache/storage policy permits it.
+- Web Push requires standards support and, on supported iPhone/iPad versions, installation to the Home Screen.
+- Background Sync is inconsistent across browsers; reconnect and focus retries are the reliable path.
+- A final card settlement may remain provisional until the user enters the actual INR charge.
+
+## Security notes
+
+- Every trip-scoped user table has RLS.
+- Financial inserts are RPC-only and idempotent.
+- Booking documents live in a private bucket with trip-member policies.
+- Uploaded filenames, MIME types, and sizes are restricted.
+- Full card numbers, CVV, PINs, auth tokens, OTP codes, and banking credentials must never be stored or logged.

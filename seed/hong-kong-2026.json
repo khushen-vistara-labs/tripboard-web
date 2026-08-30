@@ -1,0 +1,1648 @@
+{
+  "trip": {
+    "name": "Hong Kong and Macau Christmas and New Year",
+    "startDate": "2026-12-25",
+    "endDate": "2027-01-02",
+    "timezone": "Asia/Hong_Kong",
+    "baseCurrency": "HKD"
+  },
+  "days": [
+    {
+      "date": "2026-12-25",
+      "title": "Arrival • Christmas Hong Kong • Victoria Harbour • Aqua Luna"
+    },
+    {
+      "date": "2026-12-26",
+      "title": "Boxing Day • Victoria Peak • Happy Valley • Central • Star Ferry"
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Old-School Dim Sum • Sham Shui Po • Mong Kok • Temple Street"
+    },
+    {
+      "date": "2026-12-28",
+      "title": "Macau Full Day • Historic Macau • Bungy • Cotai at Night"
+    },
+    {
+      "date": "2026-12-29",
+      "title": "Ngong Ping 360 • Big Buddha • Po Lin Monastery • Tai O"
+    },
+    {
+      "date": "2026-12-30",
+      "title": "Hong Kong Disneyland Full Day"
+    },
+    {
+      "date": "2026-12-31",
+      "title": "Relaxed Morning • Wing Fat Seafood • Victoria Harbour • New Year's Eve"
+    },
+    {
+      "date": "2027-01-01",
+      "title": "Kennedy Town • Ding Ding • Wan Chai • Causeway Bay • North Point • Monster Building"
+    },
+    {
+      "date": "2027-01-02",
+      "title": "Departure • Hong Kong → Hanoi → Bengaluru"
+    }
+  ],
+  "places": [
+    {
+      "key": "bridal-tea-house",
+      "name": "Bridal Tea House Hotel Yau Ma Tei",
+      "address": "Arthur Street, Yau Ma Tei, Hong Kong",
+      "neighbourhood": "Yau Ma Tei",
+      "category": "Hotel",
+      "priority": "MUST"
+    },
+    {
+      "key": "hkg-airport",
+      "name": "Hong Kong International Airport",
+      "neighbourhood": "Chek Lap Kok",
+      "category": "Airport",
+      "priority": "MUST"
+    },
+    {
+      "key": "tsim-sha-tsui-promenade",
+      "name": "Tsim Sha Tsui Promenade",
+      "neighbourhood": "Tsim Sha Tsui",
+      "category": "Waterfront",
+      "priority": "MUST",
+      "expectedDurationMinutes": 100
+    },
+    {
+      "key": "aqua-luna",
+      "name": "Aqua Luna",
+      "neighbourhood": "Tsim Sha Tsui",
+      "category": "Harbour Cruise",
+      "priority": "MUST",
+      "expectedDurationMinutes": 60
+    },
+    {
+      "key": "victoria-peak",
+      "name": "Victoria Peak",
+      "neighbourhood": "The Peak",
+      "category": "Viewpoint",
+      "priority": "MUST",
+      "expectedDurationMinutes": 120
+    },
+    {
+      "key": "lugard-road",
+      "name": "Lugard Road",
+      "neighbourhood": "The Peak",
+      "category": "Scenic Walk",
+      "priority": "MUST",
+      "expectedDurationMinutes": 60
+    },
+    {
+      "key": "cheung-hing",
+      "name": "Cheung Hing Coffee Shop",
+      "neighbourhood": "Happy Valley",
+      "category": "Cha Chaan Teng",
+      "priority": "WANT",
+      "expectedDurationMinutes": 45
+    },
+    {
+      "key": "tai-kwun",
+      "name": "Tai Kwun",
+      "neighbourhood": "Central",
+      "category": "Heritage",
+      "priority": "WANT",
+      "expectedDurationMinutes": 75
+    },
+    {
+      "key": "pmq",
+      "name": "PMQ",
+      "neighbourhood": "Central",
+      "category": "Arts and Design",
+      "priority": "WANT",
+      "expectedDurationMinutes": 45
+    },
+    {
+      "key": "star-ferry-central",
+      "name": "Central Star Ferry Pier",
+      "neighbourhood": "Central",
+      "category": "Ferry",
+      "priority": "WANT"
+    },
+    {
+      "key": "luk-on-kui",
+      "name": "Luk On Kui",
+      "address": "2-3/F, 40-50 Des Voeux Road West, Sheung Wan, Hong Kong",
+      "neighbourhood": "Sheung Wan",
+      "category": "Dim Sum",
+      "priority": "MUST",
+      "expectedDurationMinutes": 90
+    },
+    {
+      "key": "sham-shui-po",
+      "name": "Sham Shui Po",
+      "neighbourhood": "Sham Shui Po",
+      "category": "Neighbourhood",
+      "priority": "WANT",
+      "expectedDurationMinutes": 180
+    },
+    {
+      "key": "mong-kok",
+      "name": "Mong Kok",
+      "neighbourhood": "Mong Kok",
+      "category": "Neighbourhood",
+      "priority": "MUST",
+      "expectedDurationMinutes": 220
+    },
+    {
+      "key": "temple-street",
+      "name": "Temple Street Night Market",
+      "neighbourhood": "Yau Ma Tei",
+      "category": "Night Market",
+      "priority": "MUST",
+      "expectedDurationMinutes": 75
+    },
+    {
+      "key": "hing-kee",
+      "name": "Hing Kee Claypot Rice",
+      "neighbourhood": "Temple Street",
+      "category": "Restaurant",
+      "priority": "MUST",
+      "expectedDurationMinutes": 75
+    },
+    {
+      "key": "kai-kai-dessert",
+      "name": "Kai Kai Dessert",
+      "neighbourhood": "Jordan",
+      "category": "Dessert",
+      "priority": "MUST",
+      "expectedDurationMinutes": 45
+    },
+    {
+      "key": "sheung-wan-ferry",
+      "name": "Hong Kong Macau Ferry Terminal",
+      "neighbourhood": "Sheung Wan",
+      "category": "Ferry Terminal",
+      "priority": "MUST"
+    },
+    {
+      "key": "senado-square",
+      "name": "Senado Square",
+      "neighbourhood": "Macau Historic Centre",
+      "category": "Historic Square",
+      "priority": "MUST",
+      "expectedDurationMinutes": 30
+    },
+    {
+      "key": "st-dominics",
+      "name": "St Dominic's Church",
+      "neighbourhood": "Macau Historic Centre",
+      "category": "Historic Site",
+      "priority": "WANT",
+      "expectedDurationMinutes": 20
+    },
+    {
+      "key": "ruins-st-pauls",
+      "name": "Ruins of St Paul's",
+      "neighbourhood": "Macau Historic Centre",
+      "category": "Historic Site",
+      "priority": "MUST",
+      "expectedDurationMinutes": 45
+    },
+    {
+      "key": "monte-fort",
+      "name": "Monte Fort",
+      "neighbourhood": "Macau Historic Centre",
+      "category": "Historic Site",
+      "priority": "WANT",
+      "expectedDurationMinutes": 45
+    },
+    {
+      "key": "macau-tower",
+      "name": "Macau Tower",
+      "neighbourhood": "Macau Peninsula",
+      "category": "Attraction",
+      "priority": "MUST",
+      "expectedDurationMinutes": 120
+    },
+    {
+      "key": "studio-city",
+      "name": "Studio City Macau",
+      "neighbourhood": "Cotai",
+      "category": "Resort",
+      "priority": "OPTIONAL",
+      "expectedDurationMinutes": 45
+    },
+    {
+      "key": "venetian",
+      "name": "The Venetian Macao",
+      "neighbourhood": "Cotai",
+      "category": "Resort",
+      "priority": "WANT",
+      "expectedDurationMinutes": 60
+    },
+    {
+      "key": "parisian",
+      "name": "The Parisian Macao",
+      "neighbourhood": "Cotai",
+      "category": "Resort",
+      "priority": "WANT",
+      "expectedDurationMinutes": 35
+    },
+    {
+      "key": "londoner",
+      "name": "The Londoner Macao",
+      "neighbourhood": "Cotai",
+      "category": "Resort",
+      "priority": "WANT",
+      "expectedDurationMinutes": 50
+    },
+    {
+      "key": "taipa-ferry",
+      "name": "Macau Taipa Ferry Terminal",
+      "neighbourhood": "Taipa",
+      "category": "Ferry Terminal",
+      "priority": "MUST"
+    },
+    {
+      "key": "ngong-ping",
+      "name": "Ngong Ping 360",
+      "neighbourhood": "Lantau Island",
+      "category": "Cable Car",
+      "priority": "MUST",
+      "expectedDurationMinutes": 30
+    },
+    {
+      "key": "tian-tan-buddha",
+      "name": "Tian Tan Buddha",
+      "neighbourhood": "Ngong Ping",
+      "category": "Landmark",
+      "priority": "MUST",
+      "expectedDurationMinutes": 60
+    },
+    {
+      "key": "po-lin",
+      "name": "Po Lin Monastery",
+      "neighbourhood": "Ngong Ping",
+      "category": "Monastery",
+      "priority": "WANT",
+      "expectedDurationMinutes": 45
+    },
+    {
+      "key": "tai-o",
+      "name": "Tai O Fishing Village",
+      "neighbourhood": "Tai O",
+      "category": "Village",
+      "priority": "MUST",
+      "expectedDurationMinutes": 150
+    },
+    {
+      "key": "hong-kong-disneyland",
+      "name": "Hong Kong Disneyland",
+      "neighbourhood": "Lantau Island",
+      "category": "Theme Park",
+      "priority": "MUST",
+      "expectedDurationMinutes": 720
+    },
+    {
+      "key": "wing-fat-seafood",
+      "name": "Wing Fat Seafood",
+      "neighbourhood": "Yau Ma Tei",
+      "category": "Seafood Restaurant",
+      "priority": "MUST",
+      "expectedDurationMinutes": 90
+    },
+    {
+      "key": "kennedy-town",
+      "name": "Kennedy Town",
+      "neighbourhood": "Kennedy Town",
+      "category": "Neighbourhood",
+      "priority": "WANT",
+      "expectedDurationMinutes": 60
+    },
+    {
+      "key": "wan-chai",
+      "name": "Wan Chai",
+      "neighbourhood": "Wan Chai",
+      "category": "Neighbourhood",
+      "priority": "WANT",
+      "expectedDurationMinutes": 45
+    },
+    {
+      "key": "causeway-bay",
+      "name": "Causeway Bay",
+      "neighbourhood": "Causeway Bay",
+      "category": "Neighbourhood",
+      "priority": "WANT",
+      "expectedDurationMinutes": 50
+    },
+    {
+      "key": "chun-yeung-street",
+      "name": "Chun Yeung Street",
+      "neighbourhood": "North Point",
+      "category": "Market Street",
+      "priority": "WANT",
+      "expectedDurationMinutes": 40
+    },
+    {
+      "key": "monster-building",
+      "name": "Monster Building",
+      "neighbourhood": "Quarry Bay",
+      "category": "Architecture",
+      "priority": "MUST",
+      "expectedDurationMinutes": 45
+    }
+  ],
+  "checklist": [
+    {
+      "key": "food-dim-sum",
+      "title": "Try old-school dim sum",
+      "kind": "FOOD",
+      "priority": "MUST",
+      "plannedDay": "2026-12-27",
+      "recommendedPlace": "Luk On Kui",
+      "placeKey": "luk-on-kui"
+    },
+    {
+      "key": "food-egg-tart",
+      "title": "Try an egg tart",
+      "kind": "FOOD",
+      "priority": "MUST"
+    },
+    {
+      "key": "food-pineapple-bun",
+      "title": "Try pineapple bun",
+      "kind": "FOOD",
+      "priority": "MUST",
+      "plannedDay": "2026-12-26",
+      "recommendedPlace": "Cheung Hing Coffee Shop",
+      "placeKey": "cheung-hing"
+    },
+    {
+      "key": "food-pineapple-butter",
+      "title": "Try pineapple bun with butter",
+      "kind": "FOOD",
+      "priority": "WANT",
+      "plannedDay": "2026-12-26",
+      "recommendedPlace": "Cheung Hing Coffee Shop",
+      "placeKey": "cheung-hing"
+    },
+    {
+      "key": "food-milk-tea",
+      "title": "Try Hong Kong milk tea",
+      "kind": "FOOD",
+      "priority": "MUST"
+    },
+    {
+      "key": "food-yuenyeung",
+      "title": "Try yuenyeung",
+      "kind": "FOOD",
+      "priority": "WANT"
+    },
+    {
+      "key": "food-french-toast",
+      "title": "Try Hong Kong French toast",
+      "kind": "FOOD",
+      "priority": "WANT"
+    },
+    {
+      "key": "food-wonton-noodles",
+      "title": "Try wonton noodles — confirm broth contains no beef",
+      "kind": "FOOD",
+      "priority": "MUST",
+      "neighbourhood": "Jordan"
+    },
+    {
+      "key": "food-fish-balls",
+      "title": "Try fish balls",
+      "kind": "FOOD",
+      "priority": "WANT"
+    },
+    {
+      "key": "food-curry-fish-balls",
+      "title": "Try curry fish balls",
+      "kind": "FOOD",
+      "priority": "MUST",
+      "plannedDay": "2027-01-01",
+      "recommendedPlace": "Mong Kok",
+      "placeKey": "mong-kok"
+    },
+    {
+      "key": "food-siu-mai",
+      "title": "Try street-style siu mai",
+      "kind": "FOOD",
+      "priority": "WANT"
+    },
+    {
+      "key": "food-cheung-fun",
+      "title": "Try cheung fun",
+      "kind": "FOOD",
+      "priority": "WANT"
+    },
+    {
+      "key": "food-egg-waffle",
+      "title": "Try egg waffles",
+      "kind": "FOOD",
+      "priority": "MUST"
+    },
+    {
+      "key": "food-claypot-rice",
+      "title": "Try claypot rice — avoid beef versions",
+      "kind": "FOOD",
+      "priority": "MUST",
+      "plannedDay": "2026-12-27",
+      "recommendedPlace": "Hing Kee Claypot Rice",
+      "placeKey": "hing-kee"
+    },
+    {
+      "key": "food-sweet-soup",
+      "title": "Try Chinese sweet soup",
+      "kind": "FOOD",
+      "priority": "MUST",
+      "plannedDay": "2026-12-27",
+      "recommendedPlace": "Kai Kai Dessert",
+      "placeKey": "kai-kai-dessert"
+    },
+    {
+      "key": "food-milk-pudding",
+      "title": "Try steamed milk pudding",
+      "kind": "FOOD",
+      "priority": "WANT"
+    },
+    {
+      "key": "food-pork-chop-rice",
+      "title": "Try baked pork chop rice",
+      "kind": "FOOD",
+      "priority": "WANT"
+    },
+    {
+      "key": "food-roast-goose",
+      "title": "Try roast goose",
+      "kind": "FOOD",
+      "priority": "WANT"
+    },
+    {
+      "key": "food-roast-pigeon",
+      "title": "Try roast pigeon",
+      "kind": "FOOD",
+      "priority": "MUST",
+      "plannedDay": "2026-12-31",
+      "recommendedPlace": "Wing Fat Seafood",
+      "placeKey": "wing-fat-seafood"
+    },
+    {
+      "key": "food-seafood",
+      "title": "Have a proper Hong Kong seafood meal",
+      "kind": "FOOD",
+      "priority": "MUST",
+      "plannedDay": "2026-12-31",
+      "recommendedPlace": "Wing Fat Seafood",
+      "placeKey": "wing-fat-seafood"
+    },
+    {
+      "key": "food-macau-egg-tart",
+      "title": "Try a Portuguese egg tart in Macau",
+      "kind": "FOOD",
+      "priority": "MUST",
+      "plannedDay": "2026-12-28",
+      "neighbourhood": "Macau Historic Centre"
+    },
+    {
+      "key": "food-macau-pork-bun",
+      "title": "Try a Macau pork chop bun",
+      "kind": "FOOD",
+      "priority": "MUST",
+      "plannedDay": "2026-12-28",
+      "neighbourhood": "Macau Historic Centre"
+    },
+    {
+      "key": "book-aqua-luna",
+      "title": "Prebook Aqua Luna Christmas sailing with Symphony of Lights",
+      "kind": "EXPERIENCE",
+      "priority": "MUST",
+      "plannedDay": "2026-12-25",
+      "placeKey": "aqua-luna"
+    },
+    {
+      "key": "book-peak-tram",
+      "title": "Prebook early Peak Tram if advance booking is available",
+      "kind": "EXPERIENCE",
+      "priority": "MUST",
+      "plannedDay": "2026-12-26",
+      "placeKey": "victoria-peak"
+    },
+    {
+      "key": "book-macau-ferry-out",
+      "title": "Prebook 07:30 TurboJET Sheung Wan → Macau Outer Harbour",
+      "kind": "EXPERIENCE",
+      "priority": "MUST",
+      "plannedDay": "2026-12-28",
+      "placeKey": "sheung-wan-ferry"
+    },
+    {
+      "key": "book-bungy",
+      "title": "Prebook Macau Tower Bungy around 14:00–14:30",
+      "kind": "EXPERIENCE",
+      "priority": "MUST",
+      "plannedDay": "2026-12-28",
+      "placeKey": "macau-tower"
+    },
+    {
+      "key": "book-macau-ferry-back",
+      "title": "Prebook around 22:00 Taipa → Sheung Wan ferry",
+      "kind": "EXPERIENCE",
+      "priority": "MUST",
+      "plannedDay": "2026-12-28",
+      "placeKey": "taipa-ferry"
+    },
+    {
+      "key": "book-ngong-ping",
+      "title": "Prebook Ngong Ping 360 one-way Crystal Cabin",
+      "kind": "EXPERIENCE",
+      "priority": "MUST",
+      "plannedDay": "2026-12-29",
+      "placeKey": "ngong-ping"
+    },
+    {
+      "key": "book-disney",
+      "title": "Book Hong Kong Disneyland for 30 December",
+      "kind": "EXPERIENCE",
+      "priority": "MUST",
+      "plannedDay": "2026-12-30",
+      "placeKey": "hong-kong-disneyland"
+    },
+    {
+      "key": "recheck-nye",
+      "title": "Recheck official NYE fireworks, crowd-control zones and MTR hours",
+      "kind": "OTHER",
+      "priority": "MUST",
+      "plannedDay": "2026-12-31",
+      "recommendedPlace": "Tsim Sha Tsui Promenade",
+      "placeKey": "tsim-sha-tsui-promenade"
+    },
+    {
+      "key": "golden-reel",
+      "title": "Golden Reel if Bungy finishes on time and operating calendar permits",
+      "kind": "EXPERIENCE",
+      "priority": "OPTIONAL",
+      "plannedDay": "2026-12-28",
+      "recommendedPlace": "Studio City Macau",
+      "placeKey": "studio-city"
+    },
+    {
+      "key": "tai-o-boat",
+      "title": "Take a short Tai O village boat ride if operating",
+      "kind": "EXPERIENCE",
+      "priority": "OPTIONAL",
+      "plannedDay": "2026-12-29",
+      "placeKey": "tai-o"
+    }
+  ],
+  "itinerary": [
+    {
+      "date": "2026-12-25",
+      "title": "Vietnam Airlines VN982 — Bengaluru → Hanoi (transit)",
+      "type": "transport",
+      "durationMinutes": 285,
+      "priority": "MUST",
+      "sequence": 1,
+      "transportInstructions": "Departed Bengaluru Kempegowda International Airport, Terminal 2, at 23:35 on 24 Dec (arrives Hanoi Noi Bai Terminal 2 at 05:50 on 25 Dec). Economy Lite; seat 14E; one checked bag. Hindu meal request confirmed. This is the first leg of the Hong Kong journey, with a Hanoi transit—not a separate booking."
+    },
+    {
+      "date": "2026-12-25",
+      "title": "Vietnam Airlines VN592 — Hanoi → Hong Kong",
+      "type": "transport",
+      "start": "10:35",
+      "end": "13:30",
+      "durationMinutes": 115,
+      "priority": "MUST",
+      "sequence": 5,
+      "placeKey": "hkg-airport",
+      "transportInstructions": "Depart Hanoi Noi Bai International Airport, Terminal 2, at 10:35; arrive Hong Kong International Airport, Terminal 1, at 13:30. Economy Lite; seat 30A; one checked bag. Seafood meal request confirmed. Continuation of the Bengaluru → Hanoi → Hong Kong journey."
+    },
+    {
+      "date": "2026-12-25",
+      "title": "Land at Hong Kong International Airport",
+      "type": "transport",
+      "start": "13:30",
+      "durationMinutes": 90,
+      "priority": "MUST",
+      "sequence": 10,
+      "placeKey": "hkg-airport",
+      "transportInstructions": "Allow 60–90 minutes for immigration, baggage, toilets, SIM/eSIM if required, Octopus and cash/ATM."
+    },
+    {
+      "date": "2026-12-25",
+      "title": "A21 Airport Bus to Yau Ma Tei",
+      "type": "transport",
+      "start": "15:00",
+      "end": "16:00",
+      "durationMinutes": 75,
+      "priority": "MUST",
+      "sequence": 20,
+      "placeKey": "bridal-tea-house",
+      "transportInstructions": "Take A21 towards Kowloon and get off around Yau Ma Tei. Recommended with luggage; avoids MTR interchanges.",
+      "estimatedCost": 69.2,
+      "estimatedCostCurrency": "HKD"
+    },
+    {
+      "date": "2026-12-25",
+      "title": "Hotel check-in and rest",
+      "type": "hotel",
+      "start": "16:00",
+      "end": "17:00",
+      "durationMinutes": 60,
+      "priority": "MUST",
+      "sequence": 30,
+      "placeKey": "bridal-tea-house"
+    },
+    {
+      "date": "2026-12-25",
+      "title": "Tsim Sha Tsui Christmas walk",
+      "type": "attraction",
+      "start": "17:30",
+      "end": "19:10",
+      "depart": "17:00",
+      "durationMinutes": 100,
+      "priority": "MUST",
+      "sequence": 40,
+      "placeKey": "tsim-sha-tsui-promenade",
+      "transportInstructions": "Walk Yau Ma Tei → Jordan → Tsim Sha Tsui in about 30–40 minutes, or use MTR if tired. Prioritise harbour, Clock Tower, Star Ferry Pier, Avenue of Stars, Harbour City/K11 surroundings and Christmas installations."
+    },
+    {
+      "date": "2026-12-25",
+      "title": "Aqua Luna and Symphony of Lights",
+      "type": "activity",
+      "start": "19:30",
+      "end": "20:30",
+      "depart": "19:15",
+      "durationMinutes": 60,
+      "priority": "MUST",
+      "sequence": 50,
+      "placeKey": "aqua-luna",
+      "transportInstructions": "Board at the Tsim Sha Tsui boarding point. Choose sailing including the 20:00 Symphony of Lights.",
+      "estimatedCost": 680,
+      "estimatedCostCurrency": "HKD"
+    },
+    {
+      "date": "2026-12-25",
+      "title": "Dinner around Tsim Sha Tsui / Jordan / Yau Ma Tei",
+      "type": "food",
+      "start": "20:30",
+      "end": "21:30",
+      "durationMinutes": 60,
+      "priority": "WANT",
+      "sequence": 60,
+      "transportInstructions": "Keep arrival-night dinner spontaneous. No beef and preferably no beef broth."
+    },
+    {
+      "date": "2026-12-25",
+      "title": "Optional short Temple Street walk and snack",
+      "type": "food",
+      "start": "22:00",
+      "end": "22:30",
+      "durationMinutes": 30,
+      "priority": "OPTIONAL",
+      "sequence": 70,
+      "placeKey": "temple-street"
+    },
+    {
+      "date": "2026-12-26",
+      "title": "Travel to Peak Tram Central Terminus",
+      "type": "transport",
+      "start": "06:40",
+      "end": "07:15",
+      "durationMinutes": 35,
+      "priority": "MUST",
+      "sequence": 10,
+      "transportInstructions": "Yau Ma Tei MTR → Central, then walk about 10–15 minutes to the Peak Tram terminus."
+    },
+    {
+      "date": "2026-12-26",
+      "title": "Peak Tram up",
+      "type": "transport",
+      "start": "07:30",
+      "end": "07:45",
+      "durationMinutes": 15,
+      "priority": "MUST",
+      "sequence": 20,
+      "placeKey": "victoria-peak",
+      "transportInstructions": "Buy single journey UP only; descend later by Bus 15.",
+      "estimatedCost": 152,
+      "estimatedCostCurrency": "HKD"
+    },
+    {
+      "date": "2026-12-26",
+      "title": "Victoria Peak and Lugard Road",
+      "type": "attraction",
+      "start": "07:45",
+      "end": "09:45",
+      "durationMinutes": 120,
+      "priority": "MUST",
+      "sequence": 30,
+      "placeKey": "victoria-peak",
+      "transportInstructions": "Prioritise Lugard Road / part of Peak Circle Walk. Sky Terrace 428 is optional and not necessary if visibility is good."
+    },
+    {
+      "date": "2026-12-26",
+      "title": "Bus 15 down from The Peak",
+      "type": "transport",
+      "start": "09:45",
+      "end": "10:30",
+      "durationMinutes": 45,
+      "priority": "WANT",
+      "sequence": 40,
+      "transportInstructions": "Take scenic Bus 15 down towards Central/Hong Kong Island.",
+      "estimatedCost": 26,
+      "estimatedCostCurrency": "HKD"
+    },
+    {
+      "date": "2026-12-26",
+      "title": "Cheung Hing Coffee Shop breakfast",
+      "type": "food",
+      "start": "10:30",
+      "end": "11:15",
+      "durationMinutes": 45,
+      "priority": "WANT",
+      "sequence": 50,
+      "placeKey": "cheung-hing",
+      "transportInstructions": "Try pineapple bun, pineapple bun with butter, egg tart and Hong Kong milk tea."
+    },
+    {
+      "date": "2026-12-26",
+      "title": "Happy Valley to Central by Ding Ding",
+      "type": "transport",
+      "start": "11:15",
+      "end": "12:00",
+      "durationMinutes": 45,
+      "priority": "WANT",
+      "sequence": 60,
+      "transportInstructions": "Use Hong Kong Tramways for part of the journey; sit upstairs if possible.",
+      "estimatedCost": 6.6,
+      "estimatedCostCurrency": "HKD"
+    },
+    {
+      "date": "2026-12-26",
+      "title": "Central / Old Town walking route",
+      "type": "attraction",
+      "start": "12:00",
+      "end": "12:45",
+      "durationMinutes": 45,
+      "priority": "WANT",
+      "sequence": 70,
+      "transportInstructions": "Central streets, Mid-Levels Escalator, Graham Street, Old Town Central and Hollywood Road."
+    },
+    {
+      "date": "2026-12-26",
+      "title": "Tai Kwun",
+      "type": "attraction",
+      "start": "12:45",
+      "end": "14:00",
+      "durationMinutes": 75,
+      "priority": "WANT",
+      "sequence": 80,
+      "placeKey": "tai-kwun"
+    },
+    {
+      "date": "2026-12-26",
+      "title": "Lunch around Central",
+      "type": "food",
+      "start": "14:00",
+      "end": "14:45",
+      "durationMinutes": 45,
+      "priority": "WANT",
+      "sequence": 90,
+      "transportInstructions": "Casual cha chaan teng / roast meat rice / pork or chicken noodles / baked pork chop rice / dim sum. Avoid beef/broth."
+    },
+    {
+      "date": "2026-12-26",
+      "title": "PMQ",
+      "type": "attraction",
+      "start": "14:45",
+      "end": "15:30",
+      "durationMinutes": 45,
+      "priority": "WANT",
+      "sequence": 100,
+      "placeKey": "pmq"
+    },
+    {
+      "date": "2026-12-26",
+      "title": "Central Christmas atmosphere and harbourfront",
+      "type": "attraction",
+      "start": "15:30",
+      "end": "17:30",
+      "durationMinutes": 120,
+      "priority": "WANT",
+      "sequence": 110
+    },
+    {
+      "date": "2026-12-26",
+      "title": "Star Ferry Central → Tsim Sha Tsui",
+      "type": "transport",
+      "start": "17:45",
+      "end": "18:15",
+      "durationMinutes": 30,
+      "priority": "WANT",
+      "sequence": 120,
+      "placeKey": "star-ferry-central",
+      "estimatedCost": 13,
+      "estimatedCostCurrency": "HKD"
+    },
+    {
+      "date": "2026-12-26",
+      "title": "Jordan / Yau Ma Tei dinner",
+      "type": "food",
+      "start": "19:00",
+      "end": "20:30",
+      "durationMinutes": 90,
+      "priority": "WANT",
+      "sequence": 130,
+      "transportInstructions": "Choose Jordan noodles or spontaneous Temple Street meal. Confirm noodle broth contains no beef."
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Luk On Kui old-school dim sum",
+      "type": "food",
+      "start": "08:20",
+      "end": "10:00",
+      "depart": "07:45",
+      "durationMinutes": 90,
+      "priority": "MUST",
+      "sequence": 10,
+      "placeKey": "luk-on-kui",
+      "transportInstructions": "Yau Ma Tei → Central → Sheung Wan, then walk. Try har gow, siu mai, char siu bao, cheung fun, ribs, turnip cake and tea."
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Sham Shui Po exploration",
+      "type": "shopping",
+      "start": "10:30",
+      "end": "13:30",
+      "durationMinutes": 180,
+      "priority": "WANT",
+      "sequence": 20,
+      "placeKey": "sham-shui-po",
+      "transportInstructions": "Explore Apliu Street, Fuk Wing Street, Pei Ho Street and side streets. Snack rather than have a large formal lunch."
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Mong Kok markets and streets",
+      "type": "shopping",
+      "start": "13:45",
+      "end": "17:30",
+      "durationMinutes": 225,
+      "priority": "MUST",
+      "sequence": 30,
+      "placeKey": "mong-kok",
+      "transportInstructions": "Suggested route: Goldfish Market → Fa Yuen Street → Sneaker Street → Ladies' Market. Add street snacks around 15:30."
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Walk Mong Kok → Yau Ma Tei",
+      "type": "transport",
+      "start": "17:30",
+      "end": "18:00",
+      "durationMinutes": 30,
+      "priority": "WANT",
+      "sequence": 40,
+      "transportInstructions": "Walk south; the transition through Kowloon is part of the experience."
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Temple Street Night Market",
+      "type": "shopping",
+      "start": "18:00",
+      "end": "19:15",
+      "durationMinutes": 75,
+      "priority": "MUST",
+      "sequence": 50,
+      "placeKey": "temple-street"
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Hing Kee Claypot Rice",
+      "type": "food",
+      "start": "19:30",
+      "end": "20:45",
+      "durationMinutes": 75,
+      "priority": "MUST",
+      "sequence": 60,
+      "placeKey": "hing-kee",
+      "transportInstructions": "Choose chicken, pork or Chinese sausage claypot rice. Avoid beef versions."
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Kai Kai Dessert",
+      "type": "food",
+      "start": "20:45",
+      "end": "21:30",
+      "durationMinutes": 45,
+      "priority": "MUST",
+      "sequence": 70,
+      "placeKey": "kai-kai-dessert",
+      "transportInstructions": "Try black sesame paste, walnut sweet soup, mango desserts or traditional Chinese sweet soups."
+    },
+    {
+      "date": "2026-12-28",
+      "title": "Taxi to Hong Kong Macau Ferry Terminal",
+      "type": "transport",
+      "start": "06:10",
+      "end": "06:45",
+      "durationMinutes": 35,
+      "priority": "MUST",
+      "sequence": 10,
+      "placeKey": "sheung-wan-ferry",
+      "transportInstructions": "Use taxi from Yau Ma Tei because of the early start; target terminal by 06:35–06:45.",
+      "estimatedCost": 100,
+      "estimatedCostCurrency": "HKD"
+    },
+    {
+      "date": "2026-12-28",
+      "title": "TurboJET Sheung Wan → Macau Outer Harbour",
+      "type": "transport",
+      "start": "07:30",
+      "end": "08:30",
+      "durationMinutes": 60,
+      "priority": "MUST",
+      "sequence": 20,
+      "placeKey": "sheung-wan-ferry",
+      "estimatedCost": 388,
+      "estimatedCostCurrency": "HKD"
+    },
+    {
+      "date": "2026-12-28",
+      "title": "Senado Square",
+      "type": "attraction",
+      "start": "09:30",
+      "end": "10:00",
+      "durationMinutes": 30,
+      "priority": "MUST",
+      "sequence": 30,
+      "placeKey": "senado-square"
+    },
+    {
+      "date": "2026-12-28",
+      "title": "St Dominic's Church",
+      "type": "attraction",
+      "start": "10:00",
+      "end": "10:20",
+      "durationMinutes": 20,
+      "priority": "WANT",
+      "sequence": 40,
+      "placeKey": "st-dominics"
+    },
+    {
+      "date": "2026-12-28",
+      "title": "Walk to Ruins of St Paul's via historic streets",
+      "type": "attraction",
+      "start": "10:20",
+      "end": "10:45",
+      "durationMinutes": 25,
+      "priority": "WANT",
+      "sequence": 50,
+      "transportInstructions": "Walk through pedestrian streets, bakeries, almond-cookie and snack shops."
+    },
+    {
+      "date": "2026-12-28",
+      "title": "Ruins of St Paul's",
+      "type": "attraction",
+      "start": "10:45",
+      "end": "11:30",
+      "durationMinutes": 45,
+      "priority": "MUST",
+      "sequence": 60,
+      "placeKey": "ruins-st-pauls"
+    },
+    {
+      "date": "2026-12-28",
+      "title": "Monte Fort",
+      "type": "attraction",
+      "start": "11:30",
+      "end": "12:15",
+      "durationMinutes": 45,
+      "priority": "WANT",
+      "sequence": 70,
+      "placeKey": "monte-fort"
+    },
+    {
+      "date": "2026-12-28",
+      "title": "Macanese / Portuguese lunch",
+      "type": "food",
+      "start": "12:20",
+      "end": "13:20",
+      "durationMinutes": 60,
+      "priority": "MUST",
+      "sequence": 80,
+      "transportInstructions": "Look for Portuguese-style chicken, pork dishes, seafood or Macanese rice. Also try Portuguese egg tart and pork chop bun. No beef.",
+      "estimatedCost": 550,
+      "estimatedCostCurrency": "MOP"
+    },
+    {
+      "date": "2026-12-28",
+      "title": "Taxi to Macau Tower",
+      "type": "transport",
+      "start": "13:20",
+      "end": "14:00",
+      "durationMinutes": 40,
+      "priority": "MUST",
+      "sequence": 90,
+      "placeKey": "macau-tower",
+      "estimatedCost": 80,
+      "estimatedCostCurrency": "MOP"
+    },
+    {
+      "date": "2026-12-28",
+      "title": "Macau Tower and Bungy block",
+      "type": "activity",
+      "start": "14:00",
+      "end": "16:00",
+      "durationMinutes": 120,
+      "priority": "MUST",
+      "sequence": 100,
+      "placeKey": "macau-tower",
+      "transportInstructions": "Allow full block for registration, weighing, briefing, equipment, waiting, jump, photos/video and observation. Bungy cost intentionally excluded from budget."
+    },
+    {
+      "date": "2026-12-28",
+      "title": "Golden Reel at Studio City",
+      "type": "activity",
+      "start": "16:30",
+      "end": "17:15",
+      "durationMinutes": 45,
+      "priority": "OPTIONAL",
+      "sequence": 110,
+      "placeKey": "studio-city",
+      "transportInstructions": "Only do this if Bungy finishes by roughly 16:00 and energy is good; otherwise go directly to Cotai.",
+      "estimatedCost": 200,
+      "estimatedCostCurrency": "MOP"
+    },
+    {
+      "date": "2026-12-28",
+      "title": "The Venetian Macao",
+      "type": "attraction",
+      "start": "17:15",
+      "end": "18:15",
+      "durationMinutes": 60,
+      "priority": "WANT",
+      "sequence": 120,
+      "placeKey": "venetian"
+    },
+    {
+      "date": "2026-12-28",
+      "title": "The Parisian Macao",
+      "type": "attraction",
+      "start": "18:25",
+      "end": "19:00",
+      "durationMinutes": 35,
+      "priority": "WANT",
+      "sequence": 130,
+      "placeKey": "parisian"
+    },
+    {
+      "date": "2026-12-28",
+      "title": "The Londoner Macao",
+      "type": "attraction",
+      "start": "19:10",
+      "end": "20:00",
+      "durationMinutes": 50,
+      "priority": "WANT",
+      "sequence": 140,
+      "placeKey": "londoner"
+    },
+    {
+      "date": "2026-12-28",
+      "title": "Dinner in Cotai",
+      "type": "food",
+      "start": "20:00",
+      "end": "20:45",
+      "durationMinutes": 45,
+      "priority": "WANT",
+      "sequence": 150,
+      "estimatedCost": 500,
+      "estimatedCostCurrency": "MOP"
+    },
+    {
+      "date": "2026-12-28",
+      "title": "Travel to Taipa Ferry Terminal",
+      "type": "transport",
+      "start": "20:45",
+      "end": "21:30",
+      "durationMinutes": 45,
+      "priority": "MUST",
+      "sequence": 160,
+      "placeKey": "taipa-ferry",
+      "transportInstructions": "Preferred order: free resort shuttle if convenient, public bus, taxi if timing becomes tight."
+    },
+    {
+      "date": "2026-12-28",
+      "title": "Ferry Taipa → Hong Kong Sheung Wan",
+      "type": "transport",
+      "start": "22:00",
+      "end": "23:00",
+      "durationMinutes": 60,
+      "priority": "MUST",
+      "sequence": 170,
+      "placeKey": "taipa-ferry",
+      "transportInstructions": "Book 22:00 sailing; 23:00 acts as backup.",
+      "estimatedCost": 484,
+      "estimatedCostCurrency": "HKD"
+    },
+    {
+      "date": "2026-12-28",
+      "title": "Return to Bridal Tea House",
+      "type": "transport",
+      "start": "23:20",
+      "end": "23:59",
+      "durationMinutes": 40,
+      "priority": "MUST",
+      "sequence": 180,
+      "placeKey": "bridal-tea-house",
+      "transportInstructions": "Use MTR only if comfortably operating; otherwise take taxi."
+    },
+    {
+      "date": "2026-12-29",
+      "title": "Breakfast around Yau Ma Tei",
+      "type": "food",
+      "start": "08:20",
+      "end": "08:50",
+      "durationMinutes": 30,
+      "priority": "WANT",
+      "sequence": 10
+    },
+    {
+      "date": "2026-12-29",
+      "title": "MTR Yau Ma Tei → Tung Chung",
+      "type": "transport",
+      "start": "09:00",
+      "end": "09:50",
+      "durationMinutes": 50,
+      "priority": "MUST",
+      "sequence": 20,
+      "transportInstructions": "Yau Ma Tei → Lai King → Tung Chung."
+    },
+    {
+      "date": "2026-12-29",
+      "title": "Ngong Ping 360 Crystal Cabin one-way",
+      "type": "activity",
+      "start": "10:00",
+      "end": "10:30",
+      "durationMinutes": 30,
+      "priority": "MUST",
+      "sequence": 30,
+      "placeKey": "ngong-ping",
+      "transportInstructions": "One-way only: Tung Chung → Ngong Ping. Continue later by bus to Tai O and bus back to Tung Chung.",
+      "estimatedCost": 480,
+      "estimatedCostCurrency": "HKD"
+    },
+    {
+      "date": "2026-12-29",
+      "title": "Tian Tan Buddha",
+      "type": "attraction",
+      "start": "10:45",
+      "end": "11:45",
+      "durationMinutes": 60,
+      "priority": "MUST",
+      "sequence": 40,
+      "placeKey": "tian-tan-buddha"
+    },
+    {
+      "date": "2026-12-29",
+      "title": "Po Lin Monastery",
+      "type": "attraction",
+      "start": "11:45",
+      "end": "12:30",
+      "durationMinutes": 45,
+      "priority": "WANT",
+      "sequence": 50,
+      "placeKey": "po-lin"
+    },
+    {
+      "date": "2026-12-29",
+      "title": "Vegetarian lunch around Po Lin / Ngong Ping",
+      "type": "food",
+      "start": "12:30",
+      "end": "13:15",
+      "durationMinutes": 45,
+      "priority": "WANT",
+      "sequence": 60,
+      "transportInstructions": "Vegetarian meal is an easy way to avoid beef/broth issues."
+    },
+    {
+      "date": "2026-12-29",
+      "title": "Bus Ngong Ping → Tai O",
+      "type": "transport",
+      "start": "13:15",
+      "end": "14:00",
+      "durationMinutes": 45,
+      "priority": "MUST",
+      "sequence": 70,
+      "placeKey": "tai-o",
+      "transportInstructions": "Use public bus; recheck Route 21 timetable shortly before travel because service is less frequent."
+    },
+    {
+      "date": "2026-12-29",
+      "title": "Tai O Fishing Village",
+      "type": "attraction",
+      "start": "14:00",
+      "end": "16:30",
+      "durationMinutes": 150,
+      "priority": "MUST",
+      "sequence": 80,
+      "placeKey": "tai-o",
+      "transportInstructions": "Explore stilt houses, canals, fishing-village streets, seafood shops and local stores."
+    },
+    {
+      "date": "2026-12-29",
+      "title": "Tai O local boat ride",
+      "type": "activity",
+      "start": "14:30",
+      "end": "15:00",
+      "durationMinutes": 30,
+      "priority": "OPTIONAL",
+      "sequence": 90,
+      "placeKey": "tai-o",
+      "estimatedCost": 100,
+      "estimatedCostCurrency": "HKD"
+    },
+    {
+      "date": "2026-12-29",
+      "title": "Bus Tai O → Tung Chung",
+      "type": "transport",
+      "start": "16:45",
+      "end": "18:00",
+      "durationMinutes": 75,
+      "priority": "MUST",
+      "sequence": 100,
+      "transportInstructions": "Take direct public bus back to Tung Chung."
+    },
+    {
+      "date": "2026-12-29",
+      "title": "Return to Yau Ma Tei",
+      "type": "transport",
+      "start": "18:15",
+      "end": "19:15",
+      "durationMinutes": 60,
+      "priority": "MUST",
+      "sequence": 110,
+      "transportInstructions": "Tung Chung → Lai King → Yau Ma Tei by MTR."
+    },
+    {
+      "date": "2026-12-29",
+      "title": "Temple Street or Mong Kok night food",
+      "type": "food",
+      "start": "20:00",
+      "end": "22:00",
+      "durationMinutes": 120,
+      "priority": "WANT",
+      "sequence": 120,
+      "transportInstructions": "Choose based on energy. Curry fish balls, siu mai, cheung fun, egg waffles, fried snacks and milk tea; avoid beef."
+    },
+    {
+      "date": "2026-12-30",
+      "title": "Breakfast near hotel",
+      "type": "food",
+      "start": "08:00",
+      "end": "08:30",
+      "durationMinutes": 30,
+      "priority": "WANT",
+      "sequence": 10
+    },
+    {
+      "date": "2026-12-30",
+      "title": "MTR to Hong Kong Disneyland",
+      "type": "transport",
+      "start": "08:30",
+      "end": "09:30",
+      "durationMinutes": 60,
+      "priority": "MUST",
+      "sequence": 20,
+      "placeKey": "hong-kong-disneyland",
+      "transportInstructions": "Yau Ma Tei → Lai King → Sunny Bay → Disneyland Resort Line."
+    },
+    {
+      "date": "2026-12-30",
+      "title": "Hong Kong Disneyland full day",
+      "type": "activity",
+      "start": "09:30",
+      "end": "21:30",
+      "durationMinutes": 720,
+      "priority": "MUST",
+      "sequence": 30,
+      "placeKey": "hong-kong-disneyland",
+      "transportInstructions": "Prioritise World of Frozen, Big Grizzly Mountain, Mystic Manor and Iron Man Experience; fit Festival of the Lion King and PhilharMagic around wait times; stay for nighttime castle projection/fireworks if scheduled.",
+      "estimatedCost": 1878,
+      "estimatedCostCurrency": "HKD"
+    },
+    {
+      "date": "2026-12-30",
+      "title": "Return Disneyland → Yau Ma Tei",
+      "type": "transport",
+      "start": "21:30",
+      "end": "22:45",
+      "durationMinutes": 75,
+      "priority": "MUST",
+      "sequence": 40,
+      "transportInstructions": "Disneyland Resort → Sunny Bay → Lai King → Yau Ma Tei."
+    },
+    {
+      "date": "2026-12-31",
+      "title": "Relaxed breakfast and local morning",
+      "type": "food",
+      "start": "09:30",
+      "end": "10:30",
+      "durationMinutes": 60,
+      "priority": "WANT",
+      "sequence": 10,
+      "transportInstructions": "Australia Dairy Company, cha chaan teng, bakery or local café. Keep the morning close to Yau Ma Tei/Jordan."
+    },
+    {
+      "date": "2026-12-31",
+      "title": "Easy local morning",
+      "type": "rest",
+      "start": "10:30",
+      "end": "12:00",
+      "durationMinutes": 90,
+      "priority": "WANT",
+      "sequence": 20,
+      "transportInstructions": "Choose Kowloon Park, Jordan streets, Nathan Road, daytime Temple Street, Harbour City/K11 or a café. Do not travel far."
+    },
+    {
+      "date": "2026-12-31",
+      "title": "Wing Fat Seafood lunch",
+      "type": "food",
+      "start": "12:30",
+      "end": "14:00",
+      "durationMinutes": 90,
+      "priority": "MUST",
+      "sequence": 30,
+      "placeKey": "wing-fat-seafood",
+      "transportInstructions": "Major seafood meal before NYE crowds. Try roast pigeon, razor clams, seafood, fish and Chinese broccoli. Avoid beef."
+    },
+    {
+      "date": "2026-12-31",
+      "title": "Rest and prepare for New Year's Eve",
+      "type": "rest",
+      "start": "14:15",
+      "end": "15:15",
+      "durationMinutes": 60,
+      "priority": "MUST",
+      "sequence": 40,
+      "placeKey": "bridal-tea-house"
+    },
+    {
+      "date": "2026-12-31",
+      "title": "Walk Yau Ma Tei → Tsim Sha Tsui",
+      "type": "transport",
+      "start": "15:30",
+      "end": "16:15",
+      "durationMinutes": 45,
+      "priority": "MUST",
+      "sequence": 50,
+      "placeKey": "tsim-sha-tsui-promenade",
+      "transportInstructions": "Walk via Jordan because road closures/crowd controls may affect transport later."
+    },
+    {
+      "date": "2026-12-31",
+      "title": "Tsim Sha Tsui waterfront before countdown",
+      "type": "attraction",
+      "start": "16:15",
+      "end": "19:00",
+      "durationMinutes": 165,
+      "priority": "MUST",
+      "sequence": 60,
+      "placeKey": "tsim-sha-tsui-promenade",
+      "transportInstructions": "Stay around Harbour City, Clock Tower, Cultural Centre, Avenue of Stars, K11 surroundings and Victoria Harbour. Eat a substantial early dinner/snack around 17:30–18:00 and use toilets."
+    },
+    {
+      "date": "2026-12-31",
+      "title": "Secure NYE countdown location",
+      "type": "activity",
+      "start": "19:00",
+      "end": "23:59",
+      "durationMinutes": 300,
+      "priority": "MUST",
+      "sequence": 70,
+      "placeKey": "tsim-sha-tsui-promenade",
+      "transportInstructions": "Choose exact viewing area after official 2026 arrangements are announced. Once crowds become dense, stop moving."
+    },
+    {
+      "date": "2026-12-31",
+      "title": "Hong Kong New Year's countdown",
+      "type": "activity",
+      "start": "23:59",
+      "end": "23:59",
+      "durationMinutes": 1,
+      "priority": "MUST",
+      "sequence": 80,
+      "placeKey": "tsim-sha-tsui-promenade",
+      "transportInstructions": "Victoria Harbour skyline, countdown and fireworks if officially confirmed."
+    },
+    {
+      "date": "2027-01-01",
+      "title": "Late brunch near Yau Ma Tei / Jordan",
+      "type": "food",
+      "start": "10:00",
+      "end": "10:40",
+      "durationMinutes": 40,
+      "priority": "WANT",
+      "sequence": 10
+    },
+    {
+      "date": "2027-01-01",
+      "title": "MTR Yau Ma Tei → Kennedy Town",
+      "type": "transport",
+      "start": "10:45",
+      "end": "11:20",
+      "durationMinutes": 35,
+      "priority": "MUST",
+      "sequence": 20,
+      "placeKey": "kennedy-town",
+      "transportInstructions": "Yau Ma Tei → Central → Kennedy Town."
+    },
+    {
+      "date": "2027-01-01",
+      "title": "Kennedy Town neighbourhood and waterfront",
+      "type": "attraction",
+      "start": "11:20",
+      "end": "12:20",
+      "durationMinutes": 60,
+      "priority": "WANT",
+      "sequence": 30,
+      "placeKey": "kennedy-town"
+    },
+    {
+      "date": "2027-01-01",
+      "title": "West-to-east Ding Ding journey",
+      "type": "transport",
+      "start": "12:20",
+      "end": "13:15",
+      "durationMinutes": 55,
+      "priority": "MUST",
+      "sequence": 40,
+      "transportInstructions": "Board an eastbound tram, sit upstairs, and enjoy Kennedy Town → Sheung Wan → Central. The journey itself is the attraction."
+    },
+    {
+      "date": "2027-01-01",
+      "title": "Wan Chai stop",
+      "type": "attraction",
+      "start": "13:15",
+      "end": "14:00",
+      "durationMinutes": 45,
+      "priority": "WANT",
+      "sequence": 50,
+      "placeKey": "wan-chai",
+      "transportInstructions": "Older streets, Blue House area if convenient, local bakery/cha chaan teng. Try French toast, milk tea or yuenyeung if still missing."
+    },
+    {
+      "date": "2027-01-01",
+      "title": "Causeway Bay stop",
+      "type": "attraction",
+      "start": "14:15",
+      "end": "15:00",
+      "durationMinutes": 45,
+      "priority": "WANT",
+      "sequence": 60,
+      "placeKey": "causeway-bay",
+      "transportInstructions": "Times Square area, Hysan Place surroundings and side streets. Do not let this stop overrun; Monster Building before dark matters more."
+    },
+    {
+      "date": "2027-01-01",
+      "title": "North Point and Chun Yeung Street",
+      "type": "attraction",
+      "start": "15:30",
+      "end": "16:10",
+      "durationMinutes": 40,
+      "priority": "WANT",
+      "sequence": 70,
+      "placeKey": "chun-yeung-street",
+      "transportInstructions": "Explore the local market environment; optional small street snack."
+    },
+    {
+      "date": "2027-01-01",
+      "title": "Monster Building",
+      "type": "attraction",
+      "start": "16:30",
+      "end": "17:15",
+      "durationMinutes": 45,
+      "priority": "MUST",
+      "sequence": 80,
+      "placeKey": "monster-building",
+      "transportInstructions": "Arrive while there is useful daylight. Residential complex: be respectful, do not block entrances, enter private areas, photograph residents closely or make excessive noise."
+    },
+    {
+      "date": "2027-01-01",
+      "title": "Return to Yau Ma Tei and rest",
+      "type": "transport",
+      "start": "17:15",
+      "end": "18:45",
+      "durationMinutes": 90,
+      "priority": "WANT",
+      "sequence": 90,
+      "placeKey": "bridal-tea-house",
+      "transportInstructions": "Walk to Tai Koo or Quarry Bay MTR → Admiralty → Yau Ma Tei; rest 30–45 minutes at hotel."
+    },
+    {
+      "date": "2027-01-01",
+      "title": "Final Mong Kok street-food crawl",
+      "type": "food",
+      "start": "19:00",
+      "end": "21:00",
+      "durationMinutes": 120,
+      "priority": "MUST",
+      "sequence": 100,
+      "placeKey": "mong-kok",
+      "transportInstructions": "Pick multiple small items: curry fish balls, siu mai, cheung fun, egg waffles, fried snacks/squid, milk tea and dessert. Avoid beef."
+    },
+    {
+      "date": "2027-01-01",
+      "title": "Walk Mong Kok → Yau Ma Tei and pack",
+      "type": "transport",
+      "start": "21:00",
+      "end": "22:30",
+      "durationMinutes": 90,
+      "priority": "MUST",
+      "sequence": 110,
+      "placeKey": "bridal-tea-house"
+    },
+    {
+      "date": "2027-01-02",
+      "title": "Breakfast if flight timing permits",
+      "type": "food",
+      "priority": "OPTIONAL",
+      "sequence": 10,
+      "transportInstructions": "Eat locally before leaving if time permits: cha chaan teng/bakery, milk tea, eggs/toast or pineapple bun."
+    },
+    {
+      "date": "2027-01-02",
+      "title": "A21 Yau Ma Tei → Hong Kong International Airport",
+      "type": "transport",
+      "start": "10:00",
+      "end": "11:20",
+      "durationMinutes": 80,
+      "priority": "MUST",
+      "sequence": 20,
+      "placeKey": "hkg-airport",
+      "transportInstructions": "Leave approximately 4h15–4h30 before flight departure. Target airport around 3 hours before departure. Taxi to Kowloon Station + Airport Express is the backup if timing/traffic/luggage requires it.",
+      "estimatedCost": 69.2,
+      "estimatedCostCurrency": "HKD"
+    },
+    {
+      "date": "2027-01-02",
+      "title": "Vietnam Airlines VN593 — Hong Kong → Hanoi (transit)",
+      "type": "transport",
+      "start": "14:30",
+      "end": "15:40",
+      "durationMinutes": 130,
+      "priority": "MUST",
+      "sequence": 30,
+      "placeKey": "hkg-airport",
+      "transportInstructions": "Depart Hong Kong International Airport, Terminal 1, at 14:30; arrive Hanoi Noi Bai International Airport, Terminal 2, at 15:40. Economy Classic; seat 14B; one checked bag. Seafood meal request confirmed. Hanoi is a transit stop, not a separate booking."
+    },
+    {
+      "date": "2027-01-02",
+      "title": "Vietnam Airlines VN983 — Hanoi → Bengaluru",
+      "type": "transport",
+      "start": "19:10",
+      "durationMinutes": 285,
+      "priority": "MUST",
+      "sequence": 40,
+      "transportInstructions": "Depart Hanoi Noi Bai International Airport, Terminal 2, at 19:10; arrive Bengaluru Kempegowda International Airport, Terminal 2, at 22:25 local time. Economy Classic; one checked bag. Final leg of the Hong Kong → Hanoi → Bengaluru return journey."
+    }
+  ],
+  "accounts": [
+    {
+      "key": "cash-hkd",
+      "name": "Cash HKD",
+      "accountClass": "STORED_VALUE",
+      "accountType": "CASH",
+      "currency": "HKD",
+      "openingBalance": 0
+    },
+    {
+      "key": "cash-mop",
+      "name": "Cash MOP",
+      "accountClass": "STORED_VALUE",
+      "accountType": "CASH",
+      "currency": "MOP",
+      "openingBalance": 0
+    },
+    {
+      "key": "octopus-1",
+      "name": "Octopus Card 1",
+      "accountClass": "STORED_VALUE",
+      "accountType": "OCTOPUS",
+      "currency": "HKD",
+      "openingBalance": 0
+    },
+    {
+      "key": "octopus-2",
+      "name": "Octopus Card 2",
+      "accountClass": "STORED_VALUE",
+      "accountType": "OCTOPUS",
+      "currency": "HKD",
+      "openingBalance": 0
+    }
+  ],
+  "budgets": [
+    {
+      "scope": "TRIP",
+      "amount": 12000,
+      "currency": "HKD"
+    }
+  ],
+  "bookings": []
+}
