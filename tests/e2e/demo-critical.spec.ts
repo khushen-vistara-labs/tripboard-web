@@ -11,8 +11,8 @@ test("money keeps outflow, local consumption, and balances separate", async ({ p
   await page.goto("/money");
   await expect(page.getByText("No double-counting.")).toBeVisible();
   await expect(page.getByText("OWN MONEY OUTFLOW")).toBeVisible();
-  await expect(page.getByText("LOCAL CONSUMPTION")).toBeVisible();
-  await expect(page.getByText("MONEY STILL AVAILABLE")).toBeVisible();
+  await expect(page.getByText("LOCAL CONSUMPTION", { exact: true })).toBeVisible();
+  await expect(page.getByText("MONEY STILL AVAILABLE", { exact: true })).toBeVisible();
 });
 
 test("ordinary wallet purchase is recorded without a negative wallet", async ({ page }) => {
@@ -36,5 +36,6 @@ test("food completion is explicit", async ({ page }) => {
 test("booking wallet surfaces private ticket state", async ({ page }) => {
   await page.goto("/bookings");
   await expect(page.getByRole("heading", { name: "Ngong Ping 360" })).toBeVisible();
+  await page.locator(".booking-open").filter({ hasText: "Ngong Ping 360" }).click();
   await expect(page.getByText("Cable car tickets.pdf")).toBeVisible();
 });

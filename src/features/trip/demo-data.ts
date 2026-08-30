@@ -1,4 +1,4 @@
-import type { ChecklistItem, ItineraryItem, Trip } from "../../types/domain";
+import type { Budget, ChecklistItem, ItineraryItem, Trip } from "../../types/domain";
 import type { FinancialEvent, PaymentAccount } from "../money/domain";
 
 export const demoTrip: Trip = {
@@ -91,6 +91,12 @@ export const demoFinancialEvents: FinancialEvent[] = [
   { ...base("exchange-1", "CASH_EXCHANGE", "INR cash → HKD cash", "08:08"), sourceAccountId: "inr-cash", destinationAccountId: "hkd-cash", sourceAmount: "10000", sourceCurrency: "INR", destinationAmount: "900", destinationCurrency: "HKD", settledInrAmount: "10000", settlementStatus: "SETTLED" },
   { ...base("mtr", "PURCHASE", "MTR to Tung Chung", "08:28"), sourceAccountId: "octopus-1", sourceAmount: "24", sourceCurrency: "HKD", consumptionAmount: "24", consumptionCurrency: "HKD", category: "Transport", merchant: "MTR" },
   { ...base("breakfast", "PURCHASE", "Breakfast", "08:45"), sourceAccountId: "hkd-cash", sourceAmount: "86", sourceCurrency: "HKD", consumptionAmount: "86", consumptionCurrency: "HKD", category: "Food", merchant: "Australia Dairy Company" },
-  { ...base("cable", "PURCHASE", "Cable car tickets", "09:10"), sourceAccountId: "hdfc", sourceAmount: "270", sourceCurrency: "HKD", consumptionAmount: "270", consumptionCurrency: "HKD", category: "Attractions", settledInrAmount: "2980", settlementStatus: "SETTLED" },
+  { ...base("cable", "PURCHASE", "Cable car tickets", "09:10"), sourceAccountId: "hdfc", sourceAmount: "270", sourceCurrency: "HKD", consumptionAmount: "270", consumptionCurrency: "HKD", category: "Attractions", estimatedInrAmount: "3000", settlementStatus: "PROVISIONAL", version: 1 },
   { ...base("snacks", "PURCHASE", "Tai O snacks", "11:15"), sourceAccountId: "octopus-2", sourceAmount: "58", sourceCurrency: "HKD", consumptionAmount: "58", consumptionCurrency: "HKD", category: "Food" },
+];
+
+export const demoBudgets: Budget[] = [
+  { id: "budget-trip-hkd", tripId: demoTrip.id, amount: "2500", currency: "HKD", scope: "TRIP" },
+  { id: "budget-food", tripId: demoTrip.id, amount: "500", currency: "HKD", scope: "CATEGORY", category: "Food" },
+  { id: "budget-day", tripId: demoTrip.id, amount: "800", currency: "HKD", scope: "DAILY", date: "2026-12-28" },
 ];

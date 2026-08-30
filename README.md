@@ -56,7 +56,7 @@ supabase db push
 
 The migration creates enums, tables, indexes, RLS policies, private booking storage, audit triggers, Realtime publication entries, financial views, and transactional RPC functions. Do not recreate them manually in the Dashboard.
 
-In Supabase Auth email templates, include `{{ .Token }}` so travellers receive the six-digit email OTP. The app deliberately uses code entry rather than requiring a magic link or password.
+TripBoard uses email and password sign-in so the two travellers can use their own accounts without relying on paid email delivery. In Supabase Authentication, keep the Email provider enabled and turn off **Confirm email**; otherwise new accounts will be sent a confirmation link.
 
 ### Environment variables
 

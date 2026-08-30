@@ -13,7 +13,7 @@ function readTheme(): Theme {
 export function ThemeToggle({ className = "" }: { className?: string }) {
   const [theme, setTheme] = useState<Theme>("light");
 
-  useEffect(() => setTheme(readTheme()), []);
+  useEffect(() => { queueMicrotask(() => setTheme(readTheme())); }, []);
 
   const toggle = () => {
     const next = theme === "dark" ? "light" : "dark";

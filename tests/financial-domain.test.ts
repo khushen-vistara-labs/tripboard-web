@@ -97,4 +97,10 @@ describe("financial acceptance tests", () => {
     expect(totalConsumption(ledger, "HKD")).toBe("0");
     expect(ledger.ownMoneyOutflowInr).toBe("0");
   });
+
+  it("11 — excludes a voided activity from balances and consumption", () => {
+    const ledger = postFinancialEvent(createLedger([{ ...accounts[2], openingBalance: "100" }]), event({ type: "PURCHASE", sourceAccountId: "octopus", sourceAmount: "20", sourceCurrency: "HKD", consumptionAmount: "20", consumptionCurrency: "HKD", voidedAt: "2026-12-29T00:00:00Z" }));
+    expect(ledger.balances.octopus).toBe("100");
+    expect(totalConsumption(ledger, "HKD")).toBe("0");
+  });
 });

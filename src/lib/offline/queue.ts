@@ -1,4 +1,5 @@
 import { offlineDb, type OfflineMutation } from "./db";
+import { classifySyncFailure } from "./conflicts";
 
 export async function enqueueMutation(input: Omit<OfflineMutation, "id" | "idempotencyKey" | "createdAt" | "attempts" | "status">) {
   const operationId = crypto.randomUUID();
@@ -23,8 +24,19 @@ export async function replayQueue(send: (mutation: OfflineMutation) => Promise<v
       await offlineDb.mutations.delete(mutation.id);
     } catch (error) {
       const message = error instanceof Error ? error.message : "Unknown sync error";
-      const conflict = /balance|version|conflict/i.test(message);
-      await offlineDb.mutations.update(mutation.id, { status: conflict ? "CONFLICT" : "FAILED", lastError: message });
+      const kind = classifySyncFailure(error);
+      await offlineDb.mutations.update(mutation.id, { status: kind === "CONFLICT" ? "CONFLICT" : "FAILED", lastError: kind === "REJECTED" ? `Server rejected change: ${message}` : message });
     }
   }
+}
+
+export async function retryMutation(id: string) {
+  await offlineDb.mutations.update(id, { status: "PENDING", lastError: undefined });
+}
+
+/** Discard is intentionally explicit: optimistic UI is refreshed from the server afterwards. */
+export async function discardMutation(id: string) {
+  const mutation = await offlineDb.mutations.get(id);
+  await offlineDb.mutations.delete(id);
+  return mutation;
 }

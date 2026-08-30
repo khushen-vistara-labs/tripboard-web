@@ -1,11 +1,12 @@
 import Dexie, { type EntityTable } from "dexie";
 
 export type MutationStatus = "PENDING" | "SYNCING" | "CONFLICT" | "FAILED";
+export type OfflineEntity = "itinerary" | "checklist" | "financial" | "place" | "booking" | "booking-file" | "settings" | "account" | "budget" | "member" | "notification-preference";
 
 export interface OfflineMutation {
   id: string;
   tripId: string;
-  entity: "itinerary" | "checklist" | "financial";
+  entity: OfflineEntity;
   command: string;
   payload: Record<string, unknown>;
   idempotencyKey: string;
@@ -29,7 +30,7 @@ class TripBoardDatabase extends Dexie {
 
   constructor() {
     super("tripboard");
-    this.version(1).stores({
+    this.version(2).stores({
       mutations: "id, tripId, status, createdAt, idempotencyKey",
       cache: "key, tripId, kind, updatedAt",
     });

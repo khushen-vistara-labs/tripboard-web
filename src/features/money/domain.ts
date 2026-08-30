@@ -17,6 +17,9 @@ export interface PaymentAccount {
   accountClass: AccountClass;
   currency: CurrencyCode;
   openingBalance: string;
+  accountType?: string;
+  archivedAt?: string;
+  version?: number;
 }
 
 export interface FinancialEvent {
@@ -39,6 +42,8 @@ export interface FinancialEvent {
   settledInrAmount?: string;
   settlementStatus?: "PROVISIONAL" | "SETTLED";
   originalTransactionId?: string;
+  version?: number;
+  voidedAt?: string;
 }
 
 export interface LedgerSnapshot {
@@ -119,6 +124,7 @@ function addExternalOutflow(next: LedgerSnapshot, event: FinancialEvent, multipl
 
 /** Applies a complete financial command to a cloned snapshot. A rejected command leaves the input untouched. */
 export function postFinancialEvent(ledger: LedgerSnapshot, event: FinancialEvent): LedgerSnapshot {
+  if (event.voidedAt) return ledger;
   const duplicate = ledger.transactions.find((transaction) => transaction.idempotencyKey === event.idempotencyKey);
   if (duplicate) return ledger;
 

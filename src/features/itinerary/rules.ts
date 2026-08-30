@@ -38,3 +38,15 @@ export function rankWhatNow(items: ItineraryItem[], nowIso: string, tripTimezone
       return (a.expectedDurationMinutes ?? 60) - (b.expectedDurationMinutes ?? 60);
     });
 }
+
+export function reorderIds(ids: string[], sourceId: string, targetId: string): string[] | null {
+  if (sourceId === targetId) return null;
+  const sourceIndex = ids.indexOf(sourceId);
+  const targetIndex = ids.indexOf(targetId);
+  if (sourceIndex < 0 || targetIndex < 0) return null;
+
+  const reordered = [...ids];
+  reordered.splice(sourceIndex, 1);
+  reordered.splice(targetIndex, 0, sourceId);
+  return reordered;
+}

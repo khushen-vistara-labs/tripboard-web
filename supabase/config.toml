@@ -1,0 +1,4 @@
+project_id = "tripboard-web"
+
+[functions.evaluate-notifications]
+verify_jwt = false
