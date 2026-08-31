@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description,
     applicationName: "TripBoard",
     manifest: "/manifest.webmanifest",
-    icons: { icon: [{ url: "/favicon.png", type: "image/png", sizes: "32x32" }], apple: [{ url: "/icon-192.png", type: "image/png", sizes: "192x192" }] },
+    icons: { icon: [{ url: "/favicon.png", type: "image/png", sizes: "32x32" }], apple: [{ url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" }] },
     appleWebApp: { capable: true, title: "TripBoard", statusBarStyle: "black-translucent" },
     openGraph: { type: "website", siteName: "TripBoard", title, description, images: [{ url: `${origin}/og.png`, width: 1200, height: 630, alt: "TripBoard: Your shared trip, in step." }] },
     twitter: { card: "summary_large_image", title, description, images: [`${origin}/og.png`] },
@@ -30,5 +30,5 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const themeScript = `try { const saved = localStorage.getItem('tripboard-theme'); document.documentElement.dataset.theme = saved === 'dark' || saved === 'light' ? saved : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); } catch { document.documentElement.dataset.theme = 'light'; }`;
-  return <html lang="en" suppressHydrationWarning><head><script dangerouslySetInnerHTML={{ __html: themeScript }}/></head><body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body></html>;
+  return <html lang="en" suppressHydrationWarning><head><meta name="application-name" content="TripBoard"/><meta name="apple-mobile-web-app-title" content="TripBoard"/><script dangerouslySetInnerHTML={{ __html: themeScript }}/></head><body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body></html>;
 }
