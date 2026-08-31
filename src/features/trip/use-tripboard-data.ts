@@ -192,7 +192,7 @@ export function useTripBoardData(): TripBoardData {
       }
       setLoading(false);
     };
-    const { data: tripRow, error: tripError } = await supabase.from("trips").select("*").is("archived_at", null).order("start_date", { ascending: false }).limit(1).maybeSingle();
+    const { data: tripRow, error: tripError } = await supabase.from("trips").select("*").is("archived_at", null).order("start_date", { ascending: false }).order("created_at", { ascending: false }).limit(1).maybeSingle();
     if (tripError) { await loadCachedSnapshot("We couldn’t load the shared trip."); return; }
     if (!tripRow) { setDataAvailable(false); setError("No trip has been shared with this account yet."); setLoading(false); return; }
     const nextTrip: Trip = { id: tripRow.id, name: tripRow.name, startDate: tripRow.start_date, endDate: tripRow.end_date, timezone: tripRow.timezone, baseCurrency: tripRow.base_currency, version: tripRow.version ?? 1 };
