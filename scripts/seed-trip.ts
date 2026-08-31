@@ -4,6 +4,9 @@ import { createClient } from "@supabase/supabase-js";
 import { z } from "zod";
 
 const Priority = z.enum(["MUST", "WANT", "OPTIONAL"]);
+const TimingType = z.enum(["FIXED", "TARGET", "FLEXIBLE", "OPTIONAL", "WEATHER_DEPENDENT"]);
+const CostScope = z.enum(["PERSON", "PARTY"]);
+const CostStatus = z.enum(["COMMITTED", "EXPECTED", "OPTIONAL"]);
 const ItineraryDetails = z.object({
   transportOptions: z.array(z.object({ label: z.string(), mode: z.enum(["recommended", "fastest", "cheapest", "scenic", "fallback", "emergency"]), instructions: z.string(), durationMinutes: z.number().int().positive().optional(), cost: z.string().optional() })).optional(),
   farePerPerson: z.string().optional(), fareForTwo: z.string().optional(), attractionCost: z.string().optional(),
@@ -72,6 +75,10 @@ export const SeedSchema = z.object({
       transportInstructions: z.string().optional(),
       estimatedCost: z.number().optional(),
       estimatedCostCurrency: z.string().optional(),
+      estimatedCostScope: CostScope.optional(),
+      estimatedCostStatus: CostStatus.optional(),
+      timingType: TimingType.optional(),
+      scheduleSensitive: z.boolean().optional(),
       details: ItineraryDetails.optional(),
       syncTitles: z.array(z.string()).optional(),
     }),
@@ -124,6 +131,42 @@ const seedPath = fileURLToPath(
   new URL("../seed/hong-kong-2026.json", import.meta.url),
 );
 const seed = SeedSchema.parse(JSON.parse(await readFile(seedPath, "utf8")));
+const itemDetails = (item: (typeof seed.itinerary)[number]) => ({
+  ...(item.details ?? {}),
+  ...(item.timingType ? { timingType: item.timingType } : {}),
+  ...(item.scheduleSensitive ? { scheduleSensitive: true } : {}),
+  ...(item.estimatedCostScope ? { estimatedCostScope: item.estimatedCostScope } : {}),
+  ...(item.estimatedCostStatus ? { estimatedCostStatus: item.estimatedCostStatus } : {}),
+});
+
+function minutes(value: string) {
+  const [hour, minute] = value.split(":").map(Number);
+  return hour * 60 + minute;
+}
+
+function validateItinerary() {
+  const placeKeys = new Set(seed.places.map((place) => place.key));
+  const dates = new Set(seed.days.map((day) => day.date));
+  const errors: string[] = [];
+  for (const item of seed.itinerary) {
+    if (!dates.has(item.date)) errors.push(`${item.title}: date ${item.date} has no itinerary day`);
+    if (item.placeKey && !placeKeys.has(item.placeKey)) errors.push(`${item.title}: unknown place ${item.placeKey}`);
+    if (item.estimatedCost !== undefined && !item.estimatedCostCurrency) errors.push(`${item.title}: cost has no currency`);
+    if (item.start && item.end && item.durationMinutes && minutes(item.end) - minutes(item.start) !== item.durationMinutes) errors.push(`${item.title}: time arithmetic does not match duration`);
+    if (item.start && item.end && item.start === item.end && item.durationMinutes) errors.push(`${item.title}: identical start/end with positive duration`);
+  }
+  for (const day of seed.days) {
+    const items = seed.itinerary.filter((item) => item.date === day.date).sort((a, b) => a.sequence - b.sequence);
+    for (let index = 1; index < items.length; index += 1) {
+      if (items[index].sequence <= items[index - 1].sequence) errors.push(`${day.date}: sequence must increase`);
+      const previous = items[index - 1]; const next = items[index];
+      if (previous.end && next.start && minutes(next.start) < minutes(previous.end)) errors.push(`${day.date}: ${next.title} overlaps ${previous.title}`);
+    }
+  }
+  for (const item of seed.checklist) if (item.placeKey && !placeKeys.has(item.placeKey)) errors.push(`${item.title}: unknown checklist place ${item.placeKey}`);
+  if (errors.length) throw new Error(`Seed itinerary validation failed:\n${errors.join("\n")}`);
+}
+validateItinerary();
 
 if (process.argv.includes("--validate")) {
   console.log(`Validated ${seed.trip.name}: ${seed.days.length} days, ${seed.places.length} places, ${seed.itinerary.length} itinerary items.`);
@@ -233,7 +276,7 @@ if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.i
       expected_duration_minutes: item.durationMinutes, priority: item.priority, sequence: item.sequence,
       place_id: item.placeKey ? placeIds.get(item.placeKey) : null, booking_id: item.bookingKey ? bookingIds.get(item.bookingKey) : null,
       transport_instructions: item.transportInstructions, estimated_cost: item.estimatedCost, estimated_cost_currency: item.estimatedCostCurrency,
-      details: item.details ?? {}, updated_by: owner.id,
+      details: itemDetails(item), updated_by: owner.id,
     });
     for (const item of seed.itinerary) {
       const id = [item.title, ...(item.syncTitles ?? [])].map((title) => existingByDateAndTitle.get(`${item.date}|${title}`)).find(Boolean);
@@ -286,7 +329,7 @@ if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.i
       place_id: item.placeKey ? placeIds.get(item.placeKey) : null,
       booking_id: item.bookingKey ? bookingIds.get(item.bookingKey) : null,
       transport_instructions: item.transportInstructions,
-      details: item.details ?? {},
+      details: itemDetails(item),
       estimated_cost: item.estimatedCost,
       estimated_cost_currency: item.estimatedCostCurrency,
       created_by: owner.id,
@@ -414,7 +457,7 @@ const { error: itineraryError } = await admin
       place_id: item.placeKey ? placeIds.get(item.placeKey) : null,
       booking_id: item.bookingKey ? bookingIds.get(item.bookingKey) : null,
       transport_instructions: item.transportInstructions,
-      details: item.details ?? {},
+      details: itemDetails(item),
       estimated_cost: item.estimatedCost,
       estimated_cost_currency: item.estimatedCostCurrency,
       created_by: owner.id,
