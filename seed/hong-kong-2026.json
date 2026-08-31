@@ -17,7 +17,7 @@
     },
     {
       "date": "2026-12-27",
-      "title": "Old-School Dim Sum • Sham Shui Po • Mong Kok • Temple Street"
+      "title": "Old-School Dim Sum • Man Mo Temple • Sham Shui Po • Mong Kok • Temple Street"
     },
     {
       "date": "2026-12-28",
@@ -37,7 +37,7 @@
     },
     {
       "date": "2027-01-01",
-      "title": "Kennedy Town • Ding Ding • Wan Chai • Causeway Bay • North Point • Monster Building"
+      "title": "Kennedy Town • Ding Ding • Wan Chai • Canal Road • Causeway Bay • North Point • Monster Building"
     },
     {
       "date": "2027-01-02",
@@ -787,7 +787,7 @@
       "durationMinutes": 45,
       "priority": "WANT",
       "sequence": 40,
-      "transportInstructions": "Take scenic Bus 15 down towards Central/Hong Kong Island.",
+      "transportInstructions": "Take scenic Bus 15 down, then continue directly to Cheung Hing in Happy Valley by the practical short connection available; arrive for the 10:30 breakfast slot.",
       "estimatedCost": 26,
       "estimatedCostCurrency": "HKD",
       "details": {"farePerPerson":"about HK$13","fareForTwo":"about HK$26","transportOptions":[{"label":"Bus 15","mode":"recommended","instructions":"Scenic direct descent toward Central / Happy Valley.","durationMinutes":45,"cost":"about HK$13/person"},{"label":"Green Minibus 1","mode":"fallback","instructions":"Use if the Bus 15 queue is significantly worse."},{"label":"Peak Tram","mode":"emergency","instructions":"Only if its queue is short."}]}
@@ -1299,8 +1299,8 @@
       "title": "Tai O Fishing Village",
       "type": "attraction",
       "start": "14:00",
-      "end": "16:30",
-      "durationMinutes": 150,
+      "end": "14:30",
+      "durationMinutes": 30,
       "priority": "MUST",
       "sequence": 80,
       "placeKey": "tai-o",
@@ -1322,6 +1322,18 @@
     },
     {
       "date": "2026-12-29",
+      "title": "Tai O exploration and snacks",
+      "type": "attraction",
+      "start": "15:00",
+      "end": "16:30",
+      "durationMinutes": 90,
+      "priority": "MUST",
+      "sequence": 95,
+      "placeKey": "tai-o",
+      "transportInstructions": "Continue with stilt houses, canals, fishing-village streets, seafood shops and local snacks before the 16:45 bus."
+    },
+    {
+      "date": "2026-12-29",
       "title": "Bus Tai O → Tung Chung",
       "type": "transport",
       "start": "16:45",
@@ -1333,39 +1345,38 @@
     },
     {
       "date": "2026-12-29",
-      "title": "Return to Yau Ma Tei",
+      "title": "Optional second Peak: decide at Tung Chung",
       "type": "transport",
       "start": "18:15",
-      "end": "19:15",
-      "durationMinutes": 60,
-      "priority": "MUST",
+      "end": "21:00",
+      "durationMinutes": 165,
+      "priority": "OPTIONAL",
       "sequence": 110,
-      "transportInstructions": "Tung Chung → Lai King → Yau Ma Tei by MTR.",
-      "details": {"fallback":"If visibility, rain, energy or arrival time are poor, return straight to Yau Ma Tei."}
+      "placeKey": "victoria-peak",
+      "transportInstructions": "Only if weather and energy are good: stay on the Tung Chung Line to Hong Kong Station/Central, then use Bus 15 or Minibus 1 up. Aim for Peak arrival 19:15–19:30 and descend 20:30–21:00.",
+      "syncTitles": ["Optional second Peak at night"],
+      "details": {"weather":"Optional, weather dependent and energy dependent. Check visibility, cloud and rain on 29 December afternoon.","fareForTwo":"about HK$52 using Bus 15 both ways, excluding minor MTR differences","transportOptions":[{"label":"Bus 15 both ways","mode":"recommended","instructions":"Continue from Tung Chung; target Peak arrival 19:15–19:30 and descent 20:30–21:00.","cost":"about HK$52 for two"},{"label":"Minibus 1","mode":"fallback","instructions":"Use if it offers a meaningfully shorter queue."},{"label":"Peak Tram","mode":"fallback","instructions":"Use only if the down queue is short."}],"fallback":"Skip this option and take the direct MTR back to Yau Ma Tei."}
     },
     {
       "date": "2026-12-29",
-      "title": "Optional second Peak at night",
-      "type": "attraction",
-      "start": "19:15",
-      "end": "21:00",
-      "durationMinutes": 105,
-      "priority": "OPTIONAL",
-      "sequence": 115,
-      "placeKey": "victoria-peak",
-      "transportInstructions": "From Tung Chung, stay on the Tung Chung Line to Hong Kong Station/Central; take Bus 15 or Minibus 1 up. Return by Bus 15, Minibus 1 or Peak Tram depending on queues.",
-      "details": {"weather":"Optional, weather dependent and energy dependent. Check visibility, cloud and rain on 29 December afternoon.","fareForTwo":"about HK$52 using Bus 15 both ways, excluding minor MTR differences","transportOptions":[{"label":"Bus 15 both ways","mode":"recommended","instructions":"Target Peak arrival 19:15–19:30 and descent 20:30–21:00.","cost":"about HK$52 for two"},{"label":"Minibus 1","mode":"fallback","instructions":"Use if it offers a meaningfully shorter queue."},{"label":"Peak Tram","mode":"fallback","instructions":"Use only if the down queue is short."}],"fallback":"Skip and return to Yau Ma Tei if conditions or energy are poor."}
+      "title": "Return to Yau Ma Tei after the night choice",
+      "type": "transport",
+      "durationMinutes": 60,
+      "priority": "MUST",
+      "sequence": 120,
+      "placeKey": "bridal-tea-house",
+      "transportInstructions": "If skipping the Peak, take Tung Chung → Lai King → Yau Ma Tei and arrive around 19:15. If taking the Peak, return after descending and expect Yau Ma Tei around 21:45.",
+      "syncTitles": ["Return to Yau Ma Tei"],
+      "details": {"hotelReturn":"About 19:15 if skipping the Peak; about 21:45 after the Peak.","fallback":"Skipping the Peak is the default if weather, energy or timing is poor."}
     },
     {
       "date": "2026-12-29",
       "title": "Temple Street or Mong Kok night food",
       "type": "food",
-      "start": "20:00",
-      "end": "22:00",
       "durationMinutes": 120,
       "priority": "WANT",
-      "sequence": 120,
-      "transportInstructions": "Choose based on energy. Curry fish balls, siu mai, cheung fun, egg waffles, fried snacks and milk tea; avoid beef."
+      "sequence": 130,
+      "transportInstructions": "If skipping the Peak, choose food around 20:00. If taking it, eat only after returning around 21:45 or skip without pressure. Curry fish balls, siu mai, cheung fun, egg waffles, fried snacks and milk tea; avoid beef."
     },
     {
       "date": "2026-12-30",

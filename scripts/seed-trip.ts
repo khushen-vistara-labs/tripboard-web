@@ -73,6 +73,7 @@ export const SeedSchema = z.object({
       estimatedCost: z.number().optional(),
       estimatedCostCurrency: z.string().optional(),
       details: ItineraryDetails.optional(),
+      syncTitles: z.array(z.string()).optional(),
     }),
   ),
   accounts: z.array(
@@ -235,9 +236,13 @@ if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.i
       details: item.details ?? {}, updated_by: owner.id,
     });
     for (const item of seed.itinerary) {
-      const id = existingByDateAndTitle.get(`${item.date}|${item.title}`);
+      const id = [item.title, ...(item.syncTitles ?? [])].map((title) => existingByDateAndTitle.get(`${item.date}|${title}`)).find(Boolean);
       const result = id ? await admin.from("itinerary_items").update(itemPayload(item)).eq("id", id) : await admin.from("itinerary_items").insert({ ...itemPayload(item), created_by: owner.id });
       if (result.error) throw result.error;
+    }
+    for (const day of seed.days) {
+      const id = dayIds.get(day.date);
+      if (id) { const { error: dayError } = await admin.from("itinerary_days").update({ title: day.title }).eq("id", id); if (dayError) throw dayError; }
     }
     const { data: existingChecklist, error: existingChecklistError } = await admin.from("checklist_items").select("title").eq("trip_id", existingTrip.id);
     if (existingChecklistError) throw existingChecklistError;
