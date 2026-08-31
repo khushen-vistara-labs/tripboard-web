@@ -13,6 +13,16 @@ export interface Trip {
   version?: number;
 }
 
+export interface TripNote {
+  id: string;
+  tripId: string;
+  section: string;
+  title: string;
+  body: string;
+  sortOrder: number;
+  version?: number;
+}
+
 export interface Budget {
   id: string;
   tripId: string;
@@ -87,8 +97,34 @@ export interface ItineraryItem {
   checklistItemId?: string;
   mapsUrl?: string;
   transportInstructions?: string;
+  details?: ItineraryDetails;
   changeReason?: string;
   version?: number;
+}
+
+export interface TransportOption {
+  label: string;
+  mode: "recommended" | "fastest" | "cheapest" | "scenic" | "fallback" | "emergency";
+  instructions: string;
+  durationMinutes?: number;
+  cost?: string;
+}
+
+/** Structured, phone-friendly context for a planned itinerary item. */
+export interface ItineraryDetails {
+  transportOptions?: TransportOption[];
+  farePerPerson?: string;
+  fareForTwo?: string;
+  attractionCost?: string;
+  booking?: "required" | "prebooked" | "optional" | "not-required";
+  foodNearby?: string[];
+  dietaryNote?: string;
+  weather?: string;
+  carry?: string[];
+  payWith?: string;
+  fallback?: string;
+  hotelReturn?: string;
+  quickNote?: string;
 }
 
 export interface ChecklistItem {

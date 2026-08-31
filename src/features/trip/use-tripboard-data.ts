@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import type { Booking, Budget, ChecklistItem, ItineraryDay, ItineraryItem, ItineraryStatus, Place, Trip } from "../../types/domain";
+import type { Booking, Budget, ChecklistItem, ItineraryDay, ItineraryDetails, ItineraryItem, ItineraryStatus, Place, Trip, TripNote } from "../../types/domain";
 import type { FinancialEvent, PaymentAccount } from "../money/domain";
 import { enqueueMutation, replayQueue } from "../../lib/offline/queue";
 import { offlineDb, type CachedTripRecord } from "../../lib/offline/db";
@@ -19,6 +19,7 @@ export interface TripBoardData {
   accounts: PaymentAccount[];
   budgets: Budget[];
   financialEvents: FinancialEvent[];
+  notes: TripNote[];
   unreadNotificationCount: number;
   loading: boolean;
   authRequired: boolean;
@@ -51,6 +52,9 @@ export interface TripBoardData {
   addBudget: (budget: Omit<Budget, "id" | "tripId">) => Promise<void>;
   editBudget: (id: string, budget: Omit<Budget, "id" | "tripId">) => Promise<void>;
   deleteBudget: (id: string) => Promise<void>;
+  addNote: (note: Pick<TripNote, "section" | "title" | "body">) => Promise<void>;
+  editNote: (id: string, note: Pick<TripNote, "section" | "title" | "body">) => Promise<void>;
+  deleteNote: (id: string) => Promise<void>;
   settleFinancialTransaction: (id: string, version: number, settledInrAmount: string) => Promise<void>;
   voidFinancialTransaction: (id: string, version: number, reason: string) => Promise<void>;
   updateTripSettings: (settings: Pick<Trip, "name" | "timezone" | "baseCurrency">) => Promise<void>;
@@ -59,7 +63,7 @@ export interface TripBoardData {
 
 export type EditableItineraryItem = Pick<ItineraryItem, "date" | "title" | "type" | "plannedStartTime" | "plannedEndTime" | "expectedDurationMinutes" | "priority" | "description" | "transportInstructions" | "placeId" | "bookingId" | "checklistItemId">;
 
-type TripSnapshot = Pick<TripBoardData, "trip" | "itinerary" | "checklist" | "bookings" | "places" | "days" | "accounts" | "budgets" | "financialEvents">;
+type TripSnapshot = Pick<TripBoardData, "trip" | "itinerary" | "checklist" | "bookings" | "places" | "days" | "accounts" | "budgets" | "financialEvents" | "notes">;
 
 const emptyTrip: Trip = {
   id: "",
@@ -82,6 +86,7 @@ function applySnapshot(snapshot: TripSnapshot, setters: {
   setAccounts: (value: PaymentAccount[]) => void;
   setBudgets: (value: Budget[]) => void;
   setFinancialEvents: (value: FinancialEvent[]) => void;
+  setNotes: (value: TripNote[]) => void;
 }) {
   setters.setTrip(snapshot.trip);
   setters.setItinerary(snapshot.itinerary);
@@ -92,6 +97,7 @@ function applySnapshot(snapshot: TripSnapshot, setters: {
   setters.setAccounts(snapshot.accounts);
   setters.setBudgets(snapshot.budgets ?? []);
   setters.setFinancialEvents(snapshot.financialEvents);
+  setters.setNotes(snapshot.notes ?? []);
 }
 
 const mapAccount = (row: Record<string, unknown>): PaymentAccount => ({
@@ -122,7 +128,7 @@ const mapItinerary = (row: Record<string, unknown>): ItineraryItem => ({
   recommendedDepartureTime: row.recommended_departure_time ? String(row.recommended_departure_time).slice(0, 5) : undefined, priority: row.priority as ItineraryItem["priority"],
   status: row.status as ItineraryStatus, sequence: Number(row.sequence), completedAt: row.completed_at ? String(row.completed_at) : undefined,
   bookingId: row.booking_id ? String(row.booking_id) : undefined, placeId: row.place_id ? String(row.place_id) : undefined, checklistItemId: row.checklist_item_id ? String(row.checklist_item_id) : undefined, mapsUrl: row.maps_url ? String(row.maps_url) : undefined, transportInstructions: row.transport_instructions ? String(row.transport_instructions) : undefined, changeReason: row.change_reason ? String(row.change_reason) : undefined,
-  version: row.version ? Number(row.version) : 1,
+  details: row.details && typeof row.details === "object" ? row.details as ItineraryDetails : undefined, version: row.version ? Number(row.version) : 1,
 });
 
 const mapChecklist = (row: Record<string, unknown>): ChecklistItem => ({
@@ -144,6 +150,7 @@ export function useTripBoardData(): TripBoardData {
   const [accounts, setAccounts] = useState<PaymentAccount[]>([]);
   const [budgets, setBudgets] = useState<Budget[]>([]);
   const [financialEvents, setFinancialEvents] = useState<FinancialEvent[]>([]);
+  const [notes, setNotes] = useState<TripNote[]>([]);
   const [unreadNotificationCount, setUnreadNotificationCount] = useState(0);
   const [loading, setLoading] = useState(true);
   const [authRequired, setAuthRequired] = useState(false);
@@ -156,7 +163,7 @@ export function useTripBoardData(): TripBoardData {
     if (!supabase) {
       // Demo content is only ever shown when Supabase was intentionally left
       // unconfigured, never as a fallback for a failed remote request.
-      applySnapshot({ trip: demoTrip, itinerary: demoItinerary, checklist: demoChecklist, bookings: demoBookings.map((booking) => ({ ...booking, tripId: demoTrip.id, status: booking.status.toUpperCase() as Booking["status"] })), places: demoPlaces.map((place) => ({ ...place, tripId: demoTrip.id })), days: [], accounts: demoAccounts, budgets: demoBudgets, financialEvents: demoFinancialEvents }, { setTrip, setItinerary, setChecklist, setBookings, setPlaces, setDays, setAccounts, setBudgets, setFinancialEvents });
+      applySnapshot({ trip: demoTrip, itinerary: demoItinerary, checklist: demoChecklist, bookings: demoBookings.map((booking) => ({ ...booking, tripId: demoTrip.id, status: booking.status.toUpperCase() as Booking["status"] })), places: demoPlaces.map((place) => ({ ...place, tripId: demoTrip.id })), days: [], accounts: demoAccounts, budgets: demoBudgets, financialEvents: demoFinancialEvents, notes: [] }, { setTrip, setItinerary, setChecklist, setBookings, setPlaces, setDays, setAccounts, setBudgets, setFinancialEvents, setNotes });
       setDemoMode(true);
       setUnreadNotificationCount(0);
       setDataAvailable(true);
@@ -175,7 +182,7 @@ export function useTripBoardData(): TripBoardData {
       const record = await offlineDb.cache.get(cacheKey).catch(() => undefined);
       const snapshot = record?.value as TripSnapshot | undefined;
       if (snapshot?.trip?.id) {
-        applySnapshot(snapshot, { setTrip, setItinerary, setChecklist, setBookings, setPlaces, setDays, setAccounts, setBudgets, setFinancialEvents });
+        applySnapshot(snapshot, { setTrip, setItinerary, setChecklist, setBookings, setPlaces, setDays, setAccounts, setBudgets, setFinancialEvents, setNotes });
         setDataAvailable(true);
         setError(`${message} Showing the copy saved on this device.`);
       } else {
@@ -188,7 +195,7 @@ export function useTripBoardData(): TripBoardData {
     if (tripError) { await loadCachedSnapshot("We couldn’t load the shared trip."); return; }
     if (!tripRow) { setDataAvailable(false); setError("No trip has been shared with this account yet."); setLoading(false); return; }
     const nextTrip: Trip = { id: tripRow.id, name: tripRow.name, startDate: tripRow.start_date, endDate: tripRow.end_date, timezone: tripRow.timezone, baseCurrency: tripRow.base_currency, version: tripRow.version ?? 1 };
-    const [itemsResult, checklistResult, bookingResult, placeResult, daysResult, accountResult, budgetResult, financialResult, unreadResult] = await Promise.all([
+    const [itemsResult, checklistResult, bookingResult, placeResult, daysResult, accountResult, budgetResult, financialResult, notesResult, unreadResult] = await Promise.all([
       supabase.from("itinerary_items").select("*").eq("trip_id", tripRow.id).order("date").order("sequence"),
       supabase.from("checklist_items").select("*").eq("trip_id", tripRow.id).order("priority"),
       supabase.from("bookings").select("*, booking_files(id, filename, mime_type, storage_path)").eq("trip_id", tripRow.id).order("starts_at"),
@@ -197,9 +204,10 @@ export function useTripBoardData(): TripBoardData {
       supabase.from("payment_accounts").select("*").eq("trip_id", tripRow.id).order("account_class"),
       supabase.from("budgets").select("*").eq("trip_id", tripRow.id).order("created_at"),
       supabase.from("financial_transactions").select("*").eq("trip_id", tripRow.id).order("occurred_at"),
+      supabase.from("trip_notes").select("*").eq("trip_id", tripRow.id).order("section").order("sort_order").order("created_at"),
       supabase.from("notifications").select("id", { count: "exact", head: true }).eq("trip_id", tripRow.id).is("read_at", null),
     ]);
-    if (itemsResult.error || checklistResult.error || bookingResult.error || placeResult.error || daysResult.error || accountResult.error || budgetResult.error || financialResult.error || unreadResult.error) { await loadCachedSnapshot("Some trip data could not be refreshed. Try again when your connection improves."); return; }
+    if (itemsResult.error || checklistResult.error || bookingResult.error || placeResult.error || daysResult.error || accountResult.error || budgetResult.error || financialResult.error || notesResult.error || unreadResult.error) { await loadCachedSnapshot("Some trip data could not be refreshed. Try again when your connection improves."); return; }
     setTrip(nextTrip);
     setItinerary((itemsResult.data ?? []).map((row) => mapItinerary(row as Record<string, unknown>)));
     setChecklist((checklistResult.data ?? []).map((row) => mapChecklist(row as Record<string, unknown>)));
@@ -209,6 +217,7 @@ export function useTripBoardData(): TripBoardData {
     setAccounts((accountResult.data ?? []).map((row) => mapAccount(row as Record<string, unknown>)));
     setBudgets((budgetResult.data ?? []).map((row) => mapBudget(row as Record<string, unknown>)));
     setFinancialEvents((financialResult.data ?? []).map((row) => mapFinancialEvent(row as Record<string, unknown>)));
+    setNotes((notesResult.data ?? []).map((row) => ({ id: row.id, tripId: row.trip_id, section: row.section, title: row.title, body: row.body, sortOrder: row.sort_order, version: row.version ?? 1 })));
     setUnreadNotificationCount(unreadResult.count ?? 0);
     const snapshot: TripSnapshot = {
       trip: nextTrip,
@@ -220,6 +229,7 @@ export function useTripBoardData(): TripBoardData {
       accounts: (accountResult.data ?? []).map((row) => mapAccount(row as Record<string, unknown>)),
       budgets: (budgetResult.data ?? []).map((row) => mapBudget(row as Record<string, unknown>)),
       financialEvents: (financialResult.data ?? []).map((row) => mapFinancialEvent(row as Record<string, unknown>)),
+      notes: (notesResult.data ?? []).map((row) => ({ id: row.id, tripId: row.trip_id, section: row.section, title: row.title, body: row.body, sortOrder: row.sort_order, version: row.version ?? 1 })),
     };
     void offlineDb.cache.put({ key: cacheKey, tripId: nextTrip.id, kind: "remote-trip", value: snapshot, updatedAt: new Date().toISOString() } satisfies CachedTripRecord).catch(() => undefined);
     setDataAvailable(true);
@@ -234,7 +244,7 @@ export function useTripBoardData(): TripBoardData {
     if (!supabase || trip.id === demoTrip.id) return;
     const channel = supabase.channel(`trip:${trip.id}`);
     channel.on("postgres_changes", { event: "*", schema: "public", table: "trips", filter: `id=eq.${trip.id}` }, () => { void refresh(); });
-    for (const table of ["itinerary_days", "itinerary_items", "checklist_items", "bookings", "booking_files", "places", "payment_accounts", "financial_transactions", "budgets"] as const) {
+    for (const table of ["itinerary_days", "itinerary_items", "checklist_items", "bookings", "booking_files", "places", "payment_accounts", "financial_transactions", "budgets", "trip_notes"] as const) {
       channel.on("postgres_changes", { event: "*", schema: "public", table, filter: `trip_id=eq.${trip.id}` }, () => { void refresh(); });
     }
     channel.on("postgres_changes", { event: "*", schema: "public", table: "notifications", filter: `trip_id=eq.${trip.id}` }, () => { void refresh(); });
@@ -263,6 +273,13 @@ export function useTripBoardData(): TripBoardData {
           : mutation.command === "delete"
             ? await supabase.from("checklist_items").delete().eq("id", mutation.payload.id)
             : await supabase.from("checklist_items").update(mutation.payload).eq("id", mutation.payload.id);
+        if (syncError) throw syncError;
+      } else if (mutation.entity === "trip-note") {
+        const { error: syncError } = mutation.command === "create"
+          ? await supabase.from("trip_notes").insert(mutation.payload)
+          : mutation.command === "delete"
+            ? await supabase.from("trip_notes").delete().eq("id", mutation.payload.id)
+            : await supabase.from("trip_notes").update(mutation.payload).eq("id", mutation.payload.id);
         if (syncError) throw syncError;
       } else if (mutation.entity === "place" || mutation.entity === "booking") {
         const table = mutation.entity === "place" ? "places" : "bookings";
@@ -579,13 +596,25 @@ export function useTripBoardData(): TripBoardData {
     setLoading(true); await refresh();
   };
 
+  const saveNote = async (command: "create" | "update", id: string, note: Pick<TripNote, "section" | "title" | "body">) => {
+    const current = notes.find((item) => item.id === id);
+    const payload = { id, trip_id: trip.id, section: note.section.trim(), title: note.title.trim(), body: note.body.trim(), sort_order: current?.sortOrder ?? notes.filter((item) => item.section === note.section).length };
+    const client = getSupabaseBrowserClient(); if (!client) return;
+    if (!navigator.onLine) { await enqueueMutation({ tripId: trip.id, entity: "trip-note", command, payload }); return; }
+    const result = command === "create" ? await client.from("trip_notes").insert(payload) : await client.from("trip_notes").update(payload).eq("id", id);
+    if (result.error) { if (classifySyncFailure(result.error) === "RETRYABLE") await enqueueMutation({ tripId: trip.id, entity: "trip-note", command, payload }); else { setNotes((items) => command === "create" ? items.filter((item) => item.id !== id) : current ? items.map((item) => item.id === id ? current : item) : items); setError("Important note could not be saved."); } }
+  };
+  const addNote: TripBoardData["addNote"] = async (note) => { const id = crypto.randomUUID(); setNotes((items) => [...items, { id, tripId: trip.id, ...note, sortOrder: items.filter((item) => item.section === note.section).length, version: 1 }]); await saveNote("create", id, note); };
+  const editNote: TripBoardData["editNote"] = async (id, note) => { const before = notes.find((item) => item.id === id); if (!before) return; setNotes((items) => items.map((item) => item.id === id ? { ...item, ...note } : item)); await saveNote("update", id, note); };
+  const deleteNote: TripBoardData["deleteNote"] = async (id) => { const before = notes.find((item) => item.id === id); if (!before) return; setNotes((items) => items.filter((item) => item.id !== id)); const client = getSupabaseBrowserClient(); if (!client) return; const payload = { id }; if (!navigator.onLine) { await enqueueMutation({ tripId: trip.id, entity: "trip-note", command: "delete", payload }); return; } const { error: deleteError } = await client.from("trip_notes").delete().eq("id", id); if (deleteError) { setNotes((items) => [...items, before]); setError("Important note could not be deleted."); } };
+
   return {
-    trip, itinerary, checklist, bookings, places, days, accounts, budgets, financialEvents, unreadNotificationCount, loading, authRequired, demoMode, dataAvailable, error, createTrip,
+    trip, itinerary, checklist, bookings, places, days, accounts, budgets, financialEvents, notes, unreadNotificationCount, loading, authRequired, demoMode, dataAvailable, error, createTrip,
     completeItinerary: (id) => setStatus(id, "COMPLETED"),
     skipItinerary: (id) => setStatus(id, "SKIPPED"),
     moveItinerary, reorderItinerary, addItineraryItem, editItineraryItem, deleteItineraryItem,
     toggleChecklist, addChecklistItem, editChecklistItem, deleteChecklistItem, addPlace, editPlace, deletePlace, addBooking, editBooking, deleteBooking, saveDay, recordFinancialEvent,
-    addPaymentAccount, editPaymentAccount, archivePaymentAccount, addBudget, editBudget, deleteBudget, settleFinancialTransaction, voidFinancialTransaction, updateTripSettings, refresh,
+    addPaymentAccount, editPaymentAccount, archivePaymentAccount, addBudget, editBudget, deleteBudget, addNote, editNote, deleteNote, settleFinancialTransaction, voidFinancialTransaction, updateTripSettings, refresh,
   };
 }
 

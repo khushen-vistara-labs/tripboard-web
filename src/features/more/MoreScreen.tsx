@@ -1,17 +1,18 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Bell, BellRing, BookOpenCheck, CalendarClock, Check, ChevronRight, Cloud, Copy, Download, ExternalLink, FileImage, FileText, History, LockKeyhole, LogOut, MapPin, Pencil, Plane, Plus, RefreshCw, Settings, Share2, ShieldCheck, Smartphone, Ticket, Trash2, Upload, UserMinus, Users, Wifi, XCircle } from "lucide-react";
+import { Bell, BellRing, BookOpenCheck, CalendarClock, Check, ChevronRight, Cloud, Copy, Download, ExternalLink, FileImage, FileText, History, LockKeyhole, LogOut, MapPin, Pencil, Plane, Plus, RefreshCw, Settings, Share2, ShieldCheck, Smartphone, StickyNote, Ticket, Trash2, Upload, UserMinus, Users, Wifi, XCircle } from "lucide-react";
 import type { TripBoardData } from "../trip/use-tripboard-data";
 import { getSupabaseBrowserClient } from "../../lib/supabase/client";
 import { Modal } from "../../components/ui/Modal";
 import { enqueueMutation } from "../../lib/offline/queue";
-import type { Booking, Place, Priority } from "../../types/domain";
+import type { Booking, Place, Priority, TripNote } from "../../types/domain";
 
-type MoreSection = "overview" | "bookings" | "places" | "alerts" | "members" | "activity" | "settings" | "install";
+type MoreSection = "overview" | "notes" | "bookings" | "places" | "alerts" | "members" | "activity" | "settings" | "install";
 export interface InstallPromptEvent extends Event { prompt: () => Promise<void>; userChoice: Promise<{ outcome: "accepted" | "dismissed" }>; }
 
 const sections: { id: MoreSection; label: string; help: string; icon: typeof Ticket }[] = [
+  { id: "notes", label: "Important notes", help: "Shared travel reference, editable anytime", icon: StickyNote },
   { id: "bookings", label: "Bookings", help: "Tickets, references, and documents", icon: Ticket },
   { id: "places", label: "Places", help: "Addresses and transport notes", icon: MapPin },
   { id: "alerts", label: "Trip alerts", help: "Reminders and notification preferences", icon: Bell },
@@ -83,7 +84,7 @@ export function MoreScreen({ data, initialSection, installPrompt }: { data: Trip
     <header className="screen-header"><div><p className="eyebrow">TRIP TOOLS</p><h1>{section === "overview" ? "More" : sections.find((item) => item.id === section)?.label}</h1><p>{section === "overview" ? "Bookings, places, alerts, members, and settings." : sections.find((item) => item.id === section)?.help}</p></div>{section !== "overview" && <button className="button secondary" onClick={() => setSection("overview")}>Back to More</button>}</header>
     {message && <div className="notice-banner" role="status">{message}<button onClick={() => setMessage("")}>Dismiss</button></div>}
     {section === "overview" && <Overview onOpen={setSection}/>}
-    {section === "bookings" && <Bookings data={data} onOpenTicket={openTicket} onUpload={uploadBookingFile} onReplaceFile={replaceBookingFile} onDeleteFile={deleteBookingFile} onDeleteBooking={deleteBookingSafely}/>}
+    {section === "notes" && <ImportantNotes data={data}/>} {section === "bookings" && <Bookings data={data} onOpenTicket={openTicket} onUpload={uploadBookingFile} onReplaceFile={replaceBookingFile} onDeleteFile={deleteBookingFile} onDeleteBooking={deleteBookingSafely}/>}
     {section === "places" && <Places data={data}/>}
     {section === "alerts" && <Alerts data={data} onMessage={setMessage}/>}
     {section === "members" && <Members data={data}/>}
@@ -91,6 +92,17 @@ export function MoreScreen({ data, initialSection, installPrompt }: { data: Trip
     {section === "settings" && <TripSettings data={data} onMessage={setMessage}/>}
     {section === "install" && <Install installPrompt={installPrompt}/>}
   </>;
+}
+
+function ImportantNotes({ data }: { data: TripBoardData }) {
+  const [adding, setAdding] = useState(false); const [editing, setEditing] = useState<TripNote | null>(null);
+  const grouped = new Map<string, TripNote[]>(); for (const note of data.notes) grouped.set(note.section, [...(grouped.get(note.section) ?? []), note]);
+  return <><div className="section-actions"><button className="button primary" onClick={() => setAdding(true)}><Plus size={16}/> Add note</button></div><section className="notes-board">{[...grouped.entries()].map(([section, notes]) => <section className="panel note-section" key={section}><div className="panel-heading"><div><p className="eyebrow">IMPORTANT NOTES</p><h2>{section}</h2></div></div>{notes.map((note) => <article key={note.id}><div><h3>{note.title}</h3><p>{note.body}</p></div><div className="note-actions"><button aria-label={`Edit ${note.title}`} onClick={() => setEditing(note)}><Pencil size={15}/></button><button aria-label={`Delete ${note.title}`} onClick={() => { if (window.confirm(`Delete “${note.title}”?`)) void data.deleteNote(note.id); }}><Trash2 size={15}/></button></div></article>)}</section>)}{data.notes.length === 0 && <div className="panel empty-state"><StickyNote size={28}/><h3>No important notes yet</h3><p>Add shared guidance, a travel reminder, or a new category whenever you need it.</p></div>}</section>{adding && <NoteModal onClose={() => setAdding(false)} onSave={async (note) => { await data.addNote(note); setAdding(false); }}/>} {editing && <NoteModal note={editing} onClose={() => setEditing(null)} onSave={async (note) => { await data.editNote(editing.id, note); setEditing(null); }}/>}</>;
+}
+
+function NoteModal({ note, onClose, onSave }: { note?: TripNote; onClose: () => void; onSave: (note: Pick<TripNote, "section" | "title" | "body">) => Promise<void> }) {
+  const [section, setSection] = useState(note?.section ?? "Travel essentials"); const [title, setTitle] = useState(note?.title ?? ""); const [body, setBody] = useState(note?.body ?? ""); const [saving, setSaving] = useState(false);
+  return <Modal title={note ? "Edit important note" : "Add important note"} description="Choose any section name. It will become a reusable shared category." onClose={onClose}><form className="form-stack" onSubmit={async (event) => { event.preventDefault(); setSaving(true); await onSave({ section, title, body }); setSaving(false); }}><label>Section<input value={section} onChange={(event) => setSection(event.target.value)} maxLength={80} required placeholder="e.g. Money & payments"/></label><label>Title<input value={title} onChange={(event) => setTitle(event.target.value)} maxLength={160} required placeholder="e.g. Always pay in HKD"/></label><label>Note<textarea value={body} onChange={(event) => setBody(event.target.value)} rows={7} required placeholder="Shared guidance for the trip"/></label><div className="form-actions"><button type="button" className="button secondary" onClick={onClose}>Cancel</button><button className="button primary" disabled={saving}>{saving ? "Saving…" : "Save note"}</button></div></form></Modal>;
 }
 
 function Overview({ onOpen }: { onOpen: (section: MoreSection) => void }) {

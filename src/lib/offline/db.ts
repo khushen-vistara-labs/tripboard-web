@@ -1,7 +1,7 @@
 import Dexie, { type EntityTable } from "dexie";
 
 export type MutationStatus = "PENDING" | "SYNCING" | "CONFLICT" | "FAILED";
-export type OfflineEntity = "itinerary" | "checklist" | "financial" | "place" | "booking" | "booking-file" | "settings" | "account" | "budget" | "member" | "notification-preference";
+export type OfflineEntity = "itinerary" | "checklist" | "financial" | "place" | "booking" | "booking-file" | "settings" | "account" | "budget" | "member" | "notification-preference" | "trip-note";
 
 export interface OfflineMutation {
   id: string;

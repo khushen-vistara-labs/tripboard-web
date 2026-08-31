@@ -100,6 +100,14 @@ pnpm sync:itinerary
 
 This replaces that trip's itinerary entries with the JSON version, including removing entries no longer in the file. It preserves the trip's checklist, places, bookings, accounts, budgets, and financial records.
 
+For the Hong Kong seed's itinerary plus newly added preparation checklist content, run:
+
+```bash
+pnpm sync:trip-content
+```
+
+This still preserves financial records, bookings, places, and existing checklist progress; it only adds new checklist entries that are not already present.
+
 ## Commands
 
 ```bash
