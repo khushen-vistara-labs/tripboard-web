@@ -252,6 +252,12 @@ html[data-theme="dark"] body{background:radial-gradient(circle at top right,#172
 .booking-title p,.booking-details>span,.places-list p,.places-list address,.activity-history article p,.detail-grid span{font-size:9px;line-height:1.45}
 .notice-banner,.sync-banner,.day-heading-actions>span{font-size:11px}
 
+@media(max-width:700px){
+  .more-grid p,.install-benefits p,.alert-enable p,.preference-list p,.member-list p,.shared-principle p,.account-tools p,.quick-strip small{font-size:11px}
+  .booking-title p,.booking-details>span,.places-list p,.places-list address,.activity-history article p,.detail-grid span,.invite-history article p,.notification-open span,.sync-review-list p{font-size:10px}
+  .checklist-category-grid small,.day-heading-actions>span,.food-mini small,.file-open small{font-size:10px}
+}
+
 html[data-theme="dark"] .panel,html[data-theme="dark"] .icon-button,html[data-theme="dark"] .login-card,html[data-theme="dark"] .quick-strip button,html[data-theme="dark"] .quick-strip a,html[data-theme="dark"] .kpi-card,html[data-theme="dark"] .completion-overview>article,html[data-theme="dark"] .checklist-category-grid button,html[data-theme="dark"] .more-grid>button,html[data-theme="dark"] .more-grid>article,html[data-theme="dark"] .modal-panel{background:var(--card)}
 html[data-theme="dark"] .next-card{background:#1b304a}
 html[data-theme="dark"] .next-meta,html[data-theme="dark"] .next-time,html[data-theme="dark"] .transport-note{color:#c5d2e1}

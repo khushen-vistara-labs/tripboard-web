@@ -1,5 +1,5 @@
-const CACHE = "tripboard-shell-v2";
-const APP_SHELL = ["/", "/today", "/plan", "/money", "/checklist", "/more", "/bookings", "/login", "/manifest.webmanifest", "/icon-192.png", "/icon-512.png"];
+const CACHE = "tripboard-shell-v3";
+const APP_SHELL = ["/", "/today", "/plan", "/money", "/checklist", "/more", "/bookings", "/login", "/manifest.webmanifest", "/icon-192.png?v=3", "/icon-512.png?v=3", "/apple-touch-icon.png?v=3"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(APP_SHELL)).then(() => self.skipWaiting()));
@@ -25,7 +25,7 @@ self.addEventListener("fetch", (event) => {
 
 self.addEventListener("push", (event) => {
   const payload = event.data?.json() ?? { title: "TripBoard", body: "Open your shared trip for an update.", url: "/today" };
-  event.waitUntil(self.registration.showNotification(payload.title, { body: payload.body, icon: "/icon-192.png", badge: "/favicon.png", data: { url: payload.url || "/today" }, tag: payload.dedupeKey, renotify: false }));
+  event.waitUntil(self.registration.showNotification(payload.title, { body: payload.body, icon: "/icon-192.png?v=3", badge: "/favicon.png?v=3", data: { url: payload.url || "/today" }, tag: payload.dedupeKey, renotify: false }));
 });
 
 self.addEventListener("notificationclick", (event) => {

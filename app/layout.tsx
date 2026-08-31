@@ -6,7 +6,7 @@ import "./globals.css";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
-export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover", themeColor: "#153f34", colorScheme: "light dark" };
+export const viewport: Viewport = { width: "device-width", initialScale: 1, maximumScale: 1, userScalable: false, viewportFit: "cover", themeColor: "#153f34", colorScheme: "light dark" };
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description,
     applicationName: "TripBoard",
     manifest: "/manifest.webmanifest",
-    icons: { icon: [{ url: "/favicon.png", type: "image/png", sizes: "32x32" }], apple: [{ url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" }] },
+    icons: { icon: [{ url: "/favicon.png?v=3", type: "image/png", sizes: "32x32" }], apple: [{ url: "/apple-touch-icon.png?v=3", type: "image/png", sizes: "180x180" }] },
     appleWebApp: { capable: true, title: "TripBoard", statusBarStyle: "black-translucent" },
     openGraph: { type: "website", siteName: "TripBoard", title, description, images: [{ url: `${origin}/og.png`, width: 1200, height: 630, alt: "TripBoard: Your shared trip, in step." }] },
     twitter: { card: "summary_large_image", title, description, images: [`${origin}/og.png`] },
