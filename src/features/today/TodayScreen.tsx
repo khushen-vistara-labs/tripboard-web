@@ -11,6 +11,7 @@ import { rankWhatNow } from "../itinerary/rules";
 import { Modal } from "../../components/ui/Modal";
 import { MoveItemModal } from "../../components/app/MoveItemModal";
 import { calculateBudgetUsage } from "../budgets/usage";
+import { formatDuration } from "../../lib/dates/duration";
 
 export function TodayScreen({ data }: { data: TripBoardData }) {
   const viewDate = data.demoMode ? "2026-12-28" : DateTime.now().setZone(data.trip.timezone).toISODate()!;
@@ -47,7 +48,7 @@ export function TodayScreen({ data }: { data: TripBoardData }) {
         <div className="next-label"><span className="pulse"/> UP NEXT</div>
         <p className="next-time">{displayTime(next.plannedStartTime)}</p>
         <h3>{next.title}</h3>
-        <p className="next-meta">{next.description ?? `${next.expectedDurationMinutes ?? 60} min · ${next.type}`}</p>
+        <p className="next-meta">{next.description ?? `${formatDuration(next.expectedDurationMinutes ?? 60)} · ${next.type}`}</p>
         {next.recommendedDepartureTime && <div className="leave-row"><span className="leave-icon"><Navigation size={15}/></span><div><small>RECOMMENDED DEPARTURE</small><strong>Leave by {displayTime(next.recommendedDepartureTime)}</strong></div><span className="countdown">in 42 min</span></div>}
         {next.transportInstructions && <p className="transport-note"><Map size={14}/>{next.transportInstructions}</p>}
         <div className="primary-actions">
@@ -69,7 +70,7 @@ export function TodayScreen({ data }: { data: TripBoardData }) {
       <section className="panel schedule-panel">
         <div className="panel-heading"><h3>Coming up</h3><a href="/plan">View full plan <ChevronRight size={13}/></a></div>
         <div className="schedule-list">{pending.slice(1, 5).map((item) => <article key={item.id} className="schedule-item">
-          <time>{displayTime(item.plannedStartTime)}</time><span className={`timeline-dot priority-${item.priority.toLowerCase()}`}/><div><strong>{item.title}</strong><p>{item.expectedDurationMinutes ?? 60} min · {item.priority}</p></div>
+          <time>{displayTime(item.plannedStartTime)}</time><span className={`timeline-dot priority-${item.priority.toLowerCase()}`}/><div><strong>{item.title}</strong><p>{formatDuration(item.expectedDurationMinutes ?? 60)} · {item.priority}</p></div>
           <button onClick={() => void data.completeItinerary(item.id)} aria-label={`Mark ${item.title} done`}><Check size={17}/></button>
         </article>)}{pending.length <= 1 && <div className="mini-empty">Nothing else scheduled today.</div>}</div>
       </section>
@@ -82,7 +83,7 @@ export function TodayScreen({ data }: { data: TripBoardData }) {
 
     {moveItem && <MoveItemModal item={moveItem} onClose={() => setMoveItem(null)} onMove={(date, time, reason) => data.moveItinerary(moveItem.id, date, time, reason)}/>}
     {showWhatNow && <Modal title="What can we do now?" description="Rule-based suggestions from unfinished priorities, timing, and duration." onClose={() => setShowWhatNow(false)}>
-      <div className="recommendation-list">{recommendations.map((item, index) => <article key={item.id}><span>{index + 1}</span><div><small>{item.priority} · {item.expectedDurationMinutes ?? 60} min</small><strong>{item.title}</strong><p>{item.date === viewDate ? "Fits today’s plan" : `Planned ${DateTime.fromISO(item.date).toFormat("d LLL")}`}</p></div>{item.mapsUrl ? <button onClick={() => window.open(item.mapsUrl, "_blank", "noopener,noreferrer")} aria-label={`Directions to ${item.title}`}><LocateFixed size={17}/></button> : <Clock3 size={17}/>}</article>)}</div>
+      <div className="recommendation-list">{recommendations.map((item, index) => <article key={item.id}><span>{index + 1}</span><div><small>{item.priority} · {formatDuration(item.expectedDurationMinutes ?? 60)}</small><strong>{item.title}</strong><p>{item.date === viewDate ? "Fits today’s plan" : `Planned ${DateTime.fromISO(item.date).toFormat("d LLL")}`}</p></div>{item.mapsUrl ? <button onClick={() => window.open(item.mapsUrl, "_blank", "noopener,noreferrer")} aria-label={`Directions to ${item.title}`}><LocateFixed size={17}/></button> : <Clock3 size={17}/>}</article>)}</div>
     </Modal>}
   </>;
 }

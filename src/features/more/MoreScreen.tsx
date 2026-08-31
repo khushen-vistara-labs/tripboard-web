@@ -7,6 +7,7 @@ import { getSupabaseBrowserClient } from "../../lib/supabase/client";
 import { Modal } from "../../components/ui/Modal";
 import { enqueueMutation } from "../../lib/offline/queue";
 import type { Booking, Place, Priority, TripNote } from "../../types/domain";
+import { formatDuration } from "../../lib/dates/duration";
 
 type MoreSection = "overview" | "notes" | "bookings" | "places" | "alerts" | "members" | "activity" | "settings" | "install";
 export interface InstallPromptEvent extends Event { prompt: () => Promise<void>; userChoice: Promise<{ outcome: "accepted" | "dismissed" }>; }
@@ -141,7 +142,7 @@ function PlaceFormModal({ place, onClose, onSave }: { place?: Place; onClose: ()
 }
 
 function PlaceDetailModal({ place, onClose, onEdit, onDelete }: { place: Place; onClose: () => void; onEdit: () => void; onDelete: () => Promise<void> }) {
-  return <Modal title={place.name} description={[place.category, place.neighbourhood].filter(Boolean).join(" · ")} onClose={onClose} wide><div className="detail-grid"><div><span>Priority</span><strong>{place.priority}</strong></div><div><span>Duration</span><strong>{place.expectedDurationMinutes ? `${place.expectedDurationMinutes} minutes` : "Not added"}</strong></div><div className="detail-wide"><span>Address</span><strong>{place.address || "Not added"}</strong></div><div className="detail-wide"><span>Opening hours</span><strong>{place.openingHoursNotes || "Not added"}</strong></div></div>{place.notes && <section className="detail-notes"><h3>Notes</h3><p>{place.notes}</p></section>}<div className="form-actions detail-actions">{place.mapsUrl && <a className="button secondary" href={place.mapsUrl} target="_blank" rel="noreferrer"><ExternalLink size={14}/> Open map</a>}<button className="button secondary" onClick={onEdit}><Pencil size={14}/> Edit</button><button className="button danger" onClick={() => void onDelete()}><Trash2 size={14}/> Delete</button></div></Modal>;
+  return <Modal title={place.name} description={[place.category, place.neighbourhood].filter(Boolean).join(" · ")} onClose={onClose} wide><div className="detail-grid"><div><span>Priority</span><strong>{place.priority}</strong></div><div><span>Duration</span><strong>{place.expectedDurationMinutes ? formatDuration(place.expectedDurationMinutes) : "Not added"}</strong></div><div className="detail-wide"><span>Address</span><strong>{place.address || "Not added"}</strong></div><div className="detail-wide"><span>Opening hours</span><strong>{place.openingHoursNotes || "Not added"}</strong></div></div>{place.notes && <section className="detail-notes"><h3>Notes</h3><p>{place.notes}</p></section>}<div className="form-actions detail-actions">{place.mapsUrl && <a className="button secondary" href={place.mapsUrl} target="_blank" rel="noreferrer"><ExternalLink size={14}/> Open map</a>}<button className="button secondary" onClick={onEdit}><Pencil size={14}/> Edit</button><button className="button danger" onClick={() => void onDelete()}><Trash2 size={14}/> Delete</button></div></Modal>;
 }
 
 function Alerts({ data, onMessage }: { data: TripBoardData; onMessage: (message: string) => void }) {
