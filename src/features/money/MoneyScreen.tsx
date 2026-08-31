@@ -88,7 +88,7 @@ export function MoneyScreen({ data }: { data: TripBoardData }) {
     {editingBudget && <BudgetModal budget={editingBudget} defaultCurrency={editingBudget.currency} onClose={() => setEditingBudget(null)} onSave={async (budget) => { await data.editBudget(editingBudget.id, budget); setEditingBudget(null); }}/>}
     {settling && <SettlementModal event={settling} onClose={() => setSettling(null)} onSave={async (amount) => { await data.settleFinancialTransaction(settling.id, settling.version ?? 1, amount); setSettling(null); }}/>}
     {voiding && <VoidTransactionModal event={voiding} onClose={() => setVoiding(null)} onSave={async (reason) => { await data.voidFinancialTransaction(voiding.id, voiding.version ?? 1, reason); setVoiding(null); }}/>}
-    {editingEvent && <EditMoneyActivityModal event={editingEvent} onClose={() => setEditingEvent(null)} onSave={async (patch) => { await data.editFinancialTransaction(editingEvent.id, editingEvent.version ?? 1, patch); setEditingEvent(null); }}/>}
+    {editingEvent && <AddMoneyModal event={editingEvent} accounts={activeAccounts} ledger={ledger} events={activeEvents} onClose={() => setEditingEvent(null)} onRecord={data.recordFinancialEvent} onUpdate={async (next) => { await data.editFinancialTransaction(next, editingEvent.version ?? 1); setEditingEvent(null); }}/>}
   </>;
 }
 
@@ -131,25 +131,18 @@ function LedgerRow({ event, accounts, timezone, onEdit, onSettle, onVoid }: { ev
   return <article className={`ledger-row${event.voidedAt ? " voided" : ""}`}><span className={`ledger-icon type-${event.type.toLowerCase()}`}><Icon size={16}/></span><div className="ledger-description"><strong>{event.description}</strong><small>{event.voidedAt ? "Voided · no longer affects totals" : purchase ? `${event.category ?? "Miscellaneous"} · ${source}` : source && destination ? `${source} → ${destination}` : event.type.replaceAll("_", " ")}</small></div><div className="ledger-amount"><strong>{currency && amount ? formatMoney(amount, currency, currency === "INR" ? "en-IN" : "en-HK") : "Not available"}</strong><span className={`event-label ${purchase ? "spend" : "move"}`}>{event.settlementStatus === "PROVISIONAL" ? "Estimate" : purchase ? "Consumption" : event.type === "BALANCE_ADJUSTMENT" ? "Correction" : "Transfer"}</span></div><time>{new Intl.DateTimeFormat("en", { hour: "numeric", minute: "2-digit", timeZone: timezone }).format(new Date(event.occurredAt))}</time><span className="ledger-actions">{!event.voidedAt && <button onClick={onEdit}>Edit</button>}{!event.voidedAt && event.settlementStatus === "PROVISIONAL" && <button onClick={onSettle}>Settle</button>}{!event.voidedAt && <button onClick={onVoid}>Void</button>}</span></article>;
 }
 
-function EditMoneyActivityModal({ event, onClose, onSave }: { event: FinancialEvent; onClose: () => void; onSave: (patch: Pick<FinancialEvent, "description" | "category" | "sourceAmount" | "destinationAmount" | "consumptionAmount">) => Promise<void> }) {
-  const amount = (event.type === "PURCHASE" ? event.consumptionAmount : event.destinationAmount ?? event.sourceAmount) ?? "";
-  const currency = event.type === "PURCHASE" ? event.consumptionCurrency : event.destinationCurrency ?? event.sourceCurrency;
-  const [description, setDescription] = useState(event.description); const [nextAmount, setNextAmount] = useState(amount); const [category, setCategory] = useState(event.category ?? "Miscellaneous"); const [saving, setSaving] = useState(false); const [error, setError] = useState("");
-  return <Modal title="Edit money activity" description="Correct the description or amount. Payment accounts and currencies stay fixed to preserve the ledger." onClose={onClose}><form className="form-stack" onSubmit={async (formEvent) => { formEvent.preventDefault(); try { if (new Decimal(nextAmount).lte(0)) throw new Error("Enter an amount greater than zero."); setSaving(true); const patch = event.type === "PURCHASE" ? { description: description.trim(), category, sourceAmount: nextAmount, consumptionAmount: nextAmount, destinationAmount: event.destinationAmount } : event.destinationAmount ? { description: description.trim(), category: event.category, sourceAmount: event.sourceAmount, destinationAmount: nextAmount, consumptionAmount: event.consumptionAmount } : { description: description.trim(), category: event.category, sourceAmount: nextAmount, destinationAmount: event.destinationAmount, consumptionAmount: event.consumptionAmount }; await onSave(patch); } catch (cause) { setSaving(false); setError(cause instanceof Error ? cause.message : "Could not update activity."); } }}><label>Description<input value={description} onChange={(input) => setDescription(input.target.value)} required autoFocus/></label><label>Amount<div className="amount-input"><span>{currency}</span><input inputMode="decimal" value={nextAmount} onChange={(input) => setNextAmount(input.target.value)} required/></div></label>{event.type === "PURCHASE" && <label>Category<select value={category} onChange={(input) => setCategory(input.target.value)}>{categories.map((item) => <option key={item}>{item}</option>)}</select></label>}<small className="field-help">To change accounts or currencies, void this activity and record the corrected one.</small>{error && <div className="form-error" role="alert">{error}</div>}<button className="button primary full" disabled={saving}>{saving ? "Saving…" : "Save activity"}</button></form></Modal>;
-}
-
-function AddMoneyModal({ accounts, ledger, events, onClose, onRecord }: { accounts: PaymentAccount[]; ledger: LedgerSnapshot; events: FinancialEvent[]; onClose: () => void; onRecord: (event: FinancialEvent) => Promise<void> }) {
-  const [type, setType] = useState<FinancialEventType | null>(null);
-  const [amount, setAmount] = useState("");
-  const [destinationAmount, setDestinationAmount] = useState("");
-  const [currency, setCurrency] = useState("HKD");
-  const [sourceId, setSourceId] = useState(accounts.find((account) => account.accountClass === "STORED_VALUE")?.id ?? accounts[0]?.id ?? "");
-  const [destinationId, setDestinationId] = useState(accounts.find((account) => account.accountClass === "STORED_VALUE")?.id ?? "");
-  const [category, setCategory] = useState("Food");
-  const [description, setDescription] = useState("");
-  const [estimatedInr, setEstimatedInr] = useState("");
-  const [settledInr, setSettledInr] = useState("");
-  const [originalId, setOriginalId] = useState(events.find((event) => event.type === "PURCHASE")?.id ?? "");
+function AddMoneyModal({ accounts, ledger, events, onClose, onRecord, event: existing, onUpdate }: { accounts: PaymentAccount[]; ledger: LedgerSnapshot; events: FinancialEvent[]; onClose: () => void; onRecord: (event: FinancialEvent) => Promise<void>; event?: FinancialEvent; onUpdate?: (event: FinancialEvent) => Promise<void> }) {
+  const [type, setType] = useState<FinancialEventType | null>(existing?.type === "INTERNAL_TRANSFER" ? "FUND_WALLET" : existing?.type ?? null);
+  const [amount, setAmount] = useState(existing?.consumptionAmount ?? existing?.sourceAmount ?? existing?.destinationAmount ?? "");
+  const [destinationAmount, setDestinationAmount] = useState(existing?.destinationAmount ?? "");
+  const [currency, setCurrency] = useState(existing?.consumptionCurrency ?? existing?.sourceCurrency ?? existing?.destinationCurrency ?? "HKD");
+  const [sourceId, setSourceId] = useState(existing?.sourceAccountId ?? accounts.find((account) => account.accountClass === "STORED_VALUE")?.id ?? accounts[0]?.id ?? "");
+  const [destinationId, setDestinationId] = useState(existing?.destinationAccountId ?? accounts.find((account) => account.accountClass === "STORED_VALUE")?.id ?? "");
+  const [category, setCategory] = useState(existing?.category ?? "Food");
+  const [description, setDescription] = useState(existing?.description ?? "");
+  const [estimatedInr, setEstimatedInr] = useState(existing?.estimatedInrAmount ?? "");
+  const [settledInr, setSettledInr] = useState(existing?.settledInrAmount ?? "");
+  const [originalId, setOriginalId] = useState(existing?.originalTransactionId ?? events.find((event) => event.type === "PURCHASE")?.id ?? "");
   const [actualBalance, setActualBalance] = useState("");
   const [formError, setFormError] = useState("");
   const [saving, setSaving] = useState(false);
@@ -166,8 +159,8 @@ function AddMoneyModal({ accounts, ledger, events, onClose, onRecord }: { accoun
     try {
       const value = new Decimal(type === "BALANCE_ADJUSTMENT" ? actualBalance || 0 : amount || 0);
       if (value.isNegative() || value.isZero()) throw new Error("Enter an amount greater than zero.");
-      const id = crypto.randomUUID();
-      const base: FinancialEvent = { id, idempotencyKey: id, type, occurredAt: new Date().toISOString(), description: description || selectedChoice.label };
+      const id = existing?.id ?? crypto.randomUUID();
+      const base: FinancialEvent = { ...(existing ?? {}), id, idempotencyKey: existing?.idempotencyKey ?? id, type, occurredAt: existing?.occurredAt ?? new Date().toISOString(), description: description || selectedChoice.label };
       let next: FinancialEvent;
       if (type === "PURCHASE") next = { ...base, sourceAccountId: sourceId, sourceAmount: amount, sourceCurrency: currency, consumptionAmount: amount, consumptionCurrency: currency, category, estimatedInrAmount: source?.accountClass === "EXTERNAL_SOURCE" && estimatedInr ? estimatedInr : undefined, settledInrAmount: source?.accountClass === "EXTERNAL_SOURCE" && settledInr ? settledInr : undefined, settlementStatus: settledInr ? "SETTLED" : estimatedInr ? "PROVISIONAL" : undefined };
       else if (type === "FUND_WALLET") next = source?.accountClass === "STORED_VALUE" && destination?.accountClass === "STORED_VALUE" ? { ...base, type: "INTERNAL_TRANSFER", sourceAccountId: sourceId, destinationAccountId: destinationId, sourceAmount: amount, sourceCurrency: source.currency, destinationAmount: destinationAmount || amount, destinationCurrency: destination.currency } : { ...base, sourceAccountId: sourceId, destinationAccountId: destinationId, destinationAmount: destinationAmount || amount, destinationCurrency: destination?.currency ?? currency, estimatedInrAmount: estimatedInr || undefined, settledInrAmount: settledInr || undefined, settlementStatus: settledInr ? "SETTLED" : estimatedInr ? "PROVISIONAL" : undefined };
@@ -178,11 +171,11 @@ function AddMoneyModal({ accounts, ledger, events, onClose, onRecord }: { accoun
         next = { ...base, destinationAccountId: destinationId, destinationAmount: adjustment.toString(), destinationCurrency: destination?.currency ?? currency };
       }
       postFinancialEvent(ledger, next);
-      setSaving(true); await onRecord(next); setSaving(false); onClose();
+      setSaving(true); if (onUpdate) await onUpdate(next); else await onRecord(next); setSaving(false); onClose();
     } catch (error) { setSaving(false); setFormError(error instanceof FinancialInvariantError || error instanceof Error ? error.message : "Could not record this activity."); }
   };
 
-  return <Modal title={selectedChoice.label} description={type === "FUND_WALLET" || type === "CASH_EXCHANGE" ? "This moves money. It does not count as local spending." : undefined} onClose={onClose}>
+  return <Modal title={existing ? `Edit ${selectedChoice.label}` : selectedChoice.label} description={type === "FUND_WALLET" || type === "CASH_EXCHANGE" ? "This moves money. It does not count as local spending." : undefined} onClose={onClose}>
     <form className="form-stack" onSubmit={submit}>
       {type !== "BALANCE_ADJUSTMENT" && type !== "PURCHASE_REFUND" && <label>Paid / moved from<select value={sourceId} onChange={(event) => { setSourceId(event.target.value); const account = accounts.find((item) => item.id === event.target.value); if (account) setCurrency(account.currency); }}>{accounts.map((account) => <option value={account.id} key={account.id}>{account.name}</option>)}</select></label>}
       {type === "PURCHASE_REFUND" && <label>Original purchase<select value={originalId} onChange={(event) => setOriginalId(event.target.value)}>{events.filter((event) => event.type === "PURCHASE").map((event) => <option value={event.id} key={event.id}>{event.description} · {event.consumptionCurrency} {event.consumptionAmount}</option>)}</select></label>}
@@ -194,7 +187,7 @@ function AddMoneyModal({ accounts, ledger, events, onClose, onRecord }: { accoun
       <label>Description <span className="optional">optional</span><input value={description} onChange={(event) => setDescription(event.target.value)} placeholder={type === "PURCHASE" ? "Merchant or item" : selectedChoice.label}/></label>
       {type !== "PURCHASE" && type !== "BALANCE_ADJUSTMENT" && <div className="transfer-callout"><ArrowLeftRight size={16}/><span>This is a money movement, not local consumption.</span></div>}
       {formError && <div className="form-error" role="alert">{formError}</div>}
-      <div className="form-actions"><button type="button" className="button secondary" onClick={() => setType(null)}>Back</button><button className="button primary" disabled={saving}><Check size={16}/>{saving ? "Saving…" : "Record activity"}</button></div>
+      <div className="form-actions"><button type="button" className="button secondary" onClick={() => setType(null)}>Back</button><button className="button primary" disabled={saving}><Check size={16}/>{saving ? "Saving…" : existing ? "Save activity" : "Record activity"}</button></div>
     </form>
   </Modal>;
 }

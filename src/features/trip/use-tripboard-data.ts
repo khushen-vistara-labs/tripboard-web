@@ -46,7 +46,7 @@ export interface TripBoardData {
   deleteBooking: (id: string) => Promise<void>;
   saveDay: (day: Omit<ItineraryDay, "id" | "tripId">) => Promise<void>;
   recordFinancialEvent: (event: FinancialEvent) => Promise<void>;
-  editFinancialTransaction: (id: string, version: number, patch: Pick<FinancialEvent, "description" | "category" | "sourceAmount" | "destinationAmount" | "consumptionAmount">) => Promise<void>;
+  editFinancialTransaction: (event: FinancialEvent, version: number) => Promise<void>;
   addPaymentAccount: (account: Omit<PaymentAccount, "id" | "archivedAt">) => Promise<void>;
   editPaymentAccount: (id: string, account: Omit<PaymentAccount, "id" | "archivedAt">) => Promise<void>;
   archivePaymentAccount: (id: string) => Promise<void>;
@@ -315,6 +315,10 @@ export function useTripBoardData(): TripBoardData {
         } else if (mutation.command === "void") {
           const { error: syncError } = await supabase.rpc("void_financial_transaction", { p_transaction_id: mutation.payload.id, p_expected_version: mutation.payload.version, p_reason: mutation.payload.reason });
           if (syncError) throw syncError;
+        } else if (mutation.command === "edit") {
+          const event = mutation.payload.event as FinancialEvent;
+          const { error: syncError } = await supabase.rpc("replace_financial_transaction", { p_transaction_id: event.id, p_expected_version: mutation.payload.version, p_event: event });
+          if (syncError) throw syncError;
         } else await sendFinancialRpc(supabase, mutation.payload.event as FinancialEvent, mutation.tripId);
       } else if (mutation.entity === "account" || mutation.entity === "budget") {
         const table = mutation.entity === "account" ? "payment_accounts" : "budgets";
@@ -469,15 +473,15 @@ export function useTripBoardData(): TripBoardData {
     }
   };
 
-  const editFinancialTransaction: TripBoardData["editFinancialTransaction"] = async (id, version, patch) => {
-    const before = financialEvents.find((event) => event.id === id); if (!before || before.voidedAt) return;
-    const next = { ...before, ...patch, version: version + 1 };
-    setFinancialEvents((events) => events.map((event) => event.id === id ? next : event));
+  const editFinancialTransaction: TripBoardData["editFinancialTransaction"] = async (event, version) => {
+    const before = financialEvents.find((entry) => entry.id === event.id); if (!before || before.voidedAt) return;
+    const next = { ...event, version: version + 1 };
+    setFinancialEvents((events) => events.map((entry) => entry.id === event.id ? next : entry));
     const client = getSupabaseBrowserClient(); if (!client) return;
-    const payload = { id, version, description: next.description, category: next.category ?? null, sourceAmount: next.sourceAmount ?? null, destinationAmount: next.destinationAmount ?? null, consumptionAmount: next.consumptionAmount ?? null };
+    const payload = { event: next, version };
     if (!navigator.onLine) { await enqueueMutation({ tripId: trip.id, entity: "financial", command: "edit", payload }); return; }
-    const { error: editError } = await client.rpc("edit_financial_transaction", { p_transaction_id: id, p_expected_version: version, p_description: payload.description, p_category: payload.category, p_source_amount: payload.sourceAmount, p_destination_amount: payload.destinationAmount, p_consumption_amount: payload.consumptionAmount });
-    if (editError) { setFinancialEvents((events) => events.map((event) => event.id === id ? before : event)); setError(editError.message); }
+    const { error: editError } = await client.rpc("replace_financial_transaction", { p_transaction_id: event.id, p_expected_version: version, p_event: next });
+    if (editError) { setFinancialEvents((events) => events.map((entry) => entry.id === event.id ? before : entry)); setError(editError.message); }
   };
 
   const accountPayload = (id: string, account: Omit<PaymentAccount, "id" | "archivedAt">) => ({
