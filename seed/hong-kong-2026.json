@@ -9,10 +9,7 @@
   "days": [
     {"date":"2026-12-24","title":"Departure • Bengaluru → Hanoi overnight transit"},
     {
-      "date": "2026-12-25", "title": "Buy two Adult On-Loan Octopus cards", "type": "other", "start": "17:00", "end": "17:15", "durationMinutes": 15, "priority": "MUST", "sequence": 35, "placeKey": "bridal-tea-house", "timingType": "TARGET", "transportInstructions": "Buy at Yau Ma Tei MTR Customer Service Centre. Each card includes about HK$50 refundable deposit and HK$150 stored value; top up another HK$250–350 only if useful."
-    },
-    {
-      "date": "2026-12-24",
+      "date": "2026-12-25",
       "title": "Arrival • Christmas Hong Kong • Victoria Harbour • Aqua Luna"
     },
     {
@@ -705,6 +702,19 @@
       "priority": "MUST",
       "sequence": 30,
       "placeKey": "bridal-tea-house"
+    },
+    {
+      "date": "2026-12-25",
+      "title": "Buy two Adult On-Loan Octopus cards",
+      "type": "other",
+      "start": "17:00",
+      "end": "17:15",
+      "durationMinutes": 15,
+      "priority": "MUST",
+      "sequence": 35,
+      "placeKey": "bridal-tea-house",
+      "timingType": "TARGET",
+      "transportInstructions": "Buy at Yau Ma Tei MTR Customer Service Centre. Each card includes about HK$50 refundable deposit and HK$150 stored value; top up another HK$250–350 only if useful."
     },
     {
       "date": "2026-12-25",
