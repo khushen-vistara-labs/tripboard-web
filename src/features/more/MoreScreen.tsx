@@ -9,7 +9,7 @@ import { enqueueMutation } from "../../lib/offline/queue";
 import type { Booking, Place, Priority } from "../../types/domain";
 
 type MoreSection = "overview" | "bookings" | "places" | "alerts" | "members" | "activity" | "settings" | "install";
-interface InstallPromptEvent extends Event { prompt: () => Promise<void>; userChoice: Promise<{ outcome: "accepted" | "dismissed" }>; }
+export interface InstallPromptEvent extends Event { prompt: () => Promise<void>; userChoice: Promise<{ outcome: "accepted" | "dismissed" }>; }
 
 const sections: { id: MoreSection; label: string; help: string; icon: typeof Ticket }[] = [
   { id: "bookings", label: "Bookings", help: "Tickets, references, and documents", icon: Ticket },
@@ -21,15 +21,11 @@ const sections: { id: MoreSection; label: string; help: string; icon: typeof Tic
   { id: "install", label: "Install TripBoard", help: "Offline launch and Home Screen access", icon: Smartphone },
 ];
 
-export function MoreScreen({ data, initialSection }: { data: TripBoardData; initialSection: MoreSection }) {
+export function MoreScreen({ data, initialSection, installPrompt }: { data: TripBoardData; initialSection: MoreSection; installPrompt: InstallPromptEvent | null }) {
   const [section, setSection] = useState<MoreSection>(initialSection);
   const [message, setMessage] = useState("");
-  const [installPrompt, setInstallPrompt] = useState<InstallPromptEvent | null>(null);
   useEffect(() => {
     queueMicrotask(() => { const requested = new URLSearchParams(window.location.search).get("section") as MoreSection | null; if (requested && sections.some((item) => item.id === requested)) setSection(requested); });
-    const capture = (event: Event) => { event.preventDefault(); setInstallPrompt(event as InstallPromptEvent); };
-    window.addEventListener("beforeinstallprompt", capture);
-    return () => window.removeEventListener("beforeinstallprompt", capture);
   }, []);
 
   const uploadBookingFile = async (bookingId: string, file: File) => {
@@ -93,7 +89,7 @@ export function MoreScreen({ data, initialSection }: { data: TripBoardData; init
     {section === "members" && <Members data={data}/>}
     {section === "activity" && <ActivityHistory data={data}/>}
     {section === "settings" && <TripSettings data={data} onMessage={setMessage}/>}
-    {section === "install" && <Install installPrompt={installPrompt} onMessage={setMessage}/>}
+    {section === "install" && <Install installPrompt={installPrompt}/>}
   </>;
 }
 
@@ -286,7 +282,36 @@ function SetPasswordModal({ onClose, onSaved }: { onClose: () => void; onSaved: 
   return <Modal title="Set sign-in password" description="Set this once while you are signed in. Use it the next time you open TripBoard on a new device." onClose={onClose}><form className="form-stack" onSubmit={save}><label>New password<input type="password" autoComplete="new-password" minLength={6} value={password} onChange={(event) => setPassword(event.target.value)} placeholder="At least 6 characters" required/></label><label>Confirm password<input type="password" autoComplete="new-password" minLength={6} value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value)} placeholder="Repeat your password" required/></label>{error && <div className="form-error" role="alert">{error}</div>}<button className="button primary full" disabled={saving}>{saving ? "Saving…" : "Save password"}</button></form></Modal>;
 }
 
-function Install({ installPrompt, onMessage }: { installPrompt: InstallPromptEvent | null; onMessage: (message: string) => void }) {
-  const install = async () => { if (installPrompt) { await installPrompt.prompt(); const choice = await installPrompt.userChoice; onMessage(choice.outcome === "accepted" ? "TripBoard was added to this device." : "Install dismissed. You can return here anytime."); } else onMessage("Open your browser’s Share or menu controls, then choose Add to Home Screen."); };
-  return <div className="install-layout"><section className="install-hero panel"><span><Smartphone size={31}/></span><h2>Keep TripBoard one tap away</h2><p>Install the private PWA for a fast app-like launch, cached trip details, and supported trip alerts.</p><button className="button primary" onClick={() => void install()}><Download size={17}/> Add to Home Screen</button></section><section className="panel install-benefits"><article><Wifi size={20}/><div><strong>Useful offline</strong><p>See itinerary, addresses, notes, balances, and recent history without a connection.</p></div></article><article><Bell size={20}/><div><strong>Timely alerts</strong><p>Home Screen web apps can receive trip reminders where standards-based push is supported.</p></div></article><article><Share2 size={20}/><div><strong>Normal browser URLs</strong><p>Every screen still works from a regular link. Installation is optional.</p></div></article></section></div>;
+type InstallMethod = "installed" | "native" | "ios" | "android" | "desktop";
+
+function Install({ installPrompt }: { installPrompt: InstallPromptEvent | null }) {
+  const [method, setMethod] = useState<InstallMethod>("desktop");
+  const [status, setStatus] = useState("");
+  useEffect(() => {
+    const updateMethod = () => {
+      const nav = navigator as Navigator & { standalone?: boolean };
+      const installed = window.matchMedia("(display-mode: standalone)").matches || nav.standalone === true;
+      const ios = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+      setMethod(installed ? "installed" : installPrompt ? "native" : ios ? "ios" : /Android/i.test(navigator.userAgent) ? "android" : "desktop");
+    };
+    updateMethod();
+    window.addEventListener("appinstalled", updateMethod);
+    return () => window.removeEventListener("appinstalled", updateMethod);
+  }, [installPrompt]);
+  const install = async () => {
+    if (!installPrompt) return;
+    await installPrompt.prompt();
+    const choice = await installPrompt.userChoice;
+    setStatus(choice.outcome === "accepted" ? "TripBoard was added to this device." : "No problem. You can install it whenever you are ready.");
+  };
+  const action = method === "installed"
+    ? <p className="install-guidance">TripBoard is already installed on this device.</p>
+    : method === "native"
+      ? <><button className="button primary" onClick={() => void install()}><Download size={17}/> Install TripBoard</button>{status && <p className="install-guidance" role="status">{status}</p>}</>
+      : method === "ios"
+        ? <div className="install-guidance"><strong>On iPhone or iPad</strong><span>Tap Share, choose Add to Home Screen, then tap Add.</span></div>
+        : method === "android"
+          ? <div className="install-guidance"><strong>On Android</strong><span>Open your browser menu, then choose Install app or Add to Home screen.</span></div>
+          : <div className="install-guidance"><strong>In this browser</strong><span>Use the install icon in the address bar, or choose Install app from the browser menu.</span></div>;
+  return <div className="install-layout"><section className="install-hero panel"><span><Smartphone size={31}/></span><h2>Keep TripBoard one tap away</h2><p>Install the private PWA for a fast app-like launch, cached trip details, and supported trip alerts.</p>{action}</section><section className="panel install-benefits"><article><Wifi size={20}/><div><strong>Useful offline</strong><p>See itinerary, addresses, notes, balances, and recent history without a connection.</p></div></article><article><Bell size={20}/><div><strong>Timely alerts</strong><p>Home Screen web apps can receive trip reminders where standards-based push is supported.</p></div></article><article><Share2 size={20}/><div><strong>Normal browser URLs</strong><p>Every screen still works from a regular link. Installation is optional.</p></div></article></section></div>;
 }

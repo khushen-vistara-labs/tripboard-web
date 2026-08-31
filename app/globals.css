@@ -243,6 +243,7 @@ html[data-theme="dark"] body{background:radial-gradient(circle at top right,#172
 .more-grid .security-card,.more-grid .sync-card,.shared-principle{background:linear-gradient(135deg,#1c466a 0%,#183a5c 100%)}
 .more-grid .security-card p,.more-grid .sync-card p,.shared-principle p{color:#d2dfec}
 .more-grid .security-card>svg,.more-grid .sync-card>svg,.shared-principle>svg{color:#e2b56d}
+.install-guidance{max-width:420px;margin:0 auto;display:grid;gap:5px;padding:12px 14px;border:1px solid var(--line);border-radius:11px;background:var(--mint);color:var(--ink);font-size:11px;line-height:1.45;text-align:left}.install-guidance strong{font-size:11px}.install-guidance span{color:var(--muted)}
 
 html[data-theme="dark"] .panel,html[data-theme="dark"] .icon-button,html[data-theme="dark"] .login-card,html[data-theme="dark"] .quick-strip button,html[data-theme="dark"] .quick-strip a,html[data-theme="dark"] .kpi-card,html[data-theme="dark"] .completion-overview>article,html[data-theme="dark"] .checklist-category-grid button,html[data-theme="dark"] .more-grid>button,html[data-theme="dark"] .more-grid>article,html[data-theme="dark"] .modal-panel{background:var(--card)}
 html[data-theme="dark"] .next-card{background:#1b304a}

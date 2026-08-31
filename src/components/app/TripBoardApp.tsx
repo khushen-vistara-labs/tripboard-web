@@ -10,6 +10,7 @@ import { PlanScreen } from "../../features/itinerary/PlanScreen";
 import { MoneyScreen } from "../../features/money/MoneyScreen";
 import { ChecklistScreen } from "../../features/checklist/ChecklistScreen";
 import { MoreScreen } from "../../features/more/MoreScreen";
+import type { InstallPromptEvent } from "../../features/more/MoreScreen";
 import { discardMutation, retryMutation } from "../../lib/offline/queue";
 import { offlineDb, type OfflineMutation } from "../../lib/offline/db";
 import { mutationSummary } from "../../lib/offline/conflicts";
@@ -24,6 +25,7 @@ function TripBoardInner({ screen }: { screen: AppScreen }) {
   const data = useTripBoardData();
   const [online, setOnline] = useState(() => typeof navigator === "undefined" ? true : navigator.onLine);
   const [queued, setQueued] = useState<OfflineMutation[]>([]);
+  const [installPrompt, setInstallPrompt] = useState<InstallPromptEvent | null>(null);
   useEffect(() => {
     const goOnline = () => setOnline(true); const goOffline = () => setOnline(false);
     window.addEventListener("online", goOnline); window.addEventListener("offline", goOffline);
@@ -38,6 +40,13 @@ function TripBoardInner({ screen }: { screen: AppScreen }) {
       }
     }
     return () => { window.removeEventListener("online", goOnline); window.removeEventListener("offline", goOffline); };
+  }, []);
+  useEffect(() => {
+    const capture = (event: Event) => { event.preventDefault(); setInstallPrompt(event as InstallPromptEvent); };
+    const clear = () => setInstallPrompt(null);
+    window.addEventListener("beforeinstallprompt", capture);
+    window.addEventListener("appinstalled", clear);
+    return () => { window.removeEventListener("beforeinstallprompt", capture); window.removeEventListener("appinstalled", clear); };
   }, []);
   useEffect(() => {
     const reload = () => { void offlineDb.mutations.toArray().then(setQueued).catch(() => setQueued([])); };
@@ -57,7 +66,7 @@ function TripBoardInner({ screen }: { screen: AppScreen }) {
     {screen === "plan" && <PlanScreen data={data}/>} 
     {screen === "money" && <MoneyScreen data={data}/>} 
     {screen === "checklist" && <ChecklistScreen data={data}/>} 
-    {(screen === "more" || screen === "bookings") && <MoreScreen data={data} initialSection={screen === "bookings" ? "bookings" : "overview"}/>} 
+    {(screen === "more" || screen === "bookings") && <MoreScreen data={data} initialSection={screen === "bookings" ? "bookings" : "overview"} installPrompt={installPrompt}/>}
   </AppShell>;
 }
 
