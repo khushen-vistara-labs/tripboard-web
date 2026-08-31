@@ -220,15 +220,14 @@ const { data: existingTrip, error: existingTripError } = await admin
   .select("id, name")
   .eq("owner_id", owner.id)
   .eq("name", seed.trip.name)
-  .eq("start_date", seed.trip.startDate)
   .eq("end_date", seed.trip.endDate)
   .maybeSingle();
 if (existingTripError) throw existingTripError;
 
 if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.includes("--sync-trip-content"))) {
   // This is deliberately opt-in: it makes the itinerary on the existing seed
-  // trip match the JSON file, while leaving checklist, places, bookings,
-  // accounts, budgets, and financial records untouched.
+  // trip match the JSON file while preserving financial records and traveller
+  // progress. New seed days and bookings are added before item linking.
   const [{ data: days, error: daysError }, { data: places, error: placesError }, { data: bookings, error: bookingsError }] = await Promise.all([
     admin.from("itinerary_days").select("id, date").eq("trip_id", existingTrip.id),
     admin.from("places").select("id, name").eq("trip_id", existingTrip.id),
@@ -238,12 +237,26 @@ if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.i
   if (placesError) throw placesError;
   if (bookingsError) throw bookingsError;
 
+  const missingDays = seed.days.filter((day) => !(days ?? []).some((row) => row.date === day.date));
+  const { error: insertedDaysError } = missingDays.length ? await admin.from("itinerary_days").upsert(missingDays.map((day) => ({ trip_id: existingTrip.id, ...day })), { onConflict: "trip_id,date", ignoreDuplicates: true }) : { error: null };
+  if (insertedDaysError) throw insertedDaysError;
+  const { data: allDays, error: allDaysError } = await admin.from("itinerary_days").select("id,date").eq("trip_id", existingTrip.id);
+  if (allDaysError) throw allDaysError;
+
+  const missingBookings = seed.bookings.filter((booking) => !(bookings ?? []).some((row) => row.title === booking.title));
+  const { data: insertedBookings, error: insertedBookingsError } = missingBookings.length ? await admin.from("bookings").insert(missingBookings.map((booking) => ({ trip_id: existingTrip.id, type: booking.type, title: booking.title, provider: booking.provider, starts_at: booking.startsAt, amount: booking.amount, currency: booking.currency, status: booking.status, created_by: owner.id, updated_by: owner.id }))).select("id,title") : { data: [], error: null };
+  if (insertedBookingsError) throw insertedBookingsError;
+  const allBookings = [...(bookings ?? []), ...(insertedBookings ?? [])];
+
+  const { error: tripDateError } = await admin.from("trips").update({ start_date: seed.trip.startDate }).eq("id", existingTrip.id);
+  if (tripDateError) throw tripDateError;
+
   const missingPlaces = seed.places.filter((place) => !(places ?? []).some((row) => row.name === place.name));
   const { data: insertedPlaces, error: insertedPlacesError } = missingPlaces.length ? await admin.from("places").insert(missingPlaces.map((place) => ({ trip_id: existingTrip.id, name: place.name, address: place.address, neighbourhood: place.neighbourhood, category: place.category, google_maps_url: place.googleMapsUrl, priority: place.priority, expected_duration_minutes: place.expectedDurationMinutes }))).select("id,name") : { data: [], error: null };
   if (insertedPlacesError) throw insertedPlacesError;
   const allPlaces = [...(places ?? []), ...(insertedPlaces ?? [])];
 
-  const dayIds = new Map((days ?? []).map((day) => [day.date, day.id]));
+  const dayIds = new Map((allDays ?? []).map((day) => [day.date, day.id]));
   const placeIds = new Map(
     seed.places.map((place) => [
       place.key,
@@ -253,7 +266,7 @@ if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.i
   const bookingIds = new Map(
     seed.bookings.map((booking) => [
       booking.key,
-      (bookings ?? []).find((row) => row.title === booking.title)?.id,
+      allBookings.find((row) => row.title === booking.title)?.id,
     ]),
   );
 
@@ -270,6 +283,7 @@ if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.i
     const { data: existingItems, error: existingItemsError } = await admin.from("itinerary_items").select("id,date,title").eq("trip_id", existingTrip.id);
     if (existingItemsError) throw existingItemsError;
     const existingByDateAndTitle = new Map((existingItems ?? []).map((item) => [`${item.date}|${item.title}`, item.id]));
+    const existingByTitle = new Map((existingItems ?? []).map((item) => [item.title, item.id]));
     const itemPayload = (item: (typeof seed.itinerary)[number]) => ({
       trip_id: existingTrip.id, itinerary_day_id: dayIds.get(item.date), date: item.date, title: item.title, item_type: item.type,
       planned_start_time: item.start, planned_end_time: item.end, recommended_departure_time: item.depart,
@@ -279,7 +293,7 @@ if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.i
       details: itemDetails(item), updated_by: owner.id,
     });
     for (const item of seed.itinerary) {
-      const id = [item.title, ...(item.syncTitles ?? [])].map((title) => existingByDateAndTitle.get(`${item.date}|${title}`)).find(Boolean);
+      const id = [item.title, ...(item.syncTitles ?? [])].map((title) => existingByDateAndTitle.get(`${item.date}|${title}`) ?? existingByTitle.get(title)).find(Boolean);
       const result = id ? await admin.from("itinerary_items").update(itemPayload(item)).eq("id", id) : await admin.from("itinerary_items").insert({ ...itemPayload(item), created_by: owner.id });
       if (result.error) throw result.error;
     }
