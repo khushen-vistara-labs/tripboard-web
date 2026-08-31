@@ -45,10 +45,9 @@ export function AppShell({ screen, trip, demoMode, online, children }: { screen:
     <section className="app-content">
       {demoMode && <div className="demo-banner"><Sparkles size={14}/><span>Preview data</span><span>Connect Supabase to use your private shared trip.</span><a href="/login">Set up →</a></div>}
       {!online && <div className="offline-banner"><CloudOff size={15}/> You’re offline. Changes stay on this device and sync when your connection returns.</div>}
+      <div className="mobile-theme-control"><ThemeToggle className="mobile-theme-toggle" /></div>
       {children}
     </section>
-
-    <ThemeToggle className="mobile-theme-toggle" />
 
     <nav className="bottom-nav" aria-label="Primary navigation">
       {nav.map((item) => { const Icon = item.icon; return <a key={item.id} className={active === item.id ? "active" : ""} href={item.href}><Icon size={20}/><span>{item.label}</span></a>; })}
