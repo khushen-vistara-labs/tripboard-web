@@ -102,7 +102,7 @@ function applySnapshot(snapshot: TripSnapshot, setters: {
 
 const mapAccount = (row: Record<string, unknown>): PaymentAccount => ({
   id: String(row.id), name: String(row.name), accountClass: row.account_class as PaymentAccount["accountClass"], currency: String(row.currency),
-  openingBalance: String(row.opening_balance), accountType: row.account_type ? String(row.account_type) : undefined, archivedAt: row.archived_at ? String(row.archived_at) : undefined, version: row.version ? Number(row.version) : 1,
+  openingBalance: String(row.opening_balance), accountType: row.account_type ? String(row.account_type) : undefined, issuingBank: row.issuing_bank ? String(row.issuing_bank) : undefined, network: row.network ? String(row.network) : undefined, lastFour: row.last_four ? String(row.last_four) : undefined, billingCurrency: row.billing_currency ? String(row.billing_currency) : undefined, archivedAt: row.archived_at ? String(row.archived_at) : undefined, version: row.version ? Number(row.version) : 1,
 });
 
 const mapBudget = (row: Record<string, unknown>): Budget => ({
@@ -471,7 +471,7 @@ export function useTripBoardData(): TripBoardData {
   const accountPayload = (id: string, account: Omit<PaymentAccount, "id" | "archivedAt">) => ({
     id, trip_id: trip.id, name: account.name, account_class: account.accountClass,
     account_type: account.accountType ?? (account.accountClass === "STORED_VALUE" ? "WALLET" : "CARD"),
-    currency: account.currency, opening_balance: account.openingBalance,
+    currency: account.currency, issuing_bank: account.issuingBank ?? null, network: account.network ?? null, last_four: account.lastFour ?? null, billing_currency: account.billingCurrency ?? null, opening_balance: account.openingBalance,
   });
   const saveAccount = async (command: "create" | "update", id: string, account: Omit<PaymentAccount, "id" | "archivedAt">) => {
     const current = accounts.find((item) => item.id === id); const payload = { ...accountPayload(id, account), ...(command === "update" ? { expectedVersion: current?.version ?? 1 } : {}) }; const client = getSupabaseBrowserClient();

@@ -18,6 +18,10 @@ export interface PaymentAccount {
   currency: CurrencyCode;
   openingBalance: string;
   accountType?: string;
+  issuingBank?: string;
+  network?: string;
+  lastFour?: string;
+  billingCurrency?: CurrencyCode;
   archivedAt?: string;
   version?: number;
 }
