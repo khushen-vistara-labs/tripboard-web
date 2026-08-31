@@ -146,7 +146,7 @@ The included Vite configuration emits a Cloudflare Worker-compatible build and u
 
 ### Vercel
 
-Supabase and all domain code are hosting-provider independent. If deploying to Vercel, configure the same public environment variables, use `pnpm build`, and preserve normal route fallback behavior. Keep the service worker at the origin root.
+Supabase and all domain code are hosting-provider independent. If deploying to Vercel, configure the same public environment variables and use `pnpm build:vercel`. Nitro emits Vercel's Build Output API files in `.vercel/output` and mirrors them to `.output` for CI inspection. Keep the Vercel output-directory override disabled so it recognizes the native Build Output API files. Keep the service worker at the origin root. The normal `pnpm build` command remains the OpenAI Sites fallback build.
 
 ## Browser and PWA limitations
 
