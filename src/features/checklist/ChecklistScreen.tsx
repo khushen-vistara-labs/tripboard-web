@@ -25,7 +25,7 @@ export function ChecklistScreen({ data }: { data: TripBoardData }) {
   const filtered = useMemo(() => data.checklist.filter((item) => (kind === "ALL" || item.kind === kind) && (status === "ALL" || item.status === status) && (priority === "ALL" || item.priority === priority) && item.title.toLowerCase().includes(search.toLowerCase())), [data.checklist, kind, status, priority, search]);
 
   return <>
-    <header className="screen-header"><div><p className="eyebrow">DON’T MISS A THING</p><h1>Checklist</h1><p>Places, foods, and experiences—one shared completion state.</p></div><button className="button primary" onClick={() => setShowAdd(true)}><Plus size={17}/> Add item</button></header>
+    <header className="screen-header"><div><p className="eyebrow">DON’T MISS A THING</p><h1>Checklist</h1><p>Places, foods, and experiences in one shared completion state.</p></div><button className="button primary" onClick={() => setShowAdd(true)}><Plus size={17}/> Add item</button></header>
 
     <section className="completion-overview">
       <article className="must-progress"><div><span className="eyebrow">MUST COMPLETION</span><strong>{must.percent}%</strong><p>{must.completed} of {must.total} important items completed</p></div><div className="ring" style={{"--progress": `${must.percent * 3.6}deg`} as React.CSSProperties}><span>{must.completed}/{must.total}</span></div></article>

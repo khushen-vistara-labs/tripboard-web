@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
     manifest: "/manifest.webmanifest",
     icons: { icon: [{ url: "/favicon.png", type: "image/png", sizes: "32x32" }], apple: [{ url: "/icon-192.png", type: "image/png", sizes: "192x192" }] },
     appleWebApp: { capable: true, title: "TripBoard", statusBarStyle: "black-translucent" },
-    openGraph: { type: "website", siteName: "TripBoard", title, description, images: [{ url: `${origin}/og.png`, width: 1200, height: 630, alt: "TripBoard — Your shared trip, in step." }] },
+    openGraph: { type: "website", siteName: "TripBoard", title, description, images: [{ url: `${origin}/og.png`, width: 1200, height: 630, alt: "TripBoard: Your shared trip, in step." }] },
     twitter: { card: "summary_large_image", title, description, images: [`${origin}/og.png`] },
   };
 }

@@ -222,3 +222,38 @@ html[data-theme="dark"] .plan-row.status-completed h3,html[data-theme="dark"] .p
   .mobile-theme-control{display:flex;justify-content:flex-end;margin:-2px 0 12px}
   .mobile-theme-toggle{display:inline-flex;position:static;z-index:auto;margin:0;box-shadow:none}
 }
+
+/* Blue-neutral visual system. These rules intentionally override older green-first surfaces. */
+html[data-theme="light"]{--ink:#172842;--muted:#60718a;--paper:#f2f4f7;--card:#ffffff;--green:#285f9c;--green-2:#1f4f84;--mint:#e7eef7;--line:#d7e1ed;--amber:#b7792c;--focus:#2d67a5;--sidebar:#162b47;--elevated:0 16px 44px rgba(21,43,72,.10)}
+html[data-theme="dark"]{--ink:#eef4fc;--muted:#b4c1d3;--paper:#0d1624;--card:#18263a;--green:#73a3dc;--green-2:#5689c2;--mint:#233955;--line:#3b506d;--amber:#d8ad6b;--focus:#8ab8ee;--sidebar:#101f34;--elevated:0 18px 54px rgba(0,0,0,.38)}
+html[data-theme="light"] body{background:linear-gradient(135deg,#f7f8fa 0%,#edf1f6 100%)}
+html[data-theme="dark"] body{background:radial-gradient(circle at top right,#172b45 0%,#0d1624 44%,#0b1421 100%)}
+.top-actions{gap:12px}
+.notification-button.icon-button{width:44px;height:44px;min-width:44px;min-height:44px;padding:0;display:grid;place-items:center;line-height:1;border-color:var(--line)}
+.notification-button.icon-button>svg{display:block}
+.notification-count{right:-4px;top:-4px;border-color:var(--card);background:#bc5c55}
+.avatar{width:44px;height:44px;min-width:44px;background:#e4bf7d;color:#243651}
+
+.settings-grid{align-items:start}
+.alert-enable{min-height:0;padding:18px!important}
+.alert-enable .button{flex:none}
+.preference-list .toggle{background:#9eabba}
+.preference-list input:checked+.toggle{background:var(--green-2)}
+
+.more-grid .security-card,.more-grid .sync-card,.shared-principle{background:linear-gradient(135deg,#1c466a 0%,#183a5c 100%)}
+.more-grid .security-card p,.more-grid .sync-card p,.shared-principle p{color:#d2dfec}
+.more-grid .security-card>svg,.more-grid .sync-card>svg,.shared-principle>svg{color:#e2b56d}
+
+html[data-theme="dark"] .panel,html[data-theme="dark"] .icon-button,html[data-theme="dark"] .login-card,html[data-theme="dark"] .quick-strip button,html[data-theme="dark"] .quick-strip a,html[data-theme="dark"] .kpi-card,html[data-theme="dark"] .completion-overview>article,html[data-theme="dark"] .checklist-category-grid button,html[data-theme="dark"] .more-grid>button,html[data-theme="dark"] .more-grid>article,html[data-theme="dark"] .modal-panel{background:var(--card)}
+html[data-theme="dark"] .next-card{background:#1b304a}
+html[data-theme="dark"] .next-meta,html[data-theme="dark"] .next-time,html[data-theme="dark"] .transport-note{color:#c5d2e1}
+html[data-theme="dark"] .leave-row,html[data-theme="dark"] .primary-actions .button-like{background:#213752;border-color:#405b7c;color:var(--ink)}
+html[data-theme="dark"] .money-footer,html[data-theme="dark"] .money-footer span,html[data-theme="dark"] .money-total small{color:#b7c5d6}
+html[data-theme="dark"] .money-footer b{color:#dbe9fa}
+html[data-theme="dark"] .money-footer svg{color:#91b9e9}
+html[data-theme="dark"] .money-total span,html[data-theme="dark"] .eyebrow{color:#b8c7d9}
+html[data-theme="dark"] .check-ring{border-color:#a3bad5!important}
+html[data-theme="dark"] .food-mini>button>span:first-child{background:#293c56;color:#a8caed}
+html[data-theme="dark"] .more-grid .security-card,html[data-theme="dark"] .more-grid .sync-card,html[data-theme="dark"] .shared-principle{background:linear-gradient(135deg,#1b4266 0%,#14334f 100%)}
+html[data-theme="dark"] .toggle{background:#64748a}
+html[data-theme="dark"] .preference-list input:checked+.toggle{background:#6698d1}

@@ -401,7 +401,7 @@
     },
     {
       "key": "food-wonton-noodles",
-      "title": "Try wonton noodles — confirm broth contains no beef",
+      "title": "Try wonton noodles; confirm broth contains no beef",
       "kind": "FOOD",
       "priority": "MUST",
       "neighbourhood": "Jordan"
@@ -441,7 +441,7 @@
     },
     {
       "key": "food-claypot-rice",
-      "title": "Try claypot rice — avoid beef versions",
+      "title": "Try claypot rice; avoid beef versions",
       "kind": "FOOD",
       "priority": "MUST",
       "plannedDay": "2026-12-27",
@@ -595,16 +595,16 @@
   "itinerary": [
     {
       "date": "2026-12-25",
-      "title": "Vietnam Airlines VN982 — Bengaluru → Hanoi (transit)",
+      "title": "Vietnam Airlines VN982: Bengaluru to Hanoi (transit)",
       "type": "transport",
       "durationMinutes": 285,
       "priority": "MUST",
       "sequence": 1,
-      "transportInstructions": "Departed Bengaluru Kempegowda International Airport, Terminal 2, at 23:35 on 24 Dec (arrives Hanoi Noi Bai Terminal 2 at 05:50 on 25 Dec). Economy Lite; seat 14E; one checked bag. Hindu meal request confirmed. This is the first leg of the Hong Kong journey, with a Hanoi transit—not a separate booking."
+      "transportInstructions": "Departed Bengaluru Kempegowda International Airport, Terminal 2, at 23:35 on 24 Dec (arrives Hanoi Noi Bai Terminal 2 at 05:50 on 25 Dec). Economy Lite; seat 14E; one checked bag. Hindu meal request confirmed. This is the first leg of the Hong Kong journey, with a Hanoi transit, not a separate booking."
     },
     {
       "date": "2026-12-25",
-      "title": "Vietnam Airlines VN592 — Hanoi → Hong Kong",
+      "title": "Vietnam Airlines VN592: Hanoi to Hong Kong",
       "type": "transport",
       "start": "10:35",
       "end": "13:30",
@@ -1582,7 +1582,7 @@
     },
     {
       "date": "2027-01-02",
-      "title": "Vietnam Airlines VN593 — Hong Kong → Hanoi (transit)",
+      "title": "Vietnam Airlines VN593: Hong Kong to Hanoi (transit)",
       "type": "transport",
       "start": "14:30",
       "end": "15:40",
@@ -1594,7 +1594,7 @@
     },
     {
       "date": "2027-01-02",
-      "title": "Vietnam Airlines VN983 — Hanoi → Bengaluru",
+      "title": "Vietnam Airlines VN983: Hanoi to Bengaluru",
       "type": "transport",
       "start": "19:10",
       "durationMinutes": 285,

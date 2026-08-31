@@ -1,6 +1,6 @@
 {
   "id": "/",
-  "name": "TripBoard — Shared Trip Manager",
+  "name": "TripBoard: Shared Trip Manager",
   "short_name": "TripBoard",
   "description": "A private shared trip companion for plans, must-dos, tickets, and money.",
   "start_url": "/today",

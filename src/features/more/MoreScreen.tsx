@@ -240,9 +240,9 @@ function ActivityHistory({ data }: { data: TripBoardData }) {
 
 function describeAuditEvent(event: AuditRow) {
   const value = event.after_json ?? event.before_json ?? {}; const label = String(value.title ?? value.name ?? value.email ?? "an item");
-  if (event.event_type === "MEMBER_REMOVED") return `removed a trip member${value.reason ? ` — ${String(value.reason)}` : ""}`;
+  if (event.event_type === "MEMBER_REMOVED") return `removed a trip member${value.reason ? `: ${String(value.reason)}` : ""}`;
   if (event.entity_type === "itinerary_items" && event.event_type === "UPDATE") {
-    const before = event.before_json ?? {}; const after = event.after_json ?? {}; const reason = after.change_reason ? ` — ${String(after.change_reason)}` : "";
+    const before = event.before_json ?? {}; const after = event.after_json ?? {}; const reason = after.change_reason ? `: ${String(after.change_reason)}` : "";
     if (before.date !== after.date) return `moved activity “${label}” to ${String(after.date)}${reason}`;
     if (before.sequence !== after.sequence) return `reordered activity “${label}”${reason}`;
     if (before.status !== after.status) return `marked activity “${label}” ${String(after.status).toLowerCase()}${reason}`;
@@ -288,5 +288,5 @@ function SetPasswordModal({ onClose, onSaved }: { onClose: () => void; onSaved: 
 
 function Install({ installPrompt, onMessage }: { installPrompt: InstallPromptEvent | null; onMessage: (message: string) => void }) {
   const install = async () => { if (installPrompt) { await installPrompt.prompt(); const choice = await installPrompt.userChoice; onMessage(choice.outcome === "accepted" ? "TripBoard was added to this device." : "Install dismissed. You can return here anytime."); } else onMessage("Open your browser’s Share or menu controls, then choose Add to Home Screen."); };
-  return <div className="install-layout"><section className="install-hero panel"><span><Smartphone size={31}/></span><h2>Keep TripBoard one tap away</h2><p>Install the private PWA for a fast app-like launch, cached trip details, and supported trip alerts.</p><button className="button primary" onClick={() => void install()}><Download size={17}/> Add to Home Screen</button></section><section className="panel install-benefits"><article><Wifi size={20}/><div><strong>Useful offline</strong><p>See itinerary, addresses, notes, balances, and recent history without a connection.</p></div></article><article><Bell size={20}/><div><strong>Timely alerts</strong><p>Home Screen web apps can receive trip reminders where standards-based push is supported.</p></div></article><article><Share2 size={20}/><div><strong>Normal browser URLs</strong><p>Every screen still works from a regular link—installation is optional.</p></div></article></section></div>;
+  return <div className="install-layout"><section className="install-hero panel"><span><Smartphone size={31}/></span><h2>Keep TripBoard one tap away</h2><p>Install the private PWA for a fast app-like launch, cached trip details, and supported trip alerts.</p><button className="button primary" onClick={() => void install()}><Download size={17}/> Add to Home Screen</button></section><section className="panel install-benefits"><article><Wifi size={20}/><div><strong>Useful offline</strong><p>See itinerary, addresses, notes, balances, and recent history without a connection.</p></div></article><article><Bell size={20}/><div><strong>Timely alerts</strong><p>Home Screen web apps can receive trip reminders where standards-based push is supported.</p></div></article><article><Share2 size={20}/><div><strong>Normal browser URLs</strong><p>Every screen still works from a regular link. Installation is optional.</p></div></article></section></div>;
 }
