@@ -28,6 +28,7 @@ export interface TripBoardData {
   error?: string;
   createTrip: (trip: Pick<Trip, "name" | "startDate" | "endDate" | "timezone" | "baseCurrency">) => Promise<void>;
   completeItinerary: (id: string) => Promise<void>;
+  reopenItinerary: (id: string) => Promise<void>;
   skipItinerary: (id: string) => Promise<void>;
   moveItinerary: (id: string, date: string, time: string | undefined, reason: string) => Promise<void>;
   reorderItinerary: (date: string, itemIds: string[], reason: string) => Promise<void>;
@@ -627,6 +628,7 @@ export function useTripBoardData(): TripBoardData {
   return {
     trip, itinerary, checklist, bookings, places, days, accounts, budgets, financialEvents, notes, unreadNotificationCount, loading, authRequired, demoMode, dataAvailable, error, createTrip,
     completeItinerary: (id) => setStatus(id, "COMPLETED"),
+    reopenItinerary: (id) => setStatus(id, "PLANNED"),
     skipItinerary: (id) => setStatus(id, "SKIPPED"),
     moveItinerary, reorderItinerary, addItineraryItem, editItineraryItem, deleteItineraryItem,
     toggleChecklist, addChecklistItem, editChecklistItem, deleteChecklistItem, addPlace, editPlace, deletePlace, addBooking, editBooking, deleteBooking, saveDay, recordFinancialEvent,
