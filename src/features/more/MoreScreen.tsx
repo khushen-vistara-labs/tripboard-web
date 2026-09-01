@@ -97,6 +97,13 @@ export function MoreScreen({ data, initialSection, installPrompt }: { data: Trip
 
 function ImportantNotes({ data }: { data: TripBoardData }) {
   const [adding, setAdding] = useState(false); const [editing, setEditing] = useState<TripNote | null>(null); const [copied, setCopied] = useState<string | null>(null); const [largePhrase, setLargePhrase] = useState<TripNote | null>(null); const [largeHotel, setLargeHotel] = useState<Place | null>(null);
+  useEffect(() => {
+    if (!("speechSynthesis" in window)) return;
+    const warmVoices = () => { window.speechSynthesis.getVoices(); };
+    warmVoices();
+    window.speechSynthesis.addEventListener("voiceschanged", warmVoices);
+    return () => window.speechSynthesis.removeEventListener("voiceschanged", warmVoices);
+  }, []);
   const grouped = new Map<string, TripNote[]>(); for (const note of data.notes.filter(isGuideNote).sort((a, b) => a.sortOrder - b.sortOrder)) { const category = guideCategory(note.section); grouped.set(category, [...(grouped.get(category) ?? []), note]); }
   const copy = async (note: TripNote) => { const text = note.copyText || copyableFor(note.body); if (!text) return; await navigator.clipboard.writeText(text); setCopied(note.id); window.setTimeout(() => setCopied((id) => id === note.id ? null : id), 1800); };
   const copyAddress = async (address?: string) => { if (!address) return; await navigator.clipboard.writeText(address); setCopied("hotel-address"); window.setTimeout(() => setCopied((id) => id === "hotel-address" ? null : id), 1800); };
@@ -128,13 +135,23 @@ function speakPhrase(note: TripNote) {
   if (!easyPronunciation || easyPronunciation === "Add pronunciation") return;
 
   const engine = window.speechSynthesis;
-  const cantoneseVoice = engine.getVoices().find((voice) => /^(yue|zh-hk|zh-mo)/i.test(voice.lang));
+  const voices = engine.getVoices();
+  if (!voices.length) {
+    // Loading the voice list is asynchronous on Safari/Chromium. Wait for it
+    // instead of using the temporary default voice on the first button press.
+    let retried = false;
+    const retry = () => { if (retried) return; retried = true; engine.removeEventListener("voiceschanged", retry); speakPhrase(note); };
+    engine.addEventListener("voiceschanged", retry, { once: true });
+    window.setTimeout(() => { if (retried) return; retried = true; engine.removeEventListener("voiceschanged", retry); if (engine.getVoices().length) speakPhrase(note); }, 500);
+    return;
+  }
+  const cantoneseVoice = voices.find((voice) => /^(yue|zh-hk|zh-mo)/i.test(voice.lang));
+  const englishVoice = voices.find((voice) => /^en(-|$)/i.test(voice.lang));
   // Most devices do not ship a Cantonese voice. In that case, say the practical
-  // English pronunciation shown on the card instead of silently requesting an
-  // unavailable yue-HK voice.
+  // English pronunciation shown on the card through an explicit English voice.
   const speech = new SpeechSynthesisUtterance(cantoneseVoice && chinese ? chinese : easyPronunciation);
-  speech.lang = cantoneseVoice?.lang ?? "en-US";
-  speech.voice = cantoneseVoice ?? null;
+  speech.lang = cantoneseVoice?.lang ?? englishVoice?.lang ?? "en-US";
+  speech.voice = cantoneseVoice ?? englishVoice ?? null;
   speech.rate = 0.82;
   engine.cancel();
   engine.resume();
