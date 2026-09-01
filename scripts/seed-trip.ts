@@ -41,6 +41,7 @@ export const SeedSchema = z.object({
       kind: z.enum(["PLACE", "FOOD", "EXPERIENCE", "SHOPPING", "OTHER"]),
       priority: Priority,
       plannedDay: z.string().optional(),
+      dueDate: z.string().optional(),
       recommendedPlace: z.string().optional(),
       neighbourhood: z.string().optional(),
       placeKey: z.string().optional(),
@@ -113,6 +114,7 @@ export const SeedSchema = z.object({
       title: z.string(),
       provider: z.string().optional(),
       startsAt: z.string().optional(),
+      endsAt: z.string().optional(),
       amount: z.number().optional(),
       currency: z.string().optional(),
       status: z.string(),
@@ -131,6 +133,12 @@ const seedPath = fileURLToPath(
   new URL("../seed/hong-kong-2026.json", import.meta.url),
 );
 const seed = SeedSchema.parse(JSON.parse(await readFile(seedPath, "utf8")));
+for (const item of seed.itinerary) {
+  if (item.estimatedCost !== undefined) {
+    item.estimatedCostScope = "PARTY";
+    item.estimatedCostStatus = item.priority === "OPTIONAL" ? "OPTIONAL" : "EXPECTED";
+  }
+}
 const itemDetails = (item: (typeof seed.itinerary)[number]) => ({
   ...(item.details ?? {}),
   ...(item.timingType ? { timingType: item.timingType } : {}),
@@ -146,13 +154,19 @@ function minutes(value: string) {
 
 function validateItinerary() {
   const placeKeys = new Set(seed.places.map((place) => place.key));
+  const bookingsByKey = new Map(seed.bookings.map((booking) => [booking.key, booking]));
   const dates = new Set(seed.days.map((day) => day.date));
   const errors: string[] = [];
   for (const item of seed.itinerary) {
     if (!dates.has(item.date)) errors.push(`${item.title}: date ${item.date} has no itinerary day`);
     if (item.placeKey && !placeKeys.has(item.placeKey)) errors.push(`${item.title}: unknown place ${item.placeKey}`);
-    if (item.estimatedCost !== undefined && !item.estimatedCostCurrency) errors.push(`${item.title}: cost has no currency`);
-    if (item.start && item.end && item.durationMinutes && minutes(item.end) - minutes(item.start) !== item.durationMinutes) errors.push(`${item.title}: time arithmetic does not match duration`);
+    if (item.estimatedCost !== undefined && (!item.estimatedCostCurrency || !item.estimatedCostScope || !item.estimatedCostStatus)) errors.push(`${item.title}: incomplete cost metadata`);
+    const booking = item.bookingKey ? bookingsByKey.get(item.bookingKey) : undefined;
+    if (item.bookingKey && !booking) errors.push(`${item.title}: unknown booking ${item.bookingKey}`);
+    if (booking?.startsAt && booking.endsAt && item.durationMinutes !== undefined) {
+      const elapsed = (Date.parse(booking.endsAt) - Date.parse(booking.startsAt)) / 60_000;
+      if (elapsed !== item.durationMinutes) errors.push(`${item.title}: timezone-aware booking duration does not match`);
+    } else if (item.start && item.end && item.durationMinutes && minutes(item.end) - minutes(item.start) !== item.durationMinutes) errors.push(`${item.title}: time arithmetic does not match duration`);
     if (item.start && item.end && item.start === item.end && item.durationMinutes) errors.push(`${item.title}: identical start/end with positive duration`);
   }
   for (const day of seed.days) {
@@ -244,7 +258,7 @@ if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.i
   if (allDaysError) throw allDaysError;
 
   const missingBookings = seed.bookings.filter((booking) => !(bookings ?? []).some((row) => row.title === booking.title));
-  const { data: insertedBookings, error: insertedBookingsError } = missingBookings.length ? await admin.from("bookings").insert(missingBookings.map((booking) => ({ trip_id: existingTrip.id, type: booking.type, title: booking.title, provider: booking.provider, starts_at: booking.startsAt, amount: booking.amount, currency: booking.currency, status: booking.status, created_by: owner.id, updated_by: owner.id }))).select("id,title") : { data: [], error: null };
+  const { data: insertedBookings, error: insertedBookingsError } = missingBookings.length ? await admin.from("bookings").insert(missingBookings.map((booking) => ({ trip_id: existingTrip.id, type: booking.type, title: booking.title, provider: booking.provider, starts_at: booking.startsAt, ends_at: booking.endsAt, amount: booking.amount, currency: booking.currency, status: booking.status, created_by: owner.id, updated_by: owner.id }))).select("id,title") : { data: [], error: null };
   if (insertedBookingsError) throw insertedBookingsError;
   const allBookings = [...(bookings ?? []), ...(insertedBookings ?? [])];
 
@@ -306,7 +320,7 @@ if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.i
     const titles = new Set((existingChecklist ?? []).map((item) => item.title));
     const additions = seed.checklist.filter((item) => !titles.has(item.title));
     if (additions.length) {
-      const { error: checklistError } = await admin.from("checklist_items").insert(additions.map((item) => ({ trip_id: existingTrip.id, title: item.title, description: item.description, notes: item.notes, dietary_warning: item.dietaryWarning, kind: item.kind, priority: item.priority, planned_day: item.plannedDay, recommended_place: item.recommendedPlace, neighbourhood: item.neighbourhood, created_by: owner.id, updated_by: owner.id })));
+      const { error: checklistError } = await admin.from("checklist_items").insert(additions.map((item) => ({ trip_id: existingTrip.id, title: item.title, description: item.description, notes: item.notes, dietary_warning: item.dietaryWarning, kind: item.kind, priority: item.priority, planned_day: item.plannedDay, due_date: item.dueDate, recommended_place: item.recommendedPlace, neighbourhood: item.neighbourhood, created_by: owner.id, updated_by: owner.id })));
       if (checklistError) throw checklistError;
     }
     const { data: existingNotes, error: existingNotesError } = await admin.from("trip_notes").select("title").eq("trip_id", existingTrip.id);
@@ -416,6 +430,7 @@ const { data: bookings, error: bookingError } = await admin
       title: booking.title,
       provider: booking.provider,
       starts_at: booking.startsAt,
+      ends_at: booking.endsAt,
       amount: booking.amount,
       currency: booking.currency,
       status: booking.status,
@@ -441,6 +456,7 @@ const { error: checklistError } = await admin
       kind: item.kind,
       priority: item.priority,
       planned_day: item.plannedDay,
+      due_date: item.dueDate,
       recommended_place: item.recommendedPlace,
       neighbourhood: item.neighbourhood,
       linked_place_id: item.placeKey ? placeIds.get(item.placeKey) : null,

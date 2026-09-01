@@ -66,6 +66,7 @@ export interface Booking {
   provider?: string;
   reference?: string;
   startsAt?: string;
+  endsAt?: string;
   location?: string;
   travellers?: string[];
   amount?: string;
@@ -138,6 +139,7 @@ export interface ChecklistItem {
   targetCount: number;
   completedCount: number;
   plannedDay?: string;
+  dueDate?: string;
   status: "PLANNED" | "COMPLETED" | "SKIPPED";
   neighbourhood?: string;
   dietaryWarning?: string;

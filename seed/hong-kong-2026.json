@@ -49,11 +49,12 @@
     {
       "key": "bridal-tea-house",
       "name": "Bridal Tea House Hotel Yau Ma Tei",
-      "address": "Arthur Street, Yau Ma Tei, Hong Kong",
+      "address": "6 Arthur Street, Yau Ma Tei, Kowloon, Hong Kong",
       "neighbourhood": "Yau Ma Tei",
       "category": "Hotel",
       "priority": "MUST"
     },
+    {"key":"yau-ma-tei-mtr","name":"Yau Ma Tei MTR Station","neighbourhood":"Yau Ma Tei","category":"MTR Station","priority":"MUST"},
     {
       "key": "hkg-airport",
       "name": "Hong Kong International Airport",
@@ -96,6 +97,7 @@
     {
       "key": "cheung-hing",
       "name": "Cheung Hing Coffee Shop",
+      "address": "G/F, 9-11 Yik Yam Street, Happy Valley, Hong Kong",
       "neighbourhood": "Happy Valley",
       "category": "Cha Chaan Teng",
       "priority": "WANT",
@@ -136,7 +138,7 @@
     {
       "key": "man-mo-temple",
       "name": "Man Mo Temple",
-      "address": "Hollywood Road, Sheung Wan, Hong Kong",
+      "address": "124-126 Hollywood Road, Sheung Wan, Hong Kong",
       "neighbourhood": "Sheung Wan",
       "category": "Traditional Temple / Heritage",
       "priority": "MUST",
@@ -185,6 +187,7 @@
     {
       "key": "sheung-wan-ferry",
       "name": "Hong Kong Macau Ferry Terminal",
+      "address": "Shun Tak Centre, 200 Connaught Road Central, Sheung Wan, Hong Kong",
       "neighbourhood": "Sheung Wan",
       "category": "Ferry Terminal",
       "priority": "MUST"
@@ -542,15 +545,8 @@
       "kind": "EXPERIENCE",
       "priority": "MUST",
       "plannedDay": "2026-12-25",
+      "dueDate": "2026-12-01",
       "placeKey": "aqua-luna"
-    },
-    {
-      "key": "book-peak-tram",
-      "title": "Prebook early Peak Tram if advance booking is available",
-      "kind": "EXPERIENCE",
-      "priority": "MUST",
-      "plannedDay": "2026-12-26",
-      "placeKey": "victoria-peak"
     },
     {
       "key": "book-macau-ferry-out",
@@ -558,6 +554,7 @@
       "kind": "EXPERIENCE",
       "priority": "MUST",
       "plannedDay": "2026-12-28",
+      "dueDate": "2026-12-01",
       "placeKey": "sheung-wan-ferry"
     },
     {
@@ -566,6 +563,7 @@
       "kind": "EXPERIENCE",
       "priority": "MUST",
       "plannedDay": "2026-12-28",
+      "dueDate": "2026-12-01",
       "placeKey": "macau-tower"
     },
     {
@@ -574,6 +572,7 @@
       "kind": "EXPERIENCE",
       "priority": "MUST",
       "plannedDay": "2026-12-28",
+      "dueDate": "2026-12-01",
       "placeKey": "taipa-ferry"
     },
     {
@@ -582,6 +581,7 @@
       "kind": "EXPERIENCE",
       "priority": "MUST",
       "plannedDay": "2026-12-29",
+      "dueDate": "2026-12-01",
       "placeKey": "ngong-ping"
     },
     {
@@ -590,6 +590,7 @@
       "kind": "EXPERIENCE",
       "priority": "MUST",
       "plannedDay": "2026-12-30",
+      "dueDate": "2026-12-01",
       "placeKey": "hong-kong-disneyland"
     },
     {
@@ -648,7 +649,7 @@
       "type": "transport",
       "start": "10:35",
       "end": "13:30",
-      "durationMinutes": 175,
+      "durationMinutes": 115,
       "priority": "MUST",
       "sequence": 5,
       "placeKey": "hkg-airport",
@@ -712,7 +713,7 @@
       "durationMinutes": 15,
       "priority": "MUST",
       "sequence": 35,
-      "placeKey": "bridal-tea-house",
+      "placeKey": "yau-ma-tei-mtr",
       "timingType": "TARGET",
       "transportInstructions": "Buy at Yau Ma Tei MTR Customer Service Centre. Each card includes about HK$50 refundable deposit and HK$150 stored value; top up another HK$250–350 only if useful."
     },
@@ -722,7 +723,7 @@
       "type": "attraction",
       "start": "17:30",
       "end": "19:10",
-      "depart": "17:00",
+      "depart": "17:15",
       "durationMinutes": 100,
       "priority": "MUST",
       "sequence": 40, "timingType": "FLEXIBLE",
@@ -791,7 +792,7 @@
       "placeKey": "victoria-peak",
       "transportInstructions": "Buy single journey UP only; descend later by Bus 15.",
       "estimatedCost": 152,
-      "estimatedCostCurrency": "HKD",
+      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED",
       "details": {"farePerPerson":"about HK$76","fareForTwo":"about HK$152","booking":"optional","quickNote":"Buy a single journey UP only; do not default to a return ticket.","weather":"First Peak visit is daylight / Lugard Road; Sky Terrace 428 is optional."}
     },
     {
@@ -817,7 +818,7 @@
       "sequence": 40,
       "transportInstructions": "Take scenic Bus 15 down. It does not drop directly at Cheung Hing; allow an onward tram, bus, taxi or short walk to Happy Valley.",
       "estimatedCost": 26,
-      "estimatedCostCurrency": "HKD",
+      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED",
       "details": {"farePerPerson":"about HK$13","fareForTwo":"about HK$26","transportOptions":[{"label":"Bus 15","mode":"recommended","instructions":"Scenic direct descent toward Central / Happy Valley.","durationMinutes":45,"cost":"about HK$13/person"},{"label":"Green Minibus 1","mode":"fallback","instructions":"Use if the Bus 15 queue is significantly worse."},{"label":"Peak Tram","mode":"emergency","instructions":"Only if its queue is short."}]}
     },
     {
@@ -846,7 +847,7 @@
       "sequence": 60,
       "transportInstructions": "Use Hong Kong Tramways for part of the journey; sit upstairs if possible.",
       "estimatedCost": 6.6,
-      "estimatedCostCurrency": "HKD"
+      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED"
     },
     {
       "date": "2026-12-26",
@@ -913,7 +914,7 @@
       "sequence": 120,
       "placeKey": "star-ferry-central",
       "estimatedCost": 13,
-      "estimatedCostCurrency": "HKD"
+      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED"
     },
     {
       "date": "2026-12-26",
@@ -957,11 +958,23 @@
     },
     {
       "date": "2026-12-27",
+      "title": "Travel Man Mo Temple → Sham Shui Po",
+      "type": "transport",
+      "start": "10:40",
+      "end": "11:20",
+      "durationMinutes": 40,
+      "priority": "MUST",
+      "sequence": 25,
+      "timingType": "TARGET",
+      "transportInstructions": "Walk downhill towards Sheung Wan/Central transport, then use MTR to Sham Shui Po. Allow approximately 40 minutes including walking, station access, waiting and interchange."
+    },
+    {
+      "date": "2026-12-27",
       "title": "Sham Shui Po exploration",
       "type": "shopping",
-      "start": "11:00",
+      "start": "11:20",
       "end": "13:40",
-      "durationMinutes": 160,
+      "durationMinutes": 140,
       "priority": "WANT",
       "sequence": 30,
       "placeKey": "sham-shui-po",
@@ -1043,7 +1056,7 @@
       "placeKey": "sheung-wan-ferry",
       "transportInstructions": "Use taxi from Yau Ma Tei because of the early start; target terminal by 06:35–06:45.",
       "estimatedCost": 100,
-      "estimatedCostCurrency": "HKD",
+      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED",
       "details": {"transportOptions":[{"label":"Taxi","mode":"recommended","instructions":"Very early departure: protects the 07:30 ferry booking.","durationMinutes":35},{"label":"MTR","mode":"fallback","instructions":"Only if first-train timing is comfortably safe."}],"fallback":"Use a taxi whenever ferry timing is at risk."}
     },
     {
@@ -1057,7 +1070,7 @@
       "sequence": 20,
       "placeKey": "sheung-wan-ferry",
       "estimatedCost": 388,
-      "estimatedCostCurrency": "HKD",
+      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED",
       "details": {"booking":"required","farePerPerson":"about HK$194","fareForTwo":"about HK$388","quickNote":"Prebook target 07:30 departure; allow time for immigration and boarding."}
     },
     {
@@ -1126,7 +1139,7 @@
       "sequence": 80,
       "transportInstructions": "Look for Portuguese-style chicken, pork dishes, seafood or Macanese rice. Also try Portuguese egg tart and pork chop bun. No beef.",
       "estimatedCost": 550,
-      "estimatedCostCurrency": "MOP"
+      "estimatedCostCurrency": "MOP", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED"
     },
     {
       "date": "2026-12-28",
@@ -1139,7 +1152,7 @@
       "sequence": 90,
       "placeKey": "macau-tower",
       "estimatedCost": 80,
-      "estimatedCostCurrency": "MOP",
+      "estimatedCostCurrency": "MOP", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED",
       "details": {"transportOptions":[{"label":"Taxi","mode":"recommended","instructions":"Time-sensitive Bungy booking; save time from historic Macau.","durationMinutes":40},{"label":"Macau bus","mode":"cheapest","instructions":"Prefer buses when time is not tight."}],"fallback":"Taxi immediately if running late."}
     },
     {
@@ -1167,7 +1180,7 @@
       "placeKey": "studio-city",
       "transportInstructions": "Only do this if Bungy finishes by roughly 16:00 and energy is good; otherwise go directly to Cotai.",
       "estimatedCost": 200,
-      "estimatedCostCurrency": "MOP",
+      "estimatedCostCurrency": "MOP", "estimatedCostScope": "PARTY", "estimatedCostStatus": "OPTIONAL",
       "details": {"booking":"optional","attractionCost":"about MOP 100/person","fareForTwo":"about MOP 200","fallback":"Skip without regret; historic Macau, Bungy and the Cotai resorts take priority."}
     },
     {
@@ -1213,7 +1226,7 @@
       "priority": "WANT",
       "sequence": 150,
       "estimatedCost": 500,
-      "estimatedCostCurrency": "MOP"
+      "estimatedCostCurrency": "MOP", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED"
     },
     {
       "date": "2026-12-28",
@@ -1239,7 +1252,7 @@
       "placeKey": "taipa-ferry",
       "transportInstructions": "Book 22:00 sailing; 23:00 acts as backup.",
       "estimatedCost": 484,
-      "estimatedCostCurrency": "HKD"
+      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED"
     },
     {
       "date": "2026-12-28",
@@ -1286,7 +1299,7 @@
       "placeKey": "ngong-ping",
       "transportInstructions": "One-way only: Tung Chung → Ngong Ping. Continue later by bus to Tai O and bus back to Tung Chung.",
       "estimatedCost": 480,
-      "estimatedCostCurrency": "HKD",
+      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED",
       "details": {"booking":"required","farePerPerson":"about HK$240","fareForTwo":"about HK$480","quickNote":"Crystal Cabin, one-way only. Do not buy a round-trip ticket."}
     },
     {
@@ -1357,7 +1370,7 @@
       "sequence": 90,
       "placeKey": "tai-o",
       "estimatedCost": 100,
-      "estimatedCostCurrency": "HKD",
+      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "OPTIONAL",
       "details": {"booking":"optional","farePerPerson":"about HK$30–50","fareForTwo":"about HK$60–100","payWith":"Cash is useful for small local operators."}
     },
     {
@@ -1393,21 +1406,9 @@
       "priority": "OPTIONAL",
       "sequence": 110,
       "placeKey": "victoria-peak",
-      "transportInstructions": "Decide at Tung Chung around 17:40–17:50. Only if weather, visibility, energy and timing are good: continue to Hong Kong Station/Central, then Bus 15 or Minibus 1. Target Peak 19:10–19:30, descend 20:30–20:45, return Yau Ma Tei 21:30–21:45.", "timingType": "WEATHER_DEPENDENT",
+      "transportInstructions": "One conditional decision at Tung Chung around 17:45: skip Peak for direct MTR to Yau Ma Tei around 19:00–19:15, or continue via Hong Kong Station/Central and Bus 15 or Minibus 1 for the night Peak, returning around 21:30–21:45.", "timingType": "WEATHER_DEPENDENT",
       "syncTitles": ["Optional second Peak at night"],
-      "details": {"weather":"Optional, weather dependent and energy dependent. Check visibility, cloud and rain on 29 December afternoon.","fareForTwo":"about HK$52 using Bus 15 both ways, excluding minor MTR differences","transportOptions":[{"label":"Bus 15 both ways","mode":"recommended","instructions":"Continue from Tung Chung; target Peak arrival 19:15–19:30 and descent 20:30–21:00.","cost":"about HK$52 for two"},{"label":"Minibus 1","mode":"fallback","instructions":"Use if it offers a meaningfully shorter queue."},{"label":"Peak Tram","mode":"fallback","instructions":"Use only if the down queue is short."}],"fallback":"Skip this option and take the direct MTR back to Yau Ma Tei."}
-    },
-    {
-      "date": "2026-12-29",
-      "title": "Return to Yau Ma Tei after the night choice",
-      "type": "transport",
-      "durationMinutes": 60,
-      "priority": "MUST",
-      "sequence": 120,
-      "placeKey": "bridal-tea-house",
-      "transportInstructions": "If skipping the Peak, take Tung Chung → Lai King → Yau Ma Tei and arrive around 19:15. If taking the Peak, return after descending and expect Yau Ma Tei around 21:45.",
-      "syncTitles": ["Return to Yau Ma Tei"],
-      "details": {"hotelReturn":"About 19:15 if skipping the Peak; about 21:45 after the Peak.","fallback":"Skipping the Peak is the default if weather, energy or timing is poor."}
+      "details": {"weather":"Optional, weather dependent and energy dependent. Check visibility, cloud and rain on 29 December afternoon.","fareForTwo":"about HK$52 using Bus 15 both ways, excluding minor MTR differences","branches":{"skipPeak":{"instructions":"Tung Chung → Lai King → Yau Ma Tei; arrive about 19:00–19:15, then dinner around 20:00–21:30."},"doPeak":{"instructions":"Tung Chung → Hong Kong Station/Central → Bus 15 or Minibus 1 → Peak; arrive 19:10–19:30, descend 20:30–20:45, return Yau Ma Tei 21:30–21:45, then quick dinner."}},"transportOptions":[{"label":"Bus 15 both ways","mode":"recommended","instructions":"Continue from Tung Chung; target Peak arrival 19:15–19:30 and descent 20:30–21:00.","cost":"about HK$52 for two"},{"label":"Minibus 1","mode":"fallback","instructions":"Use if it offers a meaningfully shorter queue."},{"label":"Peak Tram","mode":"fallback","instructions":"Use only if the down queue is short."}],"fallback":"Skip this option and take the direct MTR back to Yau Ma Tei."}
     },
     {
       "date": "2026-12-29",
@@ -1633,7 +1634,7 @@
       "placeKey": "canal-road-flyover",
       "transportInstructions": "Walk or use a short tram segment from Wan Chai. Watch the Da Siu Yan folk ritual, or participate if interested; keep moving by about 14:20 to protect the Monster Building daylight target.",
       "estimatedCost": 100,
-      "estimatedCostCurrency": "HKD",
+      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "OPTIONAL",
       "details": {"attractionCost":"about HK$50–100 if participating; observation is free","payWith":"Cash preferred; confirm the price before starting.","quickNote":"Optional cultural experience, not a generic blessing service. Be respectful to practitioners and participants; frame participation around obstacles or bad luck, not a real person.","fallback":"Skip participation or shorten Causeway Bay first if running late."}
     },
     {
@@ -1674,16 +1675,17 @@
     },
     {
       "date": "2027-01-01",
-      "title": "Return to Yau Ma Tei and rest",
+      "title": "Monster Building → Yau Ma Tei",
       "type": "transport",
       "start": "17:15",
-      "end": "18:45",
-      "durationMinutes": 90,
+      "end": "18:00",
+      "durationMinutes": 45,
       "priority": "WANT",
       "sequence": 100,
       "placeKey": "bridal-tea-house",
-      "transportInstructions": "Walk to Tai Koo or Quarry Bay MTR → Admiralty → Yau Ma Tei; rest 30–45 minutes at hotel."
+      "transportInstructions": "Walk to Tai Koo or Quarry Bay MTR → Admiralty → Yau Ma Tei."
     },
+    {"date":"2027-01-01","title":"Hotel rest","type":"rest","start":"18:00","end":"18:45","durationMinutes":45,"priority":"WANT","sequence":105,"placeKey":"bridal-tea-house"},
     {
       "date": "2027-01-01",
       "title": "Final Mong Kok street-food crawl",
@@ -1729,7 +1731,7 @@
       "placeKey": "hkg-airport",
       "transportInstructions": "Leave approximately 4h15–4h30 before flight departure. Target airport around 3 hours before departure. Taxi to Kowloon Station + Airport Express is the backup if timing/traffic/luggage requires it.",
       "estimatedCost": 69.2,
-      "estimatedCostCurrency": "HKD"
+      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED"
     },
     {
       "date": "2027-01-02",
@@ -1737,11 +1739,12 @@
       "type": "transport",
       "start": "14:30",
       "end": "15:40",
-      "durationMinutes": 70,
+      "durationMinutes": 130,
       "priority": "MUST",
       "sequence": 30,
       "placeKey": "hkg-airport",
-      "transportInstructions": "Depart Hong Kong International Airport, Terminal 1, at 14:30; arrive Hanoi Noi Bai International Airport, Terminal 2, at 15:40. Economy Classic; seat 14B; one checked bag. Seafood meal request confirmed. Hanoi is a transit stop, not a separate booking."
+      "transportInstructions": "Depart Hong Kong International Airport, Terminal 1, at 14:30; arrive Hanoi Noi Bai International Airport, Terminal 2, at 15:40. Economy Classic; seat 14B; one checked bag. Seafood meal request confirmed. Hanoi is a transit stop, not a separate booking.",
+      "bookingKey": "flight-vn593"
     },
     {
       "date": "2027-01-02",
@@ -1751,7 +1754,8 @@
       "durationMinutes": 285,
       "priority": "MUST",
       "sequence": 40,
-      "transportInstructions": "Depart Hanoi Noi Bai International Airport, Terminal 2, at 19:10; arrive Bengaluru Kempegowda International Airport, Terminal 2, at 22:25 local time. Economy Classic; one checked bag. Final leg of the Hong Kong → Hanoi → Bengaluru return journey."
+      "transportInstructions": "Depart Hanoi Noi Bai International Airport, Terminal 2, at 19:10; arrive Bengaluru Kempegowda International Airport, Terminal 2, at 22:25 local time. Economy Classic; one checked bag. Final leg of the Hong Kong → Hanoi → Bengaluru return journey.",
+      "bookingKey": "flight-vn983"
     }
   ],
   "accounts": [
@@ -1796,11 +1800,11 @@
     }
   ],
   "bookings": [
-    {"key":"flight-vn982","type":"FLIGHT","title":"Vietnam Airlines VN982 Bengaluru → Hanoi","provider":"Vietnam Airlines","startsAt":"2026-12-24T23:35:00+05:30","status":"CONFIRMED"},
-    {"key":"flight-vn592","type":"FLIGHT","title":"Vietnam Airlines VN592 Hanoi → Hong Kong","provider":"Vietnam Airlines","startsAt":"2026-12-25T10:35:00+07:00","status":"CONFIRMED"},
-    {"key":"flight-vn593","type":"FLIGHT","title":"Vietnam Airlines VN593 Hong Kong → Hanoi","provider":"Vietnam Airlines","startsAt":"2027-01-02T14:30:00+08:00","status":"CONFIRMED"},
-    {"key":"flight-vn983","type":"FLIGHT","title":"Vietnam Airlines VN983 Hanoi → Bengaluru","provider":"Vietnam Airlines","startsAt":"2027-01-02T19:10:00+07:00","status":"CONFIRMED"},
-    {"key":"hotel-bridal-tea-house","type":"HOTEL","title":"Bridal Tea House Hotel Yau Ma Tei","startsAt":"2026-12-25T16:15:00+08:00","status":"CONFIRMED"},
+    {"key":"flight-vn982","type":"FLIGHT","title":"Vietnam Airlines VN982 Bengaluru → Hanoi","provider":"Vietnam Airlines","startsAt":"2026-12-24T23:35:00+05:30","endsAt":"2026-12-25T05:50:00+07:00","status":"CONFIRMED"},
+    {"key":"flight-vn592","type":"FLIGHT","title":"Vietnam Airlines VN592 Hanoi → Hong Kong","provider":"Vietnam Airlines","startsAt":"2026-12-25T10:35:00+07:00","endsAt":"2026-12-25T13:30:00+08:00","status":"CONFIRMED"},
+    {"key":"flight-vn593","type":"FLIGHT","title":"Vietnam Airlines VN593 Hong Kong → Hanoi","provider":"Vietnam Airlines","startsAt":"2027-01-02T14:30:00+08:00","endsAt":"2027-01-02T15:40:00+07:00","status":"CONFIRMED"},
+    {"key":"flight-vn983","type":"FLIGHT","title":"Vietnam Airlines VN983 Hanoi → Bengaluru","provider":"Vietnam Airlines","startsAt":"2027-01-02T19:10:00+07:00","endsAt":"2027-01-02T22:25:00+05:30","status":"CONFIRMED"},
+    {"key":"hotel-bridal-tea-house","type":"HOTEL","title":"Bridal Tea House Hotel Yau Ma Tei","startsAt":"2026-12-25T16:15:00+08:00","endsAt":"2027-01-02","status":"CONFIRMED"},
     {"key":"aqua-luna","type":"CRUISE","title":"Aqua Luna Symphony of Lights sailing","startsAt":"2026-12-25T19:30:00+08:00","status":"PLACEHOLDER"},
     {"key":"macau-ferry-out","type":"FERRY","title":"TurboJET Sheung Wan → Macau Outer Harbour","startsAt":"2026-12-28T07:30:00+08:00","status":"PLACEHOLDER"},
     {"key":"macau-bungy","type":"ATTRACTION","title":"Macau Tower Bungy","startsAt":"2026-12-28T14:00:00+08:00","status":"PLACEHOLDER"},
