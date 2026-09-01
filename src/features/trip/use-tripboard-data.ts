@@ -219,7 +219,20 @@ export function useTripBoardData(): TripBoardData {
     setAccounts((accountResult.data ?? []).map((row) => mapAccount(row as Record<string, unknown>)));
     setBudgets((budgetResult.data ?? []).map((row) => mapBudget(row as Record<string, unknown>)));
     setFinancialEvents((financialResult.data ?? []).map((row) => mapFinancialEvent(row as Record<string, unknown>)));
-    setNotes((notesResult.data ?? []).map((row) => ({ id: row.id, tripId: row.trip_id, section: row.section, title: row.title, body: row.body, sortOrder: row.sort_order, version: row.version ?? 1 })));
+    setNotes((notesResult.data ?? []).map((row) => ({
+      id: row.id,
+      tripId: row.trip_id,
+      section: row.section,
+      title: row.title,
+      body: row.body,
+      summary: row.summary ?? undefined,
+      icon: row.icon ?? undefined,
+      copyText: row.copy_text ?? undefined,
+      pronunciation: row.pronunciation ?? undefined,
+      meaning: row.meaning ?? undefined,
+      sortOrder: row.sort_order,
+      version: row.version ?? 1,
+    })));
     setUnreadNotificationCount(unreadResult.count ?? 0);
     const snapshot: TripSnapshot = {
       trip: nextTrip,
