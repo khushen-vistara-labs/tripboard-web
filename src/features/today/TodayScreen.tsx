@@ -30,6 +30,8 @@ export function TodayScreen({ data }: { data: TripBoardData }) {
   const foodToday = data.checklist.filter((item) => item.kind === "FOOD" && item.plannedDay === viewDate && item.status !== "COMPLETED");
   const label = DateTime.fromISO(viewDate, { zone: data.trip.timezone });
   const recommendations = rankWhatNow(data.itinerary, `${viewDate}T09:00:00+08:00`, data.trip.timezone).slice(0, 4);
+  const macauGuide = data.notes.find((note) => note.section.toLowerCase().includes("macau") && note.title.toLowerCase().includes("essentials"));
+  const isMacauDay = today.some((item) => /macau/i.test(`${item.title} ${item.description ?? ""}`));
 
   return <>
     <header className="topbar page-topbar">
@@ -65,6 +67,8 @@ export function TodayScreen({ data }: { data: TripBoardData }) {
       <button onClick={() => setShowWhatNow(true)}><span><Sparkles size={18}/></span><div><strong>What can we do now?</strong><small>Rank nearby unfinished plans</small></div><ChevronRight size={18}/></button>
       <a href="/money"><span><CircleDollarSign size={18}/></span><div><strong>Add a purchase</strong><small>Fast money entry</small></div><ChevronRight size={18}/></a>
     </div>
+
+    {isMacauDay && macauGuide && <section className="panel guide-reminder"><span>🇲🇴</span><div><strong>Macau today</strong><p>{macauGuide.summary}</p></div><a href="/guide">Open guide <ChevronRight size={14}/></a></section>}
 
     <div className="dashboard-grid">
       <section className="panel schedule-panel">
