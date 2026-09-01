@@ -1,12 +1,12 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { BookOpenText, CalendarDays, CheckSquare2, CircleDollarSign, Cloud, CloudOff, Ellipsis, House, Plane, Sparkles, Volume2 } from "lucide-react";
+import { BookOpenText, CalendarDays, CheckSquare2, CircleDollarSign, Cloud, CloudOff, Ellipsis, House, Plane, Sparkles } from "lucide-react";
 import { DateTime } from "luxon";
 import type { Trip } from "../../types/domain";
 import { ThemeToggle } from "../ui/ThemeToggle";
 
-export type AppScreen = "today" | "plan" | "money" | "checklist" | "guide" | "phrasebook" | "more" | "bookings";
+export type AppScreen = "today" | "plan" | "money" | "checklist" | "guide" | "more" | "bookings";
 
 const nav = [
   { id: "today", label: "Today", href: "/today", icon: House },
@@ -14,7 +14,6 @@ const nav = [
   { id: "money", label: "Money", href: "/money", icon: CircleDollarSign },
   { id: "checklist", label: "Checklist", href: "/checklist", icon: CheckSquare2 },
   { id: "guide", label: "Trip Guide", href: "/guide", icon: BookOpenText },
-  { id: "phrasebook", label: "Play words", href: "/phrasebook", icon: Volume2 },
   { id: "more", label: "More", href: "/more", icon: Ellipsis },
 ] as const;
 

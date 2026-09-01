@@ -10,7 +10,6 @@ import { PlanScreen } from "../../features/itinerary/PlanScreen";
 import { MoneyScreen } from "../../features/money/MoneyScreen";
 import { ChecklistScreen } from "../../features/checklist/ChecklistScreen";
 import { MoreScreen } from "../../features/more/MoreScreen";
-import { PhrasebookScreen } from "../../features/more/PhrasebookScreen";
 import type { InstallPromptEvent } from "../../features/more/MoreScreen";
 import { discardMutation, retryMutation } from "../../lib/offline/queue";
 import { offlineDb, type OfflineMutation } from "../../lib/offline/db";
@@ -68,7 +67,6 @@ function TripBoardInner({ screen }: { screen: AppScreen }) {
     {screen === "money" && <MoneyScreen data={data}/>} 
     {screen === "checklist" && <ChecklistScreen data={data}/>} 
     {(screen === "more" || screen === "bookings" || screen === "guide") && <MoreScreen data={data} initialSection={screen === "bookings" ? "bookings" : screen === "guide" ? "notes" : "overview"} installPrompt={installPrompt}/>}
-    {screen === "phrasebook" && <PhrasebookScreen/>}
   </AppShell>;
 }
 
