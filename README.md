@@ -108,6 +108,22 @@ pnpm sync:trip-content
 
 This still preserves financial records, bookings, places, and existing checklist progress; it only adds new checklist entries that are not already present.
 
+### Trip Guide / Quick Reference
+
+`/guide` is a direct, travel-time reference screen rather than a notes dump. It is built from the existing `trip_notes` records, which support a category, short summary, icon, optional Chinese copy text, easy pronunciation, and English meaning.
+
+The Hong Kong seed includes quick-reference cards for language phrases, payments and ATM/DCC, Octopus, getting around, connectivity, Macau essentials, hotel details, and emergency help. Traveller actions such as Copy, Play, Show large, and Open map are prominent; edit and delete stay under the overflow menu. Longer supporting text is collapsed by default.
+
+Use the narrowly scoped Guide sync after changing its seed records:
+
+```bash
+pnpm sync:trip-guide
+```
+
+It updates only the current shared trip's Guide records and Bridal Tea House hotel address/map reference. It also removes the retired legacy Guide records that the current cards replace; it does not alter itinerary order, bookings, financial data, or checklist completion.
+
+Today may derive one short contextual reminder from the same Guide data. For example, a Macau itinerary day shows the Macau essentials reminder with a link back to the Guide instead of duplicating the whole section.
+
 ## Commands
 
 ```bash
@@ -119,6 +135,7 @@ pnpm build        # production build
 pnpm check        # lint + typecheck + tests + build
 pnpm seed:trip    # validated developer trip import
 pnpm sync:itinerary # replace an existing seed trip's itinerary from JSON
+pnpm sync:trip-guide # reconcile only the shared trip's Guide references
 ```
 
 Run critical browser journeys with:
@@ -138,7 +155,7 @@ supabase test db
 
 Android/Chromium browsers show the install action when the browser raises the install prompt. On iPhone or iPad, open TripBoard in Safari, use Share, then choose **Add to Home Screen**. Installation is optional; every screen remains a normal URL.
 
-The service worker caches the app shell and previously opened routes. IndexedDB queues mutations and retries them on reconnect and focus. Browser Background Sync is treated only as an optional enhancement.
+The service worker caches the app shell, including `/guide`, and previously opened routes. A deployment changes the shell-cache version, immediately activates the new worker, removes obsolete shell caches, and claims open clients. IndexedDB queues mutations and retries them on reconnect and focus; the trip snapshot is refreshed from Supabase on initial load, focus, and reconnect. Browser Background Sync is treated only as an optional enhancement.
 
 ## Push configuration
 
