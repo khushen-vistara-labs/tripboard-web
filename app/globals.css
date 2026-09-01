@@ -292,6 +292,10 @@ html[data-theme="dark"] .dcc-rule,html[data-theme="dark"] .guide-warning{backgro
 .app-content :is(.schedule-item p,.money-total small,.money-footer,.warning-card p,.quick-strip small,.food-mini small,.recommendation-list p,.recommendation-list small,.kpi-card>p,.account-list small,.ledger-description small,.ledger-row time,.completion-overview p,.checklist-category-grid small,.food-alert p,.checklist-content p,.checklist-status,.more-grid p,.booking-title p,.booking-details>span,.booking-files small,.places-list p,.places-list address,.alert-enable p,.preference-list p,.member-list p,.settings-form small,.account-tools p,.install-benefits p,.install-hero p,.detail-notes p,.detail-files small,.file-open small,.activity-history article p,.activity-history time,.invite-history article p,.setup-card>p:not(.eyebrow),.modal-heading p,.privacy-note,.setup-needed p){font-size:12px;line-height:1.5}
 .app-content :is(.checklist-content h3,.more-grid strong,.account-list strong,.ledger-description strong,.ledger-amount strong,.settlement-list strong,.member-list article strong,.activity-history article strong,.file-open strong,.places-list h2,.place-open h2){font-size:13px}
 
+/* Plan rows need a stronger title-to-detail contrast than the general reading baseline. */
+.plan-row-content>p{font-size:12px;line-height:1.45}
+.plan-meta span,.plan-meta a{font-size:11px;line-height:1.35}
+
 /* Typography-aware layout. The readable-text baseline above deliberately made
    copy larger; these dimensions keep the surrounding controls and rows in step
    rather than pinching the new text into the old dashboard-sized geometry. */
