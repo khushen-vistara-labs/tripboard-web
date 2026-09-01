@@ -19,6 +19,9 @@ export interface TripNote {
   section: string;
   title: string;
   body: string;
+  summary?: string;
+  icon?: string;
+  copyText?: string;
   sortOrder: number;
   version?: number;
 }

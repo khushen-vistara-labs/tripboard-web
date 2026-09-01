@@ -120,7 +120,7 @@ export const SeedSchema = z.object({
       status: z.string(),
     }),
   ),
-  importantNotes: z.array(z.object({ section: z.string(), title: z.string(), body: z.string(), sortOrder: z.number().int().optional() })),
+  importantNotes: z.array(z.object({ section: z.string(), title: z.string(), body: z.string(), summary: z.string().max(240).optional(), icon: z.string().max(16).optional(), copyText: z.string().optional(), sortOrder: z.number().int().optional() })),
 });
 
 const required = (name: string) => {
@@ -328,7 +328,7 @@ if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.i
     const noteTitles = new Set((existingNotes ?? []).map((note) => note.title));
     const noteAdditions = seed.importantNotes.filter((note) => !noteTitles.has(note.title));
     if (noteAdditions.length) {
-      const { error: notesError } = await admin.from("trip_notes").insert(noteAdditions.map((note, index) => ({ trip_id: existingTrip.id, section: note.section, title: note.title, body: note.body, sort_order: note.sortOrder ?? index, created_by: owner.id, updated_by: owner.id })));
+      const { error: notesError } = await admin.from("trip_notes").insert(noteAdditions.map((note, index) => ({ trip_id: existingTrip.id, section: note.section, title: note.title, body: note.body, summary: note.summary, icon: note.icon, copy_text: note.copyText, sort_order: note.sortOrder ?? index, created_by: owner.id, updated_by: owner.id })));
       if (notesError) throw notesError;
     }
     console.log(`Safely synced ${seed.itinerary.length} itinerary entries, ${additions.length} new checklist items, and ${noteAdditions.length} important notes to ${existingTrip.name} (${existingTrip.id}).`);
@@ -466,7 +466,7 @@ const { error: checklistError } = await admin
   );
 if (checklistError) throw checklistError;
 
-const { error: noteError } = await admin.from("trip_notes").insert(seed.importantNotes.map((note, index) => ({ trip_id: trip.id, section: note.section, title: note.title, body: note.body, sort_order: note.sortOrder ?? index, created_by: owner.id, updated_by: owner.id })));
+const { error: noteError } = await admin.from("trip_notes").insert(seed.importantNotes.map((note, index) => ({ trip_id: trip.id, section: note.section, title: note.title, body: note.body, summary: note.summary, icon: note.icon, copy_text: note.copyText, sort_order: note.sortOrder ?? index, created_by: owner.id, updated_by: owner.id })));
 if (noteError) throw noteError;
 
 const { error: itineraryError } = await admin
