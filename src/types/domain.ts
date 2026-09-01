@@ -22,6 +22,8 @@ export interface TripNote {
   summary?: string;
   icon?: string;
   copyText?: string;
+  pronunciation?: string;
+  meaning?: string;
   sortOrder: number;
   version?: number;
 }

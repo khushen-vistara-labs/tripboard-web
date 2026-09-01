@@ -54,8 +54,8 @@ export interface TripBoardData {
   addBudget: (budget: Omit<Budget, "id" | "tripId">) => Promise<void>;
   editBudget: (id: string, budget: Omit<Budget, "id" | "tripId">) => Promise<void>;
   deleteBudget: (id: string) => Promise<void>;
-  addNote: (note: Pick<TripNote, "section" | "title" | "body" | "summary" | "icon" | "copyText">) => Promise<void>;
-  editNote: (id: string, note: Pick<TripNote, "section" | "title" | "body" | "summary" | "icon" | "copyText">) => Promise<void>;
+  addNote: (note: Pick<TripNote, "section" | "title" | "body" | "summary" | "icon" | "copyText" | "pronunciation" | "meaning">) => Promise<void>;
+  editNote: (id: string, note: Pick<TripNote, "section" | "title" | "body" | "summary" | "icon" | "copyText" | "pronunciation" | "meaning">) => Promise<void>;
   deleteNote: (id: string) => Promise<void>;
   settleFinancialTransaction: (id: string, version: number, settledInrAmount: string) => Promise<void>;
   voidFinancialTransaction: (id: string, version: number, reason: string) => Promise<void>;
@@ -231,7 +231,7 @@ export function useTripBoardData(): TripBoardData {
       accounts: (accountResult.data ?? []).map((row) => mapAccount(row as Record<string, unknown>)),
       budgets: (budgetResult.data ?? []).map((row) => mapBudget(row as Record<string, unknown>)),
       financialEvents: (financialResult.data ?? []).map((row) => mapFinancialEvent(row as Record<string, unknown>)),
-      notes: (notesResult.data ?? []).map((row) => ({ id: row.id, tripId: row.trip_id, section: row.section, title: row.title, body: row.body, summary: row.summary ?? undefined, icon: row.icon ?? undefined, copyText: row.copy_text ?? undefined, sortOrder: row.sort_order, version: row.version ?? 1 })),
+      notes: (notesResult.data ?? []).map((row) => ({ id: row.id, tripId: row.trip_id, section: row.section, title: row.title, body: row.body, summary: row.summary ?? undefined, icon: row.icon ?? undefined, copyText: row.copy_text ?? undefined, pronunciation: row.pronunciation ?? undefined, meaning: row.meaning ?? undefined, sortOrder: row.sort_order, version: row.version ?? 1 })),
     };
     void offlineDb.cache.put({ key: cacheKey, tripId: nextTrip.id, kind: "remote-trip", value: snapshot, updatedAt: new Date().toISOString() } satisfies CachedTripRecord).catch(() => undefined);
     setDataAvailable(true);
@@ -613,9 +613,9 @@ export function useTripBoardData(): TripBoardData {
     setLoading(true); await refresh();
   };
 
-  const saveNote = async (command: "create" | "update", id: string, note: Pick<TripNote, "section" | "title" | "body" | "summary" | "icon" | "copyText">) => {
+  const saveNote = async (command: "create" | "update", id: string, note: Pick<TripNote, "section" | "title" | "body" | "summary" | "icon" | "copyText" | "pronunciation" | "meaning">) => {
     const current = notes.find((item) => item.id === id);
-    const payload = { id, trip_id: trip.id, section: note.section.trim(), title: note.title.trim(), body: note.body.trim(), summary: note.summary?.trim() || null, icon: note.icon?.trim() || null, copy_text: note.copyText?.trim() || null, sort_order: current?.sortOrder ?? notes.filter((item) => item.section === note.section).length };
+    const payload = { id, trip_id: trip.id, section: note.section.trim(), title: note.title.trim(), body: note.body.trim(), summary: note.summary?.trim() || null, icon: note.icon?.trim() || null, copy_text: note.copyText?.trim() || null, pronunciation: note.pronunciation?.trim() || null, meaning: note.meaning?.trim() || null, sort_order: current?.sortOrder ?? notes.filter((item) => item.section === note.section).length };
     const client = getSupabaseBrowserClient(); if (!client) return;
     if (!navigator.onLine) { await enqueueMutation({ tripId: trip.id, entity: "trip-note", command, payload }); return; }
     const result = command === "create" ? await client.from("trip_notes").insert(payload) : await client.from("trip_notes").update(payload).eq("id", id);
