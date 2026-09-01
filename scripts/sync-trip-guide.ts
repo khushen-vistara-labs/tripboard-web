@@ -23,9 +23,23 @@ for (const [index, note] of seed.importantNotes.entries()) {
   if (result.error) throw result.error;
   if (id) updated += 1; else inserted += 1;
 }
+const retiredGuideTitles = [
+  "Macau Payments",
+  "Both phones online",
+  "Apps to install",
+  "How to pay in Hong Kong",
+  "Getting HKD cash and avoiding DCC",
+  "Two physical On-Loan Adult Octopus cards",
+  "Pre-trip rechecks",
+];
+const retiredIds = retiredGuideTitles.flatMap((title) => byTitle.get(title) ? [byTitle.get(title)!] : []);
+if (retiredIds.length) {
+  const { error: retireError } = await admin.from("trip_notes").delete().in("id", retiredIds);
+  if (retireError) throw retireError;
+}
 const hotel = seed.places.find((place) => place.key === "bridal-tea-house");
 if (!hotel?.address) throw new Error("The Trip Guide hotel address is missing from the seed.");
 const { data: updatedHotel, error: hotelError } = await admin.from("places").update({ address: hotel.address, google_maps_url: hotel.googleMapsUrl ?? null }).eq("trip_id", trip.id).eq("name", hotel.name).select("id");
 if (hotelError) throw hotelError;
 if (!updatedHotel?.length) throw new Error("The Trip Guide hotel could not be found in the shared trip.");
-console.log(`Trip Guide synced: ${updated} updated, ${inserted} added; hotel address refreshed.`);
+console.log(`Trip Guide synced: ${updated} updated, ${inserted} added, ${retiredIds.length} legacy records removed; hotel address refreshed.`);
