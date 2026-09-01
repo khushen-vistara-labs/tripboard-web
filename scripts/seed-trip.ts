@@ -323,13 +323,19 @@ if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.i
       const { error: checklistError } = await admin.from("checklist_items").insert(additions.map((item) => ({ trip_id: existingTrip.id, title: item.title, description: item.description, notes: item.notes, dietary_warning: item.dietaryWarning, kind: item.kind, priority: item.priority, planned_day: item.plannedDay, due_date: item.dueDate, recommended_place: item.recommendedPlace, neighbourhood: item.neighbourhood, created_by: owner.id, updated_by: owner.id })));
       if (checklistError) throw checklistError;
     }
-    const { data: existingNotes, error: existingNotesError } = await admin.from("trip_notes").select("title").eq("trip_id", existingTrip.id);
+    const { data: existingNotes, error: existingNotesError } = await admin.from("trip_notes").select("id,title").eq("trip_id", existingTrip.id);
     if (existingNotesError) throw existingNotesError;
-    const noteTitles = new Set((existingNotes ?? []).map((note) => note.title));
+    const notesByTitle = new Map((existingNotes ?? []).map((note) => [note.title, note.id]));
+    const noteTitles = new Set(notesByTitle.keys());
     const noteAdditions = seed.importantNotes.filter((note) => !noteTitles.has(note.title));
     if (noteAdditions.length) {
       const { error: notesError } = await admin.from("trip_notes").insert(noteAdditions.map((note, index) => ({ trip_id: existingTrip.id, section: note.section, title: note.title, body: note.body, summary: note.summary, icon: note.icon, copy_text: note.copyText, pronunciation: note.pronunciation, meaning: note.meaning, sort_order: note.sortOrder ?? index, created_by: owner.id, updated_by: owner.id })));
       if (notesError) throw notesError;
+    }
+    for (const [index, note] of seed.importantNotes.entries()) {
+      const id = notesByTitle.get(note.title); if (!id) continue;
+      const { error: noteUpdateError } = await admin.from("trip_notes").update({ section: note.section, body: note.body, summary: note.summary, icon: note.icon, copy_text: note.copyText, pronunciation: note.pronunciation, meaning: note.meaning, sort_order: note.sortOrder ?? index, updated_by: owner.id }).eq("id", id);
+      if (noteUpdateError) throw noteUpdateError;
     }
     console.log(`Safely synced ${seed.itinerary.length} itinerary entries, ${additions.length} new checklist items, and ${noteAdditions.length} important notes to ${existingTrip.name} (${existingTrip.id}).`);
     process.exit(0);

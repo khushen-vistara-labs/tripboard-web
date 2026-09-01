@@ -20,6 +20,7 @@
     "seed:trip": "node --env-file=.env.local --import tsx scripts/seed-trip.ts",
     "sync:itinerary": "node --env-file=.env.local --import tsx scripts/seed-trip.ts --sync-itinerary",
     "sync:trip-content": "node --env-file=.env.local --import tsx scripts/seed-trip.ts --sync-trip-content",
+    "sync:trip-guide": "node --env-file=.env.local --import tsx scripts/sync-trip-guide.ts",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern .vercel --ignore-pattern .output",
     "db:generate": "drizzle-kit generate"
   },
