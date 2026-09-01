@@ -50,6 +50,7 @@
       "key": "bridal-tea-house",
       "name": "Bridal Tea House Hotel Yau Ma Tei",
       "address": "6 Arthur Street, Yau Ma Tei, Kowloon, Hong Kong",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=6%20Arthur%20Street%2C%20Yau%20Ma%20Tei%2C%20Kowloon%2C%20Hong%20Kong",
       "neighbourhood": "Yau Ma Tei",
       "category": "Hotel",
       "priority": "MUST"
@@ -1813,6 +1814,7 @@
     {"key":"disneyland","type":"THEME_PARK","title":"Hong Kong Disneyland","startsAt":"2026-12-30T09:30:00+08:00","status":"PLACEHOLDER"}
   ],
   "importantNotes": [
+    {"section":"Arrival & preparation","title":"Arrival at Hong Kong Airport","summary":"Withdraw only a small amount of HKD if needed. Do not exchange a large amount at the airport.","icon":"✈️","body":"Clear immigration.\nCollect luggage.\nActivate SIM → complete registration → verify mobile data.\nWithdraw only a small amount of HKD if needed.\nTake A21 and pay contactless if Octopus is not ready.\nCheck in.\nAfter check-in, buy two On-Loan Octopus cards at Yau Ma Tei MTR."},
     {"section":"Food & language","title":"No beef / no beef broth","summary":"Show this phrase when soup or noodles are unclear.","icon":"🚫","copyText":"唔要牛肉，唔要牛湯。豬肉、雞肉、海鮮都可以。","pronunciation":"m4 jiu3 ngau4 juk6, m4 jiu3 ngau4 tong1. zyu1 juk6, gai1 juk6, hoi2 sin1 dou1 ho2 ji5.","meaning":"No beef, no beef broth. Pork, chicken and seafood are okay.","body":"Use this when soup or noodle broth is unclear. Ask the restaurant to confirm before ordering."},
     {"section":"Food & language","title":"Thank you","summary":"For service or a small favour.","icon":"🙏","copyText":"唔該","pronunciation":"mm goi","meaning":"Thank you / please (for service).","body":"Use this for everyday service, such as when someone brings food or gives directions."},
     {"section":"Food & language","title":"Excuse me / sorry","summary":"A polite way to get attention or apologise.","icon":"🙇","copyText":"唔好意思","pronunciation":"mm ho yi si","meaning":"Excuse me / sorry.","body":"Useful when navigating a busy restaurant or asking someone for help."},

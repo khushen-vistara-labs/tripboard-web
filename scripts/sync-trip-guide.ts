@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import { createClient } from "@supabase/supabase-js";
 
 type GuideNote = { section: string; title: string; body: string; summary?: string; icon?: string; copyText?: string; pronunciation?: string; meaning?: string; sortOrder?: number };
-type Seed = { trip: { name: string; endDate: string }; importantNotes: GuideNote[] };
+type Seed = { trip: { name: string; endDate: string }; importantNotes: GuideNote[]; places: { key: string; name: string; address?: string; googleMapsUrl?: string }[] };
 
 const required = (name: string) => { const value = process.env[name]; if (!value) throw new Error(`Missing ${name}`); return value; };
 const seed = JSON.parse(await readFile(new URL("../seed/hong-kong-2026.json", import.meta.url), "utf8")) as Seed;
@@ -23,4 +23,9 @@ for (const [index, note] of seed.importantNotes.entries()) {
   if (result.error) throw result.error;
   if (id) updated += 1; else inserted += 1;
 }
-console.log(`Trip Guide synced: ${updated} updated, ${inserted} added.`);
+const hotel = seed.places.find((place) => place.key === "bridal-tea-house");
+if (!hotel?.address) throw new Error("The Trip Guide hotel address is missing from the seed.");
+const { data: updatedHotel, error: hotelError } = await admin.from("places").update({ address: hotel.address, google_maps_url: hotel.googleMapsUrl ?? null }).eq("trip_id", trip.id).eq("name", hotel.name).select("id");
+if (hotelError) throw hotelError;
+if (!updatedHotel?.length) throw new Error("The Trip Guide hotel could not be found in the shared trip.");
+console.log(`Trip Guide synced: ${updated} updated, ${inserted} added; hotel address refreshed.`);
