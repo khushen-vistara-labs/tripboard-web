@@ -6207,3 +6207,28 @@ html[data-theme="dark"] .guide-warning p {
   font-size: 12px;
   line-height: 1.25;
 }
+
+/* The modal close affordance is an icon control, not a large circular action. */
+.app-content .modal-heading .icon-button.quiet {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  flex: 0 0 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted);
+  display: grid;
+  place-items: center;
+  line-height: 1;
+}
+.app-content .modal-heading .icon-button.quiet:hover {
+  background: var(--mint);
+  color: var(--green);
+}
+.app-content .modal-heading .icon-button.quiet svg {
+  width: 18px;
+  height: 18px;
+}
