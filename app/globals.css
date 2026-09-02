@@ -6187,6 +6187,15 @@ html[data-theme="dark"] .guide-warning p {
 /* Plan row actions are compact labels, not reading copy. Keep their intended
    8px label size after the global minimum-button-text baseline above. */
 .app-content .plan-row .row-actions button {
-  font-size: 8px;
+  font-size: 10px;
   line-height: 1.2;
+}
+
+/* Trip details are compact supporting information within an itinerary row. */
+.app-content .trip-details summary,
+.app-content .trip-details-grid span,
+.app-content .trip-details-grid p,
+.app-content .trip-details-grid p b {
+  font-size: 10px;
+  line-height: 1.4;
 }
