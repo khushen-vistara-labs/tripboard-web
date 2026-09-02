@@ -6199,3 +6199,11 @@ html[data-theme="dark"] .guide-warning p {
   font-size: 10px;
   line-height: 1.4;
 }
+
+/* Trip Guide actions are compact utilities, not primary page buttons. */
+.app-content .guide-actions .text-button,
+.app-content .phrase-card-actions .text-button,
+.app-content .guide-admin > div .text-button {
+  font-size: 12px;
+  line-height: 1.25;
+}
