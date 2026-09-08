@@ -14,6 +14,8 @@ const LEGACY_CONDITION = "Only use the first-trip and know-anyone answers if the
 
 type ImmigrationDraft = Pick<TripNote, "section" | "title" | "body" | "summary" | "icon" | "copyText" | "pronunciation" | "meaning">;
 type QAPair = { question: string; answer: string };
+type EditorPoint = { id: string; value: string };
+type EditorQAPair = QAPair & { id: string };
 type EditorKind = "points" | "qa";
 
 const starterSections: ImmigrationDraft[] = [
@@ -155,14 +157,51 @@ function ImmigrationSectionModal({ note, onClose, onSave }: { note?: TripNote; o
   const [title, setTitle] = useState(note?.title ?? "");
   const [summary, setSummary] = useState(note?.summary ?? "");
   const [kind, setKind] = useState<EditorKind>(initialPairs.length > 0 ? "qa" : "points");
-  const [points, setPoints] = useState(() => { const values = pointsFrom(note?.body ?? "").filter((line) => line !== LEGACY_CONDITION); return values.length ? values : [""]; });
-  const [pairs, setPairs] = useState<QAPair[]>(initialPairs.length ? initialPairs : [{ question: "", answer: "" }]);
+  const itemSequence = useRef(0);
+  const createItemId = (kind: "point" | "pair") => `${kind}-new-${itemSequence.current++}`;
+  const [points, setPoints] = useState<EditorPoint[]>(() => {
+    const values = pointsFrom(note?.body ?? "").filter((line) => line !== LEGACY_CONDITION);
+    return (values.length ? values : [""]).map((value, index) => ({ id: `point-${index}`, value }));
+  });
+  const [pairs, setPairs] = useState<EditorQAPair[]>(() => (initialPairs.length ? initialPairs : [{ question: "", answer: "" }]).map((pair, index) => ({ ...pair, id: `pair-${index}` })));
   const [saving, setSaving] = useState(false);
-  const updatePoint = (index: number, value: string) => setPoints((items) => items.map((item, itemIndex) => itemIndex === index ? value : item));
-  const updatePair = (index: number, key: keyof QAPair, value: string) => setPairs((items) => items.map((item, itemIndex) => itemIndex === index ? { ...item, [key]: value } : item));
-  const body = kind === "qa" ? pairs.filter((pair) => pair.question.trim() && pair.answer.trim()).map((pair) => `${pair.question.trim()} || ${pair.answer.trim()}`).join("\n") : points.map((point) => point.trim()).filter(Boolean).join("\n");
+  const updatePoint = (id: string, value: string) => setPoints((items) => items.map((item) => item.id === id ? { ...item, value } : item));
+  const updatePair = (id: string, key: keyof QAPair, value: string) => setPairs((items) => items.map((item) => item.id === id ? { ...item, [key]: value } : item));
+  const body = kind === "qa"
+    ? pairs.filter((pair) => pair.question.trim() && pair.answer.trim()).map((pair) => `${pair.question.trim()} || ${pair.answer.trim()}`).join("\n")
+    : points.map((point) => point.value.trim()).filter(Boolean).join("\n");
 
-  return <Modal title={note ? "Edit immigration section" : "Add immigration section"} description="Edit every prompt as a separate field, then save." onClose={onClose} wide><form className="form-stack immigration-editor" onSubmit={async (event) => { event.preventDefault(); if (!body) return; setSaving(true); await onSave({ section: IMMIGRATION_SECTION, title: title.trim(), summary: kind === "points" ? summary.trim() || undefined : undefined, body, icon: note?.icon, copyText: undefined, pronunciation: undefined, meaning: undefined }); setSaving(false); }}><label>Section title<input value={title} onChange={(event) => setTitle(event.target.value)} maxLength={160} required placeholder="e.g. Arrival details"/></label><label>Content style<select value={kind} onChange={(event) => setKind(event.target.value as EditorKind)}><option value="points">Key points</option><option value="qa">Questions and answers</option></select></label>{kind === "points" && <><label>Key note <span className="optional">optional</span><input value={summary} onChange={(event) => setSummary(event.target.value)} maxLength={420} placeholder="A short note to show above the points"/></label><div className="immigration-editor-rows" aria-label="Key points">{points.map((point, index) => <div className="immigration-editor-row" key={`${index}-${point}`}><input aria-label={`Point ${index + 1}`} value={point} onChange={(event) => updatePoint(index, event.target.value)} required placeholder="Add a point"/><button type="button" className="form-row-remove" aria-label={`Remove point ${index + 1}`} onClick={() => setPoints((items) => items.length === 1 ? items : items.filter((_item, itemIndex) => itemIndex !== index))}><Trash2 size={16}/></button></div>)}</div><button type="button" className="text-button immigration-editor-add" onClick={() => setPoints((items) => [...items, ""])}><Plus size={15}/> Add another point</button></>}{kind === "qa" && <div className="immigration-editor-pairs" aria-label="Questions and answers">{pairs.map((pair, index) => <section className="immigration-editor-pair" key={`${index}-${pair.question}`}><div><span>Question {index + 1}</span><button type="button" className="form-row-remove" aria-label={`Remove question ${index + 1}`} onClick={() => setPairs((items) => items.length === 1 ? items : items.filter((_item, itemIndex) => itemIndex !== index))}><Trash2 size={16}/></button></div><input value={pair.question} onChange={(event) => updatePair(index, "question", event.target.value)} required placeholder="What may the officer ask?"/><label><span>Answer</span><textarea value={pair.answer} onChange={(event) => updatePair(index, "answer", event.target.value)} rows={2} required placeholder="Your concise answer"/></label></section>)}<button type="button" className="text-button immigration-editor-add" onClick={() => setPairs((items) => [...items, { question: "", answer: "" }])}><Plus size={15}/> Add a question</button></div>}<div className="form-actions"><button className="button secondary" type="button" onClick={onClose}>Cancel</button><button className="button primary" disabled={saving}>{saving ? "Saving…" : "Save section"}</button></div></form></Modal>;
+  return <Modal title={note ? "Edit immigration section" : "Add immigration section"} description="Edit every prompt as a separate field, then save." onClose={onClose} wide>
+    <form className="form-stack immigration-editor" onSubmit={async (event) => {
+      event.preventDefault();
+      if (!body) return;
+      setSaving(true);
+      await onSave({ section: IMMIGRATION_SECTION, title: title.trim(), summary: kind === "points" ? summary.trim() || undefined : undefined, body, icon: note?.icon, copyText: undefined, pronunciation: undefined, meaning: undefined });
+      setSaving(false);
+    }}>
+      <label>Section title<input value={title} onChange={(event) => setTitle(event.target.value)} maxLength={160} required placeholder="e.g. Arrival details"/></label>
+      <label>Content style<select value={kind} onChange={(event) => setKind(event.target.value as EditorKind)}><option value="points">Key points</option><option value="qa">Questions and answers</option></select></label>
+      {kind === "points" && <>
+        <label>Key note <span className="optional">optional</span><input value={summary} onChange={(event) => setSummary(event.target.value)} maxLength={420} placeholder="A short note to show above the points"/></label>
+        <div className="immigration-editor-rows" aria-label="Key points">
+          {points.map((point, index) => <div className="immigration-editor-row" key={point.id}>
+            <input aria-label={`Point ${index + 1}`} value={point.value} onChange={(event) => updatePoint(point.id, event.target.value)} required placeholder="Add a point"/>
+            <button type="button" className="form-row-remove" aria-label={`Remove point ${index + 1}`} onClick={() => setPoints((items) => items.length === 1 ? items : items.filter((item) => item.id !== point.id))}><Trash2 size={16}/></button>
+          </div>)}
+        </div>
+        <button type="button" className="text-button immigration-editor-add" onClick={() => setPoints((items) => [...items, { id: createItemId("point"), value: "" }])}><Plus size={15}/> Add another point</button>
+      </>}
+      {kind === "qa" && <div className="immigration-editor-pairs" aria-label="Questions and answers">
+        {pairs.map((pair, index) => <section className="immigration-editor-pair" key={pair.id}>
+          <div><span>Question {index + 1}</span><button type="button" className="form-row-remove" aria-label={`Remove question ${index + 1}`} onClick={() => setPairs((items) => items.length === 1 ? items : items.filter((item) => item.id !== pair.id))}><Trash2 size={16}/></button></div>
+          <input value={pair.question} onChange={(event) => updatePair(pair.id, "question", event.target.value)} required placeholder="What may the officer ask?"/>
+          <label><span>Answer</span><textarea value={pair.answer} onChange={(event) => updatePair(pair.id, "answer", event.target.value)} rows={2} required placeholder="Your concise answer"/></label>
+        </section>)}
+        <button type="button" className="text-button immigration-editor-add" onClick={() => setPairs((items) => [...items, { id: createItemId("pair"), question: "", answer: "" }])}><Plus size={15}/> Add a question</button>
+      </div>}
+      <div className="form-actions"><button className="button secondary" type="button" onClick={onClose}>Cancel</button><button className="button primary" disabled={saving}>{saving ? "Saving…" : "Save section"}</button></div>
+    </form>
+  </Modal>;
 }
 
 function pointsFrom(body: string) { return body.split(/\r?\n/).map((line) => line.trim()).filter(Boolean); }

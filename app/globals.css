@@ -6479,10 +6479,15 @@ html[data-theme="dark"] .immigration-qa-list article {
   gap: 4px;
 }
 .immigration-card-actions .icon-button {
+  display: grid;
+  place-items: center;
+  flex: 0 0 36px;
   width: 36px;
   height: 36px;
   min-width: 36px;
   min-height: 36px;
+  padding: 0;
+  line-height: 1;
   border: 1px solid transparent;
   border-radius: 8px;
 }
@@ -6490,9 +6495,8 @@ html[data-theme="dark"] .immigration-qa-list article {
 .immigration-editor .button:focus-visible,
 .immigration-editor .text-button:focus-visible,
 .immigration-editor .form-row-remove:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
-  box-shadow: none;
+  outline: 0;
+  box-shadow: 0 0 0 2px var(--focus);
 }
 .immigration-card-actions .icon-button:focus-visible {
   background: var(--paper);
