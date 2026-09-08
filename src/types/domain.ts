@@ -151,5 +151,6 @@ export interface ChecklistItem {
   rating?: number;
   favourite?: boolean;
   linkedPlaceId?: string;
+  sortOrder: number;
   version?: number;
 }

@@ -25,16 +25,16 @@ export const demoItinerary: ItineraryItem[] = [
 ];
 
 export const demoChecklist: ChecklistItem[] = [
-  { id: "egg-tart", tripId: demoTrip.id, title: "Egg tart", kind: "FOOD", priority: "MUST", targetCount: 1, completedCount: 1, plannedDay: "2026-12-24", status: "COMPLETED", neighbourhood: "Tsim Sha Tsui", rating: 5, favourite: true },
-  { id: "pineapple-bun", tripId: demoTrip.id, title: "Pineapple bun", kind: "FOOD", priority: "MUST", targetCount: 1, completedCount: 1, plannedDay: "2026-12-25", status: "COMPLETED", neighbourhood: "Mong Kok", rating: 4 },
-  { id: "fish-balls", tripId: demoTrip.id, title: "Curry fish balls", kind: "FOOD", priority: "WANT", targetCount: 1, completedCount: 0, plannedDay: "2026-12-28", status: "PLANNED", neighbourhood: "Tai O" },
-  { id: "egg-waffle", tripId: demoTrip.id, title: "Egg waffle", kind: "FOOD", priority: "MUST", targetCount: 1, completedCount: 0, plannedDay: "2026-12-28", status: "PLANNED", neighbourhood: "Tai O" },
-  { id: "french-toast", tripId: demoTrip.id, title: "Hong Kong French toast", kind: "FOOD", priority: "WANT", targetCount: 1, completedCount: 0, plannedDay: "2026-12-29", status: "PLANNED", neighbourhood: "Central" },
-  { id: "star-ferry", tripId: demoTrip.id, title: "Ride the Star Ferry", kind: "EXPERIENCE", priority: "MUST", targetCount: 1, completedCount: 0, plannedDay: "2026-12-29", status: "PLANNED" },
-  { id: "tai-o-boat", tripId: demoTrip.id, title: "Tai O boat ride", kind: "EXPERIENCE", priority: "WANT", targetCount: 1, completedCount: 0, plannedDay: "2026-12-28", status: "PLANNED", neighbourhood: "Tai O" },
-  { id: "victoria-peak", tripId: demoTrip.id, title: "Victoria Peak", kind: "PLACE", priority: "MUST", targetCount: 1, completedCount: 1, status: "COMPLETED", neighbourhood: "The Peak" },
-  { id: "ruins-place", tripId: demoTrip.id, title: "Ruins of St. Paul's", kind: "PLACE", priority: "MUST", targetCount: 1, completedCount: 0, plannedDay: "2026-12-31", status: "PLANNED", neighbourhood: "Historic Centre" },
-  { id: "jade-market", tripId: demoTrip.id, title: "Jade Market", kind: "SHOPPING", priority: "OPTIONAL", targetCount: 1, completedCount: 0, status: "PLANNED", neighbourhood: "Yau Ma Tei" },
+  { id: "egg-tart", tripId: demoTrip.id, title: "Egg tart", kind: "FOOD", priority: "MUST", targetCount: 1, completedCount: 1, plannedDay: "2026-12-24", status: "COMPLETED", neighbourhood: "Tsim Sha Tsui", rating: 5, favourite: true, sortOrder: 0 },
+  { id: "pineapple-bun", tripId: demoTrip.id, title: "Pineapple bun", kind: "FOOD", priority: "MUST", targetCount: 1, completedCount: 1, plannedDay: "2026-12-25", status: "COMPLETED", neighbourhood: "Mong Kok", rating: 4, sortOrder: 1 },
+  { id: "fish-balls", tripId: demoTrip.id, title: "Curry fish balls", kind: "FOOD", priority: "WANT", targetCount: 1, completedCount: 0, plannedDay: "2026-12-28", status: "PLANNED", neighbourhood: "Tai O", sortOrder: 2 },
+  { id: "egg-waffle", tripId: demoTrip.id, title: "Egg waffle", kind: "FOOD", priority: "MUST", targetCount: 1, completedCount: 0, plannedDay: "2026-12-28", status: "PLANNED", neighbourhood: "Tai O", sortOrder: 3 },
+  { id: "french-toast", tripId: demoTrip.id, title: "Hong Kong French toast", kind: "FOOD", priority: "WANT", targetCount: 1, completedCount: 0, plannedDay: "2026-12-29", status: "PLANNED", neighbourhood: "Central", sortOrder: 4 },
+  { id: "star-ferry", tripId: demoTrip.id, title: "Ride the Star Ferry", kind: "EXPERIENCE", priority: "MUST", targetCount: 1, completedCount: 0, plannedDay: "2026-12-29", status: "PLANNED", sortOrder: 5 },
+  { id: "tai-o-boat", tripId: demoTrip.id, title: "Tai O boat ride", kind: "EXPERIENCE", priority: "WANT", targetCount: 1, completedCount: 0, plannedDay: "2026-12-28", status: "PLANNED", neighbourhood: "Tai O", sortOrder: 6 },
+  { id: "victoria-peak", tripId: demoTrip.id, title: "Victoria Peak", kind: "PLACE", priority: "MUST", targetCount: 1, completedCount: 1, status: "COMPLETED", neighbourhood: "The Peak", sortOrder: 7 },
+  { id: "ruins-place", tripId: demoTrip.id, title: "Ruins of St. Paul's", kind: "PLACE", priority: "MUST", targetCount: 1, completedCount: 0, plannedDay: "2026-12-31", status: "PLANNED", neighbourhood: "Historic Centre", sortOrder: 8 },
+  { id: "jade-market", tripId: demoTrip.id, title: "Jade Market", kind: "SHOPPING", priority: "OPTIONAL", targetCount: 1, completedCount: 0, status: "PLANNED", neighbourhood: "Yau Ma Tei", sortOrder: 9 },
 ];
 
 export interface DemoBooking {

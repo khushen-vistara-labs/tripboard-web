@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { CheckCircle2, ChevronDown, Circle, Filter, Heart, MapPin, Pencil, Plus, Search, ShoppingBag, SkipForward, Sparkles, Star, Trash2, Utensils } from "lucide-react";
+import { ArrowDown, ArrowUp, CheckCircle2, ChevronDown, Circle, Filter, GripVertical, Heart, MapPin, Pencil, Plus, Search, ShoppingBag, SkipForward, Sparkles, Star, Trash2, Utensils } from "lucide-react";
 import type { TripBoardData } from "../trip/use-tripboard-data";
 import type { ChecklistItem, ChecklistKind, Priority } from "../../types/domain";
 import { checklistProgress } from "./progress";
 import { Modal } from "../../components/ui/Modal";
+import { reorderIds } from "../itinerary/rules";
 
 const kindOptions: { id: ChecklistKind | "ALL"; label: string; icon: typeof MapPin }[] = [
   { id: "ALL", label: "All", icon: Sparkles }, { id: "PLACE", label: "Places", icon: MapPin }, { id: "FOOD", label: "Food", icon: Utensils }, { id: "EXPERIENCE", label: "Experiences", icon: Star }, { id: "SHOPPING", label: "Shopping", icon: ShoppingBag },
@@ -18,11 +19,24 @@ export function ChecklistScreen({ data }: { data: TripBoardData }) {
   const [search, setSearch] = useState("");
   const [showAdd, setShowAdd] = useState(false);
   const [editing, setEditing] = useState<ChecklistItem | null>(null);
+  const [draggingId, setDraggingId] = useState<string | null>(null);
   useEffect(() => { const queryKind = new URLSearchParams(window.location.search).get("kind"); if (queryKind && ["PLACE", "FOOD", "EXPERIENCE", "SHOPPING", "OTHER"].includes(queryKind)) queueMicrotask(() => setKind(queryKind as ChecklistKind)); }, []);
   const must = checklistProgress(data.checklist, "MUST");
   const optional = checklistProgress(data.checklist, "OPTIONAL");
   const categoryStats = kindOptions.slice(1).map((option) => ({ ...option, progress: checklistProgress(data.checklist.filter((item) => item.kind === option.id)) }));
-  const filtered = useMemo(() => data.checklist.filter((item) => (kind === "ALL" || item.kind === kind) && (status === "ALL" || item.status === status) && (priority === "ALL" || item.priority === priority) && item.title.toLowerCase().includes(search.toLowerCase())), [data.checklist, kind, status, priority, search]);
+  const orderedChecklist = useMemo(() => [...data.checklist].sort((a, b) => a.sortOrder - b.sortOrder || a.title.localeCompare(b.title)), [data.checklist]);
+  const filtered = useMemo(() => orderedChecklist.filter((item) => (kind === "ALL" || item.kind === kind) && (status === "ALL" || item.status === status) && (priority === "ALL" || item.priority === priority) && item.title.toLowerCase().includes(search.toLowerCase())), [orderedChecklist, kind, status, priority, search]);
+  const proposeOrder = (sourceId: string, targetId: string) => {
+    const reordered = reorderIds(orderedChecklist.map((item) => item.id), sourceId, targetId);
+    if (reordered) void data.reorderChecklist(reordered);
+  };
+  const nudge = (id: string, delta: -1 | 1) => {
+    const ids = orderedChecklist.map((item) => item.id);
+    const index = ids.indexOf(id); const target = index + delta;
+    if (index < 0 || target < 0 || target >= ids.length) return;
+    [ids[index], ids[target]] = [ids[target], ids[index]];
+    void data.reorderChecklist(ids);
+  };
 
   return <>
     <header className="screen-header"><div><p className="eyebrow">DON’T MISS A THING</p><h1>Checklist</h1><p>Places, foods, and experiences in one shared completion state.</p></div><button className="button primary" onClick={() => setShowAdd(true)}><Plus size={17}/> Add item</button></header>
@@ -38,7 +52,15 @@ export function ChecklistScreen({ data }: { data: TripBoardData }) {
     <section className="panel checklist-panel">
       <div className="checklist-toolbar"><div className="kind-tabs">{kindOptions.map((option) => <button className={kind === option.id ? "active" : ""} onClick={() => setKind(option.id)} key={option.id}>{option.label}</button>)}</div><div className="checklist-filters"><label className="search-field compact"><Search size={15}/><span className="sr-only">Search checklist</span><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Search"/></label><label className="select-field small"><Filter size={14}/><select aria-label="Filter checklist status" value={status} onChange={(event) => setStatus(event.target.value)}><option value="ALL">Any status</option><option value="PLANNED">Not done</option><option value="COMPLETED">Completed</option><option value="SKIPPED">Skipped</option></select></label><label className="select-field small"><select aria-label="Filter priority" value={priority} onChange={(event) => setPriority(event.target.value as Priority | "ALL")}><option value="ALL">Any priority</option><option value="MUST">Must</option><option value="WANT">Want</option><option value="OPTIONAL">Optional</option></select><ChevronDown size={14}/></label></div></div>
       {kind === "FOOD" && data.checklist.some((item) => item.kind === "FOOD" && item.priority === "MUST" && item.status !== "COMPLETED") && <div className="food-alert"><Utensils size={17}/><div><strong>Important foods still not tried</strong><p>Must-try food remains on the list. Completion is always explicit.</p></div></div>}
-      <div className="checklist-list">{filtered.map((item) => <ChecklistRow item={item} key={item.id} onToggle={() => void data.toggleChecklist(item.id)} onEdit={() => setEditing(item)} onSkip={() => void data.editChecklistItem(item.id, { status: "SKIPPED" })} onDelete={() => { if (window.confirm(`Delete “${item.title}”?`)) void data.deleteChecklistItem(item.id); }}/>)}</div>
+      <div className="checklist-list">{filtered.map((item) => {
+        const fullIndex = orderedChecklist.findIndex((entry) => entry.id === item.id);
+        return <ChecklistRow key={item.id} item={item} dragging={draggingId === item.id} canMoveUp={fullIndex > 0} canMoveDown={fullIndex >= 0 && fullIndex < orderedChecklist.length - 1}
+          onDragStart={(event) => { setDraggingId(item.id); event.dataTransfer.effectAllowed = "move"; event.dataTransfer.setData("text/plain", item.id); }}
+          onDragEnd={() => setDraggingId(null)}
+          onDrop={(event) => { event.preventDefault(); const sourceId = event.dataTransfer.getData("text/plain") || draggingId; if (sourceId) proposeOrder(sourceId, item.id); setDraggingId(null); }}
+          onMoveUp={() => nudge(item.id, -1)} onMoveDown={() => nudge(item.id, 1)}
+          onToggle={() => void data.toggleChecklist(item.id)} onEdit={() => setEditing(item)} onSkip={() => void data.editChecklistItem(item.id, { status: "SKIPPED" })} onDelete={() => { if (window.confirm(`Delete “${item.title}”?`)) void data.deleteChecklistItem(item.id); }}/>
+      })}</div>
       {filtered.length === 0 && <div className="empty-state"><CheckCircle2 size={28}/><h3>{kind === "FOOD" ? "Everything in this food view is done 🎉" : "Nothing matches this view"}</h3><p>Try another category or clear the filters.</p></div>}
     </section>
 
@@ -47,10 +69,16 @@ export function ChecklistScreen({ data }: { data: TripBoardData }) {
   </>;
 }
 
-function ChecklistRow({ item, onToggle, onEdit, onSkip, onDelete }: { item: ChecklistItem; onToggle: () => void; onEdit: () => void; onSkip: () => void; onDelete: () => void }) {
+function ChecklistRow({ item, dragging, canMoveUp, canMoveDown, onDragStart, onDragEnd, onDrop, onMoveUp, onMoveDown, onToggle, onEdit, onSkip, onDelete }: { item: ChecklistItem; dragging: boolean; canMoveUp: boolean; canMoveDown: boolean; onDragStart: (event: React.DragEvent<HTMLElement>) => void; onDragEnd: () => void; onDrop: (event: React.DragEvent<HTMLElement>) => void; onMoveUp: () => void; onMoveDown: () => void; onToggle: () => void; onEdit: () => void; onSkip: () => void; onDelete: () => void }) {
   const complete = item.status === "COMPLETED";
   const Icon = item.kind === "FOOD" ? Utensils : item.kind === "PLACE" ? MapPin : item.kind === "SHOPPING" ? ShoppingBag : Star;
-  return <article className={`checklist-row ${complete ? "complete" : ""}`}><button className="check-button" onClick={onToggle} aria-label={`${complete ? "Mark incomplete" : "Mark complete"}: ${item.title}`}>{complete ? <CheckCircle2 size={23}/> : <Circle size={23}/>}</button><span className={`kind-icon kind-${item.kind.toLowerCase()}`}><Icon size={17}/></span><div className="checklist-content"><div><h3>{item.title}</h3>{item.favourite && <Heart className="favourite" size={14} fill="currentColor"/>}<span className={`priority-badge ${item.priority.toLowerCase()}`}>{item.priority}</span></div><p>{item.notes ?? item.neighbourhood ?? item.description ?? item.kind.toLowerCase()}{item.plannedDay ? ` · Planned ${new Date(`${item.plannedDay}T00:00:00`).toLocaleDateString("en", { day: "numeric", month: "short" })}` : ""}{item.targetCount > 1 ? ` · ${item.completedCount}/${item.targetCount}` : ""}</p></div><div className="checklist-row-actions"><button onClick={onEdit} aria-label={`Edit ${item.title}`}><Pencil size={15}/></button>{!complete && item.status !== "SKIPPED" && <button onClick={onSkip} aria-label={`Skip ${item.title}`}><SkipForward size={15}/></button>}<button onClick={onDelete} aria-label={`Delete ${item.title}`}><Trash2 size={15}/></button></div></article>;
+  return <article className={`checklist-row ${complete ? "complete" : ""}${dragging ? " dragging" : ""}`} draggable onDragStart={onDragStart} onDragEnd={onDragEnd} onDragOver={(event) => { event.preventDefault(); event.dataTransfer.dropEffect = "move"; }} onDrop={onDrop}>
+    <button type="button" className="checklist-drag-handle" aria-label={`Reorder ${item.title}`} title="Drag to reorder"><GripVertical size={17}/></button>
+    <button className="check-button" onClick={onToggle} aria-label={`${complete ? "Mark incomplete" : "Mark complete"}: ${item.title}`}>{complete ? <CheckCircle2 size={23}/> : <Circle size={23}/>}</button>
+    <span className={`kind-icon kind-${item.kind.toLowerCase()}`}><Icon size={17}/></span>
+    <div className="checklist-content"><div><h3>{item.title}</h3>{item.favourite && <Heart className="favourite" size={14} fill="currentColor"/>}<span className={`priority-badge ${item.priority.toLowerCase()}`}>{item.priority}</span></div><p>{item.notes ?? item.neighbourhood ?? item.description ?? item.kind.toLowerCase()}{item.plannedDay ? ` · Planned ${new Date(`${item.plannedDay}T00:00:00`).toLocaleDateString("en", { day: "numeric", month: "short" })}` : ""}{item.targetCount > 1 ? ` · ${item.completedCount}/${item.targetCount}` : ""}</p></div>
+    <div className="checklist-row-actions"><button type="button" onClick={onMoveUp} disabled={!canMoveUp} aria-label={`Move ${item.title} earlier`}><ArrowUp size={15}/></button><button type="button" onClick={onMoveDown} disabled={!canMoveDown} aria-label={`Move ${item.title} later`}><ArrowDown size={15}/></button><button onClick={onEdit} aria-label={`Edit ${item.title}`}><Pencil size={15}/></button>{!complete && item.status !== "SKIPPED" && <button onClick={onSkip} aria-label={`Skip ${item.title}`}><SkipForward size={15}/></button>}<button onClick={onDelete} aria-label={`Delete ${item.title}`}><Trash2 size={15}/></button></div>
+  </article>;
 }
 
 function ChecklistItemModal({ data, initial, onClose, onSave }: { data: TripBoardData; initial?: ChecklistItem; onClose: () => void; onSave: (item: Parameters<TripBoardData["addChecklistItem"]>[0] & Partial<ChecklistItem>) => Promise<void> }) {

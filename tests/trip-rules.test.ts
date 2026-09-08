@@ -24,9 +24,9 @@ describe("trip rules", () => {
 
   it("keeps must completion separate from optional items", () => {
     const items: ChecklistItem[] = [
-      { id: "1", tripId: "t", title: "A", kind: "PLACE", priority: "MUST", targetCount: 1, completedCount: 1, status: "COMPLETED" },
-      { id: "2", tripId: "t", title: "B", kind: "FOOD", priority: "MUST", targetCount: 1, completedCount: 0, status: "PLANNED" },
-      { id: "3", tripId: "t", title: "C", kind: "OTHER", priority: "OPTIONAL", targetCount: 1, completedCount: 1, status: "COMPLETED" },
+      { id: "1", tripId: "t", title: "A", kind: "PLACE", priority: "MUST", targetCount: 1, completedCount: 1, status: "COMPLETED", sortOrder: 0 },
+      { id: "2", tripId: "t", title: "B", kind: "FOOD", priority: "MUST", targetCount: 1, completedCount: 0, status: "PLANNED", sortOrder: 1 },
+      { id: "3", tripId: "t", title: "C", kind: "OTHER", priority: "OPTIONAL", targetCount: 1, completedCount: 1, status: "COMPLETED", sortOrder: 2 },
     ];
     expect(checklistProgress(items, "MUST")).toMatchObject({ completed: 1, total: 2, percent: 50 });
     expect(checklistProgress(items, "OPTIONAL")).toMatchObject({ completed: 1, total: 1, percent: 100 });

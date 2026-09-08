@@ -36,6 +36,7 @@ export interface TripBoardData {
   editItineraryItem: (id: string, item: EditableItineraryItem) => Promise<void>;
   deleteItineraryItem: (id: string) => Promise<void>;
   toggleChecklist: (id: string) => Promise<void>;
+  reorderChecklist: (itemIds: string[]) => Promise<void>;
   addChecklistItem: (item: Pick<ChecklistItem, "title" | "kind" | "priority"> & Partial<Pick<ChecklistItem, "plannedDay" | "description" | "notes" | "targetCount" | "rating" | "favourite" | "linkedPlaceId">>) => Promise<void>;
   editChecklistItem: (id: string, patch: Partial<ChecklistItem>) => Promise<void>;
   deleteChecklistItem: (id: string) => Promise<void>;
@@ -137,7 +138,7 @@ const mapChecklist = (row: Record<string, unknown>): ChecklistItem => ({
   id: String(row.id), tripId: String(row.trip_id), title: String(row.title), description: row.description ? String(row.description) : undefined,
   kind: row.kind as ChecklistItem["kind"], priority: row.priority as ChecklistItem["priority"], targetCount: Number(row.target_count), completedCount: Number(row.completed_count),
   plannedDay: row.planned_day ? String(row.planned_day) : undefined, status: row.status as ChecklistItem["status"], neighbourhood: row.neighbourhood ? String(row.neighbourhood) : undefined,
-  dietaryWarning: row.dietary_warning ? String(row.dietary_warning) : undefined, notes: row.notes ? String(row.notes) : undefined, rating: row.rating ? Number(row.rating) : undefined, favourite: Boolean(row.favourite), linkedPlaceId: row.linked_place_id ? String(row.linked_place_id) : undefined, version: row.version ? Number(row.version) : 1,
+  dietaryWarning: row.dietary_warning ? String(row.dietary_warning) : undefined, notes: row.notes ? String(row.notes) : undefined, rating: row.rating ? Number(row.rating) : undefined, favourite: Boolean(row.favourite), linkedPlaceId: row.linked_place_id ? String(row.linked_place_id) : undefined, sortOrder: Number(row.sort_order ?? 0), version: row.version ? Number(row.version) : 1,
 });
 
 export function useTripBoardData(): TripBoardData {
@@ -199,7 +200,7 @@ export function useTripBoardData(): TripBoardData {
     const nextTrip: Trip = { id: tripRow.id, name: tripRow.name, startDate: tripRow.start_date, endDate: tripRow.end_date, timezone: tripRow.timezone, baseCurrency: tripRow.base_currency, version: tripRow.version ?? 1 };
     const [itemsResult, checklistResult, bookingResult, placeResult, daysResult, accountResult, budgetResult, financialResult, notesResult, unreadResult] = await Promise.all([
       supabase.from("itinerary_items").select("*").eq("trip_id", tripRow.id).order("date").order("sequence"),
-      supabase.from("checklist_items").select("*").eq("trip_id", tripRow.id).order("priority"),
+      supabase.from("checklist_items").select("*").eq("trip_id", tripRow.id).order("sort_order").order("created_at"),
       supabase.from("bookings").select("*, booking_files(id, filename, mime_type, storage_path)").eq("trip_id", tripRow.id).order("starts_at"),
       supabase.from("places").select("*").eq("trip_id", tripRow.id).order("name"),
       supabase.from("itinerary_days").select("*").eq("trip_id", tripRow.id).order("date"),
@@ -282,6 +283,11 @@ export function useTripBoardData(): TripBoardData {
         const syncError = rpcResult?.error ?? regularResult?.error;
         if (syncError) throw syncError;
       } else if (mutation.entity === "checklist") {
+        if (mutation.command === "reorder") {
+          const { error: reorderError } = await supabase.rpc("reorder_checklist_items", { p_trip_id: mutation.tripId, p_item_ids: mutation.payload.itemIds });
+          if (reorderError) throw reorderError;
+          return;
+        }
         if (mutation.command === "update" && mutation.payload.expectedVersion !== undefined) { await updateVersionedRow(supabase, "checklist_items", mutation.payload); return; }
         const { error: syncError } = mutation.command === "create"
           ? await supabase.from("checklist_items").insert(mutation.payload)
@@ -472,6 +478,16 @@ export function useTripBoardData(): TripBoardData {
     if (updateError) { if (classifySyncFailure(updateError) === "RETRYABLE") await enqueueMutation({ tripId: trip.id, entity: "checklist", command: "update", payload }); else setChecklist((items) => items.map((entry) => entry.id === id ? item : entry)); setError("This checklist change could not be saved."); }
   };
 
+  const reorderChecklist: TripBoardData["reorderChecklist"] = async (itemIds) => {
+    const before = checklist;
+    const sequenceById = new Map(itemIds.map((id, index) => [id, index]));
+    setChecklist((items) => items.map((item) => sequenceById.has(item.id) ? { ...item, sortOrder: sequenceById.get(item.id)! } : item));
+    const client = getSupabaseBrowserClient(); if (!client) return; const payload = { itemIds };
+    if (!navigator.onLine) { await enqueueMutation({ tripId: trip.id, entity: "checklist", command: "reorder", payload }); return; }
+    const { error: reorderError } = await client.rpc("reorder_checklist_items", { p_trip_id: trip.id, p_item_ids: itemIds });
+    if (reorderError) { if (classifySyncFailure(reorderError) === "RETRYABLE") await enqueueMutation({ tripId: trip.id, entity: "checklist", command: "reorder", payload }); else setChecklist(before); setError("This checklist order could not be saved."); }
+  };
+
   const recordFinancialEvent = async (event: FinancialEvent) => {
     const supabase = getSupabaseBrowserClient();
     if (!supabase) { setFinancialEvents((events) => [...events, event]); return; }
@@ -554,9 +570,10 @@ export function useTripBoardData(): TripBoardData {
 
   const addChecklistItem: TripBoardData["addChecklistItem"] = async (item) => {
     const id = crypto.randomUUID();
-    const next: ChecklistItem = { id, tripId: trip.id, ...item, targetCount: item.targetCount ?? 1, completedCount: 0, status: "PLANNED" };
+    const sortOrder = Math.max(-1, ...checklist.map((entry) => entry.sortOrder)) + 1;
+    const next: ChecklistItem = { id, tripId: trip.id, ...item, targetCount: item.targetCount ?? 1, completedCount: 0, status: "PLANNED", sortOrder };
     setChecklist((items) => [...items, next]);
-    const payload = { id, trip_id: trip.id, title: item.title, kind: item.kind, priority: item.priority, planned_day: item.plannedDay ?? null, description: item.description ?? null, notes: item.notes ?? null, target_count: item.targetCount ?? 1, completed_count: 0, rating: item.rating ?? null, favourite: item.favourite ?? false, linked_place_id: item.linkedPlaceId ?? null, status: "PLANNED" };
+    const payload = { id, trip_id: trip.id, title: item.title, kind: item.kind, priority: item.priority, planned_day: item.plannedDay ?? null, description: item.description ?? null, notes: item.notes ?? null, target_count: item.targetCount ?? 1, completed_count: 0, rating: item.rating ?? null, favourite: item.favourite ?? false, linked_place_id: item.linkedPlaceId ?? null, status: "PLANNED", sort_order: sortOrder };
     const supabase = getSupabaseBrowserClient(); if (!supabase) return;
     if (!navigator.onLine) { await enqueueMutation({ tripId: trip.id, entity: "checklist", command: "create", payload }); return; }
     const { error: insertError } = await supabase.from("checklist_items").insert(payload);
@@ -566,7 +583,7 @@ export function useTripBoardData(): TripBoardData {
   const editChecklistItem: TripBoardData["editChecklistItem"] = async (id, patch) => {
     const before = checklist.find((item) => item.id === id); if (!before) return;
     const payload: Record<string, unknown> = { id, expectedVersion: before.version ?? 1 };
-    const fields: [keyof ChecklistItem, string][] = [["title","title"],["description","description"],["kind","kind"],["priority","priority"],["targetCount","target_count"],["completedCount","completed_count"],["plannedDay","planned_day"],["status","status"],["notes","notes"],["neighbourhood","neighbourhood"],["rating","rating"],["favourite","favourite"],["linkedPlaceId","linked_place_id"]];
+    const fields: [keyof ChecklistItem, string][] = [["title","title"],["description","description"],["kind","kind"],["priority","priority"],["targetCount","target_count"],["completedCount","completed_count"],["plannedDay","planned_day"],["status","status"],["notes","notes"],["neighbourhood","neighbourhood"],["rating","rating"],["favourite","favourite"],["linkedPlaceId","linked_place_id"],["sortOrder","sort_order"]];
     for (const [key, column] of fields) if (key in patch) payload[column] = patch[key] ?? null;
     setChecklist((items) => items.map((item) => item.id === id ? { ...item, ...patch } : item));
     const client = getSupabaseBrowserClient(); if (!client) return;
@@ -644,7 +661,7 @@ export function useTripBoardData(): TripBoardData {
     reopenItinerary: (id) => setStatus(id, "PLANNED"),
     skipItinerary: (id) => setStatus(id, "SKIPPED"),
     moveItinerary, reorderItinerary, addItineraryItem, editItineraryItem, deleteItineraryItem,
-    toggleChecklist, addChecklistItem, editChecklistItem, deleteChecklistItem, addPlace, editPlace, deletePlace, addBooking, editBooking, deleteBooking, saveDay, recordFinancialEvent,
+    toggleChecklist, reorderChecklist, addChecklistItem, editChecklistItem, deleteChecklistItem, addPlace, editPlace, deletePlace, addBooking, editBooking, deleteBooking, saveDay, recordFinancialEvent,
     addPaymentAccount, editPaymentAccount, archivePaymentAccount, addBudget, editBudget, deleteBudget, addNote, editNote, deleteNote, editFinancialTransaction, settleFinancialTransaction, voidFinancialTransaction, updateTripSettings, refresh,
   };
 }
