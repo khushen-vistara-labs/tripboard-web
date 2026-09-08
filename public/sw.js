@@ -1,5 +1,5 @@
-const CACHE = "tripboard-shell-v4";
-const APP_SHELL = ["/", "/today", "/plan", "/money", "/checklist", "/guide", "/more", "/bookings", "/login", "/manifest.webmanifest", "/icon-192.png?v=3", "/icon-512.png?v=3", "/apple-touch-icon.png?v=3"];
+const CACHE = "tripboard-shell-v5";
+const APP_SHELL = ["/", "/today", "/plan", "/money", "/checklist", "/immigration", "/guide", "/more", "/bookings", "/login", "/manifest.webmanifest", "/icon-192.png?v=3", "/icon-512.png?v=3", "/apple-touch-icon.png?v=3"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(APP_SHELL)).then(() => self.skipWaiting()));
