@@ -6454,3 +6454,121 @@ html[data-theme="dark"] .immigration-qa-list article {
     padding: 15px;
   }
 }
+
+/* Immigration guide follow-up: use a single, uninterrupted reading flow. */
+.immigration-header {
+  margin-bottom: 16px;
+}
+.immigration-grid {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 9px;
+}
+.immigration-card,
+.immigration-card.immigration-qa {
+  grid-column: auto;
+  padding: 18px 20px;
+  border-radius: 13px;
+}
+.immigration-card-actions {
+  gap: 4px;
+}
+.immigration-card-actions .icon-button {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+.immigration-card-actions .icon-button:focus-visible,
+.immigration-editor .button:focus-visible,
+.immigration-editor .text-button:focus-visible,
+.immigration-editor .form-row-remove:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+.immigration-card-actions .icon-button:focus-visible {
+  background: var(--paper);
+  color: var(--green);
+}
+.immigration-qa-list {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+}
+.immigration-qa-list article {
+  padding: 14px;
+}
+.immigration-editor-rows,
+.immigration-editor-pairs {
+  display: grid;
+  gap: 10px;
+}
+.immigration-editor-row,
+.immigration-editor-pair {
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+}
+.immigration-editor-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+}
+.immigration-editor-row input,
+.immigration-editor-pair > input,
+.immigration-editor-pair textarea {
+  margin: 0;
+}
+.immigration-editor-pair {
+  display: grid;
+  gap: 9px;
+}
+.immigration-editor-pair > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.immigration-editor-pair > div > span,
+.immigration-editor-pair label > span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 750;
+}
+.immigration-editor-pair label {
+  gap: 6px;
+}
+.form-row-remove {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--muted);
+}
+.form-row-remove:hover {
+  border-color: color-mix(in srgb, #c94f47 55%, var(--line));
+  color: #b74a43;
+}
+.immigration-editor-add {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: max-content;
+  min-height: 36px;
+  padding: 0 2px;
+}
+@media (max-width: 560px) {
+  .immigration-card,
+  .immigration-card.immigration-qa {
+    padding: 16px;
+  }
+}
