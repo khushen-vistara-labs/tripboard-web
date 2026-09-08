@@ -6613,7 +6613,7 @@ html[data-theme="dark"] .immigration-avoid .immigration-card-actions .icon-butto
 
 /* Checklist reordering mirrors the plan: drag on larger screens, arrows for every device. */
 .checklist-row {
-  grid-template-columns: 34px 46px 46px minmax(0, 1fr) 220px;
+  grid-template-columns: 34px 46px 46px minmax(0, 1fr) 248px;
 }
 .checklist-row.dragging {
   opacity: 0.48;
@@ -6640,6 +6640,34 @@ html[data-theme="dark"] .immigration-avoid .immigration-card-actions .icon-butto
 .checklist-row-actions {
   gap: 3px;
 }
+.checklist-row-actions button {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  height: 36px;
+  padding: 0;
+  line-height: 1;
+}
+.checklist-row-actions .checklist-skip-action,
+.checklist-row-actions .checklist-restore-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: auto;
+  min-width: 68px;
+  padding: 0 9px;
+  font-size: 12px;
+  font-weight: 750;
+}
+.checklist-drag-handle:focus-visible,
+.check-button:focus-visible,
+.checklist-row-actions button:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 2px var(--focus);
+}
 .checklist-row-actions button:disabled {
   opacity: 0.3;
   cursor: not-allowed;
@@ -6665,6 +6693,17 @@ html[data-theme="dark"] .immigration-avoid .immigration-card-actions .icon-butto
   }
   .checklist-row-actions {
     grid-column: 3 / -1;
+  }
+  .checklist-row-actions button {
+    width: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    height: 40px;
+  }
+  .checklist-row-actions .checklist-skip-action,
+  .checklist-row-actions .checklist-restore-action {
+    width: auto;
+    min-width: 72px;
   }
 }
 @media (max-width: 700px) {

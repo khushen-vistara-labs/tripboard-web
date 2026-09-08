@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { ArrowDown, ArrowUp, CheckCircle2, ChevronDown, Circle, Filter, GripVertical, Heart, MapPin, Pencil, Plus, Search, ShoppingBag, SkipForward, Sparkles, Star, Trash2, Utensils } from "lucide-react";
+import { ArrowDown, ArrowUp, CheckCircle2, ChevronDown, Circle, CircleOff, Filter, GripVertical, Heart, MapPin, Pencil, Plus, RotateCcw, Search, ShoppingBag, Sparkles, Star, Trash2, Utensils } from "lucide-react";
 import type { TripBoardData } from "../trip/use-tripboard-data";
 import type { ChecklistItem, ChecklistKind, Priority } from "../../types/domain";
 import { checklistProgress } from "./progress";
@@ -59,7 +59,7 @@ export function ChecklistScreen({ data }: { data: TripBoardData }) {
           onDragEnd={() => setDraggingId(null)}
           onDrop={(event) => { event.preventDefault(); const sourceId = event.dataTransfer.getData("text/plain") || draggingId; if (sourceId) proposeOrder(sourceId, item.id); setDraggingId(null); }}
           onMoveUp={() => nudge(item.id, -1)} onMoveDown={() => nudge(item.id, 1)}
-          onToggle={() => void data.toggleChecklist(item.id)} onEdit={() => setEditing(item)} onSkip={() => void data.editChecklistItem(item.id, { status: "SKIPPED" })} onDelete={() => { if (window.confirm(`Delete “${item.title}”?`)) void data.deleteChecklistItem(item.id); }}/>
+          onToggle={() => void data.toggleChecklist(item.id)} onEdit={() => setEditing(item)} onSkip={() => { if (window.confirm(`Skip “${item.title}”? You can restore it later.`)) void data.editChecklistItem(item.id, { status: "SKIPPED" }); }} onRestore={() => void data.editChecklistItem(item.id, { status: "PLANNED", completedCount: 0 })} onDelete={() => { if (window.confirm(`Delete “${item.title}”?`)) void data.deleteChecklistItem(item.id); }}/>
       })}</div>
       {filtered.length === 0 && <div className="empty-state"><CheckCircle2 size={28}/><h3>{kind === "FOOD" ? "Everything in this food view is done 🎉" : "Nothing matches this view"}</h3><p>Try another category or clear the filters.</p></div>}
     </section>
@@ -69,15 +69,16 @@ export function ChecklistScreen({ data }: { data: TripBoardData }) {
   </>;
 }
 
-function ChecklistRow({ item, dragging, canMoveUp, canMoveDown, onDragStart, onDragEnd, onDrop, onMoveUp, onMoveDown, onToggle, onEdit, onSkip, onDelete }: { item: ChecklistItem; dragging: boolean; canMoveUp: boolean; canMoveDown: boolean; onDragStart: (event: React.DragEvent<HTMLElement>) => void; onDragEnd: () => void; onDrop: (event: React.DragEvent<HTMLElement>) => void; onMoveUp: () => void; onMoveDown: () => void; onToggle: () => void; onEdit: () => void; onSkip: () => void; onDelete: () => void }) {
+function ChecklistRow({ item, dragging, canMoveUp, canMoveDown, onDragStart, onDragEnd, onDrop, onMoveUp, onMoveDown, onToggle, onEdit, onSkip, onRestore, onDelete }: { item: ChecklistItem; dragging: boolean; canMoveUp: boolean; canMoveDown: boolean; onDragStart: (event: React.DragEvent<HTMLElement>) => void; onDragEnd: () => void; onDrop: (event: React.DragEvent<HTMLElement>) => void; onMoveUp: () => void; onMoveDown: () => void; onToggle: () => void; onEdit: () => void; onSkip: () => void; onRestore: () => void; onDelete: () => void }) {
   const complete = item.status === "COMPLETED";
+  const skipped = item.status === "SKIPPED";
   const Icon = item.kind === "FOOD" ? Utensils : item.kind === "PLACE" ? MapPin : item.kind === "SHOPPING" ? ShoppingBag : Star;
   return <article className={`checklist-row ${complete ? "complete" : ""}${dragging ? " dragging" : ""}`} draggable onDragStart={onDragStart} onDragEnd={onDragEnd} onDragOver={(event) => { event.preventDefault(); event.dataTransfer.dropEffect = "move"; }} onDrop={onDrop}>
     <button type="button" className="checklist-drag-handle" aria-label={`Reorder ${item.title}`} title="Drag to reorder"><GripVertical size={17}/></button>
     <button className="check-button" onClick={onToggle} aria-label={`${complete ? "Mark incomplete" : "Mark complete"}: ${item.title}`}>{complete ? <CheckCircle2 size={23}/> : <Circle size={23}/>}</button>
     <span className={`kind-icon kind-${item.kind.toLowerCase()}`}><Icon size={17}/></span>
     <div className="checklist-content"><div><h3>{item.title}</h3>{item.favourite && <Heart className="favourite" size={14} fill="currentColor"/>}<span className={`priority-badge ${item.priority.toLowerCase()}`}>{item.priority}</span></div><p>{item.notes ?? item.neighbourhood ?? item.description ?? item.kind.toLowerCase()}{item.plannedDay ? ` · Planned ${new Date(`${item.plannedDay}T00:00:00`).toLocaleDateString("en", { day: "numeric", month: "short" })}` : ""}{item.targetCount > 1 ? ` · ${item.completedCount}/${item.targetCount}` : ""}</p></div>
-    <div className="checklist-row-actions"><button type="button" onClick={onMoveUp} disabled={!canMoveUp} aria-label={`Move ${item.title} earlier`}><ArrowUp size={15}/></button><button type="button" onClick={onMoveDown} disabled={!canMoveDown} aria-label={`Move ${item.title} later`}><ArrowDown size={15}/></button><button onClick={onEdit} aria-label={`Edit ${item.title}`}><Pencil size={15}/></button>{!complete && item.status !== "SKIPPED" && <button onClick={onSkip} aria-label={`Skip ${item.title}`}><SkipForward size={15}/></button>}<button onClick={onDelete} aria-label={`Delete ${item.title}`}><Trash2 size={15}/></button></div>
+    <div className="checklist-row-actions"><button type="button" onClick={onMoveUp} disabled={!canMoveUp} aria-label={`Move ${item.title} earlier`} title="Move earlier"><ArrowUp size={15}/></button><button type="button" onClick={onMoveDown} disabled={!canMoveDown} aria-label={`Move ${item.title} later`} title="Move later"><ArrowDown size={15}/></button><button onClick={onEdit} aria-label={`Edit ${item.title}`} title="Edit"><Pencil size={15}/></button>{skipped ? <button type="button" className="checklist-restore-action" onClick={onRestore} title="Restore to the checklist"><RotateCcw size={15}/><span>Restore</span></button> : !complete && <button type="button" className="checklist-skip-action" onClick={onSkip} title="Skip this item"><CircleOff size={15}/><span>Skip</span></button>}<button onClick={onDelete} aria-label={`Delete ${item.title}`} title="Delete"><Trash2 size={15}/></button></div>
   </article>;
 }
 
