@@ -6475,6 +6475,40 @@ html[data-theme="dark"] .immigration-qa-list article {
   padding: 18px 20px;
   border-radius: 13px;
 }
+.immigration-card.immigration-avoid {
+  border-color: #e6b4b7;
+  background: linear-gradient(135deg, #fff0f1 0%, #fff9f9 100%);
+  box-shadow: 0 4px 14px rgba(153, 53, 65, 0.05);
+}
+.immigration-avoid .immigration-card-icon {
+  background: #f9dfe1;
+  color: #ae434b;
+}
+.immigration-avoid .immigration-list li svg {
+  color: #b7474e;
+}
+.immigration-avoid .immigration-card-actions .icon-button:hover,
+.immigration-avoid .immigration-card-actions .icon-button:focus-visible {
+  background: #fde7e8;
+  color: #a83e46;
+}
+html[data-theme="dark"] .immigration-card.immigration-avoid {
+  border-color: #764652;
+  background: linear-gradient(135deg, #43232b 0%, #30212a 100%);
+  box-shadow: none;
+}
+html[data-theme="dark"] .immigration-avoid .immigration-card-icon {
+  background: #5a2c35;
+  color: #f1a2a8;
+}
+html[data-theme="dark"] .immigration-avoid .immigration-list li svg {
+  color: #ed8e96;
+}
+html[data-theme="dark"] .immigration-avoid .immigration-card-actions .icon-button:hover,
+html[data-theme="dark"] .immigration-avoid .immigration-card-actions .icon-button:focus-visible {
+  background: #4f2932;
+  color: #f2a4aa;
+}
 .immigration-card-actions {
   gap: 4px;
 }

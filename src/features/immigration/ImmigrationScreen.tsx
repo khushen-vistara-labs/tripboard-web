@@ -136,7 +136,8 @@ function ImmigrationCard({ note, onEdit, onDelete }: { note: TripNote; onEdit: (
   const lines = pointsFrom(note.body).filter((line) => line !== LEGACY_CONDITION);
   const qaPairs = qaPairsFrom(note.body);
   const isQa = qaPairs.length > 0;
-  return <article className={`immigration-card ${isQa ? "immigration-qa" : ""}`}>
+  const isAvoidSaying = note.title === "Avoid saying";
+  return <article className={`immigration-card ${isQa ? "immigration-qa" : ""} ${isAvoidSaying ? "immigration-avoid" : ""}`}>
     <header><span className="immigration-card-icon"><ImmigrationIcon icon={note.icon}/></span><h2>{note.title}</h2><div className="immigration-card-actions"><button className="icon-button quiet" aria-label={`Edit ${note.title}`} title="Edit section" onClick={onEdit}><Pencil size={16}/></button><button className="icon-button quiet danger" aria-label={`Delete ${note.title}`} title="Delete section" onClick={onDelete}><Trash2 size={16}/></button></div></header>
     {note.summary && <p className="immigration-summary">{note.summary}</p>}
     {isQa ? <div className="immigration-qa-list">{qaPairs.map(({ question, answer }) => <article key={`${question}-${answer}`}><strong>{question}</strong><p>“{answer}”</p></article>)}</div> : <ul className="immigration-list">{lines.map((line) => <li key={line}><Check size={14}/><span>{line}</span></li>)}</ul>}
