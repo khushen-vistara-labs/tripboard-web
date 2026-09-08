@@ -1,18 +1,19 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { BookOpenText, CalendarDays, CheckSquare2, CircleDollarSign, Cloud, CloudOff, Ellipsis, House, Plane, Sparkles } from "lucide-react";
+import { BookOpenText, CalendarDays, CheckSquare2, CircleDollarSign, Cloud, CloudOff, Ellipsis, House, Plane, ShieldCheck, Sparkles } from "lucide-react";
 import { DateTime } from "luxon";
 import type { Trip } from "../../types/domain";
 import { ThemeToggle } from "../ui/ThemeToggle";
 
-export type AppScreen = "today" | "plan" | "money" | "checklist" | "guide" | "more" | "bookings";
+export type AppScreen = "today" | "plan" | "money" | "checklist" | "guide" | "immigration" | "more" | "bookings";
 
 const nav = [
   { id: "today", label: "Today", href: "/today", icon: House },
   { id: "plan", label: "Plan", href: "/plan", icon: CalendarDays },
   { id: "money", label: "Money", href: "/money", icon: CircleDollarSign },
   { id: "checklist", label: "Checklist", href: "/checklist", icon: CheckSquare2 },
+  { id: "immigration", label: "Immigration", href: "/immigration", icon: ShieldCheck },
   { id: "guide", label: "Trip Guide", href: "/guide", icon: BookOpenText },
   { id: "more", label: "More", href: "/more", icon: Ellipsis },
 ] as const;

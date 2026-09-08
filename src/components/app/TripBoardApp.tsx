@@ -9,6 +9,7 @@ import { TodayScreen } from "../../features/today/TodayScreen";
 import { PlanScreen } from "../../features/itinerary/PlanScreen";
 import { MoneyScreen } from "../../features/money/MoneyScreen";
 import { ChecklistScreen } from "../../features/checklist/ChecklistScreen";
+import { ImmigrationScreen } from "../../features/immigration/ImmigrationScreen";
 import { MoreScreen } from "../../features/more/MoreScreen";
 import type { InstallPromptEvent } from "../../features/more/MoreScreen";
 import { discardMutation, retryMutation } from "../../lib/offline/queue";
@@ -66,6 +67,7 @@ function TripBoardInner({ screen }: { screen: AppScreen }) {
     {screen === "plan" && <PlanScreen data={data}/>} 
     {screen === "money" && <MoneyScreen data={data}/>} 
     {screen === "checklist" && <ChecklistScreen data={data}/>} 
+    {screen === "immigration" && <ImmigrationScreen data={data}/>}
     {(screen === "more" || screen === "bookings" || screen === "guide") && <MoreScreen data={data} initialSection={screen === "bookings" ? "bookings" : screen === "guide" ? "notes" : "overview"} installPrompt={installPrompt}/>}
   </AppShell>;
 }
