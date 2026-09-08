@@ -6455,16 +6455,22 @@ html[data-theme="dark"] .immigration-qa-list article {
   }
 }
 
-/* Immigration guide follow-up: use a single, uninterrupted reading flow. */
+/* Immigration guide follow-up: retain two columns while packing cards vertically. */
 .immigration-header {
   margin-bottom: 16px;
 }
 .immigration-grid {
-  grid-template-columns: minmax(0, 1fr);
-  gap: 9px;
+  display: block;
+  columns: 2;
+  column-gap: 14px;
 }
 .immigration-card,
 .immigration-card.immigration-qa {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 14px;
+  break-inside: avoid;
+  page-break-inside: avoid;
   grid-column: auto;
   padding: 18px 20px;
   border-radius: 13px;
@@ -6565,6 +6571,11 @@ html[data-theme="dark"] .immigration-qa-list article {
   width: max-content;
   min-height: 36px;
   padding: 0 2px;
+}
+@media (max-width: 700px) {
+  .immigration-grid {
+    columns: 1;
+  }
 }
 @media (max-width: 560px) {
   .immigration-card,
