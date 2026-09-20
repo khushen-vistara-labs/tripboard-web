@@ -3689,6 +3689,105 @@ html[data-theme="dark"] .shared-principle {
   justify-content: flex-end;
   margin: -12px 0 14px;
 }
+.records-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: -12px 0 14px;
+}
+.record-filters,
+.record-kind-picker {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+}
+.record-filters button,
+.record-kind-picker button {
+  min-height: 32px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 800;
+  padding: 0 10px;
+}
+.record-filters button.active,
+.record-kind-picker button.active {
+  background: var(--card);
+  color: var(--green);
+  box-shadow: 0 1px 3px rgb(12 28 45 / 12%);
+}
+.record-kind-picker {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 4px;
+}
+.record-kind-picker button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+.document-card .booking-icon {
+  background: #f2e8e2;
+  color: #9f5a48;
+}
+.record-private {
+  color: #9f5a48;
+  background: #f2e8e2;
+}
+.form-upload-field {
+  display: grid;
+  gap: 8px;
+  padding: 13px;
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+}
+.form-upload-field > span {
+  display: grid;
+  gap: 3px;
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--ink);
+}
+.form-upload-field small,
+.form-upload-field p {
+  font-size: 8px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.form-upload-field p {
+  margin: 0;
+}
+.file-picker {
+  position: relative;
+  display: inline-flex;
+  width: max-content;
+  align-items: center;
+  gap: 6px;
+  min-height: 34px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--green);
+  font-size: 9px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.file-picker input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
 .booking-open,
 .place-open {
   border: 0;

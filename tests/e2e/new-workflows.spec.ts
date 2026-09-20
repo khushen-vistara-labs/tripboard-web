@@ -19,7 +19,7 @@ test("travellers can add a fully linked itinerary activity", async ({ page }) =>
   await expect(page.getByRole("heading", { name: "Accessible harbour walk" })).toBeVisible();
 });
 
-test("place and booking forms save their complete detail fields", async ({ page }) => {
+test("place, booking, and document forms save their complete detail fields", async ({ page }) => {
   await openPreview(page, "/more?section=places");
   await page.getByRole("button", { name: "Add place" }).click();
   await page.getByLabel("Place name").fill("E2E promenade");
@@ -31,7 +31,7 @@ test("place and booking forms save their complete detail fields", async ({ page 
   await expect(page.getByRole("heading", { name: "E2E promenade" })).toBeVisible();
 
   await page.goto("/bookings");
-  await page.getByRole("button", { name: "Add booking" }).click();
+  await page.getByRole("button", { name: "Add record" }).click();
   await page.getByLabel("Booking title").fill("E2E ferry");
   await page.getByLabel("Provider").fill("Test operator");
   await page.getByLabel("Reference").fill("E2E-REF-1");
@@ -40,6 +40,14 @@ test("place and booking forms save their complete detail fields", async ({ page 
   await page.getByLabel("Notes").fill("Arrive 20 minutes early.");
   await page.getByRole("button", { name: "Add booking", exact: true }).last().click();
   await expect(page.getByRole("heading", { name: "E2E ferry" })).toBeVisible();
+
+  await page.getByRole("button", { name: "Add record" }).click();
+  await page.getByRole("button", { name: "Document / file" }).click();
+  await page.getByLabel("Document name").fill("E2E passport");
+  await page.getByLabel("Category").selectOption("PASSPORT");
+  await page.getByLabel("For / owner").fill("Owner");
+  await page.getByRole("button", { name: "Save document", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "E2E passport" })).toBeVisible();
 });
 
 test("checklist metadata and budgets are editable through real forms", async ({ page }) => {
