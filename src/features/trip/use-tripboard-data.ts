@@ -1,13 +1,14 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import type { Booking, Budget, ChecklistItem, ItineraryDay, ItineraryDetails, ItineraryItem, ItineraryStatus, Place, Trip, TripNote } from "../../types/domain";
+import type { Booking, Budget, ChecklistItem, ItineraryDay, ItineraryItem, ItineraryStatus, Place, Trip, TripNote } from "../../types/domain";
 import type { FinancialEvent, PaymentAccount } from "../money/domain";
 import { enqueueMutation, replayQueue } from "../../lib/offline/queue";
 import { offlineDb, type CachedTripRecord } from "../../lib/offline/db";
 import { getSupabaseBrowserClient } from "../../lib/supabase/client";
 import { classifySyncFailure } from "../../lib/offline/conflicts";
 import { demoAccounts, demoBookings, demoBudgets, demoChecklist, demoFinancialEvents, demoItinerary, demoPlaces, demoTrip } from "./demo-data";
+import { normalizeItineraryDetails } from "../itinerary/transport-details";
 
 export interface TripBoardData {
   trip: Trip;
@@ -133,7 +134,7 @@ const mapItinerary = (row: Record<string, unknown>): ItineraryItem => ({
   recommendedDepartureTime: row.recommended_departure_time ? String(row.recommended_departure_time).slice(0, 5) : undefined, priority: row.priority as ItineraryItem["priority"],
   status: row.status as ItineraryStatus, sequence: Number(row.sequence), completedAt: row.completed_at ? String(row.completed_at) : undefined,
   bookingId: row.booking_id ? String(row.booking_id) : undefined, placeId: row.place_id ? String(row.place_id) : undefined, checklistItemId: row.checklist_item_id ? String(row.checklist_item_id) : undefined, mapsUrl: row.maps_url ? String(row.maps_url) : undefined, transportInstructions: row.transport_instructions ? String(row.transport_instructions) : undefined, changeReason: row.change_reason ? String(row.change_reason) : undefined,
-  details: row.details && typeof row.details === "object" ? row.details as ItineraryDetails : undefined, version: row.version ? Number(row.version) : 1,
+  details: normalizeItineraryDetails(row.details), version: row.version ? Number(row.version) : 1,
 });
 
 const mapChecklist = (row: Record<string, unknown>): ChecklistItem => ({

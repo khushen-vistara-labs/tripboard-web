@@ -8,7 +8,7 @@ const TimingType = z.enum(["FIXED", "TARGET", "FLEXIBLE", "OPTIONAL", "WEATHER_D
 const CostScope = z.enum(["PERSON", "PARTY"]);
 const CostStatus = z.enum(["COMMITTED", "EXPECTED", "OPTIONAL"]);
 const ItineraryDetails = z.object({
-  transportOptions: z.array(z.object({ name: z.string(), approxDurationMinutes: z.number().int().positive().optional(), approxCost: z.string().optional(), route: z.string(), notes: z.string().optional() })).optional(),
+  transportOptions: z.array(z.object({ name: z.string().min(1), approxDurationMinutes: z.number().int().positive(), approxCost: z.string().min(1), route: z.string().min(1), notes: z.string().optional() })).optional(),
   recommended: z.string().optional(),
   farePerPerson: z.string().optional(), fareForTwo: z.string().optional(), attractionCost: z.string().optional(),
   booking: z.enum(["required", "prebooked", "optional", "not-required"]).optional(),
@@ -166,6 +166,9 @@ function validateItinerary() {
   for (const item of seed.itinerary) {
     if (!dates.has(item.date)) errors.push(`${item.title}: date ${item.date} has no itinerary day`);
     if (item.placeKey && !placeKeys.has(item.placeKey)) errors.push(`${item.title}: unknown place ${item.placeKey}`);
+    const transportOptions = item.details?.transportOptions ?? [];
+    if (transportOptions.length && !item.details?.recommended) errors.push(`${item.title}: transport options need a recommended option`);
+    if (item.details?.recommended && !transportOptions.some((option) => option.name === item.details?.recommended)) errors.push(`${item.title}: recommended transport option does not match an option name`);
     if (item.estimatedCost !== undefined && (!item.estimatedCostCurrency || !item.estimatedCostScope || !item.estimatedCostStatus)) errors.push(`${item.title}: incomplete cost metadata`);
     const booking = item.bookingKey ? bookingsByKey.get(item.bookingKey) : undefined;
     if (item.bookingKey && !booking) errors.push(`${item.title}: unknown booking ${item.bookingKey}`);
@@ -244,7 +247,7 @@ const { data: existingTrip, error: existingTripError } = await admin
   .maybeSingle();
 if (existingTripError) throw existingTripError;
 
-if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.includes("--sync-trip-content"))) {
+if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.includes("--sync-trip-content") || process.argv.includes("--sync-transport-details"))) {
   // This is deliberately opt-in: it makes the itinerary on the existing seed
   // trip match the JSON file while preserving financial records and traveller
   // progress. New seed days and bookings are added before item linking.
@@ -294,6 +297,24 @@ if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.i
     if (!dayIds.has(item.date)) throw new Error(`No itinerary day exists for ${item.date}`);
     if (item.placeKey && !placeIds.get(item.placeKey)) throw new Error(`No seeded place exists for ${item.placeKey}`);
     if (item.bookingKey && !bookingIds.get(item.bookingKey)) throw new Error(`No seeded booking exists for ${item.bookingKey}`);
+  }
+
+  if (process.argv.includes("--sync-transport-details")) {
+    // Keep the existing itinerary schedule and traveller-created records intact.
+    // This updates only structured transport data from the current seed JSON.
+    const { data: existingItems, error: existingItemsError } = await admin.from("itinerary_items").select("id,date,title").eq("trip_id", existingTrip.id);
+    if (existingItemsError) throw existingItemsError;
+    const existingByDateAndTitle = new Map((existingItems ?? []).map((item) => [`${item.date}|${item.title}`, item.id]));
+    const existingByTitle = new Map((existingItems ?? []).map((item) => [item.title, item.id]));
+    const transportItems = seed.itinerary.filter((item) => item.details?.transportOptions?.length);
+    for (const item of transportItems) {
+      const id = [item.title, ...(item.syncTitles ?? [])].map((title) => existingByDateAndTitle.get(`${item.date}|${title}`) ?? existingByTitle.get(title)).find(Boolean);
+      if (!id) throw new Error(`No existing itinerary entry found for transport details: ${item.title}`);
+      const { error: updateError } = await admin.from("itinerary_items").update({ details: itemDetails(item), updated_by: owner.id }).eq("id", id);
+      if (updateError) throw updateError;
+    }
+    console.log(`Safely synced transport details for ${transportItems.length} itinerary entries to ${existingTrip.name} (${existingTrip.id}).`);
+    process.exit(0);
   }
 
   // Content sync is deliberately non-destructive. It updates the itinerary

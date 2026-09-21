@@ -1391,6 +1391,9 @@
       "durationMinutes": 45,
       "priority": "MUST",
       "sequence": 25,
+      "syncTitles": [
+        "Travel Man Mo Temple → Sham Shui Po"
+      ],
       "timingType": "TARGET",
       "transportInstructions": "Walk to Sheung Wan MTR, then MTR via Central/Prince Edward to Wong Tai Sin. Taxi is the faster fallback if running late.",
       "details": {

@@ -13,18 +13,6 @@ function shortDayTheme(title: string) {
   return themes.slice(0, 3).join(" · ") || "Trip day";
 }
 
-function shortStopName(title: string) {
-  const names: Record<string, string> = {
-    "Luk On Kui old-school dim sum": "Luk On Kui dim sum",
-    "Sham Shui Po exploration": "Sham Shui Po",
-    "Mong Kok markets and streets": "Mong Kok",
-    "Temple Street Night Market": "Temple Street",
-    "Hing Kee Claypot Rice": "Hing Kee",
-    "Kai Kai Dessert": "Kai Kai",
-  };
-  return names[title] ?? title;
-}
-
 function majorStops(items: ItineraryItem[]) {
   const planned = items.filter((item) => item.status !== "SKIPPED").sort((a, b) => a.sequence - b.sequence);
   const activities = planned.filter((item) => item.type !== "transport");
@@ -63,7 +51,7 @@ export function TripOverviewScreen({ data }: { data: TripBoardData }) {
           {stops.length ? <ol className="glance-route">
             {stops.map((stop, stopIndex) => <li key={stop.id}>
               <span className="glance-stop-number">{stopIndex + 1}</span>
-              <span className="glance-stop-name">{shortStopName(stop.title)}</span>
+              <span className="glance-stop-name">{stop.title}</span>
               {stop.priority === "MUST" && <span className="glance-must">MUST</span>}
             </li>)}
           </ol> : <p className="glance-empty">No planned places or activities yet.</p>}

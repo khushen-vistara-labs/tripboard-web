@@ -88,7 +88,7 @@ function PlanRow({ item, detailsOpen, onDetailsToggle, dragging, canMoveUp, canM
 function TransportOptions({ options, recommended }: { options: NonNullable<ItineraryItem["details"]>["transportOptions"]; recommended?: string }) {
   if (!options?.length) return null;
   return <section className="transport-options" aria-label="Transport options"><span className="transport-options-label">Transport options</span><div className="transport-options-list">{options.map((option) => {
-    const isRecommended = option.name === recommended;
+    const isRecommended = Boolean(recommended) && option.name === recommended;
     return <article className={isRecommended ? "recommended" : ""} key={option.name}><div><strong>{option.name}</strong>{option.approxDurationMinutes && <span>{formatDuration(option.approxDurationMinutes)}</span>}{option.approxCost && <span>{option.approxCost}</span>}{isRecommended && <b>Recommended</b>}</div>{option.route && <p>{option.route}{option.notes ? ` · ${option.notes}` : ""}</p>}</article>;
   })}</div></section>;
 }
@@ -98,7 +98,7 @@ function TripDetails({ details, open, onToggle, hideTransportOptions = false }: 
   if (!hasDetails) return null;
   return <details className="trip-details" open={open} onToggle={(event) => onToggle(event.currentTarget.open)}><summary>Trip details</summary><div className="trip-details-grid">
     {details.quickNote && <Detail label="Remember" value={details.quickNote}/>} {details.booking && <Detail label="Booking" value={details.booking.replace("-", " ")}/>} {details.farePerPerson && <Detail label="Fare / person" value={details.farePerPerson}/>} {details.fareForTwo && <Detail label="Fare / two" value={details.fareForTwo}/>} {details.attractionCost && <Detail label="Attraction" value={details.attractionCost}/>} {details.payWith && <Detail label="Pay with" value={details.payWith}/>} {details.weather && <Detail label="Weather check" value={details.weather}/>} {details.fallback && <Detail label="Fallback" value={details.fallback}/>} {details.hotelReturn && <Detail label="Hotel return" value={details.hotelReturn}/>} {details.dietaryNote && <Detail label="Food safety" value={details.dietaryNote}/>} {details.foodNearby?.length && <Detail label="Nearby food" value={details.foodNearby.join(" · ")}/>} {details.carry?.length && <Detail label="Carry" value={details.carry.join(" · ")}/>}
-    {!hideTransportOptions && details.transportOptions?.length ? <div className="detail-wide"><span>Transport choices</span>{details.transportOptions.map((option) => <p key={option.name}><b>{details.recommended === option.name ? "recommended" : option.name}</b>{details.recommended === option.name ? ` · ${option.name}` : ""}{option.approxDurationMinutes ? ` · ${formatDuration(option.approxDurationMinutes)}` : ""}{option.approxCost ? ` · ${option.approxCost}` : ""}<br/>{option.route}{option.notes ? ` · ${option.notes}` : ""}</p>)}</div> : null}
+    {!hideTransportOptions && details.transportOptions?.length ? <div className="detail-wide"><span>Transport choices</span>{details.transportOptions.map((option) => { const isRecommended = Boolean(details.recommended) && details.recommended === option.name; return <p key={option.name}><b>{isRecommended ? "recommended" : option.name}</b>{isRecommended ? ` · ${option.name}` : ""}{option.approxDurationMinutes ? ` · ${formatDuration(option.approxDurationMinutes)}` : ""}{option.approxCost ? ` · ${option.approxCost}` : ""}<br/>{option.route}{option.notes ? ` · ${option.notes}` : ""}</p>; })}</div> : null}
   </div></details>;
 }
 
