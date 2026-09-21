@@ -134,6 +134,11 @@ const seedPath = fileURLToPath(
   new URL("../seed/hong-kong-2026.json", import.meta.url),
 );
 const seed = SeedSchema.parse(JSON.parse(await readFile(seedPath, "utf8")));
+const syncDateArg = process.argv.find((arg) => arg.startsWith("--sync-date="));
+const syncDate = syncDateArg?.slice("--sync-date=".length);
+if (syncDate && !seed.days.some((day) => day.date === syncDate)) {
+  throw new Error(`No seed day exists for ${syncDate}`);
+}
 for (const item of seed.itinerary) {
   if (item.estimatedCost !== undefined) {
     item.estimatedCostScope = "PARTY";
@@ -295,6 +300,8 @@ if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.i
   // entries that can be identified by their existing date and title, adds new
   // seed entries, and never removes a traveller's own activities or progress.
   if (process.argv.includes("--sync-trip-content")) {
+    const itineraryToSync = syncDate ? seed.itinerary.filter((item) => item.date === syncDate) : seed.itinerary;
+    const daysToSync = syncDate ? seed.days.filter((day) => day.date === syncDate) : seed.days;
     const { data: existingItems, error: existingItemsError } = await admin.from("itinerary_items").select("id,date,title").eq("trip_id", existingTrip.id);
     if (existingItemsError) throw existingItemsError;
     const existingByDateAndTitle = new Map((existingItems ?? []).map((item) => [`${item.date}|${item.title}`, item.id]));
@@ -307,14 +314,18 @@ if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.i
       transport_instructions: item.transportInstructions, estimated_cost: item.estimatedCost, estimated_cost_currency: item.estimatedCostCurrency,
       details: itemDetails(item), updated_by: owner.id,
     });
-    for (const item of seed.itinerary) {
+    for (const item of itineraryToSync) {
       const id = [item.title, ...(item.syncTitles ?? [])].map((title) => existingByDateAndTitle.get(`${item.date}|${title}`) ?? existingByTitle.get(title)).find(Boolean);
       const result = id ? await admin.from("itinerary_items").update(itemPayload(item)).eq("id", id) : await admin.from("itinerary_items").insert({ ...itemPayload(item), created_by: owner.id });
       if (result.error) throw result.error;
     }
-    for (const day of seed.days) {
+    for (const day of daysToSync) {
       const id = dayIds.get(day.date);
       if (id) { const { error: dayError } = await admin.from("itinerary_days").update({ title: day.title }).eq("id", id); if (dayError) throw dayError; }
+    }
+    if (syncDate) {
+      console.log(`Safely synced ${itineraryToSync.length} itinerary entries for ${syncDate} to ${existingTrip.name} (${existingTrip.id}).`);
+      process.exit(0);
     }
     const { data: existingChecklist, error: existingChecklistError } = await admin.from("checklist_items").select("title").eq("trip_id", existingTrip.id);
     if (existingChecklistError) throw existingChecklistError;
