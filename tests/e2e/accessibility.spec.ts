@@ -25,7 +25,7 @@ test("login controls are named and keyboard-focusable", async ({ page }) => {
 });
 
 test("shared screens expose accessible names for interactive controls", async ({ page }) => {
-  for (const route of ["/today", "/plan", "/money", "/checklist", "/bookings", "/more"]) {
+  for (const route of ["/today", "/plan", "/overview", "/money", "/checklist", "/bookings", "/more"]) {
     await page.goto(route);
     await skipUnlessPreview(page);
     const unnamed = await page.locator("button, a[href], input, select, textarea").evaluateAll((elements) => elements.filter((element) => {

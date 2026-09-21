@@ -7,7 +7,10 @@
     "baseCurrency": "HKD"
   },
   "days": [
-    {"date":"2026-12-24","title":"Departure • Bengaluru → Hanoi overnight transit"},
+    {
+      "date": "2026-12-24",
+      "title": "Departure • Bengaluru → Hanoi overnight transit"
+    },
     {
       "date": "2026-12-25",
       "title": "Arrival • Christmas Hong Kong • Victoria Harbour • Aqua Luna"
@@ -18,7 +21,7 @@
     },
     {
       "date": "2026-12-27",
-      "title": "Old-School Dim Sum • Man Mo Temple • Sham Shui Po • Mong Kok • Temple Street"
+      "title": "Old-School Dim Sum • Man Mo Temple • Wong Tai Sin • Nan Lian Garden • Sham Shui Po • Mong Kok • Temple Street"
     },
     {
       "date": "2026-12-28",
@@ -55,7 +58,13 @@
       "category": "Hotel",
       "priority": "MUST"
     },
-    {"key":"yau-ma-tei-mtr","name":"Yau Ma Tei MTR Station","neighbourhood":"Yau Ma Tei","category":"MTR Station","priority":"MUST"},
+    {
+      "key": "yau-ma-tei-mtr",
+      "name": "Yau Ma Tei MTR Station",
+      "neighbourhood": "Yau Ma Tei",
+      "category": "MTR Station",
+      "priority": "MUST"
+    },
     {
       "key": "hkg-airport",
       "name": "Hong Kong International Airport",
@@ -367,6 +376,33 @@
       "category": "Architecture",
       "priority": "MUST",
       "expectedDurationMinutes": 45
+    },
+    {
+      "key": "wong-tai-sin-temple",
+      "name": "Sik Sik Yuen Wong Tai Sin Temple",
+      "address": "2 Chuk Yuen Village, Wong Tai Sin, Kowloon, Hong Kong",
+      "neighbourhood": "Wong Tai Sin",
+      "category": "Taoist Temple / Heritage",
+      "priority": "MUST",
+      "expectedDurationMinutes": 45,
+      "details": {
+        "admission": "Free",
+        "planningHours": "07:30–16:30 daily; recheck official hours before visit"
+      }
+    },
+    {
+      "key": "nan-lian-garden",
+      "name": "Nan Lian Garden",
+      "address": "60 Fung Tak Road, Diamond Hill, Wong Tai Sin, Kowloon, Hong Kong",
+      "neighbourhood": "Diamond Hill",
+      "category": "Chinese Garden",
+      "priority": "MUST",
+      "expectedDurationMinutes": 55,
+      "details": {
+        "admission": "Free",
+        "planningHours": "07:00–21:00 daily; recheck official hours before visit",
+        "nearestMTR": "Diamond Hill Station Exit C2"
+      }
     }
   ],
   "checklist": [
@@ -620,17 +656,93 @@
       "plannedDay": "2026-12-29",
       "placeKey": "tai-o"
     },
-    {"key":"check-peak-weather-dec25","title":"Check tomorrow morning's Peak visibility","kind":"OTHER","priority":"MUST","plannedDay":"2026-12-25","description":"Check visibility, low cloud, mist and rain; do not overreact to generic December fog. If genuinely poor, continue Happy Valley → Central → Tai Kwun → PMQ → Star Ferry and reassess Peak later."},
-    {"key":"octopus-arrival","title":"Buy two Adult On-Loan Octopus cards after arrival","kind":"OTHER","priority":"MUST","plannedDay":"2026-12-25","description":"Each starts with about HK$150 stored value; optionally top up HK$250–350 each."},
-    {"key":"octopus-refund","title":"Refund both On-Loan Octopus cards before departure","kind":"OTHER","priority":"MUST","plannedDay":"2027-01-02","description":"Deposit is refundable; early-return handling fee is approximately HK$11 or 1% of remaining value, whichever is higher."},
-    {"key":"apps-install","title":"Install Hong Kong transport apps on both phones","kind":"OTHER","priority":"MUST","plannedDay":"2026-12-24","description":"Install Citybus, APP1933/KMB, HK Tramways, MTR Mobile, HKeMobility; confirm Google Maps, WhatsApp and TripBoard work on both phones."},
-    {"key":"sim-setup","title":"Set up and verify both SoSIM connections","kind":"OTHER","priority":"MUST","plannedDay":"2026-12-25","description":"Buy/activate both, complete real-name registration and verify mobile data."},
-    {"key":"macau-data","title":"Buy Macau roaming add-on and verify data","kind":"OTHER","priority":"MUST","plannedDay":"2026-12-28","description":"Buy before travel and confirm data works before leaving the ferry terminal if practical."},
-    {"key":"money-prep","title":"Arrange initial HKD cash and overseas card use","kind":"OTHER","priority":"MUST","plannedDay":"2026-12-24","description":"Target HK$1,500–2,000 combined; at ATM/card terminals choose HKD and decline INR conversion."},
-    {"key":"macau-ready","title":"Macau documents, cash and ferry check","kind":"OTHER","priority":"MUST","plannedDay":"2026-12-28","description":"Carry both passports and Bungy confirmation; confirm ferries and roaming; carry small MOP cash; confirm Golden Reel only if interested."},
-    {"key":"recheck-lantau","title":"Recheck Route 21, Route 11 and Ngong Ping conditions","kind":"OTHER","priority":"MUST","plannedDay":"2026-12-28","description":"Recheck Route 21/11 timetables plus Ngong Ping weather and maintenance before 29 Dec."},
-    {"key":"recheck-disney","title":"Recheck Disneyland 30 Dec operating hours and show times","kind":"OTHER","priority":"MUST","plannedDay":"2026-12-29"},
-    {"key":"nye-ready","title":"Prepare for NYE crowd controls","kind":"OTHER","priority":"MUST","plannedDay":"2026-12-31","description":"Charge phones/power banks; carry water and warm layer; check weather, road closures, crowd controls, extended MTR and official countdown/fireworks arrangements."}
+    {
+      "key": "check-peak-weather-dec25",
+      "title": "Check tomorrow morning's Peak visibility",
+      "kind": "OTHER",
+      "priority": "MUST",
+      "plannedDay": "2026-12-25",
+      "description": "Check visibility, low cloud, mist and rain; do not overreact to generic December fog. If genuinely poor, continue Happy Valley → Central → Tai Kwun → PMQ → Star Ferry and reassess Peak later."
+    },
+    {
+      "key": "octopus-arrival",
+      "title": "Buy two Adult On-Loan Octopus cards after arrival",
+      "kind": "OTHER",
+      "priority": "MUST",
+      "plannedDay": "2026-12-25",
+      "description": "Each starts with about HK$150 stored value; optionally top up HK$250–350 each."
+    },
+    {
+      "key": "octopus-refund",
+      "title": "Refund both On-Loan Octopus cards before departure",
+      "kind": "OTHER",
+      "priority": "MUST",
+      "plannedDay": "2027-01-02",
+      "description": "Deposit is refundable; early-return handling fee is approximately HK$11 or 1% of remaining value, whichever is higher."
+    },
+    {
+      "key": "apps-install",
+      "title": "Install Hong Kong transport apps on both phones",
+      "kind": "OTHER",
+      "priority": "MUST",
+      "plannedDay": "2026-12-24",
+      "description": "Install Citybus, APP1933/KMB, HK Tramways, MTR Mobile, HKeMobility; confirm Google Maps, WhatsApp and TripBoard work on both phones."
+    },
+    {
+      "key": "sim-setup",
+      "title": "Set up and verify both SoSIM connections",
+      "kind": "OTHER",
+      "priority": "MUST",
+      "plannedDay": "2026-12-25",
+      "description": "Buy/activate both, complete real-name registration and verify mobile data."
+    },
+    {
+      "key": "macau-data",
+      "title": "Buy Macau roaming add-on and verify data",
+      "kind": "OTHER",
+      "priority": "MUST",
+      "plannedDay": "2026-12-28",
+      "description": "Buy before travel and confirm data works before leaving the ferry terminal if practical."
+    },
+    {
+      "key": "money-prep",
+      "title": "Arrange initial HKD cash and overseas card use",
+      "kind": "OTHER",
+      "priority": "MUST",
+      "plannedDay": "2026-12-24",
+      "description": "Target HK$1,500–2,000 combined; at ATM/card terminals choose HKD and decline INR conversion."
+    },
+    {
+      "key": "macau-ready",
+      "title": "Macau documents, cash and ferry check",
+      "kind": "OTHER",
+      "priority": "MUST",
+      "plannedDay": "2026-12-28",
+      "description": "Carry both passports and Bungy confirmation; confirm ferries and roaming; carry small MOP cash; confirm Golden Reel only if interested."
+    },
+    {
+      "key": "recheck-lantau",
+      "title": "Recheck Route 21, Route 11 and Ngong Ping conditions",
+      "kind": "OTHER",
+      "priority": "MUST",
+      "plannedDay": "2026-12-28",
+      "description": "Recheck Route 21/11 timetables plus Ngong Ping weather and maintenance before 29 Dec."
+    },
+    {
+      "key": "recheck-disney",
+      "title": "Recheck Disneyland 30 Dec operating hours and show times",
+      "kind": "OTHER",
+      "priority": "MUST",
+      "plannedDay": "2026-12-29"
+    },
+    {
+      "key": "nye-ready",
+      "title": "Prepare for NYE crowd controls",
+      "kind": "OTHER",
+      "priority": "MUST",
+      "plannedDay": "2026-12-31",
+      "description": "Charge phones/power banks; carry water and warm layer; check weather, road closures, crowd controls, extended MTR and official countdown/fireworks arrangements."
+    }
   ],
   "itinerary": [
     {
@@ -642,7 +754,8 @@
       "priority": "MUST",
       "sequence": 1,
       "transportInstructions": "Departs Bengaluru Kempegowda International Airport, Terminal 2, at 23:35 on 24 Dec (arrives Hanoi Noi Bai Terminal 2 at 05:50 on 25 Dec). Economy Lite; seat 14E; one checked bag. Hindu meal request confirmed. This is the first leg of the Hong Kong journey, with a Hanoi transit, not a separate booking.",
-      "timingType": "FIXED", "bookingKey": "flight-vn982"
+      "timingType": "FIXED",
+      "bookingKey": "flight-vn982"
     },
     {
       "date": "2026-12-25",
@@ -655,7 +768,8 @@
       "sequence": 5,
       "placeKey": "hkg-airport",
       "transportInstructions": "Depart Hanoi Noi Bai International Airport, Terminal 2, at 10:35; arrive Hong Kong International Airport, Terminal 1, at 13:30. Economy Lite; seat 30A; one checked bag. Seafood meal request confirmed. Continuation of the Bengaluru → Hanoi → Hong Kong journey.",
-      "timingType": "FIXED", "bookingKey": "flight-vn592"
+      "timingType": "FIXED",
+      "bookingKey": "flight-vn592"
     },
     {
       "date": "2026-12-25",
@@ -669,7 +783,12 @@
       "transportInstructions": "Allow 60–90 minutes for immigration, baggage, toilets, SIM/eSIM if required, Octopus and cash/ATM.",
       "details": {
         "quickNote": "Clear immigration, collect bags, connect both phones, withdraw only a small amount of HKD if needed, then take A21. Do not buy Tourist/On-Loan Octopus at the airport by default.",
-        "carry": ["Passports", "hotel address", "contactless Visa/Mastercard", "SIM registration details"],
+        "carry": [
+          "Passports",
+          "hotel address",
+          "contactless Visa/Mastercard",
+          "SIM registration details"
+        ],
         "payWith": "Contactless card for A21; cash only as a backup.",
         "fallback": "Airport Express to Kowloon + taxi if road traffic or luggage convenience makes it worthwhile."
       }
@@ -686,12 +805,37 @@
       "placeKey": "bridal-tea-house",
       "transportInstructions": "Take A21 towards Kowloon and get off around Yau Ma Tei. Recommended with luggage; avoids MTR interchanges.",
       "estimatedCost": 69.2,
-      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED",
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
       "details": {
         "farePerPerson": "about HK$34.60",
         "fareForTwo": "about HK$69.20",
-        "transportOptions": [{"label":"A21 airport bus","mode":"recommended","instructions":"Direct luggage-friendly bus towards Yau Ma Tei; pay contactless if Octopus is not yet set up.","durationMinutes":75,"cost":"HK$34.60/person"},{"label":"Airport Express + taxi","mode":"fastest","instructions":"Use only if traffic is unusually bad or convenience outweighs the higher price."}],
-        "quickNote": "After hotel check-in, buy two physical Adult On-Loan Octopus cards at Yau Ma Tei MTR. Each starts with about HK$150 stored value; optionally top up another HK$250–350 so each has roughly HK$400–500 available."
+        "transportOptions": [
+          {
+            "name": "A21 airport bus",
+            "approxDurationMinutes": 75,
+            "approxCost": "~HK$35/person",
+            "route": "Airport Ground Transportation Centre → Nathan Road / Yau Ma Tei",
+            "notes": "Direct and luggage-friendly."
+          },
+          {
+            "name": "Airport Express + taxi",
+            "approxDurationMinutes": 45,
+            "approxCost": "~HK$130-180 total for two",
+            "route": "Airport Express → Kowloon Station, then taxi to hotel",
+            "notes": "Fastest practical option but much more expensive."
+          },
+          {
+            "name": "Airport Express + MTR",
+            "approxDurationMinutes": 55,
+            "approxCost": "~HK$105-120/person",
+            "route": "Airport Express → Hong Kong/Kowloon connection → Yau Ma Tei",
+            "notes": "More transfers with luggage."
+          }
+        ],
+        "quickNote": "After hotel check-in, buy two physical Adult On-Loan Octopus cards at Yau Ma Tei MTR. Each starts with about HK$150 stored value; optionally top up another HK$250–350 so each has roughly HK$400–500 available.",
+        "recommended": "A21 airport bus"
       }
     },
     {
@@ -727,9 +871,39 @@
       "depart": "17:15",
       "durationMinutes": 100,
       "priority": "MUST",
-      "sequence": 40, "timingType": "FLEXIBLE",
+      "sequence": 40,
+      "timingType": "FLEXIBLE",
       "placeKey": "tsim-sha-tsui-promenade",
-      "transportInstructions": "Prefer Yau Ma Tei MTR → Tsim Sha Tsui to protect Aqua Luna timing. Walking via Jordan is a scenic option only when comfortably ahead. Prioritise harbour, Clock Tower, Star Ferry Pier, Avenue of Stars, Harbour City/K11 surroundings and Christmas installations."
+      "transportInstructions": "Prefer Yau Ma Tei MTR → Tsim Sha Tsui to protect Aqua Luna timing. Walking via Jordan is a scenic option only when comfortably ahead. Prioritise harbour, Clock Tower, Star Ferry Pier, Avenue of Stars, Harbour City/K11 surroundings and Christmas installations.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 15,
+            "approxCost": "~HK$5-7/person",
+            "route": "Yau Ma Tei → Tsim Sha Tsui"
+          },
+          {
+            "name": "Walk",
+            "approxDurationMinutes": 30,
+            "approxCost": "Free",
+            "route": "Hotel → Jordan → Tsim Sha Tsui"
+          },
+          {
+            "name": "Bus",
+            "approxDurationMinutes": 15,
+            "approxCost": "~HK$5-8/person",
+            "route": "Nathan Road southbound to Tsim Sha Tsui"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 10,
+            "approxCost": "~HK$40-60 total",
+            "route": "Hotel → Tsim Sha Tsui waterfront"
+          }
+        ],
+        "recommended": "MTR"
+      }
     },
     {
       "date": "2026-12-25",
@@ -744,8 +918,15 @@
       "placeKey": "aqua-luna",
       "transportInstructions": "Board at the Tsim Sha Tsui boarding point. Choose sailing including the 20:00 Symphony of Lights.",
       "estimatedCost": 680,
-      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED",
-      "details": {"booking":"required","attractionCost":"about HK$340/person","fareForTwo":"about HK$680","quickNote":"The 60-minute calendar block includes boarding, sailing and disembarking; actual sailing may be shorter. Prebook the Christmas sailing that includes the 20:00 Symphony of Lights."}
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
+      "details": {
+        "booking": "required",
+        "attractionCost": "about HK$340/person",
+        "fareForTwo": "about HK$680",
+        "quickNote": "The 60-minute calendar block includes boarding, sailing and disembarking; actual sailing may be shorter. Prebook the Christmas sailing that includes the 20:00 Symphony of Lights."
+      }
     },
     {
       "date": "2026-12-25",
@@ -779,7 +960,32 @@
       "priority": "MUST",
       "sequence": 10,
       "transportInstructions": "Yau Ma Tei MTR → Central, then walk about 10–15 minutes to the Peak Tram terminus.",
-      "details": {"weather":"Weather checkpoint: on 25 December evening, check Peak visibility, cloud base, rain and mist. Keep the early Peak plan when reasonably clear; otherwise make it movable and continue with Happy Valley/Central.","quickNote":"Boxing Day: wake 06:15, leave hotel 06:40, reach terminus about 07:10–07:15.","transportOptions":[{"label":"MTR + walk","mode":"recommended","instructions":"Fastest reliable early-morning route to the Lower Terminus.","durationMinutes":35},{"label":"Taxi","mode":"fallback","instructions":"Use only if delayed or MTR timing is risky."}]}
+      "details": {
+        "weather": "Weather checkpoint: on 25 December evening, check Peak visibility, cloud base, rain and mist. Keep the early Peak plan when reasonably clear; otherwise make it movable and continue with Happy Valley/Central.",
+        "quickNote": "Boxing Day: wake 06:15, leave hotel 06:40, reach terminus about 07:10–07:15.",
+        "transportOptions": [
+          {
+            "name": "MTR + walk",
+            "approxDurationMinutes": 35,
+            "approxCost": "~HK$10-15/person",
+            "route": "Yau Ma Tei → Central, then walk to Peak Tram Lower Terminus"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 20,
+            "approxCost": "~HK$90-130 total",
+            "route": "Hotel → Peak Tram Lower Terminus",
+            "notes": "Best fallback if running late."
+          },
+          {
+            "name": "MTR + short taxi",
+            "approxDurationMinutes": 30,
+            "approxCost": "~HK$50-80 total plus MTR",
+            "route": "Yau Ma Tei → Central, then short taxi"
+          }
+        ],
+        "recommended": "MTR + walk"
+      }
     },
     {
       "date": "2026-12-26",
@@ -793,8 +999,43 @@
       "placeKey": "victoria-peak",
       "transportInstructions": "Buy single journey UP only; descend later by Bus 15.",
       "estimatedCost": 152,
-      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED",
-      "details": {"farePerPerson":"about HK$76","fareForTwo":"about HK$152","booking":"optional","quickNote":"Buy a single journey UP only; do not default to a return ticket.","weather":"First Peak visit is daylight / Lugard Road; Sky Terrace 428 is optional."}
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
+      "details": {
+        "farePerPerson": "about HK$76",
+        "fareForTwo": "about HK$152",
+        "booking": "optional",
+        "quickNote": "Buy a single journey UP only; do not default to a return ticket.",
+        "weather": "First Peak visit is daylight / Lugard Road; Sky Terrace 428 is optional.",
+        "transportOptions": [
+          {
+            "name": "Peak Tram",
+            "approxDurationMinutes": 15,
+            "approxCost": "~HK$82/person one-way",
+            "route": "Peak Tram Lower Terminus → The Peak"
+          },
+          {
+            "name": "Bus 15",
+            "approxDurationMinutes": 45,
+            "approxCost": "~HK$13-15/person",
+            "route": "Central/Admiralty → The Peak"
+          },
+          {
+            "name": "Green Minibus 1",
+            "approxDurationMinutes": 30,
+            "approxCost": "~HK$12/person",
+            "route": "Hong Kong Station Public Transport Interchange → The Peak"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 25,
+            "approxCost": "~HK$100-150 total",
+            "route": "Central → The Peak"
+          }
+        ],
+        "recommended": "Peak Tram"
+      }
     },
     {
       "date": "2026-12-26",
@@ -819,11 +1060,81 @@
       "sequence": 40,
       "transportInstructions": "Take scenic Bus 15 down. It does not drop directly at Cheung Hing; allow an onward tram, bus, taxi or short walk to Happy Valley.",
       "estimatedCost": 26,
-      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED",
-      "details": {"farePerPerson":"about HK$13","fareForTwo":"about HK$26","transportOptions":[{"label":"Bus 15","mode":"recommended","instructions":"Scenic direct descent toward Central / Happy Valley.","durationMinutes":45,"cost":"about HK$13/person"},{"label":"Green Minibus 1","mode":"fallback","instructions":"Use if the Bus 15 queue is significantly worse."},{"label":"Peak Tram","mode":"emergency","instructions":"Only if its queue is short."}]}
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
+      "details": {
+        "farePerPerson": "about HK$13",
+        "fareForTwo": "about HK$26",
+        "transportOptions": [
+          {
+            "name": "Bus 15",
+            "approxDurationMinutes": 45,
+            "approxCost": "~HK$13-15/person",
+            "route": "The Peak → Central / Wan Chai direction"
+          },
+          {
+            "name": "Green Minibus 1",
+            "approxDurationMinutes": 30,
+            "approxCost": "~HK$12/person",
+            "route": "The Peak → Hong Kong Station"
+          },
+          {
+            "name": "Peak Tram",
+            "approxDurationMinutes": 15,
+            "approxCost": "~HK$82/person one-way",
+            "route": "The Peak → Lower Terminus"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 25,
+            "approxCost": "~HK$100-150 total",
+            "route": "The Peak → Happy Valley/Central"
+          }
+        ],
+        "recommended": "Bus 15"
+      }
     },
     {
-      "date": "2026-12-26", "title": "Transfer to Happy Valley", "type": "transport", "start": "10:35", "end": "10:50", "durationMinutes": 15, "priority": "WANT", "sequence": 45, "timingType": "TARGET", "transportInstructions": "Continue from the Bus 15 practical drop-off by tram, bus, taxi or a short walk as convenient."
+      "date": "2026-12-26",
+      "title": "Transfer to Happy Valley",
+      "type": "transport",
+      "start": "10:35",
+      "end": "10:50",
+      "durationMinutes": 15,
+      "priority": "WANT",
+      "sequence": 45,
+      "timingType": "TARGET",
+      "transportInstructions": "Continue from the Bus 15 practical drop-off by tram, bus, taxi or a short walk as convenient.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Ding Ding + walk",
+            "approxDurationMinutes": 15,
+            "approxCost": "~HK$3.30/person",
+            "route": "Nearest tram stop → Happy Valley, then short walk"
+          },
+          {
+            "name": "Bus",
+            "approxDurationMinutes": 15,
+            "approxCost": "~HK$5-8/person",
+            "route": "Use nearest suitable Citybus route toward Happy Valley"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 10,
+            "approxCost": "~HK$35-55 total",
+            "route": "Direct to Cheung Hing Coffee Shop"
+          },
+          {
+            "name": "Walk",
+            "approxDurationMinutes": 25,
+            "approxCost": "Free",
+            "route": "Walk from the practical Bus 15 drop-off if weather/energy are good"
+          }
+        ],
+        "recommended": "Ding Ding + walk"
+      }
     },
     {
       "date": "2026-12-26",
@@ -848,7 +1159,39 @@
       "sequence": 60,
       "transportInstructions": "Use Hong Kong Tramways for part of the journey; sit upstairs if possible.",
       "estimatedCost": 6.6,
-      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED"
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Ding Ding",
+            "approxDurationMinutes": 45,
+            "approxCost": "HK$3.30/person",
+            "route": "Happy Valley → Central/Western Market direction",
+            "notes": "Scenic; sit upstairs if possible."
+          },
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 30,
+            "approxCost": "~HK$6-10/person",
+            "route": "Walk/bus to Causeway Bay MTR → Central"
+          },
+          {
+            "name": "Bus",
+            "approxDurationMinutes": 30,
+            "approxCost": "~HK$6-10/person",
+            "route": "Happy Valley → Central"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 20,
+            "approxCost": "~HK$70-100 total",
+            "route": "Happy Valley → Central"
+          }
+        ],
+        "recommended": "Ding Ding"
+      }
     },
     {
       "date": "2026-12-26",
@@ -915,7 +1258,33 @@
       "sequence": 120,
       "placeKey": "star-ferry-central",
       "estimatedCost": 13,
-      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED"
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Star Ferry",
+            "approxDurationMinutes": 15,
+            "approxCost": "~HK$5-7/person",
+            "route": "Central Pier → Tsim Sha Tsui Pier",
+            "notes": "Best harbour experience."
+          },
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 15,
+            "approxCost": "~HK$11-15/person",
+            "route": "Central/Admiralty → Tsim Sha Tsui"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 15,
+            "approxCost": "~HK$100-140 total plus tunnel toll",
+            "route": "Central → Tsim Sha Tsui"
+          }
+        ],
+        "recommended": "Star Ferry"
+      }
     },
     {
       "date": "2026-12-26",
@@ -939,10 +1308,60 @@
       "priority": "MUST",
       "sequence": 10,
       "placeKey": "luk-on-kui",
-      "transportInstructions": "Yau Ma Tei → Central → Sheung Wan, then walk. Try har gow, siu mai, char siu bao, cheung fun, ribs, turnip cake and tea."
+      "transportInstructions": "Yau Ma Tei → Central → Sheung Wan, then walk. Try har gow, siu mai, char siu bao, cheung fun, ribs, turnip cake and tea.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "MTR + walk",
+            "approxDurationMinutes": 30,
+            "approxCost": "~HK$10-15/person",
+            "route": "Yau Ma Tei → Central/Sheung Wan, then walk to Luk On Kui"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 20,
+            "approxCost": "~HK$110-150 total plus tunnel toll",
+            "route": "Hotel → Luk On Kui"
+          },
+          {
+            "name": "Bus",
+            "approxDurationMinutes": 35,
+            "approxCost": "~HK$10-15/person",
+            "route": "Cross-harbour bus toward Sheung Wan, then walk"
+          }
+        ],
+        "recommended": "MTR + walk"
+      }
     },
     {
-      "date": "2026-12-27", "title": "Walk Luk On Kui → Man Mo Temple", "type": "transport", "start": "09:45", "end": "10:00", "durationMinutes": 15, "priority": "MUST", "sequence": 15, "timingType": "TARGET", "transportInstructions": "Walk uphill along/near Hollywood Road; pay attention to street names as GPS orientation can be confusing."
+      "date": "2026-12-27",
+      "title": "Walk Luk On Kui → Man Mo Temple",
+      "type": "transport",
+      "start": "09:45",
+      "end": "10:00",
+      "durationMinutes": 15,
+      "priority": "MUST",
+      "sequence": 15,
+      "timingType": "TARGET",
+      "transportInstructions": "Walk uphill along/near Hollywood Road; pay attention to street names as GPS orientation can be confusing.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Walk",
+            "approxDurationMinutes": 15,
+            "approxCost": "Free",
+            "route": "Luk On Kui → Man Mo Temple via Hollywood Road"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 5,
+            "approxCost": "~HK$30-45 total",
+            "route": "Short uphill taxi ride",
+            "notes": "Useful only if tired or raining."
+          }
+        ],
+        "recommended": "Walk"
+      }
     },
     {
       "date": "2026-12-27",
@@ -955,93 +1374,287 @@
       "sequence": 20,
       "placeKey": "man-mo-temple",
       "transportInstructions": "Walk 10–15 minutes uphill from Luk On Kui along/near Hollywood Road. Pay attention to street names as GPS orientation can be confusing.",
-      "details": {"attractionCost":"Free","quickNote":"Traditional temple dedicated to Man Cheong (literature) and Mo Tai (war). Allow a short cultural visit; respect worshippers and do not block prayers.","carry":["Modest, respectful clothing"]}
+      "details": {
+        "attractionCost": "Free",
+        "quickNote": "Traditional temple dedicated to Man Cheong (literature) and Mo Tai (war). Allow a short cultural visit; respect worshippers and do not block prayers.",
+        "carry": [
+          "Modest, respectful clothing"
+        ]
+      }
     },
     {
       "date": "2026-12-27",
-      "title": "Travel Man Mo Temple → Sham Shui Po",
+      "title": "Travel Man Mo Temple → Wong Tai Sin Temple",
       "type": "transport",
       "start": "10:40",
-      "end": "11:20",
-      "durationMinutes": 40,
+      "end": "11:25",
+      "durationMinutes": 45,
       "priority": "MUST",
       "sequence": 25,
       "timingType": "TARGET",
-      "transportInstructions": "Walk downhill towards Sheung Wan/Central transport, then use MTR to Sham Shui Po. Allow approximately 40 minutes including walking, station access, waiting and interchange."
+      "transportInstructions": "Walk to Sheung Wan MTR, then MTR via Central/Prince Edward to Wong Tai Sin. Taxi is the faster fallback if running late.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 45,
+            "approxCost": "about HK$12–15/person",
+            "route": "Walk to Sheung Wan → Central → Prince Edward → Wong Tai Sin"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 25,
+            "approxCost": "about HK$120–160 total",
+            "route": "Direct from Man Mo Temple area to Wong Tai Sin Temple"
+          }
+        ],
+        "recommended": "MTR"
+      }
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Wong Tai Sin Temple",
+      "type": "attraction",
+      "start": "11:25",
+      "end": "12:10",
+      "durationMinutes": 45,
+      "priority": "MUST",
+      "sequence": 30,
+      "placeKey": "wong-tai-sin-temple",
+      "transportInstructions": "Enter from the Wong Tai Sin MTR side. Allow about 45 minutes for the main temple complex and Good Wish Garden if open.",
+      "details": {
+        "attractionCost": "Free",
+        "quickNote": "Current regular opening hours are 07:30–16:30. Recheck shortly before the trip."
+      }
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Travel Wong Tai Sin Temple → Nan Lian Garden",
+      "type": "transport",
+      "start": "12:10",
+      "end": "12:25",
+      "durationMinutes": 15,
+      "priority": "MUST",
+      "sequence": 35,
+      "timingType": "TARGET",
+      "transportInstructions": "Take the MTR one stop from Wong Tai Sin to Diamond Hill, then walk from Exit C2 to Nan Lian Garden.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 15,
+            "approxCost": "about HK$4–6/person",
+            "route": "Wong Tai Sin → Diamond Hill, then walk from Exit C2"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 10,
+            "approxCost": "about HK$35–50 total",
+            "route": "Direct to Nan Lian Garden"
+          }
+        ],
+        "recommended": "MTR"
+      }
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Nan Lian Garden",
+      "type": "attraction",
+      "start": "12:25",
+      "end": "13:20",
+      "durationMinutes": 55,
+      "priority": "MUST",
+      "sequence": 40,
+      "placeKey": "nan-lian-garden",
+      "transportInstructions": "Enter from the Diamond Hill side. Keep this as a relaxed garden walk rather than trying to cover every corner.",
+      "details": {
+        "attractionCost": "Free",
+        "quickNote": "Current regular opening hours are 07:00–21:00. Recheck shortly before the trip."
+      }
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Travel Nan Lian Garden → Sham Shui Po",
+      "type": "transport",
+      "start": "13:20",
+      "end": "13:45",
+      "durationMinutes": 25,
+      "priority": "MUST",
+      "sequence": 45,
+      "timingType": "TARGET",
+      "transportInstructions": "Use MTR from Diamond Hill to Sham Shui Po, changing lines as required.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 25,
+            "approxCost": "about HK$8–11/person",
+            "route": "Diamond Hill → Sham Shui Po"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 20,
+            "approxCost": "about HK$90–120 total",
+            "route": "Direct from Nan Lian Garden to Sham Shui Po"
+          }
+        ],
+        "recommended": "MTR"
+      }
     },
     {
       "date": "2026-12-27",
       "title": "Sham Shui Po exploration",
       "type": "shopping",
-      "start": "11:20",
-      "end": "13:40",
-      "durationMinutes": 140,
+      "start": "13:45",
+      "end": "15:15",
+      "durationMinutes": 90,
       "priority": "WANT",
-      "sequence": 30,
+      "sequence": 50,
       "placeKey": "sham-shui-po",
-      "transportInstructions": "Walk to Sheung Wan MTR, then continue to Sham Shui Po. Explore Apliu Street, Fuk Wing Street, Pei Ho Street and side streets; snack rather than have a large formal lunch."
+      "transportInstructions": "Focus on Apliu Street, Pei Ho Street and one or two nearby side streets. Snack rather than have a large formal lunch."
     },
     {
-      "date": "2026-12-27", "title": "Travel Sham Shui Po → Mong Kok", "type": "transport", "start": "13:40", "end": "14:00", "durationMinutes": 20, "priority": "MUST", "sequence": 35, "timingType": "TARGET", "transportInstructions": "Use MTR or taxi as convenient; do not treat this as a zero-minute transition."
+      "date": "2026-12-27",
+      "title": "Travel Sham Shui Po → Mong Kok",
+      "type": "transport",
+      "start": "15:15",
+      "end": "15:30",
+      "durationMinutes": 15,
+      "priority": "MUST",
+      "sequence": 55,
+      "timingType": "TARGET",
+      "transportInstructions": "Use MTR or taxi as convenient; do not treat this as a zero-minute transition.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 15,
+            "approxCost": "about HK$5–7/person",
+            "route": "Sham Shui Po → Mong Kok"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 10,
+            "approxCost": "about HK$45–65 total",
+            "route": "Direct to Mong Kok"
+          }
+        ],
+        "recommended": "MTR"
+      }
     },
     {
       "date": "2026-12-27",
       "title": "Mong Kok markets and streets",
       "type": "shopping",
-      "start": "14:00",
-      "end": "17:30",
-      "durationMinutes": 210,
+      "start": "15:30",
+      "end": "18:00",
+      "durationMinutes": 150,
       "priority": "MUST",
-      "sequence": 40,
+      "sequence": 60,
       "placeKey": "mong-kok",
-      "transportInstructions": "Suggested route: Goldfish Market → Fa Yuen Street → Sneaker Street → Ladies' Market. Add street snacks around 15:30."
+      "transportInstructions": "Suggested route: Goldfish Market → Fa Yuen Street → Sneaker Street → Ladies' Market. Keep moving rather than dwelling at every stall."
     },
     {
       "date": "2026-12-27",
       "title": "Walk Mong Kok → Yau Ma Tei",
       "type": "transport",
-      "start": "17:30",
-      "end": "18:00",
+      "start": "18:00",
+      "end": "18:30",
       "durationMinutes": 30,
       "priority": "WANT",
-      "sequence": 50,
-      "transportInstructions": "Walk south; the transition through Kowloon is part of the experience."
+      "sequence": 70,
+      "transportInstructions": "Walk south; the transition through Kowloon is part of the experience.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Walk",
+            "approxDurationMinutes": 30,
+            "approxCost": "Free",
+            "route": "Mong Kok → Yau Ma Tei along Nathan Road / side streets"
+          },
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 10,
+            "approxCost": "~HK$5-6/person",
+            "route": "Mong Kok → Yau Ma Tei"
+          },
+          {
+            "name": "Bus",
+            "approxDurationMinutes": 10,
+            "approxCost": "~HK$4-7/person",
+            "route": "Short southbound bus"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 8,
+            "approxCost": "~HK$30-45 total",
+            "route": "Mong Kok → Yau Ma Tei"
+          }
+        ],
+        "recommended": "Walk"
+      }
     },
     {
       "date": "2026-12-27",
       "title": "Temple Street Night Market",
       "type": "shopping",
-      "start": "18:00",
-      "end": "19:15",
-      "durationMinutes": 75,
+      "start": "18:30",
+      "end": "19:30",
+      "durationMinutes": 60,
       "priority": "MUST",
-      "sequence": 60,
+      "sequence": 80,
       "placeKey": "temple-street"
     },
     {
       "date": "2026-12-27",
       "title": "Hing Kee Claypot Rice",
       "type": "food",
-      "start": "19:30",
-      "end": "20:40",
+      "start": "19:45",
+      "end": "20:55",
       "durationMinutes": 70,
       "priority": "MUST",
-      "sequence": 70,
+      "sequence": 90,
       "placeKey": "hing-kee",
       "transportInstructions": "Choose chicken, pork or Chinese sausage claypot rice. Avoid beef versions."
     },
     {
-      "date": "2026-12-27", "title": "Walk Hing Kee → Kai Kai Dessert", "type": "transport", "start": "20:40", "end": "20:55", "durationMinutes": 15, "priority": "MUST", "sequence": 75, "timingType": "TARGET", "transportInstructions": "Walk from Temple Street toward Jordan; allow the short transfer rather than overlapping dinner and dessert."
+      "date": "2026-12-27",
+      "title": "Walk Hing Kee → Kai Kai Dessert",
+      "type": "transport",
+      "start": "20:55",
+      "end": "21:10",
+      "durationMinutes": 15,
+      "priority": "MUST",
+      "sequence": 95,
+      "timingType": "TARGET",
+      "transportInstructions": "Walk from Temple Street toward Jordan; allow the short transfer rather than overlapping dinner and dessert.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Walk",
+            "approxDurationMinutes": 15,
+            "approxCost": "Free",
+            "route": "Hing Kee / Temple Street → Kai Kai Dessert in Jordan"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 5,
+            "approxCost": "~HK$30-40 total",
+            "route": "Short direct ride"
+          }
+        ],
+        "recommended": "Walk"
+      }
     },
     {
       "date": "2026-12-27",
       "title": "Kai Kai Dessert",
       "type": "food",
-      "start": "20:55",
-      "end": "21:40",
+      "start": "21:10",
+      "end": "21:55",
       "durationMinutes": 45,
       "priority": "MUST",
-      "sequence": 80,
+      "sequence": 100,
       "placeKey": "kai-kai-dessert",
       "transportInstructions": "Try black sesame paste, walnut sweet soup, mango desserts or traditional Chinese sweet soups."
     },
@@ -1057,8 +1670,36 @@
       "placeKey": "sheung-wan-ferry",
       "transportInstructions": "Use taxi from Yau Ma Tei because of the early start; target terminal by 06:35–06:45.",
       "estimatedCost": 100,
-      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED",
-      "details": {"transportOptions":[{"label":"Taxi","mode":"recommended","instructions":"Very early departure: protects the 07:30 ferry booking.","durationMinutes":35},{"label":"MTR","mode":"fallback","instructions":"Only if first-train timing is comfortably safe."}],"fallback":"Use a taxi whenever ferry timing is at risk."}
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 35,
+            "approxCost": "~HK$90-120 total",
+            "route": "Yau Ma Tei → Hong Kong Macau Ferry Terminal, Sheung Wan",
+            "notes": "Best for the early ferry."
+          },
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 30,
+            "approxCost": "~HK$10-15/person",
+            "route": "Yau Ma Tei → Central/Sheung Wan, then walk",
+            "notes": "Only use if first-train timing is safely early."
+          },
+          {
+            "name": "Night bus + walk",
+            "approxDurationMinutes": 45,
+            "approxCost": "~HK$15-25/person",
+            "route": "Night/early bus toward Central/Sheung Wan",
+            "notes": "Fallback only; check holiday timetable."
+          }
+        ],
+        "fallback": "Use a taxi whenever ferry timing is at risk.",
+        "recommended": "Taxi"
+      }
     },
     {
       "date": "2026-12-28",
@@ -1071,8 +1712,39 @@
       "sequence": 20,
       "placeKey": "sheung-wan-ferry",
       "estimatedCost": 388,
-      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED",
-      "details": {"booking":"required","farePerPerson":"about HK$194","fareForTwo":"about HK$388","quickNote":"Prebook target 07:30 departure; allow time for immigration and boarding."}
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
+      "details": {
+        "booking": "required",
+        "farePerPerson": "about HK$194",
+        "fareForTwo": "about HK$388",
+        "quickNote": "Prebook target 07:30 departure; allow time for immigration and boarding.",
+        "transportOptions": [
+          {
+            "name": "TurboJET",
+            "approxDurationMinutes": 60,
+            "approxCost": "~HK$194/person",
+            "route": "Sheung Wan → Macau Outer Harbour",
+            "notes": "Booked/target sailing."
+          },
+          {
+            "name": "Cotai Water Jet",
+            "approxDurationMinutes": 60,
+            "approxCost": "~HK$175-220/person",
+            "route": "Sheung Wan → Taipa",
+            "notes": "Useful only if schedule works better, but arrives farther from historic centre."
+          },
+          {
+            "name": "HZMB bus",
+            "approxDurationMinutes": 90,
+            "approxCost": "~HK$65-75/person plus local transfers",
+            "route": "Hong Kong Port → Macau Port",
+            "notes": "Cheaper but less convenient for this itinerary."
+          }
+        ],
+        "recommended": "TurboJET"
+      }
     },
     {
       "date": "2026-12-28",
@@ -1083,7 +1755,31 @@
       "durationMinutes": 30,
       "priority": "MUST",
       "sequence": 30,
-      "placeKey": "senado-square"
+      "placeKey": "senado-square",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 15,
+            "approxCost": "~MOP 60-90 total",
+            "route": "Macau Outer Harbour Ferry Terminal → Senado Square"
+          },
+          {
+            "name": "Public bus",
+            "approxDurationMinutes": 25,
+            "approxCost": "~MOP 6/person",
+            "route": "Outer Harbour → Avenida de Almeida Ribeiro / Senado area"
+          },
+          {
+            "name": "Hotel/casino shuttle + walk",
+            "approxDurationMinutes": 30,
+            "approxCost": "Free",
+            "route": "Use a convenient free shuttle toward central Macau, then walk",
+            "notes": "Only if the route actually helps; do not detour for a free ride."
+          }
+        ],
+        "recommended": "Taxi"
+      }
     },
     {
       "date": "2026-12-28",
@@ -1140,7 +1836,9 @@
       "sequence": 80,
       "transportInstructions": "Look for Portuguese-style chicken, pork dishes, seafood or Macanese rice. Also try Portuguese egg tart and pork chop bun. No beef.",
       "estimatedCost": 550,
-      "estimatedCostCurrency": "MOP", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED"
+      "estimatedCostCurrency": "MOP",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED"
     },
     {
       "date": "2026-12-28",
@@ -1153,8 +1851,34 @@
       "sequence": 90,
       "placeKey": "macau-tower",
       "estimatedCost": 80,
-      "estimatedCostCurrency": "MOP", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED",
-      "details": {"transportOptions":[{"label":"Taxi","mode":"recommended","instructions":"Time-sensitive Bungy booking; save time from historic Macau.","durationMinutes":40},{"label":"Macau bus","mode":"cheapest","instructions":"Prefer buses when time is not tight."}],"fallback":"Taxi immediately if running late."}
+      "estimatedCostCurrency": "MOP",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 20,
+            "approxCost": "~MOP 60-90 total",
+            "route": "Historic Centre → Macau Tower",
+            "notes": "Protects Bungy timing."
+          },
+          {
+            "name": "Public bus",
+            "approxDurationMinutes": 30,
+            "approxCost": "~MOP 6/person",
+            "route": "Historic Centre → Macau Tower area"
+          },
+          {
+            "name": "Walk + bus",
+            "approxDurationMinutes": 35,
+            "approxCost": "~MOP 6/person",
+            "route": "Walk to a convenient bus stop, then bus to Macau Tower"
+          }
+        ],
+        "fallback": "Taxi immediately if running late.",
+        "recommended": "Taxi"
+      }
     },
     {
       "date": "2026-12-28",
@@ -1167,7 +1891,15 @@
       "sequence": 100,
       "placeKey": "macau-tower",
       "transportInstructions": "Allow full block for registration, weighing, briefing, equipment, waiting, jump, photos/video and observation. Bungy cost intentionally excluded from budget.",
-      "details": {"booking":"prebooked","quickNote":"Target 14:00–14:30 booking. Bungy is intentionally excluded from general trip-budget totals.","carry":["Booking confirmation", "passport/ID if required", "comfortable clothing"]}
+      "details": {
+        "booking": "prebooked",
+        "quickNote": "Target 14:00–14:30 booking. Bungy is intentionally excluded from general trip-budget totals.",
+        "carry": [
+          "Booking confirmation",
+          "passport/ID if required",
+          "comfortable clothing"
+        ]
+      }
     },
     {
       "date": "2026-12-28",
@@ -1181,8 +1913,37 @@
       "placeKey": "studio-city",
       "transportInstructions": "Only do this if Bungy finishes by roughly 16:00 and energy is good; otherwise go directly to Cotai.",
       "estimatedCost": 200,
-      "estimatedCostCurrency": "MOP", "estimatedCostScope": "PARTY", "estimatedCostStatus": "OPTIONAL",
-      "details": {"booking":"optional","attractionCost":"about MOP 100/person","fareForTwo":"about MOP 200","fallback":"Skip without regret; historic Macau, Bungy and the Cotai resorts take priority."}
+      "estimatedCostCurrency": "MOP",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "OPTIONAL",
+      "details": {
+        "booking": "optional",
+        "attractionCost": "about MOP 100/person",
+        "fareForTwo": "about MOP 200",
+        "fallback": "Skip without regret; historic Macau, Bungy and the Cotai resorts take priority.",
+        "transportOptions": [
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 20,
+            "approxCost": "~MOP 80-120 total",
+            "route": "Macau Tower → Studio City"
+          },
+          {
+            "name": "Public bus",
+            "approxDurationMinutes": 35,
+            "approxCost": "~MOP 6/person",
+            "route": "Macau Tower area → Cotai / Studio City"
+          },
+          {
+            "name": "Skip Golden Reel and taxi directly to Venetian",
+            "approxDurationMinutes": 20,
+            "approxCost": "~MOP 80-120 total",
+            "route": "Macau Tower → Venetian",
+            "notes": "Best fallback if Bungy runs late."
+          }
+        ],
+        "recommended": "Taxi"
+      }
     },
     {
       "date": "2026-12-28",
@@ -1193,7 +1954,30 @@
       "durationMinutes": 55,
       "priority": "WANT",
       "sequence": 120,
-      "placeKey": "venetian"
+      "placeKey": "venetian",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Walk / resort connection",
+            "approxDurationMinutes": 15,
+            "approxCost": "Free",
+            "route": "Studio City → Venetian/Cotai Strip if doing Golden Reel first"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 8,
+            "approxCost": "~MOP 35-50 total",
+            "route": "Studio City → Venetian"
+          },
+          {
+            "name": "Free resort shuttle",
+            "approxDurationMinutes": 15,
+            "approxCost": "Free",
+            "route": "Use only if a convenient direct shuttle is available"
+          }
+        ],
+        "recommended": "Walk / resort connection"
+      }
     },
     {
       "date": "2026-12-28",
@@ -1204,7 +1988,24 @@
       "durationMinutes": 35,
       "priority": "WANT",
       "sequence": 130,
-      "placeKey": "parisian"
+      "placeKey": "parisian",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Walk",
+            "approxDurationMinutes": 10,
+            "approxCost": "Free",
+            "route": "Venetian → Parisian via Cotai pedestrian connections"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 5,
+            "approxCost": "~MOP 30-40 total",
+            "route": "Venetian → Parisian"
+          }
+        ],
+        "recommended": "Walk"
+      }
     },
     {
       "date": "2026-12-28",
@@ -1215,7 +2016,24 @@
       "durationMinutes": 45,
       "priority": "WANT",
       "sequence": 140,
-      "placeKey": "londoner"
+      "placeKey": "londoner",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Walk",
+            "approxDurationMinutes": 10,
+            "approxCost": "Free",
+            "route": "Parisian → Londoner via Cotai pedestrian connections"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 5,
+            "approxCost": "~MOP 30-40 total",
+            "route": "Parisian → Londoner"
+          }
+        ],
+        "recommended": "Walk"
+      }
     },
     {
       "date": "2026-12-28",
@@ -1227,7 +2045,9 @@
       "priority": "WANT",
       "sequence": 150,
       "estimatedCost": 500,
-      "estimatedCostCurrency": "MOP", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED"
+      "estimatedCostCurrency": "MOP",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED"
     },
     {
       "date": "2026-12-28",
@@ -1239,7 +2059,31 @@
       "priority": "MUST",
       "sequence": 160,
       "placeKey": "taipa-ferry",
-      "transportInstructions": "Preferred order: free resort shuttle if convenient, public bus, taxi if timing becomes tight."
+      "transportInstructions": "Preferred order: free resort shuttle if convenient, public bus, taxi if timing becomes tight.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Free resort shuttle",
+            "approxDurationMinutes": 25,
+            "approxCost": "Free",
+            "route": "Cotai resort shuttle → Taipa Ferry Terminal",
+            "notes": "Use if a direct shuttle is operating when you leave."
+          },
+          {
+            "name": "Public bus",
+            "approxDurationMinutes": 30,
+            "approxCost": "~MOP 6/person",
+            "route": "Cotai → Taipa Ferry Terminal"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 15,
+            "approxCost": "~MOP 50-80 total",
+            "route": "Cotai → Taipa Ferry Terminal"
+          }
+        ],
+        "recommended": "Free resort shuttle"
+      }
     },
     {
       "date": "2026-12-28",
@@ -1253,7 +2097,28 @@
       "placeKey": "taipa-ferry",
       "transportInstructions": "Book 22:00 sailing; 23:00 acts as backup.",
       "estimatedCost": 484,
-      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED"
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Cotai Water Jet / scheduled ferry",
+            "approxDurationMinutes": 60,
+            "approxCost": "~HK$220-260/person",
+            "route": "Taipa Ferry Terminal → Sheung Wan",
+            "notes": "Use the booked 22:00 sailing/operator."
+          },
+          {
+            "name": "HZMB bus",
+            "approxDurationMinutes": 90,
+            "approxCost": "~MOP/HK$65-75/person plus local transfers",
+            "route": "Macau Port → Hong Kong Port",
+            "notes": "Fallback if ferries are disrupted."
+          }
+        ],
+        "recommended": "Cotai Water Jet / scheduled ferry"
+      }
     },
     {
       "date": "2026-12-28",
@@ -1265,7 +2130,31 @@
       "priority": "MUST",
       "sequence": 180,
       "placeKey": "bridal-tea-house",
-      "transportInstructions": "Use MTR only if comfortably operating; otherwise take taxi."
+      "transportInstructions": "Use MTR only if comfortably operating; otherwise take taxi.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "MTR + walk",
+            "approxDurationMinutes": 30,
+            "approxCost": "~HK$10-15/person",
+            "route": "Sheung Wan → Yau Ma Tei, then walk to hotel"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 20,
+            "approxCost": "~HK$100-140 total",
+            "route": "Sheung Wan Ferry Terminal → hotel"
+          },
+          {
+            "name": "Night bus",
+            "approxDurationMinutes": 40,
+            "approxCost": "~HK$10-20/person",
+            "route": "Central/Sheung Wan → Yau Ma Tei",
+            "notes": "Useful if MTR has stopped or crowds are heavy."
+          }
+        ],
+        "recommended": "MTR + walk"
+      }
     },
     {
       "date": "2026-12-29",
@@ -1287,7 +2176,31 @@
       "durationMinutes": 50,
       "priority": "MUST",
       "sequence": 20,
-      "transportInstructions": "Yau Ma Tei → Lai King → Tung Chung. Allow about 20 minutes after arrival to walk to the bus terminus and find Route 11."
+      "transportInstructions": "Yau Ma Tei → Lai King → Tung Chung. Allow about 20 minutes after arrival to walk to the bus terminus and find Route 11.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 40,
+            "approxCost": "~HK$20-30/person",
+            "route": "Yau Ma Tei → Lai King, transfer to Tung Chung Line → Tung Chung"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 35,
+            "approxCost": "~HK$250-320 total",
+            "route": "Yau Ma Tei → Tung Chung"
+          },
+          {
+            "name": "Bus",
+            "approxDurationMinutes": 60,
+            "approxCost": "~HK$20-30/person",
+            "route": "Kowloon → Tung Chung via suitable route",
+            "notes": "Slower and less predictable."
+          }
+        ],
+        "recommended": "MTR"
+      }
     },
     {
       "date": "2026-12-29",
@@ -1301,10 +2214,40 @@
       "placeKey": "tai-o",
       "transportInstructions": "Target the official 08:30 Route 11 departure. The 08:45 departure is the immediate fallback if the MTR is slightly delayed. Use the New Lantao Bus live arrival information on the day.",
       "estimatedCost": 28,
-      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED",
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
       "timingType": "TARGET",
       "scheduleSensitive": true,
-      "details": {"farePerPerson":"about HK$14 weekday","fareForTwo":"about HK$28","fallback":"Take the 08:45 Route 11 if the 08:30 departure is missed."}
+      "details": {
+        "farePerPerson": "about HK$14 weekday",
+        "fareForTwo": "about HK$28",
+        "fallback": "Take the 08:45 Route 11 if the 08:30 departure is missed.",
+        "transportOptions": [
+          {
+            "name": "Bus 11",
+            "approxDurationMinutes": 50,
+            "approxCost": "~HK$12-25/person",
+            "route": "Tung Chung → Tai O",
+            "notes": "Fare varies by day/holiday schedule."
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 35,
+            "approxCost": "~HK$180-250 total",
+            "route": "Tung Chung → Tai O",
+            "notes": "Expensive but faster."
+          },
+          {
+            "name": "Bus 11A / special service if operating",
+            "approxDurationMinutes": 50,
+            "approxCost": "~HK$12-25/person",
+            "route": "Tung Chung → Tai O",
+            "notes": "Check date-specific service."
+          }
+        ],
+        "recommended": "Bus 11"
+      }
     },
     {
       "date": "2026-12-29",
@@ -1329,8 +2272,16 @@
       "sequence": 50,
       "placeKey": "tai-o",
       "estimatedCost": 100,
-      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "OPTIONAL",
-      "details": {"booking":"optional","farePerPerson":"about HK$30–50","fareForTwo":"about HK$60–100","payWith":"Cash is useful for small local operators.","fallback":"If boats have not started or conditions are unsuitable, continue exploring Tai O and do not delay the 13:00 bus."}
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "OPTIONAL",
+      "details": {
+        "booking": "optional",
+        "farePerPerson": "about HK$30–50",
+        "fareForTwo": "about HK$60–100",
+        "payWith": "Cash is useful for small local operators.",
+        "fallback": "If boats have not started or conditions are unsuitable, continue exploring Tai O and do not delay the 13:00 bus."
+      }
     },
     {
       "date": "2026-12-29",
@@ -1356,7 +2307,25 @@
       "placeKey": "tai-o",
       "transportInstructions": "Be at the terminus early for the limited 13:00 Route 21 departure. Do not use this buffer for additional shopping or food.",
       "timingType": "TARGET",
-      "scheduleSensitive": true
+      "scheduleSensitive": true,
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Walk",
+            "approxDurationMinutes": 10,
+            "approxCost": "Free",
+            "route": "Tai O village → Tai O bus terminus"
+          },
+          {
+            "name": "Local taxi",
+            "approxDurationMinutes": 5,
+            "approxCost": "~HK$30-40 total",
+            "route": "Short local ride",
+            "notes": "Normally unnecessary."
+          }
+        ],
+        "recommended": "Walk"
+      }
     },
     {
       "date": "2026-12-29",
@@ -1370,10 +2339,38 @@
       "placeKey": "ngong-ping",
       "transportInstructions": "Take the official Tuesday 13:00 Route 21 departure. The next regular Monday–Friday departure is 14:00, so missing this bus materially compresses Ngong Ping and the sunset cable-car plan.",
       "estimatedCost": 15.8,
-      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED",
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
       "timingType": "TARGET",
       "scheduleSensitive": true,
-      "details": {"farePerPerson":"about HK$7.90 weekday","fareForTwo":"about HK$15.80"}
+      "details": {
+        "farePerPerson": "about HK$7.90 weekday",
+        "fareForTwo": "about HK$15.80",
+        "transportOptions": [
+          {
+            "name": "Bus 21",
+            "approxDurationMinutes": 25,
+            "approxCost": "~HK$7-15/person",
+            "route": "Tai O → Ngong Ping",
+            "notes": "Direct and simplest."
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 20,
+            "approxCost": "~HK$100-150 total",
+            "route": "Tai O → Ngong Ping"
+          },
+          {
+            "name": "Bus 11 + connection",
+            "approxDurationMinutes": 50,
+            "approxCost": "~HK$15-30/person",
+            "route": "Back toward Tung Chung then connect",
+            "notes": "Only if Route 21 is unavailable."
+          }
+        ],
+        "recommended": "Bus 21"
+      }
     },
     {
       "date": "2026-12-29",
@@ -1432,7 +2429,25 @@
       "placeKey": "ngong-ping",
       "transportInstructions": "Join the queue no later than 17:05 under the regular 18:00 weekday operating window. If staff recommend an earlier cutoff, follow their instruction; the night Peak connection is secondary to safely making the cable car.",
       "timingType": "TARGET",
-      "scheduleSensitive": true
+      "scheduleSensitive": true,
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Walk + queue",
+            "approxDurationMinutes": 15,
+            "approxCost": "Free before ticket cost",
+            "route": "Ngong Ping Village → Ngong Ping 360 terminal"
+          },
+          {
+            "name": "Local bus to Tung Chung",
+            "approxDurationMinutes": 45,
+            "approxCost": "~HK$20-35/person",
+            "route": "Ngong Ping → Tung Chung",
+            "notes": "Fallback if cable car closes."
+          }
+        ],
+        "recommended": "Walk + queue"
+      }
     },
     {
       "date": "2026-12-29",
@@ -1446,10 +2461,18 @@
       "placeKey": "ngong-ping",
       "transportInstructions": "One-way only: Ngong Ping → Tung Chung. The ride takes about 25 minutes. Sunset is approximately 17:48, so this target captures sunset moving into dusk; the precise boarding time depends on the queue and daily operations.",
       "estimatedCost": 480,
-      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED",
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
       "timingType": "TARGET",
       "scheduleSensitive": true,
-      "details": {"booking":"required","farePerPerson":"about HK$240","fareForTwo":"about HK$480","quickNote":"Book a one-way Crystal Cabin from Ngong Ping to Tung Chung, not the opposite direction and not a round trip.","operatingHours":"Current regular weekday hours are 10:00–18:00; recheck festive-period hours and any special announcement before the visit."}
+      "details": {
+        "booking": "required",
+        "farePerPerson": "about HK$240",
+        "fareForTwo": "about HK$480",
+        "quickNote": "Book a one-way Crystal Cabin from Ngong Ping to Tung Chung, not the opposite direction and not a round trip.",
+        "operatingHours": "Current regular weekday hours are 10:00–18:00; recheck festive-period hours and any special announcement before the visit."
+      }
     },
     {
       "date": "2026-12-29",
@@ -1460,7 +2483,30 @@
       "durationMinutes": 45,
       "priority": "MUST",
       "sequence": 150,
-      "transportInstructions": "Take the Tung Chung Line directly to Hong Kong Station. Follow signs for Exit E / the Hong Kong Station Public Transport Interchange."
+      "transportInstructions": "Take the Tung Chung Line directly to Hong Kong Station. Follow signs for Exit E / the Hong Kong Station Public Transport Interchange.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 35,
+            "approxCost": "~HK$25-30/person",
+            "route": "Tung Chung → Hong Kong Station"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 35,
+            "approxCost": "~HK$300-380 total",
+            "route": "Tung Chung → Central"
+          },
+          {
+            "name": "Bus",
+            "approxDurationMinutes": 55,
+            "approxCost": "~HK$20-30/person",
+            "route": "Tung Chung → Central/Hong Kong Island"
+          }
+        ],
+        "recommended": "MTR"
+      }
     },
     {
       "date": "2026-12-29",
@@ -1474,9 +2520,43 @@
       "placeKey": "victoria-peak",
       "transportInstructions": "Use Green Minibus 1 from the Hong Kong Station Public Transport Interchange. It generally runs every 5–15 minutes; allow time to locate the stand and queue. If the wait is clearly excessive, take a red urban taxi directly to the Peak. Do not use the Peak Tram for this second visit.",
       "estimatedCost": 23.6,
-      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED",
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
       "timingType": "TARGET",
-      "details": {"farePerPerson":"about HK$11.80","fareForTwo":"about HK$23.60","transportOptions":[{"label":"Green Minibus 1","mode":"recommended","instructions":"Board at Hong Kong Station Public Transport Interchange; allow roughly 25–35 minutes once aboard, with additional queue time."},{"label":"Red urban taxi","mode":"fallback","instructions":"Use if locating or waiting for the minibus would materially delay the night-view visit."},{"label":"Bus 15","mode":"fallback","instructions":"Reliable but slower; use only if it is immediately available."}],"weather":"Check Peak visibility, cloud and rain before leaving Ngong Ping. If the skyline is obscured, the night visit can be skipped without affecting the earlier Boxing Day Peak visit."}
+      "details": {
+        "farePerPerson": "about HK$11.80",
+        "fareForTwo": "about HK$23.60",
+        "transportOptions": [
+          {
+            "name": "Green Minibus 1",
+            "approxDurationMinutes": 30,
+            "approxCost": "~HK$11.80/person",
+            "route": "Hong Kong Station Public Transport Interchange → The Peak"
+          },
+          {
+            "name": "Bus 15",
+            "approxDurationMinutes": 45,
+            "approxCost": "~HK$13-15/person",
+            "route": "Central/Admiralty → The Peak"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 25,
+            "approxCost": "~HK$100-150 total",
+            "route": "Central → The Peak"
+          },
+          {
+            "name": "Peak Tram",
+            "approxDurationMinutes": 35,
+            "approxCost": "~HK$82/person one-way plus queue",
+            "route": "Walk/taxi to Lower Terminus → The Peak",
+            "notes": "Only if queue is reasonable."
+          }
+        ],
+        "weather": "Check Peak visibility, cloud and rain before leaving Ngong Ping. If the skyline is obscured, the night visit can be skipped without affecting the earlier Boxing Day Peak visit.",
+        "recommended": "Green Minibus 1"
+      }
     },
     {
       "date": "2026-12-29",
@@ -1490,7 +2570,10 @@
       "placeKey": "victoria-peak",
       "transportInstructions": "This is a focused night-view visit, not a repeat of the morning Lugard Road walk from Boxing Day. Use Sky Terrace 428 for the elevated panorama if its queue is reasonable; otherwise use a nearby free viewpoint such as Lion's Pavilion.",
       "timingType": "WEATHER_DEPENDENT",
-      "details": {"weather":"Proceed when visibility is usable. If the skyline is hidden by low cloud, return directly from Tung Chung or Central and protect energy for Disneyland the next morning.","quickNote":"Sky Terrace 428 is currently scheduled to remain open until 22:00, leaving a comfortable viewing window."}
+      "details": {
+        "weather": "Proceed when visibility is usable. If the skyline is hidden by low cloud, return directly from Tung Chung or Central and protect energy for Disneyland the next morning.",
+        "quickNote": "Sky Terrace 428 is currently scheduled to remain open until 22:00, leaving a comfortable viewing window."
+      }
     },
     {
       "date": "2026-12-29",
@@ -1503,7 +2586,38 @@
       "sequence": 180,
       "transportInstructions": "Prefer Green Minibus 1 to Hong Kong Station. Use Bus 15 if its queue is materially shorter. Avoid the Peak Tram queue on this second visit.",
       "estimatedCost": 23.6,
-      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED"
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Green Minibus 1",
+            "approxDurationMinutes": 30,
+            "approxCost": "~HK$11.80/person",
+            "route": "The Peak → Hong Kong Station"
+          },
+          {
+            "name": "Bus 15",
+            "approxDurationMinutes": 45,
+            "approxCost": "~HK$13-15/person",
+            "route": "The Peak → Central/Admiralty"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 25,
+            "approxCost": "~HK$100-150 total",
+            "route": "The Peak → Central"
+          },
+          {
+            "name": "Peak Tram",
+            "approxDurationMinutes": 20,
+            "approxCost": "~HK$82/person one-way plus queue",
+            "route": "The Peak → Lower Terminus"
+          }
+        ],
+        "recommended": "Green Minibus 1"
+      }
     },
     {
       "date": "2026-12-29",
@@ -1514,7 +2628,30 @@
       "durationMinutes": 35,
       "priority": "MUST",
       "sequence": 190,
-      "transportInstructions": "Walk from the Hong Kong Station/IFC interchange to Central Station and take the Tsuen Wan Line directly to Yau Ma Tei."
+      "transportInstructions": "Walk from the Hong Kong Station/IFC interchange to Central Station and take the Tsuen Wan Line directly to Yau Ma Tei.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 20,
+            "approxCost": "~HK$10-15/person",
+            "route": "Central → Yau Ma Tei on Tsuen Wan Line"
+          },
+          {
+            "name": "Bus",
+            "approxDurationMinutes": 30,
+            "approxCost": "~HK$10-15/person",
+            "route": "Central → Yau Ma Tei / Jordan"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 20,
+            "approxCost": "~HK$100-140 total plus tunnel toll",
+            "route": "Central → Yau Ma Tei"
+          }
+        ],
+        "recommended": "MTR"
+      }
     },
     {
       "date": "2026-12-29",
@@ -1547,7 +2684,31 @@
       "priority": "MUST",
       "sequence": 20,
       "placeKey": "hong-kong-disneyland",
-      "transportInstructions": "Yau Ma Tei → Lai King → Sunny Bay → Disneyland Resort Line."
+      "transportInstructions": "Yau Ma Tei → Lai King → Sunny Bay → Disneyland Resort Line.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 40,
+            "approxCost": "~HK$25-30/person",
+            "route": "Yau Ma Tei → Lai King → Sunny Bay → Disneyland Resort"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 35,
+            "approxCost": "~HK$250-320 total",
+            "route": "Yau Ma Tei → Hong Kong Disneyland"
+          },
+          {
+            "name": "MTR + taxi",
+            "approxDurationMinutes": 35,
+            "approxCost": "~HK$100-150 total plus MTR",
+            "route": "MTR toward Lantau, then taxi for final leg",
+            "notes": "Usually not necessary."
+          }
+        ],
+        "recommended": "MTR"
+      }
     },
     {
       "date": "2026-12-30",
@@ -1561,8 +2722,15 @@
       "placeKey": "hong-kong-disneyland",
       "transportInstructions": "Prioritise World of Frozen, Big Grizzly Mountain, Mystic Manor and Iron Man Experience; fit Festival of the Lion King and PhilharMagic around wait times; stay for nighttime castle projection/fireworks if scheduled.",
       "estimatedCost": 1878,
-      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED",
-      "details": {"booking":"required","quickNote":"Hours and ticket tier are provisional planning estimates. Reconfirm 30 Dec 2026 hours, nighttime-show time and final tier when Disney publishes its calendar.","hoursStatus":"PROVISIONAL","costStatus":"PLANNING_ESTIMATE"}
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
+      "details": {
+        "booking": "required",
+        "quickNote": "Hours and ticket tier are provisional planning estimates. Reconfirm 30 Dec 2026 hours, nighttime-show time and final tier when Disney publishes its calendar.",
+        "hoursStatus": "PROVISIONAL",
+        "costStatus": "PLANNING_ESTIMATE"
+      }
     },
     {
       "date": "2026-12-30",
@@ -1573,7 +2741,31 @@
       "durationMinutes": 75,
       "priority": "MUST",
       "sequence": 40,
-      "transportInstructions": "Disneyland Resort → Sunny Bay → Lai King → Yau Ma Tei."
+      "transportInstructions": "Disneyland Resort → Sunny Bay → Lai King → Yau Ma Tei.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 40,
+            "approxCost": "~HK$25-30/person",
+            "route": "Disneyland Resort → Sunny Bay → Lai King → Yau Ma Tei"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 35,
+            "approxCost": "~HK$250-320 total",
+            "route": "Disneyland → Yau Ma Tei"
+          },
+          {
+            "name": "MTR + taxi",
+            "approxDurationMinutes": 35,
+            "approxCost": "~HK$100-150 total plus MTR",
+            "route": "MTR part-way then taxi",
+            "notes": "Fallback if very tired."
+          }
+        ],
+        "recommended": "MTR"
+      }
     },
     {
       "date": "2026-12-31",
@@ -1630,7 +2822,40 @@
       "priority": "MUST",
       "sequence": 50,
       "placeKey": "tsim-sha-tsui-promenade",
-      "transportInstructions": "Walk via Jordan because road closures/crowd controls may affect transport later."
+      "transportInstructions": "Walk via Jordan because road closures/crowd controls may affect transport later.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Walk",
+            "approxDurationMinutes": 35,
+            "approxCost": "Free",
+            "route": "Yau Ma Tei → Jordan → Tsim Sha Tsui",
+            "notes": "Best during NYE when roads/crowd controls may affect vehicles."
+          },
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 10,
+            "approxCost": "~HK$5-7/person",
+            "route": "Yau Ma Tei → Tsim Sha Tsui",
+            "notes": "Use only before crowd-control station restrictions begin."
+          },
+          {
+            "name": "Bus",
+            "approxDurationMinutes": 20,
+            "approxCost": "~HK$5-8/person",
+            "route": "Nathan Road southbound",
+            "notes": "May be disrupted by NYE road closures."
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 15,
+            "approxCost": "~HK$50-80 total",
+            "route": "Yau Ma Tei → Tsim Sha Tsui",
+            "notes": "Likely poor value during closures/crowds."
+          }
+        ],
+        "recommended": "Walk"
+      }
     },
     {
       "date": "2026-12-31",
@@ -1669,9 +2894,73 @@
       "transportInstructions": "Victoria Harbour skyline, countdown and fireworks if officially confirmed."
     },
     {
-      "date":"2027-01-01","title":"Countdown ends / wait for crowd movement","type":"activity","start":"00:00","end":"00:15","durationMinutes":15,"priority":"MUST","sequence":1,"placeKey":"tsim-sha-tsui-promenade","transportInstructions":"Do not rush to MTR; wait for crowd movement and follow official controls."},
-    {"date":"2027-01-01","title":"Walk Tsim Sha Tsui → Jordan → Yau Ma Tei","type":"transport","start":"00:15","end":"01:45","durationMinutes":90,"priority":"MUST","sequence":2,"placeKey":"bridal-tea-house","transportInstructions":"Expect crowd controls and a slower-than-normal walk. Extended MTR only if officially announced and convenient."},
-    {"date":"2027-01-01","title":"Hotel / sleep after NYE","type":"rest","start":"01:45","end":"09:45","durationMinutes":480,"priority":"MUST","sequence":3,"placeKey":"bridal-tea-house"},
+      "date": "2027-01-01",
+      "title": "Countdown ends / wait for crowd movement",
+      "type": "activity",
+      "start": "00:00",
+      "end": "00:15",
+      "durationMinutes": 15,
+      "priority": "MUST",
+      "sequence": 1,
+      "placeKey": "tsim-sha-tsui-promenade",
+      "transportInstructions": "Do not rush to MTR; wait for crowd movement and follow official controls."
+    },
+    {
+      "date": "2027-01-01",
+      "title": "Walk Tsim Sha Tsui → Jordan → Yau Ma Tei",
+      "type": "transport",
+      "start": "00:15",
+      "end": "01:45",
+      "durationMinutes": 90,
+      "priority": "MUST",
+      "sequence": 2,
+      "placeKey": "bridal-tea-house",
+      "transportInstructions": "Expect crowd controls and a slower-than-normal walk. Extended MTR only if officially announced and convenient.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Walk",
+            "approxDurationMinutes": 35,
+            "approxCost": "Free",
+            "route": "Tsim Sha Tsui → Jordan → Yau Ma Tei",
+            "notes": "Most reliable after countdown crowds."
+          },
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 15,
+            "approxCost": "~HK$5-7/person",
+            "route": "Tsim Sha Tsui → Yau Ma Tei",
+            "notes": "Use if station access is open and manageable."
+          },
+          {
+            "name": "Night bus",
+            "approxDurationMinutes": 20,
+            "approxCost": "~HK$5-10/person",
+            "route": "Tsim Sha Tsui → Yau Ma Tei",
+            "notes": "Subject to NYE diversions."
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 15,
+            "approxCost": "~HK$50-90 total",
+            "route": "Tsim Sha Tsui → Yau Ma Tei",
+            "notes": "May be difficult to obtain immediately after countdown."
+          }
+        ],
+        "recommended": "Walk"
+      }
+    },
+    {
+      "date": "2027-01-01",
+      "title": "Hotel / sleep after NYE",
+      "type": "rest",
+      "start": "01:45",
+      "end": "09:45",
+      "durationMinutes": 480,
+      "priority": "MUST",
+      "sequence": 3,
+      "placeKey": "bridal-tea-house"
+    },
     {
       "date": "2027-01-01",
       "title": "Late brunch near Yau Ma Tei / Jordan",
@@ -1692,7 +2981,30 @@
       "priority": "MUST",
       "sequence": 20,
       "placeKey": "kennedy-town",
-      "transportInstructions": "Yau Ma Tei → Central → Kennedy Town."
+      "transportInstructions": "Yau Ma Tei → Central → Kennedy Town.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 25,
+            "approxCost": "~HK$12-18/person",
+            "route": "Yau Ma Tei → Central, walk through paid connection → Hong Kong/Island Line → Kennedy Town"
+          },
+          {
+            "name": "Bus",
+            "approxDurationMinutes": 40,
+            "approxCost": "~HK$12-20/person",
+            "route": "Kowloon → Kennedy Town via cross-harbour route"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 25,
+            "approxCost": "~HK$140-200 total plus tunnel toll",
+            "route": "Yau Ma Tei → Kennedy Town"
+          }
+        ],
+        "recommended": "MTR"
+      }
     },
     {
       "date": "2027-01-01",
@@ -1714,7 +3026,37 @@
       "durationMinutes": 55,
       "priority": "MUST",
       "sequence": 40,
-      "transportInstructions": "Board an eastbound tram, sit upstairs, and enjoy Kennedy Town → Sheung Wan → Central. The journey itself is the attraction."
+      "transportInstructions": "Board an eastbound tram, sit upstairs, and enjoy Kennedy Town → Sheung Wan → Central. The journey itself is the attraction.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Ding Ding",
+            "approxDurationMinutes": 70,
+            "approxCost": "HK$3.30/person",
+            "route": "Kennedy Town → Wan Chai / Causeway Bay / North Point eastbound",
+            "notes": "This is the sightseeing experience, not just transport."
+          },
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 25,
+            "approxCost": "~HK$8-12/person",
+            "route": "Kennedy Town → Wan Chai/Causeway Bay"
+          },
+          {
+            "name": "Bus",
+            "approxDurationMinutes": 40,
+            "approxCost": "~HK$8-15/person",
+            "route": "Kennedy Town → Wan Chai/Causeway Bay"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 25,
+            "approxCost": "~HK$100-150 total",
+            "route": "Kennedy Town → Wan Chai"
+          }
+        ],
+        "recommended": "Ding Ding"
+      }
     },
     {
       "date": "2027-01-01",
@@ -1729,7 +3071,45 @@
       "transportInstructions": "Older streets and a short local walk, bakery or cha chaan teng. Keep this short: leave around 13:45 for Canal Road Flyover."
     },
     {
-      "date":"2027-01-01","title":"Walk Wan Chai → Canal Road Flyover","type":"transport","start":"13:40","end":"13:50","durationMinutes":10,"priority":"WANT","sequence":55,"transportInstructions":"Keep Wan Chai wandering close to the tram route so this transfer is realistic."},
+      "date": "2027-01-01",
+      "title": "Walk Wan Chai → Canal Road Flyover",
+      "type": "transport",
+      "start": "13:40",
+      "end": "13:50",
+      "durationMinutes": 10,
+      "priority": "WANT",
+      "sequence": 55,
+      "transportInstructions": "Keep Wan Chai wandering close to the tram route so this transfer is realistic.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Walk",
+            "approxDurationMinutes": 15,
+            "approxCost": "Free",
+            "route": "Wan Chai → Canal Road Flyover"
+          },
+          {
+            "name": "Ding Ding",
+            "approxDurationMinutes": 10,
+            "approxCost": "HK$3.30/person",
+            "route": "Short tram hop toward Causeway Bay, then walk"
+          },
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 10,
+            "approxCost": "~HK$5-6/person",
+            "route": "Wan Chai → Causeway Bay, then walk"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 5,
+            "approxCost": "~HK$30-45 total",
+            "route": "Wan Chai → Canal Road"
+          }
+        ],
+        "recommended": "Walk"
+      }
+    },
     {
       "date": "2027-01-01",
       "title": "Canal Road Flyover villain hitting",
@@ -1742,8 +3122,15 @@
       "placeKey": "canal-road-flyover",
       "transportInstructions": "Walk or use a short tram segment from Wan Chai. Watch the Da Siu Yan folk ritual, or participate if interested; keep moving by about 14:20 to protect the Monster Building daylight target.",
       "estimatedCost": 100,
-      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "OPTIONAL",
-      "details": {"attractionCost":"about HK$50–100 if participating; observation is free","payWith":"Cash preferred; confirm the price before starting.","quickNote":"Optional cultural experience, not a generic blessing service. Be respectful to practitioners and participants; frame participation around obstacles or bad luck, not a real person.","fallback":"Skip participation or shorten Causeway Bay first if running late."}
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "OPTIONAL",
+      "details": {
+        "attractionCost": "about HK$50–100 if participating; observation is free",
+        "payWith": "Cash preferred; confirm the price before starting.",
+        "quickNote": "Optional cultural experience, not a generic blessing service. Be respectful to practitioners and participants; frame participation around obstacles or bad luck, not a real person.",
+        "fallback": "Skip participation or shorten Causeway Bay first if running late."
+      }
     },
     {
       "date": "2027-01-01",
@@ -1767,7 +3154,36 @@
       "priority": "WANT",
       "sequence": 80,
       "placeKey": "chun-yeung-street",
-      "transportInstructions": "Explore the local market environment; optional small street snack."
+      "transportInstructions": "Explore the local market environment; optional small street snack.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Ding Ding",
+            "approxDurationMinutes": 20,
+            "approxCost": "HK$3.30/person",
+            "route": "Causeway Bay → North Point"
+          },
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 10,
+            "approxCost": "~HK$6-8/person",
+            "route": "Causeway Bay → North Point"
+          },
+          {
+            "name": "Bus",
+            "approxDurationMinutes": 20,
+            "approxCost": "~HK$6-10/person",
+            "route": "Causeway Bay → North Point"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 12,
+            "approxCost": "~HK$55-80 total",
+            "route": "Causeway Bay → North Point"
+          }
+        ],
+        "recommended": "Ding Ding"
+      }
     },
     {
       "date": "2027-01-01",
@@ -1779,7 +3195,36 @@
       "priority": "MUST",
       "sequence": 90,
       "placeKey": "monster-building",
-      "transportInstructions": "Arrive while there is useful daylight. Residential complex: be respectful, do not block entrances, enter private areas, photograph residents closely or make excessive noise."
+      "transportInstructions": "Arrive while there is useful daylight. Residential complex: be respectful, do not block entrances, enter private areas, photograph residents closely or make excessive noise.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Ding Ding + walk",
+            "approxDurationMinutes": 15,
+            "approxCost": "HK$3.30/person",
+            "route": "North Point → Quarry Bay/Tai Koo area, then walk to Monster Building"
+          },
+          {
+            "name": "MTR + walk",
+            "approxDurationMinutes": 15,
+            "approxCost": "~HK$5-7/person",
+            "route": "North Point → Quarry Bay/Tai Koo, then walk"
+          },
+          {
+            "name": "Bus",
+            "approxDurationMinutes": 15,
+            "approxCost": "~HK$5-8/person",
+            "route": "North Point → Quarry Bay, then walk"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 10,
+            "approxCost": "~HK$40-60 total",
+            "route": "North Point → Monster Building"
+          }
+        ],
+        "recommended": "Ding Ding + walk"
+      }
     },
     {
       "date": "2027-01-01",
@@ -1791,9 +3236,42 @@
       "priority": "WANT",
       "sequence": 100,
       "placeKey": "bridal-tea-house",
-      "transportInstructions": "Walk to Tai Koo or Quarry Bay MTR → Admiralty → Yau Ma Tei."
+      "transportInstructions": "Walk to Tai Koo or Quarry Bay MTR → Admiralty → Yau Ma Tei.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 30,
+            "approxCost": "~HK$12-18/person",
+            "route": "Quarry Bay/Tai Koo → Admiralty/Central → Yau Ma Tei"
+          },
+          {
+            "name": "Bus",
+            "approxDurationMinutes": 45,
+            "approxCost": "~HK$15-25/person",
+            "route": "Quarry Bay → Kowloon via cross-harbour route"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 25,
+            "approxCost": "~HK$160-220 total plus tunnel toll",
+            "route": "Monster Building → Yau Ma Tei"
+          }
+        ],
+        "recommended": "MTR"
+      }
     },
-    {"date":"2027-01-01","title":"Hotel rest","type":"rest","start":"18:00","end":"18:45","durationMinutes":45,"priority":"WANT","sequence":105,"placeKey":"bridal-tea-house"},
+    {
+      "date": "2027-01-01",
+      "title": "Hotel rest",
+      "type": "rest",
+      "start": "18:00",
+      "end": "18:45",
+      "durationMinutes": 45,
+      "priority": "WANT",
+      "sequence": 105,
+      "placeKey": "bridal-tea-house"
+    },
     {
       "date": "2027-01-01",
       "title": "Final Mong Kok street-food crawl",
@@ -1804,7 +3282,36 @@
       "priority": "MUST",
       "sequence": 110,
       "placeKey": "mong-kok",
-      "transportInstructions": "Pick multiple small items: curry fish balls, siu mai, cheung fun, egg waffles, fried snacks/squid, milk tea and dessert. Avoid beef."
+      "transportInstructions": "Pick multiple small items: curry fish balls, siu mai, cheung fun, egg waffles, fried snacks/squid, milk tea and dessert. Avoid beef.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 10,
+            "approxCost": "~HK$5-6/person",
+            "route": "Yau Ma Tei → Mong Kok"
+          },
+          {
+            "name": "Walk",
+            "approxDurationMinutes": 20,
+            "approxCost": "Free",
+            "route": "Hotel → Mong Kok"
+          },
+          {
+            "name": "Bus",
+            "approxDurationMinutes": 10,
+            "approxCost": "~HK$4-7/person",
+            "route": "Yau Ma Tei → Mong Kok"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 8,
+            "approxCost": "~HK$30-45 total",
+            "route": "Hotel → Mong Kok"
+          }
+        ],
+        "recommended": "Walk"
+      }
     },
     {
       "date": "2027-01-01",
@@ -1816,9 +3323,48 @@
       "priority": "MUST",
       "sequence": 120,
       "placeKey": "bridal-tea-house",
-      "transportInstructions": "Walk south to the hotel."
+      "transportInstructions": "Walk south to the hotel.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Walk",
+            "approxDurationMinutes": 20,
+            "approxCost": "Free",
+            "route": "Mong Kok → Yau Ma Tei / Bridal Tea House"
+          },
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 10,
+            "approxCost": "~HK$5-6/person",
+            "route": "Mong Kok → Yau Ma Tei"
+          },
+          {
+            "name": "Bus",
+            "approxDurationMinutes": 10,
+            "approxCost": "~HK$4-7/person",
+            "route": "Mong Kok → Yau Ma Tei"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 8,
+            "approxCost": "~HK$30-45 total",
+            "route": "Mong Kok → hotel"
+          }
+        ],
+        "recommended": "Walk"
+      }
     },
-    {"date":"2027-01-01","title":"Pack and prepare for departure","type":"rest","start":"21:25","end":"22:30","durationMinutes":65,"priority":"MUST","sequence":125,"placeKey":"bridal-tea-house"},
+    {
+      "date": "2027-01-01",
+      "title": "Pack and prepare for departure",
+      "type": "rest",
+      "start": "21:25",
+      "end": "22:30",
+      "durationMinutes": 65,
+      "priority": "MUST",
+      "sequence": 125,
+      "placeKey": "bridal-tea-house"
+    },
     {
       "date": "2027-01-02",
       "title": "Breakfast if flight timing permits",
@@ -1839,7 +3385,41 @@
       "placeKey": "hkg-airport",
       "transportInstructions": "Leave approximately 4h15–4h30 before flight departure. Target airport around 3 hours before departure. Taxi to Kowloon Station + Airport Express is the backup if timing/traffic/luggage requires it.",
       "estimatedCost": 69.2,
-      "estimatedCostCurrency": "HKD", "estimatedCostScope": "PARTY", "estimatedCostStatus": "EXPECTED"
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "A21 airport bus",
+            "approxDurationMinutes": 75,
+            "approxCost": "~HK$35/person",
+            "route": "Nathan Road / Yau Ma Tei → Hong Kong International Airport",
+            "notes": "Direct and luggage-friendly."
+          },
+          {
+            "name": "Taxi + Airport Express",
+            "approxDurationMinutes": 45,
+            "approxCost": "~HK$130-180 total for two",
+            "route": "Taxi to Kowloon Station → Airport Express",
+            "notes": "Faster but much more expensive."
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 35,
+            "approxCost": "~HK$280-360 total plus tolls",
+            "route": "Hotel → Airport",
+            "notes": "Most convenient door-to-door option."
+          },
+          {
+            "name": "MTR + Airport Express",
+            "approxDurationMinutes": 50,
+            "approxCost": "~HK$110-130/person",
+            "route": "Yau Ma Tei → Airport Express interchange → Airport"
+          }
+        ],
+        "recommended": "A21 airport bus"
+      }
     },
     {
       "date": "2027-01-02",
@@ -1908,36 +3488,253 @@
     }
   ],
   "bookings": [
-    {"key":"flight-vn982","type":"FLIGHT","title":"Vietnam Airlines VN982 Bengaluru → Hanoi","provider":"Vietnam Airlines","startsAt":"2026-12-24T23:35:00+05:30","endsAt":"2026-12-25T05:50:00+07:00","status":"CONFIRMED"},
-    {"key":"flight-vn592","type":"FLIGHT","title":"Vietnam Airlines VN592 Hanoi → Hong Kong","provider":"Vietnam Airlines","startsAt":"2026-12-25T10:35:00+07:00","endsAt":"2026-12-25T13:30:00+08:00","status":"CONFIRMED"},
-    {"key":"flight-vn593","type":"FLIGHT","title":"Vietnam Airlines VN593 Hong Kong → Hanoi","provider":"Vietnam Airlines","startsAt":"2027-01-02T14:30:00+08:00","endsAt":"2027-01-02T15:40:00+07:00","status":"CONFIRMED"},
-    {"key":"flight-vn983","type":"FLIGHT","title":"Vietnam Airlines VN983 Hanoi → Bengaluru","provider":"Vietnam Airlines","startsAt":"2027-01-02T19:10:00+07:00","endsAt":"2027-01-02T22:25:00+05:30","status":"CONFIRMED"},
-    {"key":"hotel-bridal-tea-house","type":"HOTEL","title":"Bridal Tea House Hotel Yau Ma Tei","startsAt":"2026-12-25T16:15:00+08:00","endsAt":"2027-01-02","status":"CONFIRMED"},
-    {"key":"aqua-luna","type":"CRUISE","title":"Aqua Luna Symphony of Lights sailing","startsAt":"2026-12-25T19:30:00+08:00","status":"PLACEHOLDER"},
-    {"key":"macau-ferry-out","type":"FERRY","title":"TurboJET Sheung Wan → Macau Outer Harbour","startsAt":"2026-12-28T07:30:00+08:00","status":"PLACEHOLDER"},
-    {"key":"macau-bungy","type":"ATTRACTION","title":"Macau Tower Bungy","startsAt":"2026-12-28T14:00:00+08:00","status":"PLACEHOLDER"},
-    {"key":"macau-ferry-back","type":"FERRY","title":"Taipa → Hong Kong Sheung Wan ferry","startsAt":"2026-12-28T22:00:00+08:00","status":"PLACEHOLDER"},
-    {"key":"ngong-ping","type":"CABLE_CAR","title":"Ngong Ping 360 Crystal Cabin one-way","startsAt":"2026-12-29T10:00:00+08:00","status":"PLACEHOLDER"},
-    {"key":"disneyland","type":"THEME_PARK","title":"Hong Kong Disneyland","startsAt":"2026-12-30T09:30:00+08:00","status":"PLACEHOLDER"}
+    {
+      "key": "flight-vn982",
+      "type": "FLIGHT",
+      "title": "Vietnam Airlines VN982 Bengaluru → Hanoi",
+      "provider": "Vietnam Airlines",
+      "startsAt": "2026-12-24T23:35:00+05:30",
+      "endsAt": "2026-12-25T05:50:00+07:00",
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "flight-vn592",
+      "type": "FLIGHT",
+      "title": "Vietnam Airlines VN592 Hanoi → Hong Kong",
+      "provider": "Vietnam Airlines",
+      "startsAt": "2026-12-25T10:35:00+07:00",
+      "endsAt": "2026-12-25T13:30:00+08:00",
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "flight-vn593",
+      "type": "FLIGHT",
+      "title": "Vietnam Airlines VN593 Hong Kong → Hanoi",
+      "provider": "Vietnam Airlines",
+      "startsAt": "2027-01-02T14:30:00+08:00",
+      "endsAt": "2027-01-02T15:40:00+07:00",
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "flight-vn983",
+      "type": "FLIGHT",
+      "title": "Vietnam Airlines VN983 Hanoi → Bengaluru",
+      "provider": "Vietnam Airlines",
+      "startsAt": "2027-01-02T19:10:00+07:00",
+      "endsAt": "2027-01-02T22:25:00+05:30",
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "hotel-bridal-tea-house",
+      "type": "HOTEL",
+      "title": "Bridal Tea House Hotel Yau Ma Tei",
+      "startsAt": "2026-12-25T16:15:00+08:00",
+      "endsAt": "2027-01-02",
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "aqua-luna",
+      "type": "CRUISE",
+      "title": "Aqua Luna Symphony of Lights sailing",
+      "startsAt": "2026-12-25T19:30:00+08:00",
+      "status": "PLACEHOLDER"
+    },
+    {
+      "key": "macau-ferry-out",
+      "type": "FERRY",
+      "title": "TurboJET Sheung Wan → Macau Outer Harbour",
+      "startsAt": "2026-12-28T07:30:00+08:00",
+      "status": "PLACEHOLDER"
+    },
+    {
+      "key": "macau-bungy",
+      "type": "ATTRACTION",
+      "title": "Macau Tower Bungy",
+      "startsAt": "2026-12-28T14:00:00+08:00",
+      "status": "PLACEHOLDER"
+    },
+    {
+      "key": "macau-ferry-back",
+      "type": "FERRY",
+      "title": "Taipa → Hong Kong Sheung Wan ferry",
+      "startsAt": "2026-12-28T22:00:00+08:00",
+      "status": "PLACEHOLDER"
+    },
+    {
+      "key": "ngong-ping",
+      "type": "CABLE_CAR",
+      "title": "Ngong Ping 360 Crystal Cabin one-way",
+      "startsAt": "2026-12-29T10:00:00+08:00",
+      "status": "PLACEHOLDER"
+    },
+    {
+      "key": "disneyland",
+      "type": "THEME_PARK",
+      "title": "Hong Kong Disneyland",
+      "startsAt": "2026-12-30T09:30:00+08:00",
+      "status": "PLACEHOLDER"
+    }
   ],
   "importantNotes": [
-    {"section":"Arrival & preparation","title":"Arrival at Hong Kong Airport","summary":"Withdraw only a small amount of HKD if needed. Do not exchange a large amount at the airport.","icon":"✈️","body":"Clear immigration.\nCollect luggage.\nActivate SIM → complete registration → verify mobile data.\nWithdraw only a small amount of HKD if needed.\nTake A21 and pay contactless if Octopus is not ready.\nCheck in.\nAfter check-in, buy two On-Loan Octopus cards at Yau Ma Tei MTR."},
-    {"section":"Food & language","title":"No beef / no beef broth","summary":"Show this phrase when soup or noodles are unclear.","icon":"🚫","copyText":"唔要牛肉，唔要牛湯。豬肉、雞肉、海鮮都可以。","pronunciation":"m4 jiu3 ngau4 juk6, m4 jiu3 ngau4 tong1. zyu1 juk6, gai1 juk6, hoi2 sin1 dou1 ho2 ji5.","meaning":"No beef, no beef broth. Pork, chicken and seafood are okay.","body":"Use this when soup or noodle broth is unclear. Ask the restaurant to confirm before ordering."},
-    {"section":"Food & language","title":"Thank you","summary":"For service or a small favour.","icon":"🙏","copyText":"唔該","pronunciation":"mm goi","meaning":"Thank you / please (for service).","body":"Use this for everyday service, such as when someone brings food or gives directions."},
-    {"section":"Food & language","title":"Excuse me / sorry","summary":"A polite way to get attention or apologise.","icon":"🙇","copyText":"唔好意思","pronunciation":"mm ho yi si","meaning":"Excuse me / sorry.","body":"Useful when navigating a busy restaurant or asking someone for help."},
-    {"section":"Food & language","title":"How much?","summary":"Ask the price.","icon":"💬","copyText":"幾多錢？","pronunciation":"gay doh chin?","meaning":"How much is it?","body":"Useful at markets, small shops, and food stalls."},
-    {"section":"Food & language","title":"Where is the toilet?","summary":"A practical question while out.","icon":"🚻","copyText":"廁所喺邊度？","pronunciation":"chee sor hai bin doh?","meaning":"Where is the toilet?","body":"Use this at restaurants, stations, and attractions."},
-    {"section":"Food & language","title":"Two people","summary":"For a table or queue.","icon":"2️⃣","copyText":"兩位","pronunciation":"leung wai","meaning":"A table for two.","body":"Use this when arriving at a restaurant."},
-    {"section":"Food & language","title":"English?","summary":"Ask whether English is available.","icon":"🇬🇧","copyText":"你識唔識講英文？","pronunciation":"nay sik mm sik gong ying man?","meaning":"Do you speak English?","body":"Ask this before trying a longer question."},
-    {"section":"Food & language","title":"I don't understand","summary":"When you need someone to slow down or repeat.","icon":"🤔","copyText":"我唔明白","pronunciation":"ngoh mm ming bak","meaning":"I don't understand.","body":"Pair with a gesture or translation app if needed."},
-    {"section":"Food & language","title":"Where is ___?","summary":"Fill in the place name.","icon":"📍","copyText":"___ 喺邊度？","pronunciation":"___ hai bin doh?","meaning":"Where is ___?","body":"Show the destination name on your phone, then use this phrase."},
-    {"section":"Money","title":"Payments","summary":"Octopus → transit and small purchases · card → larger purchases · cash → backup","icon":"💳","body":"Use physical Octopus for MTR, buses, Ding Ding, Star Ferry, convenience stores and small purchases. Use card for larger meals, tickets and shopping. Keep HK$1,500–2,000 total cash as a backup for markets, street food, Tai O and older restaurants."},
-    {"section":"Money","title":"ATM","summary":"Choose HKD · decline INR conversion / DCC","icon":"💵","body":"Use a debit or forex card at an ATM with reasonable overseas fees. Never use a normal credit card for cash unless its terms explicitly allow it. At an ATM or card terminal, always choose HKD and decline INR conversion, guaranteed INR amount, or ATM conversion."},
-    {"section":"Transport","title":"Octopus","summary":"Transit and small purchases; keep enough balance for the day.","icon":"🚇","body":"Starts with about HK$150 stored value. Top up another HK$250–350 if needed. Reload at MTR stations or supported convenience stores."},
-    {"section":"Transport","title":"Getting around","summary":"Google Maps = where · operator app = when · check MTR exit letter","icon":"🧭","body":"Find the destination in Google Maps. Check the operator app for live vehicle timing. In dense areas, confirm the MTR exit letter or stop name before walking away."},
-    {"section":"Macau","title":"Macau day essentials","summary":"Passport · MOP cash · roaming · ferry confirmation","icon":"🇲🇴","body":"Carry your passport. Enable Macau roaming. Carry small MOP cash. Confirm ferry details. Do not assume a standard Hong Kong Adult On-Loan Octopus works on Macau buses; use cards for larger purchases where accepted."},
-    {"section":"Connectivity","title":"Mobile data & roaming","summary":"Verify data, Maps, WhatsApp, transport apps and TripBoard on both phones.","icon":"📶","body":"SoSIM for both phones requires real-name registration. Keep Jio available for OTPs or calls where roaming permits. Buy the Greater China one-day Macau roaming package before the Macau day."},
-    {"section":"Connectivity","title":"Useful apps","summary":"Citybus · KMB / APP1933 · MTR Mobile · Maps · WhatsApp","icon":"📱","body":"Citybus: bus information. KMB / APP1933: KMB buses. HK Tramways: trams. MTR Mobile: MTR. Google Maps: navigation. WhatsApp: communication."},
-    {"section":"Emergency / Help","title":"Emergency","summary":"Police · fire · ambulance: 999","icon":"🆘","body":"For police, fire services, or an ambulance in Hong Kong, dial 999."}
+    {
+      "section": "Arrival & preparation",
+      "title": "Arrival at Hong Kong Airport",
+      "summary": "Withdraw only a small amount of HKD if needed. Do not exchange a large amount at the airport.",
+      "icon": "✈️",
+      "body": "Clear immigration.\nCollect luggage.\nActivate SIM → complete registration → verify mobile data.\nWithdraw only a small amount of HKD if needed.\nTake A21 and pay contactless if Octopus is not ready.\nCheck in.\nAfter check-in, buy two On-Loan Octopus cards at Yau Ma Tei MTR."
+    },
+    {
+      "section": "Food & language",
+      "title": "No beef / no beef broth",
+      "summary": "Show this phrase when soup or noodles are unclear.",
+      "icon": "🚫",
+      "copyText": "唔要牛肉，唔要牛湯。豬肉、雞肉、海鮮都可以。",
+      "pronunciation": "m4 jiu3 ngau4 juk6, m4 jiu3 ngau4 tong1. zyu1 juk6, gai1 juk6, hoi2 sin1 dou1 ho2 ji5.",
+      "meaning": "No beef, no beef broth. Pork, chicken and seafood are okay.",
+      "body": "Use this when soup or noodle broth is unclear. Ask the restaurant to confirm before ordering."
+    },
+    {
+      "section": "Food & language",
+      "title": "Thank you",
+      "summary": "For service or a small favour.",
+      "icon": "🙏",
+      "copyText": "唔該",
+      "pronunciation": "mm goi",
+      "meaning": "Thank you / please (for service).",
+      "body": "Use this for everyday service, such as when someone brings food or gives directions."
+    },
+    {
+      "section": "Food & language",
+      "title": "Excuse me / sorry",
+      "summary": "A polite way to get attention or apologise.",
+      "icon": "🙇",
+      "copyText": "唔好意思",
+      "pronunciation": "mm ho yi si",
+      "meaning": "Excuse me / sorry.",
+      "body": "Useful when navigating a busy restaurant or asking someone for help."
+    },
+    {
+      "section": "Food & language",
+      "title": "How much?",
+      "summary": "Ask the price.",
+      "icon": "💬",
+      "copyText": "幾多錢？",
+      "pronunciation": "gay doh chin?",
+      "meaning": "How much is it?",
+      "body": "Useful at markets, small shops, and food stalls."
+    },
+    {
+      "section": "Food & language",
+      "title": "Where is the toilet?",
+      "summary": "A practical question while out.",
+      "icon": "🚻",
+      "copyText": "廁所喺邊度？",
+      "pronunciation": "chee sor hai bin doh?",
+      "meaning": "Where is the toilet?",
+      "body": "Use this at restaurants, stations, and attractions."
+    },
+    {
+      "section": "Food & language",
+      "title": "Two people",
+      "summary": "For a table or queue.",
+      "icon": "2️⃣",
+      "copyText": "兩位",
+      "pronunciation": "leung wai",
+      "meaning": "A table for two.",
+      "body": "Use this when arriving at a restaurant."
+    },
+    {
+      "section": "Food & language",
+      "title": "English?",
+      "summary": "Ask whether English is available.",
+      "icon": "🇬🇧",
+      "copyText": "你識唔識講英文？",
+      "pronunciation": "nay sik mm sik gong ying man?",
+      "meaning": "Do you speak English?",
+      "body": "Ask this before trying a longer question."
+    },
+    {
+      "section": "Food & language",
+      "title": "I don't understand",
+      "summary": "When you need someone to slow down or repeat.",
+      "icon": "🤔",
+      "copyText": "我唔明白",
+      "pronunciation": "ngoh mm ming bak",
+      "meaning": "I don't understand.",
+      "body": "Pair with a gesture or translation app if needed."
+    },
+    {
+      "section": "Food & language",
+      "title": "Where is ___?",
+      "summary": "Fill in the place name.",
+      "icon": "📍",
+      "copyText": "___ 喺邊度？",
+      "pronunciation": "___ hai bin doh?",
+      "meaning": "Where is ___?",
+      "body": "Show the destination name on your phone, then use this phrase."
+    },
+    {
+      "section": "Money",
+      "title": "Payments",
+      "summary": "Octopus → transit and small purchases · card → larger purchases · cash → backup",
+      "icon": "💳",
+      "body": "Use physical Octopus for MTR, buses, Ding Ding, Star Ferry, convenience stores and small purchases. Use card for larger meals, tickets and shopping. Keep HK$1,500–2,000 total cash as a backup for markets, street food, Tai O and older restaurants."
+    },
+    {
+      "section": "Money",
+      "title": "ATM",
+      "summary": "Choose HKD · decline INR conversion / DCC",
+      "icon": "💵",
+      "body": "Use a debit or forex card at an ATM with reasonable overseas fees. Never use a normal credit card for cash unless its terms explicitly allow it. At an ATM or card terminal, always choose HKD and decline INR conversion, guaranteed INR amount, or ATM conversion."
+    },
+    {
+      "section": "Transport",
+      "title": "Octopus",
+      "summary": "Transit and small purchases; keep enough balance for the day.",
+      "icon": "🚇",
+      "body": "Starts with about HK$150 stored value. Top up another HK$250–350 if needed. Reload at MTR stations or supported convenience stores."
+    },
+    {
+      "section": "Transport",
+      "title": "Getting around",
+      "summary": "Google Maps = where · operator app = when · check MTR exit letter",
+      "icon": "🧭",
+      "body": "Find the destination in Google Maps. Check the operator app for live vehicle timing. In dense areas, confirm the MTR exit letter or stop name before walking away."
+    },
+    {
+      "section": "Macau",
+      "title": "Macau day essentials",
+      "summary": "Passport · MOP cash · roaming · ferry confirmation",
+      "icon": "🇲🇴",
+      "body": "Carry your passport. Enable Macau roaming. Carry small MOP cash. Confirm ferry details. Do not assume a standard Hong Kong Adult On-Loan Octopus works on Macau buses; use cards for larger purchases where accepted."
+    },
+    {
+      "section": "Connectivity",
+      "title": "Mobile data & roaming",
+      "summary": "Verify data, Maps, WhatsApp, transport apps and TripBoard on both phones.",
+      "icon": "📶",
+      "body": "SoSIM for both phones requires real-name registration. Keep Jio available for OTPs or calls where roaming permits. Buy the Greater China one-day Macau roaming package before the Macau day."
+    },
+    {
+      "section": "Connectivity",
+      "title": "Useful apps",
+      "summary": "Citybus · KMB / APP1933 · MTR Mobile · Maps · WhatsApp",
+      "icon": "📱",
+      "body": "Citybus: bus information. KMB / APP1933: KMB buses. HK Tramways: trams. MTR Mobile: MTR. Google Maps: navigation. WhatsApp: communication."
+    },
+    {
+      "section": "Emergency / Help",
+      "title": "Emergency",
+      "summary": "Police · fire · ambulance: 999",
+      "icon": "🆘",
+      "body": "For police, fire services, or an ambulance in Hong Kong, dial 999."
+    },
+    {
+      "section": "Transport",
+      "title": "Transport timing reminder",
+      "summary": "Fares and journey times are approximate — recheck close to travel.",
+      "icon": "ℹ️",
+      "body": "Transport fares and journey times are approximate planning values based on information available in September 2026. Recheck MTR, bus, ferry, Peak Tram and holiday/NYE operations shortly before travel."
+    }
   ]
 }

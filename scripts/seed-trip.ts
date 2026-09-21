@@ -8,7 +8,8 @@ const TimingType = z.enum(["FIXED", "TARGET", "FLEXIBLE", "OPTIONAL", "WEATHER_D
 const CostScope = z.enum(["PERSON", "PARTY"]);
 const CostStatus = z.enum(["COMMITTED", "EXPECTED", "OPTIONAL"]);
 const ItineraryDetails = z.object({
-  transportOptions: z.array(z.object({ label: z.string(), mode: z.enum(["recommended", "fastest", "cheapest", "scenic", "fallback", "emergency"]), instructions: z.string(), durationMinutes: z.number().int().positive().optional(), cost: z.string().optional() })).optional(),
+  transportOptions: z.array(z.object({ name: z.string(), approxDurationMinutes: z.number().int().positive().optional(), approxCost: z.string().optional(), route: z.string(), notes: z.string().optional() })).optional(),
+  recommended: z.string().optional(),
   farePerPerson: z.string().optional(), fareForTwo: z.string().optional(), attractionCost: z.string().optional(),
   booking: z.enum(["required", "prebooked", "optional", "not-required"]).optional(),
   foodNearby: z.array(z.string()).optional(), dietaryNote: z.string().optional(), weather: z.string().optional(), carry: z.array(z.string()).optional(), payWith: z.string().optional(), fallback: z.string().optional(), hotelReturn: z.string().optional(), quickNote: z.string().optional(),

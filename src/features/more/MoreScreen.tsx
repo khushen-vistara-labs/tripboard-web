@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState, type FormEvent } from "react";
-import { Bell, BellRing, BookOpenCheck, CalendarClock, Check, ChevronRight, Cloud, Copy, Download, ExternalLink, Eye, FileImage, FileText, History, LockKeyhole, LogOut, MapPin, Pencil, Plane, Plus, RefreshCw, Settings, Share2, ShieldCheck, Smartphone, StickyNote, Ticket, Trash2, Upload, UserMinus, Users, Volume2, Wifi, XCircle } from "lucide-react";
+import { Bell, BellRing, BookOpenCheck, CalendarClock, Check, ChevronRight, Cloud, Copy, Download, ExternalLink, Eye, FileImage, FileText, History, LockKeyhole, LogOut, MapPinned, MapPin, Pencil, Plane, Plus, RefreshCw, Settings, Share2, ShieldCheck, Smartphone, StickyNote, Ticket, Trash2, Upload, UserMinus, Users, Volume2, Wifi, XCircle } from "lucide-react";
 import type { TripBoardData } from "../trip/use-tripboard-data";
 import { getSupabaseBrowserClient } from "../../lib/supabase/client";
 import { Modal } from "../../components/ui/Modal";
@@ -219,7 +219,7 @@ function NoteModal({ note, categories, onClose, onSave }: { note?: TripNote; cat
 }
 
 function Overview({ onOpen }: { onOpen: (section: MoreSection) => void }) {
-  return <div className="more-grid">{sections.map((item) => { const Icon = item.icon; return <button key={item.id} onClick={() => onOpen(item.id)}><span className={`more-icon more-${item.id}`}><Icon size={20}/></span><div><strong>{item.label}</strong><p>{item.help}</p></div><ChevronRight size={18}/></button>; })}<article className="security-card"><ShieldCheck size={21}/><div><strong>Private by design</strong><p>Trip records and private files are only available to active members.</p></div></article><article className="sync-card"><Cloud size={21}/><div><strong>Everything is synced</strong><p>Offline changes automatically retry when you reconnect.</p></div></article></div>;
+  return <div className="more-grid"><a className="more-overview-link" href="/overview"><span className="more-icon more-overview"><MapPinned size={20}/></span><div><strong>Trip at a Glance</strong><p>Your full route, day by day, in seconds</p></div><ChevronRight size={18}/></a>{sections.map((item) => { const Icon = item.icon; return <button key={item.id} onClick={() => onOpen(item.id)}><span className={`more-icon more-${item.id}`}><Icon size={20}/></span><div><strong>{item.label}</strong><p>{item.help}</p></div><ChevronRight size={18}/></button>; })}<article className="security-card"><ShieldCheck size={21}/><div><strong>Private by design</strong><p>Trip records and private files are only available to active members.</p></div></article><article className="sync-card"><Cloud size={21}/><div><strong>Everything is synced</strong><p>Offline changes automatically retry when you reconnect.</p></div></article></div>;
 }
 
 function Bookings({ data, onOpenTicket, onDownload, onUpload, onReplaceFile, onDeleteFile, onDeleteBooking }: { data: TripBoardData; onOpenTicket: (path?: string) => Promise<void>; onDownload: (files: { name: string; path?: string }[]) => Promise<void>; onUpload: (bookingId: string, file: File) => Promise<void>; onReplaceFile: (bookingId: string, oldFile: { id?: string; path?: string }, file: File) => Promise<void>; onDeleteFile: (file: { id?: string; path?: string }) => Promise<void>; onDeleteBooking: (booking: Booking) => Promise<void> }) {

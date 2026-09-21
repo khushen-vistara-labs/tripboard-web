@@ -1,16 +1,17 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { BookOpenText, CalendarDays, CheckSquare2, CircleDollarSign, Cloud, CloudOff, Ellipsis, House, Plane, ShieldCheck, Sparkles } from "lucide-react";
+import { BookOpenText, CalendarDays, CheckSquare2, CircleDollarSign, Cloud, CloudOff, Ellipsis, House, MapPinned, Plane, ShieldCheck, Sparkles } from "lucide-react";
 import { DateTime } from "luxon";
 import type { Trip } from "../../types/domain";
 import { ThemeToggle } from "../ui/ThemeToggle";
 
-export type AppScreen = "today" | "plan" | "money" | "checklist" | "guide" | "immigration" | "more" | "bookings";
+export type AppScreen = "today" | "plan" | "overview" | "money" | "checklist" | "guide" | "immigration" | "more" | "bookings";
 
 const nav = [
   { id: "today", label: "Today", href: "/today", icon: House },
   { id: "plan", label: "Plan", href: "/plan", icon: CalendarDays },
+  { id: "overview", label: "Trip at a Glance", href: "/overview", icon: MapPinned },
   { id: "money", label: "Money", href: "/money", icon: CircleDollarSign },
   { id: "checklist", label: "Checklist", href: "/checklist", icon: CheckSquare2 },
   { id: "immigration", label: "Immigration", href: "/immigration", icon: ShieldCheck },
@@ -52,7 +53,7 @@ export function AppShell({ screen, trip, demoMode, online, children }: { screen:
     </section>
 
     <nav className="bottom-nav" aria-label="Primary navigation">
-      {nav.map((item) => { const Icon = item.icon; return <a key={item.id} className={active === item.id ? "active" : ""} href={item.href}><Icon size={20}/><span>{item.label}</span></a>; })}
+      {nav.filter((item) => item.id !== "overview").map((item) => { const Icon = item.icon; return <a key={item.id} className={active === item.id ? "active" : ""} href={item.href}><Icon size={20}/><span>{item.label}</span></a>; })}
     </nav>
   </main>;
 }

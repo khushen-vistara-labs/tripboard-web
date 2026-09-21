@@ -109,16 +109,18 @@ export interface ItineraryItem {
 }
 
 export interface TransportOption {
-  label: string;
-  mode: "recommended" | "fastest" | "cheapest" | "scenic" | "fallback" | "emergency";
-  instructions: string;
-  durationMinutes?: number;
-  cost?: string;
+  name: string;
+  approxDurationMinutes?: number;
+  approxCost?: string;
+  route: string;
+  notes?: string;
 }
 
 /** Structured, phone-friendly context for a planned itinerary item. */
 export interface ItineraryDetails {
   transportOptions?: TransportOption[];
+  /** Name of the preferred option from transportOptions. */
+  recommended?: string;
   farePerPerson?: string;
   fareForTwo?: string;
   attractionCost?: string;

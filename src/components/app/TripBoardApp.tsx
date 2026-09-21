@@ -11,6 +11,7 @@ import { MoneyScreen } from "../../features/money/MoneyScreen";
 import { ChecklistScreen } from "../../features/checklist/ChecklistScreen";
 import { ImmigrationScreen } from "../../features/immigration/ImmigrationScreen";
 import { MoreScreen } from "../../features/more/MoreScreen";
+import { TripOverviewScreen } from "../../features/overview/TripOverviewScreen";
 import type { InstallPromptEvent } from "../../features/more/MoreScreen";
 import { discardMutation, retryMutation } from "../../lib/offline/queue";
 import { offlineDb, type OfflineMutation } from "../../lib/offline/db";
@@ -65,6 +66,7 @@ function TripBoardInner({ screen }: { screen: AppScreen }) {
     {data.error && <div className="error-banner" role="status">{data.error}<button onClick={() => void data.refresh()}>Retry</button></div>}
     {screen === "today" && <TodayScreen data={data}/>} 
     {screen === "plan" && <PlanScreen data={data}/>} 
+    {screen === "overview" && <TripOverviewScreen data={data}/>}
     {screen === "money" && <MoneyScreen data={data}/>} 
     {screen === "checklist" && <ChecklistScreen data={data}/>} 
     {screen === "immigration" && <ImmigrationScreen data={data}/>}
