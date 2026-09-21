@@ -9,14 +9,14 @@ import { ThemeToggle } from "../ui/ThemeToggle";
 export type AppScreen = "today" | "plan" | "overview" | "money" | "checklist" | "guide" | "immigration" | "more" | "bookings";
 
 const nav = [
-  { id: "today", label: "Today", href: "/today", icon: House },
-  { id: "plan", label: "Plan", href: "/plan", icon: CalendarDays },
-  { id: "overview", label: "Trip at a Glance", href: "/overview", icon: MapPinned },
-  { id: "money", label: "Money", href: "/money", icon: CircleDollarSign },
-  { id: "checklist", label: "Checklist", href: "/checklist", icon: CheckSquare2 },
-  { id: "immigration", label: "Immigration", href: "/immigration", icon: ShieldCheck },
-  { id: "guide", label: "Trip Guide", href: "/guide", icon: BookOpenText },
-  { id: "more", label: "More", href: "/more", icon: Ellipsis },
+  { id: "today", label: "Today", compactLabel: "Today", href: "/today", icon: House },
+  { id: "plan", label: "Plan", compactLabel: "Plan", href: "/plan", icon: CalendarDays },
+  { id: "overview", label: "Trip at a Glance", compactLabel: "Overview", href: "/overview", icon: MapPinned },
+  { id: "money", label: "Money", compactLabel: "Money", href: "/money", icon: CircleDollarSign },
+  { id: "checklist", label: "Checklist", compactLabel: "List", href: "/checklist", icon: CheckSquare2 },
+  { id: "immigration", label: "Immigration", compactLabel: "Entry", href: "/immigration", icon: ShieldCheck },
+  { id: "guide", label: "Trip Guide", compactLabel: "Guide", href: "/guide", icon: BookOpenText },
+  { id: "more", label: "More", compactLabel: "More", href: "/more", icon: Ellipsis },
 ] as const;
 
 function formatTripDates(trip: Trip) {
@@ -53,7 +53,7 @@ export function AppShell({ screen, trip, demoMode, online, children }: { screen:
     </section>
 
     <nav className="bottom-nav" aria-label="Primary navigation">
-      {nav.filter((item) => item.id !== "overview").map((item) => { const Icon = item.icon; return <a key={item.id} className={active === item.id ? "active" : ""} href={item.href}><Icon size={20}/><span>{item.label}</span></a>; })}
+      {nav.filter((item) => item.id !== "overview").map((item) => { const Icon = item.icon; return <a key={item.id} className={active === item.id ? "active" : ""} href={item.href} aria-label={item.label}><Icon size={20}/><span className="bottom-nav-label"><span className="bottom-nav-label-full">{item.label}</span><span className="bottom-nav-label-compact">{item.compactLabel}</span></span></a>; })}
     </nav>
   </main>;
 }

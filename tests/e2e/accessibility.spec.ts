@@ -66,3 +66,14 @@ test("primary mobile controls meet the 44px touch-target baseline", async ({ pag
   }).map((element) => ({ html: element.outerHTML.slice(0, 140), height: Math.round(element.getBoundingClientRect().height) })));
   expect(undersized).toEqual([]);
 });
+
+test("mobile screens do not overflow horizontally", async ({ page }, testInfo) => {
+  test.skip(!testInfo.project.name.startsWith("mobile"), "Mobile-only responsive layout audit.");
+  await page.setViewportSize({ width: 360, height: 800 });
+  for (const route of ["/today", "/plan", "/overview", "/money", "/checklist", "/immigration", "/guide", "/bookings", "/more"]) {
+    await page.goto(route);
+    await skipUnlessPreview(page);
+    const metrics = await page.locator("html").evaluate((element) => ({ clientWidth: element.clientWidth, scrollWidth: element.scrollWidth }));
+    expect(metrics.scrollWidth, `${route} overflows the 360px mobile viewport`).toBeLessThanOrEqual(metrics.clientWidth);
+  }
+});

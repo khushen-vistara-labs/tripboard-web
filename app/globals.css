@@ -7211,3 +7211,85 @@ html[data-theme="dark"] .transport-options-list article > div > b {
   background: #234f79;
   color: #cfe7ff;
 }
+
+/* Mobile guardrails. Keep the timeline's flexible content column genuinely
+   flexible after the desktop transfer layout is applied later in this file. */
+@media (max-width: 700px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+  .app-content {
+    overflow-x: clip;
+    padding-bottom: calc(96px + env(safe-area-inset-bottom));
+  }
+  .app-content > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .plan-row {
+    grid-template-columns: 45px 18px minmax(0, 1fr);
+    gap: 8px;
+    align-items: start;
+  }
+  .plan-row .drag-handle {
+    display: none;
+  }
+  .plan-row time {
+    grid-column: 1;
+    padding-top: 4px;
+  }
+  .plan-row .plan-node {
+    grid-column: 2;
+    margin-top: 7px;
+  }
+  .plan-row-content {
+    grid-column: 3;
+    min-width: 0;
+    width: 100%;
+  }
+  .transport-options,
+  .transport-options-list,
+  .transport-options-list article {
+    min-width: 0;
+    width: 100%;
+  }
+  .row-actions {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: none;
+    justify-content: flex-start;
+  }
+  .bottom-nav a {
+    min-width: 0;
+    padding-inline: 2px;
+  }
+  .bottom-nav-label {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .bottom-nav-label-compact {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .bottom-nav {
+    height: 74px;
+  }
+  .bottom-nav a {
+    font-size: 8px;
+    gap: 3px;
+  }
+  .bottom-nav-label-full {
+    display: none;
+  }
+  .bottom-nav-label-compact {
+    display: inline;
+  }
+}
