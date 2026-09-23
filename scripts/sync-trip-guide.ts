@@ -6,6 +6,10 @@ type Seed = { trip: { name: string; endDate: string }; importantNotes: GuideNote
 
 const required = (name: string) => { const value = process.env[name]; if (!value) throw new Error(`Missing ${name}`); return value; };
 const seed = JSON.parse(await readFile(new URL("../seed/hong-kong-2026.json", import.meta.url), "utf8")) as Seed;
+const onlyTitleArg = process.argv.find((arg) => arg.startsWith("--only-title="));
+const onlyTitle = onlyTitleArg?.slice("--only-title=".length);
+const notesToSync = onlyTitle ? seed.importantNotes.filter((note) => note.title === onlyTitle) : seed.importantNotes;
+if (onlyTitle && notesToSync.length !== 1) throw new Error(`No unique guide note found for ${onlyTitle}`);
 const admin = createClient(required("SUPABASE_URL"), required("SUPABASE_SERVICE_ROLE_KEY"));
 const email = required("TRIPBOARD_SEED_OWNER_EMAIL");
 const { data: owner, error: ownerError } = await admin.from("profiles").select("id").eq("email", email).single();
@@ -16,7 +20,7 @@ const { data: existing, error: existingError } = await admin.from("trip_notes").
 if (existingError) throw existingError;
 const byTitle = new Map((existing ?? []).map((note) => [note.title, note.id]));
 let inserted = 0; let updated = 0;
-for (const [index, note] of seed.importantNotes.entries()) {
+for (const [index, note] of notesToSync.entries()) {
   const payload = { trip_id: trip.id, section: note.section, title: note.title, body: note.body, summary: note.summary ?? null, icon: note.icon ?? null, copy_text: note.copyText ?? null, pronunciation: note.pronunciation ?? null, meaning: note.meaning ?? null, sort_order: note.sortOrder ?? index, updated_by: owner.id };
   const id = byTitle.get(note.title);
   const result = id ? await admin.from("trip_notes").update(payload).eq("id", id) : await admin.from("trip_notes").insert({ ...payload, created_by: owner.id });
@@ -32,14 +36,16 @@ const retiredGuideTitles = [
   "Two physical On-Loan Adult Octopus cards",
   "Pre-trip rechecks",
 ];
-const retiredIds = retiredGuideTitles.flatMap((title) => byTitle.get(title) ? [byTitle.get(title)!] : []);
+const retiredIds = onlyTitle ? [] : retiredGuideTitles.flatMap((title) => byTitle.get(title) ? [byTitle.get(title)!] : []);
 if (retiredIds.length) {
   const { error: retireError } = await admin.from("trip_notes").delete().in("id", retiredIds);
   if (retireError) throw retireError;
 }
-const hotel = seed.places.find((place) => place.key === "bridal-tea-house");
-if (!hotel?.address) throw new Error("The Trip Guide hotel address is missing from the seed.");
-const { data: updatedHotel, error: hotelError } = await admin.from("places").update({ address: hotel.address, google_maps_url: hotel.googleMapsUrl ?? null }).eq("trip_id", trip.id).eq("name", hotel.name).select("id");
-if (hotelError) throw hotelError;
-if (!updatedHotel?.length) throw new Error("The Trip Guide hotel could not be found in the shared trip.");
-console.log(`Trip Guide synced: ${updated} updated, ${inserted} added, ${retiredIds.length} legacy records removed; hotel address refreshed.`);
+if (!onlyTitle) {
+  const hotel = seed.places.find((place) => place.key === "bridal-tea-house");
+  if (!hotel?.address) throw new Error("The Trip Guide hotel address is missing from the seed.");
+  const { data: updatedHotel, error: hotelError } = await admin.from("places").update({ address: hotel.address, google_maps_url: hotel.googleMapsUrl ?? null }).eq("trip_id", trip.id).eq("name", hotel.name).select("id");
+  if (hotelError) throw hotelError;
+  if (!updatedHotel?.length) throw new Error("The Trip Guide hotel could not be found in the shared trip.");
+}
+console.log(`Trip Guide synced: ${updated} updated, ${inserted} added${onlyTitle ? ` for ${onlyTitle}.` : `, ${retiredIds.length} legacy records removed; hotel address refreshed.`}`);
