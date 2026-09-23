@@ -17,19 +17,19 @@
     },
     {
       "date": "2026-12-26",
-      "title": "Boxing Day • Victoria Peak • Happy Valley • Central • Star Ferry"
+      "title": "Boxing Day • Day Peak • Happy Valley • Central • Lee Tung Avenue • Night Peak • Star Ferry"
     },
     {
       "date": "2026-12-27",
-      "title": "Old-School Dim Sum • Man Mo Temple • Wong Tai Sin • Nan Lian Garden • Sham Shui Po • Mong Kok • Temple Street"
+      "title": "Macau Full Day • Fisherman's Wharf • Historic Macau • Bungy • Cotai • Wynn Palace"
     },
     {
       "date": "2026-12-28",
-      "title": "Macau Full Day • Historic Macau • Bungy • Cotai at Night"
+      "title": "Old-School Dim Sum • Man Mo Temple • Wong Tai Sin • Nan Lian Garden • Sham Shui Po • Mong Kok • Temple Street"
     },
     {
       "date": "2026-12-29",
-      "title": "Tai O • Big Buddha • Po Lin Monastery • Sunset Ngong Ping 360 • Night Peak"
+      "title": "Ngong Ping 360 Round Trip • Big Buddha • Po Lin • Tai O • Sunset Cable Car"
     },
     {
       "date": "2026-12-30",
@@ -403,6 +403,46 @@
         "planningHours": "07:00–21:00 daily; recheck official hours before visit",
         "nearestMTR": "Diamond Hill Station Exit C2"
       }
+    },
+    {
+      "key": "lee-tung-avenue",
+      "name": "Lee Tung Avenue",
+      "address": "200 Queen's Road East, Wan Chai, Hong Kong",
+      "neighbourhood": "Wan Chai",
+      "category": "Festive Street / Shopping",
+      "priority": "WANT",
+      "expectedDurationMinutes": 120,
+      "details": {
+        "quickNote": "Christmas lights are the main plan. 'Let It Snow!' is conditional until the 2026 Christmas programme is officially announced.",
+        "currentReference": "In 2025, Let It Snow! ran on Fridays/Saturdays and selected Christmas dates at 19:30, 20:30 and 21:30. Recheck 2026 schedule before the trip."
+      }
+    },
+    {
+      "key": "macau-fishermans-wharf",
+      "name": "Macau Fisherman's Wharf",
+      "address": "Avenida da Amizade e Avenida Dr. Sun Yat-Sen, Macau",
+      "neighbourhood": "Outer Harbour",
+      "category": "Waterfront / Themed Attraction",
+      "priority": "WANT",
+      "expectedDurationMinutes": 40,
+      "details": {
+        "admission": "Free",
+        "quickNote": "About a 5-minute walk from Macau Outer Harbour Ferry Terminal. Use as a short first stop before the historic centre."
+      }
+    },
+    {
+      "key": "wynn-palace",
+      "name": "Wynn Palace",
+      "address": "Avenida da Nave Desportiva, Cotai, Macau",
+      "neighbourhood": "Cotai",
+      "category": "Integrated Resort / Fountain Show",
+      "priority": "MUST",
+      "expectedDurationMinutes": 50,
+      "details": {
+        "quickNote": "Prioritise the Performance Lake at night; SkyCab if time and queue allow.",
+        "performanceLake": "Current schedule: 18:00–00:00 every 20 minutes.",
+        "skycab": "Current Sunday–Thursday hours: 16:00–22:00, last entry 21:40."
+      }
     }
   ],
   "checklist": [
@@ -411,7 +451,7 @@
       "title": "Try old-school dim sum",
       "kind": "FOOD",
       "priority": "MUST",
-      "plannedDay": "2026-12-27",
+      "plannedDay": "2026-12-28",
       "recommendedPlace": "Luk On Kui",
       "placeKey": "luk-on-kui"
     },
@@ -502,7 +542,7 @@
       "title": "Try claypot rice; avoid beef versions",
       "kind": "FOOD",
       "priority": "MUST",
-      "plannedDay": "2026-12-27",
+      "plannedDay": "2026-12-28",
       "recommendedPlace": "Hing Kee Claypot Rice",
       "placeKey": "hing-kee"
     },
@@ -511,7 +551,7 @@
       "title": "Try Chinese sweet soup",
       "kind": "FOOD",
       "priority": "MUST",
-      "plannedDay": "2026-12-27",
+      "plannedDay": "2026-12-28",
       "recommendedPlace": "Kai Kai Dessert",
       "placeKey": "kai-kai-dessert"
     },
@@ -556,7 +596,7 @@
       "title": "Try a Portuguese egg tart in Macau",
       "kind": "FOOD",
       "priority": "MUST",
-      "plannedDay": "2026-12-28",
+      "plannedDay": "2026-12-27",
       "neighbourhood": "Macau Historic Centre"
     },
     {
@@ -564,7 +604,7 @@
       "title": "Try a Macau pork chop bun",
       "kind": "FOOD",
       "priority": "MUST",
-      "plannedDay": "2026-12-28",
+      "plannedDay": "2026-12-27",
       "neighbourhood": "Macau Historic Centre"
     },
     {
@@ -587,39 +627,46 @@
     },
     {
       "key": "book-macau-ferry-out",
-      "title": "Prebook 07:30 TurboJET Sheung Wan → Macau Outer Harbour",
+      "title": "Prebook 07:30 TurboJET Sheung Wan → Macau Outer Harbour for Sunday 27 Dec",
       "kind": "EXPERIENCE",
       "priority": "MUST",
-      "plannedDay": "2026-12-28",
+      "plannedDay": "2026-12-27",
       "dueDate": "2026-12-01",
-      "placeKey": "sheung-wan-ferry"
+      "placeKey": "sheung-wan-ferry",
+      "syncTitles": ["Prebook 07:30 TurboJET Sheung Wan → Macau Outer Harbour"],
+      "description": "Use Outer Harbour arrival because Fisherman's Wharf is beside the terminal and the historic centre comes next."
     },
     {
       "key": "book-bungy",
-      "title": "Prebook Macau Tower Bungy around 14:00–14:30",
+      "title": "Prebook Macau Tower Bungy around 14:00–14:30 on Sunday 27 Dec",
       "kind": "EXPERIENCE",
       "priority": "MUST",
-      "plannedDay": "2026-12-28",
+      "plannedDay": "2026-12-27",
       "dueDate": "2026-12-01",
-      "placeKey": "macau-tower"
+      "placeKey": "macau-tower",
+      "syncTitles": ["Prebook Macau Tower Bungy around 14:00–14:30"]
     },
     {
       "key": "book-macau-ferry-back",
-      "title": "Prebook around 22:00 Taipa → Sheung Wan ferry",
+      "title": "Prebook 23:00 Cotai Water Jet Taipa → Sheung Wan for Sunday 27 Dec",
       "kind": "EXPERIENCE",
       "priority": "MUST",
-      "plannedDay": "2026-12-28",
+      "plannedDay": "2026-12-27",
       "dueDate": "2026-12-01",
-      "placeKey": "taipa-ferry"
+      "placeKey": "taipa-ferry",
+      "syncTitles": ["Prebook around 22:00 Taipa → Sheung Wan ferry"],
+      "description": "Current schedule also lists 22:00 and 23:59. Recheck December timetable before booking."
     },
     {
       "key": "book-ngong-ping",
-      "title": "Prebook Ngong Ping 360 one-way Crystal Cabin",
+      "title": "Prebook Ngong Ping 360 round-trip Crystal Cabin",
       "kind": "EXPERIENCE",
       "priority": "MUST",
       "plannedDay": "2026-12-29",
       "dueDate": "2026-12-01",
-      "placeKey": "ngong-ping"
+      "placeKey": "ngong-ping",
+      "syncTitles": ["Prebook Ngong Ping 360 one-way Crystal Cabin"],
+      "description": "Use the cable car both ways: Tung Chung → Ngong Ping in the morning and Ngong Ping → Tung Chung late afternoon."
     },
     {
       "key": "book-disney",
@@ -641,12 +688,14 @@
     },
     {
       "key": "golden-reel",
-      "title": "Golden Reel if Bungy finishes on time and operating calendar permits",
+      "title": "Golden Reel only if Bungy finishes on time",
       "kind": "EXPERIENCE",
       "priority": "OPTIONAL",
-      "plannedDay": "2026-12-28",
+      "plannedDay": "2026-12-27",
       "recommendedPlace": "Studio City Macau",
-      "placeKey": "studio-city"
+      "placeKey": "studio-city",
+      "syncTitles": ["Golden Reel if Bungy finishes on time and operating calendar permits"],
+      "description": "Optional. Skip first if the Macau day is running late; protect Venetian/Parisian/Londoner and Wynn Palace at night."
     },
     {
       "key": "tai-o-boat",
@@ -701,7 +750,7 @@
       "title": "Buy Macau roaming add-on and verify data",
       "kind": "OTHER",
       "priority": "MUST",
-      "plannedDay": "2026-12-28",
+      "plannedDay": "2026-12-27",
       "description": "Buy before travel and confirm data works before leaving the ferry terminal if practical."
     },
     {
@@ -717,23 +766,24 @@
       "title": "Macau documents, cash and ferry check",
       "kind": "OTHER",
       "priority": "MUST",
-      "plannedDay": "2026-12-28",
+      "plannedDay": "2026-12-27",
       "description": "Carry both passports and Bungy confirmation; confirm ferries and roaming; carry small MOP cash; confirm Golden Reel only if interested."
     },
     {
       "key": "recheck-lantau",
-      "title": "Recheck Route 21, Route 11 and Ngong Ping conditions",
+      "title": "Recheck Route 21, Route 23 and Ngong Ping festive conditions",
       "kind": "OTHER",
       "priority": "MUST",
-      "plannedDay": "2026-12-28",
-      "description": "Recheck Route 21/11 timetables plus Ngong Ping weather and maintenance before 29 Dec."
+      "plannedDay": "2026-12-29",
+      "syncTitles": ["Recheck Route 21, Route 11 and Ngong Ping conditions"],
+      "description": "Recheck Route 21 timetable, Bus 23 fallback, Ngong Ping 360 festive opening hours, maintenance/weather notices and expected queues before 29 Dec."
     },
     {
       "key": "recheck-disney",
       "title": "Recheck Disneyland 30 Dec operating hours and show times",
       "kind": "OTHER",
       "priority": "MUST",
-      "plannedDay": "2026-12-29"
+      "plannedDay": "2026-12-30"
     },
     {
       "key": "nye-ready",
@@ -742,6 +792,51 @@
       "priority": "MUST",
       "plannedDay": "2026-12-31",
       "description": "Charge phones/power banks; carry water and warm layer; check weather, road closures, crowd controls, extended MTR and official countdown/fireworks arrangements."
+    },
+    {
+      "key": "recheck-lee-tung-snow",
+      "title": "Recheck Lee Tung Avenue 2026 Christmas / Let It Snow schedule",
+      "kind": "EXPERIENCE",
+      "priority": "MUST",
+      "plannedDay": "2026-12-26",
+      "dueDate": "2026-12-20",
+      "placeKey": "lee-tung-avenue",
+      "description": "Confirm whether Let It Snow runs on 26 Dec 2026, exact show times, and any crowd-control notices. If the 2025 pattern repeats, target the first evening show and leave immediately after it for the Peak."
+    },
+    {
+      "key": "boxing-day-peak-crowds",
+      "title": "Recheck Boxing Day Peak queues and traffic",
+      "kind": "OTHER",
+      "priority": "MUST",
+      "plannedDay": "2026-12-26",
+      "description": "26 Dec is a Hong Kong general holiday. Check Peak Tram queue reports, road traffic and any crowd-control notices. Keep the early morning tram visit; use road transport for the night Peak visit unless evening tram queues are clearly short."
+    },
+    {
+      "key": "macau-sunday-transport-check",
+      "title": "Recheck Sunday Macau ferries, leisure buses and taxi/shuttle arrangements",
+      "kind": "OTHER",
+      "priority": "MUST",
+      "plannedDay": "2026-12-27",
+      "dueDate": "2026-12-20",
+      "description": "Confirm 07:30 TurboJET outbound, 23:00 Cotai Water Jet return, Tourism and Leisure Bus routes, Wynn shuttle details and any holiday/festive transport changes."
+    },
+    {
+      "key": "wynn-palace-fountain",
+      "title": "See Wynn Palace Performance Lake at night",
+      "kind": "EXPERIENCE",
+      "priority": "MUST",
+      "plannedDay": "2026-12-27",
+      "placeKey": "wynn-palace",
+      "description": "Current evening shows run every 20 minutes after 18:00. SkyCab is optional if queue/time allow."
+    },
+    {
+      "key": "macau-fishermans-wharf-stop",
+      "title": "Quick Macau Fisherman's Wharf stop after arrival",
+      "kind": "EXPERIENCE",
+      "priority": "WANT",
+      "plannedDay": "2026-12-27",
+      "placeKey": "macau-fishermans-wharf",
+      "description": "Free and about a 5-minute walk from Outer Harbour. Keep it to roughly 35–40 minutes."
     }
   ],
   "itinerary": [
@@ -962,7 +1057,7 @@
       "transportInstructions": "Yau Ma Tei MTR → Central, then walk about 10–15 minutes to the Peak Tram terminus.",
       "details": {
         "weather": "Weather checkpoint: on 25 December evening, check Peak visibility, cloud base, rain and mist. Keep the early Peak plan when reasonably clear; otherwise make it movable and continue with Happy Valley/Central.",
-        "quickNote": "Boxing Day: wake 06:15, leave hotel 06:40, reach terminus about 07:10–07:15.",
+        "quickNote": "Boxing Day is a Hong Kong general holiday. Wake about 06:15 and leave around 06:40. Early arrival is intentional to beat the much heavier holiday crowds expected later in the day.",
         "transportOptions": [
           {
             "name": "MTR + walk",
@@ -984,7 +1079,8 @@
             "route": "Yau Ma Tei → Central, then short taxi"
           }
         ],
-        "recommended": "MTR + walk"
+        "recommended": "MTR + walk",
+        "crowdNote": "26 Dec is an official general holiday. Allow extra station/walking time and avoid shifting the morning Peak visit later unless weather forces it."
       }
     },
     {
@@ -998,15 +1094,15 @@
       "sequence": 20,
       "placeKey": "victoria-peak",
       "transportInstructions": "Buy single journey UP only; descend later by Bus 15.",
-      "estimatedCost": 152,
+      "estimatedCost": 164,
       "estimatedCostCurrency": "HKD",
       "estimatedCostScope": "PARTY",
       "estimatedCostStatus": "EXPECTED",
       "details": {
-        "farePerPerson": "about HK$76",
-        "fareForTwo": "about HK$152",
+        "farePerPerson": "HK$82 adult one-way",
+        "fareForTwo": "HK$164",
         "booking": "optional",
-        "quickNote": "Buy a single journey UP only; do not default to a return ticket.",
+        "quickNote": "Use the Peak Tram for the morning ascent while queues should be lighter. Current adult single fare is HK$82. Keep the night visit road-based to avoid paying for and queueing for the tram twice.",
         "weather": "First Peak visit is daylight / Lugard Road; Sky Terrace 428 is optional.",
         "transportOptions": [
           {
@@ -1034,7 +1130,8 @@
             "route": "Central → The Peak"
           }
         ],
-        "recommended": "Peak Tram"
+        "recommended": "Peak Tram",
+        "crowdNote": "Holiday morning: arrive before opening/first rush; later Boxing Day queues can be materially longer."
       }
     },
     {
@@ -1042,19 +1139,23 @@
       "title": "Victoria Peak and Lugard Road",
       "type": "attraction",
       "start": "07:45",
-      "end": "09:45",
-      "durationMinutes": 120,
+      "end": "09:35",
+      "durationMinutes": 110,
       "priority": "MUST",
       "sequence": 30,
       "placeKey": "victoria-peak",
-      "transportInstructions": "Prioritise Lugard Road / part of Peak Circle Walk. Sky Terrace 428 is optional and not necessary if visibility is good."
+      "transportInstructions": "Prioritise Lugard Road / part of Peak Circle Walk. Sky Terrace 428 is optional and not necessary if visibility is good.",
+      "details": {
+        "quickNote": "Daylight Peak visit: prioritise Lugard Road / Peak Circle views. Sky Terrace is optional.",
+        "crowdNote": "Keep this efficient; the second Peak visit tonight is for skyline lights."
+      }
     },
     {
       "date": "2026-12-26",
       "title": "Bus 15 down from The Peak",
       "type": "transport",
-      "start": "09:45",
-      "end": "10:35",
+      "start": "09:35",
+      "end": "10:25",
       "durationMinutes": 50,
       "priority": "WANT",
       "sequence": 40,
@@ -1092,15 +1193,16 @@
             "route": "The Peak → Happy Valley/Central"
           }
         ],
-        "recommended": "Bus 15"
+        "recommended": "Bus 15",
+        "crowdNote": "Boxing Day buses can fill quickly. If the Bus 15 queue is visibly long, use Green Minibus 1 or taxi and continue to Happy Valley."
       }
     },
     {
       "date": "2026-12-26",
       "title": "Transfer to Happy Valley",
       "type": "transport",
-      "start": "10:35",
-      "end": "10:50",
+      "start": "10:25",
+      "end": "10:40",
       "durationMinutes": 15,
       "priority": "WANT",
       "sequence": 45,
@@ -1140,8 +1242,8 @@
       "date": "2026-12-26",
       "title": "Cheung Hing Coffee Shop breakfast",
       "type": "food",
-      "start": "10:50",
-      "end": "11:35",
+      "start": "10:40",
+      "end": "11:25",
       "durationMinutes": 45,
       "priority": "WANT",
       "sequence": 50,
@@ -1152,8 +1254,8 @@
       "date": "2026-12-26",
       "title": "Happy Valley to Central by Ding Ding",
       "type": "transport",
-      "start": "11:35",
-      "end": "12:20",
+      "start": "11:25",
+      "end": "12:10",
       "durationMinutes": 45,
       "priority": "WANT",
       "sequence": 60,
@@ -1190,15 +1292,16 @@
             "route": "Happy Valley → Central"
           }
         ],
-        "recommended": "Ding Ding"
+        "recommended": "Ding Ding",
+        "crowdNote": "Holiday traffic can slow the tram; allow ~10–15 minutes of slippage without affecting the day."
       }
     },
     {
       "date": "2026-12-26",
       "title": "Central / Old Town walking route",
       "type": "attraction",
-      "start": "12:20",
-      "end": "13:05",
+      "start": "12:10",
+      "end": "12:55",
       "durationMinutes": 45,
       "priority": "WANT",
       "sequence": 70,
@@ -1208,9 +1311,9 @@
       "date": "2026-12-26",
       "title": "Tai Kwun",
       "type": "attraction",
-      "start": "13:05",
-      "end": "14:20",
-      "durationMinutes": 75,
+      "start": "12:55",
+      "end": "14:05",
+      "durationMinutes": 70,
       "priority": "WANT",
       "sequence": 80,
       "placeKey": "tai-kwun"
@@ -1219,8 +1322,8 @@
       "date": "2026-12-26",
       "title": "Lunch around Central",
       "type": "food",
-      "start": "14:20",
-      "end": "15:05",
+      "start": "14:05",
+      "end": "14:50",
       "durationMinutes": 45,
       "priority": "WANT",
       "sequence": 90,
@@ -1230,8 +1333,8 @@
       "date": "2026-12-26",
       "title": "PMQ",
       "type": "attraction",
-      "start": "15:05",
-      "end": "15:50",
+      "start": "14:50",
+      "end": "15:35",
       "durationMinutes": 45,
       "priority": "WANT",
       "sequence": 100,
@@ -1241,44 +1344,211 @@
       "date": "2026-12-26",
       "title": "Central Christmas atmosphere and harbourfront",
       "type": "attraction",
-      "start": "15:50",
-      "end": "17:30",
-      "durationMinutes": 100,
+      "start": "15:35",
+      "end": "17:10",
+      "durationMinutes": 95,
       "priority": "WANT",
-      "sequence": 110
+      "sequence": 110,
+      "details": {
+        "crowdNote": "Boxing Day afternoon will likely be busy around Central festive displays. Treat 17:10 as a firm leave-by target."
+      }
+    },
+    {
+      "date": "2026-12-26",
+      "title": "Central → Lee Tung Avenue",
+      "type": "transport",
+      "start": "17:10",
+      "end": "17:45",
+      "durationMinutes": 35,
+      "priority": "MUST",
+      "sequence": 115,
+      "placeKey": "lee-tung-avenue",
+      "timingType": "TARGET",
+      "transportInstructions": "Move to Wan Chai before the evening festive crowd builds. Lee Tung Avenue is near Wan Chai MTR Exit D.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "MTR + walk",
+            "approxDurationMinutes": 25,
+            "approxCost": "~HK$5-8/person",
+            "route": "Central → Wan Chai, Exit D → walk to Lee Tung Avenue"
+          },
+          {
+            "name": "Ding Ding",
+            "approxDurationMinutes": 30,
+            "approxCost": "HK$3.30/person",
+            "route": "Central → Wan Chai, then short walk",
+            "notes": "Scenic but slower in Boxing Day traffic."
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 15,
+            "approxCost": "~HK$60-90 total",
+            "route": "Central → Lee Tung Avenue"
+          }
+        ],
+        "recommended": "MTR + walk",
+        "crowdNote": "Prefer MTR over road transport if Central/Wan Chai traffic is heavy."
+      }
+    },
+    {
+      "date": "2026-12-26",
+      "title": "Lee Tung Avenue Christmas lights + Let It Snow if confirmed",
+      "type": "attraction",
+      "start": "17:45",
+      "end": "20:00",
+      "durationMinutes": 135,
+      "priority": "WANT",
+      "sequence": 120,
+      "placeKey": "lee-tung-avenue",
+      "details": {
+        "quickNote": "See the Christmas installations, take an early dinner/snack nearby, and target the first snow show if the 2026 programme repeats the 2025 pattern.",
+        "eventStatus": "CONDITIONAL",
+        "planningAssumption": "2025 'Let It Snow!' shows were at 19:30, 20:30 and 21:30 on selected dates including Fridays/Saturdays and Christmas-period dates. The 2026 schedule is not yet announced.",
+        "crowdNote": "Official 2025 material warned that crowd-control measures may be used during peak periods. If the 19:30 show is confirmed for 26 Dec 2026, be near Central Piazza by about 19:05–19:15 and leave after the first show.",
+        "fallback": "If no 2026 snow show is scheduled, enjoy the lights briefly and leave earlier for the Peak."
+      }
+    },
+    {
+      "date": "2026-12-26",
+      "title": "Lee Tung Avenue → Victoria Peak",
+      "type": "transport",
+      "start": "20:00",
+      "end": "20:50",
+      "durationMinutes": 50,
+      "priority": "MUST",
+      "sequence": 125,
+      "placeKey": "victoria-peak",
+      "timingType": "TARGET",
+      "transportInstructions": "This is Boxing Day evening. Do not default to the Peak Tram again: you already rode it in the morning and holiday queues can be substantial. Use the quickest practical road option.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 30,
+            "approxCost": "~HK$100-150 total",
+            "route": "Lee Tung Avenue → The Peak",
+            "notes": "Fastest door-to-door option if road traffic is moving."
+          },
+          {
+            "name": "MTR + Green Minibus 1",
+            "approxDurationMinutes": 50,
+            "approxCost": "~HK$18-22/person",
+            "route": "Wan Chai → Central/Hong Kong Station → Green Minibus 1 → The Peak",
+            "notes": "Minibus 1 full fare is currently HK$11.80."
+          },
+          {
+            "name": "Bus 15",
+            "approxDurationMinutes": 60,
+            "approxCost": "~HK$13/person",
+            "route": "Get to a suitable Route 15 stop in Central/Admiralty → The Peak",
+            "notes": "Cheapest direct road option but slowest in holiday traffic."
+          },
+          {
+            "name": "Peak Tram",
+            "approxDurationMinutes": 60,
+            "approxCost": "HK$82/person one-way",
+            "route": "Wan Chai → Peak Tram Lower Terminus → The Peak",
+            "notes": "Not recommended for the second visit because Boxing Day evening queues may be long."
+          }
+        ],
+        "recommended": "Taxi",
+        "crowdNote": "Build in ~20 minutes of holiday-delay margin. If road traffic looks severe, switch to MTR + Green Minibus 1 rather than waiting for a taxi."
+      }
+    },
+    {
+      "date": "2026-12-26",
+      "title": "Victoria Peak night skyline",
+      "type": "attraction",
+      "start": "20:50",
+      "end": "21:50",
+      "durationMinutes": 60,
+      "priority": "MUST",
+      "sequence": 130,
+      "placeKey": "victoria-peak",
+      "transportInstructions": "Focus on the night skyline. Keep this second Peak visit tighter than the morning visit.",
+      "details": {
+        "quickNote": "Peak Tram runs until 23:00 and Sky Terrace 428 currently closes at 22:00.",
+        "crowdNote": "Boxing Day evening can be very busy. Free viewpoints are fine if Sky Terrace queues are not worth it."
+      }
+    },
+    {
+      "date": "2026-12-26",
+      "title": "Victoria Peak → Central",
+      "type": "transport",
+      "start": "21:50",
+      "end": "22:25",
+      "durationMinutes": 35,
+      "priority": "MUST",
+      "sequence": 135,
+      "timingType": "TARGET",
+      "transportInstructions": "Descend by road to avoid the Peak Tram holiday queue.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Green Minibus 1",
+            "approxDurationMinutes": 30,
+            "approxCost": "HK$11.80/person",
+            "route": "The Peak → Hong Kong Station Public Transport Interchange"
+          },
+          {
+            "name": "Bus 15",
+            "approxDurationMinutes": 45,
+            "approxCost": "~HK$13/person",
+            "route": "The Peak → Central"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 25,
+            "approxCost": "~HK$100-150 total",
+            "route": "The Peak → Central Ferry Piers"
+          },
+          {
+            "name": "Peak Tram",
+            "approxDurationMinutes": 30,
+            "approxCost": "HK$82/person one-way",
+            "route": "The Peak → Peak Tram Lower Terminus",
+            "notes": "Only use if the queue is clearly short."
+          }
+        ],
+        "recommended": "Green Minibus 1",
+        "crowdNote": "If the minibus queue is too long, switch to Bus 15 or taxi."
+      }
     },
     {
       "date": "2026-12-26",
       "title": "Star Ferry Central → Tsim Sha Tsui",
       "type": "transport",
-      "start": "17:45",
-      "end": "18:15",
-      "durationMinutes": 30,
+      "start": "22:30",
+      "end": "22:55",
+      "durationMinutes": 25,
       "priority": "WANT",
-      "sequence": 120,
+      "sequence": 140,
       "placeKey": "star-ferry-central",
       "estimatedCost": 13,
       "estimatedCostCurrency": "HKD",
       "estimatedCostScope": "PARTY",
       "estimatedCostStatus": "EXPECTED",
+      "transportInstructions": "Take the late Star Ferry back to Kowloon if you reach Central comfortably before the last service.",
       "details": {
         "transportOptions": [
           {
             "name": "Star Ferry",
-            "approxDurationMinutes": 15,
-            "approxCost": "~HK$5-7/person",
-            "route": "Central Pier → Tsim Sha Tsui Pier",
-            "notes": "Best harbour experience."
+            "approxDurationMinutes": 20,
+            "approxCost": "HK$6.50/person upper deck on public holiday",
+            "route": "Central Pier 7 → Tsim Sha Tsui",
+            "notes": "Current public-holiday service runs until 23:30."
           },
           {
             "name": "MTR",
             "approxDurationMinutes": 15,
             "approxCost": "~HK$11-15/person",
-            "route": "Central/Admiralty → Tsim Sha Tsui"
+            "route": "Central/Admiralty → Tsim Sha Tsui",
+            "notes": "Use if Peak descent runs late."
           },
           {
             "name": "Taxi",
-            "approxDurationMinutes": 15,
+            "approxDurationMinutes": 20,
             "approxCost": "~HK$100-140 total plus tunnel toll",
             "route": "Central → Tsim Sha Tsui"
           }
@@ -1288,17 +1558,704 @@
     },
     {
       "date": "2026-12-26",
-      "title": "Jordan / Yau Ma Tei dinner",
-      "type": "food",
-      "start": "19:00",
-      "end": "20:30",
-      "durationMinutes": 90,
+      "title": "Tsim Sha Tsui → hotel / late supper",
+      "type": "transport",
+      "start": "22:55",
+      "end": "23:25",
+      "durationMinutes": 30,
       "priority": "WANT",
-      "sequence": 130,
-      "transportInstructions": "Choose Jordan noodles or spontaneous Temple Street meal. Confirm noodle broth contains no beef."
+      "sequence": 145,
+      "transportInstructions": "Return to Yau Ma Tei/Jordan and eat only if still hungry after Lee Tung Avenue.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 15,
+            "approxCost": "~HK$5-7/person",
+            "route": "Tsim Sha Tsui → Yau Ma Tei"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 10,
+            "approxCost": "~HK$45-65 total",
+            "route": "Tsim Sha Tsui → Bridal Tea House / Yau Ma Tei"
+          },
+          {
+            "name": "Walk",
+            "approxDurationMinutes": 35,
+            "approxCost": "Free",
+            "route": "Tsim Sha Tsui → Jordan → Yau Ma Tei",
+            "notes": "Only if energy is good."
+          }
+        ],
+        "recommended": "MTR"
+      }
     },
     {
       "date": "2026-12-27",
+      "title": "Taxi to Hong Kong Macau Ferry Terminal",
+      "type": "transport",
+      "start": "06:10",
+      "end": "06:45",
+      "durationMinutes": 35,
+      "priority": "MUST",
+      "sequence": 10,
+      "placeKey": "sheung-wan-ferry",
+      "timingType": "TARGET",
+      "estimatedCost": 100,
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
+      "transportInstructions": "Use taxi from Yau Ma Tei because of the early Sunday start. Target the terminal by 06:35–06:45 for the 07:30 ferry.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 30,
+            "approxCost": "~HK$90–120 total",
+            "route": "Yau Ma Tei → Hong Kong Macau Ferry Terminal, Sheung Wan"
+          },
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 35,
+            "approxCost": "~HK$12–16/person",
+            "route": "Yau Ma Tei → Central/Sheung Wan + walk",
+            "notes": "Not recommended because first-train timing leaves less ferry margin."
+          }
+        ],
+        "recommended": "Taxi"
+      }
+    },
+    {
+      "date": "2026-12-27",
+      "title": "TurboJET Sheung Wan → Macau Outer Harbour",
+      "type": "transport",
+      "start": "07:30",
+      "end": "08:30",
+      "durationMinutes": 60,
+      "priority": "MUST",
+      "sequence": 20,
+      "placeKey": "sheung-wan-ferry",
+      "timingType": "FIXED",
+      "estimatedCost": 424,
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
+      "transportInstructions": "Take the 07:30 ferry to Outer Harbour. Sunday uses weekend fare. Be at the terminal at least 30 minutes before departure.",
+      "details": {
+        "booking": "required",
+        "farePerPerson": "about HK$212 weekend day-sailing economy",
+        "fareForTwo": "about HK$424",
+        "crowdNote": "Sunday can be busier than Monday. Prebook and keep the early sailing to stay ahead of day-trip crowds."
+      }
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Macau immigration and arrival buffer",
+      "type": "other",
+      "start": "08:30",
+      "end": "09:00",
+      "durationMinutes": 30,
+      "priority": "MUST",
+      "sequence": 25,
+      "timingType": "BUFFER",
+      "transportInstructions": "Clear immigration, verify mobile data/roaming and keep passports accessible."
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Walk to Macau Fisherman's Wharf",
+      "type": "transport",
+      "start": "09:00",
+      "end": "09:10",
+      "durationMinutes": 10,
+      "priority": "WANT",
+      "sequence": 30,
+      "placeKey": "macau-fishermans-wharf",
+      "transportInstructions": "Fisherman's Wharf is beside the Outer Harbour terminal.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Walk",
+            "approxDurationMinutes": 5,
+            "approxCost": "Free",
+            "route": "Outer Harbour Ferry Terminal → Macau Fisherman's Wharf"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 5,
+            "approxCost": "~MOP21–30 total",
+            "route": "Outer Harbour Ferry Terminal → Fisherman's Wharf",
+            "notes": "Unnecessary unless mobility or weather makes walking inconvenient."
+          }
+        ],
+        "recommended": "Walk"
+      }
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Macau Fisherman's Wharf",
+      "type": "attraction",
+      "start": "09:10",
+      "end": "09:45",
+      "durationMinutes": 35,
+      "priority": "WANT",
+      "sequence": 40,
+      "placeKey": "macau-fishermans-wharf",
+      "details": {
+        "attractionCost": "Free",
+        "quickNote": "Quick waterfront / Roman-style photo stop. Do not let this eat into the historic-centre morning."
+      }
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Fisherman's Wharf → Senado Square",
+      "type": "transport",
+      "start": "09:45",
+      "end": "10:05",
+      "durationMinutes": 20,
+      "priority": "MUST",
+      "sequence": 45,
+      "placeKey": "senado-square",
+      "transportInstructions": "Use a metered taxi to save time. Macau taxi fares are regulated; ask the driver to use the meter.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 12,
+            "approxCost": "~MOP45–65 total",
+            "route": "Fisherman's Wharf → Senado Square"
+          },
+          {
+            "name": "Public bus",
+            "approxDurationMinutes": 30,
+            "approxCost": "~MOP6/person",
+            "route": "Outer Harbour/NAPE area → central Macau; choose the live route with the shortest walk",
+            "notes": "Cheaper but slower and less predictable on a Sunday."
+          },
+          {
+            "name": "Walk",
+            "approxDurationMinutes": 40,
+            "approxCost": "Free",
+            "route": "Fisherman's Wharf → Senado Square",
+            "notes": "Possible, but wastes useful sightseeing time."
+          }
+        ],
+        "recommended": "Taxi"
+      }
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Senado Square",
+      "type": "attraction",
+      "start": "10:05",
+      "end": "10:35",
+      "durationMinutes": 30,
+      "priority": "MUST",
+      "sequence": 50,
+      "placeKey": "senado-square",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 15,
+            "approxCost": "~MOP 60-90 total",
+            "route": "Macau Outer Harbour Ferry Terminal → Senado Square"
+          },
+          {
+            "name": "Public bus",
+            "approxDurationMinutes": 25,
+            "approxCost": "~MOP 6/person",
+            "route": "Outer Harbour → Avenida de Almeida Ribeiro / Senado area"
+          },
+          {
+            "name": "Hotel/casino shuttle + walk",
+            "approxDurationMinutes": 30,
+            "approxCost": "Free",
+            "route": "Use a convenient free shuttle toward central Macau, then walk",
+            "notes": "Only if the route actually helps; do not detour for a free ride."
+          }
+        ],
+        "recommended": "Taxi"
+      }
+    },
+    {
+      "date": "2026-12-27",
+      "title": "St Dominic's Church",
+      "type": "attraction",
+      "start": "10:35",
+      "end": "10:55",
+      "durationMinutes": 20,
+      "priority": "WANT",
+      "sequence": 60,
+      "placeKey": "st-dominics"
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Walk to Ruins of St Paul's via historic streets",
+      "type": "attraction",
+      "start": "10:55",
+      "end": "11:20",
+      "durationMinutes": 25,
+      "priority": "WANT",
+      "sequence": 70,
+      "transportInstructions": "Walk through pedestrian streets, bakeries, almond-cookie and snack shops."
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Ruins of St Paul's",
+      "type": "attraction",
+      "start": "11:20",
+      "end": "12:00",
+      "durationMinutes": 40,
+      "priority": "MUST",
+      "sequence": 80,
+      "placeKey": "ruins-st-pauls"
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Monte Fort",
+      "type": "attraction",
+      "start": "12:00",
+      "end": "12:35",
+      "durationMinutes": 35,
+      "priority": "WANT",
+      "sequence": 90,
+      "placeKey": "monte-fort"
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Macanese / Portuguese lunch",
+      "type": "food",
+      "start": "12:35",
+      "end": "13:10",
+      "durationMinutes": 35,
+      "priority": "MUST",
+      "sequence": 100,
+      "transportInstructions": "Keep lunch efficient near the historic centre. Portuguese-style chicken, pork, seafood or Macanese rice; try a Portuguese egg tart and/or pork chop bun. No beef.",
+      "estimatedCost": 550,
+      "estimatedCostCurrency": "MOP",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED"
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Historic centre → Macau Tower",
+      "type": "transport",
+      "start": "13:10",
+      "end": "13:35",
+      "durationMinutes": 25,
+      "priority": "MUST",
+      "sequence": 110,
+      "placeKey": "macau-tower",
+      "timingType": "TARGET",
+      "transportInstructions": "This leg protects the Bungy booking. Use a metered taxi rather than a slow bus.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 15,
+            "approxCost": "~MOP45–70 total",
+            "route": "Historic centre → Macau Tower"
+          },
+          {
+            "name": "Public bus",
+            "approxDurationMinutes": 35,
+            "approxCost": "~MOP6/person",
+            "route": "Central Macau → Macau Tower",
+            "notes": "Use only if comfortably ahead of the Bungy check-in time."
+          }
+        ],
+        "recommended": "Taxi",
+        "crowdNote": "Sunday traffic can add delay. Leave immediately after lunch."
+      }
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Macau Tower and Bungy block",
+      "type": "activity",
+      "start": "13:35",
+      "end": "16:00",
+      "durationMinutes": 145,
+      "priority": "MUST",
+      "sequence": 120,
+      "placeKey": "macau-tower",
+      "transportInstructions": "Allow full block for registration, weighing, briefing, equipment, waiting, jump, photos/video and observation. Bungy cost intentionally excluded from budget.",
+      "details": {
+        "booking": "prebooked",
+        "quickNote": "Target the 14:00–14:30 booking and arrive at least 30 minutes early. Keep the full block for registration, waiting, jump, photos/video and observation.",
+        "carry": [
+          "Booking confirmation",
+          "passport/ID if required",
+          "comfortable clothing"
+        ]
+      }
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Macau Tower → Studio City / Cotai",
+      "type": "transport",
+      "start": "16:00",
+      "end": "16:30",
+      "durationMinutes": 30,
+      "priority": "MUST",
+      "sequence": 130,
+      "placeKey": "studio-city",
+      "transportInstructions": "Use taxi for the Peninsula → Cotai jump. This is where public buses can cost too much time.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 20,
+            "approxCost": "~MOP80–110 total",
+            "route": "Macau Tower → Studio City"
+          },
+          {
+            "name": "Public bus",
+            "approxDurationMinutes": 50,
+            "approxCost": "~MOP6/person",
+            "route": "Macau Tower area → Cotai",
+            "notes": "Not recommended on this time-sensitive day."
+          }
+        ],
+        "recommended": "Taxi"
+      }
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Golden Reel at Studio City",
+      "type": "activity",
+      "start": "16:30",
+      "end": "17:10",
+      "durationMinutes": 40,
+      "priority": "OPTIONAL",
+      "sequence": 140,
+      "placeKey": "studio-city",
+      "transportInstructions": "Optional only. Skip immediately if Bungy runs late or you want more relaxed time in the major resorts.",
+      "estimatedCost": 200,
+      "estimatedCostCurrency": "MOP",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "OPTIONAL",
+      "details": {
+        "booking": "optional",
+        "attractionCost": "about MOP 100/person",
+        "fareForTwo": "about MOP 200",
+        "fallback": "Skip Golden Reel first; protect Venetian, Londoner/Parisian and Wynn Palace at night.",
+        "transportOptions": [
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 20,
+            "approxCost": "~MOP 80-120 total",
+            "route": "Macau Tower → Studio City"
+          },
+          {
+            "name": "Public bus",
+            "approxDurationMinutes": 35,
+            "approxCost": "~MOP 6/person",
+            "route": "Macau Tower area → Cotai / Studio City"
+          },
+          {
+            "name": "Skip Golden Reel and taxi directly to Venetian",
+            "approxDurationMinutes": 20,
+            "approxCost": "~MOP 80-120 total",
+            "route": "Macau Tower → Venetian",
+            "notes": "Best fallback if Bungy runs late."
+          }
+        ],
+        "recommended": "Taxi"
+      }
+    },
+    {
+      "date": "2026-12-27",
+      "title": "The Venetian Macao",
+      "type": "attraction",
+      "start": "17:20",
+      "end": "18:20",
+      "durationMinutes": 60,
+      "priority": "WANT",
+      "sequence": 150,
+      "placeKey": "venetian",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Walk / resort connection",
+            "approxDurationMinutes": 15,
+            "approxCost": "Free",
+            "route": "Studio City → Venetian/Cotai Strip if doing Golden Reel first"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 8,
+            "approxCost": "~MOP 35-50 total",
+            "route": "Studio City → Venetian"
+          },
+          {
+            "name": "Free resort shuttle",
+            "approxDurationMinutes": 15,
+            "approxCost": "Free",
+            "route": "Use only if a convenient direct shuttle is available"
+          }
+        ],
+        "recommended": "Walk / resort connection",
+        "quickNote": "Casino entry is optional; adults 21+ can enter. Carry passport/ID. Do not plan photography on the gaming floor."
+      },
+      "transportInstructions": "Walk/short internal Cotai transfer from Studio City area. See the Grand Canal/Shoppes and spend ~10–15 minutes inside the casino floor if interested."
+    },
+    {
+      "date": "2026-12-27",
+      "title": "The Parisian Macao",
+      "type": "attraction",
+      "start": "18:25",
+      "end": "18:55",
+      "durationMinutes": 30,
+      "priority": "WANT",
+      "sequence": 160,
+      "placeKey": "parisian",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Walk",
+            "approxDurationMinutes": 10,
+            "approxCost": "Free",
+            "route": "Venetian → Parisian via Cotai pedestrian connections"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 5,
+            "approxCost": "~MOP 30-40 total",
+            "route": "Venetian → Parisian"
+          }
+        ],
+        "recommended": "Walk"
+      },
+      "transportInstructions": "Walk from Venetian via the connected Cotai resort area. Prioritise Eiffel Tower exterior/night view and a quick casino/interior look."
+    },
+    {
+      "date": "2026-12-27",
+      "title": "The Londoner Macao",
+      "type": "attraction",
+      "start": "19:00",
+      "end": "19:45",
+      "durationMinutes": 45,
+      "priority": "WANT",
+      "sequence": 170,
+      "placeKey": "londoner",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Walk",
+            "approxDurationMinutes": 10,
+            "approxCost": "Free",
+            "route": "Parisian → Londoner via Cotai pedestrian connections"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 5,
+            "approxCost": "~MOP 30-40 total",
+            "route": "Parisian → Londoner"
+          }
+        ],
+        "recommended": "Walk"
+      },
+      "transportInstructions": "Walk from Parisian. Prioritise the exterior/façade, themed interiors and a short casino walk-through."
+    },
+    {
+      "date": "2026-12-27",
+      "title": "The Londoner → Wynn Palace",
+      "type": "transport",
+      "start": "19:45",
+      "end": "20:05",
+      "durationMinutes": 20,
+      "priority": "MUST",
+      "sequence": 180,
+      "placeKey": "wynn-palace",
+      "transportInstructions": "Wynn Palace is nearby in Cotai; use the fastest practical option rather than waiting a long time for a shuttle.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 10,
+            "approxCost": "~MOP30–45 total",
+            "route": "The Londoner → Wynn Palace"
+          },
+          {
+            "name": "Walk",
+            "approxDurationMinutes": 25,
+            "approxCost": "Free",
+            "route": "The Londoner → Wynn Palace",
+            "notes": "Reasonable if weather and energy are good."
+          },
+          {
+            "name": "Resort shuttle",
+            "approxDurationMinutes": 20,
+            "approxCost": "Free",
+            "route": "Use only if a convenient direct/near-direct service is operating when you are ready",
+            "notes": "Do not wait around just to save a short taxi fare."
+          }
+        ],
+        "recommended": "Taxi"
+      }
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Wynn Palace Performance Lake + SkyCab if time",
+      "type": "attraction",
+      "start": "20:05",
+      "end": "20:55",
+      "durationMinutes": 50,
+      "priority": "MUST",
+      "sequence": 190,
+      "placeKey": "wynn-palace",
+      "details": {
+        "attractionCost": "Performance Lake free; SkyCab currently complimentary",
+        "quickNote": "At night the Performance Lake currently runs every 20 minutes. On Sundays SkyCab currently runs until 22:00 with last entry 21:40.",
+        "priorityRule": "Fountain first. SkyCab only if the queue is reasonable."
+      }
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Dinner in Cotai",
+      "type": "food",
+      "start": "20:55",
+      "end": "21:35",
+      "durationMinutes": 40,
+      "priority": "WANT",
+      "sequence": 200,
+      "estimatedCost": 500,
+      "estimatedCostCurrency": "MOP",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
+      "transportInstructions": "Eat at Wynn Palace or nearby Cotai depending queues. Keep dinner to ~40 minutes to protect the 23:00 ferry."
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Wynn Palace → Taipa Ferry Terminal",
+      "type": "transport",
+      "start": "21:35",
+      "end": "22:00",
+      "durationMinutes": 25,
+      "priority": "MUST",
+      "sequence": 210,
+      "placeKey": "taipa-ferry",
+      "timingType": "TARGET",
+      "transportInstructions": "Do not rely on a long shuttle chain this late. Use taxi unless a direct shuttle is immediately available.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 15,
+            "approxCost": "~MOP45–65 total",
+            "route": "Wynn Palace → Taipa Ferry Terminal",
+            "notes": "An MOP8 terminal-origin surcharge applies when boarding a taxi at Taipa Ferry Terminal, not when arriving there."
+          },
+          {
+            "name": "Resort shuttle",
+            "approxDurationMinutes": 25,
+            "approxCost": "Free",
+            "route": "Use a direct/near-direct resort shuttle only if departure timing is convenient",
+            "notes": "Do not wait and risk the ferry."
+          },
+          {
+            "name": "Public bus",
+            "approxDurationMinutes": 35,
+            "approxCost": "~MOP6/person",
+            "route": "Cotai → Taipa Ferry Terminal",
+            "notes": "Fallback only."
+          }
+        ],
+        "recommended": "Taxi"
+      }
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Ferry terminal check-in / immigration buffer",
+      "type": "other",
+      "start": "22:00",
+      "end": "23:00",
+      "durationMinutes": 60,
+      "priority": "MUST",
+      "sequence": 220,
+      "placeKey": "taipa-ferry",
+      "details": {
+        "quickNote": "Use the buffer for ticketing/check-in, immigration, toilets and snacks. If the evening finishes early, ask about an earlier sailing only if convenient; do not depend on it."
+      }
+    },
+    {
+      "date": "2026-12-27",
+      "title": "Cotai Water Jet Taipa → Hong Kong Sheung Wan",
+      "type": "transport",
+      "start": "23:00",
+      "end": "23:59",
+      "durationMinutes": 59,
+      "priority": "MUST",
+      "sequence": 230,
+      "placeKey": "taipa-ferry",
+      "timingType": "FIXED",
+      "estimatedCost": 484,
+      "estimatedCostCurrency": "MOP",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
+      "transportInstructions": "Prebook the 23:00 Taipa → Sheung Wan Cotai Water Jet. Current schedule also lists 22:00 and 23:59, but recheck December service before booking.",
+      "details": {
+        "booking": "required",
+        "farePerPerson": "about MOP242 night sailing",
+        "fareForTwo": "about MOP484",
+        "transportOptions": [
+          {
+            "name": "Cotai Water Jet 23:00",
+            "approxDurationMinutes": 60,
+            "approxCost": "MOP242/person",
+            "route": "Taipa Ferry Terminal → Hong Kong Macau Ferry Terminal, Sheung Wan"
+          },
+          {
+            "name": "Cotai Water Jet 22:00",
+            "approxDurationMinutes": 60,
+            "approxCost": "MOP242/person",
+            "route": "Taipa → Sheung Wan",
+            "notes": "Earlier option if the day finishes well ahead of schedule."
+          },
+          {
+            "name": "TurboJET Outer Harbour late sailing",
+            "approxDurationMinutes": 60,
+            "approxCost": "about HK$/MOP242/person night sailing",
+            "route": "Outer Harbour → Sheung Wan",
+            "notes": "Useful backup, but requires crossing back from Cotai to the Peninsula."
+          }
+        ],
+        "recommended": "Cotai Water Jet 23:00"
+      }
+    },
+    {
+      "date": "2026-12-28",
+      "title": "Return to hotel after Macau",
+      "type": "transport",
+      "start": "00:05",
+      "end": "00:35",
+      "durationMinutes": 30,
+      "priority": "MUST",
+      "sequence": 5,
+      "placeKey": "bridal-tea-house",
+      "transportInstructions": "After arriving Sheung Wan around midnight, use taxi to Yau Ma Tei rather than adding another transfer.",
+      "details": {
+        "transportOptions": [
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 20,
+            "approxCost": "~HK$100–140 total plus tunnel toll if applicable",
+            "route": "Sheung Wan → Yau Ma Tei"
+          },
+          {
+            "name": "MTR",
+            "approxDurationMinutes": 30,
+            "approxCost": "~HK$12–16/person",
+            "route": "Sheung Wan/Central → Yau Ma Tei",
+            "notes": "Use only if service is still operating and you are not exhausted."
+          }
+        ],
+        "recommended": "Taxi"
+      }
+    },
+    {
+      "date": "2026-12-28",
       "title": "Luk On Kui old-school dim sum",
       "type": "food",
       "start": "08:20",
@@ -1306,7 +2263,7 @@
       "depart": "07:45",
       "durationMinutes": 85,
       "priority": "MUST",
-      "sequence": 10,
+      "sequence": 20,
       "placeKey": "luk-on-kui",
       "transportInstructions": "Yau Ma Tei → Central → Sheung Wan, then walk. Try har gow, siu mai, char siu bao, cheung fun, ribs, turnip cake and tea.",
       "details": {
@@ -1330,18 +2287,19 @@
             "route": "Cross-harbour bus toward Sheung Wan, then walk"
           }
         ],
-        "recommended": "MTR + walk"
+        "recommended": "MTR + walk",
+        "quickNote": "Moved from Sunday to Monday. Current listings show Monday opening; recheck restaurant hours close to travel."
       }
     },
     {
-      "date": "2026-12-27",
+      "date": "2026-12-28",
       "title": "Walk Luk On Kui → Man Mo Temple",
       "type": "transport",
       "start": "09:45",
       "end": "10:00",
       "durationMinutes": 15,
       "priority": "MUST",
-      "sequence": 15,
+      "sequence": 25,
       "timingType": "TARGET",
       "transportInstructions": "Walk uphill along/near Hollywood Road; pay attention to street names as GPS orientation can be confusing.",
       "details": {
@@ -1364,14 +2322,14 @@
       }
     },
     {
-      "date": "2026-12-27",
+      "date": "2026-12-28",
       "title": "Man Mo Temple",
       "type": "attraction",
       "start": "10:00",
       "end": "10:40",
       "durationMinutes": 40,
       "priority": "MUST",
-      "sequence": 20,
+      "sequence": 30,
       "placeKey": "man-mo-temple",
       "transportInstructions": "Walk 10–15 minutes uphill from Luk On Kui along/near Hollywood Road. Pay attention to street names as GPS orientation can be confusing.",
       "details": {
@@ -1383,46 +2341,41 @@
       }
     },
     {
-      "date": "2026-12-27",
+      "date": "2026-12-28",
       "title": "Travel Man Mo Temple → Wong Tai Sin Temple",
       "type": "transport",
       "start": "10:40",
       "end": "11:25",
       "durationMinutes": 45,
       "priority": "MUST",
-      "sequence": 25,
-      "syncTitles": [
-        "Travel Man Mo Temple → Sham Shui Po"
-      ],
+      "sequence": 35,
       "timingType": "TARGET",
       "transportInstructions": "Walk to Sheung Wan MTR, then MTR via Central/Prince Edward to Wong Tai Sin. Taxi is the faster fallback if running late.",
-      "details": {
-        "transportOptions": [
-          {
-            "name": "MTR",
-            "approxDurationMinutes": 45,
-            "approxCost": "about HK$12–15/person",
-            "route": "Walk to Sheung Wan → Central → Prince Edward → Wong Tai Sin"
-          },
-          {
-            "name": "Taxi",
-            "approxDurationMinutes": 25,
-            "approxCost": "about HK$120–160 total",
-            "route": "Direct from Man Mo Temple area to Wong Tai Sin Temple"
-          }
-        ],
-        "recommended": "MTR"
-      }
+      "transportOptions": [
+        {
+          "name": "MTR",
+          "approxDurationMinutes": 45,
+          "approxCost": "about HK$12–15/person",
+          "route": "Walk to Sheung Wan → Central → Prince Edward → Wong Tai Sin"
+        },
+        {
+          "name": "Taxi",
+          "approxDurationMinutes": 25,
+          "approxCost": "about HK$120–160 total",
+          "route": "Direct from Man Mo Temple area to Wong Tai Sin Temple"
+        }
+      ],
+      "recommended": "MTR"
     },
     {
-      "date": "2026-12-27",
+      "date": "2026-12-28",
       "title": "Wong Tai Sin Temple",
       "type": "attraction",
       "start": "11:25",
       "end": "12:10",
       "durationMinutes": 45,
       "priority": "MUST",
-      "sequence": 30,
+      "sequence": 40,
       "placeKey": "wong-tai-sin-temple",
       "transportInstructions": "Enter from the Wong Tai Sin MTR side. Allow about 45 minutes for the main temple complex and Good Wish Garden if open.",
       "details": {
@@ -1431,43 +2384,41 @@
       }
     },
     {
-      "date": "2026-12-27",
+      "date": "2026-12-28",
       "title": "Travel Wong Tai Sin Temple → Nan Lian Garden",
       "type": "transport",
       "start": "12:10",
       "end": "12:25",
       "durationMinutes": 15,
       "priority": "MUST",
-      "sequence": 35,
+      "sequence": 45,
       "timingType": "TARGET",
       "transportInstructions": "Take the MTR one stop from Wong Tai Sin to Diamond Hill, then walk from Exit C2 to Nan Lian Garden.",
-      "details": {
-        "transportOptions": [
-          {
-            "name": "MTR",
-            "approxDurationMinutes": 15,
-            "approxCost": "about HK$4–6/person",
-            "route": "Wong Tai Sin → Diamond Hill, then walk from Exit C2"
-          },
-          {
-            "name": "Taxi",
-            "approxDurationMinutes": 10,
-            "approxCost": "about HK$35–50 total",
-            "route": "Direct to Nan Lian Garden"
-          }
-        ],
-        "recommended": "MTR"
-      }
+      "transportOptions": [
+        {
+          "name": "MTR",
+          "approxDurationMinutes": 15,
+          "approxCost": "about HK$4–6/person",
+          "route": "Wong Tai Sin → Diamond Hill, then walk from Exit C2"
+        },
+        {
+          "name": "Taxi",
+          "approxDurationMinutes": 10,
+          "approxCost": "about HK$35–50 total",
+          "route": "Direct to Nan Lian Garden"
+        }
+      ],
+      "recommended": "MTR"
     },
     {
-      "date": "2026-12-27",
+      "date": "2026-12-28",
       "title": "Nan Lian Garden",
       "type": "attraction",
       "start": "12:25",
       "end": "13:20",
       "durationMinutes": 55,
       "priority": "MUST",
-      "sequence": 40,
+      "sequence": 50,
       "placeKey": "nan-lian-garden",
       "transportInstructions": "Enter from the Diamond Hill side. Keep this as a relaxed garden walk rather than trying to cover every corner.",
       "details": {
@@ -1476,55 +2427,53 @@
       }
     },
     {
-      "date": "2026-12-27",
+      "date": "2026-12-28",
       "title": "Travel Nan Lian Garden → Sham Shui Po",
       "type": "transport",
       "start": "13:20",
       "end": "13:45",
       "durationMinutes": 25,
       "priority": "MUST",
-      "sequence": 45,
+      "sequence": 55,
       "timingType": "TARGET",
       "transportInstructions": "Use MTR from Diamond Hill to Sham Shui Po, changing lines as required.",
-      "details": {
-        "transportOptions": [
-          {
-            "name": "MTR",
-            "approxDurationMinutes": 25,
-            "approxCost": "about HK$8–11/person",
-            "route": "Diamond Hill → Sham Shui Po"
-          },
-          {
-            "name": "Taxi",
-            "approxDurationMinutes": 20,
-            "approxCost": "about HK$90–120 total",
-            "route": "Direct from Nan Lian Garden to Sham Shui Po"
-          }
-        ],
-        "recommended": "MTR"
-      }
+      "transportOptions": [
+        {
+          "name": "MTR",
+          "approxDurationMinutes": 25,
+          "approxCost": "about HK$8–11/person",
+          "route": "Diamond Hill → Sham Shui Po"
+        },
+        {
+          "name": "Taxi",
+          "approxDurationMinutes": 20,
+          "approxCost": "about HK$90–120 total",
+          "route": "Direct from Nan Lian Garden to Sham Shui Po"
+        }
+      ],
+      "recommended": "MTR"
     },
     {
-      "date": "2026-12-27",
+      "date": "2026-12-28",
       "title": "Sham Shui Po exploration",
       "type": "shopping",
       "start": "13:45",
       "end": "15:15",
       "durationMinutes": 90,
       "priority": "WANT",
-      "sequence": 50,
+      "sequence": 60,
       "placeKey": "sham-shui-po",
       "transportInstructions": "Focus on Apliu Street, Pei Ho Street and one or two nearby side streets. Snack rather than have a large formal lunch."
     },
     {
-      "date": "2026-12-27",
+      "date": "2026-12-28",
       "title": "Travel Sham Shui Po → Mong Kok",
       "type": "transport",
       "start": "15:15",
       "end": "15:30",
       "durationMinutes": 15,
       "priority": "MUST",
-      "sequence": 55,
+      "sequence": 65,
       "timingType": "TARGET",
       "transportInstructions": "Use MTR or taxi as convenient; do not treat this as a zero-minute transition.",
       "details": {
@@ -1532,40 +2481,67 @@
           {
             "name": "MTR",
             "approxDurationMinutes": 15,
-            "approxCost": "about HK$5–7/person",
+            "approxCost": "~HK$5-8/person",
+            "route": "Sham Shui Po → Mong Kok on Tsuen Wan Line"
+          },
+          {
+            "name": "Bus",
+            "approxDurationMinutes": 20,
+            "approxCost": "~HK$5-8/person",
             "route": "Sham Shui Po → Mong Kok"
+          },
+          {
+            "name": "Walk",
+            "approxDurationMinutes": 35,
+            "approxCost": "Free",
+            "route": "Walk south through Kowloon streets"
           },
           {
             "name": "Taxi",
             "approxDurationMinutes": 10,
-            "approxCost": "about HK$45–65 total",
-            "route": "Direct to Mong Kok"
+            "approxCost": "~HK$40-60 total",
+            "route": "Sham Shui Po → Mong Kok"
           }
         ],
         "recommended": "MTR"
-      }
+      },
+      "transportOptions": [
+        {
+          "name": "MTR",
+          "approxDurationMinutes": 15,
+          "approxCost": "about HK$5–7/person",
+          "route": "Sham Shui Po → Mong Kok"
+        },
+        {
+          "name": "Taxi",
+          "approxDurationMinutes": 10,
+          "approxCost": "about HK$45–65 total",
+          "route": "Direct to Mong Kok"
+        }
+      ],
+      "recommended": "MTR"
     },
     {
-      "date": "2026-12-27",
+      "date": "2026-12-28",
       "title": "Mong Kok markets and streets",
       "type": "shopping",
       "start": "15:30",
       "end": "18:00",
       "durationMinutes": 150,
       "priority": "MUST",
-      "sequence": 60,
+      "sequence": 70,
       "placeKey": "mong-kok",
       "transportInstructions": "Suggested route: Goldfish Market → Fa Yuen Street → Sneaker Street → Ladies' Market. Keep moving rather than dwelling at every stall."
     },
     {
-      "date": "2026-12-27",
+      "date": "2026-12-28",
       "title": "Walk Mong Kok → Yau Ma Tei",
       "type": "transport",
       "start": "18:00",
       "end": "18:30",
       "durationMinutes": 30,
       "priority": "WANT",
-      "sequence": 70,
+      "sequence": 80,
       "transportInstructions": "Walk south; the transition through Kowloon is part of the experience.",
       "details": {
         "transportOptions": [
@@ -1598,37 +2574,40 @@
       }
     },
     {
-      "date": "2026-12-27",
+      "date": "2026-12-28",
       "title": "Temple Street Night Market",
       "type": "shopping",
       "start": "18:30",
       "end": "19:30",
       "durationMinutes": 60,
       "priority": "MUST",
-      "sequence": 80,
+      "sequence": 90,
       "placeKey": "temple-street"
     },
     {
-      "date": "2026-12-27",
+      "date": "2026-12-28",
       "title": "Hing Kee Claypot Rice",
       "type": "food",
       "start": "19:45",
       "end": "20:55",
       "durationMinutes": 70,
       "priority": "MUST",
-      "sequence": 90,
+      "sequence": 100,
       "placeKey": "hing-kee",
-      "transportInstructions": "Choose chicken, pork or Chinese sausage claypot rice. Avoid beef versions."
+      "transportInstructions": "Choose chicken, pork or Chinese sausage claypot rice. Avoid beef versions.",
+      "details": {
+        "quickNote": "Current listings show Monday dinner service. Recheck close to travel."
+      }
     },
     {
-      "date": "2026-12-27",
+      "date": "2026-12-28",
       "title": "Walk Hing Kee → Kai Kai Dessert",
       "type": "transport",
       "start": "20:55",
       "end": "21:10",
       "durationMinutes": 15,
       "priority": "MUST",
-      "sequence": 95,
+      "sequence": 105,
       "timingType": "TARGET",
       "transportInstructions": "Walk from Temple Street toward Jordan; allow the short transfer rather than overlapping dinner and dessert.",
       "details": {
@@ -1650,521 +2629,26 @@
       }
     },
     {
-      "date": "2026-12-27",
+      "date": "2026-12-28",
       "title": "Kai Kai Dessert",
       "type": "food",
       "start": "21:10",
       "end": "21:55",
       "durationMinutes": 45,
       "priority": "MUST",
-      "sequence": 100,
-      "placeKey": "kai-kai-dessert",
-      "transportInstructions": "Try black sesame paste, walnut sweet soup, mango desserts or traditional Chinese sweet soups."
-    },
-    {
-      "date": "2026-12-28",
-      "title": "Taxi to Hong Kong Macau Ferry Terminal",
-      "type": "transport",
-      "start": "06:10",
-      "end": "06:45",
-      "durationMinutes": 35,
-      "priority": "MUST",
-      "sequence": 10,
-      "placeKey": "sheung-wan-ferry",
-      "transportInstructions": "Use taxi from Yau Ma Tei because of the early start; target terminal by 06:35–06:45.",
-      "estimatedCost": 100,
-      "estimatedCostCurrency": "HKD",
-      "estimatedCostScope": "PARTY",
-      "estimatedCostStatus": "EXPECTED",
-      "details": {
-        "transportOptions": [
-          {
-            "name": "Taxi",
-            "approxDurationMinutes": 35,
-            "approxCost": "~HK$90-120 total",
-            "route": "Yau Ma Tei → Hong Kong Macau Ferry Terminal, Sheung Wan",
-            "notes": "Best for the early ferry."
-          },
-          {
-            "name": "MTR",
-            "approxDurationMinutes": 30,
-            "approxCost": "~HK$10-15/person",
-            "route": "Yau Ma Tei → Central/Sheung Wan, then walk",
-            "notes": "Only use if first-train timing is safely early."
-          },
-          {
-            "name": "Night bus + walk",
-            "approxDurationMinutes": 45,
-            "approxCost": "~HK$15-25/person",
-            "route": "Night/early bus toward Central/Sheung Wan",
-            "notes": "Fallback only; check holiday timetable."
-          }
-        ],
-        "fallback": "Use a taxi whenever ferry timing is at risk.",
-        "recommended": "Taxi"
-      }
-    },
-    {
-      "date": "2026-12-28",
-      "title": "TurboJET Sheung Wan → Macau Outer Harbour",
-      "type": "transport",
-      "start": "07:30",
-      "end": "08:30",
-      "durationMinutes": 60,
-      "priority": "MUST",
-      "sequence": 20,
-      "placeKey": "sheung-wan-ferry",
-      "estimatedCost": 388,
-      "estimatedCostCurrency": "HKD",
-      "estimatedCostScope": "PARTY",
-      "estimatedCostStatus": "EXPECTED",
-      "details": {
-        "booking": "required",
-        "farePerPerson": "about HK$194",
-        "fareForTwo": "about HK$388",
-        "quickNote": "Prebook target 07:30 departure; allow time for immigration and boarding.",
-        "transportOptions": [
-          {
-            "name": "TurboJET",
-            "approxDurationMinutes": 60,
-            "approxCost": "~HK$194/person",
-            "route": "Sheung Wan → Macau Outer Harbour",
-            "notes": "Booked/target sailing."
-          },
-          {
-            "name": "Cotai Water Jet",
-            "approxDurationMinutes": 60,
-            "approxCost": "~HK$175-220/person",
-            "route": "Sheung Wan → Taipa",
-            "notes": "Useful only if schedule works better, but arrives farther from historic centre."
-          },
-          {
-            "name": "HZMB bus",
-            "approxDurationMinutes": 90,
-            "approxCost": "~HK$65-75/person plus local transfers",
-            "route": "Hong Kong Port → Macau Port",
-            "notes": "Cheaper but less convenient for this itinerary."
-          }
-        ],
-        "recommended": "TurboJET"
-      }
-    },
-    {
-      "date": "2026-12-28",
-      "title": "Senado Square",
-      "type": "attraction",
-      "start": "09:30",
-      "end": "10:00",
-      "durationMinutes": 30,
-      "priority": "MUST",
-      "sequence": 30,
-      "placeKey": "senado-square",
-      "details": {
-        "transportOptions": [
-          {
-            "name": "Taxi",
-            "approxDurationMinutes": 15,
-            "approxCost": "~MOP 60-90 total",
-            "route": "Macau Outer Harbour Ferry Terminal → Senado Square"
-          },
-          {
-            "name": "Public bus",
-            "approxDurationMinutes": 25,
-            "approxCost": "~MOP 6/person",
-            "route": "Outer Harbour → Avenida de Almeida Ribeiro / Senado area"
-          },
-          {
-            "name": "Hotel/casino shuttle + walk",
-            "approxDurationMinutes": 30,
-            "approxCost": "Free",
-            "route": "Use a convenient free shuttle toward central Macau, then walk",
-            "notes": "Only if the route actually helps; do not detour for a free ride."
-          }
-        ],
-        "recommended": "Taxi"
-      }
-    },
-    {
-      "date": "2026-12-28",
-      "title": "St Dominic's Church",
-      "type": "attraction",
-      "start": "10:00",
-      "end": "10:20",
-      "durationMinutes": 20,
-      "priority": "WANT",
-      "sequence": 40,
-      "placeKey": "st-dominics"
-    },
-    {
-      "date": "2026-12-28",
-      "title": "Walk to Ruins of St Paul's via historic streets",
-      "type": "attraction",
-      "start": "10:20",
-      "end": "10:45",
-      "durationMinutes": 25,
-      "priority": "WANT",
-      "sequence": 50,
-      "transportInstructions": "Walk through pedestrian streets, bakeries, almond-cookie and snack shops."
-    },
-    {
-      "date": "2026-12-28",
-      "title": "Ruins of St Paul's",
-      "type": "attraction",
-      "start": "10:45",
-      "end": "11:30",
-      "durationMinutes": 45,
-      "priority": "MUST",
-      "sequence": 60,
-      "placeKey": "ruins-st-pauls"
-    },
-    {
-      "date": "2026-12-28",
-      "title": "Monte Fort",
-      "type": "attraction",
-      "start": "11:30",
-      "end": "12:15",
-      "durationMinutes": 45,
-      "priority": "WANT",
-      "sequence": 70,
-      "placeKey": "monte-fort"
-    },
-    {
-      "date": "2026-12-28",
-      "title": "Macanese / Portuguese lunch",
-      "type": "food",
-      "start": "12:20",
-      "end": "13:00",
-      "durationMinutes": 40,
-      "priority": "MUST",
-      "sequence": 80,
-      "transportInstructions": "Look for Portuguese-style chicken, pork dishes, seafood or Macanese rice. Also try Portuguese egg tart and pork chop bun. No beef.",
-      "estimatedCost": 550,
-      "estimatedCostCurrency": "MOP",
-      "estimatedCostScope": "PARTY",
-      "estimatedCostStatus": "EXPECTED"
-    },
-    {
-      "date": "2026-12-28",
-      "title": "Taxi to Macau Tower",
-      "type": "transport",
-      "start": "13:00",
-      "end": "13:30",
-      "durationMinutes": 30,
-      "priority": "MUST",
-      "sequence": 90,
-      "placeKey": "macau-tower",
-      "estimatedCost": 80,
-      "estimatedCostCurrency": "MOP",
-      "estimatedCostScope": "PARTY",
-      "estimatedCostStatus": "EXPECTED",
-      "details": {
-        "transportOptions": [
-          {
-            "name": "Taxi",
-            "approxDurationMinutes": 20,
-            "approxCost": "~MOP 60-90 total",
-            "route": "Historic Centre → Macau Tower",
-            "notes": "Protects Bungy timing."
-          },
-          {
-            "name": "Public bus",
-            "approxDurationMinutes": 30,
-            "approxCost": "~MOP 6/person",
-            "route": "Historic Centre → Macau Tower area"
-          },
-          {
-            "name": "Walk + bus",
-            "approxDurationMinutes": 35,
-            "approxCost": "~MOP 6/person",
-            "route": "Walk to a convenient bus stop, then bus to Macau Tower"
-          }
-        ],
-        "fallback": "Taxi immediately if running late.",
-        "recommended": "Taxi"
-      }
-    },
-    {
-      "date": "2026-12-28",
-      "title": "Macau Tower and Bungy block",
-      "type": "activity",
-      "start": "13:30",
-      "end": "16:00",
-      "durationMinutes": 150,
-      "priority": "MUST",
-      "sequence": 100,
-      "placeKey": "macau-tower",
-      "transportInstructions": "Allow full block for registration, weighing, briefing, equipment, waiting, jump, photos/video and observation. Bungy cost intentionally excluded from budget.",
-      "details": {
-        "booking": "prebooked",
-        "quickNote": "Target 14:00–14:30 booking. Bungy is intentionally excluded from general trip-budget totals.",
-        "carry": [
-          "Booking confirmation",
-          "passport/ID if required",
-          "comfortable clothing"
-        ]
-      }
-    },
-    {
-      "date": "2026-12-28",
-      "title": "Golden Reel at Studio City",
-      "type": "activity",
-      "start": "16:30",
-      "end": "17:15",
-      "durationMinutes": 45,
-      "priority": "OPTIONAL",
       "sequence": 110,
-      "placeKey": "studio-city",
-      "transportInstructions": "Only do this if Bungy finishes by roughly 16:00 and energy is good; otherwise go directly to Cotai.",
-      "estimatedCost": 200,
-      "estimatedCostCurrency": "MOP",
-      "estimatedCostScope": "PARTY",
-      "estimatedCostStatus": "OPTIONAL",
+      "placeKey": "kai-kai-dessert",
+      "transportInstructions": "Try black sesame paste, walnut sweet soup, mango desserts or traditional Chinese sweet soups.",
       "details": {
-        "booking": "optional",
-        "attractionCost": "about MOP 100/person",
-        "fareForTwo": "about MOP 200",
-        "fallback": "Skip without regret; historic Macau, Bungy and the Cotai resorts take priority.",
-        "transportOptions": [
-          {
-            "name": "Taxi",
-            "approxDurationMinutes": 20,
-            "approxCost": "~MOP 80-120 total",
-            "route": "Macau Tower → Studio City"
-          },
-          {
-            "name": "Public bus",
-            "approxDurationMinutes": 35,
-            "approxCost": "~MOP 6/person",
-            "route": "Macau Tower area → Cotai / Studio City"
-          },
-          {
-            "name": "Skip Golden Reel and taxi directly to Venetian",
-            "approxDurationMinutes": 20,
-            "approxCost": "~MOP 80-120 total",
-            "route": "Macau Tower → Venetian",
-            "notes": "Best fallback if Bungy runs late."
-          }
-        ],
-        "recommended": "Taxi"
-      }
-    },
-    {
-      "date": "2026-12-28",
-      "title": "The Venetian Macao",
-      "type": "attraction",
-      "start": "17:35",
-      "end": "18:30",
-      "durationMinutes": 55,
-      "priority": "WANT",
-      "sequence": 120,
-      "placeKey": "venetian",
-      "details": {
-        "transportOptions": [
-          {
-            "name": "Walk / resort connection",
-            "approxDurationMinutes": 15,
-            "approxCost": "Free",
-            "route": "Studio City → Venetian/Cotai Strip if doing Golden Reel first"
-          },
-          {
-            "name": "Taxi",
-            "approxDurationMinutes": 8,
-            "approxCost": "~MOP 35-50 total",
-            "route": "Studio City → Venetian"
-          },
-          {
-            "name": "Free resort shuttle",
-            "approxDurationMinutes": 15,
-            "approxCost": "Free",
-            "route": "Use only if a convenient direct shuttle is available"
-          }
-        ],
-        "recommended": "Walk / resort connection"
-      }
-    },
-    {
-      "date": "2026-12-28",
-      "title": "The Parisian Macao",
-      "type": "attraction",
-      "start": "18:40",
-      "end": "19:15",
-      "durationMinutes": 35,
-      "priority": "WANT",
-      "sequence": 130,
-      "placeKey": "parisian",
-      "details": {
-        "transportOptions": [
-          {
-            "name": "Walk",
-            "approxDurationMinutes": 10,
-            "approxCost": "Free",
-            "route": "Venetian → Parisian via Cotai pedestrian connections"
-          },
-          {
-            "name": "Taxi",
-            "approxDurationMinutes": 5,
-            "approxCost": "~MOP 30-40 total",
-            "route": "Venetian → Parisian"
-          }
-        ],
-        "recommended": "Walk"
-      }
-    },
-    {
-      "date": "2026-12-28",
-      "title": "The Londoner Macao",
-      "type": "attraction",
-      "start": "19:25",
-      "end": "20:10",
-      "durationMinutes": 45,
-      "priority": "WANT",
-      "sequence": 140,
-      "placeKey": "londoner",
-      "details": {
-        "transportOptions": [
-          {
-            "name": "Walk",
-            "approxDurationMinutes": 10,
-            "approxCost": "Free",
-            "route": "Parisian → Londoner via Cotai pedestrian connections"
-          },
-          {
-            "name": "Taxi",
-            "approxDurationMinutes": 5,
-            "approxCost": "~MOP 30-40 total",
-            "route": "Parisian → Londoner"
-          }
-        ],
-        "recommended": "Walk"
-      }
-    },
-    {
-      "date": "2026-12-28",
-      "title": "Dinner in Cotai",
-      "type": "food",
-      "start": "20:10",
-      "end": "20:50",
-      "durationMinutes": 40,
-      "priority": "WANT",
-      "sequence": 150,
-      "estimatedCost": 500,
-      "estimatedCostCurrency": "MOP",
-      "estimatedCostScope": "PARTY",
-      "estimatedCostStatus": "EXPECTED"
-    },
-    {
-      "date": "2026-12-28",
-      "title": "Travel to Taipa Ferry Terminal",
-      "type": "transport",
-      "start": "20:50",
-      "end": "21:30",
-      "durationMinutes": 40,
-      "priority": "MUST",
-      "sequence": 160,
-      "placeKey": "taipa-ferry",
-      "transportInstructions": "Preferred order: free resort shuttle if convenient, public bus, taxi if timing becomes tight.",
-      "details": {
-        "transportOptions": [
-          {
-            "name": "Free resort shuttle",
-            "approxDurationMinutes": 25,
-            "approxCost": "Free",
-            "route": "Cotai resort shuttle → Taipa Ferry Terminal",
-            "notes": "Use if a direct shuttle is operating when you leave."
-          },
-          {
-            "name": "Public bus",
-            "approxDurationMinutes": 30,
-            "approxCost": "~MOP 6/person",
-            "route": "Cotai → Taipa Ferry Terminal"
-          },
-          {
-            "name": "Taxi",
-            "approxDurationMinutes": 15,
-            "approxCost": "~MOP 50-80 total",
-            "route": "Cotai → Taipa Ferry Terminal"
-          }
-        ],
-        "recommended": "Free resort shuttle"
-      }
-    },
-    {
-      "date": "2026-12-28",
-      "title": "Ferry Taipa → Hong Kong Sheung Wan",
-      "type": "transport",
-      "start": "22:00",
-      "end": "23:00",
-      "durationMinutes": 60,
-      "priority": "MUST",
-      "sequence": 170,
-      "placeKey": "taipa-ferry",
-      "transportInstructions": "Book 22:00 sailing; 23:00 acts as backup.",
-      "estimatedCost": 484,
-      "estimatedCostCurrency": "HKD",
-      "estimatedCostScope": "PARTY",
-      "estimatedCostStatus": "EXPECTED",
-      "details": {
-        "transportOptions": [
-          {
-            "name": "Cotai Water Jet / scheduled ferry",
-            "approxDurationMinutes": 60,
-            "approxCost": "~HK$220-260/person",
-            "route": "Taipa Ferry Terminal → Sheung Wan",
-            "notes": "Use the booked 22:00 sailing/operator."
-          },
-          {
-            "name": "HZMB bus",
-            "approxDurationMinutes": 90,
-            "approxCost": "~MOP/HK$65-75/person plus local transfers",
-            "route": "Macau Port → Hong Kong Port",
-            "notes": "Fallback if ferries are disrupted."
-          }
-        ],
-        "recommended": "Cotai Water Jet / scheduled ferry"
-      }
-    },
-    {
-      "date": "2026-12-28",
-      "title": "Return to Bridal Tea House",
-      "type": "transport",
-      "start": "23:20",
-      "end": "23:59",
-      "durationMinutes": 39,
-      "priority": "MUST",
-      "sequence": 180,
-      "placeKey": "bridal-tea-house",
-      "transportInstructions": "Use MTR only if comfortably operating; otherwise take taxi.",
-      "details": {
-        "transportOptions": [
-          {
-            "name": "MTR + walk",
-            "approxDurationMinutes": 30,
-            "approxCost": "~HK$10-15/person",
-            "route": "Sheung Wan → Yau Ma Tei, then walk to hotel"
-          },
-          {
-            "name": "Taxi",
-            "approxDurationMinutes": 20,
-            "approxCost": "~HK$100-140 total",
-            "route": "Sheung Wan Ferry Terminal → hotel"
-          },
-          {
-            "name": "Night bus",
-            "approxDurationMinutes": 40,
-            "approxCost": "~HK$10-20/person",
-            "route": "Central/Sheung Wan → Yau Ma Tei",
-            "notes": "Useful if MTR has stopped or crowds are heavy."
-          }
-        ],
-        "recommended": "MTR + walk"
+        "quickNote": "Current listings show Monday opening. Recheck close to travel."
       }
     },
     {
       "date": "2026-12-29",
       "title": "Breakfast around Yau Ma Tei",
       "type": "food",
-      "start": "06:45",
-      "end": "07:15",
+      "start": "08:00",
+      "end": "08:30",
       "durationMinutes": 30,
       "priority": "WANT",
       "sequence": 10,
@@ -2174,12 +2658,12 @@
       "date": "2026-12-29",
       "title": "MTR Yau Ma Tei → Tung Chung",
       "type": "transport",
-      "start": "07:20",
-      "end": "08:10",
-      "durationMinutes": 50,
+      "start": "08:30",
+      "end": "09:25",
+      "durationMinutes": 55,
       "priority": "MUST",
       "sequence": 20,
-      "transportInstructions": "Yau Ma Tei → Lai King → Tung Chung. Allow about 20 minutes after arrival to walk to the bus terminus and find Route 11.",
+      "transportInstructions": "Yau Ma Tei → Lai King → Tung Chung. Arrive before cable-car opening because the Christmas/New Year week can be busy even though 29 Dec is a normal Tuesday.",
       "details": {
         "transportOptions": [
           {
@@ -2202,455 +2686,296 @@
             "notes": "Slower and less predictable."
           }
         ],
-        "recommended": "MTR"
+        "recommended": "MTR",
+        "crowdNote": "Aim to be at Tung Chung terminal about 30–35 minutes before the current 10:00 weekday opening."
       }
     },
     {
       "date": "2026-12-29",
-      "title": "Bus 11 Tung Chung → Tai O",
-      "type": "transport",
-      "start": "08:30",
-      "end": "09:15",
-      "durationMinutes": 45,
+      "title": "Ngong Ping 360 queue / ticket check at Tung Chung",
+      "type": "other",
+      "start": "09:25",
+      "end": "10:00",
+      "durationMinutes": 35,
+      "priority": "MUST",
+      "sequence": 25,
+      "placeKey": "ngong-ping",
+      "timingType": "TARGET",
+      "details": {
+        "quickNote": "Use a prebooked round-trip ticket. Current regular weekday opening is 10:00; festive-period hours can differ.",
+        "crowdNote": "Christmas/New Year week is high demand. Prebooking removes ticket-buying friction but does not guarantee zero boarding queue."
+      }
+    },
+    {
+      "date": "2026-12-29",
+      "title": "Ngong Ping 360 Crystal Cabin uphill",
+      "type": "activity",
+      "start": "10:00",
+      "end": "10:30",
+      "durationMinutes": 30,
       "priority": "MUST",
       "sequence": 30,
-      "placeKey": "tai-o",
-      "transportInstructions": "Target the official 08:30 Route 11 departure. The 08:45 departure is the immediate fallback if the MTR is slightly delayed. Use the New Lantao Bus live arrival information on the day.",
-      "estimatedCost": 28,
+      "placeKey": "ngong-ping",
+      "estimatedCost": 730,
       "estimatedCostCurrency": "HKD",
       "estimatedCostScope": "PARTY",
       "estimatedCostStatus": "EXPECTED",
       "timingType": "TARGET",
       "scheduleSensitive": true,
+      "transportInstructions": "Tung Chung → Ngong Ping by Crystal Cabin. This is now the outbound half of a round trip.",
       "details": {
-        "farePerPerson": "about HK$14 weekday",
-        "fareForTwo": "about HK$28",
-        "fallback": "Take the 08:45 Route 11 if the 08:30 departure is missed.",
+        "booking": "required",
+        "farePerPerson": "HK$365 adult round-trip Crystal Cabin",
+        "fareForTwo": "HK$730",
+        "quickNote": "Book round-trip Crystal Cabin rather than a one-way ticket.",
         "transportOptions": [
           {
-            "name": "Bus 11",
+            "name": "Ngong Ping 360 Crystal Cabin",
+            "approxDurationMinutes": 25,
+            "approxCost": "HK$365/person round trip",
+            "route": "Tung Chung → Ngong Ping"
+          },
+          {
+            "name": "Bus 23",
             "approxDurationMinutes": 50,
-            "approxCost": "~HK$12-25/person",
-            "route": "Tung Chung → Tai O",
-            "notes": "Fare varies by day/holiday schedule."
+            "approxCost": "HK$20.40/person weekday",
+            "route": "Tung Chung Tat Tung Road → Ngong Ping",
+            "notes": "Fallback if the cable car is suspended."
           },
           {
             "name": "Taxi",
             "approxDurationMinutes": 35,
             "approxCost": "~HK$180-250 total",
-            "route": "Tung Chung → Tai O",
-            "notes": "Expensive but faster."
-          },
-          {
-            "name": "Bus 11A / special service if operating",
-            "approxDurationMinutes": 50,
-            "approxCost": "~HK$12-25/person",
-            "route": "Tung Chung → Tai O",
-            "notes": "Check date-specific service."
+            "route": "Tung Chung → Ngong Ping",
+            "notes": "Fallback only."
           }
         ],
-        "recommended": "Bus 11"
+        "recommended": "Ngong Ping 360 Crystal Cabin"
       }
-    },
-    {
-      "date": "2026-12-29",
-      "title": "Tai O Fishing Village",
-      "type": "attraction",
-      "start": "09:15",
-      "end": "10:00",
-      "durationMinutes": 45,
-      "priority": "MUST",
-      "sequence": 40,
-      "placeKey": "tai-o",
-      "transportInstructions": "Begin with the stilt-house lanes, canals and waterfront while the village is still relatively quiet."
-    },
-    {
-      "date": "2026-12-29",
-      "title": "Tai O local boat ride",
-      "type": "activity",
-      "start": "10:00",
-      "end": "10:30",
-      "durationMinutes": 30,
-      "priority": "OPTIONAL",
-      "sequence": 50,
-      "placeKey": "tai-o",
-      "estimatedCost": 100,
-      "estimatedCostCurrency": "HKD",
-      "estimatedCostScope": "PARTY",
-      "estimatedCostStatus": "OPTIONAL",
-      "details": {
-        "booking": "optional",
-        "farePerPerson": "about HK$30–50",
-        "fareForTwo": "about HK$60–100",
-        "payWith": "Cash is useful for small local operators.",
-        "fallback": "If boats have not started or conditions are unsuitable, continue exploring Tai O and do not delay the 13:00 bus."
-      }
-    },
-    {
-      "date": "2026-12-29",
-      "title": "Tai O exploration and local snacks",
-      "type": "attraction",
-      "start": "10:30",
-      "end": "12:25",
-      "durationMinutes": 115,
-      "priority": "MUST",
-      "sequence": 60,
-      "placeKey": "tai-o",
-      "transportInstructions": "Continue through the stilt houses, market streets, seafood shops and local stores. Have only light snacks because the main vegetarian meal is planned at Ngong Ping. Confirm that anything chosen contains no beef or beef broth."
-    },
-    {
-      "date": "2026-12-29",
-      "title": "Walk to Tai O bus terminus and queue",
-      "type": "transport",
-      "start": "12:25",
-      "end": "13:00",
-      "durationMinutes": 35,
-      "priority": "MUST",
-      "sequence": 70,
-      "placeKey": "tai-o",
-      "transportInstructions": "Be at the terminus early for the limited 13:00 Route 21 departure. Do not use this buffer for additional shopping or food.",
-      "timingType": "TARGET",
-      "scheduleSensitive": true,
-      "details": {
-        "transportOptions": [
-          {
-            "name": "Walk",
-            "approxDurationMinutes": 10,
-            "approxCost": "Free",
-            "route": "Tai O village → Tai O bus terminus"
-          },
-          {
-            "name": "Local taxi",
-            "approxDurationMinutes": 5,
-            "approxCost": "~HK$30-40 total",
-            "route": "Short local ride",
-            "notes": "Normally unnecessary."
-          }
-        ],
-        "recommended": "Walk"
-      }
-    },
-    {
-      "date": "2026-12-29",
-      "title": "Bus 21 Tai O → Ngong Ping",
-      "type": "transport",
-      "start": "13:00",
-      "end": "13:25",
-      "durationMinutes": 25,
-      "priority": "MUST",
-      "sequence": 80,
-      "placeKey": "ngong-ping",
-      "transportInstructions": "Take the official Tuesday 13:00 Route 21 departure. The next regular Monday–Friday departure is 14:00, so missing this bus materially compresses Ngong Ping and the sunset cable-car plan.",
-      "estimatedCost": 15.8,
-      "estimatedCostCurrency": "HKD",
-      "estimatedCostScope": "PARTY",
-      "estimatedCostStatus": "EXPECTED",
-      "timingType": "TARGET",
-      "scheduleSensitive": true,
-      "details": {
-        "farePerPerson": "about HK$7.90 weekday",
-        "fareForTwo": "about HK$15.80",
-        "transportOptions": [
-          {
-            "name": "Bus 21",
-            "approxDurationMinutes": 25,
-            "approxCost": "~HK$7-15/person",
-            "route": "Tai O → Ngong Ping",
-            "notes": "Direct and simplest."
-          },
-          {
-            "name": "Taxi",
-            "approxDurationMinutes": 20,
-            "approxCost": "~HK$100-150 total",
-            "route": "Tai O → Ngong Ping"
-          },
-          {
-            "name": "Bus 11 + connection",
-            "approxDurationMinutes": 50,
-            "approxCost": "~HK$15-30/person",
-            "route": "Back toward Tung Chung then connect",
-            "notes": "Only if Route 21 is unavailable."
-          }
-        ],
-        "recommended": "Bus 21"
-      }
-    },
-    {
-      "date": "2026-12-29",
-      "title": "Vegetarian lunch around Po Lin / Ngong Ping",
-      "type": "food",
-      "start": "13:30",
-      "end": "14:15",
-      "durationMinutes": 45,
-      "priority": "WANT",
-      "sequence": 90,
-      "transportInstructions": "A vegetarian meal is an easy way to avoid beef and beef broth. Keep the meal within the planned window."
     },
     {
       "date": "2026-12-29",
       "title": "Tian Tan Buddha",
       "type": "attraction",
-      "start": "14:15",
-      "end": "15:15",
+      "start": "10:30",
+      "end": "11:30",
       "durationMinutes": 60,
       "priority": "MUST",
-      "sequence": 100,
+      "sequence": 40,
       "placeKey": "tian-tan-buddha"
     },
     {
       "date": "2026-12-29",
       "title": "Po Lin Monastery",
       "type": "attraction",
-      "start": "15:15",
-      "end": "16:00",
+      "start": "11:30",
+      "end": "12:15",
       "durationMinutes": 45,
       "priority": "WANT",
-      "sequence": 110,
+      "sequence": 50,
       "placeKey": "po-lin"
+    },
+    {
+      "date": "2026-12-29",
+      "title": "Vegetarian lunch around Po Lin / Ngong Ping",
+      "type": "food",
+      "start": "12:15",
+      "end": "13:00",
+      "durationMinutes": 45,
+      "priority": "WANT",
+      "sequence": 60,
+      "transportInstructions": "A vegetarian meal is an easy way to avoid beef and beef broth. Keep the meal within the planned window."
+    },
+    {
+      "date": "2026-12-29",
+      "title": "Bus 21 Ngong Ping → Tai O",
+      "type": "transport",
+      "start": "13:20",
+      "end": "13:45",
+      "durationMinutes": 25,
+      "priority": "MUST",
+      "sequence": 70,
+      "placeKey": "tai-o",
+      "timingType": "FIXED",
+      "scheduleSensitive": true,
+      "transportInstructions": "Use the published 13:20 Route 21 departure from Ngong Ping on Mondays–Saturdays.",
+      "estimatedCost": 15.8,
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
+      "details": {
+        "farePerPerson": "HK$7.90 weekday",
+        "fareForTwo": "HK$15.80",
+        "transportOptions": [
+          {
+            "name": "Bus 21",
+            "approxDurationMinutes": 25,
+            "approxCost": "HK$7.90/person weekday",
+            "route": "Ngong Ping → Tai O"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 20,
+            "approxCost": "~HK$100-150 total",
+            "route": "Ngong Ping → Tai O"
+          }
+        ],
+        "recommended": "Bus 21",
+        "crowdNote": "Queue a little early. Route 21 is not a high-frequency city service."
+      }
+    },
+    {
+      "date": "2026-12-29",
+      "title": "Tai O Fishing Village + boat + snacks",
+      "type": "attraction",
+      "start": "13:45",
+      "end": "15:45",
+      "durationMinutes": 120,
+      "priority": "MUST",
+      "sequence": 80,
+      "placeKey": "tai-o",
+      "transportInstructions": "Explore the stilt-house area, market lanes and waterfront; fit the short boat ride inside this block if operating.",
+      "details": {
+        "quickNote": "Keep an eye on the return bus. Do not let the boat ride or snacks push you past the planned departure.",
+        "crowdNote": "Festive-week visitors can create queues at food stalls and buses; keep 10–15 minutes of spare time."
+      }
+    },
+    {
+      "date": "2026-12-29",
+      "title": "Bus 21 Tai O → Ngong Ping",
+      "type": "transport",
+      "start": "16:00",
+      "end": "16:25",
+      "durationMinutes": 25,
+      "priority": "MUST",
+      "sequence": 90,
+      "placeKey": "ngong-ping",
+      "timingType": "FIXED",
+      "scheduleSensitive": true,
+      "transportInstructions": "Target the published 16:00 weekday Route 21 departure from Tai O. The next published weekday departure is 16:45, which is too risky for the planned late-afternoon cable-car return.",
+      "estimatedCost": 15.8,
+      "estimatedCostCurrency": "HKD",
+      "estimatedCostScope": "PARTY",
+      "estimatedCostStatus": "EXPECTED",
+      "details": {
+        "farePerPerson": "HK$7.90 weekday",
+        "fareForTwo": "HK$15.80",
+        "transportOptions": [
+          {
+            "name": "Bus 21",
+            "approxDurationMinutes": 25,
+            "approxCost": "HK$7.90/person weekday",
+            "route": "Tai O → Ngong Ping"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 20,
+            "approxCost": "~HK$100-150 total",
+            "route": "Tai O → Ngong Ping",
+            "notes": "Use immediately if the 16:00 bus is missed and a taxi is available."
+          }
+        ],
+        "recommended": "Bus 21",
+        "crowdNote": "Be at the stop around 15:45. Missing 16:00 materially reduces cable-car sunset margin."
+      }
     },
     {
       "date": "2026-12-29",
       "title": "Ngong Ping Village and viewpoints",
       "type": "attraction",
-      "start": "16:00",
-      "end": "17:05",
-      "durationMinutes": 65,
+      "start": "16:25",
+      "end": "16:55",
+      "durationMinutes": 30,
       "priority": "WANT",
-      "sequence": 120,
+      "sequence": 100,
       "placeKey": "ngong-ping",
-      "transportInstructions": "Explore the village and nearby viewpoints, but ask cable-car staff upon arrival at Ngong Ping to confirm the final downhill departure and the day's queue cutoff. Leave this activity earlier if staff advise a longer queue."
-    },
-    {
-      "date": "2026-12-29",
-      "title": "Queue for final downhill Ngong Ping 360",
-      "type": "transport",
-      "start": "17:05",
-      "end": "17:30",
-      "durationMinutes": 25,
-      "priority": "MUST",
-      "sequence": 130,
-      "placeKey": "ngong-ping",
-      "transportInstructions": "Join the queue no later than 17:05 under the regular 18:00 weekday operating window. If staff recommend an earlier cutoff, follow their instruction; the night Peak connection is secondary to safely making the cable car.",
-      "timingType": "TARGET",
-      "scheduleSensitive": true,
+      "transportInstructions": "Short buffer for village photos / toilets / snacks before joining the return cable-car queue.",
       "details": {
-        "transportOptions": [
-          {
-            "name": "Walk + queue",
-            "approxDurationMinutes": 15,
-            "approxCost": "Free before ticket cost",
-            "route": "Ngong Ping Village → Ngong Ping 360 terminal"
-          },
-          {
-            "name": "Local bus to Tung Chung",
-            "approxDurationMinutes": 45,
-            "approxCost": "~HK$20-35/person",
-            "route": "Ngong Ping → Tung Chung",
-            "notes": "Fallback if cable car closes."
-          }
-        ],
-        "recommended": "Walk + queue"
+        "crowdNote": "Treat 16:55 as a firm queue time unless festive opening hours are officially extended."
       }
     },
     {
       "date": "2026-12-29",
-      "title": "Ngong Ping 360 Crystal Cabin downhill at sunset",
+      "title": "Queue for Ngong Ping 360 downhill",
+      "type": "other",
+      "start": "16:55",
+      "end": "17:15",
+      "durationMinutes": 20,
+      "priority": "MUST",
+      "sequence": 110,
+      "placeKey": "ngong-ping",
+      "timingType": "TARGET",
+      "scheduleSensitive": true,
+      "details": {
+        "quickNote": "Current regular weekday closing is 18:00. Join the queue early enough that a festive-week delay does not threaten the last cabin.",
+        "fallback": "If cable-car service is suspended or the return becomes impractical, use Bus 23 Ngong Ping → Tung Chung."
+      }
+    },
+    {
+      "date": "2026-12-29",
+      "title": "Ngong Ping 360 Crystal Cabin downhill near sunset",
       "type": "activity",
-      "start": "17:30",
-      "end": "18:00",
+      "start": "17:15",
+      "end": "17:45",
       "durationMinutes": 30,
       "priority": "MUST",
-      "sequence": 140,
+      "sequence": 120,
       "placeKey": "ngong-ping",
-      "transportInstructions": "One-way only: Ngong Ping → Tung Chung. The ride takes about 25 minutes. Sunset is approximately 17:48, so this target captures sunset moving into dusk; the precise boarding time depends on the queue and daily operations.",
-      "estimatedCost": 480,
-      "estimatedCostCurrency": "HKD",
-      "estimatedCostScope": "PARTY",
-      "estimatedCostStatus": "EXPECTED",
       "timingType": "TARGET",
       "scheduleSensitive": true,
+      "transportInstructions": "Ngong Ping → Tung Chung. Target golden-hour / near-sunset light without cutting too close to the current 18:00 weekday closing.",
       "details": {
         "booking": "required",
-        "farePerPerson": "about HK$240",
-        "fareForTwo": "about HK$480",
-        "quickNote": "Book a one-way Crystal Cabin from Ngong Ping to Tung Chung, not the opposite direction and not a round trip.",
-        "operatingHours": "Current regular weekday hours are 10:00–18:00; recheck festive-period hours and any special announcement before the visit."
-      }
-    },
-    {
-      "date": "2026-12-29",
-      "title": "MTR Tung Chung → Hong Kong Station",
-      "type": "transport",
-      "start": "18:05",
-      "end": "18:50",
-      "durationMinutes": 45,
-      "priority": "MUST",
-      "sequence": 150,
-      "transportInstructions": "Take the Tung Chung Line directly to Hong Kong Station. Follow signs for Exit E / the Hong Kong Station Public Transport Interchange.",
-      "details": {
+        "quickNote": "This is the return half of the same round-trip Crystal Cabin ticket.",
+        "operatingHours": "Current regular weekday hours are 10:00–18:00; recheck festive-period hours and special announcements before the visit.",
         "transportOptions": [
           {
-            "name": "MTR",
-            "approxDurationMinutes": 35,
-            "approxCost": "~HK$25-30/person",
-            "route": "Tung Chung → Hong Kong Station"
+            "name": "Ngong Ping 360 Crystal Cabin",
+            "approxDurationMinutes": 25,
+            "approxCost": "Included in HK$365/person round-trip ticket",
+            "route": "Ngong Ping → Tung Chung"
+          },
+          {
+            "name": "Bus 23",
+            "approxDurationMinutes": 50,
+            "approxCost": "HK$20.40/person weekday",
+            "route": "Ngong Ping → Tung Chung",
+            "notes": "Primary fallback if the last cable car is missed or service is suspended."
           },
           {
             "name": "Taxi",
             "approxDurationMinutes": 35,
-            "approxCost": "~HK$300-380 total",
-            "route": "Tung Chung → Central"
-          },
+            "approxCost": "~HK$180-250 total",
+            "route": "Ngong Ping → Tung Chung",
+            "notes": "Do not rely on taxi availability at closing time."
+          }
+        ],
+        "recommended": "Ngong Ping 360 Crystal Cabin"
+      }
+    },
+    {
+      "date": "2026-12-29",
+      "title": "Tung Chung → Yau Ma Tei",
+      "type": "transport",
+      "start": "17:50",
+      "end": "18:45",
+      "durationMinutes": 55,
+      "priority": "MUST",
+      "sequence": 130,
+      "transportInstructions": "Return by MTR via Lai King. There is no longer a night Peak deadline, so this leg can be relaxed.",
+      "details": {
+        "transportOptions": [
           {
-            "name": "Bus",
-            "approxDurationMinutes": 55,
+            "name": "MTR",
+            "approxDurationMinutes": 50,
             "approxCost": "~HK$20-30/person",
-            "route": "Tung Chung → Central/Hong Kong Island"
-          }
-        ],
-        "recommended": "MTR"
-      }
-    },
-    {
-      "date": "2026-12-29",
-      "title": "Green Minibus 1 to Victoria Peak",
-      "type": "transport",
-      "start": "18:50",
-      "end": "19:35",
-      "durationMinutes": 45,
-      "priority": "MUST",
-      "sequence": 160,
-      "placeKey": "victoria-peak",
-      "transportInstructions": "Use Green Minibus 1 from the Hong Kong Station Public Transport Interchange. It generally runs every 5–15 minutes; allow time to locate the stand and queue. If the wait is clearly excessive, take a red urban taxi directly to the Peak. Do not use the Peak Tram for this second visit.",
-      "estimatedCost": 23.6,
-      "estimatedCostCurrency": "HKD",
-      "estimatedCostScope": "PARTY",
-      "estimatedCostStatus": "EXPECTED",
-      "timingType": "TARGET",
-      "details": {
-        "farePerPerson": "about HK$11.80",
-        "fareForTwo": "about HK$23.60",
-        "transportOptions": [
-          {
-            "name": "Green Minibus 1",
-            "approxDurationMinutes": 30,
-            "approxCost": "~HK$11.80/person",
-            "route": "Hong Kong Station Public Transport Interchange → The Peak"
-          },
-          {
-            "name": "Bus 15",
-            "approxDurationMinutes": 45,
-            "approxCost": "~HK$13-15/person",
-            "route": "Central/Admiralty → The Peak"
+            "route": "Tung Chung → Lai King → Yau Ma Tei"
           },
           {
             "name": "Taxi",
-            "approxDurationMinutes": 25,
-            "approxCost": "~HK$100-150 total",
-            "route": "Central → The Peak"
-          },
-          {
-            "name": "Peak Tram",
             "approxDurationMinutes": 35,
-            "approxCost": "~HK$82/person one-way plus queue",
-            "route": "Walk/taxi to Lower Terminus → The Peak",
-            "notes": "Only if queue is reasonable."
-          }
-        ],
-        "weather": "Check Peak visibility, cloud and rain before leaving Ngong Ping. If the skyline is obscured, the night visit can be skipped without affecting the earlier Boxing Day Peak visit.",
-        "recommended": "Green Minibus 1"
-      }
-    },
-    {
-      "date": "2026-12-29",
-      "title": "Victoria Peak night skyline",
-      "type": "attraction",
-      "start": "19:35",
-      "end": "20:45",
-      "durationMinutes": 70,
-      "priority": "MUST",
-      "sequence": 170,
-      "placeKey": "victoria-peak",
-      "transportInstructions": "This is a focused night-view visit, not a repeat of the morning Lugard Road walk from Boxing Day. Use Sky Terrace 428 for the elevated panorama if its queue is reasonable; otherwise use a nearby free viewpoint such as Lion's Pavilion.",
-      "timingType": "WEATHER_DEPENDENT",
-      "details": {
-        "weather": "Proceed when visibility is usable. If the skyline is hidden by low cloud, return directly from Tung Chung or Central and protect energy for Disneyland the next morning.",
-        "quickNote": "Sky Terrace 428 is currently scheduled to remain open until 22:00, leaving a comfortable viewing window."
-      }
-    },
-    {
-      "date": "2026-12-29",
-      "title": "Green Minibus 1 / Bus 15 down to Central",
-      "type": "transport",
-      "start": "20:45",
-      "end": "21:30",
-      "durationMinutes": 45,
-      "priority": "MUST",
-      "sequence": 180,
-      "transportInstructions": "Prefer Green Minibus 1 to Hong Kong Station. Use Bus 15 if its queue is materially shorter. Avoid the Peak Tram queue on this second visit.",
-      "estimatedCost": 23.6,
-      "estimatedCostCurrency": "HKD",
-      "estimatedCostScope": "PARTY",
-      "estimatedCostStatus": "EXPECTED",
-      "details": {
-        "transportOptions": [
-          {
-            "name": "Green Minibus 1",
-            "approxDurationMinutes": 30,
-            "approxCost": "~HK$11.80/person",
-            "route": "The Peak → Hong Kong Station"
-          },
-          {
-            "name": "Bus 15",
-            "approxDurationMinutes": 45,
-            "approxCost": "~HK$13-15/person",
-            "route": "The Peak → Central/Admiralty"
-          },
-          {
-            "name": "Taxi",
-            "approxDurationMinutes": 25,
-            "approxCost": "~HK$100-150 total",
-            "route": "The Peak → Central"
-          },
-          {
-            "name": "Peak Tram",
-            "approxDurationMinutes": 20,
-            "approxCost": "~HK$82/person one-way plus queue",
-            "route": "The Peak → Lower Terminus"
-          }
-        ],
-        "recommended": "Green Minibus 1"
-      }
-    },
-    {
-      "date": "2026-12-29",
-      "title": "MTR Central → Yau Ma Tei",
-      "type": "transport",
-      "start": "21:30",
-      "end": "22:05",
-      "durationMinutes": 35,
-      "priority": "MUST",
-      "sequence": 190,
-      "transportInstructions": "Walk from the Hong Kong Station/IFC interchange to Central Station and take the Tsuen Wan Line directly to Yau Ma Tei.",
-      "details": {
-        "transportOptions": [
-          {
-            "name": "MTR",
-            "approxDurationMinutes": 20,
-            "approxCost": "~HK$10-15/person",
-            "route": "Central → Yau Ma Tei on Tsuen Wan Line"
-          },
-          {
-            "name": "Bus",
-            "approxDurationMinutes": 30,
-            "approxCost": "~HK$10-15/person",
-            "route": "Central → Yau Ma Tei / Jordan"
-          },
-          {
-            "name": "Taxi",
-            "approxDurationMinutes": 20,
-            "approxCost": "~HK$100-140 total plus tunnel toll",
-            "route": "Central → Yau Ma Tei"
+            "approxCost": "~HK$250-320 total",
+            "route": "Tung Chung → Yau Ma Tei"
           }
         ],
         "recommended": "MTR"
@@ -2658,14 +2983,14 @@
     },
     {
       "date": "2026-12-29",
-      "title": "Quick late dinner around Jordan / Yau Ma Tei",
+      "title": "Relaxed dinner / free evening",
       "type": "food",
-      "start": "22:05",
-      "end": "22:45",
-      "durationMinutes": 40,
+      "start": "19:00",
+      "end": "20:30",
+      "durationMinutes": 90,
       "priority": "WANT",
-      "sequence": 200,
-      "transportInstructions": "Choose something fast near Jordan, Yau Ma Tei or Temple Street and confirm that no beef or beef broth is used. Keep dinner short because Disneyland starts early the next morning."
+      "sequence": 140,
+      "transportInstructions": "Keep the evening flexible around Yau Ma Tei / Jordan after the Lantau day."
     },
     {
       "date": "2026-12-30",
@@ -3546,28 +3871,30 @@
       "key": "macau-ferry-out",
       "type": "FERRY",
       "title": "TurboJET Sheung Wan → Macau Outer Harbour",
-      "startsAt": "2026-12-28T07:30:00+08:00",
+      "startsAt": "2026-12-27T07:30:00+08:00",
       "status": "PLACEHOLDER"
     },
     {
       "key": "macau-bungy",
       "type": "ATTRACTION",
       "title": "Macau Tower Bungy",
-      "startsAt": "2026-12-28T14:00:00+08:00",
+      "startsAt": "2026-12-27T14:00:00+08:00",
       "status": "PLACEHOLDER"
     },
     {
       "key": "macau-ferry-back",
       "type": "FERRY",
-      "title": "Taipa → Hong Kong Sheung Wan ferry",
-      "startsAt": "2026-12-28T22:00:00+08:00",
+      "title": "Cotai Water Jet Taipa → Hong Kong Sheung Wan",
+      "startsAt": "2026-12-27T23:00:00+08:00",
+      "syncTitles": ["Taipa → Hong Kong Sheung Wan ferry"],
       "status": "PLACEHOLDER"
     },
     {
       "key": "ngong-ping",
       "type": "CABLE_CAR",
-      "title": "Ngong Ping 360 Crystal Cabin one-way",
+      "title": "Ngong Ping 360 Crystal Cabin round trip",
       "startsAt": "2026-12-29T10:00:00+08:00",
+      "syncTitles": ["Ngong Ping 360 Crystal Cabin one-way"],
       "status": "PLACEHOLDER"
     },
     {
@@ -3733,9 +4060,9 @@
       "body": "For police, fire services, or an ambulance in Hong Kong, dial 999."
     },
     {
-      "section": "Transport",
-      "title": "Transport timing reminder",
-      "summary": "Fares and journey times are approximate — recheck close to travel.",
+      "section": "Planning",
+      "title": "Transport planning assumptions",
+      "summary": "Fares and journey times are approximate; recheck holiday operations before travel.",
       "icon": "ℹ️",
       "body": "Transport fares and journey times are approximate planning values based on information available in September 2026. Recheck MTR, bus, ferry, Peak Tram and holiday/NYE operations shortly before travel."
     }

@@ -4,7 +4,7 @@ import { createClient } from "@supabase/supabase-js";
 import { z } from "zod";
 
 const Priority = z.enum(["MUST", "WANT", "OPTIONAL"]);
-const TimingType = z.enum(["FIXED", "TARGET", "FLEXIBLE", "OPTIONAL", "WEATHER_DEPENDENT"]);
+const TimingType = z.enum(["FIXED", "TARGET", "FLEXIBLE", "OPTIONAL", "WEATHER_DEPENDENT", "BUFFER"]);
 const CostScope = z.enum(["PERSON", "PARTY"]);
 const CostStatus = z.enum(["COMMITTED", "EXPECTED", "OPTIONAL"]);
 const ItineraryDetails = z.object({
@@ -13,6 +13,7 @@ const ItineraryDetails = z.object({
   farePerPerson: z.string().optional(), fareForTwo: z.string().optional(), attractionCost: z.string().optional(),
   booking: z.enum(["required", "prebooked", "optional", "not-required"]).optional(),
   foodNearby: z.array(z.string()).optional(), dietaryNote: z.string().optional(), weather: z.string().optional(), carry: z.array(z.string()).optional(), payWith: z.string().optional(), fallback: z.string().optional(), hotelReturn: z.string().optional(), quickNote: z.string().optional(),
+  crowdNote: z.string().optional(), operatingHours: z.string().optional(), eventStatus: z.string().optional(), planningAssumption: z.string().optional(), priorityRule: z.string().optional(), hoursStatus: z.string().optional(), costStatus: z.string().optional(),
 });
 export const SeedSchema = z.object({
   trip: z.object({
@@ -49,6 +50,7 @@ export const SeedSchema = z.object({
       description: z.string().optional(),
       notes: z.string().optional(),
       dietaryWarning: z.string().optional(),
+      syncTitles: z.array(z.string()).optional(),
     }),
   ),
   itinerary: z.array(
@@ -119,6 +121,7 @@ export const SeedSchema = z.object({
       amount: z.number().optional(),
       currency: z.string().optional(),
       status: z.string(),
+      syncTitles: z.array(z.string()).optional(),
     }),
   ),
   importantNotes: z.array(z.object({ section: z.string(), title: z.string(), body: z.string(), summary: z.string().max(240).optional(), icon: z.string().max(16).optional(), copyText: z.string().optional(), pronunciation: z.string().max(300).optional(), meaning: z.string().max(300).optional(), sortOrder: z.number().int().optional() })),
@@ -136,8 +139,13 @@ const seedPath = fileURLToPath(
 const seed = SeedSchema.parse(JSON.parse(await readFile(seedPath, "utf8")));
 const syncDateArg = process.argv.find((arg) => arg.startsWith("--sync-date="));
 const syncDate = syncDateArg?.slice("--sync-date=".length);
+const syncSourceOfTruth = process.argv.includes("--sync-source-of-truth");
+const syncTripContent = process.argv.includes("--sync-trip-content") || syncSourceOfTruth;
 if (syncDate && !seed.days.some((day) => day.date === syncDate)) {
   throw new Error(`No seed day exists for ${syncDate}`);
+}
+if (syncDate && syncSourceOfTruth) {
+  throw new Error("--sync-date cannot be combined with --sync-source-of-truth");
 }
 for (const item of seed.itinerary) {
   if (item.estimatedCost !== undefined) {
@@ -158,12 +166,24 @@ function minutes(value: string) {
   return hour * 60 + minute;
 }
 
+function sameTimestamp(left?: string | null, right?: string) {
+  if (!left || !right) return left === right;
+  const leftTime = Date.parse(left);
+  const rightTime = Date.parse(right);
+  return Number.isNaN(leftTime) || Number.isNaN(rightTime) ? left === right : leftTime === rightTime;
+}
+
 function validateItinerary() {
   const placeKeys = new Set(seed.places.map((place) => place.key));
   const bookingsByKey = new Map(seed.bookings.map((booking) => [booking.key, booking]));
   const dates = new Set(seed.days.map((day) => day.date));
   const errors: string[] = [];
+  if (dates.size !== seed.days.length) errors.push("itinerary days contain duplicate dates");
+  const itineraryKeys = new Set<string>();
   for (const item of seed.itinerary) {
+    const itineraryKey = `${item.date}|${item.title}`;
+    if (itineraryKeys.has(itineraryKey)) errors.push(`${item.date}: duplicate itinerary entry ${item.title}`);
+    itineraryKeys.add(itineraryKey);
     if (!dates.has(item.date)) errors.push(`${item.title}: date ${item.date} has no itinerary day`);
     if (item.placeKey && !placeKeys.has(item.placeKey)) errors.push(`${item.title}: unknown place ${item.placeKey}`);
     const transportOptions = item.details?.transportOptions ?? [];
@@ -186,7 +206,10 @@ function validateItinerary() {
       if (previous.end && next.start && minutes(next.start) < minutes(previous.end)) errors.push(`${day.date}: ${next.title} overlaps ${previous.title}`);
     }
   }
-  for (const item of seed.checklist) if (item.placeKey && !placeKeys.has(item.placeKey)) errors.push(`${item.title}: unknown checklist place ${item.placeKey}`);
+  for (const item of seed.checklist) {
+    if (item.placeKey && !placeKeys.has(item.placeKey)) errors.push(`${item.title}: unknown checklist place ${item.placeKey}`);
+    if (item.plannedDay && !dates.has(item.plannedDay)) errors.push(`${item.title}: planned day ${item.plannedDay} has no itinerary day`);
+  }
   if (errors.length) throw new Error(`Seed itinerary validation failed:\n${errors.join("\n")}`);
 }
 validateItinerary();
@@ -247,7 +270,64 @@ const { data: existingTrip, error: existingTripError } = await admin
   .maybeSingle();
 if (existingTripError) throw existingTripError;
 
-if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.includes("--sync-trip-content") || process.argv.includes("--sync-transport-details"))) {
+if (process.argv.includes("--verify-source-of-truth")) {
+  if (!existingTrip) throw new Error("The seed trip does not exist yet");
+  const [{ data: items, error: itemsError }, { data: checklist, error: checklistError }, { data: liveBookings, error: liveBookingsError }, { data: livePlaces, error: livePlacesError }] = await Promise.all([
+    admin.from("itinerary_items").select("id,date,title,place_id,details").eq("trip_id", existingTrip.id),
+    admin.from("checklist_items").select("title,planned_day").eq("trip_id", existingTrip.id),
+    admin.from("bookings").select("title,starts_at").eq("trip_id", existingTrip.id),
+    admin.from("places").select("id,name").eq("trip_id", existingTrip.id),
+  ]);
+  if (itemsError) throw itemsError;
+  if (checklistError) throw checklistError;
+  if (liveBookingsError) throw liveBookingsError;
+  if (livePlacesError) throw livePlacesError;
+
+  const errors: string[] = [];
+  const sourceItemsByKey = new Map(seed.itinerary.map((item) => [`${item.date}|${item.title}`, item]));
+  const liveItemsByKey = new Map<string, (typeof items extends (infer Row)[] | null ? Row : never)>();
+  for (const item of items ?? []) {
+    const key = `${item.date}|${item.title}`;
+    if (liveItemsByKey.has(key)) errors.push(`duplicate live itinerary entry: ${key}`);
+    liveItemsByKey.set(key, item);
+    if (!sourceItemsByKey.has(key)) errors.push(`stale live itinerary entry: ${key}`);
+    const details = item.details && typeof item.details === "object" && !Array.isArray(item.details) ? item.details as Record<string, unknown> : undefined;
+    if (details?.recommended) {
+      const options = Array.isArray(details.transportOptions) ? details.transportOptions : [];
+      if (!options.some((option) => option && typeof option === "object" && !Array.isArray(option) && (option as Record<string, unknown>).name === details.recommended)) errors.push(`invalid live transport recommendation: ${key}`);
+    }
+  }
+  for (const [key, sourceItem] of sourceItemsByKey) {
+    const liveItem = liveItemsByKey.get(key);
+    if (!liveItem) { errors.push(`missing live itinerary entry: ${key}`); continue; }
+    if (sourceItem.placeKey) {
+      const expectedPlace = seed.places.find((place) => place.key === sourceItem.placeKey)?.name;
+      const actualPlace = (livePlaces ?? []).find((place) => place.id === liveItem.place_id)?.name;
+      if (expectedPlace !== actualPlace) errors.push(`broken live place reference: ${key}`);
+    }
+  }
+  const liveChecklistByTitle = new Map((checklist ?? []).map((item) => [item.title, item]));
+  const sourceChecklistTitles = new Set(seed.checklist.map((item) => item.title));
+  const unmanagedChecklist = (checklist ?? []).filter((item) => !sourceChecklistTitles.has(item.title)).map((item) => item.title);
+  for (const item of seed.checklist) {
+    const liveItem = liveChecklistByTitle.get(item.title);
+    if (!liveItem) errors.push(`missing live checklist item: ${item.title}`);
+    else if ((liveItem.planned_day ?? undefined) !== item.plannedDay) errors.push(`stale checklist day: ${item.title}`);
+  }
+  const liveBookingsByTitle = new Map((liveBookings ?? []).map((booking) => [booking.title, booking]));
+  const sourceBookingTitles = new Set(seed.bookings.map((booking) => booking.title));
+  const unmanagedBookings = (liveBookings ?? []).filter((booking) => !sourceBookingTitles.has(booking.title)).map((booking) => booking.title);
+  for (const booking of seed.bookings) {
+    const liveBooking = liveBookingsByTitle.get(booking.title);
+    if (!liveBooking) errors.push(`missing live booking: ${booking.title}`);
+    else if (!sameTimestamp(liveBooking.starts_at, booking.startsAt)) errors.push(`stale booking time: ${booking.title}`);
+  }
+  const report = { tripId: existingTrip.id, sourceItems: seed.itinerary.length, liveItems: items?.length ?? 0, sourceChecklist: seed.checklist.length, liveChecklist: checklist?.length ?? 0, sourceBookings: seed.bookings.length, liveBookings: liveBookings?.length ?? 0, unmanagedChecklist, unmanagedBookings, errors };
+  console.log(JSON.stringify(report, null, 2));
+  process.exit(errors.length ? 1 : 0);
+}
+
+if (existingTrip && (process.argv.includes("--sync-itinerary") || syncTripContent || process.argv.includes("--sync-transport-details"))) {
   // This is deliberately opt-in: it makes the itinerary on the existing seed
   // trip match the JSON file while preserving financial records and traveller
   // progress. New seed days and bookings are added before item linking.
@@ -266,10 +346,21 @@ if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.i
   const { data: allDays, error: allDaysError } = await admin.from("itinerary_days").select("id,date").eq("trip_id", existingTrip.id);
   if (allDaysError) throw allDaysError;
 
-  const missingBookings = seed.bookings.filter((booking) => !(bookings ?? []).some((row) => row.title === booking.title));
-  const { data: insertedBookings, error: insertedBookingsError } = missingBookings.length ? await admin.from("bookings").insert(missingBookings.map((booking) => ({ trip_id: existingTrip.id, type: booking.type, title: booking.title, provider: booking.provider, starts_at: booking.startsAt, ends_at: booking.endsAt, amount: booking.amount, currency: booking.currency, status: booking.status, created_by: owner.id, updated_by: owner.id }))).select("id,title") : { data: [], error: null };
-  if (insertedBookingsError) throw insertedBookingsError;
-  const allBookings = [...(bookings ?? []), ...(insertedBookings ?? [])];
+  const bookingsByTitle = new Map((bookings ?? []).map((booking) => [booking.title, booking.id]));
+  const bookingIds = new Map<string, string>();
+  for (const booking of seed.bookings) {
+    const id = [booking.title, ...(booking.syncTitles ?? [])].map((title) => bookingsByTitle.get(title)).find(Boolean);
+    const payload = { trip_id: existingTrip.id, type: booking.type, title: booking.title, provider: booking.provider, starts_at: booking.startsAt, ends_at: booking.endsAt, amount: booking.amount, currency: booking.currency, status: booking.status, updated_by: owner.id };
+    if (id) {
+      const { error } = await admin.from("bookings").update(payload).eq("id", id);
+      if (error) throw error;
+      bookingIds.set(booking.key, id);
+    } else {
+      const { data, error } = await admin.from("bookings").insert({ ...payload, created_by: owner.id }).select("id").single();
+      if (error) throw error;
+      bookingIds.set(booking.key, data.id);
+    }
+  }
 
   const { error: tripDateError } = await admin.from("trips").update({ start_date: seed.trip.startDate }).eq("id", existingTrip.id);
   if (tripDateError) throw tripDateError;
@@ -286,13 +377,6 @@ if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.i
       allPlaces.find((row) => row.name === place.name)?.id,
     ]),
   );
-  const bookingIds = new Map(
-    seed.bookings.map((booking) => [
-      booking.key,
-      allBookings.find((row) => row.title === booking.title)?.id,
-    ]),
-  );
-
   for (const item of seed.itinerary) {
     if (!dayIds.has(item.date)) throw new Error(`No itinerary day exists for ${item.date}`);
     if (item.placeKey && !placeIds.get(item.placeKey)) throw new Error(`No seeded place exists for ${item.placeKey}`);
@@ -317,10 +401,10 @@ if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.i
     process.exit(0);
   }
 
-  // Content sync is deliberately non-destructive. It updates the itinerary
-  // entries that can be identified by their existing date and title, adds new
-  // seed entries, and never removes a traveller's own activities or progress.
-  if (process.argv.includes("--sync-trip-content")) {
+  // Content sync updates seed-owned entries that can be identified by
+  // date/title and preserves their IDs. Unmatched personal bookings and
+  // checklist items are deliberately left alone.
+  if (syncTripContent) {
     const itineraryToSync = syncDate ? seed.itinerary.filter((item) => item.date === syncDate) : seed.itinerary;
     const daysToSync = syncDate ? seed.days.filter((day) => day.date === syncDate) : seed.days;
     const { data: existingItems, error: existingItemsError } = await admin.from("itinerary_items").select("id,date,title").eq("trip_id", existingTrip.id);
@@ -335,10 +419,18 @@ if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.i
       transport_instructions: item.transportInstructions, estimated_cost: item.estimatedCost, estimated_cost_currency: item.estimatedCostCurrency,
       details: itemDetails(item), updated_by: owner.id,
     });
+    const syncedItemIds = new Set<string>();
     for (const item of itineraryToSync) {
       const id = [item.title, ...(item.syncTitles ?? [])].map((title) => existingByDateAndTitle.get(`${item.date}|${title}`) ?? existingByTitle.get(title)).find(Boolean);
-      const result = id ? await admin.from("itinerary_items").update(itemPayload(item)).eq("id", id) : await admin.from("itinerary_items").insert({ ...itemPayload(item), created_by: owner.id });
-      if (result.error) throw result.error;
+      if (id) {
+        const { error } = await admin.from("itinerary_items").update(itemPayload(item)).eq("id", id);
+        if (error) throw error;
+        syncedItemIds.add(id);
+      } else {
+        const { data, error } = await admin.from("itinerary_items").insert({ ...itemPayload(item), created_by: owner.id }).select("id").single();
+        if (error) throw error;
+        syncedItemIds.add(data.id);
+      }
     }
     for (const day of daysToSync) {
       const id = dayIds.get(day.date);
@@ -348,13 +440,28 @@ if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.i
       console.log(`Safely synced ${itineraryToSync.length} itinerary entries for ${syncDate} to ${existingTrip.name} (${existingTrip.id}).`);
       process.exit(0);
     }
-    const { data: existingChecklist, error: existingChecklistError } = await admin.from("checklist_items").select("title").eq("trip_id", existingTrip.id);
+    if (syncSourceOfTruth) {
+      const staleItemIds = (existingItems ?? []).filter((item) => !syncedItemIds.has(item.id)).map((item) => item.id);
+      if (staleItemIds.length) {
+        const { error } = await admin.from("itinerary_items").delete().in("id", staleItemIds);
+        if (error) throw error;
+      }
+    }
+    const { data: existingChecklist, error: existingChecklistError } = await admin.from("checklist_items").select("id,title").eq("trip_id", existingTrip.id);
     if (existingChecklistError) throw existingChecklistError;
-    const titles = new Set((existingChecklist ?? []).map((item) => item.title));
-    const additions = seed.checklist.filter((item) => !titles.has(item.title));
-    if (additions.length) {
-      const { error: checklistError } = await admin.from("checklist_items").insert(additions.map((item) => ({ trip_id: existingTrip.id, title: item.title, description: item.description, notes: item.notes, dietary_warning: item.dietaryWarning, kind: item.kind, priority: item.priority, planned_day: item.plannedDay, due_date: item.dueDate, recommended_place: item.recommendedPlace, neighbourhood: item.neighbourhood, created_by: owner.id, updated_by: owner.id })));
-      if (checklistError) throw checklistError;
+    const checklistByTitle = new Map((existingChecklist ?? []).map((item) => [item.title, item.id]));
+    let insertedChecklistCount = 0;
+    for (const item of seed.checklist) {
+      const id = [item.title, ...(item.syncTitles ?? [])].map((title) => checklistByTitle.get(title)).find(Boolean);
+      const payload = { trip_id: existingTrip.id, title: item.title, description: item.description, notes: item.notes, dietary_warning: item.dietaryWarning, kind: item.kind, priority: item.priority, planned_day: item.plannedDay, due_date: item.dueDate, recommended_place: item.recommendedPlace, neighbourhood: item.neighbourhood, updated_by: owner.id };
+      if (id) {
+        const { error } = await admin.from("checklist_items").update(payload).eq("id", id);
+        if (error) throw error;
+      } else {
+        const { error } = await admin.from("checklist_items").insert({ ...payload, created_by: owner.id });
+        if (error) throw error;
+        insertedChecklistCount += 1;
+      }
     }
     const { data: existingNotes, error: existingNotesError } = await admin.from("trip_notes").select("id,title").eq("trip_id", existingTrip.id);
     if (existingNotesError) throw existingNotesError;
@@ -370,7 +477,7 @@ if (existingTrip && (process.argv.includes("--sync-itinerary") || process.argv.i
       const { error: noteUpdateError } = await admin.from("trip_notes").update({ section: note.section, body: note.body, summary: note.summary, icon: note.icon, copy_text: note.copyText, pronunciation: note.pronunciation, meaning: note.meaning, sort_order: note.sortOrder ?? index, updated_by: owner.id }).eq("id", id);
       if (noteUpdateError) throw noteUpdateError;
     }
-    console.log(`Safely synced ${seed.itinerary.length} itinerary entries, ${additions.length} new checklist items, and ${noteAdditions.length} important notes to ${existingTrip.name} (${existingTrip.id}).`);
+    console.log(`${syncSourceOfTruth ? "Source-of-truth" : "Safe"} sync completed: ${seed.itinerary.length} itinerary entries, ${insertedChecklistCount} new checklist items, and ${noteAdditions.length} important notes to ${existingTrip.name} (${existingTrip.id}).`);
     process.exit(0);
   }
 

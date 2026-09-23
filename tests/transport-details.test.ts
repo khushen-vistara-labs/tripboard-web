@@ -22,4 +22,18 @@ describe("transport detail normalization", () => {
   it("returns no details for a missing optional payload", () => {
     expect(normalizeItineraryDetails(undefined)).toBeUndefined();
   });
+
+  it("preserves optional planning context from the itinerary payload", () => {
+    expect(normalizeItineraryDetails({
+      timingType: "BUFFER",
+      scheduleSensitive: true,
+      crowdNote: "Allow extra time for a holiday queue.",
+      operatingHours: "Recheck before travel.",
+    })).toMatchObject({
+      timingType: "BUFFER",
+      scheduleSensitive: true,
+      crowdNote: "Allow extra time for a holiday queue.",
+      operatingHours: "Recheck before travel.",
+    });
+  });
 });

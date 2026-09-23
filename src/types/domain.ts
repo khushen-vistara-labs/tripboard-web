@@ -133,6 +133,15 @@ export interface ItineraryDetails {
   fallback?: string;
   hotelReturn?: string;
   quickNote?: string;
+  timingType?: "FIXED" | "TARGET" | "FLEXIBLE" | "OPTIONAL" | "WEATHER_DEPENDENT" | "BUFFER";
+  scheduleSensitive?: boolean;
+  crowdNote?: string;
+  operatingHours?: string;
+  eventStatus?: string;
+  planningAssumption?: string;
+  priorityRule?: string;
+  hoursStatus?: string;
+  costStatus?: string;
 }
 
 export interface ChecklistItem {
