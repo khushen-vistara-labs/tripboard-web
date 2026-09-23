@@ -2137,7 +2137,7 @@
       "sequence": 210,
       "placeKey": "taipa-ferry",
       "timingType": "TARGET",
-      "transportInstructions": "Do not rely on a long shuttle chain this late. Use taxi unless a direct shuttle is immediately available.",
+      "transportInstructions": "Use the Macau LRT from Cotai East to Taipa Ferry Terminal if the station walk and ticket queue are comfortable. Take a taxi as the main fallback; do not rely on a long shuttle chain this late.",
       "details": {
         "transportOptions": [
           {
@@ -2145,7 +2145,7 @@
             "approxDurationMinutes": 15,
             "approxCost": "~MOP45–65 total",
             "route": "Wynn Palace → Taipa Ferry Terminal",
-            "notes": "An MOP8 terminal-origin surcharge applies when boarding a taxi at Taipa Ferry Terminal, not when arriving there."
+            "notes": "Main fallback if the LRT station walk, ticket queue or timing makes the ferry check-in tight. An MOP8 terminal-origin surcharge applies when boarding a taxi at Taipa Ferry Terminal, not when arriving there."
           },
           {
             "name": "Resort shuttle",
@@ -2155,11 +2155,11 @@
             "notes": "Do not wait and risk the ferry."
           },
           {
-            "name": "Macau LRT (Taipa Line)",
+            "name": "Macau LRT",
             "approxDurationMinutes": 30,
-            "approxCost": "MOP6/person single ticket",
+            "approxCost": "MOP 6/person",
             "route": "Wynn Palace → Cotai East Station → MUST → Airport → Taipa Ferry Terminal",
-            "notes": "Allow time to reach Cotai East and buy a token. Sunday service is listed until 23:59 with trains about every 5–10.5 minutes; recheck before travel."
+            "notes": "The train ride is short; allow about 25–30 minutes total for the station walk, token purchase and wait. Sunday service is listed until 23:59 with trains about every 5–10.5 minutes; recheck before travel."
           },
           {
             "name": "Public bus",
@@ -2169,7 +2169,7 @@
             "notes": "Fallback only."
           }
         ],
-        "recommended": "Taxi"
+        "recommended": "Macau LRT"
       }
     },
     {
@@ -4048,16 +4048,16 @@
     {
       "section": "Macau",
       "title": "Macau Money / Transport Payments",
-      "summary": "Small MOP cash · Buses: MOP 6 exact—no change · MOP 1/2/5 + MOP 10 · LRT machines: MOP cash only · Counter: HKD/cards; change MOP · Ask for MOP change from HKD · Zero-forex card for larger payments · HKD backup; MOP for small transport",
+      "summary": "Small MOP cash · Buses: MOP6 exact—no change · LRT single ticket: MOP6/8/10/12 · Ticket machine: MOP cash/LRT Card · Add-value: MOP cash · Counter: cash/cards/wallets · HKD/RMB 1:1; MOP change · Zero-forex card for larger payments",
       "icon": "💴",
-      "body": "• Carry some MOP cash, especially small notes and coins.\n• Public buses cost MOP 6; pay exact MOP cash where possible—no change is given.\n• Keep MOP 1, 2 and 5 coins plus MOP 10 notes ready.\n• LRT ticket and top-up machines use MOP cash only.\n• LRT customer service counters may accept HKD or cards, but cash change is returned in MOP.\n• If paying HKD cash at a shop or restaurant, ask for MOP change to build small change.\n• Prefer the zero-forex card for larger payments.\n• Keep HKD as backup, but use MOP for small transport payments when practical."
+      "body": "• Carry some MOP cash, especially small notes and coins.\n• Public buses cost MOP 6; pay exact MOP cash where possible—no change is given.\n• Keep MOP 1, 2 and 5 coins plus MOP 10 notes ready.\n• Adult LRT single-journey fares are MOP 6, 8, 10 or 12 depending on distance.\n• Ticket vending machines accept MOP cash and LRT Card; add-value machines accept MOP cash only.\n• Customer Service Centres accept MOP, HKD, RMB, credit cards, Simple Pay, Alipay and WeChat Pay. HKD/RMB cash is taken at 1:1 and change is returned in MOP.\n• If paying HKD cash at a shop or restaurant, ask for MOP change to build small change.\n• Prefer the zero-forex card for larger payments. Keep HKD as backup, but use MOP for small transport payments when practical."
     },
     {
       "section": "Macau",
       "title": "Macau LRT — Cotai to Taipa Ferry",
-      "summary": "Taipa Line: Barra ↔ Cotai ↔ Taipa Ferry · useful Cotai East fallback · no direct Senado/Outer Harbour stop · 5–10.5 min trains · Sun/holiday: 06:30–23:59 · single token: MOP6–12",
+      "summary": "Taipa Line: Barra ↔ Cotai ↔ Taipa Ferry · direct from Cotai East to ferry · no direct Senado/Outer Harbour stop · 5–10.5 min trains · Sun/holiday: 06:30–23:59 · single token: MOP6–12",
       "icon": "🚈",
-      "body": "• Use the Taipa Line for Cotai → Taipa Ferry Terminal when you are already near Cotai East Station; it runs via MUST and Airport to the terminal.\n• It is not a direct option for Senado Square, the historic centre or Outer Harbour—keep taxis/buses for those legs and for the time-sensitive Macau Tower transfer.\n• On Friday–Sunday and public holidays, the published Taipa Line hours are 06:30–23:59, with trains about every 5–10.5 minutes; recheck the December timetable.\n• Adult single-ticket tokens cost MOP6, 8, 10 or 12 by distance. The Cotai East → Taipa Ferry Terminal ride is within the MOP6 band.\n• Buy a single token at a machine or counter; leave time for the station walk, ticket purchase and any queue.\n• For the 23:00 ferry, keep a taxi as the recommended option if the LRT would make the check-in tight."
+      "body": "• Use the Taipa Line for Cotai → Taipa Ferry Terminal when you are already near Cotai East Station; it runs via MUST and Airport to the terminal.\n• It is not a direct option for Senado Square, the historic centre or Outer Harbour—keep taxis/buses for those legs and for the time-sensitive Macau Tower transfer.\n• On Friday–Sunday and public holidays, the published Taipa Line hours are 06:30–23:59, with trains about every 5–10.5 minutes; recheck the December timetable.\n• Adult single-ticket tokens cost MOP6, 8, 10 or 12 by distance. The Cotai East → Taipa Ferry Terminal ride is within the MOP6 band.\n• Buy a single token at a machine or counter; leave time for the station walk, ticket purchase and any queue.\n• For the 23:00 ferry, use LRT if you can reach Cotai East comfortably; taxi is the main fallback if it would make check-in tight."
     },
     {
       "section": "Connectivity",
