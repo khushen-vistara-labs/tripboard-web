@@ -25,7 +25,7 @@
     },
     {
       "date": "2026-12-28",
-      "title": "Old-School Dim Sum • Man Mo Temple • Wong Tai Sin • Nan Lian Garden • Sham Shui Po • Mong Kok • Temple Street"
+      "title": "Old-School Dim Sum • Man Mo Temple • Wong Tai Sin • Nan Lian Garden • Choi Hung + Ping Shek (WANT) • Sham Shui Po • Mong Kok • Temple Street"
     },
     {
       "date": "2026-12-29",
@@ -41,7 +41,7 @@
     },
     {
       "date": "2027-01-01",
-      "title": "Kennedy Town • Ding Ding • Wan Chai • Canal Road • Causeway Bay • North Point • Monster Building"
+      "title": "Pottinger Street (WANT) • Kennedy Town • Ding Ding • Wan Chai • Canal Road • Causeway Bay • North Point • Monster Building"
     },
     {
       "date": "2027-01-02",
@@ -128,6 +128,16 @@
       "category": "Arts and Design",
       "priority": "WANT",
       "expectedDurationMinutes": 45
+    },
+    {
+      "key": "pottinger-street",
+      "name": "Pottinger Street (Stone Slab Street)",
+      "address": "Pottinger Street, Central, Hong Kong Island",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Pottinger%20Street%2C%20Central%2C%20Hong%20Kong",
+      "neighbourhood": "Central",
+      "category": "Historic Street / Photography",
+      "priority": "WANT",
+      "expectedDurationMinutes": 25
     },
     {
       "key": "star-ferry-central",
@@ -403,6 +413,26 @@
         "planningHours": "07:00–21:00 daily; recheck official hours before visit",
         "nearestMTR": "Diamond Hill Station Exit C2"
       }
+    },
+    {
+      "key": "choi-hung-estate",
+      "name": "Choi Hung Estate",
+      "address": "Choi Hung, Kowloon, Hong Kong",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Choi%20Hung%20Estate%2C%20Hong%20Kong",
+      "neighbourhood": "Choi Hung",
+      "category": "Public Housing Estate / Architecture",
+      "priority": "WANT",
+      "expectedDurationMinutes": 25
+    },
+    {
+      "key": "ping-shek-estate",
+      "name": "Ping Shek Estate",
+      "address": "Ping Shek, Kwun Tong, Kowloon, Hong Kong",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ping%20Shek%20Estate%2C%20Hong%20Kong",
+      "neighbourhood": "Ping Shek / Choi Hung",
+      "category": "Public Housing Estate / Architecture",
+      "priority": "WANT",
+      "expectedDurationMinutes": 20
     },
     {
       "key": "lee-tung-avenue",
@@ -837,6 +867,33 @@
       "plannedDay": "2026-12-27",
       "placeKey": "macau-fishermans-wharf",
       "description": "Free and about a 5-minute walk from Outer Harbour. Keep it to roughly 35–40 minutes."
+    },
+    {
+      "key": "pottinger-street-want",
+      "title": "Walk Pottinger Street (Stone Slab Street)",
+      "kind": "PLACE",
+      "priority": "WANT",
+      "plannedDay": "2027-01-01",
+      "placeKey": "pottinger-street",
+      "description": "Optional 25-minute Central detour. Skip it and stay on the direct MTR to Kennedy Town if the post-NYE morning feels too slow."
+    },
+    {
+      "key": "choi-hung-estate-want",
+      "title": "See Choi Hung Estate basketball court",
+      "kind": "PLACE",
+      "priority": "WANT",
+      "plannedDay": "2026-12-28",
+      "placeKey": "choi-hung-estate",
+      "description": "Optional photo stop after Nan Lian Garden. Use Choi Hung MTR Exit C4; keep the visit short and respect residents."
+    },
+    {
+      "key": "ping-shek-estate-want",
+      "title": "Walk through Ping Shek Estate",
+      "kind": "PLACE",
+      "priority": "WANT",
+      "plannedDay": "2026-12-28",
+      "placeKey": "ping-shek-estate",
+      "description": "Optional companion stop to Choi Hung. Allow 10–15 minutes to walk between the estates; skip both and go directly to Sham Shui Po if running late."
     }
   ],
   "itinerary": [
@@ -2435,42 +2492,110 @@
     },
     {
       "date": "2026-12-28",
-      "title": "Travel Nan Lian Garden → Sham Shui Po",
+      "title": "Travel Nan Lian Garden → Choi Hung Estate",
       "type": "transport",
       "start": "13:20",
-      "end": "13:45",
-      "durationMinutes": 25,
-      "priority": "MUST",
+      "end": "13:35",
+      "durationMinutes": 15,
+      "priority": "WANT",
       "sequence": 55,
-      "timingType": "TARGET",
-      "transportInstructions": "Use MTR from Diamond Hill to Sham Shui Po, changing lines as required.",
-      "transportOptions": [
-        {
-          "name": "MTR",
-          "approxDurationMinutes": 25,
-          "approxCost": "about HK$8–11/person",
-          "route": "Diamond Hill → Sham Shui Po"
-        },
-        {
-          "name": "Taxi",
-          "approxDurationMinutes": 20,
-          "approxCost": "about HK$90–120 total",
-          "route": "Direct from Nan Lian Garden to Sham Shui Po"
-        }
+      "placeKey": "choi-hung-estate",
+      "syncTitles": [
+        "Travel Nan Lian Garden → Sham Shui Po"
       ],
-      "recommended": "MTR"
+      "timingType": "OPTIONAL",
+      "transportInstructions": "Optional estate branch: return to Diamond Hill MTR, take the Kwun Tong Line one stop to Choi Hung, then use Exit C4 for the Choi Hung Estate basketball court. If skipping the estates, take the direct MTR route to Sham Shui Po and restore the longer Sham Shui Po window.",
+      "details": {
+        "farePerPerson": "about HK$4–6",
+        "transportOptions": [
+          {
+            "name": "MTR + walk",
+            "approxDurationMinutes": 15,
+            "approxCost": "~HK$4–6/person",
+            "route": "Nan Lian Garden → Diamond Hill Station → Choi Hung (one stop) → Exit C4",
+            "notes": "Best-value option; includes station and exit time."
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 10,
+            "approxCost": "~HK$35–50 total",
+            "route": "Nan Lian Garden → Choi Hung Estate",
+            "notes": "Use only if tired, raining or preserving the Sham Shui Po time."
+          }
+        ],
+        "recommended": "MTR + walk",
+        "quickNote": "A WANT-only detour. The outdoor locations are free; use Octopus for the MTR."
+      }
+    },
+    {
+      "date": "2026-12-28",
+      "title": "Choi Hung Estate + Ping Shek Estate",
+      "type": "attraction",
+      "start": "13:35",
+      "end": "14:20",
+      "durationMinutes": 45,
+      "priority": "WANT",
+      "sequence": 56,
+      "placeKey": "choi-hung-estate",
+      "timingType": "OPTIONAL",
+      "transportInstructions": "Start at Choi Hung Estate's basketball court from Choi Hung MTR Exit C4, then allow 10–15 minutes on foot via the station area to Ping Shek Estate (Exit A2 is closest). Both are homes, not attractions: stay in public areas, do not enter residential blocks, block paths or courts, photograph residents, or make noise.",
+      "details": {
+        "attractionCost": "Free",
+        "quickNote": "Keep the two-estate visit to 45 minutes total: roughly 20–25 minutes at Choi Hung and 15–20 minutes at Ping Shek. The colourful Choi Hung court is the main photo stop; Ping Shek is the shorter companion stop.",
+        "carry": [
+          "Camera/phone",
+          "Octopus card",
+          "Water"
+        ],
+        "payWith": "No admission cost. Octopus for the MTR; no cash needed.",
+        "fallback": "Skip both estates if Nan Lian runs late, weather is poor or you want the full Sham Shui Po visit. Go directly to Sham Shui Po instead.",
+        "crowdNote": "Wait for an empty court or a clear public-space composition rather than disrupting residents or users."
+      }
+    },
+    {
+      "date": "2026-12-28",
+      "title": "Travel Ping Shek Estate → Sham Shui Po",
+      "type": "transport",
+      "start": "14:20",
+      "end": "14:45",
+      "durationMinutes": 25,
+      "priority": "WANT",
+      "sequence": 57,
+      "timingType": "OPTIONAL",
+      "transportInstructions": "Return through Choi Hung MTR Exit A2, ride to Prince Edward, then change to the Tsuen Wan Line for Sham Shui Po. This is the continuation only if you choose the estate branch.",
+      "details": {
+        "farePerPerson": "about HK$8–11",
+        "transportOptions": [
+          {
+            "name": "MTR + walk",
+            "approxDurationMinutes": 25,
+            "approxCost": "~HK$8–11/person",
+            "route": "Ping Shek Estate → Choi Hung → Prince Edward → Sham Shui Po",
+            "notes": "Allow the full 25 minutes for the estate walk and Prince Edward interchange."
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 20,
+            "approxCost": "~HK$100–130 total",
+            "route": "Ping Shek Estate → Sham Shui Po",
+            "notes": "Useful if you want to regain some of the optional Sham Shui Po browsing time."
+          }
+        ],
+        "recommended": "MTR + walk",
+        "fallback": "If the estate branch is skipped, go from Diamond Hill straight to Sham Shui Po and arrive around 13:45."
+      }
     },
     {
       "date": "2026-12-28",
       "title": "Sham Shui Po exploration",
       "type": "shopping",
-      "start": "13:45",
+      "start": "14:45",
       "end": "15:15",
-      "durationMinutes": 90,
+      "durationMinutes": 30,
       "priority": "WANT",
       "sequence": 60,
       "placeKey": "sham-shui-po",
-      "transportInstructions": "Focus on Apliu Street, Pei Ho Street and one or two nearby side streets. Snack rather than have a large formal lunch."
+      "transportInstructions": "Estate-branch version: keep this to a focused 30-minute loop around Apliu Street, Pei Ho Street and one nearby side street. If the estates are skipped, restore the original 13:45–15:15 Sham Shui Po window. Snack rather than have a large formal lunch."
     },
     {
       "date": "2026-12-28",
@@ -3316,26 +3441,30 @@
       "priority": "MUST",
       "sequence": 20,
       "placeKey": "kennedy-town",
-      "transportInstructions": "Yau Ma Tei → Central → Kennedy Town.",
+      "syncTitles": ["MTR Yau Ma Tei → Central (Pottinger Street option)"],
+      "transportInstructions": "Take the MTR from Yau Ma Tei to Central, change to the Island Line and continue west to Kennedy Town. Pottinger Street comes later as a hop-off during the eastbound Ding Ding ride, so there is no Central backtrack.",
       "details": {
         "transportOptions": [
           {
             "name": "MTR",
             "approxDurationMinutes": 25,
-            "approxCost": "~HK$12-18/person",
-            "route": "Yau Ma Tei → Central, walk through paid connection → Hong Kong/Island Line → Kennedy Town"
+            "approxCost": "~HK$12–18/person",
+            "route": "Yau Ma Tei → Central → Kennedy Town",
+            "notes": "Fastest and most predictable; stay in the paid MTR system."
           },
           {
             "name": "Bus",
             "approxDurationMinutes": 40,
-            "approxCost": "~HK$12-20/person",
-            "route": "Kowloon → Kennedy Town via cross-harbour route"
+            "approxCost": "~HK$12–20/person",
+            "route": "Kowloon → Kennedy Town via cross-harbour route",
+            "notes": "Traffic-dependent; MTR is simpler."
           },
           {
             "name": "Taxi",
             "approxDurationMinutes": 25,
-            "approxCost": "~HK$140-200 total plus tunnel toll",
-            "route": "Yau Ma Tei → Kennedy Town"
+            "approxCost": "~HK$140–200 total plus tunnel toll",
+            "route": "Yau Ma Tei → Kennedy Town",
+            "notes": "Only worthwhile for a time-sensitive or very tired group."
           }
         ],
         "recommended": "MTR"
@@ -3343,51 +3472,118 @@
     },
     {
       "date": "2027-01-01",
-      "title": "Kennedy Town neighbourhood and waterfront",
+      "title": "Pottinger Street (Stone Slab Street)",
       "type": "attraction",
-      "start": "11:20",
-      "end": "12:20",
-      "durationMinutes": 60,
+      "start": "12:35",
+      "end": "13:00",
+      "durationMinutes": 25,
       "priority": "WANT",
-      "sequence": 30,
-      "placeKey": "kennedy-town"
+      "sequence": 37,
+      "placeKey": "pottinger-street",
+      "timingType": "OPTIONAL",
+      "transportInstructions": "Alight near Pottinger/Pedder Street in Central, then walk the historic stone-slab steps between Queen's Road Central and Hollywood Road. Return to Des Voeux Road Central to re-board an eastbound tram for Wan Chai. Start from the lower end and climb only as far as feels comfortable; the steps are steep and can be slippery when wet.",
+      "details": {
+        "attractionCost": "Free",
+        "quickNote": "A WANT, not a must-do. It is a natural 25-minute hop-off within the Ding Ding ride, not a backtrack; New Year's Day stall and shop hours may vary.",
+        "carry": [
+          "Grippy shoes",
+          "Phone/camera",
+          "Light rain layer if needed"
+        ],
+        "payWith": "No entry fee. The re-board to Wan Chai is a second HK$3.30 adult tram fare; pay by Octopus, contactless card or exact cash when alighting.",
+        "weather": "Skip after rain or if the stone steps feel slick; stay on the tram to Wan Chai instead.",
+        "fallback": "Remain on the same eastbound tram and use the recovered 25 minutes in Kennedy Town or Wan Chai; no booked activity or must-do is affected."
+      }
     },
     {
       "date": "2027-01-01",
-      "title": "West-to-east Ding Ding journey",
+      "title": "Ding Ding Kennedy Town → Pottinger Street",
       "type": "transport",
-      "start": "12:20",
-      "end": "13:15",
-      "durationMinutes": 55,
+      "start": "11:55",
+      "end": "12:35",
+      "durationMinutes": 40,
+      "priority": "MUST",
+      "sequence": 35,
+      "placeKey": "pottinger-street",
+      "syncTitles": ["MTR Central → Kennedy Town"],
+      "transportInstructions": "Board an eastbound Ding Ding near Kennedy Town and stay on until the Central stop nearest Pottinger/Pedder Street. Pottinger is intentionally a hop-off in the existing west-to-east tram journey, not an MTR detour.",
+      "details": {
+        "farePerPerson": "HK$3.30 for this ride; HK$6.60/person for both tram rides with the Pottinger hop-off",
+        "transportOptions": [
+          {
+            "name": "Ding Ding",
+            "approxDurationMinutes": 40,
+            "approxCost": "HK$3.30/person",
+            "route": "Kennedy Town → Central / Pottinger Street",
+            "notes": "The scenic west-to-east experience. Pay when alighting from the front."
+          },
+          {
+            "name": "MTR + walk",
+            "approxDurationMinutes": 25,
+            "approxCost": "~HK$8–12/person",
+            "route": "Kennedy Town → Central, then walk to Pottinger Street",
+            "notes": "Faster but loses the intended tram ride."
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 20,
+            "approxCost": "~HK$100–140 total",
+            "route": "Kennedy Town → Pottinger Street",
+            "notes": "Only a rain or accessibility fallback."
+          }
+        ],
+        "recommended": "Ding Ding"
+      }
+    },
+    {
+      "date": "2027-01-01",
+      "title": "Kennedy Town neighbourhood and waterfront",
+      "type": "attraction",
+      "start": "11:20",
+      "end": "11:55",
+      "durationMinutes": 35,
+      "priority": "WANT",
+      "sequence": 30,
+      "placeKey": "kennedy-town",
+      "transportInstructions": "Keep this to a 35-minute waterfront and side-street walk, then board the planned eastbound Ding Ding. If Pottinger is skipped, use the recovered 25 minutes here or in Wan Chai."
+    },
+    {
+      "date": "2027-01-01",
+      "title": "Ding Ding Pottinger Street → Wan Chai",
+      "type": "transport",
+      "start": "13:00",
+      "end": "13:20",
+      "durationMinutes": 20,
       "priority": "MUST",
       "sequence": 40,
-      "transportInstructions": "Board an eastbound tram, sit upstairs, and enjoy Kennedy Town → Sheung Wan → Central. The journey itself is the attraction.",
+      "syncTitles": ["West-to-east Ding Ding journey"],
+      "transportInstructions": "Return to Des Voeux Road Central after Pottinger and board an eastbound Ding Ding for Wan Chai. Sit upstairs if a seat is available; this is the second half of the west-to-east tram experience.",
       "details": {
         "transportOptions": [
           {
             "name": "Ding Ding",
-            "approxDurationMinutes": 70,
+            "approxDurationMinutes": 20,
             "approxCost": "HK$3.30/person",
-            "route": "Kennedy Town → Wan Chai / Causeway Bay / North Point eastbound",
-            "notes": "This is the sightseeing experience, not just transport."
+            "route": "Pottinger Street / Central → Wan Chai eastbound",
+            "notes": "Second tram fare after the Pottinger hop-off; HK$6.60/person for the two rides."
           },
           {
             "name": "MTR",
-            "approxDurationMinutes": 25,
-            "approxCost": "~HK$8-12/person",
-            "route": "Kennedy Town → Wan Chai/Causeway Bay"
+            "approxDurationMinutes": 10,
+            "approxCost": "~HK$5–7/person",
+            "route": "Central → Wan Chai"
           },
           {
             "name": "Bus",
-            "approxDurationMinutes": 40,
-            "approxCost": "~HK$8-15/person",
-            "route": "Kennedy Town → Wan Chai/Causeway Bay"
+            "approxDurationMinutes": 20,
+            "approxCost": "~HK$5–10/person",
+            "route": "Central → Wan Chai"
           },
           {
             "name": "Taxi",
-            "approxDurationMinutes": 25,
-            "approxCost": "~HK$100-150 total",
-            "route": "Kennedy Town → Wan Chai"
+            "approxDurationMinutes": 10,
+            "approxCost": "~HK$50–75 total",
+            "route": "Pottinger Street → Wan Chai"
           }
         ],
         "recommended": "Ding Ding"
@@ -3397,13 +3593,13 @@
       "date": "2027-01-01",
       "title": "Wan Chai stop",
       "type": "attraction",
-      "start": "13:15",
+      "start": "13:20",
       "end": "13:40",
-      "durationMinutes": 25,
+      "durationMinutes": 20,
       "priority": "WANT",
       "sequence": 50,
       "placeKey": "wan-chai",
-      "transportInstructions": "Older streets and a short local walk, bakery or cha chaan teng. Keep this short: leave around 13:45 for Canal Road Flyover."
+      "transportInstructions": "Older streets and a short local walk, bakery or cha chaan teng. This is the Pottinger-branch version; keep it to 20 minutes and leave at 13:40 for Canal Road Flyover."
     },
     {
       "date": "2027-01-01",
@@ -4016,6 +4212,13 @@
       "summary": "Octopus → transit and small purchases · card → larger purchases · cash → backup",
       "icon": "💳",
       "body": "Use physical Octopus for MTR, buses, Ding Ding, Star Ferry, convenience stores and small purchases. Use card for larger meals, tickets and shopping. Keep HK$1,500–2,000 total cash as a backup for markets, street food, Tai O and older restaurants."
+    },
+    {
+      "section": "Day-to-day",
+      "title": "Residential-estate photo etiquette",
+      "summary": "They are homes: stay public, quiet and out of residents' way.",
+      "icon": "📷",
+      "body": "Choi Hung and Ping Shek are public-housing estates, not staged attractions. Photograph only from public areas; do not enter residential blocks or corridors, block paths or basketball courts, photograph residents, fly a drone, or make noise. If a court is in use, wait briefly or move on."
     },
     {
       "section": "Money",

@@ -453,7 +453,7 @@ if (existingTrip && (process.argv.includes("--sync-itinerary") || syncTripConten
     let insertedChecklistCount = 0;
     for (const item of seed.checklist) {
       const id = [item.title, ...(item.syncTitles ?? [])].map((title) => checklistByTitle.get(title)).find(Boolean);
-      const payload = { trip_id: existingTrip.id, title: item.title, description: item.description, notes: item.notes, dietary_warning: item.dietaryWarning, kind: item.kind, priority: item.priority, planned_day: item.plannedDay, due_date: item.dueDate, recommended_place: item.recommendedPlace, neighbourhood: item.neighbourhood, updated_by: owner.id };
+      const payload = { trip_id: existingTrip.id, title: item.title, description: item.description, notes: item.notes, dietary_warning: item.dietaryWarning, kind: item.kind, priority: item.priority, planned_day: item.plannedDay, due_date: item.dueDate, recommended_place: item.recommendedPlace, neighbourhood: item.neighbourhood, linked_place_id: item.placeKey ? placeIds.get(item.placeKey) : null, updated_by: owner.id };
       if (id) {
         const { error } = await admin.from("checklist_items").update(payload).eq("id", id);
         if (error) throw error;
