@@ -30,7 +30,7 @@ Future purchases are not allocated to historical top-ups. The account ledger sup
 
 The database views/functions are authoritative:
 
-**Own-money outflow** is net INR external cash flow. Settled INR is used when present; otherwise estimated INR is included and the aggregate is labelled as estimated.
+**Own-money outflow** is net INR external cash flow. A settled INR charge is used when present; an external transaction entered directly in INR uses its INR source amount as the exact charge. Otherwise, an estimated INR amount is included and the aggregate is labelled as estimated.
 
 **Local consumption** is purchase consumption minus purchase refunds, grouped by original currency and category. Funding, transfers, exchanges, balance corrections, and unused-wallet refunds are excluded.
 

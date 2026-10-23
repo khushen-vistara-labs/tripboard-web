@@ -41,6 +41,12 @@ describe("financial acceptance tests", () => {
     expect(ledger.balances.octopus).toBe("500");
   });
 
+  it("3a: treats a direct INR purchase as exact outflow without a duplicate final-charge field", () => {
+    const ledger = postFinancialEvent(createLedger(accounts), event({ type: "PURCHASE", sourceAccountId: "hdfc", sourceAmount: "2165", sourceCurrency: "INR", consumptionAmount: "2165", consumptionCurrency: "INR", category: "Attractions" }));
+    expect(ledger.ownMoneyOutflowInr).toBe("2165");
+    expect(totalConsumption(ledger, "INR")).toBe("2165");
+  });
+
   it("4: exchanges cash without creating consumption", () => {
     const ledger = postFinancialEvent(createLedger(accounts), event({ type: "CASH_EXCHANGE", sourceAccountId: "inr-cash", destinationAccountId: "hkd-cash", sourceAmount: "10000", sourceCurrency: "INR", destinationAmount: "900", destinationCurrency: "HKD", settledInrAmount: "10000" }));
     expect(ledger.ownMoneyOutflowInr).toBe("10000");

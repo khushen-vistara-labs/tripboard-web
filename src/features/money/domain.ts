@@ -121,7 +121,10 @@ function addConsumption(next: LedgerSnapshot, currency: CurrencyCode, category: 
 function addExternalOutflow(next: LedgerSnapshot, event: FinancialEvent, multiplier = new Decimal(1)) {
   const settled = event.settledInrAmount ? amount(event.settledInrAmount) : undefined;
   const estimated = event.estimatedInrAmount ? amount(event.estimatedInrAmount) : undefined;
-  const inr = settled ?? estimated;
+  // An INR source amount is already the exact amount that left the traveller's
+  // money. Do not require a duplicate "final INR" field just to count it.
+  const exactInrSource = event.sourceCurrency === "INR" && event.sourceAmount ? amount(event.sourceAmount) : undefined;
+  const inr = settled ?? estimated ?? exactInrSource;
   if (inr) next.ownMoneyOutflowInr = amount(next.ownMoneyOutflowInr).plus(inr.times(multiplier)).toString();
   if (!settled && estimated) next.hasEstimatedOutflow = true;
 }
