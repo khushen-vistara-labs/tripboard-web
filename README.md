@@ -174,6 +174,8 @@ The service worker caches the app shell, including `/guide`, and previously open
 
 Deploy `supabase/functions/evaluate-notifications` with the server-only secrets above. Schedule it approximately every five minutes using Supabase Cron. The evaluator inserts deduplicated in-app notifications, rechecks current trip state, and sends visible Web Push only to configured device subscriptions.
 
+Morning and evening summaries run only within the trip dates when that day has pending activities (planned or moved). The evaluator rechecks that count before sending, so empty days and completed plans do not produce review alerts. Today’s greeting follows the trip timezone and updates while the screen stays open.
+
 Notification permission is never requested during initial page load. Each device must use **More → Trip alerts → Enable trip alerts**.
 
 ## Deployment

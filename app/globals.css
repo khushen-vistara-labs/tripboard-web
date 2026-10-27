@@ -1001,6 +1001,19 @@ textarea:focus-visible {
 .page-topbar {
   margin-top: 3px;
 }
+.today-topbar { align-items: center; gap: 16px; min-height: 72px; }
+.today-welcome { flex: 1; min-width: 0; }
+.today-topbar .top-actions { align-items: center; min-width: 0; flex: 0 0 auto; }
+.today-topbar .section-search-control, .today-topbar .avatar { flex-shrink: 0; }
+.today-topbar.search-open .today-welcome { display: none; }
+.today-topbar.search-open .top-actions { flex: 1; justify-content: flex-end; }
+.today-topbar.search-open .section-search-control { max-width: calc(100% - 112px); }
+@media (max-width: 560px) {
+  .today-topbar { gap: 10px; }
+  .today-topbar .top-actions { gap: 8px; }
+  .today-topbar .today-welcome h1 { font-size: 21px; line-height: 1.25; }
+  .today-topbar.search-open .section-search-control { max-width: calc(100% - 104px); }
+}
 .sun-glyph {
   color: var(--amber) !important;
 }

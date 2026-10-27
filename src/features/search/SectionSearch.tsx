@@ -6,7 +6,7 @@ import { DateTime } from "luxon";
 import type { AppScreen } from "../../components/app/AppShell";
 import { buildSearchDocuments, matchExcerpt, searchDocuments, searchScopes, type SearchData } from "./section-search";
 
-export function SectionSearch({ screen, data, children }: { screen: AppScreen; data: SearchData; children: ReactNode }) {
+export function SectionSearch({ screen, data, todayDate, renderHeader, children }: { screen: AppScreen; data: SearchData; todayDate?: string; renderHeader?: (control: ReactNode, expanded: boolean) => ReactNode; children: ReactNode }) {
   const [expanded, setExpanded] = useState(false);
   const [query, setQuery] = useState("");
   const input = useRef<HTMLInputElement>(null);
@@ -15,16 +15,14 @@ export function SectionSearch({ screen, data, children }: { screen: AppScreen; d
   const scope = searchScopes[screen];
   const placeholder = screen === "plan" || screen === "overview" ? "All days: places, streets, food, notes…" : screen === "money" ? "Merchants, accounts, amounts…" : scope.hint;
   const deferredQuery = useDeferredValue(query);
-  const documents = useMemo(() => buildSearchDocuments(data, screen), [data, screen]);
+  const documents = useMemo(() => buildSearchDocuments(data, screen, todayDate), [data, screen, todayDate]);
   const results = useMemo(() => searchDocuments(documents, deferredQuery), [documents, deferredQuery]);
   const searching = query.trim().length > 0;
   useEffect(() => { if (expanded) input.current?.focus(); }, [expanded]);
   const close = () => { setQuery(""); setExpanded(false); trigger.current?.focus(); };
   const clear = () => { setQuery(""); input.current?.focus(); };
 
-  return <>
-    <div className="section-search">
-      <form className={`section-search-control${expanded ? " expanded" : ""}`} role="search" aria-label={`${scope.label} search`} onSubmit={(event) => event.preventDefault()}>
+  const control = <form className={`section-search-control${expanded ? " expanded" : ""}`} role="search" aria-label={`${scope.label} search`} onSubmit={(event) => event.preventDefault()}>
         <button ref={trigger} type="button" className="section-search-trigger" aria-label={expanded ? `Close ${scope.label} search` : `Search ${scope.label}`} title={expanded ? "Close search" : `Search ${scope.label}`} aria-expanded={expanded} aria-controls={id} onClick={() => expanded ? close() : setExpanded(true)}><Search size={19}/></button>
         <div id={id} className="section-search-entry" hidden={!expanded}>
           <label className="sr-only" htmlFor={`${id}-input`}>Search {scope.label}</label>
@@ -32,8 +30,10 @@ export function SectionSearch({ screen, data, children }: { screen: AppScreen; d
           {query && <button type="button" className="section-search-clear" aria-label="Clear section search" onClick={clear}><X size={17}/></button>}
           <span className="sr-only" id={`${id}-hint`}>{scope.hint}</span>
         </div>
-      </form>
-    </div>
+      </form>;
+
+  return <>
+    {renderHeader ? renderHeader(control, expanded) : <div className="section-search">{control}</div>}
     {searching && <section className="section-search-results" aria-label={`${scope.label} search results`} aria-busy={deferredQuery !== query}>
       <header className="section-search-heading"><div><h1>Search {scope.label}</h1><p role="status">{results.length} result{results.length === 1 ? "" : "s"} for “{deferredQuery.trim()}”</p></div><button type="button" className="button secondary" onClick={clear}>Back to {scope.label}</button></header>
       {results.length === 0 && <div className="panel empty-state"><Search size={27}/><h2>No matches in {scope.label}</h2><p>Try another place, street, food, or phrase from your notes.</p></div>}

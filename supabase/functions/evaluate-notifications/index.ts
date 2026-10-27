@@ -1,6 +1,6 @@
 import { createClient } from "npm:@supabase/supabase-js@2";
 import webpush from "npm:web-push@3.6.7";
-import { budgetThresholdForPercent, lowWalletThreshold, preferenceAllows } from "../_shared/notification-rules.ts";
+import { budgetThresholdForPercent, dailySummaryCandidates, lowWalletThreshold, preferenceAllows, type NotificationCandidate } from "../_shared/notification-rules.ts";
 
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const serviceRole = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
@@ -12,21 +12,19 @@ const admin = createClient(supabaseUrl, serviceRole, { auth: { persistSession: f
 
 if (vapidPublic && vapidPrivate && vapidSubject) webpush.setVapidDetails(vapidSubject, vapidPublic, vapidPrivate);
 
-type Candidate = { type: string; entityId?: string; title: string; body: string; dedupeKey: string; url: string };
-
 Deno.serve(async (request) => {
   if (request.method !== "POST") return new Response("Method not allowed", { status: 405 });
   if (!scheduleSecret) return Response.json({ error: "Notification scheduler is not configured." }, { status: 503 });
   if (request.headers.get("authorization") !== `Bearer ${scheduleSecret}`) return Response.json({ error: "Unauthorized" }, { status: 401 });
   const now = new Date();
-  const { data: trips, error: tripError } = await admin.from("trips").select("id, name, timezone, overdue_grace_minutes").is("archived_at", null);
+  const { data: trips, error: tripError } = await admin.from("trips").select("id, name, start_date, end_date, timezone, overdue_grace_minutes").is("archived_at", null);
   if (tripError) return Response.json({ error: tripError.message }, { status: 500 });
   let created = 0; let pushed = 0;
 
   for (const trip of trips ?? []) {
     const local = zonedParts(now, trip.timezone);
     const [itemsResult, bookingsResult, membersResult, preferencesResult, budgetsResult, spendingResult, walletsResult] = await Promise.all([
-      admin.from("itinerary_items").select("id, title, date, planned_start_time, planned_end_time, expected_duration_minutes, recommended_departure_time, status").eq("trip_id", trip.id).eq("date", local.date).eq("status", "PLANNED"),
+      admin.from("itinerary_items").select("id, title, date, planned_start_time, planned_end_time, expected_duration_minutes, recommended_departure_time, status").eq("trip_id", trip.id).eq("date", local.date).in("status", ["PLANNED", "MOVED"]),
       admin.from("bookings").select("id, title, starts_at, status").eq("trip_id", trip.id).in("status", ["PLACEHOLDER", "CONFIRMED"]),
       admin.from("trip_members").select("user_id").eq("trip_id", trip.id).is("removed_at", null),
       admin.from("notification_preferences").select("user_id,morning_summary,leave_soon,overdue_item,end_of_day,budget_warning,booking_reminder,low_wallet").eq("trip_id", trip.id),
@@ -35,12 +33,8 @@ Deno.serve(async (request) => {
       admin.from("stored_value_balances").select("account_id,name,currency,balance").eq("trip_id", trip.id),
     ]);
     if (itemsResult.error || bookingsResult.error || membersResult.error || preferencesResult.error || budgetsResult.error || spendingResult.error || walletsResult.error) continue;
-    const candidates: Candidate[] = [];
-
-    if (local.minutes >= 420 && local.minutes < 480) {
-      const firstDeparture = (itemsResult.data ?? []).map((item) => item.recommended_departure_time).filter(Boolean).sort()[0];
-      candidates.push({ type: "MORNING_SUMMARY", title: `${trip.name} today`, body: `${itemsResult.data?.length ?? 0} things planned.${firstDeparture ? ` First departure at ${displayTime(firstDeparture)}.` : ""}`, dedupeKey: `morning:${local.date}`, url: "/today" });
-    }
+    const summaryContext = { name: trip.name, date: local.date, minutes: local.minutes, startDate: trip.start_date, endDate: trip.end_date };
+    const candidates: NotificationCandidate[] = dailySummaryCandidates({ ...summaryContext, items: itemsResult.data ?? [] });
 
     for (const item of itemsResult.data ?? []) {
       if (item.recommended_departure_time) {
@@ -55,10 +49,6 @@ Deno.serve(async (request) => {
       if (!booking.starts_at) continue;
       const until = (new Date(booking.starts_at).getTime() - now.getTime()) / 60000;
       if (until >= 30 && until <= 60) candidates.push({ type: "BOOKING_REMINDER", entityId: booking.id, title: "Booking coming up", body: `${booking.title} is coming up. Your reference and ticket are ready.`, dedupeKey: `booking:${booking.id}:60m`, url: `/bookings?open=${booking.id}` });
-    }
-
-    if (local.minutes >= 1290 && local.minutes < 1350) {
-      candidates.push({ type: "END_OF_DAY", title: "Review today", body: `${itemsResult.data?.length ?? 0} itinerary items still need a decision. Mark done, move, skip, or leave unresolved.`, dedupeKey: `review:${local.date}`, url: "/plan" });
     }
 
     for (const budget of budgetsResult.data ?? []) {
@@ -84,11 +74,20 @@ Deno.serve(async (request) => {
 
     for (const member of membersResult.data ?? []) {
       const preference = (preferencesResult.data ?? []).find((row) => row.user_id === member.user_id);
-      for (const candidate of candidates) {
+      for (const queuedCandidate of candidates) {
+        let candidate = queuedCandidate;
         if (!preferenceAllows(candidate.type, preference)) continue;
+        if (candidate.type === "MORNING_SUMMARY" || candidate.type === "END_OF_DAY") {
+          const { data: pending, error: pendingError } = await admin.from("itinerary_items").select("status,recommended_departure_time").eq("trip_id", trip.id).eq("date", local.date).in("status", ["PLANNED", "MOVED"]);
+          if (pendingError) continue;
+          const current = dailySummaryCandidates({ ...summaryContext, items: pending ?? [] }).find((summary) => summary.type === candidate.type);
+          if (!current) continue;
+          candidate = current;
+        }
         if (candidate.entityId && !["BUDGET_WARNING", "LOW_WALLET"].includes(candidate.type)) {
           const { data: current } = await admin.from(candidate.type === "BOOKING_REMINDER" ? "bookings" : "itinerary_items").select("status").eq("id", candidate.entityId).maybeSingle();
-          if (!current || current.status === "COMPLETED" || current.status === "CANCELLED" || current.status === "USED") continue;
+          const actionable = candidate.type === "BOOKING_REMINDER" ? ["PLACEHOLDER", "CONFIRMED"] : ["PLANNED", "MOVED"];
+          if (!current || !actionable.includes(current.status)) continue;
         }
         const { data: inserted } = await admin.from("notifications").upsert({ trip_id: trip.id, user_id: member.user_id, type: candidate.type, entity_id: candidate.entityId, title: candidate.title, body: candidate.body, dedupe_key: candidate.dedupeKey }, { onConflict: "user_id,dedupe_key", ignoreDuplicates: true }).select("id");
         if (!inserted?.length) continue;
@@ -117,5 +116,4 @@ function zonedParts(date: Date, timeZone: string) {
 }
 
 function timeToMinutes(value: string) { const [hours, minutes] = value.slice(0, 5).split(":").map(Number); return hours * 60 + minutes; }
-function displayTime(value: string) { const minutes = timeToMinutes(value); const hour = Math.floor(minutes / 60); return `${hour % 12 || 12}:${String(minutes % 60).padStart(2, "0")} ${hour >= 12 ? "PM" : "AM"}`; }
 function safeHost(endpoint: string) { try { return new URL(endpoint).host; } catch { return "invalid"; } }

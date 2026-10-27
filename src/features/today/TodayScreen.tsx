@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Bell, CalendarDays, Check, ChevronRight, CircleDollarSign, Clock3, Compass, FileText, LocateFixed, Map, MoveRight, Navigation, Sparkles, Utensils, WalletCards } from "lucide-react";
 import { DateTime } from "luxon";
 import type { TripBoardData } from "../trip/use-tripboard-data";
@@ -12,9 +12,21 @@ import { Modal } from "../../components/ui/Modal";
 import { MoveItemModal } from "../../components/app/MoveItemModal";
 import { calculateBudgetUsage } from "../budgets/usage";
 import { formatDuration } from "../../lib/dates/duration";
+import { SectionSearch } from "../search/SectionSearch";
+import { greetingForHour } from "./greeting";
 
 export function TodayScreen({ data }: { data: TripBoardData }) {
-  const viewDate = data.demoMode ? "2026-12-28" : DateTime.now().setZone(data.trip.timezone).toISODate()!;
+  const [nowMillis, setNowMillis] = useState(Date.now);
+  useEffect(() => {
+    const update = () => setNowMillis(Date.now());
+    const timer = window.setInterval(update, 30_000);
+    window.addEventListener("focus", update);
+    document.addEventListener("visibilitychange", update);
+    return () => { window.clearInterval(timer); window.removeEventListener("focus", update); document.removeEventListener("visibilitychange", update); };
+  }, []);
+  const now = DateTime.fromMillis(nowMillis).setZone(data.trip.timezone);
+  const greeting = greetingForHour(now.hour);
+  const viewDate = data.demoMode ? "2026-12-28" : now.toISODate()!;
   const today = data.itinerary.filter((item) => item.date === viewDate).sort((a, b) => a.sequence - b.sequence);
   const pending = today.filter((item) => item.status === "PLANNED" || item.status === "MOVED");
   const completed = today.filter((item) => item.status === "COMPLETED").length;
@@ -33,11 +45,10 @@ export function TodayScreen({ data }: { data: TripBoardData }) {
   const macauGuide = data.notes.find((note) => note.section.toLowerCase().includes("macau") && note.title.toLowerCase().includes("essentials"));
   const isMacauDay = today.some((item) => /macau/i.test(`${item.title} ${item.description ?? ""}`));
 
-  return <>
-    <header className="topbar page-topbar">
-      <div><p className="eyebrow">{label.toFormat("cccc, d LLLL").toUpperCase()}</p><h1>Good morning <span className="sun-glyph" aria-hidden="true">☀</span></h1></div>
-      <div className="top-actions"><a className="icon-button notification-button" aria-label={`View notifications${data.unreadNotificationCount ? `, ${data.unreadNotificationCount} unread` : ""}`} href="/more?section=alerts"><Bell size={18}/>{data.unreadNotificationCount > 0 && <span className="notification-count">{data.unreadNotificationCount > 99 ? "99+" : data.unreadNotificationCount}</span>}</a><div className="avatar" aria-label="Your profile">H</div></div>
-    </header>
+  return <SectionSearch screen="today" data={data} todayDate={viewDate} renderHeader={(searchControl, searchExpanded) => <header className={`topbar page-topbar today-topbar${searchExpanded ? " search-open" : ""}`}>
+      <div className="today-welcome"><p className="eyebrow">{label.toFormat("cccc, d LLLL").toUpperCase()}</p><h1>{greeting.text} <span className="sun-glyph" aria-hidden="true">{greeting.glyph}</span></h1></div>
+      <div className="top-actions">{searchControl}<a className="icon-button notification-button" aria-label={`View notifications${data.unreadNotificationCount ? `, ${data.unreadNotificationCount} unread` : ""}`} href="/more?section=alerts"><Bell size={18}/>{data.unreadNotificationCount > 0 && <span className="notification-count">{data.unreadNotificationCount > 99 ? "99+" : data.unreadNotificationCount}</span>}</a><div className="avatar" aria-label="Your profile">H</div></div>
+    </header>}>
 
     <div className="day-heading">
       <div><span className="day-chip">DAY {Math.max(1, Math.floor(label.diff(DateTime.fromISO(data.trip.startDate), "days").days) + 1)}</span><h2>{viewDate === "2026-12-28" ? "Lantau & Tai O" : data.trip.name}</h2></div>
@@ -89,7 +100,7 @@ export function TodayScreen({ data }: { data: TripBoardData }) {
     {showWhatNow && <Modal title="What can we do now?" description="Rule-based suggestions from unfinished priorities, timing, and duration." onClose={() => setShowWhatNow(false)}>
       <div className="recommendation-list">{recommendations.map((item, index) => <article key={item.id}><span>{index + 1}</span><div><small>{item.priority} · {formatDuration(item.expectedDurationMinutes ?? 60)}</small><strong>{item.title}</strong><p>{item.date === viewDate ? "Fits today’s plan" : `Planned ${DateTime.fromISO(item.date).toFormat("d LLL")}`}</p></div>{item.mapsUrl ? <button onClick={() => window.open(item.mapsUrl, "_blank", "noopener,noreferrer")} aria-label={`Directions to ${item.title}`}><LocateFixed size={17}/></button> : <Clock3 size={17}/>}</article>)}</div>
     </Modal>}
-  </>;
+  </SectionSearch>;
 }
 
 function displayTime(value?: string) {

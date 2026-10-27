@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { budgetThresholdForPercent, lowWalletThreshold, preferenceAllows } from "../supabase/functions/_shared/notification-rules";
+import { budgetThresholdForPercent, dailySummaryCandidates, lowWalletThreshold, preferenceAllows } from "../supabase/functions/_shared/notification-rules";
 import { classifySyncFailure, mutationSummary } from "../src/lib/offline/conflicts";
 
 describe("alert evaluator rules", () => {
@@ -20,6 +20,44 @@ describe("alert evaluator rules", () => {
     expect(budgetThresholdForPercent(105)).toBe(100);
     expect(lowWalletThreshold("HKD")).toBe(100);
     expect(lowWalletThreshold("INR")).toBe(500);
+  });
+
+  const summary = { name: "Hong Kong", startDate: "2026-12-24", endDate: "2027-01-02", date: "2026-12-28", minutes: 1290 };
+
+  it("never creates morning or review alerts for empty or fully resolved days", () => {
+    for (const minutes of [420, 1290]) {
+      expect(dailySummaryCandidates({ ...summary, minutes, items: [] })).toEqual([]);
+      expect(dailySummaryCandidates({ ...summary, minutes, items: [{ status: "COMPLETED" }, { status: "SKIPPED" }] })).toEqual([]);
+    }
+  });
+
+  it("does not create daily summaries before or after the trip", () => {
+    for (const date of ["2026-10-27", "2027-01-03"]) {
+      expect(dailySummaryCandidates({ ...summary, date, items: [{ status: "PLANNED" }] })).toEqual([]);
+    }
+  });
+
+  it("includes moved activities and only counts pending items in the review", () => {
+    const candidates = dailySummaryCandidates({ ...summary, items: [{ status: "MOVED" }, { status: "COMPLETED" }, { status: "SKIPPED" }] });
+    expect(candidates).toHaveLength(1);
+    expect(candidates[0]).toMatchObject({ type: "END_OF_DAY", url: "/plan?date=2026-12-28", dedupeKey: "review:2026-12-28" });
+    expect(candidates[0].body).toMatch(/^1 activity still needs a decision/);
+  });
+
+  it("uses the earliest pending departure in actionable morning summaries", () => {
+    const candidates = dailySummaryCandidates({ ...summary, minutes: 420, items: [
+      { status: "COMPLETED", recommended_departure_time: "06:00:00" },
+      { status: "PLANNED", recommended_departure_time: "09:15:00" },
+      { status: "MOVED", recommended_departure_time: "08:30:00" },
+    ] });
+    expect(candidates[0]).toMatchObject({ type: "MORNING_SUMMARY", body: "2 activities planned. First departure at 8:30 AM." });
+  });
+
+  it("keeps summaries inside their scheduled windows, including the trip boundaries", () => {
+    expect(dailySummaryCandidates({ ...summary, minutes: 480, items: [{ status: "PLANNED" }] })).toEqual([]);
+    expect(dailySummaryCandidates({ ...summary, minutes: 1350, items: [{ status: "PLANNED" }] })).toEqual([]);
+    expect(dailySummaryCandidates({ ...summary, date: summary.startDate, items: [{ status: "PLANNED" }] })).toHaveLength(1);
+    expect(dailySummaryCandidates({ ...summary, date: summary.endDate, items: [{ status: "PLANNED" }] })).toHaveLength(1);
   });
 });
 
