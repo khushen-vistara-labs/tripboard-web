@@ -635,6 +635,17 @@ textarea:focus-visible {
 .bottom-nav {
   display: none;
 }
+.bottom-nav-label {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.bottom-nav-label-compact {
+  display: none;
+}
 .invite-ready {
   display: flex;
   align-items: flex-start;
@@ -7304,17 +7315,6 @@ html[data-theme="dark"] .transport-options-list article > div > b {
   .bottom-nav a {
     min-width: 0;
     padding-inline: 2px;
-  }
-  .bottom-nav-label {
-    display: block;
-    max-width: 100%;
-    overflow: hidden;
-    text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .bottom-nav-label-compact {
-    display: none;
   }
 }
 
