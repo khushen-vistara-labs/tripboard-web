@@ -86,26 +86,13 @@
     },
     {
       "table": "itinerary_days",
-      "id": "19dce530-942d-44aa-8bcf-611bcb64f5c5",
-      "label": "Boxing Day • Day Peak • Happy Valley • Luk On Kui • Man Mo Temple • Central • Lee Tung Avenue • Night Peak • Star Ferry",
-      "values": {
-        "notes": "Hong Kong time (UTC+8). Cheung Hing is a light bun/tea stop; Luk On Kui at 12:25 is the main dim sum lunch. Westbound Western Market tram to Sheung Wan, then uphill to Man Mo and east to Central. Tai Kwun and PMQ deliberately excluded. Preserve conditional 2026 Let It Snow wording; programme remains unconfirmed."
-      },
-      "before": {
-        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
-      }
-    },
-    {
-      "table": "itinerary_days",
       "id": "c7b97815-7fbe-44ab-b71d-3b699f45d42d",
       "label": "Macau Full Day • Fisherman's Wharf • Historic Macau • Bungy • Cotai • Wynn Palace",
       "values": {
-        "title": "Macau overnight • Historic centre • Bungy target • Treasure Hotel proposed • Wynn • Cotai",
-        "notes": "Sunday 27 Dec, Hong Kong/Macau time (UTC+8). 08:30 outbound ferry and 14:00 bungy are unbooked targets; 13:30 bungy check-in. Treasure is proposed, not booked: an extra room night while the Hong Kong room stays booked with main luggage. Carry a small overnight bag. Historic centre → Tower → Treasure → Wynn → Venetian → Parisian exterior → Londoner → Treasure. Skip pandas by default. Monte Fort, Fisherman’s Wharf and Golden Reel are untimed optional alternatives only. Shorten Venetian, omit the guard show or skip the SkyCab queue if late; protect meals and transfers. Return on Monday morning."
+        "title": "Macau overnight • Historic centre • Bungy target • Treasure Hotel proposed • Wynn • Cotai"
       },
       "before": {
-        "title": "b97c74f5a4ce725839d5104fb07515ac8c598514976b5b769e281a25cfdb8bbd",
-        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+        "title": "b97c74f5a4ce725839d5104fb07515ac8c598514976b5b769e281a25cfdb8bbd"
       }
     },
     {
@@ -113,12 +100,10 @@
       "id": "8762dac6-a762-453b-a698-bd8a55ba7e3c",
       "label": "Wong Tai Sin • Nan Lian Garden • Choi Hung + Ping Shek (WANT) • Sham Shui Po • Mong Kok • Temple Street",
       "values": {
-        "title": "Macau return • Wong Tai Sin • Nan Lian • Choi Hung + Ping Shek (WANT, conditional) • Sham Shui Po • Mong Kok • Temple Street",
-        "notes": "Monday 28 Dec, Hong Kong/Macau time (UTC+8). Breakfast before leaving Treasure; 09:00 Taipa → Sheung Wan ferry remains a placeholder. Carry only the overnight bag; transfer directly to Kowloon without a hotel detour or Central sightseeing. If ferry/immigration or meals run late, omit Choi Hung/Ping Shek first, then Sham Shui Po; use Diamond Hill → Mong Kok on Kwun Tong Line towards Whampoa. Protect lunch and the established Temple Street / Hing Kee / Kai Kai evening. Luk On Kui and Man Mo are on 26 Dec only."
+        "title": "Macau return • Wong Tai Sin • Nan Lian • Choi Hung + Ping Shek (WANT, conditional) • Sham Shui Po • Mong Kok • Temple Street"
       },
       "before": {
-        "title": "938300299bb555689a2c2a7384efde86a6f62ccd8426d5d1b83da5b7e58a9c77",
-        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+        "title": "938300299bb555689a2c2a7384efde86a6f62ccd8426d5d1b83da5b7e58a9c77"
       }
     },
     {

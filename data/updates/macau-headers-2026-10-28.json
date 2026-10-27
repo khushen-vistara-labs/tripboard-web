@@ -1,0 +1,39 @@
+{
+  "tripId": "73c7883d-cff1-4abd-a0b0-ec8a5a543e1f",
+  "timezone": "Asia/Hong_Kong",
+  "changes": [
+    {
+      "table": "itinerary_days",
+      "id": "19dce530-942d-44aa-8bcf-611bcb64f5c5",
+      "label": "Boxing Day • Day Peak • Happy Valley • Luk On Kui • Man Mo Temple • Central • Lee Tung Avenue • Night Peak • Star Ferry",
+      "values": {
+        "notes": null
+      },
+      "before": {
+        "notes": "3cd0f88a35664bafee2810b8c2c741b03f46f390f711c46c8b60b743b6be29d3"
+      }
+    },
+    {
+      "table": "itinerary_days",
+      "id": "c7b97815-7fbe-44ab-b71d-3b699f45d42d",
+      "label": "Macau Full Day • Fisherman's Wharf • Historic Macau • Bungy • Cotai • Wynn Palace",
+      "values": {
+        "notes": null
+      },
+      "before": {
+        "notes": "b2db21fa9eaf81c31f131ff4cd4690af6342e7503fcfa9cddfb0c928a3d98999"
+      }
+    },
+    {
+      "table": "itinerary_days",
+      "id": "8762dac6-a762-453b-a698-bd8a55ba7e3c",
+      "label": "Wong Tai Sin • Nan Lian Garden • Choi Hung + Ping Shek (WANT) • Sham Shui Po • Mong Kok • Temple Street",
+      "values": {
+        "notes": null
+      },
+      "before": {
+        "notes": "c175084360fdb240bc691a465773fe26dd1de6d8e042d8083ce9ad691830e2ee"
+      }
+    }
+  ]
+}
