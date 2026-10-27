@@ -124,6 +124,19 @@ It updates only the current shared trip's Guide records and Bridal Tea House hot
 
 Today may derive one short contextual reminder from the same Guide data. For example, a Macau itinerary day shows the Macau essentials reminder with a link back to the Guide instead of duplicating the whole section.
 
+## Macau overnight update (28 October 2026)
+
+The live 26–28 December revision uses `data/updates/macau-2026-10-28.json` and a scoped Supabase updater. It preserves existing record IDs, reuses matching places, protects confirmed bookings and history, and never writes attachments, accounts, budgets or financial transactions. The reviewed baselines include newer live changes after the 27 October export; private snapshots and credentials are not committed.
+
+```bash
+pnpm update:macau                              # read-only plan against live state
+pnpm update:macau --apply --backup=/tmp/tripboard-before-macau.json
+```
+
+Use a fresh private backup path for an apply. Each edited field must still match its reviewed old value or already match the desired value. Any newer conflict stops preflight before writes; concurrent changes are protected by database version/timestamp comparisons (and edited-field comparisons for Guide notes). Server triggers manage versions. New IDs are stable; repeating a completed update is a no-op. An interrupted apply can be rerun after reviewing a fresh dry run. Deletions are limited to reviewed, uncompleted obsolete transfers and happen last.
+
+This update is independent of the older developer seed. Do not run the full seed/itinerary/Guide sync to apply it: those commands use older planning content and can replace live edits. Treasure and both ferries remain unbooked placeholders; the INR4,300 hotel amount is an estimate, never an expense.
+
 ## Search the current section
 
 Use the search icon above the current screen to expand a compact search field inline; its scope hint appears as placeholder text. It searches full descriptions, notes, addresses, nearby food, transport choices, and linked booking/place details within the selected menu item. Plan and Trip at a Glance search every day; Today uses the current date in the trip timezone. Money searches transactions, merchants, accounts, and budgets. Guide and Immigration search their own complete reference text.

@@ -1,0 +1,1977 @@
+{
+  "tripId": "73c7883d-cff1-4abd-a0b0-ec8a5a543e1f",
+  "timezone": "Asia/Hong_Kong",
+  "changes": [
+    {
+      "table": "places",
+      "id": "35fdb6d2-dc7d-56d1-b1cd-4c12c4a8d720",
+      "label": "Treasure Hotel",
+      "values": {
+        "name": "Treasure Hotel",
+        "address": "Opposite Macau International Airport, Taipa, Macau",
+        "neighbourhood": "Macau Airport / Taipa",
+        "category": "Hotel",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Treasure+Hotel+Macau",
+        "priority": "WANT",
+        "notes": "Proposed overnight 27–28 December 2026, one room for two. Additional room night; retain the confirmed Hong Kong room and main luggage there. INR4,300 is an unverified estimate; verify taxes, room type, cancellation and breakfast before purchasing."
+      },
+      "match": {
+        "name": "Treasure Hotel"
+      }
+    },
+    {
+      "table": "bookings",
+      "id": "edce73c1-e39e-52ee-b4fd-97c1dc08b737",
+      "label": "Treasure Hotel — proposed 27–28 Dec overnight",
+      "values": {
+        "type": "HOTEL",
+        "title": "Treasure Hotel — proposed 27–28 Dec overnight",
+        "provider": "Treasure Hotel",
+        "starts_at": "2026-12-27T08:30:00+00:00",
+        "ends_at": "2026-12-27T23:45:00+00:00",
+        "location": "Opposite Macau International Airport, Taipa, Macau",
+        "amount": 4300,
+        "currency": "INR",
+        "status": "PLACEHOLDER",
+        "notes": "UNBOOKED / ESTIMATE ONLY: INR4,300 for one room for two, quoted but unverified. Verify all-in taxes, room type, cancellation and breakfast before purchase. Planned check-in 27 Dec 16:30 and checkout 28 Dec about 07:45, Hong Kong/Macau time (UTC+8). This is an additional hotel night; keep the confirmed Hong Kong room and main luggage there. No payment or expense has been recorded."
+      },
+      "match": {
+        "title": "Treasure Hotel — proposed 27–28 Dec overnight"
+      }
+    },
+    {
+      "table": "bookings",
+      "id": "50498174-2ff7-4131-b400-931425406afa",
+      "label": "TurboJET Sheung Wan → Macau Outer Harbour",
+      "values": {
+        "starts_at": "2026-12-27T00:30:00+00:00",
+        "ends_at": "2026-12-27T01:30:00+00:00",
+        "provider": "TurboJET",
+        "notes": "PLACEHOLDER — unbooked target: 27 Dec 08:30–09:30 UTC+8, Sheung Wan → Macau Outer Harbour. Published timetable is not date-specific availability; reconfirm 27 Dec inventory. Reach the terminal about 07:35 with breakfast/snacks bought; follow actual boarding cutoffs. 07:30 is an earlier alternative; 09:30 leaves less sightseeing time."
+      },
+      "before": {
+        "starts_at": "602f0cbbcfc688d321750b25b5cfdb7b33745e3242d7f121bfe7e782b87c4e98",
+        "ends_at": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "provider": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "bookings",
+      "id": "a45361c5-d99d-4e3a-9973-25e315f520bd",
+      "label": "Cotai Water Jet Taipa → Hong Kong Sheung Wan",
+      "values": {
+        "starts_at": "2026-12-28T01:00:00+00:00",
+        "ends_at": "2026-12-28T02:00:00+00:00",
+        "provider": "Cotai Water Jet",
+        "notes": "PLACEHOLDER — unbooked target: Monday 28 Dec 09:00–10:00 UTC+8, Taipa → Sheung Wan. Currently the first published departure; timetable is not date-specific inventory. Reconfirm 28 Dec tickets and boarding cutoff; target Taipa terminal by 08:10. Replaces the old Sunday late-night return."
+      },
+      "before": {
+        "starts_at": "8a4c112070ccccf851f23f7320812753bc2cab6ea9325c2fd4a1b025dabc1084",
+        "ends_at": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "provider": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "bookings",
+      "id": "44ae113b-6301-4837-a0fc-7fa60b9b7e26",
+      "label": "Macau Tower Bungy",
+      "values": {
+        "notes": "PLACEHOLDER — unbooked target: Sunday 27 Dec 14:00 UTC+8. Arrive at the ticketing counter at 13:30 (30 minutes early). Allow 13:30–16:00 for check-in, processing, waiting, jump and photos; finish is an estimate, never guaranteed. Meghana accompanies Harshith: verify her spectator/observation ticket and permitted viewing deck before booking."
+      },
+      "before": {
+        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_days",
+      "id": "19dce530-942d-44aa-8bcf-611bcb64f5c5",
+      "label": "Boxing Day • Day Peak • Happy Valley • Luk On Kui • Man Mo Temple • Central • Lee Tung Avenue • Night Peak • Star Ferry",
+      "values": {
+        "notes": "Hong Kong time (UTC+8). Cheung Hing is a light bun/tea stop; Luk On Kui at 12:25 is the main dim sum lunch. Westbound Western Market tram to Sheung Wan, then uphill to Man Mo and east to Central. Tai Kwun and PMQ deliberately excluded. Preserve conditional 2026 Let It Snow wording; programme remains unconfirmed."
+      },
+      "before": {
+        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_days",
+      "id": "c7b97815-7fbe-44ab-b71d-3b699f45d42d",
+      "label": "Macau Full Day • Fisherman's Wharf • Historic Macau • Bungy • Cotai • Wynn Palace",
+      "values": {
+        "title": "Macau overnight • Historic centre • Bungy target • Treasure Hotel proposed • Wynn • Cotai",
+        "notes": "Sunday 27 Dec, Hong Kong/Macau time (UTC+8). 08:30 outbound ferry and 14:00 bungy are unbooked targets; 13:30 bungy check-in. Treasure is proposed, not booked: an extra room night while the Hong Kong room stays booked with main luggage. Carry a small overnight bag. Historic centre → Tower → Treasure → Wynn → Venetian → Parisian exterior → Londoner → Treasure. Skip pandas by default. Monte Fort, Fisherman’s Wharf and Golden Reel are untimed optional alternatives only. Shorten Venetian, omit the guard show or skip the SkyCab queue if late; protect meals and transfers. Return on Monday morning."
+      },
+      "before": {
+        "title": "b97c74f5a4ce725839d5104fb07515ac8c598514976b5b769e281a25cfdb8bbd",
+        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_days",
+      "id": "8762dac6-a762-453b-a698-bd8a55ba7e3c",
+      "label": "Wong Tai Sin • Nan Lian Garden • Choi Hung + Ping Shek (WANT) • Sham Shui Po • Mong Kok • Temple Street",
+      "values": {
+        "title": "Macau return • Wong Tai Sin • Nan Lian • Choi Hung + Ping Shek (WANT, conditional) • Sham Shui Po • Mong Kok • Temple Street",
+        "notes": "Monday 28 Dec, Hong Kong/Macau time (UTC+8). Breakfast before leaving Treasure; 09:00 Taipa → Sheung Wan ferry remains a placeholder. Carry only the overnight bag; transfer directly to Kowloon without a hotel detour or Central sightseeing. If ferry/immigration or meals run late, omit Choi Hung/Ping Shek first, then Sham Shui Po; use Diamond Hill → Mong Kok on Kwun Tong Line towards Whampoa. Protect lunch and the established Temple Street / Hing Kee / Kai Kai evening. Luk On Kui and Man Mo are on 26 Dec only."
+      },
+      "before": {
+        "title": "938300299bb555689a2c2a7384efde86a6f62ccd8426d5d1b83da5b7e58a9c77",
+        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "6491b580-d1a3-415a-acd5-726e13863abd",
+      "label": "Cheung Hing Coffee Shop breakfast",
+      "values": {
+        "title": "Cheung Hing — light bun and tea stop",
+        "transport_instructions": "Keep this a light/shared bun and tea snack, not a second full meal: Luk On Kui at 12:25 is the main dim sum lunch. Try pineapple bun or egg tart with milk tea. No beef or beef broth."
+      },
+      "before": {
+        "title": "117ae8582f12aece319bd86928c9f5c7b4204b689d68181989bb6c1156cd52c9",
+        "transport_instructions": "ce0c629e2cffa428bdd52d05210e03a1c00668729cc60371f5939dfc95ca8a86"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "c290eaa5-8227-44c9-a584-770e548089ea",
+      "label": "Happy Valley → Sheung Wan / Luk On Kui by Ding Ding",
+      "values": {
+        "planned_end_time": "12:10:00",
+        "expected_duration_minutes": 45,
+        "sequence": 60,
+        "transport_instructions": "Use a westbound Ding Ding tram showing Western Market; confirm its destination before boarding. Continue to Western Market / Des Voeux Road West rather than alighting in Central and retracing west. Allow about 45 minutes plus Boxing Day slippage.",
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "Westbound tram to Western Market",
+          "crowdNote": "Holiday queues/traffic may add time; use the lunch/rest buffers."
+        },
+        "title": "Happy Valley → Sheung Wan by Ding Ding"
+      },
+      "before": {
+        "planned_end_time": "a403c29c0a85199912806e732c1cb5d9b689f6b979c774633e355a9bb54e91c4",
+        "expected_duration_minutes": "1a6562590ef19d1045d06c4055742d38288e9e6dcd71ccde5cee80f1d5a774eb",
+        "sequence": "39fa9ec190eee7b6f4dff1100d6343e10918d044c75eac8f9e9a2596173f80c9",
+        "transport_instructions": "f4382882af06ac5259ab0bae5798070d8ff884278644cb77a184ce49c63c7843",
+        "details": "8fa58360ddc6b4f477e83ebc36845e1dfcbb36e0b71c7dea28efb558ed0a7c87",
+        "title": "1d694d0eb04d81287f5a5ee273cb3e2744b344b7c732afd7d73d053b02cd234b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "e19cb408-f37f-54b8-956c-5d238064612f",
+      "label": "Walk to Luk On Kui",
+      "values": {
+        "date": "2026-12-26",
+        "itinerary_day_id": "19dce530-942d-44aa-8bcf-611bcb64f5c5",
+        "planned_start_time": "12:10:00",
+        "planned_end_time": "12:25:00",
+        "expected_duration_minutes": 15,
+        "sequence": 65,
+        "transport_instructions": "Walk from the actual tram stop to Luk On Kui, 2–3/F, 40–50 Des Voeux Road West. Allow for crossings and finding the restaurant entrance.",
+        "details": {
+          "timingType": "TARGET"
+        },
+        "recommended_departure_time": null,
+        "title": "Walk to Luk On Kui",
+        "place_id": "5817632d-60df-4245-92b2-d3e8f1f29524",
+        "item_type": "transport",
+        "status": "PLANNED",
+        "priority": "MUST"
+      },
+      "match": {
+        "title": "Walk to Luk On Kui",
+        "date": "2026-12-26"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "86650a0d-0e3e-488e-aaf4-14e35cbbd83e",
+      "label": "Luk On Kui old-school dim sum",
+      "values": {
+        "planned_start_time": "12:25:00",
+        "expected_duration_minutes": 75,
+        "sequence": 70,
+        "transport_instructions": "Main dim sum lunch, replacing the separate Central lunch. Allow holiday queues and verify dim sum lunch service before travel. The earlier Cheung Hing stop is a light snack. No beef or beef broth.",
+        "details": {
+          "timingType": "TARGET",
+          "crowdNote": "Boxing Day queues; reconfirm lunch service.",
+          "dietaryNote": "No beef or beef broth.",
+          "quickNote": "2–3/F, 40–50 Des Voeux Road West. Try har gow, siu mai, char siu bao, cheung fun and tea."
+        }
+      },
+      "before": {
+        "planned_start_time": "a403c29c0a85199912806e732c1cb5d9b689f6b979c774633e355a9bb54e91c4",
+        "expected_duration_minutes": "b4944c6ff08dc6f43da2e9c824669b7d927dd1fa976fadc7b456881f51bf5ccc",
+        "sequence": "ff5a1ae012afa5d4c889c50ad427aaf545d31a4fac04ffc1c4d03d403ba4250a",
+        "transport_instructions": "6439b935e2f7a817683105bf83ebeef93dbbe803f6d053b19290275663885ff7",
+        "details": "b74b753437d5b9e717bfd4ab51121a06861607536c64e66b5c4a15200022724e"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "d7fa560f-22da-4383-b00b-5e15b4942de6",
+      "label": "Walk Luk On Kui → Man Mo Temple",
+      "values": {
+        "sequence": 80,
+        "transport_instructions": "Walk uphill towards Hollywood Road; allow 15–20 minutes depending on route and pace, including slopes/crossings.",
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "Walk"
+        }
+      },
+      "before": {
+        "sequence": "48449a14a4ff7d79bb7a1b6f3d488eba397c36ef25634c111b49baf362511afc",
+        "transport_instructions": "dc1abe155e9544021edd697001a4a0cbf93ee426f8f0e96c9fd69f6e5f078e88",
+        "details": "23d6a7b91702d00f64b9ab049530c95cea800cb955382a1438709f929b522d06"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "9fbabc05-ee81-48bf-ac52-ea02d5560d01",
+      "label": "Man Mo Temple",
+      "values": {
+        "planned_end_time": "14:35:00",
+        "expected_duration_minutes": 35,
+        "sequence": 90,
+        "transport_instructions": "Visit at 124–126 Hollywood Road. Respect worshippers; keep paths clear. The uphill transfer is in the preceding row.",
+        "details": {
+          "timingType": "TARGET",
+          "operatingHours": "Official ordinary hours 08:00–18:00; recheck holiday notices.",
+          "attractionCost": "Free"
+        }
+      },
+      "before": {
+        "planned_end_time": "1bcb8f102f622dd04d7f61deded45ea8335f9f4158bc100054c52b06e2da0dc7",
+        "expected_duration_minutes": "d59eced1ded07f84c145592f65bdf854358e009c5cd705f5215bf18697fed103",
+        "sequence": "69f59c273b6e669ac32a6dd5e1b2cb63333d8b004f9696447aee2d422ce63763",
+        "transport_instructions": "dc1abe155e9544021edd697001a4a0cbf93ee426f8f0e96c9fd69f6e5f078e88",
+        "details": "e3c24d3d91a694c7a9c20e4845daaec144d43d69c47797a63eb6fc364734bc65"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "9be0eb2b-80df-4dbb-8aa1-ad720ab95b08",
+      "label": "Central / Old Town walking route",
+      "values": {
+        "planned_start_time": "14:35:00",
+        "planned_end_time": "15:15:00",
+        "expected_duration_minutes": 40,
+        "sequence": 100,
+        "transport_instructions": "Walk east through Hollywood Road / Old Town streets towards Central. Graham Street / Mid-Levels Escalator area is optional. No Tai Kwun or PMQ detour.",
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "Walk"
+        },
+        "title": "Hollywood Road / Old Town → Central"
+      },
+      "before": {
+        "planned_start_time": "1bcb8f102f622dd04d7f61deded45ea8335f9f4158bc100054c52b06e2da0dc7",
+        "planned_end_time": "8461ee104eb268d83e31a5f4af2992f7158411290e31110b1c549e2b13a3cacc",
+        "expected_duration_minutes": "02d20bbd7e394ad5999a4cebabac9619732c343a4cac99470c03e23ba2bdc2bc",
+        "sequence": "ad57366865126e55649ecb23ae1d48887544976efea46a48eb5d85a6eeb4d306",
+        "transport_instructions": "dc69f32fb89095b9622f70aca59f3c94a820e3ca2cacd340ed1f2e4b84ed1596",
+        "details": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "title": "2c7f0105ed03c27a3c8d1954176f41ee2a68c23f53ccb82d96e25b909305f3a8"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "2ceda501-9931-4897-b8e9-2fb43fa9d352",
+      "label": "Central Christmas atmosphere and harbourfront",
+      "values": {
+        "planned_start_time": "15:15:00",
+        "expected_duration_minutes": 115,
+        "sequence": 110,
+        "transport_instructions": "Selected festive displays, harbourfront and a rest break. Keep the buffer; do not add attractions to refill removed stops. Finish near a practical route to Wan Chai for the existing 17:10 Lee Tung Avenue transfer.",
+        "details": {
+          "timingType": "BUFFER"
+        },
+        "title": "Central festive atmosphere / harbourfront and rest buffer"
+      },
+      "before": {
+        "planned_start_time": "8461ee104eb268d83e31a5f4af2992f7158411290e31110b1c549e2b13a3cacc",
+        "expected_duration_minutes": "ad48ff99415b2f007dc35b7eb553fd1eb35ebfa2f2f308acd9488eeb86f71fa8",
+        "sequence": "9bdb2af6799204a299c603994b8e400e4b1fd625efdb74066cc869fee42c9df3",
+        "transport_instructions": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "details": "fe65275770ada3fcd1a8ea03769ff778db1cb0a4704e8815d107397b8439828d",
+        "title": "149f5503292d254ca70b898c94cdf53e277840b0c295f05fd51d44f3a7784458"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "0762506b-9d0b-4798-aa3b-c2faf25f6f4f",
+      "label": "Taxi to Hong Kong Macau Ferry Terminal",
+      "values": {
+        "planned_start_time": "06:45:00",
+        "planned_end_time": "07:35:00",
+        "expected_duration_minutes": 50,
+        "transport_instructions": "Default: walk to Yau Ma Tei MTR → Tsuen Wan Line towards Central → Island Line towards Kennedy Town, one stop to Sheung Wan → signed Shun Tak ferry terminal access. Allow 45–50 minutes including station walks. Taxi fallback: ask the hotel for a current cross-harbour fare and toll estimate.",
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "MTR via Central",
+          "fallback": "Taxi if preferred; get a hotel quote including cross-harbour tolls. Do not use the old low taxi estimate."
+        },
+        "title": "MTR / taxi to Sheung Wan ferry terminal",
+        "estimated_cost": null,
+        "estimated_cost_currency": null
+      },
+      "before": {
+        "planned_start_time": "b0bf3a185d8e164f76fbe88534938a1bfbae85172290573739f0c0a5b408c637",
+        "planned_end_time": "57d4128397a8c2e9e5cb6c41480abf38ade3f11cb4f41eb9a98a81f27e3fe5ee",
+        "expected_duration_minutes": "9f14025af0065b30e47e23ebb3b491d39ae8ed17d33739e5ff3827ffb3634953",
+        "transport_instructions": "b0020bcab6fe759d27301535e368fd541c969c1f95edbf49dc41ed9eb399a2c2",
+        "details": "b241ad8c5495a01c15f83487f0533cc2503d6f03ec0b0fcb8049cac75e366736",
+        "title": "273ce7c2adf180b5a8f3e28e5ce9abf723ae5fd1784d7cd39ce37cfe3e76d52c",
+        "estimated_cost": "ad57366865126e55649ecb23ae1d48887544976efea46a48eb5d85a6eeb4d306",
+        "estimated_cost_currency": "fd88ae3483c561e5f3c125cb77723d32fec654259be55edae61386a184f70ee3"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "8bfb7f96-2b34-5d9f-8e4e-8eefa6b25d78",
+      "label": "Sheung Wan ferry check-in and breakfast buffer",
+      "values": {
+        "date": "2026-12-27",
+        "itinerary_day_id": "c7b97815-7fbe-44ab-b71d-3b699f45d42d",
+        "planned_start_time": "07:35:00",
+        "planned_end_time": "08:30:00",
+        "expected_duration_minutes": 55,
+        "sequence": 20,
+        "transport_instructions": "Reach Sheung Wan terminal about 55 minutes before departure. Buy breakfast/snacks beforehand; follow operator boarding cutoffs.",
+        "details": {
+          "timingType": "BUFFER"
+        },
+        "recommended_departure_time": null,
+        "title": "Sheung Wan ferry check-in and breakfast buffer",
+        "place_id": "923ba383-597f-446b-93de-e449ef075e94",
+        "item_type": "transport",
+        "status": "PLANNED",
+        "priority": "MUST"
+      },
+      "match": {
+        "title": "Sheung Wan ferry check-in and breakfast buffer",
+        "date": "2026-12-27"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "119d30f1-3963-4981-91be-1580a0e32c98",
+      "label": "TurboJET Sheung Wan → Macau Outer Harbour",
+      "values": {
+        "planned_start_time": "08:30:00",
+        "planned_end_time": "09:30:00",
+        "sequence": 30,
+        "transport_instructions": "Unbooked 08:30 target, about 60 minutes. Outer Harbour suits the historic centre first. Listed on the published timetable; reconfirm 27 December inventory. 07:30 is an earlier alternative; 09:30 leaves less sightseeing time.",
+        "details": {
+          "timingType": "TARGET",
+          "booking": "required",
+          "eventStatus": "PLACEHOLDER — not booked",
+          "planningAssumption": "Published timetable is not date-specific ticket availability.",
+          "costStatus": "Recheck actual fare when booking."
+        },
+        "booking_id": "50498174-2ff7-4131-b400-931425406afa",
+        "estimated_cost": null,
+        "estimated_cost_currency": null
+      },
+      "before": {
+        "planned_start_time": "cfaa1db04fab9f71c57dc3ce2698b74c0c29ba766c1eef056dfe015a19695c5b",
+        "planned_end_time": "dcfa8e4a966a0ee2d81a5fcdd0a7e2f492464af12a376e6b9be28c3ec89bbbca",
+        "sequence": "f5ca38f748a1d6eaf726b8a42fb575c3c71f1864a8143301782de13da2d9202b",
+        "transport_instructions": "03071ac26331c3389ee26c95c4fd0e77cc9acb64be30b282a0ce5923f2bbb372",
+        "details": "f8e42144eef76ab8cf4a477030fb5eca784505d9c067f7abaca0c86cc9339552",
+        "booking_id": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost": "814fd2e8e45e9a6d3e1f6ff86867aaf2251ccd07f3eed02708fae286192c29e3",
+        "estimated_cost_currency": "fd88ae3483c561e5f3c125cb77723d32fec654259be55edae61386a184f70ee3"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "910bd1ee-f5f0-423c-bb80-036547b008b3",
+      "label": "Macau immigration and arrival buffer",
+      "values": {
+        "planned_start_time": "09:30:00",
+        "planned_end_time": "10:00:00",
+        "sequence": 40,
+        "transport_instructions": "Carry both passports and valid Hong Kong re-entry documents. Verify Macau data coverage for 27 AND 28 Dec. Small overnight bag only; main luggage stays in the retained Hong Kong room.",
+        "details": {
+          "timingType": "BUFFER",
+          "carry": [
+            "Both passports",
+            "Valid Hong Kong re-entry documents",
+            "Actual confirmations",
+            "Small overnight bag",
+            "Small MOP cash"
+          ]
+        }
+      },
+      "before": {
+        "planned_start_time": "dcfa8e4a966a0ee2d81a5fcdd0a7e2f492464af12a376e6b9be28c3ec89bbbca",
+        "planned_end_time": "ee590236749b46ec6f2f8340eba862ae759051a13e6d39a8c9790b4f12db412b",
+        "sequence": "b7a56873cd771f2c446d369b649430b65a756ba278ff97ec81bb6f55b2e73569",
+        "transport_instructions": "fa5c15c7d46e4c7b9fe0f9a8fdd10aac588c304e65ef7185a04f51b14ed1757b",
+        "details": "8a4b032e5a902bf5321d7af7ebffce68b022455e8dedef133b14f43b244eea11"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "a36cbe26-db33-43ef-8a7f-d7db69a49a88",
+      "label": "Fisherman's Wharf → Senado Square",
+      "values": {
+        "planned_start_time": "10:00:00",
+        "planned_end_time": "10:20:00",
+        "sequence": 50,
+        "transport_instructions": "Metered taxi from Outer Harbour to the nearest permitted Senado Square drop-off, then walk into the pedestrian streets. Allow 15–25 minutes with taxi queue. Do not depend on a free shuttle for this morning.",
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "Metered taxi",
+          "planningAssumption": "20-minute target includes pickup and pedestrian access; allow extra if queued."
+        },
+        "title": "Outer Harbour → Senado Square"
+      },
+      "before": {
+        "planned_start_time": "eceb54037e9e00ab85fb08cddb660000100da9e8c2078b7b488a1c6d07223a2a",
+        "planned_end_time": "4f189e3a6f6a8c9c12264c3f5871098a6f7677b12b8c8b3869111a6b49abaea0",
+        "sequence": "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c",
+        "transport_instructions": "cafb305bc8610ad79d31c52b03fc75ed52dcffd62c2fda0945d2eaa40b380e94",
+        "details": "0e52757abd58213e31030dc50a699d9f453997664442bcd8c2052b8dad145a23",
+        "title": "cfc21e496ced852ece6d9a54d594a1c678d2757ca6d3572fb4d7975d0f84c515"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "0bc818c7-8998-41e9-8ecb-1d4eaf026669",
+      "label": "Senado Square",
+      "values": {
+        "planned_start_time": "10:20:00",
+        "planned_end_time": "10:45:00",
+        "expected_duration_minutes": 25,
+        "sequence": 60,
+        "transport_instructions": "Explore the square and pedestrian streets. Monte Fort is excluded from the timed route.",
+        "details": {
+          "timingType": "TARGET"
+        }
+      },
+      "before": {
+        "planned_start_time": "4f189e3a6f6a8c9c12264c3f5871098a6f7677b12b8c8b3869111a6b49abaea0",
+        "planned_end_time": "f25f020bda7482b2141bead01c11f6fef16b5d49f407a913473c422d1ca5357f",
+        "expected_duration_minutes": "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
+        "sequence": "1a6562590ef19d1045d06c4055742d38288e9e6dcd71ccde5cee80f1d5a774eb",
+        "transport_instructions": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "details": "8120e3534cf330fb4c5001778dc36394a0cf271de98cbddadbf4eec77c2eee7d"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "61dab2e7-ccc0-4118-87f4-da4398defaef",
+      "label": "St Dominic's Church",
+      "values": {
+        "planned_start_time": "10:45:00",
+        "planned_end_time": "11:05:00",
+        "sequence": 70,
+        "transport_instructions": "Visit inside if open outside services; otherwise enjoy the exterior and nearby square.",
+        "details": {
+          "timingType": "TARGET"
+        },
+        "title": "St Dominic's Church / square"
+      },
+      "before": {
+        "planned_start_time": "f25f020bda7482b2141bead01c11f6fef16b5d49f407a913473c422d1ca5357f",
+        "planned_end_time": "b008e9e89e66da2f72bbfa07c5b08be4b07b8ffee61f114222622b272cce10b2",
+        "sequence": "39fa9ec190eee7b6f4dff1100d6343e10918d044c75eac8f9e9a2596173f80c9",
+        "transport_instructions": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "details": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "title": "5c224db6fdaa7e5afa71319a9015d8d44afa950f50867ca11c700c6003879d3e"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "85fa40ad-24e9-4d34-b00f-e3a440b4e23f",
+      "label": "Walk to Ruins of St Paul's via historic streets",
+      "values": {
+        "planned_start_time": "11:05:00",
+        "planned_end_time": "11:30:00",
+        "sequence": 80,
+        "transport_instructions": "Walk via bakeries and snack shops through the historic streets. No beef or beef broth.",
+        "details": {
+          "timingType": "TARGET",
+          "dietaryNote": "No beef or beef broth."
+        },
+        "title": "Historic streets → Ruins of St Paul's",
+        "item_type": "transport"
+      },
+      "before": {
+        "planned_start_time": "b008e9e89e66da2f72bbfa07c5b08be4b07b8ffee61f114222622b272cce10b2",
+        "planned_end_time": "641c2a1d3b18484d7ddeacb09d117cbb00506288f3f019c706085d22c37e89be",
+        "sequence": "ff5a1ae012afa5d4c889c50ad427aaf545d31a4fac04ffc1c4d03d403ba4250a",
+        "transport_instructions": "5f4a29bebbe9156eb0145ea3c18fa28b5a4d95d2505249475f7fcc7740cc49d2",
+        "details": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "title": "d49d67cab1e96e2f6eb3cbb689e6ca374ce1a7c5081d352a9da982190f200dae",
+        "item_type": "2b432b17a803dbcbba65499bb3f011514596bc1aff541e84bd8d60b94f78efa4"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "ab307caf-eb3c-4288-bea1-1fe447f96a6c",
+      "label": "Ruins of St Paul's",
+      "values": {
+        "planned_start_time": "11:30:00",
+        "planned_end_time": "12:10:00",
+        "sequence": 90,
+        "transport_instructions": "Photos and historic streets. Do not add the adjacent Monte Fort climb.",
+        "details": {
+          "timingType": "TARGET"
+        }
+      },
+      "before": {
+        "planned_start_time": "641c2a1d3b18484d7ddeacb09d117cbb00506288f3f019c706085d22c37e89be",
+        "planned_end_time": "f8f5d1ed60c4f9400a26c253a7f1d81da3e0bceddcce9e694254672a1672662d",
+        "sequence": "48449a14a4ff7d79bb7a1b6f3d488eba397c36ef25634c111b49baf362511afc",
+        "transport_instructions": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "details": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "0fb29cd3-3faa-40ca-8de0-740ec8de088f",
+      "label": "Macanese / Portuguese lunch",
+      "values": {
+        "planned_start_time": "12:10:00",
+        "planned_end_time": "13:00:00",
+        "expected_duration_minutes": 50,
+        "transport_instructions": "Unhurried lunch near the historic centre: chicken, pork or seafood; confirm no beef or beef broth. Eat moderately before bungy and follow operator guidance.",
+        "details": {
+          "timingType": "TARGET",
+          "dietaryNote": "No beef or beef broth.",
+          "foodNearby": [
+            "Macanese / Portuguese chicken, pork or seafood",
+            "Pork chop bun / Portuguese egg tart if wanted"
+          ]
+        },
+        "estimated_cost": null,
+        "estimated_cost_currency": null
+      },
+      "before": {
+        "planned_start_time": "f990132f4ed557fc004d0708bed28b630d67e25bcf499cde08ad53778f1c1f0e",
+        "planned_end_time": "360a5c0991b888caeb23242f7d27df5d15806100406f6db257b0b83e1b3f0900",
+        "expected_duration_minutes": "9f14025af0065b30e47e23ebb3b491d39ae8ed17d33739e5ff3827ffb3634953",
+        "transport_instructions": "00b5fa944d3eeb7aea47f1d7bcdaa75216dfd5d7c36e892874ec452313bf1b34",
+        "details": "0b699e5c0cdc32aae04f3349568a842743db2df9f7a2b6c0433e808f8f237c58",
+        "estimated_cost": "f89f8d0e735a91c5269ab08d72fa27670d000e7561698d6e664e7b603f5c4e40",
+        "estimated_cost_currency": "17dbf8d498280c608d8999a19b30719f746e69757f6063884094097112b459ce"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "85489255-dbae-473c-bb0c-10870078d9ac",
+      "label": "Historic centre → Macau Tower",
+      "values": {
+        "planned_start_time": "13:00:00",
+        "planned_end_time": "13:30:00",
+        "expected_duration_minutes": 30,
+        "transport_instructions": "Metered taxi. Allow the full 30 minutes for walking to pickup, queue and traffic. Protect 13:30 ticketing-counter check-in for the target 14:00 jump.",
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "Metered taxi",
+          "scheduleSensitive": true
+        }
+      },
+      "before": {
+        "planned_start_time": "360a5c0991b888caeb23242f7d27df5d15806100406f6db257b0b83e1b3f0900",
+        "planned_end_time": "148f585d60cc64247f7e579df449e8890b234e845b3c54a420d37f7e4b921616",
+        "expected_duration_minutes": "b7a56873cd771f2c446d369b649430b65a756ba278ff97ec81bb6f55b2e73569",
+        "transport_instructions": "10335e65b7f2f086dd135d53addffd12ee5b19c1e6fcbffb9907535212bc6170",
+        "details": "2b987eba5266c25551809dffda250fd7d045d5d0babe14306c6d4fdcc06eb8da"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "149f6251-d038-47ae-a2c0-eae5d94b8f84",
+      "label": "Macau Tower and Bungy block",
+      "values": {
+        "planned_start_time": "13:30:00",
+        "expected_duration_minutes": 150,
+        "transport_instructions": "PLACEHOLDER, not confirmed. Target 14:00 bungy; arrive 30 minutes early at the ticketing counter (13:30). Allow the full block for processing, waiting, jump and photos; no guaranteed finish time. Meghana accompanies you: verify her spectator/observation ticket and permitted deck access before booking.",
+        "details": {
+          "timingType": "TARGET",
+          "booking": "required",
+          "eventStatus": "PLACEHOLDER — not booked",
+          "carry": [
+            "Passports / required ID",
+            "Actual booking confirmation once booked",
+            "Comfortable clothing"
+          ],
+          "planningAssumption": "16:00 finish is an estimate; omit optional experiences if delayed.",
+          "priorityRule": "Verify Meghana’s spectator ticket and deck access; do not assume included admission."
+        },
+        "title": "Macau Tower check-in, Bungy and partner viewing",
+        "booking_id": "44ae113b-6301-4837-a0fc-7fa60b9b7e26"
+      },
+      "before": {
+        "planned_start_time": "148f585d60cc64247f7e579df449e8890b234e845b3c54a420d37f7e4b921616",
+        "expected_duration_minutes": "be47addbcb8f60566a3d7fd5a36f8195798e2848b368195d9a5d20e007c59a0c",
+        "transport_instructions": "759152fa758735db8466882f312cdb4c3d290be4ccbbe2d10e86c0e138b9a3ed",
+        "details": "cb47985269faade8e4680b7dcc3f107a27da127413eb9336585c581ca3d61a43",
+        "title": "87818ca1ab220a8496d897124afec0ca8a85d26e23b111c48dc9fefefd7ff636",
+        "booking_id": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "d1aab2a5-0b62-4a86-b4f3-c98e019eec77",
+      "label": "Macau Tower → Studio City / Cotai",
+      "values": {
+        "transport_instructions": "Taxi direct across to Treasure Hotel at the airport. Allow 20–30 minutes driving plus queue. Planning fare MOP100–150 for the car, subject to meter/traffic. Free shuttle detours via another resort are slower.",
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "Metered taxi",
+          "fareForTwo": "Planning estimate MOP100–150 for the car; actual meter/traffic applies.",
+          "costStatus": "Estimate only"
+        },
+        "title": "Macau Tower → Treasure Hotel",
+        "place_id": "35fdb6d2-dc7d-56d1-b1cd-4c12c4a8d720"
+      },
+      "before": {
+        "transport_instructions": "3a6c61f7820cf5c80f41720be32b74c93ff4af295e993438ed444121d1166db4",
+        "details": "6838c0dc4f6ff56559198e66fe2ef03fe1eab3909f87af396482dd5a5ff36b3d",
+        "title": "e8eef59bf6d5bd4350bead2020896d64292b2110f9625e5e0d3132dde1ac13d0",
+        "place_id": "73fd7b691a6d633635f3e24e23f6c702923831de87bed7181dd4ba8c22aa4e88"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "0bd1f373-093c-506a-8266-f1780a68dae5",
+      "label": "Treasure Hotel check-in, rest and snack — proposed",
+      "values": {
+        "date": "2026-12-27",
+        "itinerary_day_id": "c7b97815-7fbe-44ab-b71d-3b699f45d42d",
+        "planned_start_time": "16:30:00",
+        "planned_end_time": "17:00:00",
+        "expected_duration_minutes": 30,
+        "sequence": 140,
+        "transport_instructions": "Proposed one-night stay, NOT BOOKED. Check in, leave the overnight bag, freshen up and have a snack because dinner is later. The main Hong Kong room remains booked with main luggage. INR4,300 is an unverified estimate for one room for two; verify taxes, room type, cancellation and breakfast.",
+        "details": {
+          "timingType": "TARGET",
+          "booking": "required",
+          "eventStatus": "PLACEHOLDER — proposed hotel, not booked",
+          "attractionCost": "INR4,300 estimate only, one room for two; not paid.",
+          "fallback": "Leave around 16:50 if airport shuttle queues require extra waiting."
+        },
+        "recommended_departure_time": null,
+        "title": "Treasure Hotel check-in, rest and snack — proposed",
+        "place_id": "35fdb6d2-dc7d-56d1-b1cd-4c12c4a8d720",
+        "booking_id": "edce73c1-e39e-52ee-b4fd-97c1dc08b737",
+        "item_type": "hotel",
+        "status": "PLANNED",
+        "priority": "MUST"
+      },
+      "match": {
+        "title": "Treasure Hotel check-in, rest and snack — proposed",
+        "date": "2026-12-27"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "bfaf7c13-c1ab-571b-838f-a2550c3ce500",
+      "label": "Airport → Wynn Palace — free shuttle / LRT fallback",
+      "values": {
+        "date": "2026-12-27",
+        "itinerary_day_id": "c7b97815-7fbe-44ab-b71d-3b699f45d42d",
+        "planned_start_time": "17:00:00",
+        "planned_end_time": "17:30:00",
+        "expected_duration_minutes": 30,
+        "sequence": 150,
+        "transport_instructions": "Walk from Treasure to the airport hotel-shuttle area; confirm the current bay locally. Airport departure direction goes to Wynn Palace. Published airport service 09:05–21:00 every 20 minutes. Allow 30–40 minutes door-to-door with waiting; leave hotel at 16:50 if queues. Fallback: Airport LRT towards Barra → MUST → Cotai East, then walk to Wynn; taxi if faster.",
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "Airport → Wynn Palace free shuttle",
+          "operatingHours": "Published airport departures 09:05–21:00, every 20 min; reconfirm bay/service.",
+          "planningAssumption": "17:30 arrival is a target; 30–40 min door-to-door can use part of the Wynn visit.",
+          "fallback": "Airport LRT towards Barra to Cotai East via MUST, then walk; taxi if faster."
+        },
+        "recommended_departure_time": null,
+        "title": "Airport → Wynn Palace — free shuttle / LRT fallback",
+        "place_id": "e884cfc2-0ca7-412c-b128-f035a839ba6d",
+        "item_type": "transport",
+        "status": "PLANNED",
+        "priority": "MUST"
+      },
+      "match": {
+        "title": "Airport → Wynn Palace — free shuttle / LRT fallback",
+        "date": "2026-12-27"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "741020b2-fc98-409a-a35c-cd50464f50d6",
+      "label": "Wynn Palace Performance Lake + SkyCab if time",
+      "values": {
+        "planned_start_time": "17:30:00",
+        "planned_end_time": "18:15:00",
+        "expected_duration_minutes": 45,
+        "sequence": 160,
+        "transport_instructions": "See Performance Lake / fountain displays and ride SkyCab only if the queue is reasonable. Sunday published SkyCab hours 16:00–22:00, last entry 21:40. Drop the ride if the queue exceeds 25–30 minutes; enjoy the lake instead.",
+        "details": {
+          "timingType": "TARGET",
+          "operatingHours": "Sunday SkyCab 16:00–22:00, last entry 21:40; recheck festive changes.",
+          "priorityRule": "Lake first; SkyCab queue above 25–30 minutes means skip the ride."
+        },
+        "title": "Wynn Palace Performance Lake + SkyCab if queue allows"
+      },
+      "before": {
+        "planned_start_time": "031752b638eeb7743730724292ddc5976d10e4597bf1a98f7fe58ffcc6b849f6",
+        "planned_end_time": "9bef281fb931bb366a77f64ec66462d9f71f1a30523119a14d65e7b248ab0d34",
+        "expected_duration_minutes": "1a6562590ef19d1045d06c4055742d38288e9e6dcd71ccde5cee80f1d5a774eb",
+        "sequence": "2397346b45823e070f6fc72ac94c0a999d234c472479f0e26b30cdf5942db854",
+        "transport_instructions": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "details": "ad2e6f9074ebf732a820b9ccc5be9f58ff3c90c13c828030a24c4c33969830ca",
+        "title": "338d21685ed87c48e822d604dac82ea058b0399a3134f720ce45b6485cd9ffad"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "5458a1a7-cf0e-4700-8625-93101f69fed4",
+      "label": "The Londoner → Wynn Palace",
+      "values": {
+        "planned_start_time": "18:15:00",
+        "planned_end_time": "18:35:00",
+        "sequence": 170,
+        "transport_instructions": "Taxi, roughly 10–15 minutes driving; allow 20 with pickup. Planning fare MOP40–70 for the car. Walking takes about 25–35 minutes between actual entrances. No current direct Wynn–Venetian shuttle verified; do not rely on old Cotai Connection timetables.",
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "Metered taxi",
+          "fareForTwo": "MOP40–70 planning estimate for the car",
+          "fallback": "Walk only with 25–35 minutes available; shorten Venetian browsing."
+        },
+        "title": "Wynn Palace → Venetian",
+        "place_id": "c1d643b9-e30c-4ab7-b1ed-c384d0068704"
+      },
+      "before": {
+        "planned_start_time": "fe939546bd384a008068b5e46b449eecdc5263ff74f152047b9c353d44daf311",
+        "planned_end_time": "031752b638eeb7743730724292ddc5976d10e4597bf1a98f7fe58ffcc6b849f6",
+        "sequence": "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405",
+        "transport_instructions": "4df0b2c04edc92b58055c199704f135d86ec4bc84bcf0647284ccc498864b1bf",
+        "details": "47e133a1793e0c1f05e64cc20b0077b7b57735954cce239c68c3fa4957916023",
+        "title": "89ca950a5c7c5f871365d8d20e6005e651573d39e0110539f7dd9eeb037be2e9",
+        "place_id": "368f91696cdc7975f9f541f08787909774598044e822897b602941e89c10f647"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "d8486b2e-207d-46ae-892b-349269519886",
+      "label": "The Venetian Macao",
+      "values": {
+        "planned_start_time": "18:35:00",
+        "planned_end_time": "19:25:00",
+        "expected_duration_minutes": 50,
+        "sequence": 180,
+        "transport_instructions": "Grand Canal Shoppes, painted-sky canals and resort interiors. No gambling required. Gondola is an optional separate paid activity; no queue time reserved. Do not add teamLab as another fixed stop. If hungry, eat here and skip the guard show.",
+        "details": {
+          "timingType": "TARGET",
+          "priorityRule": "Shorten browsing if bungy/transfers overrun; protect meals.",
+          "booking": "not-required"
+        }
+      },
+      "before": {
+        "planned_start_time": "b75b9324155b4380a364d04c12395b13a42eacaaa87ca2c2400f5b91fa603025",
+        "planned_end_time": "a3fa7a4d4f49b8340656caef3c0e5884ffc83ceb6d7f04f703c08a86204264bc",
+        "expected_duration_minutes": "39fa9ec190eee7b6f4dff1100d6343e10918d044c75eac8f9e9a2596173f80c9",
+        "sequence": "9ae2bdd7beedc2e766c6b76585530e16925115707dc7a06ab5ee4aa2776b2c7b",
+        "transport_instructions": "c6a291c692509bccd48c2821de553abf2585a5e3b1e88e7126511b481663a895",
+        "details": "286ce83baad4f07f3690644124d26fb461a34f26fca3efca17b32a00ee2046f2"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "b9b06bb1-e6e5-5990-abf5-06c9e6839d36",
+      "label": "Walk Venetian → Parisian",
+      "values": {
+        "date": "2026-12-27",
+        "itinerary_day_id": "c7b97815-7fbe-44ab-b71d-3b699f45d42d",
+        "planned_start_time": "19:25:00",
+        "planned_end_time": "19:45:00",
+        "expected_duration_minutes": 20,
+        "sequence": 190,
+        "transport_instructions": "Use signed resort/mall pedestrian connections. Allow 15–20 minutes from interior attractions to the correct exit and onward; the buildings are large.",
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "Walk"
+        },
+        "recommended_departure_time": null,
+        "title": "Walk Venetian → Parisian",
+        "place_id": "c5a63819-f3cc-4885-b669-fd26b3002fd6",
+        "item_type": "transport",
+        "status": "PLANNED",
+        "priority": "MUST"
+      },
+      "match": {
+        "title": "Walk Venetian → Parisian",
+        "date": "2026-12-27"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "7f595bdf-80fc-45d1-aff7-1fe9a3640157",
+      "label": "The Parisian Macao",
+      "values": {
+        "planned_start_time": "19:45:00",
+        "planned_end_time": "20:00:00",
+        "expected_duration_minutes": 15,
+        "sequence": 200,
+        "transport_instructions": "Exterior Eiffel Tower photos / illumination only. Target 19:45 light cycle; 20:00 fallback if late (shorten or skip the guard show as needed). General published lighting: every 15 minutes 18:15–00:00. Observation decks listed CLOSED 26 Dec 2026–1 Jan 2027: do not buy deck tickets. Recheck festive lighting/suspensions; deck closure does not guarantee lights.",
+        "details": {
+          "timingType": "TARGET",
+          "operatingHours": "General illumination every 15 min 18:15–00:00; reconfirm festive operation.",
+          "eventStatus": "Observation decks listed CLOSED 26 Dec 2026–1 Jan 2027",
+          "booking": "not-required",
+          "priorityRule": "Exterior only; no deck ticket."
+        },
+        "title": "Parisian Eiffel Tower exterior + illumination"
+      },
+      "before": {
+        "planned_start_time": "0de64ca8dd09d52cf250c41637f5000815ca7f8cd2465182d0bff348a5e5c852",
+        "planned_end_time": "93a9a96a3caf329ef23974df6c02cef922ec1d36fce3703b53b37ab87b24fcd3",
+        "expected_duration_minutes": "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
+        "sequence": "a512db2741cd20693e4b16f19891e72b9ff12cead72761fc5e92d2aaf34740c1",
+        "transport_instructions": "5a17cac63fba481adec0360f30a3bb25a1782f59b964d7e594a2ad9f8959e25c",
+        "details": "4c5f1c3a7bf901942d5bcef783b7f443fb1c68c1d62ea5a464115875c660bd73",
+        "title": "d3b647a1479ef67748690a6294ed83259ab6413c4b1ef07988a0fa16767d6186"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "299a94db-3d1b-538a-b7e7-70d74e4e149f",
+      "label": "Walk Parisian → Londoner Crystal Palace",
+      "values": {
+        "date": "2026-12-27",
+        "itinerary_day_id": "c7b97815-7fbe-44ab-b71d-3b699f45d42d",
+        "planned_start_time": "20:00:00",
+        "planned_end_time": "20:20:00",
+        "expected_duration_minutes": 20,
+        "sequence": 210,
+        "transport_instructions": "Use pedestrian crossings/bridges and signs to Londoner Crystal Palace. Allow 15–20 minutes. The guard show is inside the lobby; the facade show is outside at a separate time.",
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "Walk"
+        },
+        "recommended_departure_time": null,
+        "title": "Walk Parisian → Londoner Crystal Palace",
+        "place_id": "310ff88f-2fe9-4d06-8f0a-09d1a26c56b7",
+        "item_type": "transport",
+        "status": "PLANNED",
+        "priority": "MUST"
+      },
+      "match": {
+        "title": "Walk Parisian → Londoner Crystal Palace",
+        "date": "2026-12-27"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "aabc73db-5279-44ac-a5c4-a49068fa3e69",
+      "label": "The Londoner Macao",
+      "values": {
+        "planned_start_time": "20:20:00",
+        "planned_end_time": "20:50:00",
+        "expected_duration_minutes": 30,
+        "sequence": 220,
+        "transport_instructions": "OPTIONAL if bungy/transport overruns. Arrive about 20:20 for the target 20:30 Changing of the Guard in Crystal Palace lobby. Sunday published shows: 16:00, 18:00, 20:30; closed Monday. Finish time is a planning allowance. If hungry earlier, dine at Venetian and skip this show.",
+        "details": {
+          "timingType": "TARGET",
+          "operatingHours": "Sunday 16:00 / 18:00 / 20:30; closed Mondays. Reconfirm festive changes.",
+          "priorityRule": "Skip if delayed or hungry; protect meals.",
+          "planningAssumption": "Show duration/finish is a planning allowance."
+        },
+        "title": "Londoner Changing of the Guard — 20:30 target (optional)",
+        "priority": "OPTIONAL"
+      },
+      "before": {
+        "planned_start_time": "404fcde229d10a01e195d1a6dc89d573b1e029ae0398c85f57dd2d6cd0d5daee",
+        "planned_end_time": "fe939546bd384a008068b5e46b449eecdc5263ff74f152047b9c353d44daf311",
+        "expected_duration_minutes": "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c",
+        "sequence": "734d0759cdb4e0d0a35e4fd73749aee287e4fdcc8648b71a8d6ed591b7d4cb3f",
+        "transport_instructions": "a95f2705a61c76d27213a58617f95ff1069ae28da1c19b4fd8c2f80dbcb82241",
+        "details": "9de8919aa6c5cfc3216341e9a68cac972deef40fc730a7fff0022a5e001b537d",
+        "title": "1e8058135f2960e4c156e3b039af7ee58d5acecbe33fe8af1723612d05118a21",
+        "priority": "e6dc3967ddca95b12f6a15d52f979559c6b99bef27f3ea452921efbf88f47299"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "1fd951a2-0c9e-4260-b29d-ca62272be40e",
+      "label": "Dinner in Cotai",
+      "values": {
+        "planned_start_time": "20:50:00",
+        "planned_end_time": "21:25:00",
+        "expected_duration_minutes": 35,
+        "sequence": 230,
+        "transport_instructions": "Casual meal at Londoner / nearby Cotai with manageable queues; no beef or beef broth. If hungry earlier, dine at Venetian and skip the guard show. Do not delay eating to complete every photo stop.",
+        "details": {
+          "timingType": "TARGET",
+          "dietaryNote": "No beef or beef broth.",
+          "fallback": "Eat earlier at Venetian and skip the optional guard show."
+        },
+        "title": "Dinner at Londoner / nearby Cotai",
+        "priority": "MUST",
+        "estimated_cost": null,
+        "estimated_cost_currency": null
+      },
+      "before": {
+        "planned_start_time": "9bef281fb931bb366a77f64ec66462d9f71f1a30523119a14d65e7b248ab0d34",
+        "planned_end_time": "f8f13569839cd789035dc57ffb64957684298c16ad15e3149af917af3610e617",
+        "expected_duration_minutes": "d59eced1ded07f84c145592f65bdf854358e009c5cd705f5215bf18697fed103",
+        "sequence": "27badc983df1780b60c2b3fa9d3a19a00e46aac798451f0febdca52920faaddf",
+        "transport_instructions": "8d6fa3fb3710bc4ae9cef64bac5b0fc70345fecf1b5b5162fa9eec60a4481d5a",
+        "details": "0b699e5c0cdc32aae04f3349568a842743db2df9f7a2b6c0433e808f8f237c58",
+        "title": "14f700db9a5398d313b16ddfa0eb6673c1c14717df2f419ae912c18bcb62ff23",
+        "priority": "e6dc3967ddca95b12f6a15d52f979559c6b99bef27f3ea452921efbf88f47299",
+        "estimated_cost": "0604cd3138feed202ef293e062da2f4720f77a05d25ee036a7a01c9cfcdd1f0a",
+        "estimated_cost_currency": "17dbf8d498280c608d8999a19b30719f746e69757f6063884094097112b459ce"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "2a3027d0-2f1c-51b7-b6ef-7db91ab6fbbe",
+      "label": "Londoner exterior light show — 21:30 target",
+      "values": {
+        "date": "2026-12-27",
+        "itinerary_day_id": "c7b97815-7fbe-44ab-b71d-3b699f45d42d",
+        "planned_start_time": "21:25:00",
+        "planned_end_time": "21:45:00",
+        "expected_duration_minutes": 20,
+        "sequence": 240,
+        "transport_instructions": "Stand outside for the 21:30 facade light/sound show. Published daily schedule 19:30–23:30 hourly. This is outdoors, separate from the indoor 20:30 guard show. Skip if dinner takes longer.",
+        "details": {
+          "timingType": "TARGET",
+          "operatingHours": "Daily 19:30–23:30 hourly; recheck festive changes."
+        },
+        "recommended_departure_time": null,
+        "title": "Londoner exterior light show — 21:30 target",
+        "priority": "OPTIONAL",
+        "place_id": "310ff88f-2fe9-4d06-8f0a-09d1a26c56b7",
+        "item_type": "attraction",
+        "status": "PLANNED"
+      },
+      "match": {
+        "title": "Londoner exterior light show — 21:30 target",
+        "date": "2026-12-27"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "b213726f-7398-487f-9c84-bc6cdfbf690f",
+      "label": "Wynn Palace → Taipa Ferry Terminal",
+      "values": {
+        "planned_start_time": "21:45:00",
+        "planned_end_time": "22:15:00",
+        "expected_duration_minutes": 30,
+        "sequence": 250,
+        "transport_instructions": "Simplest: metered taxi, about 10–15 minutes driving plus pickup; allow 30 minutes, MOP50–80 planning fare for the car. Cheaper fallback: walk to Cotai East → LRT towards Taipa Ferry Terminal via MUST to Airport → walk to hotel; allow 30–45 minutes door-to-door and check station-specific last train. Sands inter-resort circuit ends around 21:15 and Wynn airport circuit at 21:00: neither is the default late return.",
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "Metered taxi",
+          "fareForTwo": "MOP50–80 planning estimate for the car",
+          "fallback": "Cotai East LRT towards Taipa Ferry Terminal → Airport via MUST, then walk; allow 30–45 min and recheck last train."
+        },
+        "title": "Londoner → Treasure Hotel",
+        "place_id": "35fdb6d2-dc7d-56d1-b1cd-4c12c4a8d720"
+      },
+      "before": {
+        "planned_start_time": "f8f13569839cd789035dc57ffb64957684298c16ad15e3149af917af3610e617",
+        "planned_end_time": "32871ab752fbe7cc42b573d69411d3c437a8cb91744ecdca8094488a22e059d4",
+        "expected_duration_minutes": "b7a56873cd771f2c446d369b649430b65a756ba278ff97ec81bb6f55b2e73569",
+        "sequence": "d29d53701d3c859e29e1b90028eec1ca8e2f29439198b6e036c60951fb458aa1",
+        "transport_instructions": "0965163941eec16c9df84031219a7050a7f836d0834f990e9c8c23a5d71e502b",
+        "details": "09e0103b77cff570c1373f3c39bce916f056fe362534b42105190418a101e750",
+        "title": "73a79275e2a1e9d9ff14a1561a995790bad186941e480aa965a03dc5b6468e11",
+        "place_id": "f7a0d787a41dd80395b23d6ff644dd325bda16cc01ff2ea36c223443637cbac5"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "6b337c37-c089-4950-8765-f26505cd3948",
+      "label": "Macau Fisherman's Wharf",
+      "values": {
+        "planned_start_time": null,
+        "planned_end_time": null,
+        "expected_duration_minutes": null,
+        "sequence": 1010,
+        "transport_instructions": "Reference only; not part of the timed core route and no reserved block. A waterfront stop near Outer Harbour requires shortening the historic-centre plan; do not squeeze it into the default morning.",
+        "details": {
+          "timingType": "OPTIONAL",
+          "quickNote": "Reference only; not part of the timed core route and no reserved block. A waterfront stop near Outer Harbour requires shortening the historic-centre plan; do not squeeze it into the default morning.",
+          "priorityRule": "Outside timed core route; no allocated time."
+        },
+        "title": "Optional alternative — Fisherman's Wharf (outside core route)",
+        "priority": "OPTIONAL"
+      },
+      "before": {
+        "planned_start_time": "1c23769aec745d928e65635ae5ce20b152ad08607dea0b25e7e5bfa7cc862a15",
+        "planned_end_time": "eceb54037e9e00ab85fb08cddb660000100da9e8c2078b7b488a1c6d07223a2a",
+        "expected_duration_minutes": "9f14025af0065b30e47e23ebb3b491d39ae8ed17d33739e5ff3827ffb3634953",
+        "sequence": "d59eced1ded07f84c145592f65bdf854358e009c5cd705f5215bf18697fed103",
+        "transport_instructions": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "details": "609190bc4c08dbd046b3548125c89790fbe84631196b9e0968535c0ec91a5329",
+        "title": "4007dc362f3dba958ab99d3eed79e334f89a158d8f74bfdc118d0b2b53e43f9f",
+        "priority": "e6dc3967ddca95b12f6a15d52f979559c6b99bef27f3ea452921efbf88f47299"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "ccc74da1-4fb6-40b7-ad2f-910e7c129e6a",
+      "label": "Monte Fort",
+      "values": {
+        "planned_start_time": null,
+        "planned_end_time": null,
+        "expected_duration_minutes": null,
+        "sequence": 1020,
+        "transport_instructions": "Neither traveller is interested; no scheduled block or climb. Retained only as an optional place reference. Do not add it to the Ruins visit.",
+        "details": {
+          "timingType": "OPTIONAL",
+          "quickNote": "Neither traveller is interested; no scheduled block or climb. Retained only as an optional place reference. Do not add it to the Ruins visit.",
+          "priorityRule": "Outside timed core route; no allocated time."
+        },
+        "title": "Optional reference — Monte Fort (no scheduled visit)"
+      },
+      "before": {
+        "planned_start_time": "f8f5d1ed60c4f9400a26c253a7f1d81da3e0bceddcce9e694254672a1672662d",
+        "planned_end_time": "f990132f4ed557fc004d0708bed28b630d67e25bcf499cde08ad53778f1c1f0e",
+        "expected_duration_minutes": "9f14025af0065b30e47e23ebb3b491d39ae8ed17d33739e5ff3827ffb3634953",
+        "sequence": "69f59c273b6e669ac32a6dd5e1b2cb63333d8b004f9696447aee2d422ce63763",
+        "transport_instructions": "733616cd5848156d492d602834697c9a9845e2b2f95de97cf18dcf807fc29b50",
+        "details": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "title": "c7c1fa10b2751929290fb3f3ffa8c602be4b503277a78cc2d051c363ca3cbd7f"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "d7d11aad-5636-44b2-8128-8451f959cb4f",
+      "label": "Golden Reel at Studio City",
+      "values": {
+        "planned_start_time": null,
+        "planned_end_time": null,
+        "expected_duration_minutes": null,
+        "sequence": 1030,
+        "transport_instructions": "Optional separate paid alternative at Studio City, outside the timed core route with no reserved block. Recheck price/hours if chosen; do not assume time between Tower and Treasure. Protect meals and transfers.",
+        "details": {
+          "timingType": "OPTIONAL",
+          "quickNote": "Optional separate paid alternative at Studio City, outside the timed core route with no reserved block. Recheck price/hours if chosen; do not assume time between Tower and Treasure. Protect meals and transfers.",
+          "priorityRule": "Outside timed core route; no allocated time."
+        },
+        "title": "Optional alternative — Golden Reel (outside core route)",
+        "estimated_cost": null,
+        "estimated_cost_currency": null
+      },
+      "before": {
+        "planned_start_time": "ec5c7f31856adcc3f7b31537842282ea987d1640f3a7bad50604136f97bd15eb",
+        "planned_end_time": "fb2a02e618cbe4a505dcac3de4bfb2d12af60a69ebe6dd089a604167337f9bbf",
+        "expected_duration_minutes": "d59eced1ded07f84c145592f65bdf854358e009c5cd705f5215bf18697fed103",
+        "sequence": "dbae772db29058a88f9bd830e957c695347c41b6162a7eb9a9ea13def34be56b",
+        "transport_instructions": "763eaa56cab19567216e0a593915ba5b9432ff9db0dcf04c72a3e1a6b2ba3414",
+        "details": "99304a8c1ea9b103d28c6e5853b97de23ddb1ddd3c077826b626e5edf2203ba1",
+        "title": "b25afefdace301e728163b693b1e2403edaeb5dfab537eb99d6499920ae06645",
+        "estimated_cost": "27badc983df1780b60c2b3fa9d3a19a00e46aac798451f0febdca52920faaddf",
+        "estimated_cost_currency": "17dbf8d498280c608d8999a19b30719f746e69757f6063884094097112b459ce"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "0cc98a5a-1dd3-4f65-8aa0-1326da89cf26",
+      "label": "Walk to Macau Fisherman's Wharf",
+      "remove": true,
+      "before": {
+        "record": "1a7bd58934edc4e3bb433481e3478c915966bea2c09c92a7b8ac99b56e0ee5b3"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "fb570511-392b-41cb-9952-a7708eb699c2",
+      "label": "Return to hotel after Macau",
+      "remove": true,
+      "before": {
+        "record": "66301676e19625e4b065471d661821fa40406ef266b6d3671dad27853a7ea6f8"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "5b3d1396-6ae9-58bb-b85b-ec676f4a44ea",
+      "label": "Breakfast, checkout, Treasure → Taipa Ferry",
+      "values": {
+        "date": "2026-12-28",
+        "itinerary_day_id": "8762dac6-a762-453b-a698-bd8a55ba7e3c",
+        "planned_start_time": "07:15:00",
+        "planned_end_time": "08:10:00",
+        "expected_duration_minutes": 55,
+        "sequence": 10,
+        "transport_instructions": "Have breakfast before leaving Treasure; verify breakfast availability or buy ahead. Checkout about 07:45. Walk to Airport LRT → one stop towards Taipa Ferry Terminal. Allow 20–25 minutes hotel-to-terminal including ticketing, waiting and walks; taxi backup. Carry only the overnight bag; no Hong Kong hotel detour.",
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "Airport LRT one stop towards Taipa Ferry Terminal",
+          "fallback": "Taxi; no early free shuttle assumed."
+        },
+        "recommended_departure_time": null,
+        "title": "Breakfast, checkout, Treasure → Taipa Ferry",
+        "place_id": "01bb4e80-d166-4233-bc0e-6ada32b025ac",
+        "item_type": "transport",
+        "status": "PLANNED",
+        "priority": "MUST"
+      },
+      "match": {
+        "title": "Breakfast, checkout, Treasure → Taipa Ferry",
+        "date": "2026-12-28"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "97dda7d9-f7ef-41d3-b053-cadac36bf003",
+      "label": "Ferry terminal check-in / immigration buffer",
+      "values": {
+        "date": "2026-12-28",
+        "itinerary_day_id": "8762dac6-a762-453b-a698-bd8a55ba7e3c",
+        "planned_start_time": "08:10:00",
+        "planned_end_time": "09:00:00",
+        "expected_duration_minutes": 50,
+        "sequence": 20,
+        "transport_instructions": "Allow about 50 minutes for ticket/check-in and departure formalities. Carry both passports, actual ticket and valid Hong Kong re-entry documents; follow operator boarding cutoff.",
+        "details": {
+          "timingType": "BUFFER"
+        },
+        "title": "Taipa ferry check-in buffer"
+      },
+      "before": {
+        "date": "0718554c3fb28f7067f6745dcdb06a0529b357a1c54266d024f2478081b18f7e",
+        "itinerary_day_id": "1ec9a77fd7ee22ac0dfce52058a9aee4e249e421f58a392ce118f6df6ebec882",
+        "planned_start_time": "32871ab752fbe7cc42b573d69411d3c437a8cb91744ecdca8094488a22e059d4",
+        "planned_end_time": "973b4ee459130a4f313a4db95d8860a20e0a1f636a5aed0b8405e30eb741c45c",
+        "expected_duration_minutes": "39fa9ec190eee7b6f4dff1100d6343e10918d044c75eac8f9e9a2596173f80c9",
+        "sequence": "36790ecd55c2030dc553685bef719df653f413a20cdad1bfd1dc934c76686ddd",
+        "transport_instructions": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "details": "fd7d89b1ae29235a555a566aaa262a37bc685219d0afb987f7dc9c1ad43a2ff7",
+        "title": "2966655f1cc598c687b81f961645d066e8ff8df25756690ab8c3af57d53d3e92"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "72b60c75-d85d-447f-8695-b67378e1dd21",
+      "label": "Cotai Water Jet Taipa → Hong Kong Sheung Wan",
+      "values": {
+        "date": "2026-12-28",
+        "itinerary_day_id": "8762dac6-a762-453b-a698-bd8a55ba7e3c",
+        "planned_start_time": "09:00:00",
+        "planned_end_time": "10:00:00",
+        "expected_duration_minutes": 60,
+        "sequence": 30,
+        "transport_instructions": "PLACEHOLDER — proposed, unbooked 09:00 return. Currently the first published Taipa → Sheung Wan departure, about 60 minutes. Reconfirm 28 December inventory and actual boarding cutoff.",
+        "details": {
+          "timingType": "TARGET",
+          "booking": "required",
+          "eventStatus": "PLACEHOLDER — not booked",
+          "planningAssumption": "Published timetable is not date-specific ticket availability.",
+          "costStatus": "Recheck actual fare when booking."
+        },
+        "booking_id": "a45361c5-d99d-4e3a-9973-25e315f520bd",
+        "estimated_cost": null,
+        "estimated_cost_currency": null
+      },
+      "before": {
+        "date": "0718554c3fb28f7067f6745dcdb06a0529b357a1c54266d024f2478081b18f7e",
+        "itinerary_day_id": "1ec9a77fd7ee22ac0dfce52058a9aee4e249e421f58a392ce118f6df6ebec882",
+        "planned_start_time": "973b4ee459130a4f313a4db95d8860a20e0a1f636a5aed0b8405e30eb741c45c",
+        "planned_end_time": "279ba392451fdbce51d5ca1bada51b8c4f6b2ba10ffa31eb7127d45795caeb9e",
+        "expected_duration_minutes": "3e1e967e9b793e908f8eae83c74dba9bcccce6a5535b4b462bd9994537bfe15c",
+        "sequence": "a0eaec5a55dc2f5b2ba523018adc485ff620b9d83509b9f37186a7716e438d21",
+        "transport_instructions": "b701e57518ede8bf0b45026b42a3a78ec4faf749a4350a3e1bcb4ccc631c36e6",
+        "details": "cb8adf273d9910652442c6dae7dbe6c69a847361ef7c572fe2c1e1d08c27d0ec",
+        "booking_id": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost": "a42e815c58f3977fe531a80ffd4659121c3b9f876a89869042816c369ed80776",
+        "estimated_cost_currency": "17dbf8d498280c608d8999a19b30719f746e69757f6063884094097112b459ce"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "cc0466bc-019c-567a-8e1a-f44e7d5354db",
+      "label": "Hong Kong immigration / disembarkation",
+      "values": {
+        "date": "2026-12-28",
+        "itinerary_day_id": "8762dac6-a762-453b-a698-bd8a55ba7e3c",
+        "planned_start_time": "10:00:00",
+        "planned_end_time": "10:45:00",
+        "expected_duration_minutes": 45,
+        "sequence": 40,
+        "transport_instructions": "Planning buffer for disembarkation and Hong Kong immigration; queues may take longer. Keep both passports and valid re-entry documents ready. Transfer directly to Kowloon after clearing.",
+        "details": {
+          "timingType": "BUFFER"
+        },
+        "recommended_departure_time": null,
+        "title": "Hong Kong immigration / disembarkation",
+        "item_type": "other",
+        "status": "PLANNED",
+        "priority": "MUST"
+      },
+      "match": {
+        "title": "Hong Kong immigration / disembarkation",
+        "date": "2026-12-28"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "b3950a17-4b6d-44ec-ad75-7446967b5a91",
+      "label": "Travel hotel → Wong Tai Sin Temple",
+      "values": {
+        "planned_end_time": "11:40:00",
+        "expected_duration_minutes": 55,
+        "sequence": 50,
+        "transport_instructions": "From Sheung Wan: Island Line towards Chai Wan → Admiralty; East Rail towards Lo Wu / Lok Ma Chau → Kowloon Tong; Kwun Tong Line towards Tiu Keng Leng → Wong Tai Sin. Allow 50–60 minutes including ferry-terminal/station walks and transfers. Go directly to Kowloon; no hotel detour or Central sightseeing.",
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "MTR via Admiralty and Kowloon Tong",
+          "planningAssumption": "55-minute target, allow 50–60 minutes."
+        },
+        "title": "Sheung Wan → Wong Tai Sin"
+      },
+      "before": {
+        "planned_end_time": "086a2923ca66ab03ac7409f2dd53cafbc0ae2d2336f33f6e2251be6961b6ce41",
+        "expected_duration_minutes": "d59eced1ded07f84c145592f65bdf854358e009c5cd705f5215bf18697fed103",
+        "sequence": "9f14025af0065b30e47e23ebb3b491d39ae8ed17d33739e5ff3827ffb3634953",
+        "transport_instructions": "d4f569c441e7e2e1131df8274238d755de2cbae01e5d83ccce46653e054f6b8e",
+        "details": "b9bf46133cfb6762e590d6e94c22ac19ca58caafd1ccc0403505221348305d55",
+        "title": "a5dc08a42e34936775bb99db3f19f74d1c62e89b3e72063f4fd9754b173ae120"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "96335bb7-9760-4d9a-b03a-50302e61b7a2",
+      "label": "Wong Tai Sin Temple",
+      "values": {
+        "planned_start_time": "11:40:00",
+        "planned_end_time": "12:20:00",
+        "expected_duration_minutes": 40,
+        "sequence": 60,
+        "transport_instructions": "Short visit; check actual holiday access before travel.",
+        "details": {
+          "timingType": "TARGET"
+        }
+      },
+      "before": {
+        "planned_start_time": "086a2923ca66ab03ac7409f2dd53cafbc0ae2d2336f33f6e2251be6961b6ce41",
+        "planned_end_time": "02312adb2b8dd5f79a7a1426699a040fd5393f5a835c1bba97b1ed5a0b5544f3",
+        "expected_duration_minutes": "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c",
+        "sequence": "d59eced1ded07f84c145592f65bdf854358e009c5cd705f5215bf18697fed103",
+        "transport_instructions": "e6cc0f8b9718739c966c2a53a0e14ae3e4c79f0a54e9532fd4eadaddf420cd01",
+        "details": "7ac3399e0996d8cc61f717de769e13c9141f0ee83b9447f292d27e861b7a2e90"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "f5913193-a548-489a-b4a9-ff36745cdbba",
+      "label": "Travel Wong Tai Sin Temple → Nan Lian Garden",
+      "values": {
+        "planned_start_time": "12:20:00",
+        "planned_end_time": "12:40:00",
+        "expected_duration_minutes": 20,
+        "sequence": 70,
+        "transport_instructions": "Kwun Tong Line towards Tiu Keng Leng, one stop to Diamond Hill; then walk to the garden.",
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "MTR one stop to Diamond Hill, then walk"
+        },
+        "title": "Wong Tai Sin → Nan Lian Garden"
+      },
+      "before": {
+        "planned_start_time": "02312adb2b8dd5f79a7a1426699a040fd5393f5a835c1bba97b1ed5a0b5544f3",
+        "planned_end_time": "87b811e31d5e9fe60c1764b94ccdc0aef694f7f7f0cd382fa86c3f8946fe1392",
+        "expected_duration_minutes": "e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb",
+        "sequence": "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c",
+        "transport_instructions": "4044b97b6898ed24be58eb7c9d15745a567554b1dc8f9496dc119f23f49a1e1c",
+        "details": "50de9097bff91f4fbeccbd593dc1cdb55f8888be939c5f90c41b5b724ecdb1f1",
+        "title": "3004ccf0cfbd3bd1f4bb2b76851b2b00ab9b475deb15f0db581e9532e64a56e0"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "6af3c4c2-63b9-42af-bc1d-54bd6e94c86b",
+      "label": "Nan Lian Garden",
+      "values": {
+        "planned_start_time": "12:40:00",
+        "planned_end_time": "13:25:00",
+        "expected_duration_minutes": 45,
+        "sequence": 80,
+        "transport_instructions": "Relaxed garden visit; keep time for a proper lunch afterwards.",
+        "details": {
+          "timingType": "TARGET"
+        }
+      },
+      "before": {
+        "planned_start_time": "87b811e31d5e9fe60c1764b94ccdc0aef694f7f7f0cd382fa86c3f8946fe1392",
+        "planned_end_time": "59b471fdf6634b7207e9468a3f5b271d15c547715d07de4a74fd99f350087b4c",
+        "expected_duration_minutes": "02d20bbd7e394ad5999a4cebabac9619732c343a4cac99470c03e23ba2bdc2bc",
+        "sequence": "1a6562590ef19d1045d06c4055742d38288e9e6dcd71ccde5cee80f1d5a774eb",
+        "transport_instructions": "baa1751615ad7e79b320be9e83f09a3788c29dfb6ed8097bc709a47cd00aba3d",
+        "details": "98743ad32f0c8ac761c5c0d9c34b4ee09cf9ee481fc15558af40dcd69262ccc1"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "c17e31c6-0f24-5c05-be4d-b6b68330a82b",
+      "label": "Lunch near Diamond Hill",
+      "values": {
+        "date": "2026-12-28",
+        "itinerary_day_id": "8762dac6-a762-453b-a698-bd8a55ba7e3c",
+        "planned_start_time": "13:25:00",
+        "planned_end_time": "14:10:00",
+        "expected_duration_minutes": 45,
+        "sequence": 90,
+        "transport_instructions": "Proper lunch near Diamond Hill; no beef or beef broth. Do not omit meals to protect optional photo stops.",
+        "details": {
+          "timingType": "TARGET",
+          "dietaryNote": "No beef or beef broth."
+        },
+        "recommended_departure_time": null,
+        "title": "Lunch near Diamond Hill",
+        "item_type": "food",
+        "status": "PLANNED",
+        "priority": "MUST"
+      },
+      "match": {
+        "title": "Lunch near Diamond Hill",
+        "date": "2026-12-28"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "9c6d4395-c3a6-432a-8407-5da77a7b7cb6",
+      "label": "Travel Nan Lian Garden → Choi Hung Estate",
+      "values": {
+        "planned_start_time": "14:10:00",
+        "planned_end_time": "14:25:00",
+        "sequence": 100,
+        "transport_instructions": "Kwun Tong Line towards Tiu Keng Leng, one stop from Diamond Hill to Choi Hung plus walking. Conditional leg only if the photo stop remains practical.",
+        "details": {
+          "timingType": "TARGET",
+          "priorityRule": "If late, omit Choi Hung/Ping Shek first, then Sham Shui Po; Diamond Hill → Mong Kok direct towards Whampoa."
+        },
+        "title": "Diamond Hill → Choi Hung (conditional)"
+      },
+      "before": {
+        "planned_start_time": "59b471fdf6634b7207e9468a3f5b271d15c547715d07de4a74fd99f350087b4c",
+        "planned_end_time": "148f585d60cc64247f7e579df449e8890b234e845b3c54a420d37f7e4b921616",
+        "sequence": "02d20bbd7e394ad5999a4cebabac9619732c343a4cac99470c03e23ba2bdc2bc",
+        "transport_instructions": "e22307a076e3a2bfe5370d4fe9d9e5b15ed4199280d0512b34d8a20c4eb64e62",
+        "details": "7ac3dd291c8e8442ebdfd141f2ea9518cf766ec2a9709971e32d9c0272164e5b",
+        "title": "d5a8bd4d9681a61ddc0ab15a8e05ed0606491034846cb96e659372b93f3ffb41"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "a25365dc-6408-4a6f-960c-822d6891ead0",
+      "label": "Choi Hung Estate + Ping Shek Estate",
+      "values": {
+        "planned_start_time": "14:25:00",
+        "planned_end_time": "15:10:00",
+        "sequence": 110,
+        "transport_instructions": "WANT, conditional photo stop only if access remains permitted and relevant public areas are open. Recheck current access / works; no guaranteed rooftop visit. Do not enter restricted residential areas. First cut if ferry/immigration or lunch runs late.",
+        "details": {
+          "timingType": "TARGET",
+          "eventStatus": "Conditional public access only; rooftop not guaranteed.",
+          "priorityRule": "First optional cut if delayed.",
+          "fallback": "Diamond Hill → Mong Kok direct on Kwun Tong Line towards Whampoa."
+        },
+        "title": "Choi Hung / Ping Shek — WANT, conditional"
+      },
+      "before": {
+        "planned_start_time": "148f585d60cc64247f7e579df449e8890b234e845b3c54a420d37f7e4b921616",
+        "planned_end_time": "dfb39ab1cae4a3471d5bd5af04075b99cb10349d4e873a4d2e54fde9f4a168a1",
+        "sequence": "7688b6ef52555962d008fff894223582c484517cea7da49ee67800adc7fc8866",
+        "transport_instructions": "0013f30231a8a329fc57cbc7e83bfadbaaa12bfd66b7cc6b33e47b7605bcda2f",
+        "details": "8d978b2e9c496c5093dea699d1aea1b67770971d85ebe62a7a77056e595d4aeb",
+        "title": "a57641df84855055312be295d67d7ecdf11f2c2c91541bb99b55865bdc393e0e"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "d630ce2d-8a87-4112-ae90-dfa9943c6ff6",
+      "label": "Travel Ping Shek Estate → Sham Shui Po",
+      "values": {
+        "planned_start_time": "15:10:00",
+        "planned_end_time": "15:40:00",
+        "expected_duration_minutes": 30,
+        "sequence": 120,
+        "transport_instructions": "Kwun Tong Line towards Whampoa → Prince Edward; Tsuen Wan Line towards Tsuen Wan → Sham Shui Po. Allow walking/transfers. Conditional on retaining the optional estate / browsing stops.",
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "MTR via Prince Edward"
+        },
+        "title": "Choi Hung → Sham Shui Po (conditional)",
+        "priority": "OPTIONAL"
+      },
+      "before": {
+        "planned_start_time": "dfb39ab1cae4a3471d5bd5af04075b99cb10349d4e873a4d2e54fde9f4a168a1",
+        "planned_end_time": "7d93a25928c93026f52ba49bea97ca9b3c06259baadd8b5ae0d5d891271ac20d",
+        "expected_duration_minutes": "b7a56873cd771f2c446d369b649430b65a756ba278ff97ec81bb6f55b2e73569",
+        "sequence": "c837649cce43f2729138e72cc315207057ac82599a59be72765a477f22d14a54",
+        "transport_instructions": "3e526d261c7acc5f5c4cef80cc6a234cde53a4dbf03052eec8d3c1f524504a7b",
+        "details": "add5b5ddf1811c56900c6ca7b09dc6873dd004cbd1db9b63400f2080433b521b",
+        "title": "a862893b6a564e4e077e4afe8df90e41edbeb2169b11a954384339fa534ac8f6",
+        "priority": "e6dc3967ddca95b12f6a15d52f979559c6b99bef27f3ea452921efbf88f47299"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "79c427c4-6b42-4426-ba26-8c9a8905a1fc",
+      "label": "Sham Shui Po exploration",
+      "values": {
+        "planned_start_time": "15:40:00",
+        "planned_end_time": "16:15:00",
+        "expected_duration_minutes": 35,
+        "sequence": 130,
+        "transport_instructions": "Optional short browse. Skip if ferry, immigration or meal timing slips; second cut after Choi Hung/Ping Shek.",
+        "details": {
+          "timingType": "TARGET",
+          "priorityRule": "Second optional cut; protect meals and the evening."
+        },
+        "title": "Sham Shui Po browsing (optional)",
+        "priority": "OPTIONAL"
+      },
+      "before": {
+        "planned_start_time": "7d93a25928c93026f52ba49bea97ca9b3c06259baadd8b5ae0d5d891271ac20d",
+        "planned_end_time": "281317c200830be8161c2359f7b83ac37f3340c0c95a31f63dc850e9353608e4",
+        "expected_duration_minutes": "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
+        "sequence": "39fa9ec190eee7b6f4dff1100d6343e10918d044c75eac8f9e9a2596173f80c9",
+        "transport_instructions": "afc6917cec3d7c09c7ba4e35ad9f8c387c4311a2ee19315b3cf6bd9f61d25e73",
+        "details": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "title": "0395473cc30998d60bf0b85830206f98ad7207485fde80e8918e92be09b41c94",
+        "priority": "e6dc3967ddca95b12f6a15d52f979559c6b99bef27f3ea452921efbf88f47299"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "25c99662-acf4-443c-96b5-b56c3b9a4c9b",
+      "label": "Travel Sham Shui Po → Mong Kok",
+      "values": {
+        "planned_start_time": "16:15:00",
+        "planned_end_time": "16:30:00",
+        "sequence": 140,
+        "transport_instructions": "Tsuen Wan Line towards Central, two stops to Mong Kok, plus walking. If optional stops were cut, arrive directly from Diamond Hill on Kwun Tong Line towards Whampoa.",
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "MTR two stops towards Central"
+        },
+        "title": "Sham Shui Po → Mong Kok"
+      },
+      "before": {
+        "planned_start_time": "281317c200830be8161c2359f7b83ac37f3340c0c95a31f63dc850e9353608e4",
+        "planned_end_time": "d3dc1856bc5b1273449224e933282498b052b6cd88e7540107b154c35aa4146f",
+        "sequence": "108c995b953c8a35561103e2014cf828eb654a99e310f87fab94c2f4b7d2a04f",
+        "transport_instructions": "317e7da936b448c83d53a05c57edb9b7c608773a1316d400c870897274fc0585",
+        "details": "668e899954faa37659e46500b274143e2b0c1c2fdadcc87507f9dfc867aea29f",
+        "title": "fc9260d1471348cfc826ab87cbdea4ada82312877c371e5160fc570e0efdc10c"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "96abeee9-7691-4c69-b2a4-5278802951ec",
+      "label": "Mong Kok markets and streets",
+      "values": {
+        "planned_start_time": "16:30:00",
+        "expected_duration_minutes": 90,
+        "sequence": 150,
+        "transport_instructions": "Flexible, shorter browsing according to energy and earlier omissions. Preserve the existing 18:00 Mong Kok → Yau Ma Tei walk, Temple Street, Hing Kee dinner and Kai Kai Dessert.",
+        "details": {
+          "timingType": "TARGET",
+          "priorityRule": "Protect the established evening and meals."
+        }
+      },
+      "before": {
+        "planned_start_time": "d3dc1856bc5b1273449224e933282498b052b6cd88e7540107b154c35aa4146f",
+        "expected_duration_minutes": "9ae2bdd7beedc2e766c6b76585530e16925115707dc7a06ab5ee4aa2776b2c7b",
+        "sequence": "ff5a1ae012afa5d4c889c50ad427aaf545d31a4fac04ffc1c4d03d403ba4250a",
+        "transport_instructions": "1db01f34fca1d398d8e48b1b617d564a16fc5beafb0929e24f19208f7fd5200e",
+        "details": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "4b79110f-4949-4c2e-bca9-8af0c7aced3d",
+      "label": "Walk Mong Kok → Yau Ma Tei",
+      "values": {
+        "sequence": 160
+      },
+      "before": {
+        "sequence": "48449a14a4ff7d79bb7a1b6f3d488eba397c36ef25634c111b49baf362511afc"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "fbc9434c-4b53-4c06-8e55-294ca5c1df92",
+      "label": "Temple Street Night Market",
+      "values": {
+        "sequence": 170
+      },
+      "before": {
+        "sequence": "69f59c273b6e669ac32a6dd5e1b2cb63333d8b004f9696447aee2d422ce63763"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "c724e9c1-e235-4c86-9228-2175f819a2ce",
+      "label": "Hing Kee Claypot Rice",
+      "values": {
+        "sequence": 180
+      },
+      "before": {
+        "sequence": "ad57366865126e55649ecb23ae1d48887544976efea46a48eb5d85a6eeb4d306"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "3e6cdc5d-c1a2-46ac-a80c-08bde04333a4",
+      "label": "Walk Hing Kee → Kai Kai Dessert",
+      "values": {
+        "sequence": 190
+      },
+      "before": {
+        "sequence": "1253e9373e781b7500266caa55150e08e210bc8cd8cc70d89985e3600155e860"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "ce9c44a9-2e43-47b7-8379-27df1d9c248e",
+      "label": "Kai Kai Dessert",
+      "values": {
+        "sequence": 200
+      },
+      "before": {
+        "sequence": "9bdb2af6799204a299c603994b8e400e4b1fd625efdb74066cc869fee42c9df3"
+      }
+    },
+    {
+      "table": "places",
+      "id": "8e92e663-d942-4374-943d-8f465778ffa1",
+      "label": "Monte Fort",
+      "values": {
+        "priority": "OPTIONAL",
+        "notes": "Optional reference only, no scheduled visit or climb. Both travellers are uninterested; excluded from the 27 Dec timed route."
+      },
+      "before": {
+        "priority": "e6dc3967ddca95b12f6a15d52f979559c6b99bef27f3ea452921efbf88f47299",
+        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "places",
+      "id": "3f984dd8-a115-43e3-b3f0-acf96509ad4a",
+      "label": "Macau Fisherman's Wharf",
+      "values": {
+        "priority": "OPTIONAL",
+        "notes": "Optional alternative outside the 27 Dec timed core route; no allocated block."
+      },
+      "before": {
+        "priority": "e6dc3967ddca95b12f6a15d52f979559c6b99bef27f3ea452921efbf88f47299",
+        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "places",
+      "id": "1e96b002-593b-45f5-ad49-a90619f62ad4",
+      "label": "Studio City Macau",
+      "values": {
+        "notes": "Golden Reel is an optional separate paid alternative outside the timed core route, with no reserved block. Recheck price/hours if chosen."
+      },
+      "before": {
+        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "places",
+      "id": "5817632d-60df-4245-92b2-d3e8f1f29524",
+      "label": "Luk On Kui",
+      "values": {
+        "address": "2–3/F, 40–50 Des Voeux Road West, Sheung Wan, Hong Kong",
+        "opening_hours_notes": "Recheck Boxing Day dim sum lunch service before travel; target 26 Dec 12:25–13:40."
+      },
+      "before": {
+        "address": "21dc652eb094217b81dc1371cfc41c0ce4fba2040fd973dd843dba2d3807f3ef",
+        "opening_hours_notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "places",
+      "id": "348c4fd2-c51e-4cdd-8a4c-0f28b1f379b5",
+      "label": "Man Mo Temple",
+      "values": {
+        "address": "124–126 Hollywood Road, Sheung Wan, Hong Kong",
+        "opening_hours_notes": "Ordinary operator-listed hours 08:00–18:00; recheck holiday notices."
+      },
+      "before": {
+        "address": "8010acc64d7724a26d4522013927639c9d77344426d591e12a3e295119dbf115",
+        "opening_hours_notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "places",
+      "id": "c5a63819-f3cc-4885-b669-fd26b3002fd6",
+      "label": "The Parisian Macao",
+      "values": {
+        "opening_hours_notes": "Eiffel Tower observation decks listed CLOSED 26 Dec 2026–1 Jan 2027. Exterior only. General illumination 18:15–00:00 every 15 min; reconfirm festive suspensions.",
+        "notes": "27 Dec route: Eiffel Tower exterior and illumination only; no observation-deck tickets. Deck closure does not guarantee lights operate."
+      },
+      "before": {
+        "opening_hours_notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "43a0c4a2-d7a9-41d6-80f4-be650dfb2215",
+      "label": "Prebook 07:30 TurboJET Sheung Wan → Macau Outer Harbour for Sunday 27 Dec",
+      "values": {
+        "title": "Book 08:30 TurboJET Sheung Wan → Outer Harbour — 27 Dec",
+        "description": "Unbooked placeholder. Reconfirm 27 Dec inventory and fare; published timetable is not ticket availability. Reach terminal about 07:35 with breakfast/snacks bought; follow actual boarding cutoff. Outer Harbour suits historic Macau first."
+      },
+      "before": {
+        "title": "4990bd1ce6dacccf293f6c4197fe278382698a5d6001f469f21e7c1e5b83be41",
+        "description": "eabe86e1f9fc24a1a7493e23994e8abc2c53b9ac75d5905666067fec7bc4eefd"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "17f774aa-3a1b-46aa-88f9-05926c19a42b",
+      "label": "Prebook 23:00 Cotai Water Jet Taipa → Sheung Wan for Sunday 27 Dec",
+      "values": {
+        "title": "Book 09:00 Cotai Water Jet Taipa → Sheung Wan — 28 Dec",
+        "planned_day": "2026-12-28",
+        "description": "Unbooked placeholder. Currently first published Taipa-to-Sheung-Wan departure; reconfirm 28 Dec inventory/fare. Target Taipa terminal 08:10, about 50 minutes early; follow ticket boarding cutoff. Return Monday morning after the proposed overnight."
+      },
+      "before": {
+        "title": "d8aee021a8e8a02a0e9c72ce035fb223f2155c300a72b4795fcac1531f763a4e",
+        "planned_day": "0718554c3fb28f7067f6745dcdb06a0529b357a1c54266d024f2478081b18f7e",
+        "description": "590b0d6438ed2cac540cbec558f5ba7abe5d39a5ac14d77d04fe896587b9b185"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "2c1032e2-4c2d-4c6e-94a3-6fe13a2fd2fd",
+      "label": "Prebook Macau Tower Bungy around 14:00–14:30 on Sunday 27 Dec",
+      "values": {
+        "title": "Book 14:00 Macau Tower Bungy + verify Meghana’s viewing access",
+        "description": "PLACEHOLDER, unbooked. Target 27 Dec 14:00; check in at ticketing counter 13:30. Verify Meghana’s spectator/observation ticket and permitted deck before booking. Keep 13:30–16:00 processing/wait/photos allowance; finish not guaranteed."
+      },
+      "before": {
+        "title": "fbf9cfaab9b804a3a74867c7be4e42970e0c0493a90ece1c0f270c8724e38fe4",
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "e46e8ba8-16db-413b-ab37-6a2d145416cd",
+      "label": "Recheck Sunday Macau ferries, leisure buses and taxi/shuttle arrangements",
+      "values": {
+        "title": "Recheck Macau overnight ferries, shuttles and festive shows",
+        "description": "1–2 weeks before departure: reconfirm 27 Dec 08:30 TurboJET and 28 Dec 09:00 Cotai inventory, shuttle bays, airport → Wynn direction/service, SkyCab, Londoner guard/facade shows, Parisian observation-deck closure and festive lighting. Check Treasure terms, LRT hours and taxi estimates. No old Cotai Connection PDFs."
+      },
+      "before": {
+        "title": "e27d222a8e59dbeea3a28db76ca7d1d10e97e87ae66ecaff9d96575a99a10017",
+        "description": "e2bc1111ccd58839904e982a1868325bc62e1ee466637231f0dde790c4b7ebfd"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "20793ec7-dbb3-4855-a586-5f9d4253d86f",
+      "label": "Macau documents, cash and ferry check",
+      "values": {
+        "title": "Macau overnight: documents, MOP cash and small bag",
+        "description": "Carry both passports, valid Hong Kong re-entry documents and actual confirmations once booked. Small MOP cash; keep current payment guidance. One small overnight bag; retain the confirmed Hong Kong room and main luggage. Treasure is proposed, not yet booked. No beef or beef broth."
+      },
+      "before": {
+        "title": "d35f58fd24d8955f828c3a1a43cc356496b5f53c6ec888e9af9bea1d4fac6a1c",
+        "description": "076b87187334486e7c1fd24d0a2afd2f58c1830df60fd789f76b10bf5075e549"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "770135ac-9325-4da3-81a0-9931fb8a2e7e",
+      "label": "Buy Macau roaming add-on and verify data",
+      "values": {
+        "title": "Verify Macau roaming on both phones for 27 AND 28 Dec",
+        "description": "Check Greater China/Macau package activation, validity, expiry/timezone and allowance for BOTH calendar days 27–28 Dec. Do not assume a one-day add-on spans the overnight. Keep SoSIM real-name registration and Jio OTP/call arrangements; verify data on arrival."
+      },
+      "before": {
+        "title": "75520a0a4c0fca39cb227e0d33557d2ac827f0a68348576e9080176fe077a527",
+        "description": "50754d8cc2bcf75f7429a949b367d00609f173381ecb959dc2130994b40ffb26"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "6f3f8b24-478a-4dea-836e-95472d63f168",
+      "label": "Quick Macau Fisherman's Wharf stop after arrival",
+      "values": {
+        "title": "Optional alternative — Fisherman’s Wharf (outside core route)",
+        "description": "Optional reference only, no timed block. Not the default arrival route; protect the historic centre and 13:30 bungy check-in.",
+        "priority": "OPTIONAL"
+      },
+      "before": {
+        "title": "760fa4acfa8d1ee891eea9b57afecae9f4e75425842e4e8ba65a4e175afa9900",
+        "description": "3ebd70cbfc8d42d485e9fd9be7a4a23454628f7809a3cb5861791e60348f7c50",
+        "priority": "e6dc3967ddca95b12f6a15d52f979559c6b99bef27f3ea452921efbf88f47299"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "0c840d55-7b1a-4965-8e6b-c23e3f5a0210",
+      "label": "Golden Reel only if Bungy finishes on time",
+      "values": {
+        "title": "Optional alternative — Golden Reel (outside core route)",
+        "description": "Separate paid alternative, no reserved block. Do not insert it between Tower and Treasure by default. Recheck hours/prices only if chosen; protect meals, hotel rest and transfers."
+      },
+      "before": {
+        "title": "192273255392069fa52296e57213d88c0bc687044c8575da18e2277b2a35a644",
+        "description": "1e5bf83d315f6e97e4b1ec459deb6e1a498ba83cac1b421c278f8df1923a29d7"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "7bfd49dc-dd93-4f1a-8b3a-89a85c48b510",
+      "label": "Try old-school dim sum",
+      "values": {
+        "description": "Luk On Kui main dim sum lunch 26 Dec 12:25–13:40, 2–3/F, 40–50 Des Voeux Road West. Recheck holiday lunch service and queues. Cheung Hing earlier is a light bun/tea snack. No beef or beef broth."
+      },
+      "before": {
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "7ff69056-3590-416b-99e2-a559ee97811d",
+      "label": "See Choi Hung Estate basketball court",
+      "values": {
+        "title": "Choi Hung public-area photos — WANT, conditional",
+        "description": "28 Dec conditional only if public access remains permitted and areas are open. Recheck works/access; no guaranteed rooftop. Respect residents; no restricted areas. First cut with Ping Shek if ferry/immigration or lunch runs late; then cut Sham Shui Po."
+      },
+      "before": {
+        "title": "04cf9790f69b092cabfb422a4b94590fcbe2f512aff28bcec0edcdad1ed07941",
+        "description": "810dc1106fe62cb01dd8a6686cd7675a0cddddbc67d52f29af8afaa570db5000"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "d0d4d784-4af7-438b-ad19-9be75eef0358",
+      "label": "Walk through Ping Shek Estate",
+      "values": {
+        "description": "Conditional public-area photo companion to Choi Hung on 28 Dec, only where permitted/open. No restricted residential areas. Cut Choi Hung/Ping Shek first if delayed, then Sham Shui Po; Diamond Hill → Mong Kok direct towards Whampoa."
+      },
+      "before": {
+        "description": "7f7ec4a46bc6a202819652775620e5a939af8f1fdcbfb550181f82e3bd8fce98"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "6c92c81b-d8fd-4451-80f5-00e576638cbe",
+      "label": "See Wynn Palace Performance Lake at night",
+      "values": {
+        "description": "Target 27 Dec 17:30–18:15, early evening. SkyCab Sunday published 16:00–22:00, last entry 21:40; ride only with a reasonable queue. Skip ride above 25–30 minutes and enjoy lake; recheck festive operation."
+      },
+      "before": {
+        "description": "da7f9839b84daeffcea0096628a29690897ff75ade6cfab6e5be019eabeb2d8c"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "ce87e94f-3d25-5842-9049-37e76597082d",
+      "label": "Book Treasure Hotel for 27–28 Dec — proposed extra night",
+      "values": {
+        "title": "Book Treasure Hotel for 27–28 Dec — proposed extra night",
+        "description": "One room for two; quoted INR4,300 is an unverified estimate. Verify all-in taxes, room type, cancellation and breakfast before purchase. Retain the confirmed Hong Kong room and main luggage; take a small overnight bag. Not booked or paid.",
+        "kind": "OTHER",
+        "priority": "MUST",
+        "target_count": 1,
+        "completed_count": 0,
+        "planned_day": "2026-12-27",
+        "due_date": "2026-12-01",
+        "status": "PLANNED",
+        "linked_place_id": "35fdb6d2-dc7d-56d1-b1cd-4c12c4a8d720",
+        "sort_order": 60
+      },
+      "match": {
+        "title": "Book Treasure Hotel for 27–28 Dec — proposed extra night"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "a38accff-9d96-581d-b413-52dfd3d9984e",
+      "label": "Recheck Luk On Kui Boxing Day dim sum lunch service",
+      "values": {
+        "title": "Recheck Luk On Kui Boxing Day dim sum lunch service",
+        "description": "26 Dec 12:25 target, with holiday queues. Confirm 2–3/F, 40–50 Des Voeux Road West entrance/service; then Man Mo at 124–126 Hollywood Road (ordinary 08:00–18:00). No beef or beef broth. Tai Kwun and PMQ excluded.",
+        "kind": "OTHER",
+        "priority": "MUST",
+        "target_count": 1,
+        "completed_count": 0,
+        "planned_day": "2026-12-26",
+        "due_date": "2026-12-20",
+        "status": "PLANNED",
+        "linked_place_id": "5817632d-60df-4245-92b2-d3e8f1f29524",
+        "sort_order": 61
+      },
+      "match": {
+        "title": "Recheck Luk On Kui Boxing Day dim sum lunch service"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "5f6aa17f-2995-430b-ac74-dfd13f467783",
+      "label": "Macau day essentials",
+      "values": {
+        "title": "Macau overnight essentials — 27–28 Dec",
+        "summary": "Planned overnight · Treasure unbooked · Keep HK room · Passports · Two-day roaming · MOP cash",
+        "body": "Planned Sunday 27 to Monday 28 December 2026 overnight, Hong Kong/Macau time UTC+8. Treasure Hotel opposite Macau Airport is proposed, NOT BOOKED; INR4,300 is an unverified estimate for one room for two. Verify taxes, room type, cancellation and breakfast before purchase. Keep the confirmed Hong Kong hotel room and main luggage; take a small overnight bag.\nOutbound target 27 Dec 08:30 TurboJET Sheung Wan → Outer Harbour; return target 28 Dec 09:00 Cotai Water Jet Taipa → Sheung Wan. Both remain PLACEHOLDER; published schedules are not date-specific availability. Allow about 50–55 minutes at terminals and follow actual boarding cutoffs.\nBungy is PLACEHOLDER: target 14:00 on 27 Dec, ticketing-counter arrival 13:30. Allow 13:30–16:00; no guaranteed finish. Verify Meghana’s spectator/observation ticket and viewing deck.\nCarry both passports, valid Hong Kong re-entry documents, actual confirmations once booked and small MOP cash. Enable Macau data for BOTH 27 and 28 Dec, checking activation, validity and expiry. Keep current payment guidance: do not assume standard Hong Kong Adult On-Loan Octopus works on Macau buses; use cards for larger purchases where accepted. No beef or beef broth.\nSkip pandas by default; Monte Fort, Fisherman’s Wharf and Golden Reel are untimed optional references only. Recheck ferries, shuttles/bays, festive shows and Parisian deck closure 1–2 weeks before departure; no reminder automation created."
+      },
+      "before": {
+        "title": "7703a4d4274252ec1832098afe4166b9993cdc177bf59d6278545cfa97a8e98d",
+        "summary": "aae37b0e45d41cf514c94c3805457692eec38b0a8f1e116b07a3132bd8f471a1",
+        "body": "9871d0e9ecc44d6d2e3920867aaef51fb86b20f3947c9f9577e69ffe0cbd3be7"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "c7c9a8b5-79f7-4693-be47-bb8c722c2007",
+      "label": "Mobile data & roaming",
+      "values": {
+        "body": "SoSIM for both phones requires real-name registration. Keep Jio available for OTPs or calls where roaming permits. Check Greater China/Macau roaming coverage on BOTH 27 and 28 December for both phones. Verify activation time, calendar-day versus rolling validity, expiry/timezone and data allowance; do not assume one one-day package covers the overnight.",
+        "summary": "Both phones: Macau data for 27 AND 28 Dec; verify package activation, validity and expiry."
+      },
+      "before": {
+        "body": "8f2bacb914fc78fcb4f9d86e4b9d44ca66b33272d4e023bdfcbbf376bbaa9649",
+        "summary": "62b2f1b37b3f4577829d07f09e294e0c38999b6669102efbe83d6ed4eed76183"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "8b513d28-db86-49d9-a74c-2436e0e42904",
+      "label": "Macau LRT — Cotai to Taipa Ferry",
+      "values": {
+        "title": "Macau LRT — Airport, Cotai and morning ferry",
+        "summary": "Treasure ↔ Airport · Airport → Taipa Ferry: one stop · Airport → Cotai East via MUST towards Barra",
+        "body": "Treasure is opposite Macau Airport. For Monday 28 Dec 09:00 ferry: breakfast first, checkout about 07:45, walk to Airport LRT → ONE stop towards Taipa Ferry Terminal. Allow 20–25 minutes hotel-to-terminal with ticketing/wait/walk, aiming for 08:10; taxi backup. No early free shuttle assumed.\nFor Wynn: Airport → MUST → Cotai East, direction Barra, then walk. Return from Cotai East towards Taipa Ferry Terminal → Airport via MUST. Allow 30–45 minutes door-to-door for the late Londoner return; taxi is simpler. Check station-specific last train.\nLRT is not direct to Senado / historic Macau / Outer Harbour: use metered taxis for historic-centre transfers and to protect Macau Tower check-in. Single-journey fare guidance remains in Macau Money / Transport Payments. Recheck December timetable and holiday notices."
+      },
+      "before": {
+        "title": "1fd56a71804d2a30132203186e1584488d1275bde3ecd2a4321833114b0843fc",
+        "summary": "89acd0ebcb665e7ef93dc32fd06857369054b0820876b90c5b542024a136cbf0",
+        "body": "ca4503732398f74ca064ae9e79f4c2b2f8e2368b2fb1d1ed9fc21ce46aa0aeea"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "e5c44b6d-d20f-4cc3-b6a4-ce0c7350173c",
+      "label": "Man Mo Temple",
+      "values": {
+        "body": "26 December after Luk On Kui dim sum: walk uphill 13:40–14:00; temple visit 14:00–14:35 at 124–126 Hollywood Road. Ordinary official hours 08:00–18:00; recheck holiday access. Respect worshippers and keep prayer paths clear. Walk east through Hollywood Road / Old Town to Central afterwards; no Tai Kwun or PMQ detour."
+      },
+      "before": {
+        "body": "fcf1873b92a05dc31d9697aa9ec89a00640a95078ef3ca6d0b6b5056265248f1"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "292e0519-5e39-40c4-840b-3e9a19766afa",
+      "label": "Immigration Q&A",
+      "values": {},
+      "before": {
+        "body": "96ff461914a9510f66302b31281678c8dec3755ca41b3501c281e53e15a68411"
+      },
+      "transforms": {
+        "body": {
+          "replace": [
+            {
+              "from": "Disneyland and Macau for a day,",
+              "to": "Disneyland and a planned Macau overnight,"
+            },
+            {
+              "from": "Yes, only for a day trip. We will return to our Hong Kong accommodation that evening.",
+              "to": "We plan to visit Macau from 27 to 28 December, returning to Hong Kong on the morning of 28 December. We are keeping our booked Hong Kong room. Treasure Hotel is the proposed additional night and is not booked yet."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "4b9a2d62-ebef-4f63-9c0b-99cf56768a54",
+      "label": "Shared travel facts",
+      "values": {},
+      "before": {
+        "body": "0ed65b440ec5ed3ed4eef77c43c20f1315b0d0887f24e02012823a2bca736848"
+      },
+      "transforms": {
+        "body": {
+          "append": "\nMacau: Planned overnight 27–28 December; Treasure Hotel proposed and not booked yet. Hong Kong room retained; morning ferry return on 28 December is a placeholder."
+        }
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "5739bb16-1cff-5d02-bd75-e6eddc0ac1d6",
+      "label": "Macau transport — practical route and alternatives",
+      "values": {
+        "section": "Macau",
+        "title": "Macau transport — practical route and alternatives",
+        "body": "Planning estimates include walking, waiting and traffic; shuttle seats and hotel access are not reserved.\nDefault: Outer Harbour → Senado taxi; historic centre → Tower taxi (13:00–13:30 protects check-in); Tower → Treasure taxi, 20–30 min driving plus queue, MOP100–150 planning fare for the car.\nTreasure → airport shuttle area → Wynn Palace: airport departures published 09:05–21:00 every 20 min, confirm signed bay. Allow 30–40 min door-to-door; leave hotel 16:50 if queues. The reverse Palace → HZMB → Taipa Ferry → Airport → Palace loop is 30–40 min, not a direct reverse trip. LRT fallback: Airport towards Barra → MUST → Cotai East, then walk.\nWynn → Venetian: taxi, allow 20 min with pickup, MOP40–70 planning fare; walk alternative 25–35 min between actual entrances. No current direct Wynn–Venetian free shuttle verified; do not use old 2018/2019 Cotai Connection PDFs.\nVenetian → Parisian → Londoner: signed pedestrian connections/bridges/crossings, allow 15–20 min each leg including internal resort walks.\nLondoner → Treasure after 21:45: taxi simplest, 10–15 min driving plus pickup, allow 30 min, MOP50–80 planning fare. LRT fallback via Cotai East towards Taipa Ferry Terminal to Airport via MUST; allow 30–45 min and check last train. No late free shuttle assumed.\nOptional free shuttles (recheck bays/holiday operation): Airport ↔ Venetian West Lobby 10:00–22:00 every 12–15 min (official timetable effective 13 Oct 2026), allow 30–40 min door-to-door including 10–15 min driving. Wynn Macau ↔ Wynn Palace 09:30–22:00 every 15–20 min, about 25 min ride plus walks/wait. Wynn Palace → Old Taipa Village → Lisboeta → Palace Thu–Sun 12:00–21:00 every 30 min; not a general resort circuit. Venetian Main Lobby → Taipa ferry 08:10–23:35, reverse 08:45–23:59 every 15–18 min (12–15 min 10:30–21:30). Sands Londoner/Parisian/Venetian circuit from Venetian 11:15–21:15, towards Venetian 11:00–21:00 every 15–18 min; not a late return option.\nFor Monday ferry use Airport LRT one stop to Taipa Ferry; no early hotel shuttle assumed. Taxi fares are estimates for the car, subject to meter/traffic. Outbound from Yau Ma Tei: MTR via Central to Sheung Wan, 45–50 min with walks; ask the hotel for a current cross-harbour taxi/toll quote if preferred.",
+        "summary": "Default taxis + airport → Wynn shuttle · LRT backup · No late free shuttle assumption",
+        "icon": "🇲🇴",
+        "sort_order": 23
+      },
+      "match": {
+        "title": "Macau transport — practical route and alternatives"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "2c816ec7-6a61-50b1-8748-2b4fda0503c2",
+      "label": "Cotai evening — shows, closures and fallback order",
+      "values": {
+        "section": "Macau",
+        "title": "Cotai evening — shows, closures and fallback order",
+        "body": "27 Dec targets: Wynn 17:30–18:15 → Venetian 18:35–19:25 → Parisian exterior 19:45 → Londoner Crystal Palace guard 20:30 (arrive 20:20) → dinner 20:50 → outdoor facade 21:30 → Treasure taxi 21:45. Guard is inside; facade is outside at a different time.\nWynn SkyCab Sunday published 16:00–22:00, last entry 21:40; skip ride if queue above 25–30 min and enjoy Performance Lake. Venetian interiors/canals need no gambling; gondola is separately paid with no queue time reserved; no additional fixed teamLab stop.\nParisian observation decks listed CLOSED 26 Dec 2026–1 Jan 2027. Exterior only; do not buy deck tickets. General illumination every 15 min 18:15–00:00: target 19:45, 20:00 fallback; recheck festive lighting/suspensions because deck closure does not guarantee lights.\nLondoner Changing of the Guard: Crystal Palace lobby, Sunday 16:00 / 18:00 / 20:30, closed Mondays. Target 20:20 arrival; finish is a planning allowance. Optional if bungy/traffic runs late. Facade light/sound show: outdoors, daily 19:30–23:30 hourly; target 21:30.\nSnack at hotel rest because dinner is later. If hungry earlier, eat at Venetian and skip guard show. Never delay meals for photos. If bungy overruns, shorten Venetian, omit guard show or skip SkyCab queue; protect transfers/meals. Published schedules from the supplied 27–28 October brief require date-specific/festive reconfirmation.",
+        "summary": "SkyCab queue limit · Parisian exterior only · Indoor guard 20:30 / outdoor facade 21:30",
+        "icon": "🇲🇴",
+        "sort_order": 24
+      },
+      "match": {
+        "title": "Cotai evening — shows, closures and fallback order"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "81ad0233-87b6-5441-8357-1ba14cd152ae",
+      "label": "Pandas — skip by default; Sunday alternative only",
+      "values": {
+        "section": "Macau",
+        "title": "Pandas — skip by default; Sunday alternative only",
+        "body": "Default: skip pandas. Macao Giant Panda Pavilion is at Seac Pai Van Park, Coloane. Published tourism hours 10:00–13:00 and 14:00–17:00; last entry 16:45; normally closed Mondays, with holiday exceptions. Recheck maintenance, holiday access and admission. Monday 28 Dec is not a reliable viewing day. A 14:00 bungy may finish too late; do not squeeze pandas between Tower and Treasure.\nMutually exclusive alternative ONLY if pandas become a priority: choose 07:30 TurboJET to Outer Harbour, shorten historic centre, omit Fisherman’s Wharf/Monte Fort; REQUEST 12:00 bungy if available and check in 11:30 (requires changing unbooked placeholder, not an assumed reservation). If finished about 14:00, taxi 25–35 min towards the park, visit roughly 14:45–15:45, taxi 20–30 min to Treasure. Evening resorts only as energy/time permit. If bungy runs late, skip pandas. No guaranteed jump finish, panda activity or sightings.\nMonte Fort, Fisherman’s Wharf and Golden Reel remain untimed optional references outside the core route.",
+        "summary": "Skip pandas · Monday normally closed · Earlier ferry/bungy alternative is mutually exclusive",
+        "icon": "🇲🇴",
+        "sort_order": 25
+      },
+      "match": {
+        "title": "Pandas — skip by default; Sunday alternative only"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "c2f40516-432b-5aa3-9b54-1107211dd769",
+      "label": "Macau source links and rechecks",
+      "values": {
+        "section": "Macau",
+        "title": "Macau source links and rechecks",
+        "body": "Schedules below were supplied as checked 27–28 October 2026; not date-specific ticket inventory. All itinerary targets use Hong Kong/Macau UTC+8. Taxi fares/travel durations are planning estimates. Recheck 1–2 weeks before departure; no automation created.\nTurboJET: https://www2.turbojet.com.hk/travel-with-us-sea-ferry/\nCotai Water Jet: https://www.cotaiwaterjet.com/ferry-schedule/hongkong-macau-taipa\nTreasure transport: https://treasurehotelmacau.com/en/transport/\nVenetian shuttle timetable effective 13 Oct 2026: https://assets.sandsresortsmacao.cn/content/getting-here/vm/vm_bus-schedule_en.jpg\nWynn shuttle: https://www.wynnresortsmacau.com/en/wynn-palace/shuttle-bus\nSkyCab: https://www.wynnresortsmacau.com/en/wynn-palace/experiences/entertainment/sky-cab\nLondoner: https://www.londonermacao.com/macau-attractions.html\nParisian: https://www.parisianmacao.com/amenities/eiffel-tower.html\nPandas: https://www.macaotourism.gov.mo/en/events/whatson/12927\nLRT: https://www.mlm.com.mo/en/route.html\nBungy: https://www.skyparkmacau.com/activities/bungy\nMan Mo: https://www.tungwah.org.hk/en/heritage/historical-architecture/man-mo-temple/opening-and-address/\nLuk On Kui: https://www.openrice.com/en/hongkong/r-luk-on-kui-sheung-wan-guangdong-r848035",
+        "summary": "Operator links · Reconfirm December inventory, festive changes and shuttle bays",
+        "icon": "🇲🇴",
+        "sort_order": 26
+      },
+      "match": {
+        "title": "Macau source links and rechecks"
+      }
+    }
+  ]
+}
