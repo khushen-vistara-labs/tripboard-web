@@ -124,6 +124,12 @@ It updates only the current shared trip's Guide records and Bridal Tea House hot
 
 Today may derive one short contextual reminder from the same Guide data. For example, a Macau itinerary day shows the Macau essentials reminder with a link back to the Guide instead of duplicating the whole section.
 
+## Export the current trip
+
+Use **More → Trip settings → Export trip JSON** to download the current trip for review in another planning chat. The timestamped JSON includes trip settings, day titles and notes, the itinerary and its details, all Guide/Important Notes, checklist progress and notes, places, bookings, budgets, payment accounts, and financial transactions. Booking attachments are represented by their metadata; the actual private files are not embedded.
+
+The export is a snapshot of the data currently loaded in the app, including edits made through the site. Go online, let pending changes sync, and refresh before exporting to share the latest saved trip. The seed JSON in the repository is not updated by site edits, and this export is not a seed-import file.
+
 ## Commands
 
 ```bash
