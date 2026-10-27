@@ -128,7 +128,7 @@ const mapFinancialEvent = (row: Record<string, unknown>): FinancialEvent => ({
 });
 
 const mapItinerary = (row: Record<string, unknown>): ItineraryItem => ({
-  id: String(row.id), tripId: String(row.trip_id), date: String(row.date), title: String(row.title), description: row.description ? String(row.description) : undefined,
+  id: String(row.id), tripId: String(row.trip_id), date: String(row.date), title: String(row.title), description: row.description ? String(row.description) : undefined, notes: row.notes ? String(row.notes) : undefined,
   type: row.item_type as ItineraryItem["type"], plannedStartTime: row.planned_start_time ? String(row.planned_start_time).slice(0, 5) : undefined,
   plannedEndTime: row.planned_end_time ? String(row.planned_end_time).slice(0, 5) : undefined, expectedDurationMinutes: row.expected_duration_minutes ? Number(row.expected_duration_minutes) : undefined,
   recommendedDepartureTime: row.recommended_departure_time ? String(row.recommended_departure_time).slice(0, 5) : undefined, priority: row.priority as ItineraryItem["priority"],

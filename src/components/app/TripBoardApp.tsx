@@ -17,6 +17,7 @@ import { discardMutation, retryMutation } from "../../lib/offline/queue";
 import { offlineDb, type OfflineMutation } from "../../lib/offline/db";
 import { mutationSummary } from "../../lib/offline/conflicts";
 import { Modal } from "../ui/Modal";
+import { SectionSearch } from "../../features/search/SectionSearch";
 
 export function TripBoardApp({ screen }: { screen: AppScreen }) {
   const [queryClient] = useState(() => new QueryClient({ defaultOptions: { queries: { staleTime: 30_000, retry: 2 } } }));
@@ -64,13 +65,15 @@ function TripBoardInner({ screen }: { screen: AppScreen }) {
   return <AppShell screen={screen} trip={data.trip} demoMode={data.demoMode} online={online}>
     <SyncState online={online} queued={queued} onRetry={async (id) => { await retryMutation(id); window.dispatchEvent(new Event("tripboard:sync")); }} onDiscard={async (id) => { await discardMutation(id); await data.refresh(); }}/>
     {data.error && <div className="error-banner" role="status">{data.error}<button onClick={() => void data.refresh()}>Retry</button></div>}
-    {screen === "today" && <TodayScreen data={data}/>} 
+    <SectionSearch key={screen} screen={screen} data={data}>
+    {screen === "today" && <TodayScreen data={data}/>}
     {screen === "plan" && <PlanScreen data={data}/>} 
     {screen === "overview" && <TripOverviewScreen data={data}/>}
     {screen === "money" && <MoneyScreen data={data}/>} 
     {screen === "checklist" && <ChecklistScreen data={data}/>} 
     {screen === "immigration" && <ImmigrationScreen data={data}/>}
     {(screen === "more" || screen === "bookings" || screen === "guide") && <MoreScreen data={data} initialSection={screen === "bookings" ? "bookings" : screen === "guide" ? "notes" : "overview"} installPrompt={installPrompt}/>}
+    </SectionSearch>
   </AppShell>;
 }
 

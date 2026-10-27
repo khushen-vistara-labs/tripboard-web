@@ -23,13 +23,38 @@ export function PlanScreen({ data }: { data: TripBoardData }) {
   const [editingDay, setEditingDay] = useState(false);
   const [draggingId, setDraggingId] = useState<string | null>(null); const [pendingOrder, setPendingOrder] = useState<string[] | null>(null);
   const [expandedDetailsId, setExpandedDetailsId] = useState<string | null>(null);
-  const allDayItems = data.itinerary.filter((item) => item.date === selectedDate).sort((a, b) => a.sequence - b.sequence);
+  const allDayItems = useMemo(() => data.itinerary.filter((item) => item.date === selectedDate).sort((a, b) => a.sequence - b.sequence), [data.itinerary, selectedDate]);
   const items = allDayItems.filter((item) => (priority === "ALL" || item.priority === priority) && item.title.toLowerCase().includes(search.toLowerCase()));
   const completed = items.filter((item) => item.status === "COMPLETED").length;
   const currentIndex = dates.indexOf(selectedDate);
   const day = data.days.find((item) => item.date === selectedDate);
   const handledOpen = useRef(false);
-  useEffect(() => { if (handledOpen.current) return; handledOpen.current = true; queueMicrotask(() => { const item = data.itinerary.find((entry) => entry.id === new URLSearchParams(window.location.search).get("open")); if (item) { setSelectedDate(item.date); setEditingItem(item); } }); }, [data.itinerary]);
+  const handledFocus = useRef(false);
+  useEffect(() => {
+    if (handledOpen.current) return;
+    handledOpen.current = true;
+    const params = new URLSearchParams(window.location.search);
+    queueMicrotask(() => {
+      const date = params.get("date");
+      if (date && dates.includes(date)) setSelectedDate(date);
+      const item = data.itinerary.find((entry) => entry.id === (params.get("open") ?? params.get("focus")));
+      if (item) {
+        setSelectedDate(item.date);
+        if (params.has("open")) setEditingItem(item);
+        else setExpandedDetailsId(item.id);
+      }
+    });
+  }, [data.itinerary, dates]);
+  useEffect(() => {
+    if (handledFocus.current) return;
+    const id = new URLSearchParams(window.location.search).get("focus");
+    if (!id || !allDayItems.some((item) => item.id === id)) return;
+    const frame = requestAnimationFrame(() => {
+      const target = document.getElementById(`itinerary-${id}`);
+      if (target) { target.scrollIntoView({ block: "center" }); target.focus({ preventScroll: true }); handledFocus.current = true; }
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [selectedDate, allDayItems]);
   const proposeOrder = (sourceId: string, targetId: string) => {
     const reordered = reorderIds(allDayItems.map((item) => item.id), sourceId, targetId);
     if (reordered) setPendingOrder(reordered);
@@ -76,7 +101,7 @@ function PlanRow({ item, detailsOpen, onDetailsToggle, dragging, canMoveUp, canM
   const finished = item.status === "COMPLETED";
   const transportOptions = item.details?.transportOptions;
   const rowSummary = item.description ?? (transportOptions?.length ? undefined : item.transportInstructions) ?? `${item.type} · ${formatDuration(item.expectedDurationMinutes ?? 60)}`;
-  return <article className={`plan-row${item.type === "transport" ? " transport-row" : ""} status-${item.status.toLowerCase()}${dragging ? " dragging" : ""}`} draggable onDragStart={onDragStart} onDragEnd={onDragEnd} onDragOver={(event) => { event.preventDefault(); event.dataTransfer.dropEffect = "move"; }} onDrop={onDrop}>
+  return <article id={`itinerary-${item.id}`} tabIndex={-1} className={`plan-row${item.type === "transport" ? " transport-row" : ""} status-${item.status.toLowerCase()}${dragging ? " dragging" : ""}`} draggable onDragStart={onDragStart} onDragEnd={onDragEnd} onDragOver={(event) => { event.preventDefault(); event.dataTransfer.dropEffect = "move"; }} onDrop={onDrop}>
     <button className="drag-handle" aria-label={`Reorder ${item.title}`}><GripVertical size={17}/></button>
     <time>{item.plannedStartTime ? DateTime.fromFormat(item.plannedStartTime.slice(0, 5), "HH:mm").toFormat("h:mm") : "Any"}<small>{item.plannedStartTime ? DateTime.fromFormat(item.plannedStartTime.slice(0, 5), "HH:mm").toFormat("a") : "time"}</small></time>
     <span className={`plan-node priority-${item.priority.toLowerCase()}`}>{finished ? <Check size={14}/> : null}</span>
