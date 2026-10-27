@@ -17,7 +17,7 @@
     },
     {
       "date": "2026-12-26",
-      "title": "Boxing Day • Day Peak • Happy Valley • Central • Lee Tung Avenue • Night Peak • Star Ferry"
+      "title": "Boxing Day • Day Peak • Happy Valley • Luk On Kui • Man Mo Temple • Central • Lee Tung Avenue • Night Peak • Star Ferry"
     },
     {
       "date": "2026-12-27",
@@ -25,7 +25,7 @@
     },
     {
       "date": "2026-12-28",
-      "title": "Old-School Dim Sum • Man Mo Temple • Wong Tai Sin • Nan Lian Garden • Sham Shui Po • Mong Kok • Temple Street"
+      "title": "Wong Tai Sin • Nan Lian Garden • Choi Hung + Ping Shek (WANT) • Sham Shui Po • Mong Kok • Temple Street"
     },
     {
       "date": "2026-12-29",
@@ -443,6 +443,26 @@
         "performanceLake": "Current schedule: 18:00–00:00 every 20 minutes.",
         "skycab": "Current Sunday–Thursday hours: 16:00–22:00, last entry 21:40."
       }
+    },
+    {
+      "key": "choi-hung-estate",
+      "name": "Choi Hung Estate",
+      "address": "Choi Hung, Kowloon, Hong Kong",
+      "neighbourhood": "Choi Hung",
+      "category": "Public Housing Estate / Architecture",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Choi%20Hung%20Estate%2C%20Hong%20Kong",
+      "priority": "WANT",
+      "expectedDurationMinutes": 25
+    },
+    {
+      "key": "ping-shek-estate",
+      "name": "Ping Shek Estate",
+      "address": "Ping Shek, Kwun Tong, Kowloon, Hong Kong",
+      "neighbourhood": "Ping Shek / Choi Hung",
+      "category": "Public Housing Estate / Architecture",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ping%20Shek%20Estate%2C%20Hong%20Kong",
+      "priority": "WANT",
+      "expectedDurationMinutes": 20
     }
   ],
   "checklist": [
@@ -451,7 +471,7 @@
       "title": "Try old-school dim sum",
       "kind": "FOOD",
       "priority": "MUST",
-      "plannedDay": "2026-12-28",
+      "plannedDay": "2026-12-26",
       "recommendedPlace": "Luk On Kui",
       "placeKey": "luk-on-kui"
     },
@@ -711,7 +731,7 @@
       "kind": "OTHER",
       "priority": "MUST",
       "plannedDay": "2026-12-25",
-      "description": "Check visibility, low cloud, mist and rain; do not overreact to generic December fog. If genuinely poor, continue Happy Valley → Central → Tai Kwun → PMQ → Star Ferry and reassess Peak later."
+      "description": "Check visibility, low cloud, mist and rain; do not overreact to generic December fog. If genuinely poor, continue Happy Valley → Luk On Kui → Man Mo Temple → Old Town Central → Lee Tung Avenue and reassess the Peak later."
     },
     {
       "key": "octopus-arrival",
@@ -837,6 +857,24 @@
       "plannedDay": "2026-12-27",
       "placeKey": "macau-fishermans-wharf",
       "description": "Free and about a 5-minute walk from Outer Harbour. Keep it to roughly 35–40 minutes."
+    },
+    {
+      "key": "see-choi-hung-estate",
+      "title": "See Choi Hung Estate basketball court",
+      "kind": "PLACE",
+      "priority": "WANT",
+      "plannedDay": "2026-12-28",
+      "placeKey": "choi-hung-estate",
+      "description": "Optional photo stop after Nan Lian Garden. Use Choi Hung MTR Exit C4; keep the visit short and respect residents."
+    },
+    {
+      "key": "walk-ping-shek-estate",
+      "title": "Walk through Ping Shek Estate",
+      "kind": "PLACE",
+      "priority": "WANT",
+      "plannedDay": "2026-12-28",
+      "placeKey": "ping-shek-estate",
+      "description": "Optional companion stop to Choi Hung. Allow 10–15 minutes to walk between the estates; skip both and go directly to Sham Shui Po if running late."
     }
   ],
   "itinerary": [
@@ -1248,97 +1286,137 @@
       "priority": "WANT",
       "sequence": 50,
       "placeKey": "cheung-hing",
-      "transportInstructions": "Try pineapple bun, pineapple bun with butter, egg tart and Hong Kong milk tea."
+      "transportInstructions": "Try pineapple bun, pineapple bun with butter, egg tart and Hong Kong milk tea. Keep this a light/shared breakfast so there is room for the old-school dim sum lunch at Luk On Kui around 12:15."
     },
     {
       "date": "2026-12-26",
-      "title": "Happy Valley to Central by Ding Ding",
+      "title": "Happy Valley → Sheung Wan / Luk On Kui by Ding Ding",
       "type": "transport",
       "start": "11:25",
-      "end": "12:10",
-      "durationMinutes": 45,
+      "end": "12:15",
+      "durationMinutes": 50,
       "priority": "WANT",
       "sequence": 60,
-      "transportInstructions": "Use Hong Kong Tramways for part of the journey; sit upstairs if possible.",
+      "transportInstructions": "Take a westbound tram toward the Sheung Wan / Western Market area, then walk to Luk On Kui at 2–3/F, 40–50 Des Voeux Road West. Check the destination and change to a westbound service if needed. The 50-minute block includes the final walk; sit upstairs if possible.",
       "estimatedCost": 6.6,
       "estimatedCostCurrency": "HKD",
       "estimatedCostScope": "PARTY",
       "estimatedCostStatus": "EXPECTED",
       "details": {
+        "crowdNote": "Holiday traffic can slow the tram; allow ~10–15 minutes of slippage without affecting the day.",
+        "recommended": "Ding Ding",
         "transportOptions": [
           {
             "name": "Ding Ding",
-            "approxDurationMinutes": 45,
+            "notes": "Scenic; sit upstairs if possible.",
+            "route": "Happy Valley → Sheung Wan / Western Market area, then walk to Luk On Kui",
             "approxCost": "HK$3.30/person",
-            "route": "Happy Valley → Central/Western Market direction",
-            "notes": "Scenic; sit upstairs if possible."
+            "approxDurationMinutes": 50
           },
           {
             "name": "MTR",
-            "approxDurationMinutes": 30,
+            "route": "Walk/bus to Causeway Bay MTR → Central → Sheung Wan, then walk to Luk On Kui",
             "approxCost": "~HK$6-10/person",
-            "route": "Walk/bus to Causeway Bay MTR → Central"
+            "approxDurationMinutes": 40
           },
           {
             "name": "Bus",
-            "approxDurationMinutes": 30,
+            "route": "Happy Valley → Sheung Wan, then walk to Luk On Kui",
             "approxCost": "~HK$6-10/person",
-            "route": "Happy Valley → Central"
+            "approxDurationMinutes": 40
           },
           {
             "name": "Taxi",
-            "approxDurationMinutes": 20,
+            "route": "Happy Valley → Luk On Kui, Des Voeux Road West",
             "approxCost": "~HK$70-100 total",
-            "route": "Happy Valley → Central"
+            "approxDurationMinutes": 30
           }
         ],
-        "recommended": "Ding Ding",
-        "crowdNote": "Holiday traffic can slow the tram; allow ~10–15 minutes of slippage without affecting the day."
+        "estimatedCostScope": "PARTY",
+        "estimatedCostStatus": "EXPECTED",
+        "quickNote": "Continue west to the Sheung Wan end of the Central district first, then work east on foot after lunch and Man Mo Temple."
+      },
+      "syncTitles": [
+        "Happy Valley to Central by Ding Ding"
+      ]
+    },
+    {
+      "date": "2026-12-26",
+      "title": "Luk On Kui old-school dim sum",
+      "type": "food",
+      "start": "12:15",
+      "end": "13:40",
+      "durationMinutes": 85,
+      "priority": "MUST",
+      "sequence": 70,
+      "placeKey": "luk-on-kui",
+      "transportInstructions": "Arrive from Happy Valley via the Sheung Wan / Western Market area, then walk to 2–3/F, 40–50 Des Voeux Road West. This replaces the separate generic Central lunch; there is no hotel-to-Central morning journey for this meal.",
+      "details": {
+        "quickNote": "Old-school trolley dim sum is now the 26 December lunch, grouped with Man Mo Temple and Central. Try har gow, siu mai, char siu bao, cheung fun, ribs, turnip cake and tea; avoid beef dishes.",
+        "crowdNote": "Aim to arrive around 12:15 and allow time to queue on Boxing Day. Confirm the holiday opening and dim sum service close to travel; keep the earlier Cheung Hing stop light."
+      }
+    },
+    {
+      "date": "2026-12-26",
+      "title": "Walk Luk On Kui → Man Mo Temple",
+      "type": "transport",
+      "start": "13:40",
+      "end": "14:00",
+      "durationMinutes": 20,
+      "priority": "MUST",
+      "sequence": 80,
+      "timingType": "TARGET",
+      "transportInstructions": "Walk uphill from Des Voeux Road West toward Hollywood Road and Man Mo Temple. Allow 20 minutes for slopes, crossings and finding the entrance.",
+      "details": {
+        "timingType": "TARGET",
+        "recommended": "Walk",
+        "transportOptions": [
+          {
+            "name": "Walk",
+            "route": "Luk On Kui → Man Mo Temple via Hollywood Road",
+            "approxCost": "Free",
+            "approxDurationMinutes": 20
+          },
+          {
+            "name": "Taxi",
+            "notes": "Useful only if tired or raining.",
+            "route": "Short uphill taxi ride",
+            "approxCost": "~HK$30-45 total",
+            "approxDurationMinutes": 5
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-12-26",
+      "title": "Man Mo Temple",
+      "type": "attraction",
+      "start": "14:00",
+      "end": "14:40",
+      "durationMinutes": 40,
+      "priority": "MUST",
+      "sequence": 90,
+      "placeKey": "man-mo-temple",
+      "transportInstructions": "Walk uphill from Des Voeux Road West toward Hollywood Road and Man Mo Temple. Allow 20 minutes for slopes, crossings and finding the entrance.",
+      "details": {
+        "carry": [
+          "Modest, respectful clothing"
+        ],
+        "quickNote": "Traditional temple dedicated to Man Cheong (literature) and Mo Tai (war). Allow a short cultural visit; respect worshippers and do not block prayers.",
+        "attractionCost": "Free",
+        "operatingHours": "Regular operator-listed hours: 08:00–18:00. Recheck holiday notices before travel."
       }
     },
     {
       "date": "2026-12-26",
       "title": "Central / Old Town walking route",
       "type": "attraction",
-      "start": "12:10",
-      "end": "12:55",
-      "durationMinutes": 45,
-      "priority": "WANT",
-      "sequence": 70,
-      "transportInstructions": "Central streets, Mid-Levels Escalator, Graham Street, Old Town Central and Hollywood Road."
-    },
-    {
-      "date": "2026-12-26",
-      "title": "Tai Kwun",
-      "type": "attraction",
-      "start": "12:55",
-      "end": "14:05",
-      "durationMinutes": 70,
-      "priority": "WANT",
-      "sequence": 80,
-      "placeKey": "tai-kwun"
-    },
-    {
-      "date": "2026-12-26",
-      "title": "Lunch around Central",
-      "type": "food",
-      "start": "14:05",
-      "end": "14:50",
-      "durationMinutes": 45,
-      "priority": "WANT",
-      "sequence": 90,
-      "transportInstructions": "Casual cha chaan teng / roast meat rice / pork or chicken noodles / baked pork chop rice / dim sum. Avoid beef/broth."
-    },
-    {
-      "date": "2026-12-26",
-      "title": "PMQ",
-      "type": "attraction",
-      "start": "14:50",
+      "start": "14:40",
       "end": "15:35",
-      "durationMinutes": 45,
+      "durationMinutes": 55,
       "priority": "WANT",
       "sequence": 100,
-      "placeKey": "pmq"
+      "transportInstructions": "From Man Mo Temple, walk east along Hollywood Road through Old Town Central, Graham Street and the Mid-Levels Escalator area, then head downhill toward Queen’s Road Central / Pottinger Street and the harbourfront. Keep moving east instead of returning to Sheung Wan."
     },
     {
       "date": "2026-12-26",
@@ -2263,116 +2341,37 @@
     },
     {
       "date": "2026-12-28",
-      "title": "Luk On Kui old-school dim sum",
-      "type": "food",
-      "start": "08:20",
-      "end": "09:45",
-      "depart": "07:45",
-      "durationMinutes": 85,
-      "priority": "MUST",
-      "sequence": 20,
-      "placeKey": "luk-on-kui",
-      "transportInstructions": "Yau Ma Tei → Central → Sheung Wan, then walk. Try har gow, siu mai, char siu bao, cheung fun, ribs, turnip cake and tea.",
-      "details": {
-        "transportOptions": [
-          {
-            "name": "MTR + walk",
-            "approxDurationMinutes": 30,
-            "approxCost": "~HK$10-15/person",
-            "route": "Yau Ma Tei → Central/Sheung Wan, then walk to Luk On Kui"
-          },
-          {
-            "name": "Taxi",
-            "approxDurationMinutes": 20,
-            "approxCost": "~HK$110-150 total plus tunnel toll",
-            "route": "Hotel → Luk On Kui"
-          },
-          {
-            "name": "Bus",
-            "approxDurationMinutes": 35,
-            "approxCost": "~HK$10-15/person",
-            "route": "Cross-harbour bus toward Sheung Wan, then walk"
-          }
-        ],
-        "recommended": "MTR + walk",
-        "quickNote": "Moved from Sunday to Monday. Current listings show Monday opening; recheck restaurant hours close to travel."
-      }
-    },
-    {
-      "date": "2026-12-28",
-      "title": "Walk Luk On Kui → Man Mo Temple",
+      "title": "Travel hotel → Wong Tai Sin Temple",
       "type": "transport",
-      "start": "09:45",
-      "end": "10:00",
-      "durationMinutes": 15,
-      "priority": "MUST",
-      "sequence": 25,
-      "timingType": "TARGET",
-      "transportInstructions": "Walk uphill along/near Hollywood Road; pay attention to street names as GPS orientation can be confusing.",
-      "details": {
-        "transportOptions": [
-          {
-            "name": "Walk",
-            "approxDurationMinutes": 15,
-            "approxCost": "Free",
-            "route": "Luk On Kui → Man Mo Temple via Hollywood Road"
-          },
-          {
-            "name": "Taxi",
-            "approxDurationMinutes": 5,
-            "approxCost": "~HK$30-45 total",
-            "route": "Short uphill taxi ride",
-            "notes": "Useful only if tired or raining."
-          }
-        ],
-        "recommended": "Walk"
-      }
-    },
-    {
-      "date": "2026-12-28",
-      "title": "Man Mo Temple",
-      "type": "attraction",
-      "start": "10:00",
-      "end": "10:40",
-      "durationMinutes": 40,
-      "priority": "MUST",
-      "sequence": 30,
-      "placeKey": "man-mo-temple",
-      "transportInstructions": "Walk 10–15 minutes uphill from Luk On Kui along/near Hollywood Road. Pay attention to street names as GPS orientation can be confusing.",
-      "details": {
-        "attractionCost": "Free",
-        "quickNote": "Traditional temple dedicated to Man Cheong (literature) and Mo Tai (war). Allow a short cultural visit; respect worshippers and do not block prayers.",
-        "carry": [
-          "Modest, respectful clothing"
-        ]
-      }
-    },
-    {
-      "date": "2026-12-28",
-      "title": "Travel Man Mo Temple → Wong Tai Sin Temple",
-      "type": "transport",
-      "start": "10:40",
+      "start": "10:45",
       "end": "11:25",
-      "durationMinutes": 45,
+      "durationMinutes": 40,
       "priority": "MUST",
       "sequence": 35,
       "timingType": "TARGET",
-      "transportInstructions": "Walk to Sheung Wan MTR, then MTR via Central/Prince Edward to Wong Tai Sin. Taxi is the faster fallback if running late.",
-      "transportOptions": [
-        {
-          "name": "MTR",
-          "approxDurationMinutes": 45,
-          "approxCost": "about HK$12–15/person",
-          "route": "Walk to Sheung Wan → Central → Prince Edward → Wong Tai Sin"
-        },
-        {
-          "name": "Taxi",
-          "approxDurationMinutes": 25,
-          "approxCost": "about HK$120–160 total",
-          "route": "Direct from Man Mo Temple area to Wong Tai Sin Temple"
-        }
+      "transportInstructions": "After a slower morning and breakfast near the hotel, take the MTR from Yau Ma Tei to Prince Edward, change to the Kwun Tong Line toward Wong Tai Sin, and walk to the temple. Leave around 10:45 for the 11:25 visit. This journey stays in Kowloon; no Central / Sheung Wan detour.",
+      "syncTitles": [
+        "Travel Man Mo Temple → Wong Tai Sin Temple"
       ],
-      "recommended": "MTR"
+      "details": {
+        "timingType": "TARGET",
+        "recommended": "MTR + walk",
+        "transportOptions": [
+          {
+            "name": "MTR + walk",
+            "approxDurationMinutes": 40,
+            "approxCost": "Allow about HK$8–12/person; check the fare near travel",
+            "route": "Yau Ma Tei → Prince Edward → Wong Tai Sin, then walk to the temple"
+          },
+          {
+            "name": "Taxi",
+            "approxDurationMinutes": 25,
+            "approxCost": "Allow about HK$90–130 total; traffic-dependent estimate",
+            "route": "Hotel in Yau Ma Tei → Wong Tai Sin Temple"
+          }
+        ],
+        "quickNote": "The previous day is Macau with a return after midnight. Keep this morning relaxed; breakfast locally before leaving. Luk On Kui and Man Mo Temple are now on 26 December."
+      }
     },
     {
       "date": "2026-12-28",
@@ -2435,42 +2434,107 @@
     },
     {
       "date": "2026-12-28",
-      "title": "Travel Nan Lian Garden → Sham Shui Po",
+      "title": "Travel Nan Lian Garden → Choi Hung Estate",
       "type": "transport",
       "start": "13:20",
-      "end": "13:45",
-      "durationMinutes": 25,
-      "priority": "MUST",
+      "end": "13:35",
+      "durationMinutes": 15,
+      "priority": "WANT",
       "sequence": 55,
-      "timingType": "TARGET",
-      "transportInstructions": "Use MTR from Diamond Hill to Sham Shui Po, changing lines as required.",
-      "transportOptions": [
-        {
-          "name": "MTR",
-          "approxDurationMinutes": 25,
-          "approxCost": "about HK$8–11/person",
-          "route": "Diamond Hill → Sham Shui Po"
-        },
-        {
-          "name": "Taxi",
-          "approxDurationMinutes": 20,
-          "approxCost": "about HK$90–120 total",
-          "route": "Direct from Nan Lian Garden to Sham Shui Po"
-        }
-      ],
-      "recommended": "MTR"
+      "placeKey": "choi-hung-estate",
+      "transportInstructions": "Optional estate branch: return to Diamond Hill MTR, take the Kwun Tong Line one stop to Choi Hung, then use Exit C4 for the Choi Hung Estate basketball court. If skipping the estates, take the direct MTR route to Sham Shui Po and restore the longer Sham Shui Po window.",
+      "details": {
+        "quickNote": "A WANT-only detour. The outdoor locations are free; use Octopus for the MTR.",
+        "timingType": "OPTIONAL",
+        "recommended": "MTR + walk",
+        "farePerPerson": "about HK$4–6",
+        "transportOptions": [
+          {
+            "name": "MTR + walk",
+            "notes": "Best-value option; includes station and exit time.",
+            "route": "Nan Lian Garden → Diamond Hill Station → Choi Hung (one stop) → Exit C4",
+            "approxCost": "~HK$4–6/person",
+            "approxDurationMinutes": 15
+          },
+          {
+            "name": "Taxi",
+            "notes": "Use only if tired, raining or preserving the Sham Shui Po time.",
+            "route": "Nan Lian Garden → Choi Hung Estate",
+            "approxCost": "~HK$35–50 total",
+            "approxDurationMinutes": 10
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-12-28",
+      "title": "Choi Hung Estate + Ping Shek Estate",
+      "type": "attraction",
+      "start": "13:35",
+      "end": "14:20",
+      "durationMinutes": 45,
+      "priority": "WANT",
+      "sequence": 56,
+      "placeKey": "choi-hung-estate",
+      "transportInstructions": "Start at Choi Hung Estate's basketball court from Choi Hung MTR Exit C4, then allow 10–15 minutes on foot via the station area to Ping Shek Estate (Exit A2 is closest). Both are homes, not attractions: stay in public areas, do not enter residential blocks, block paths or courts, photograph residents, or make noise.",
+      "details": {
+        "carry": [
+          "Camera/phone",
+          "Octopus card",
+          "Water"
+        ],
+        "payWith": "No admission cost. Octopus for the MTR; no cash needed.",
+        "fallback": "Skip both estates if Nan Lian runs late, weather is poor or you want the full Sham Shui Po visit. Go directly to Sham Shui Po instead.",
+        "crowdNote": "Wait for an empty court or a clear public-space composition rather than disrupting residents or users.",
+        "quickNote": "Keep the two-estate visit to 45 minutes total: roughly 20–25 minutes at Choi Hung and 15–20 minutes at Ping Shek. The colourful Choi Hung court is the main photo stop; Ping Shek is the shorter companion stop.",
+        "timingType": "OPTIONAL",
+        "attractionCost": "Free"
+      }
+    },
+    {
+      "date": "2026-12-28",
+      "title": "Travel Ping Shek Estate → Sham Shui Po",
+      "type": "transport",
+      "start": "14:20",
+      "end": "14:45",
+      "durationMinutes": 25,
+      "priority": "WANT",
+      "sequence": 57,
+      "transportInstructions": "Return through Choi Hung MTR Exit A2, ride to Prince Edward, then change to the Tsuen Wan Line for Sham Shui Po. This is the continuation only if you choose the estate branch.",
+      "details": {
+        "fallback": "If the estate branch is skipped, go from Diamond Hill straight to Sham Shui Po and arrive around 13:45.",
+        "timingType": "OPTIONAL",
+        "recommended": "MTR + walk",
+        "farePerPerson": "about HK$8–11",
+        "transportOptions": [
+          {
+            "name": "MTR + walk",
+            "notes": "Allow the full 25 minutes for the estate walk and Prince Edward interchange.",
+            "route": "Ping Shek Estate → Choi Hung → Prince Edward → Sham Shui Po",
+            "approxCost": "~HK$8–11/person",
+            "approxDurationMinutes": 25
+          },
+          {
+            "name": "Taxi",
+            "notes": "Useful if you want to regain some of the optional Sham Shui Po browsing time.",
+            "route": "Ping Shek Estate → Sham Shui Po",
+            "approxCost": "~HK$100–130 total",
+            "approxDurationMinutes": 20
+          }
+        ]
+      }
     },
     {
       "date": "2026-12-28",
       "title": "Sham Shui Po exploration",
       "type": "shopping",
-      "start": "13:45",
+      "start": "14:45",
       "end": "15:15",
-      "durationMinutes": 90,
+      "durationMinutes": 30,
       "priority": "WANT",
       "sequence": 60,
       "placeKey": "sham-shui-po",
-      "transportInstructions": "Focus on Apliu Street, Pei Ho Street and one or two nearby side streets. Snack rather than have a large formal lunch."
+      "transportInstructions": "Estate-branch version: keep this to a focused 30-minute loop around Apliu Street, Pei Ho Street and one nearby side street. If the estates are skipped, restore the original 13:45–15:15 Sham Shui Po window. Snack rather than have a large formal lunch."
     },
     {
       "date": "2026-12-28",
@@ -4086,6 +4150,12 @@
       "summary": "Fares and journey times are approximate; recheck holiday operations before travel.",
       "icon": "ℹ️",
       "body": "Transport fares and journey times are approximate planning values based on information available in September 2026. Recheck MTR, bus, ferry, Peak Tram and holiday/NYE operations shortly before travel."
+    },
+    {
+      "section": "Culture & experiences",
+      "title": "Man Mo Temple",
+      "body": "Traditional temple / heritage stop on 26 December after Luk On Kui. Hollywood Road, Sheung Wan; free; allow 30–40 minutes. Respect worshippers and do not block prayers or treat it solely as a photo location.",
+      "sortOrder": 9
     }
   ]
 }
