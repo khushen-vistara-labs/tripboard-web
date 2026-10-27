@@ -395,10 +395,32 @@ function TripSettings({ data, onMessage }: { data: TripBoardData; onMessage: (me
   const [savingSettings, setSavingSettings] = useState(false);
   const logout = async () => { const client = getSupabaseBrowserClient(); if (client) await client.auth.signOut(); window.location.href = "/login"; };
   const exportTrip = () => {
-    const blob = new Blob([JSON.stringify({ trip: data.trip, itinerary: data.itinerary, checklist: data.checklist, places: data.places, bookings: data.bookings }, null, 2)], { type: "application/json" });
-    const url = URL.createObjectURL(blob); const link = document.createElement("a"); link.href = url; link.download = "tripboard-export.json"; link.click(); URL.revokeObjectURL(url); onMessage("Trip export downloaded.");
+    const exportedAt = new Date().toISOString();
+    const snapshot = {
+      exportedAt,
+      trip: data.trip,
+      days: data.days,
+      itinerary: data.itinerary,
+      notes: data.notes,
+      checklist: data.checklist,
+      places: data.places,
+      bookings: data.bookings,
+      budgets: data.budgets,
+      accounts: data.accounts,
+      financialEvents: data.financialEvents,
+    };
+    const blob = new Blob([JSON.stringify(snapshot, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `tripboard-export-${exportedAt.replace(/[:.]/g, "-")}.json`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+    onMessage("Trip export downloaded with all planning notes and money records.");
   };
-  return <><div className="settings-grid"><form className="panel settings-form" onSubmit={async (event) => { event.preventDefault(); setSavingSettings(true); await data.updateTripSettings({ name, timezone, baseCurrency: currency }); setSavingSettings(false); onMessage("Trip settings saved for everyone."); }}><h2>Trip configuration</h2><label>Trip name<input value={name} onChange={(event) => setName(event.target.value)} required/></label><label>Trip timezone<select value={timezone} onChange={(event) => setTimezone(event.target.value)}><option value="Asia/Hong_Kong">Asia/Hong_Kong</option><option value="Asia/Kolkata">Asia/Kolkata</option><option value="Asia/Tokyo">Asia/Tokyo</option><option value="Europe/London">Europe/London</option></select><small>Schedules and alerts always use the trip timezone.</small></label><label>Base currency<select value={currency} onChange={(event) => setCurrency(event.target.value)}><option>INR</option><option>HKD</option><option>MOP</option></select></label><button className="button primary" disabled={savingSettings}>{savingSettings ? "Saving…" : "Save settings"}</button></form><section className="panel account-tools"><h2>Your account</h2><button onClick={() => setPasswordOpen(true)}><LockKeyhole size={17}/><div><strong>Set sign-in password</strong><p>Use a password instead of an email sign-in link.</p></div><ChevronRight size={17}/></button><button onClick={exportTrip}><Download size={17}/><div><strong>Export trip JSON</strong><p>Download itinerary, checklist, places, and bookings.</p></div><ChevronRight size={17}/></button><button onClick={() => void logout()}><LogOut size={17}/><div><strong>Log out</strong><p>Remove this account’s session from this device.</p></div><ChevronRight size={17}/></button></section></div>{passwordOpen && <SetPasswordModal onClose={() => setPasswordOpen(false)} onSaved={(notice) => { setPasswordOpen(false); onMessage(notice); }}/>}</>;
+  return <><div className="settings-grid"><form className="panel settings-form" onSubmit={async (event) => { event.preventDefault(); setSavingSettings(true); await data.updateTripSettings({ name, timezone, baseCurrency: currency }); setSavingSettings(false); onMessage("Trip settings saved for everyone."); }}><h2>Trip configuration</h2><label>Trip name<input value={name} onChange={(event) => setName(event.target.value)} required/></label><label>Trip timezone<select value={timezone} onChange={(event) => setTimezone(event.target.value)}><option value="Asia/Hong_Kong">Asia/Hong_Kong</option><option value="Asia/Kolkata">Asia/Kolkata</option><option value="Asia/Tokyo">Asia/Tokyo</option><option value="Europe/London">Europe/London</option></select><small>Schedules and alerts always use the trip timezone.</small></label><label>Base currency<select value={currency} onChange={(event) => setCurrency(event.target.value)}><option>INR</option><option>HKD</option><option>MOP</option></select></label><button className="button primary" disabled={savingSettings}>{savingSettings ? "Saving…" : "Save settings"}</button></form><section className="panel account-tools"><h2>Your account</h2><button onClick={() => setPasswordOpen(true)}><LockKeyhole size={17}/><div><strong>Set sign-in password</strong><p>Use a password instead of an email sign-in link.</p></div><ChevronRight size={17}/></button><button onClick={exportTrip}><Download size={17}/><div><strong>Export trip JSON</strong><p>Download the current plan, all notes, bookings, and money records.</p></div><ChevronRight size={17}/></button><button onClick={() => void logout()}><LogOut size={17}/><div><strong>Log out</strong><p>Remove this account’s session from this device.</p></div><ChevronRight size={17}/></button></section></div>{passwordOpen && <SetPasswordModal onClose={() => setPasswordOpen(false)} onSaved={(notice) => { setPasswordOpen(false); onMessage(notice); }}/>}</>;
 }
 
 function SetPasswordModal({ onClose, onSaved }: { onClose: () => void; onSaved: (notice: string) => void }) {

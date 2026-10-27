@@ -6,7 +6,7 @@ TripBoard is a private, responsive PWA. It is intentionally not a native wrapper
 
 ## Application layers
 
-- `app/` contains the Vite/Vinext route entries and global metadata. Vinext is used because the Sites runtime requires Cloudflare Worker-compatible Vite output; product logic does not depend on it.
+- `app/` contains the Vite/Vinext route entries and global metadata. Nitro packages the Vite output for Vercel; product logic does not depend on the hosting provider.
 - `src/components/` contains the app shell and accessible reusable interaction components.
 - `src/features/` owns feature-specific views and domain rules.
 - `src/lib/supabase/` is the only browser entry point to Supabase.
@@ -65,4 +65,4 @@ The notification Edge Function is intended to run roughly every five minutes. It
 
 ## Deployment
 
-The app emits Cloudflare Worker-compatible ESM through Vite and contains no provider-specific product logic. Supabase remains the backend. It can be hosted through Sites or adapted to Vercel without moving domain or database code.
+Vercel is the only deployment target. `pnpm build` uses Nitro's Vercel preset and emits the Build Output API files in `.vercel/output`, mirrored to `.output` for CI inspection. The GitHub integration deploys `main` to production and feature branches to previews. Supabase remains the backend. Legacy Sites/Cloudflare development configuration does not define the deployment workflow.
