@@ -1,7 +1,7 @@
 "use client";
 
 import { useDeferredValue, useEffect, useId, useMemo, useRef, useState, type ReactNode } from "react";
-import { ArrowRight, ChevronUp, Search, X } from "lucide-react";
+import { ArrowRight, Search, X } from "lucide-react";
 import { DateTime } from "luxon";
 import type { AppScreen } from "../../components/app/AppShell";
 import { buildSearchDocuments, matchExcerpt, searchDocuments, searchScopes, type SearchData } from "./section-search";
@@ -13,6 +13,7 @@ export function SectionSearch({ screen, data, children }: { screen: AppScreen; d
   const trigger = useRef<HTMLButtonElement>(null);
   const id = useId();
   const scope = searchScopes[screen];
+  const placeholder = screen === "plan" || screen === "overview" ? "All days: places, streets, food, notes…" : screen === "money" ? "Merchants, accounts, amounts…" : scope.hint;
   const deferredQuery = useDeferredValue(query);
   const documents = useMemo(() => buildSearchDocuments(data, screen), [data, screen]);
   const results = useMemo(() => searchDocuments(documents, deferredQuery), [documents, deferredQuery]);
@@ -23,16 +24,15 @@ export function SectionSearch({ screen, data, children }: { screen: AppScreen; d
 
   return <>
     <div className="section-search">
-      <div className="section-search-toolbar">
-        <button ref={trigger} type="button" className={`icon-button section-search-trigger${expanded ? " active" : ""}`} aria-label={expanded ? `Close ${scope.label} search` : `Search ${scope.label}`} title={expanded ? "Close search" : `Search ${scope.label}`} aria-expanded={expanded} aria-controls={id} onClick={() => expanded ? close() : setExpanded(true)}>{expanded ? <ChevronUp size={19}/> : <Search size={19}/>}</button>
-      </div>
-      <div id={id} hidden={!expanded}>
-        <form className="section-search-form" role="search" aria-label={`${scope.label} search`} onSubmit={(event) => event.preventDefault()}>
-          <label htmlFor={`${id}-input`}>Search {scope.label}{(screen === "plan" || screen === "overview") && <span aria-hidden="true">All days</span>}</label>
-          <div className="section-search-input"><Search size={18} aria-hidden="true"/><input ref={input} id={`${id}-input`} type="search" value={query} placeholder={screen === "money" ? "Merchants, accounts, amounts…" : "Places, streets, food, notes…"} aria-describedby={`${id}-hint`} autoComplete="off" onChange={(event) => setQuery(event.target.value)} onKeyDown={(event) => { if (event.key === "Escape") { event.preventDefault(); if (query) clear(); else close(); } }}/>{query && <button type="button" className="icon-button" aria-label="Clear section search" onClick={clear}><X size={17}/></button>}</div>
-          <p id={`${id}-hint`}>{scope.hint}</p>
-        </form>
-      </div>
+      <form className={`section-search-control${expanded ? " expanded" : ""}`} role="search" aria-label={`${scope.label} search`} onSubmit={(event) => event.preventDefault()}>
+        <button ref={trigger} type="button" className="section-search-trigger" aria-label={expanded ? `Close ${scope.label} search` : `Search ${scope.label}`} title={expanded ? "Close search" : `Search ${scope.label}`} aria-expanded={expanded} aria-controls={id} onClick={() => expanded ? close() : setExpanded(true)}><Search size={19}/></button>
+        <div id={id} className="section-search-entry" hidden={!expanded}>
+          <label className="sr-only" htmlFor={`${id}-input`}>Search {scope.label}</label>
+          <input ref={input} id={`${id}-input`} type="search" value={query} placeholder={placeholder} aria-describedby={`${id}-hint`} autoComplete="off" onChange={(event) => setQuery(event.target.value)} onKeyDown={(event) => { if (event.key === "Escape") { event.preventDefault(); if (query) clear(); else close(); } }}/>
+          {query && <button type="button" className="section-search-clear" aria-label="Clear section search" onClick={clear}><X size={17}/></button>}
+          <span className="sr-only" id={`${id}-hint`}>{scope.hint}</span>
+        </div>
+      </form>
     </div>
     {searching && <section className="section-search-results" aria-label={`${scope.label} search results`} aria-busy={deferredQuery !== query}>
       <header className="section-search-heading"><div><h1>Search {scope.label}</h1><p role="status">{results.length} result{results.length === 1 ? "" : "s"} for “{deferredQuery.trim()}”</p></div><button type="button" className="button secondary" onClick={clear}>Back to {scope.label}</button></header>

@@ -126,7 +126,7 @@ Today may derive one short contextual reminder from the same Guide data. For exa
 
 ## Search the current section
 
-Use the search icon above the current screen to expand section search. It searches full descriptions, notes, addresses, nearby food, transport choices, and linked booking/place details within the selected menu item. Plan and Trip at a Glance search every day; Today uses the current date in the trip timezone. Money searches transactions, merchants, accounts, and budgets. Guide and Immigration search their own complete reference text.
+Use the search icon above the current screen to expand a compact search field inline; its scope hint appears as placeholder text. It searches full descriptions, notes, addresses, nearby food, transport choices, and linked booking/place details within the selected menu item. Plan and Trip at a Glance search every day; Today uses the current date in the trip timezone. Money searches transactions, merchants, accounts, and budgets. Guide and Immigration search their own complete reference text.
 
 Results show the matching text and offer **All details**. Plan results can open the correct day and activity. Clearing or closing section search restores the existing screen and its local filters, including Plan's separate day search. Search works on the trip data already loaded on the device, including its offline copy.
 

@@ -16,11 +16,20 @@ async function searchSection(page: Page, scope: string, query: string) {
   return page.getByRole("region", { name: `${scope} search results`, exact: true });
 }
 
-test("Plan search expands on demand, searches other days and preserves the day filter", async ({ page }) => {
+test("Plan search expands inline, searches other days and preserves the day filter", async ({ page }) => {
   await openPreview(page, "/plan");
   await expect(page.getByRole("searchbox", { name: "Search Plan", exact: true })).toBeHidden();
+  const trigger = page.getByRole("button", { name: "Search Plan", exact: true });
+  const collapsed = await trigger.boundingBox();
+  const icon = await trigger.locator("svg").boundingBox();
+  expect(Math.abs(icon!.x + icon!.width / 2 - collapsed!.x - collapsed!.width / 2)).toBeLessThan(1);
+  expect(Math.abs(icon!.y + icon!.height / 2 - collapsed!.y - collapsed!.height / 2)).toBeLessThan(1);
   await page.getByPlaceholder("Search this day").fill("Ngong");
   const results = await searchSection(page, "Plan", "TJ-093842");
+  const expanded = await page.locator(".section-search-control").boundingBox();
+  expect(expanded!.height).toBe(collapsed!.height);
+  expect(expanded!.y).toBe(collapsed!.y);
+  expect(expanded!.width).toBeLessThanOrEqual(390);
   await expect(results.getByRole("heading", { name: "Ferry to Macau" })).toBeVisible();
   await expect(results.getByText("30 Dec 2026", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "Clear section search" }).click();

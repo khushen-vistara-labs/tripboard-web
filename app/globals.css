@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 /* Section-wide search is independent of each screen's existing filters. */
-.section-search { margin-bottom: 16px; }
-.section-search-toolbar { display: flex; justify-content: flex-end; }
-.section-search-trigger { min-width: 44px; min-height: 44px; }
-.section-search-trigger.active { color: var(--green); background: var(--mint); }
-.section-search-form { margin-top: 10px; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--card); }
-.section-search-form > label { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 13px; font-weight: 700; color: var(--ink); }
-.section-search-form > label span { border-radius: 20px; padding: 4px 8px; color: var(--green); background: var(--mint); font-size: 11px; }
-.section-search-input { display: flex; align-items: center; gap: 10px; border: 1px solid var(--line); border-radius: 10px; padding: 0 12px; color: var(--muted); }
-.section-search-input:focus-within { border-color: var(--focus); box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus) 16%, transparent); }
-.section-search-input input { min-width: 0; width: 100%; min-height: 46px; border: 0; background: transparent; color: var(--ink); font: inherit; font-size: 16px; outline-offset: 0; }
-.section-search-input input::-webkit-search-cancel-button { -webkit-appearance: none; }
-.section-search-input input:focus-visible { outline: none; box-shadow: none; }
-.section-search-input > svg { flex: 0 0 auto; }
-.section-search-input .icon-button { flex: 0 0 44px; min-height: 44px; border: 0; box-shadow: none; }
-.section-search-form > p { margin: 9px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.section-search { display: flex; justify-content: flex-end; margin-bottom: 16px; }
+.section-search-control { display: flex; align-items: center; width: 44px; max-width: 100%; height: 44px; padding: 0; border: 0; border-radius: 22px; overflow: hidden; background: var(--card); color: var(--green); box-shadow: inset 0 0 0 1px var(--line); transition: width 220ms ease; }
+.section-search-control.expanded { width: min(390px, 100%); }
+.section-search-control:focus-within { box-shadow: inset 0 0 0 1px var(--focus), 0 0 0 3px color-mix(in srgb, var(--focus) 16%, transparent); }
+.section-search-trigger, .section-search-clear { display: grid; place-items: center; flex: 0 0 44px; width: 44px; height: 44px; min-width: 44px; min-height: 44px; padding: 0; margin: 0; border: 0; background: transparent; color: inherit; line-height: 1; }
+.section-search-trigger:hover, .section-search-clear:hover { background: var(--mint); }
+.section-search-trigger > svg, .section-search-clear > svg { display: block; }
+.section-search-trigger:focus-visible, .section-search-clear:focus-visible { outline-offset: -4px; box-shadow: none; }
+.section-search-entry { display: flex; align-items: center; flex: 1; min-width: 0; height: 44px; }
+.section-search-entry[hidden] { display: none; }
+.section-search-entry input { flex: 1; min-width: 0; width: 100%; height: 44px; padding: 0 12px 0 0; border: 0; background: transparent; color: var(--ink); font: inherit; font-size: 16px; }
+.section-search-entry input::placeholder { color: var(--muted); opacity: 1; }
+.section-search-entry input::-webkit-search-cancel-button { -webkit-appearance: none; }
+.section-search-entry input:focus-visible { outline: none; box-shadow: none; }
+@media (prefers-reduced-motion: reduce) { .section-search-control { transition: none; } }
 .section-search-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin: 22px 0; }
 .section-search-heading h1 { margin: 0; font-size: 25px; color: var(--ink); }
 .section-search-heading p { margin: 8px 0 0; color: var(--muted); overflow-wrap: anywhere; }
@@ -36,7 +36,6 @@
 .section-search-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--green); font-size: 13px; font-weight: 700; text-decoration: none; }
 .plan-row:target { outline: 2px solid var(--focus); outline-offset: 4px; scroll-margin: 100px; }
 @media (max-width: 560px) {
-  .section-search-form { padding: 14px; }
   .section-search-heading { align-items: flex-start; flex-direction: column; }
   .section-search-result { padding: 17px; }
 }
