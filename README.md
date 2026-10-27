@@ -7,7 +7,7 @@ The initial seed represents a Hong Kong and Macau trip from 25 December 2026 thr
 ## Architecture
 
 - React 19 + TypeScript strict mode
-- Vite with Vinext route entries and Cloudflare Worker-compatible ESM output
+- Vite with Vinext route entries and Nitro's Vercel build output
 - Tailwind CSS plus product-specific responsive styles
 - TanStack Query boundary for server state
 - Supabase Postgres, Auth, Realtime, Storage, Edge Functions, and RLS
@@ -137,7 +137,8 @@ pnpm dev          # local PWA
 pnpm lint         # source lint
 pnpm typecheck    # strict TypeScript
 pnpm test         # unit tests, including all financial acceptance cases
-pnpm build        # production build
+pnpm build        # Vercel production build
+pnpm start        # local preview of the Vercel build
 pnpm check        # lint + typecheck + tests + build
 pnpm seed:trip    # validated developer trip import
 pnpm sync:itinerary # replace an existing seed trip's itinerary from JSON
@@ -171,13 +172,9 @@ Notification permission is never requested during initial page load. Each device
 
 ## Deployment
 
-### Sites
+TripBoard is deployed only to **Vercel**, with Supabase providing the backend. The connected GitHub repository deploys `main` to production and feature branches to Vercel previews. ChatGPT Sites is not used for deployment; the existing Sites/Cloudflare development configuration and `.openai/hosting.json` are legacy scaffolding.
 
-The included Vite configuration emits a Cloudflare Worker-compatible build and uses the Sites plugin. Configure the public Supabase values in the hosted runtime, build, and publish through the Sites workflow.
-
-### Vercel
-
-Supabase and all domain code are hosting-provider independent. If deploying to Vercel, configure the same public environment variables and use `pnpm build:vercel`. Nitro emits Vercel's Build Output API files in `.vercel/output` and mirrors them to `.output` for CI inspection. Keep the Vercel output-directory override disabled so it recognizes the native Build Output API files. Keep the service worker at the origin root. The normal `pnpm build` command remains the OpenAI Sites fallback build.
+Configure the public Supabase environment variables in Vercel and use `pnpm build` (`pnpm build:vercel` is an equivalent explicit command). Nitro emits Vercel's Build Output API files in `.vercel/output` and mirrors them to `.output` for CI inspection. Keep the Vercel output-directory override disabled so it recognizes the native Build Output API files. Keep the service worker at the origin root.
 
 ## Browser and PWA limitations
 

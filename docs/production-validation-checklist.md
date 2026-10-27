@@ -67,7 +67,7 @@ On both devices:
 
 ## 7. Final production sign-off
 
-- Set the deployed Site URL and every allowed authentication redirect URL in Supabase.
+- Set the deployed Vercel URL and every allowed authentication redirect URL in Supabase.
 - Configure VAPID public/private keys, subject, service-role secret, and public browser key.
 - Deploy `evaluate-notifications` and schedule it approximately every five minutes.
 - Confirm no service-role or VAPID private key appears in browser assets or logs.
