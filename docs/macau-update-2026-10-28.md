@@ -26,3 +26,9 @@ Private before/after snapshots were saved outside the repository. The committed 
 ## Still to book or reconfirm
 
 Treasure, both ferries and bungy are unbooked. Verify Treasure's taxes, room type, cancellation and breakfast; actual ferry inventory/fares/cutoffs; Meghana's spectator ticket and deck access. Recheck shuttle bays, December/festive show changes, Parisian deck closure/illumination, estate access/works and roaming activation/expiry 1–2 weeks before travel. Times and taxi fares remain planning estimates; no guaranteed bungy completion or show access.
+
+## Follow-up: restore transport boxes
+
+The initial revision replaced structured `details.transportOptions` with prose. That removed the existing visible option boxes from the revised travel legs. The correction `macau-transport-2026-10-28.json` restores choices and an exact matching recommendation on 22 legs: four on Saturday, eleven on Sunday and seven on Monday. Existing supporting details and notes are retained. Times and known cost estimates are shown in the boxes; unverified fares require an actual quote rather than the retired low cross-harbour taxi estimate. No layout redesign was needed.
+
+Applied and verified against live Supabase state. Only itinerary `details` fields changed; schedules, operational text, bookings, attachments, finances and unrelated rows were retained. Live Plan verification showed the expected boxes/recommendation badges on all three dates, matching the existing Saturday 10:25 transfer. Lint, typecheck, all 63 tests, production build and diff checks passed. Reapplication is a no-op.

@@ -137,6 +137,17 @@ Use a fresh private backup path for an apply. Each edited field must still match
 
 This update is independent of the older developer seed. Do not run the full seed/itinerary/Guide sync to apply it: those commands use older planning content and can replace live edits. Treasure and both ferries remain unbooked placeholders; the INR4,300 hotel amount is an estimate, never an expense.
 
+### Restore the revised route's transport boxes
+
+The follow-up correction restores `details.transportOptions` and matching recommendations for 22 travel legs on 26–28 December. It retains the revised routes, all supporting notes, booking warnings and the existing transport-box styling.
+
+```bash
+pnpm update:macau:transport                    # read-only plan
+pnpm update:macau:transport --apply --backup=/tmp/tripboard-before-transport-boxes.json
+```
+
+The original overnight manifest is historical; this correction supersedes its transport-details fields. Use the correction command to recheck/reapply it. Repeating it is a no-op, and an older manifest cannot silently overwrite the restored choices because reviewed-value checks reject that conflict.
+
 ## Search the current section
 
 Use the search icon above the current screen to expand a compact search field inline; its scope hint appears as placeholder text. It searches full descriptions, notes, addresses, nearby food, transport choices, and linked booking/place details within the selected menu item. Plan and Trip at a Glance search every day; Today uses the current date in the trip timezone. Money searches transactions, merchants, accounts, and budgets. Guide and Immigration search their own complete reference text.

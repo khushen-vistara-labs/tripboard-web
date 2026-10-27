@@ -1,0 +1,662 @@
+{
+  "tripId": "73c7883d-cff1-4abd-a0b0-ec8a5a543e1f",
+  "timezone": "Asia/Hong_Kong",
+  "changes": [
+    {
+      "table": "itinerary_items",
+      "id": "c290eaa5-8227-44c9-a584-770e548089ea",
+      "label": "Happy Valley → Sheung Wan by Ding Ding",
+      "values": {
+        "details": {
+          "crowdNote": "Holiday queues/traffic may add time; use the lunch/rest buffers.",
+          "timingType": "TARGET",
+          "recommended": "Ding Ding to Western Market",
+          "transportOptions": [
+            {
+              "name": "Ding Ding to Western Market",
+              "route": "Happy Valley area → westbound tram showing Western Market → Western Market / Des Voeux Road West",
+              "approxDurationMinutes": 45,
+              "approxCost": "~HK$3.30/person; recheck",
+              "notes": "Confirm destination before boarding; holiday traffic can add time. Walk to Luk On Kui is the separate 12:10 row; do not alight in Central and retrace west."
+            },
+            {
+              "name": "MTR + walk",
+              "route": "Walk to Causeway Bay MTR → Island Line towards Kennedy Town → Sheung Wan, then Western Market area",
+              "approxDurationMinutes": 40,
+              "approxCost": "Check current MTR fare; Octopus",
+              "notes": "Planning alternative if tram traffic is poor; includes station walks. Check the best access from the actual Happy Valley stop."
+            },
+            {
+              "name": "Taxi",
+              "route": "Happy Valley → Western Market / Des Voeux Road West",
+              "approxCost": "Metered fare; get a local estimate",
+              "notes": "Fallback if tired or late; road traffic may still delay arrival. Go directly to Luk On Kui if necessary and omit the separate walk."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "4248aae6391f3aafe4948ec2bfe8b890b816d9dc7e09e0194bb932f5de96022c"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "e19cb408-f37f-54b8-956c-5d238064612f",
+      "label": "Walk to Luk On Kui",
+      "values": {
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "Walk",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "route": "Actual Western Market tram stop → 2–3/F, 40–50 Des Voeux Road West, Luk On Kui",
+              "approxDurationMinutes": 15,
+              "approxCost": "Free",
+              "notes": "Allow for crossings and finding the upstairs restaurant entrance; the tram ride is already in the preceding row."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "50de9097bff91f4fbeccbd593dc1cdb55f8888be939c5f90c41b5b724ecdb1f1"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "d7fa560f-22da-4383-b00b-5e15b4942de6",
+      "label": "Walk Luk On Kui → Man Mo Temple",
+      "values": {
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "Walk",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "route": "Luk On Kui, Des Voeux Road West → uphill streets → Man Mo Temple, 124–126 Hollywood Road",
+              "approxDurationMinutes": 20,
+              "approxCost": "Free",
+              "notes": "15–20 min planning allowance, depending on slopes, route and pace."
+            },
+            {
+              "name": "Taxi",
+              "route": "Luk On Kui → nearest permitted drop-off for Man Mo Temple",
+              "approxCost": "Metered fare; check locally",
+              "notes": "Optional fallback for heavy rain or mobility; pickup/wait and the short final walk may offset any time saved."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "3bdd9830783403153bf6b62631542283086041d324f7f03c2ecdb103d2107f18"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "9be0eb2b-80df-4dbb-8aa1-ad720ab95b08",
+      "label": "Hollywood Road / Old Town → Central",
+      "values": {
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "Walk",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "route": "Man Mo Temple → east along Hollywood Road / Old Town → Central",
+              "approxDurationMinutes": 40,
+              "approxCost": "Free",
+              "notes": "Optional Graham Street / Mid-Levels Escalator area; no Tai Kwun or PMQ detour. This block includes the street stroll, not just direct travel."
+            },
+            {
+              "name": "Taxi — shorten the stroll",
+              "route": "Nearest permitted pickup near Man Mo Temple → Central harbourfront / rest stop",
+              "approxCost": "Metered fare; check locally",
+              "notes": "Rain/tiredness fallback; bypass the optional street stroll and use the Central rest buffer."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "3bdd9830783403153bf6b62631542283086041d324f7f03c2ecdb103d2107f18"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "0762506b-9d0b-4798-aa3b-c2faf25f6f4f",
+      "label": "MTR / taxi to Sheung Wan ferry terminal",
+      "values": {
+        "details": {
+          "fallback": "Taxi if preferred; get a hotel quote including cross-harbour tolls. Do not use the old low taxi estimate.",
+          "timingType": "TARGET",
+          "recommended": "MTR via Central",
+          "transportOptions": [
+            {
+              "name": "MTR via Central",
+              "route": "Hotel → walk to Yau Ma Tei MTR → Tsuen Wan Line towards Central → Island Line towards Kennedy Town, one stop to Sheung Wan → signed Shun Tak ferry terminal access",
+              "approxDurationMinutes": 50,
+              "approxCost": "Check current MTR fare; Octopus",
+              "notes": "Allow 45–50 min including walks/transfers; leave around 06:45, aim for terminal about 07:35. Ferry check-in/breakfast buffer is the next row."
+            },
+            {
+              "name": "Taxi",
+              "route": "Hong Kong hotel in Yau Ma Tei → Hong Kong Macau Ferry Terminal, Shun Tak Centre, Sheung Wan",
+              "approxCost": "Ask hotel for current cross-harbour fare + tolls",
+              "notes": "Useful door-to-door fallback. Confirm pickup time with the hotel and preserve the 07:35 terminal target; do not use the retired low taxi estimate."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "597ef44e99d3756fe8b0046518a4532e8dcd06233a213c4e1f7804190f01e6f2"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "119d30f1-3963-4981-91be-1580a0e32c98",
+      "label": "TurboJET Sheung Wan → Macau Outer Harbour",
+      "values": {
+        "details": {
+          "booking": "required",
+          "costStatus": "Recheck actual fare when booking.",
+          "timingType": "TARGET",
+          "eventStatus": "PLACEHOLDER — not booked",
+          "planningAssumption": "Published timetable is not date-specific ticket availability.",
+          "recommended": "TurboJET 08:30 target",
+          "transportOptions": [
+            {
+              "name": "TurboJET 08:30 target",
+              "route": "Sheung Wan → Macau Outer Harbour, Sunday 27 Dec; target arrival 09:30",
+              "approxDurationMinutes": 60,
+              "approxCost": "Reconfirm 27 Dec fare when booking",
+              "notes": "PLACEHOLDER — unbooked. Reach Sheung Wan terminal around 07:35; follow actual ticket boarding cutoffs. Arrival formalities are the following row."
+            },
+            {
+              "name": "TurboJET 07:30 alternative",
+              "route": "Same terminals, earlier Sunday departure",
+              "approxDurationMinutes": 60,
+              "approxCost": "Reconfirm date-specific fare / inventory",
+              "notes": "Only if deliberately rebooking the plan earlier; hotel transfer/check-in must also move earlier. Not an additional timed sailing."
+            },
+            {
+              "name": "TurboJET 09:30 alternative",
+              "route": "Same terminals, later Sunday departure",
+              "approxDurationMinutes": 60,
+              "approxCost": "Reconfirm date-specific fare / inventory",
+              "notes": "Less historic-centre time. Shorten sightseeing/lunch routing while retaining a meal and protecting 13:30 bungy check-in; not assumed available."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "686e42be923ced853a5b8e21f2540d37bc35caf43938b13191aebd73acffa2d7"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "a36cbe26-db33-43ef-8a7f-d7db69a49a88",
+      "label": "Outer Harbour → Senado Square",
+      "values": {
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "Metered taxi",
+          "planningAssumption": "20-minute target includes pickup and pedestrian access; allow extra if queued.",
+          "transportOptions": [
+            {
+              "name": "Metered taxi",
+              "route": "Outer Harbour Ferry Terminal → nearest permitted Senado Square drop-off → walk into pedestrian streets",
+              "approxDurationMinutes": 20,
+              "approxCost": "Metered fare; confirm locally",
+              "notes": "Allow 15–25 min including taxi queue and pedestrian access; this is the default morning route."
+            },
+            {
+              "name": "Public bus",
+              "route": "Use a currently operating Outer Harbour → central Macau service with a practical Senado-area stop",
+              "approxCost": "MOP6/person exact cash; verify route",
+              "notes": "Budget alternative only if time allows; check the live route/stop and add waiting/walking. Do not depend on a free shuttle for this morning."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "2ca7817ce7c931a9aa2eab0e2adad7f192790db5883a05f5be3e549583d6f190"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "85fa40ad-24e9-4d34-b00f-e3a440b4e23f",
+      "label": "Historic streets → Ruins of St Paul's",
+      "values": {
+        "details": {
+          "timingType": "TARGET",
+          "dietaryNote": "No beef or beef broth.",
+          "recommended": "Walk",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "route": "St Dominic’s / Senado historic streets → bakeries and snack shops → Ruins of St Paul’s",
+              "approxDurationMinutes": 25,
+              "approxCost": "Free",
+              "notes": "Includes a relaxed historic-street stroll. No beef or beef broth; do not add the Monte Fort climb."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "0c87451c876896b53f4d727842af3a553c1b0973ad26788f61ea1d598175fbf2"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "85489255-dbae-473c-bb0c-10870078d9ac",
+      "label": "Historic centre → Macau Tower",
+      "values": {
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "Metered taxi",
+          "scheduleSensitive": true,
+          "transportOptions": [
+            {
+              "name": "Metered taxi",
+              "route": "Historic-centre lunch → walk to permitted taxi pickup → Macau Tower ticketing counter",
+              "approxDurationMinutes": 30,
+              "approxCost": "Metered fare; confirm locally",
+              "notes": "Use the full 13:00–13:30 allowance for pickup, queue and traffic. Protect 13:30 check-in for the unbooked 14:00 target; do not replace this with a slow bus/shuttle chain."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "766bb0a0d715f31cceb5d0fb4c6aac3b3fae1ce882b16033e0b7d459906d9612"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "d1aab2a5-0b62-4a86-b4f3-c98e019eec77",
+      "label": "Macau Tower → Treasure Hotel",
+      "values": {
+        "details": {
+          "costStatus": "Estimate only",
+          "fareForTwo": "Planning estimate MOP100–150 for the car; actual meter/traffic applies.",
+          "timingType": "TARGET",
+          "recommended": "Metered taxi",
+          "transportOptions": [
+            {
+              "name": "Metered taxi",
+              "route": "Macau Tower → Treasure Hotel opposite Macau International Airport",
+              "approxDurationMinutes": 30,
+              "approxCost": "MOP100–150/car estimate",
+              "notes": "20–30 min driving plus pickup/traffic; actual meter applies. Direct transfer protects hotel rest/snack and the evening."
+            },
+            {
+              "name": "Resort shuttle detour — only with spare time",
+              "route": "Macau Tower area → suitable resort connection → airport area → walk to Treasure",
+              "approxCost": "Free shuttle legs if operating; any access fare extra",
+              "notes": "Slower, unreserved and not a verified direct Tower–hotel service. Confirm the actual connection locally; not the timed default."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "592a8c494b76271837ba6f28ac155a5a91e49a7a5204d98478e1b228a388d70c"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "bfaf7c13-c1ab-571b-838f-a2550c3ce500",
+      "label": "Airport → Wynn Palace — free shuttle / LRT fallback",
+      "values": {
+        "details": {
+          "fallback": "Airport LRT towards Barra to Cotai East via MUST, then walk; taxi if faster.",
+          "timingType": "TARGET",
+          "recommended": "Airport → Wynn Palace free shuttle",
+          "operatingHours": "Published airport departures 09:05–21:00, every 20 min; reconfirm bay/service.",
+          "planningAssumption": "17:30 arrival is a target; 30–40 min door-to-door can use part of the Wynn visit.",
+          "transportOptions": [
+            {
+              "name": "Airport → Wynn Palace free shuttle",
+              "route": "Treasure → walk to airport hotel-shuttle area → signed Wynn airport departure → Wynn Palace",
+              "approxDurationMinutes": 40,
+              "approxCost": "Free shuttle",
+              "notes": "Published airport departures 09:05–21:00 every 20 min; confirm bay/service locally. Allow 30–40 min door-to-door. Leave hotel at 16:50 if queues; 17:30 Wynn arrival is a target, shortening the visit if needed."
+            },
+            {
+              "name": "LRT + walk",
+              "route": "Treasure → Airport LRT, towards Barra → MUST → Cotai East → walk to Wynn Palace",
+              "approxCost": "LRT single-journey fare; confirm distance band",
+              "notes": "Fallback with station/wait/entrance walks. Reverse towards Taipa Ferry Terminal for Airport. Do not assume the reverse Wynn shuttle loop is direct."
+            },
+            {
+              "name": "Taxi",
+              "route": "Treasure / airport area → Wynn Palace",
+              "approxCost": "Metered fare; confirm locally",
+              "notes": "Use if queues make it faster; allow pickup/traffic. Shuttle seats are not reserved."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "da5256dd0e8f11801864938e7e7f76afcbf76263c5950c35928862c93033a920"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "5458a1a7-cf0e-4700-8625-93101f69fed4",
+      "label": "Wynn Palace → Venetian",
+      "values": {
+        "details": {
+          "fallback": "Walk only with 25–35 minutes available; shorten Venetian browsing.",
+          "fareForTwo": "MOP40–70 planning estimate for the car",
+          "timingType": "TARGET",
+          "recommended": "Metered taxi",
+          "transportOptions": [
+            {
+              "name": "Metered taxi",
+              "route": "Wynn Palace → The Venetian Macao, choose the useful lobby/entrance",
+              "approxDurationMinutes": 20,
+              "approxCost": "MOP40–70/car estimate",
+              "notes": "10–15 min driving; allow 20 min with pickup. Actual meter/traffic applies."
+            },
+            {
+              "name": "Walk",
+              "route": "Wynn Palace → pedestrian route → correct Venetian entrance → interiors",
+              "approxDurationMinutes": 35,
+              "approxCost": "Free",
+              "notes": "25–35 min between actual entrances. Shorten Venetian browsing if walking; no current direct Wynn–Venetian free shuttle verified."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "19701587e4001e8b2bd59d823bcc207c402f39dbc2404dc60cdfd0d06f87a711"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "b9b06bb1-e6e5-5990-abf5-06c9e6839d36",
+      "label": "Walk Venetian → Parisian",
+      "values": {
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "Walk",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "route": "Venetian interiors → signed resort/mall pedestrian connections → Parisian Eiffel Tower exterior",
+              "approxDurationMinutes": 20,
+              "approxCost": "Free",
+              "notes": "Allow 15–20 min from the interior attractions to the right exit and onward. This transfer is separate from both resort visits."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "3bdd9830783403153bf6b62631542283086041d324f7f03c2ecdb103d2107f18"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "299a94db-3d1b-538a-b7e7-70d74e4e149f",
+      "label": "Walk Parisian → Londoner Crystal Palace",
+      "values": {
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "Walk",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "route": "Parisian Eiffel Tower exterior → signed pedestrian bridges/crossings → Londoner Crystal Palace lobby",
+              "approxDurationMinutes": 20,
+              "approxCost": "Free",
+              "notes": "Allow 15–20 min; aim to arrive 20:20 for the optional 20:30 indoor guard show. The outdoor facade show is separate at 21:30."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "3bdd9830783403153bf6b62631542283086041d324f7f03c2ecdb103d2107f18"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "b213726f-7398-487f-9c84-bc6cdfbf690f",
+      "label": "Londoner → Treasure Hotel",
+      "values": {
+        "details": {
+          "fallback": "Cotai East LRT towards Taipa Ferry Terminal → Airport via MUST, then walk; allow 30–45 min and recheck last train.",
+          "fareForTwo": "MOP50–80 planning estimate for the car",
+          "timingType": "TARGET",
+          "recommended": "Metered taxi",
+          "transportOptions": [
+            {
+              "name": "Metered taxi",
+              "route": "The Londoner → Treasure Hotel opposite Macau Airport",
+              "approxDurationMinutes": 30,
+              "approxCost": "MOP50–80/car estimate",
+              "notes": "About 10–15 min driving plus pickup; allow 30 min. Actual meter/traffic applies. Simplest late return."
+            },
+            {
+              "name": "LRT + walk",
+              "route": "Londoner → walk to Cotai East → LRT towards Taipa Ferry Terminal via MUST → Airport → walk to Treasure",
+              "approxDurationMinutes": 45,
+              "approxCost": "LRT single-journey fare; confirm distance band",
+              "notes": "Allow 30–45 min door-to-door; check station-specific last train. No late Wynn or Sands shuttle assumed (airport circuit ends 21:00; inter-resort circuit around 21:15)."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "26a9324bc32c6568f1600ed0ffe9428b3c9b6c4fd8518802269fc65af61900ee"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "5b3d1396-6ae9-58bb-b85b-ec676f4a44ea",
+      "label": "Breakfast, checkout, Treasure → Taipa Ferry",
+      "values": {
+        "details": {
+          "fallback": "Taxi; no early free shuttle assumed.",
+          "timingType": "TARGET",
+          "recommended": "Airport LRT + walk",
+          "transportOptions": [
+            {
+              "name": "Airport LRT + walk",
+              "route": "Treasure → Airport LRT → one stop towards Taipa Ferry Terminal → walk to terminal",
+              "approxDurationMinutes": 25,
+              "approxCost": "MOP6/person short-journey band; recheck",
+              "notes": "Transfer itself 20–25 min door-to-door including ticketing/wait/walk. Breakfast first; checkout around 07:45 and target terminal 08:10. The full 07:15–08:10 activity also includes breakfast/checkout: do not add 25 min again."
+            },
+            {
+              "name": "Taxi",
+              "route": "Treasure → Taipa Ferry Terminal",
+              "approxCost": "Metered fare; confirm locally",
+              "notes": "Backup if waiting or mobility makes LRT inconvenient; arrange a pickup that preserves 08:10 terminal arrival. No early free hotel shuttle assumed."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "f9869eb19b44f44fc6678b3fbb6f4b4e0c257e05ec11fca6e39ea0a0cd5c3732"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "72b60c75-d85d-447f-8695-b67378e1dd21",
+      "label": "Cotai Water Jet Taipa → Hong Kong Sheung Wan",
+      "values": {
+        "details": {
+          "booking": "required",
+          "costStatus": "Recheck actual fare when booking.",
+          "timingType": "TARGET",
+          "eventStatus": "PLACEHOLDER — not booked",
+          "planningAssumption": "Published timetable is not date-specific ticket availability.",
+          "recommended": "Cotai Water Jet 09:00 target",
+          "transportOptions": [
+            {
+              "name": "Cotai Water Jet 09:00 target",
+              "route": "Taipa Ferry Terminal → Sheung Wan, Monday 28 Dec; target arrival 10:00",
+              "approxDurationMinutes": 60,
+              "approxCost": "Reconfirm 28 Dec fare when booking",
+              "notes": "PLACEHOLDER — unbooked. Currently first published departure, not guaranteed inventory. Reach Taipa terminal 08:10 and follow actual boarding cutoff; Hong Kong immigration is the next row."
+            },
+            {
+              "name": "Later Taipa → Sheung Wan sailing",
+              "route": "Same terminals, next date-specific available Cotai Water Jet sailing",
+              "approxCost": "Check actual inventory / fare",
+              "notes": "Disruption fallback only; no invented departure time or reservation. Omit Choi Hung/Ping Shek first, then Sham Shui Po, protecting meals and the evening. Do not reinstate the old Sunday 23:00 return."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "686e42be923ced853a5b8e21f2540d37bc35caf43938b13191aebd73acffa2d7"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "b3950a17-4b6d-44ec-ad75-7446967b5a91",
+      "label": "Sheung Wan → Wong Tai Sin",
+      "values": {
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "MTR via Admiralty and Kowloon Tong",
+          "planningAssumption": "55-minute target, allow 50–60 minutes.",
+          "transportOptions": [
+            {
+              "name": "MTR via Admiralty and Kowloon Tong",
+              "route": "Ferry terminal → Sheung Wan MTR → Island Line towards Chai Wan to Admiralty → East Rail towards Lo Wu / Lok Ma Chau to Kowloon Tong → Kwun Tong Line towards Tiu Keng Leng to Wong Tai Sin",
+              "approxDurationMinutes": 55,
+              "approxCost": "Check current MTR fare; Octopus",
+              "notes": "Allow 50–60 min with terminal/station walks and interchanges. Direct to Kowloon with the overnight bag; no Hong Kong hotel detour or Central sightseeing."
+            },
+            {
+              "name": "Taxi",
+              "route": "Sheung Wan ferry terminal → nearest permitted Wong Tai Sin Temple drop-off",
+              "approxCost": "Current cross-harbour meter + tolls; quote locally",
+              "notes": "Fewer changes if tired; traffic may remove any time saving. Keep the lunch/evening buffers and cut optional photo stops if delayed."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "c0b00e7783f5340c53e454cb2de27bb63ab358d8ad2940484ee88209805e3711"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "f5913193-a548-489a-b4a9-ff36745cdbba",
+      "label": "Wong Tai Sin → Nan Lian Garden",
+      "values": {
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "MTR + walk",
+          "transportOptions": [
+            {
+              "name": "MTR + walk",
+              "route": "Wong Tai Sin → Kwun Tong Line towards Tiu Keng Leng → Diamond Hill (one stop) → walk to Nan Lian Garden",
+              "approxDurationMinutes": 20,
+              "approxCost": "Check current MTR fare; Octopus",
+              "notes": "Includes station walks and the walk to the garden; garden visit begins in the next row."
+            },
+            {
+              "name": "Taxi",
+              "route": "Wong Tai Sin Temple → nearest permitted Nan Lian Garden drop-off",
+              "approxCost": "Metered fare; confirm locally",
+              "notes": "Useful in heavy rain or for mobility; allow pickup and final walking. Do not assume it is faster than one MTR stop."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "013c816e3bd82b901973c1bc45225a922257de3f504ca94a8b17d63433ce0daa"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "9c6d4395-c3a6-432a-8407-5da77a7b7cb6",
+      "label": "Diamond Hill → Choi Hung (conditional)",
+      "values": {
+        "details": {
+          "timingType": "TARGET",
+          "priorityRule": "If late, omit Choi Hung/Ping Shek first, then Sham Shui Po; Diamond Hill → Mong Kok direct towards Whampoa.",
+          "recommended": "MTR + walk",
+          "transportOptions": [
+            {
+              "name": "MTR + walk",
+              "route": "Diamond Hill → Kwun Tong Line towards Tiu Keng Leng → Choi Hung (one stop) → permitted public photo areas",
+              "approxDurationMinutes": 15,
+              "approxCost": "Check current MTR fare; Octopus",
+              "notes": "Only if the estate stop is still practical and relevant public areas are open. Check access/works; no guaranteed rooftop."
+            },
+            {
+              "name": "Skip optional stops — direct MTR to Mong Kok",
+              "route": "Diamond Hill → Kwun Tong Line towards Whampoa → Mong Kok",
+              "approxCost": "Check current MTR fare; Octopus",
+              "notes": "Use if ferry/immigration/lunch timing slips: omit Choi Hung/Ping Shek first, then Sham Shui Po as needed. Replaces the optional route; do not add it to its travel time."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "1b0ce7a51e176848eccb51348403fc43fb390eabbbe1c54b878e20ffa7d67431"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "d630ce2d-8a87-4112-ae90-dfa9943c6ff6",
+      "label": "Choi Hung → Sham Shui Po (conditional)",
+      "values": {
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "MTR via Prince Edward",
+          "transportOptions": [
+            {
+              "name": "MTR via Prince Edward",
+              "route": "Choi Hung → Kwun Tong Line towards Whampoa → Prince Edward → Tsuen Wan Line towards Tsuen Wan → Sham Shui Po",
+              "approxDurationMinutes": 30,
+              "approxCost": "Check current MTR fare; Octopus",
+              "notes": "Includes walks and interchange. Conditional on retaining the optional browsing stop."
+            },
+            {
+              "name": "Skip Sham Shui Po — direct MTR to Mong Kok",
+              "route": "Choi Hung → Kwun Tong Line towards Whampoa → Mong Kok",
+              "approxCost": "Check current MTR fare; Octopus",
+              "notes": "Skip the interchange and browsing if running late. If still at Diamond Hill, take the same direction direct to Mong Kok; protects the established evening."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "ba2028d16e0f1897322f26f98304588840b3fbd4936ca9ef69a4f0dfb9c6b65c"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "25c99662-acf4-443c-96b5-b56c3b9a4c9b",
+      "label": "Sham Shui Po → Mong Kok",
+      "values": {
+        "details": {
+          "timingType": "TARGET",
+          "recommended": "MTR",
+          "transportOptions": [
+            {
+              "name": "MTR",
+              "route": "Sham Shui Po → Tsuen Wan Line towards Central → Mong Kok (two stops)",
+              "approxDurationMinutes": 15,
+              "approxCost": "Check current MTR fare; Octopus",
+              "notes": "Includes station walks; if optional stops were already cut, use the direct Diamond Hill → Mong Kok route instead."
+            },
+            {
+              "name": "Taxi",
+              "route": "Sham Shui Po → Mong Kok markets / practical drop-off",
+              "approxCost": "Metered fare; confirm locally",
+              "notes": "Fallback for tiredness or bags; road traffic/pickup may offset the short ride."
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "b8ec3bd6db6814b5c0f6aa7b68ba3689b1f426c2ac071813a466fbdea66cb5f7"
+      }
+    }
+  ]
+}
