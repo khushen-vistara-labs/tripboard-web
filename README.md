@@ -124,9 +124,9 @@ It updates only the current shared trip's Guide records and Bridal Tea House hot
 
 Today may derive one short contextual reminder from the same Guide data. For example, a Macau itinerary day shows the Macau essentials reminder with a link back to the Guide instead of duplicating the whole section.
 
-## Macau overnight update (28 October 2026)
+## Macau revision (29 October 2026)
 
-The live 26–28 December revision uses `data/updates/macau-2026-10-28.json` and a scoped Supabase updater. It preserves existing record IDs, reuses matching places, protects confirmed bookings and history, and never writes attachments, accounts, budgets or financial transactions. The reviewed baselines include newer live changes after the 27 October export; private snapshots and credentials are not committed.
+The current revision uses `data/updates/macau-2026-10-29.json` and a scoped Supabase updater. It supersedes the 28 October Macau route, preserves 26 December and Monday's post-ferry plan, reuses existing IDs, protects confirmed bookings and history, and never writes attachments, accounts, budgets or financial transactions. Live state was checked against the latest supplied 28 October export; private snapshots and credentials are not committed.
 
 ```bash
 pnpm update:macau                              # read-only plan against live state
@@ -135,9 +135,9 @@ pnpm update:macau --apply --backup=/tmp/tripboard-before-macau.json
 
 Use a fresh private backup path for an apply. Each edited field must still match its reviewed old value or already match the desired value. Any newer conflict stops preflight before writes; concurrent changes are protected by database version/timestamp comparisons (and edited-field comparisons for Guide notes). Server triggers manage versions. New IDs are stable; repeating a completed update is a no-op. An interrupted apply can be rerun after reviewing a fresh dry run. Deletions are limited to reviewed, uncompleted obsolete transfers and happen last.
 
-This update is independent of the older developer seed. Do not run the full seed/itinerary/Guide sync to apply it: those commands use older planning content and can replace live edits. Treasure and both ferries remain unbooked placeholders; the INR4,300 hotel amount is an estimate, never an expense.
+This update is independent of the older developer seed. Do not run the full seed/itinerary/Guide sync to apply it: those commands use older planning content and can replace live edits. Asia Boutique Inn, both ferries and bungy remain placeholders. The INR6,500 hotel quote and itinerary travel allowances are estimates, never expenses. The 17 changed travel cards use the existing rendered transport schema, with numeric scoped fares and exact matching recommendations. See [the revision report](docs/macau-update-2026-10-29.md).
 
-### Restore the revised route's transport boxes
+### Historical transport correction (28 October)
 
 The follow-up correction restores `details.transportOptions` and matching recommendations for 22 travel legs on 26–28 December. It retains the revised routes, all supporting notes, booking warnings and the existing transport-box styling.
 
@@ -146,7 +146,7 @@ pnpm update:macau:transport                    # read-only plan
 pnpm update:macau:transport --apply --backup=/tmp/tripboard-before-transport-boxes.json
 ```
 
-The original overnight manifest is historical; this correction supersedes its transport-details fields. Use the correction command to recheck/reapply it. Repeating it is a no-op, and an older manifest cannot silently overwrite the restored choices because reviewed-value checks reject that conflict.
+Both 28 October manifests and the header correction are historical. The default `update:macau` command applies/checks the 29 October revision. Do not apply the older correction over the new route; reviewed-value checks reject conflicting changes rather than reverting the revised data.
 
 ## Search the current section
 
