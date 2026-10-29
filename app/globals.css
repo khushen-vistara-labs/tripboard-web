@@ -5618,6 +5618,7 @@ html[data-theme="dark"] .preference-list input:checked + .toggle {
   font-weight: 800;
 }
 .guide-detail-toggle p {
+  overflow-wrap: anywhere;
   margin: 8px 0 0 !important;
   color: var(--ink);
   font-size: 13px !important;

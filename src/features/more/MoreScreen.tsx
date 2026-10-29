@@ -141,7 +141,8 @@ function ImportantNotes({ data }: { data: TripBoardData }) {
   const grouped = new Map<string, TripNote[]>(); for (const note of data.notes.filter(isGuideNote).sort((a, b) => a.sortOrder - b.sortOrder)) { const category = guideCategory(note.section); grouped.set(category, [...(grouped.get(category) ?? []), note]); }
   const copy = async (note: TripNote) => { const text = note.copyText || copyableFor(note.body); if (!text) return; await navigator.clipboard.writeText(text); setCopied(note.id); window.setTimeout(() => setCopied((id) => id === note.id ? null : id), 1800); };
   const copyAddress = async (address?: string) => { if (!address) return; await navigator.clipboard.writeText(address); setCopied("hotel-address"); window.setTimeout(() => setCopied((id) => id === "hotel-address" ? null : id), 1800); };
-  const hotel = data.places.find((place) => place.category?.toLowerCase().includes("hotel"));
+  const hotels = data.places.filter((place) => place.category?.toLowerCase().includes("hotel"));
+  const hotel = hotels.find((place) => data.bookings.some((booking) => booking.type === "HOTEL" && booking.status === "CONFIRMED" && [booking.title, booking.provider].some((name) => name?.trim().toLowerCase() === place.name.trim().toLowerCase()))) ?? hotels[0];
   const guideCategories = [...new Set(data.notes.filter(isGuideNote).map((note) => guideCategory(note.section)).filter(Boolean))].sort((a, b) => a.localeCompare(b));
   const category = (name: string) => grouped.get(name) ?? [];
   const phrases = category("Food & language");

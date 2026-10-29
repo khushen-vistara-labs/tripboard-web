@@ -13,8 +13,8 @@ function shortDayTheme(title: string) {
   return themes.slice(0, 3).join(" · ") || "Trip day";
 }
 
-function majorStops(items: ItineraryItem[]) {
-  const planned = items.filter((item) => item.status !== "SKIPPED").sort((a, b) => a.sequence - b.sequence);
+export function majorStops(items: ItineraryItem[]) {
+  const planned = items.filter((item) => item.status !== "SKIPPED" && !(item.priority === "OPTIONAL" && !item.plannedStartTime)).sort((a, b) => a.sequence - b.sequence);
   const activities = planned.filter((item) => item.type !== "transport");
   return (activities.length ? activities : planned) as OverviewStop[];
 }

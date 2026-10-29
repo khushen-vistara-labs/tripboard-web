@@ -1,0 +1,1915 @@
+{
+  "tripId": "73c7883d-cff1-4abd-a0b0-ec8a5a543e1f",
+  "timezone": "Asia/Hong_Kong",
+  "changes": [
+    {
+      "table": "places",
+      "id": "60d936b7-571c-5ef4-b24b-56460a705c02",
+      "label": "Asia Boutique Inn",
+      "values": {
+        "name": "Asia Boutique Inn",
+        "neighbourhood": "Taipa Village / Rua do Cunha",
+        "category": "Hotel",
+        "priority": "WANT",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Asia+Boutique+Inn+Macau",
+        "notes": "Proposed overnight 27–28 Dec, one room for two; INR6,500 user quote is unverified, not paid or booked. Retain the confirmed Hong Kong room and main luggage. Verify taxes, room type, cancellation, late-return access and early checkout. Listing says no breakfast: buy ahead for the 06:45 breakfast/checkout. Pai Kok is the relevant LRT station, not Airport.",
+        "address": "146 Rua Correia da Silva, Taipa, Macau"
+      },
+      "match": {
+        "name": "Asia Boutique Inn"
+      }
+    },
+    {
+      "table": "places",
+      "id": "0f33ab74-5525-5a7a-aab1-2c261ac368df",
+      "label": "Galaxy Macau",
+      "values": {
+        "name": "Galaxy Macau",
+        "neighbourhood": "Cotai / Pai Kok",
+        "category": "Resort / sightseeing",
+        "priority": "MUST",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Galaxy+Macau+Macau",
+        "notes": "Core 27 Dec 17:15–18:15 visit. Diamond Show and Crystal Lobby Show are TWO different lobbies; allow walking and waiting. Fortune Diamond is the same diamond attraction, not a third show. Public interiors and brief gaming-floor look if permitted; no gambling required.",
+        "opening_hours_notes": "Sunday: Diamond Lobby 10:00–00:00 every 30 min; Crystal Lobby 10:15–23:45 every 30 min. Reconfirm holiday operation."
+      },
+      "match": {
+        "name": "Galaxy Macau"
+      }
+    },
+    {
+      "table": "places",
+      "id": "dc822b6e-b4fc-5279-90d5-20e234556c66",
+      "label": "MGM Cotai",
+      "values": {
+        "name": "MGM Cotai",
+        "neighbourhood": "Cotai",
+        "category": "Resort / sightseeing",
+        "priority": "MUST",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=MGM+Cotai+Macau",
+        "notes": "Core 27 Dec 22:00–22:25 for Spectacle atrium/public interiors and a brief gaming-floor look if permitted. Different from MGM Macau on the Peninsula. No daytime show promised at this late visit.",
+        "opening_hours_notes": "Operator promotes Enchanted Garden Odyssey (flying ladybugs), 13:00 / 15:00 / 16:30 / 18:00. Dolphin/Sea Odyssey operation for 27 Dec remains unconfirmed; ask MGM before re-anchoring the evening."
+      },
+      "match": {
+        "name": "MGM Cotai"
+      }
+    },
+    {
+      "table": "places",
+      "id": "a35573f5-1879-562c-83e0-eabeb97dffc8",
+      "label": "Grand Lisboa",
+      "values": {
+        "name": "Grand Lisboa",
+        "neighbourhood": "Macau Peninsula",
+        "category": "Resort / sightseeing",
+        "priority": "WANT",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Grand+Lisboa+Macau",
+        "notes": "Lotus-shaped Grand Lisboa on the Peninsula, NOT Grand Lisboa Palace in Cotai. 27 Dec exterior stop with nearby original Hotel Lisboa before Macau Tower; a brief lobby peek only if comfortably ahead.",
+        "address": "Avenida de Lisboa, Macau Peninsula"
+      },
+      "match": {
+        "name": "Grand Lisboa"
+      }
+    },
+    {
+      "table": "places",
+      "id": "91ce0747-332e-5a7b-afcf-9b6b12a4f940",
+      "label": "Hotel Lisboa",
+      "values": {
+        "name": "Hotel Lisboa",
+        "neighbourhood": "Macau Peninsula",
+        "category": "Resort / sightseeing",
+        "priority": "WANT",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Hotel+Lisboa+Macau",
+        "notes": "Original Hotel Lisboa near the lotus-shaped Grand Lisboa. Combined 27 Dec exterior photo stop. Distinct from Grand Lisboa Palace in Cotai.",
+        "address": "Avenida de Lisboa, Macau Peninsula"
+      },
+      "match": {
+        "name": "Hotel Lisboa"
+      }
+    },
+    {
+      "table": "places",
+      "id": "7c8b606e-b1aa-5925-a91f-25a028ac80ad",
+      "label": "Grand Lisboa Palace",
+      "values": {
+        "name": "Grand Lisboa Palace",
+        "neighbourhood": "Cotai",
+        "category": "Resort / sightseeing",
+        "priority": "OPTIONAL",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Grand+Lisboa+Palace+Macau",
+        "notes": "Optional substitution only; not the lotus-shaped Grand Lisboa or original Hotel Lisboa on the Peninsula. No timed visit or promised free snacks."
+      },
+      "match": {
+        "name": "Grand Lisboa Palace"
+      }
+    },
+    {
+      "table": "places",
+      "id": "35fdb6d2-dc7d-56d1-b1cd-4c12c4a8d720",
+      "label": "Treasure Hotel",
+      "values": {
+        "priority": "OPTIONAL",
+        "notes": "Unused former proposal, retained for reference/history. The active 27–28 Dec overnight proposal is Asia Boutique Inn in Taipa Village. No current itinerary stay or booking is linked here."
+      },
+      "before": {
+        "priority": "e6dc3967ddca95b12f6a15d52f979559c6b99bef27f3ea452921efbf88f47299",
+        "notes": "81bbf30ea64ed46871e4cb23cdb04e97d7b12190008ffcf2b6235abad368c9f0"
+      }
+    },
+    {
+      "table": "places",
+      "id": "e884cfc2-0ca7-412c-b128-f035a839ba6d",
+      "label": "Wynn Palace",
+      "values": {
+        "expected_duration_minutes": 30,
+        "opening_hours_notes": "Performance Lake evening pattern 18:00–00:00 every 20 min; reconfirm festive operation.",
+        "notes": "27 Dec late-night fountain visit 22:45–23:15. No timed SkyCab queue. After 23:15 use taxi to Asia Boutique; no late village shuttle."
+      },
+      "before": {
+        "expected_duration_minutes": "1a6562590ef19d1045d06c4055742d38288e9e6dcd71ccde5cee80f1d5a774eb",
+        "opening_hours_notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "places",
+      "id": "c1d643b9-e30c-4ab7-b1ed-c384d0068704",
+      "label": "The Venetian Macao",
+      "values": {
+        "expected_duration_minutes": 40,
+        "notes": "27 Dec 18:35–19:15 canals, painted-sky interiors and optional 10–15 min gaming-floor look; paid dinner follows. No gondola/teamLab queue. No gambling required."
+      },
+      "before": {
+        "expected_duration_minutes": "39fa9ec190eee7b6f4dff1100d6343e10918d044c75eac8f9e9a2596173f80c9",
+        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "places",
+      "id": "310ff88f-2fe9-4d06-8f0a-09d1a26c56b7",
+      "label": "The Londoner Macao",
+      "values": {
+        "opening_hours_notes": "Facade: 19:30–23:30 hourly; target 21:30. Sunday indoor guard: 16:00 / 18:00 / 20:30, closed Mondays.",
+        "notes": "27 Dec interiors 20:55–21:45; be outside about 21:25 for optional 21:30 facade show. Default arrival is after the indoor 20:30 guard show; guard is an earlier-finish substitution only."
+      },
+      "before": {
+        "opening_hours_notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "bookings",
+      "id": "edce73c1-e39e-52ee-b4fd-97c1dc08b737",
+      "label": "Treasure Hotel — proposed 27–28 Dec overnight",
+      "values": {
+        "title": "Asia Boutique Inn",
+        "provider": "Asia Boutique Inn",
+        "location": "146 Rua Correia da Silva, Taipa, Macau",
+        "amount": 6500,
+        "ends_at": "2026-12-27T23:15:00+00:00",
+        "notes": "PLACEHOLDER — unbooked, unpaid extra night 27–28 Dec, one room for two. INR6,500 user quote is an unverified estimate, not a financial transaction. Verify all-in taxes, room type, cancellation, early checkout and late-return access before purchase. Listing says no breakfast: buy something the previous evening or verify an early-opening option. Planned check-in 27 Dec 16:30, checkout 28 Dec 07:15, UTC+8. Keep the confirmed Hong Kong room and main luggage. Asia is by Rua do Cunha/Pai Kok, not Airport station."
+      },
+      "before": {
+        "title": "2be6e67938e4ec5e3d01e022bec3edf967e396e85b0b68c5a6a4f9f1fa8026fd",
+        "provider": "2adb0739068edcfdc4798ca2a1dc4be9d7b63bc87744bd1e54965d4dc3739115",
+        "location": "85c95b4cba68a3e30fd2ef7ff34802e9a81b8e298eb3046da4a59fba7cbe7c73",
+        "amount": "8ca3a07a1bd9c2c44c917fc34a3189a7f5548d8cd8e3845cec562f758113c2cf",
+        "ends_at": "26c54407b9c4f2ebfcd787e158ad3181e993ceba56616560633e7514af015f37",
+        "notes": "91e0cecc28d456e56134c5cb0cdfc1215864c432079596f839f7a6d12cf3870f"
+      }
+    },
+    {
+      "table": "bookings",
+      "id": "50498174-2ff7-4131-b400-931425406afa",
+      "label": "TurboJET Sheung Wan → Macau Outer Harbour",
+      "values": {
+        "starts_at": "2026-12-26T23:30:00+00:00",
+        "ends_at": "2026-12-27T00:30:00+00:00",
+        "amount": 424,
+        "currency": "HKD",
+        "notes": "PLACEHOLDER — unbooked Sunday 27 Dec 07:30–08:30 UTC+8, Sheung Wan → Macau Outer Harbour, currently first published sailing. Current standard weekend daytime economy HKD212/person, HKD424/two; reconfirm December inventory and checkout fare. No October-expiring offer assumed. Licensed hotel taxi 05:55; target Shun Tak 06:40. Follow actual redemption/boarding cutoffs; carry both passports and valid Hong Kong re-entry documents."
+      },
+      "before": {
+        "starts_at": "f4302a732cdeb16e0574a10aa378098d46f54fb8eedf3ae6aa032190723d372b",
+        "ends_at": "766a319fdde2f898c431ab13c5b6fcb41a6bd8a029744b72526d1f7f08d908db",
+        "amount": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "notes": "5683fdd30f11e7b5f633fd25a13bf1b6d0c038d07fd29ea244bca7f33172a35e"
+      }
+    },
+    {
+      "table": "bookings",
+      "id": "a45361c5-d99d-4e3a-9973-25e315f520bd",
+      "label": "Cotai Water Jet Taipa → Hong Kong Sheung Wan",
+      "values": {
+        "amount": 384,
+        "currency": "MOP",
+        "notes": "PLACEHOLDER — unbooked Monday 28 Dec 09:00–10:00 UTC+8, Taipa → Sheung Wan. Current published first departure; December inventory unconfirmed. Current standard weekday daytime Cotai Class MOP192/person, MOP384/two; recheck actual checkout fare. Reach terminal about 08:10. Breakfast/checkout at Asia Boutique 06:45–07:15, then walk to Pai Kok LRT towards Taipa Ferry Terminal. Taxi around 07:40 if needed. Follow actual ticket cutoffs."
+      },
+      "before": {
+        "amount": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "notes": "8cc2a4364ec4f5ac1856d9ade9f7ee7e98fe0f45acdad46e0d98ceacabb0c304"
+      }
+    },
+    {
+      "table": "itinerary_days",
+      "id": "c7b97815-7fbe-44ab-b71d-3b699f45d42d",
+      "label": "Macau overnight • Historic centre • Bungy target • Treasure Hotel proposed • Wynn • Cotai",
+      "values": {
+        "title": "Macau • Heritage • Bungy • Cotai"
+      },
+      "before": {
+        "title": "0f9f260b08ae96ef0dc3cb7c34d32690b98d2b2a0289c1eeff68cf89881765cd"
+      }
+    },
+    {
+      "table": "itinerary_days",
+      "id": "8762dac6-a762-453b-a698-bd8a55ba7e3c",
+      "label": "Macau return • Wong Tai Sin • Nan Lian • Choi Hung + Ping Shek (WANT, conditional) • Sham Shui Po • Mong Kok • Temple Street",
+      "values": {
+        "title": "Macau Return • Temples • Kowloon Markets"
+      },
+      "before": {
+        "title": "d71f0df09454ca763efbcfd8f86da4e8a1630434ed60dba615c6b5aa1d8c48b3"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "0762506b-9d0b-4798-aa3b-c2faf25f6f4f",
+      "label": "MTR / taxi to Sheung Wan ferry terminal",
+      "values": {
+        "title": "Taxi to Sheung Wan",
+        "planned_start_time": "05:55:00",
+        "planned_end_time": "06:40:00",
+        "expected_duration_minutes": 45,
+        "transport_instructions": "Arrange a licensed pickup at the Hong Kong hotel the evening before; target Shun Tak Centre about 06:40. MTR is conditional on first-train verification, not the early default.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Arrange a licensed pickup at the Hong Kong hotel the evening before; target Shun Tak Centre about 06:40. MTR is conditional on first-train verification, not the early default.",
+          "transportOptions": [
+            {
+              "name": "Taxi",
+              "route": "Hong Kong hotel in Yau Ma Tei → Shun Tak Centre / Hong Kong Macau Ferry Terminal, Sheung Wan",
+              "approxDurationMinutes": 45,
+              "approxCost": "HKD180–260/car",
+              "notes": "Planning allowance: 30–45 min door-to-door, including access. Tunnel, booking and luggage charges vary; actual meter/traffic wins."
+            },
+            {
+              "name": "MTR — conditional",
+              "route": "Walk to Yau Ma Tei → Tsuen Wan Line towards Central → Island Line towards Kennedy Town to Sheung Wan → terminal access",
+              "approxDurationMinutes": 60,
+              "approxCost": "HKD15–25/person; HKD30–50/two",
+              "notes": "45–60 min including walks. Use only after verifying first trains can meet the 06:40 terminal target; not a co-equal early recommendation."
+            }
+          ],
+          "recommended": "Taxi",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "estimated_cost": 260,
+        "estimated_cost_currency": "HKD"
+      },
+      "before": {
+        "title": "79f4f8e632536b3707219e06595940069a70ddb4e50908cfed897c5c7a345649",
+        "planned_start_time": "57d4128397a8c2e9e5cb6c41480abf38ade3f11cb4f41eb9a98a81f27e3fe5ee",
+        "planned_end_time": "a3ab71df1fd1acfa96f5a3f226bea4b1aee868163bbad0e8d091ee522dd38c22",
+        "expected_duration_minutes": "1a6562590ef19d1045d06c4055742d38288e9e6dcd71ccde5cee80f1d5a774eb",
+        "transport_instructions": "2c5df54ff10a7c4a6eecc3686146adfa34dbe586b8292cc975599956e933d2f8",
+        "details": "72ed09ebcbcd0d23205c3e23adeb17dc85a8f8253a6417480d1b593d0fcf35d8",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "8bfb7f96-2b34-5d9f-8e4e-8eefa6b25d78",
+      "label": "Sheung Wan ferry check-in and breakfast buffer",
+      "values": {
+        "title": "Ferry formalities & breakfast",
+        "planned_start_time": "06:40:00",
+        "planned_end_time": "07:30:00",
+        "expected_duration_minutes": 50,
+        "transport_instructions": "Carry both passports, actual ticket and valid Hong Kong re-entry documents. Prebuy snacks; follow ticket redemption and boarding cutoffs.",
+        "details": {
+          "timingType": "BUFFER",
+          "quickNote": "Carry both passports, actual ticket and valid Hong Kong re-entry documents. Prebuy snacks; follow ticket redemption and boarding cutoffs.",
+          "carry": [
+            "Both passports",
+            "Actual ferry ticket",
+            "Valid Hong Kong re-entry documents",
+            "Prebought snacks"
+          ]
+        },
+        "item_type": "other"
+      },
+      "before": {
+        "title": "1cc9c82f648c70f19332b188b413a3e05bae985e0330a82f8cdfb66507f51a13",
+        "planned_start_time": "a3ab71df1fd1acfa96f5a3f226bea4b1aee868163bbad0e8d091ee522dd38c22",
+        "planned_end_time": "dcfa8e4a966a0ee2d81a5fcdd0a7e2f492464af12a376e6b9be28c3ec89bbbca",
+        "expected_duration_minutes": "02d20bbd7e394ad5999a4cebabac9619732c343a4cac99470c03e23ba2bdc2bc",
+        "transport_instructions": "e34f53e392163e7bfb16c8639a0a6a3c8de952dfb745de2471a3ab52b775c453",
+        "details": "8a4b032e5a902bf5321d7af7ebffce68b022455e8dedef133b14f43b244eea11",
+        "item_type": "b44b75350f7378905381fb7760c56076471463c57df3db3618811e1fe4149a91"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "119d30f1-3963-4981-91be-1580a0e32c98",
+      "label": "TurboJET Sheung Wan → Macau Outer Harbour",
+      "values": {
+        "title": "TurboJET to Outer Harbour",
+        "planned_start_time": "07:30:00",
+        "planned_end_time": "08:30:00",
+        "transport_instructions": "Unbooked 07:30 target, currently first published sailing. Verify 27 Dec inventory; Outer Harbour arrival is required for this route.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Unbooked 07:30 target, currently first published sailing. Verify 27 Dec inventory; Outer Harbour arrival is required for this route.",
+          "booking": "required",
+          "eventStatus": "PLACEHOLDER — not booked",
+          "farePerPerson": "HKD212 published standard weekend daytime economy",
+          "fareForTwo": "HKD424/two",
+          "costStatus": "Published fare; December inventory/checkout fare unconfirmed",
+          "transportOptions": [
+            {
+              "name": "TurboJET 07:30",
+              "route": "Sheung Wan → Macau Outer Harbour, 27 Dec 07:30–08:30",
+              "approxDurationMinutes": 60,
+              "approxCost": "HKD212/person; HKD424/two",
+              "notes": "Current published weekend daytime economy fare; reconfirm December tickets/fare. Formalities and arrival are separate buffers, not added crossing minutes."
+            },
+            {
+              "name": "TurboJET 08:30 — later fallback",
+              "route": "Same terminals, 27 Dec 08:30 departure if actually available",
+              "approxDurationMinutes": 60,
+              "approxCost": "HKD212/person; HKD424/two",
+              "notes": "Shorten Wharf/morning plan and recalculate timings if chosen. Alternative only, not an additional scheduled sailing; no October-expiring promotion assumed."
+            }
+          ],
+          "recommended": "TurboJET 07:30",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "estimated_cost": 424,
+        "estimated_cost_currency": "HKD"
+      },
+      "before": {
+        "title": "effb15e7cf863b5110c910644bc5749f9cab0b963625099e29c4593996a1f2bc",
+        "planned_start_time": "dcfa8e4a966a0ee2d81a5fcdd0a7e2f492464af12a376e6b9be28c3ec89bbbca",
+        "planned_end_time": "e7c15fb2a945377b26262e7c3b23b19cc15a917ee810b812dc71958850186c4c",
+        "transport_instructions": "7252da739022c4509fd4060fe917e6914a121eb761f1af54406731aa0a4e7f91",
+        "details": "3aadd1a07d03e92ff76586105e4ca41371a6883cbd398e868bc329a308857a6b",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "910bd1ee-f5f0-423c-bb80-036547b008b3",
+      "label": "Macau immigration and arrival buffer",
+      "values": {
+        "title": "Macau arrival formalities",
+        "planned_start_time": "08:30:00",
+        "planned_end_time": "09:00:00",
+        "transport_instructions": "Carry both passports/re-entry documents; verify data for BOTH 27 and 28 Dec. Small overnight bag only; main luggage stays in the retained Hong Kong room.",
+        "details": {
+          "timingType": "BUFFER",
+          "quickNote": "Carry both passports/re-entry documents; verify data for BOTH 27 and 28 Dec. Small overnight bag only; main luggage stays in the retained Hong Kong room.",
+          "carry": [
+            "Both passports",
+            "Hong Kong re-entry documents",
+            "Small overnight bag",
+            "MOP cash"
+          ]
+        }
+      },
+      "before": {
+        "title": "36be77c0a277248689290616e2635c46357133df38edf823f33a3eae8d59fecd",
+        "planned_start_time": "e7c15fb2a945377b26262e7c3b23b19cc15a917ee810b812dc71958850186c4c",
+        "planned_end_time": "f35c2041529bcdb3c1db34f2acf533833c066d521d12264f4a0cc2b53a5095be",
+        "transport_instructions": "ac71bb7bba4f893753e6dd7bf218a46cc386d015247cda329aee5b41cffbdf3e",
+        "details": "8a6fef590b635e0b200b423741c6768bfd1d304d60a5359cf3439c193eacb648"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "0cc98a5a-1dd3-4f65-8aa0-1326da89cf26",
+      "label": "Walk to Fisherman's Wharf",
+      "values": {
+        "title": "Walk to Fisherman's Wharf",
+        "date": "2026-12-27",
+        "itinerary_day_id": "c7b97815-7fbe-44ab-b71d-3b699f45d42d",
+        "planned_start_time": "09:00:00",
+        "planned_end_time": "09:15:00",
+        "expected_duration_minutes": 15,
+        "sequence": 50,
+        "transport_instructions": "Walk beyond the nearest entrance to the Roman-style waterfront/photo area.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Walk beyond the nearest entrance to the Roman-style waterfront/photo area.",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "route": "Outer Harbour terminal → Fisherman’s Wharf Roman Amphitheatre / waterfront",
+              "approxDurationMinutes": 15,
+              "approxCost": "MOP0 (Free)",
+              "notes": "10–15 min to the desired photo area; no shuttle needed."
+            }
+          ],
+          "recommended": "Walk",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "recommended_departure_time": null,
+        "place_id": "3f984dd8-a115-43e3-b3f0-acf96509ad4a",
+        "estimated_cost": 0,
+        "estimated_cost_currency": "MOP",
+        "item_type": "transport",
+        "priority": "MUST",
+        "status": "PLANNED"
+      },
+      "match": {
+        "title": "Walk to Fisherman's Wharf",
+        "date": "2026-12-27"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "6b337c37-c089-4950-8765-f26505cd3948",
+      "label": "Optional alternative — Fisherman's Wharf (outside core route)",
+      "values": {
+        "title": "Fisherman's Wharf",
+        "planned_start_time": "09:15:00",
+        "planned_end_time": "09:50:00",
+        "expected_duration_minutes": 35,
+        "sequence": 60,
+        "transport_instructions": "Roman arches/amphitheatre exterior and waterfront photos. Shorten if immigration is slow; do not wait for shops or restaurants to open.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Roman arches/amphitheatre exterior and waterfront photos. Shorten if immigration is slow; do not wait for shops or restaurants to open.",
+          "attractionCost": "MOP0 (Free)",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "priority": "WANT",
+        "estimated_cost": 0,
+        "estimated_cost_currency": "MOP"
+      },
+      "before": {
+        "title": "94017c48259204ac431264af808c3fb3b3c44642b1b25f9297cebc226094a6af",
+        "planned_start_time": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "planned_end_time": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "expected_duration_minutes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "sequence": "7a5df5ffa0dec2228d90b8d0a0f1b0767b748b0a41314c123075b8289e4e053f",
+        "transport_instructions": "601be6949d3bf4fd822db6b9bd0755571c147f4eb6fa1491c0d8f2ef0324da36",
+        "details": "8b088d3d76a128d90a8e63ab1e1710797dd6669a7f787d2f9585335bf36e6ec3",
+        "priority": "8089733e7468dc4a103bec9ba2cd8164358492742dcf78409e13144e30ff840b",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "a36cbe26-db33-43ef-8a7f-d7db69a49a88",
+      "label": "Outer Harbour → Senado Square",
+      "values": {
+        "title": "Wharf → Senado",
+        "planned_start_time": "09:50:00",
+        "planned_end_time": "10:15:00",
+        "expected_duration_minutes": 25,
+        "sequence": 70,
+        "transport_instructions": "Taxi to the nearest permitted pedestrian-zone drop-off; protect the historic-centre morning. No unverified shuttle or guessed bus route.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Taxi to the nearest permitted pedestrian-zone drop-off; protect the historic-centre morning. No unverified shuttle or guessed bus route.",
+          "transportOptions": [
+            {
+              "name": "Taxi",
+              "route": "Fisherman’s Wharf → nearest permitted Senado Square drop-off → pedestrian access",
+              "approxDurationMinutes": 25,
+              "approxCost": "MOP45–75/car",
+              "notes": "20–25 min planning allowance including pickup/final walk; meter/traffic wins."
+            },
+            {
+              "name": "Walk",
+              "route": "Fisherman’s Wharf → historic-centre streets → Senado Square",
+              "approxDurationMinutes": 50,
+              "approxCost": "MOP0 (Free)",
+              "notes": "40–50 min planning estimate. Slower alternative requiring retiming the morning; not within the default 25-minute transfer."
+            }
+          ],
+          "recommended": "Taxi",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "estimated_cost": 75,
+        "estimated_cost_currency": "MOP"
+      },
+      "before": {
+        "title": "82d4fd9199b8637ea9ac777c039210b7e092a2d751d8103d9a57425f6a354b0e",
+        "planned_start_time": "f35c2041529bcdb3c1db34f2acf533833c066d521d12264f4a0cc2b53a5095be",
+        "planned_end_time": "0b9b0b17e1180f400c7849e2aa805108f3085938168f99b5d21b0fcf6df990de",
+        "expected_duration_minutes": "f5ca38f748a1d6eaf726b8a42fb575c3c71f1864a8143301782de13da2d9202b",
+        "sequence": "1a6562590ef19d1045d06c4055742d38288e9e6dcd71ccde5cee80f1d5a774eb",
+        "transport_instructions": "18a9b87e1ce81c851c83b2d8c512028ad1761c387b50e223091a8bc53fc3b029",
+        "details": "9fe30f714f6b5cc22a514af4e4fb15154b32caf355ea8ae98998627ba1f7582b",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "0bc818c7-8998-41e9-8ecb-1d4eaf026669",
+      "label": "Senado Square",
+      "values": {
+        "planned_start_time": "10:15:00",
+        "planned_end_time": "10:40:00",
+        "sequence": 80,
+        "transport_instructions": "Historic square and pedestrian streets.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Historic square and pedestrian streets.",
+          "attractionCost": "MOP0 (Free)",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "estimated_cost": 0,
+        "estimated_cost_currency": "MOP"
+      },
+      "before": {
+        "planned_start_time": "0b9b0b17e1180f400c7849e2aa805108f3085938168f99b5d21b0fcf6df990de",
+        "planned_end_time": "b61c1256e8fa53514172a3d5f6bdf0050a1fa6d2c9480b300dbae378455e20e6",
+        "sequence": "39fa9ec190eee7b6f4dff1100d6343e10918d044c75eac8f9e9a2596173f80c9",
+        "transport_instructions": "9c9c4c331846dad88fc0d2689ae34fed0a9593e5644c196da887517d835dec05",
+        "details": "50de9097bff91f4fbeccbd593dc1cdb55f8888be939c5f90c41b5b724ecdb1f1",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "61dab2e7-ccc0-4118-87f4-da4398defaef",
+      "label": "St Dominic's Church / square",
+      "values": {
+        "title": "St Dominic’s Church",
+        "planned_start_time": "10:40:00",
+        "planned_end_time": "10:55:00",
+        "expected_duration_minutes": 15,
+        "sequence": 90,
+        "transport_instructions": "Sunday worship may limit interior access; enjoy the exterior/square if services prevent entry.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Sunday worship may limit interior access; enjoy the exterior/square if services prevent entry.",
+          "attractionCost": "MOP0 (Free)",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "estimated_cost": 0,
+        "estimated_cost_currency": "MOP"
+      },
+      "before": {
+        "title": "f30217035387b602b70c5c35282f9943cf54c360bd8c9d5af380c0cca666861b",
+        "planned_start_time": "b61c1256e8fa53514172a3d5f6bdf0050a1fa6d2c9480b300dbae378455e20e6",
+        "planned_end_time": "746e925226974ebc5b62a26a26f889157fc9731ac4961b452311c56850866b44",
+        "expected_duration_minutes": "f5ca38f748a1d6eaf726b8a42fb575c3c71f1864a8143301782de13da2d9202b",
+        "sequence": "ff5a1ae012afa5d4c889c50ad427aaf545d31a4fac04ffc1c4d03d403ba4250a",
+        "transport_instructions": "1e07e4bebd3265f389526a734cdc393a7693c924df284ce38a0cc3b408a13391",
+        "details": "50de9097bff91f4fbeccbd593dc1cdb55f8888be939c5f90c41b5b724ecdb1f1",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "85fa40ad-24e9-4d34-b00f-e3a440b4e23f",
+      "label": "Historic streets → Ruins of St Paul's",
+      "values": {
+        "title": "Walk towards St Paul’s",
+        "planned_start_time": "10:55:00",
+        "planned_end_time": "11:15:00",
+        "expected_duration_minutes": 20,
+        "sequence": 100,
+        "transport_instructions": "Historic snack/bakery streets; no beef or beef broth.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Historic snack/bakery streets; no beef or beef broth.",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "route": "St Dominic’s / Senado streets → snack/bakery streets → Ruins of St Paul’s",
+              "approxDurationMinutes": 20,
+              "approxCost": "MOP0 (Free)",
+              "notes": "15–20 min pedestrian sightseeing allowance; no taxi needed."
+            }
+          ],
+          "recommended": "Walk",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "estimated_cost": 0,
+        "estimated_cost_currency": "MOP"
+      },
+      "before": {
+        "title": "90a59d3a6a3c8aac36180ab20fe9bf3d9d465ca461b57c223729293c30ba7dfb",
+        "planned_start_time": "746e925226974ebc5b62a26a26f889157fc9731ac4961b452311c56850866b44",
+        "planned_end_time": "b4d648158b75d120d3563f6552fd084280fb1b3b5a890f614be4b8c5ce7c6fc7",
+        "expected_duration_minutes": "b7a56873cd771f2c446d369b649430b65a756ba278ff97ec81bb6f55b2e73569",
+        "sequence": "48449a14a4ff7d79bb7a1b6f3d488eba397c36ef25634c111b49baf362511afc",
+        "transport_instructions": "f8921ec220d3e523317f36ae438ed61fe4dcb4ba889d2dab290540214aada8b6",
+        "details": "5deb93b28ea0de809d6adfbb27da238b6862529ea5d5c0a5ce5639af709c2524",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "ab307caf-eb3c-4288-bea1-1fe447f96a6c",
+      "label": "Ruins of St Paul's",
+      "values": {
+        "title": "Ruins of St Paul’s",
+        "planned_start_time": "11:15:00",
+        "planned_end_time": "11:50:00",
+        "expected_duration_minutes": 35,
+        "sequence": 110,
+        "transport_instructions": "Photos and historic streets; no Monte Fort climb.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Photos and historic streets; no Monte Fort climb.",
+          "attractionCost": "MOP0 (Free)",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "estimated_cost": 0,
+        "estimated_cost_currency": "MOP"
+      },
+      "before": {
+        "title": "61da5b327dd3536acd9a32276194d4e9268d8478400ab78080228d7778d8d8bb",
+        "planned_start_time": "b4d648158b75d120d3563f6552fd084280fb1b3b5a890f614be4b8c5ce7c6fc7",
+        "planned_end_time": "02312adb2b8dd5f79a7a1426699a040fd5393f5a835c1bba97b1ed5a0b5544f3",
+        "expected_duration_minutes": "d59eced1ded07f84c145592f65bdf854358e009c5cd705f5215bf18697fed103",
+        "sequence": "69f59c273b6e669ac32a6dd5e1b2cb63333d8b004f9696447aee2d422ce63763",
+        "transport_instructions": "6d51fdc73db08330b5d80486117c719717d401d2e743d1b0562acfce13db5de8",
+        "details": "50de9097bff91f4fbeccbd593dc1cdb55f8888be939c5f90c41b5b724ecdb1f1",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "0fb29cd3-3faa-40ca-8de0-740ec8de088f",
+      "label": "Macanese / Portuguese lunch",
+      "values": {
+        "title": "Lunch near Senado",
+        "planned_start_time": "11:50:00",
+        "planned_end_time": "12:35:00",
+        "expected_duration_minutes": 45,
+        "sequence": 120,
+        "transport_instructions": "Allow a short walk back towards Senado and a simple paid lunch. No beef/broth; eat moderately before bungy and follow operator guidance.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Allow a short walk back towards Senado and a simple paid lunch. No beef/broth; eat moderately before bungy and follow operator guidance.",
+          "dietaryNote": "No beef or beef broth.",
+          "planningAssumption": "This block includes the short return walk and lunch; do not add another transfer duration."
+        }
+      },
+      "before": {
+        "title": "913eb30e8828a222213cd8860e110a1415cc053655b8957c1b074d13c86780af",
+        "planned_start_time": "02312adb2b8dd5f79a7a1426699a040fd5393f5a835c1bba97b1ed5a0b5544f3",
+        "planned_end_time": "4a994ff8b54a7bef04d70f896c87216637de442e00fe242c833598274128376f",
+        "expected_duration_minutes": "1a6562590ef19d1045d06c4055742d38288e9e6dcd71ccde5cee80f1d5a774eb",
+        "sequence": "ad57366865126e55649ecb23ae1d48887544976efea46a48eb5d85a6eeb4d306",
+        "transport_instructions": "04975dc3d55278a5b34c940231123b2f7fa1773aca53461ab35ca3c38c4dd503",
+        "details": "78cf633bd68328b4ad53f4f099463a460b932647a7ab766b6dea7ef25e54a2c0"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "02be8b9f-01b4-55fa-be68-76e1f0ae8a92",
+      "label": "Walk to Lisboa area",
+      "values": {
+        "title": "Walk to Lisboa area",
+        "date": "2026-12-27",
+        "itinerary_day_id": "c7b97815-7fbe-44ab-b71d-3b699f45d42d",
+        "planned_start_time": "12:35:00",
+        "planned_end_time": "12:50:00",
+        "expected_duration_minutes": 15,
+        "sequence": 130,
+        "transport_instructions": "Walk east/southeast from Senado via main city-centre streets.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Walk east/southeast from Senado via main city-centre streets.",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "route": "Senado → main central streets → Grand Lisboa / original Hotel Lisboa area",
+              "approxDurationMinutes": 15,
+              "approxCost": "MOP0 (Free)",
+              "notes": "10–20 min planning allowance; taxi unnecessary for this short sightseeing route."
+            }
+          ],
+          "recommended": "Walk",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "recommended_departure_time": null,
+        "place_id": "a35573f5-1879-562c-83e0-eabeb97dffc8",
+        "estimated_cost": 0,
+        "estimated_cost_currency": "MOP",
+        "item_type": "transport",
+        "priority": "MUST",
+        "status": "PLANNED"
+      },
+      "match": {
+        "title": "Walk to Lisboa area",
+        "date": "2026-12-27"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "27bf2136-7a78-57e4-b225-b770f7a8d4dd",
+      "label": "Grand Lisboa & Lisboa",
+      "values": {
+        "title": "Grand Lisboa & Lisboa",
+        "date": "2026-12-27",
+        "itinerary_day_id": "c7b97815-7fbe-44ab-b71d-3b699f45d42d",
+        "planned_start_time": "12:50:00",
+        "planned_end_time": "13:05:00",
+        "expected_duration_minutes": 15,
+        "sequence": 140,
+        "transport_instructions": "Exterior photos of lotus-shaped Grand Lisboa and nearby original Hotel Lisboa on the Peninsula. Not Grand Lisboa Palace in Cotai. Lobby peek only if comfortably ahead; shorten if needed to protect 13:30 check-in.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Exterior photos of lotus-shaped Grand Lisboa and nearby original Hotel Lisboa on the Peninsula. Not Grand Lisboa Palace in Cotai. Lobby peek only if comfortably ahead; shorten if needed to protect 13:30 check-in.",
+          "attractionCost": "MOP0 for exterior sightseeing",
+          "priorityRule": "Shorten the exterior stop if delayed; bungy check-in takes precedence.",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "recommended_departure_time": null,
+        "item_type": "attraction",
+        "place_id": "a35573f5-1879-562c-83e0-eabeb97dffc8",
+        "priority": "WANT",
+        "estimated_cost": 0,
+        "estimated_cost_currency": "MOP",
+        "status": "PLANNED"
+      },
+      "match": {
+        "title": "Grand Lisboa & Lisboa",
+        "date": "2026-12-27"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "85489255-dbae-473c-bb0c-10870078d9ac",
+      "label": "Historic centre → Macau Tower",
+      "values": {
+        "title": "Lisboa → Macau Tower",
+        "planned_start_time": "13:05:00",
+        "expected_duration_minutes": 25,
+        "sequence": 150,
+        "transport_instructions": "Protect the 13:30 ticketing-counter check-in. Shorten Lisboa photos if delayed.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Protect the 13:30 ticketing-counter check-in. Shorten Lisboa photos if delayed.",
+          "transportOptions": [
+            {
+              "name": "Taxi",
+              "route": "Grand Lisboa / original Lisboa area → Macau Tower ticketing access",
+              "approxDurationMinutes": 25,
+              "approxCost": "MOP35–60/car",
+              "notes": "Full planning allowance includes pickup, traffic and the final walk."
+            },
+            {
+              "name": "Walk",
+              "route": "Lisboa area → Macau Tower",
+              "approxDurationMinutes": 45,
+              "approxCost": "MOP0 (Free)",
+              "notes": "35–45 min planning estimate; not recommended near the 13:30 check-in deadline. Requires an earlier departure."
+            }
+          ],
+          "recommended": "Taxi",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "estimated_cost": 60,
+        "estimated_cost_currency": "MOP"
+      },
+      "before": {
+        "title": "74c999b89feb310e5bdcb20dfbf2a56a076357b29ccd47184387bb42aebec3b2",
+        "planned_start_time": "4a994ff8b54a7bef04d70f896c87216637de442e00fe242c833598274128376f",
+        "expected_duration_minutes": "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
+        "sequence": "9bdb2af6799204a299c603994b8e400e4b1fd625efdb74066cc869fee42c9df3",
+        "transport_instructions": "cb3d109fea339cfb71176f8c28520703f5fe99e3e07319737ae67f0bb02c74c6",
+        "details": "23aa42defb987294cf54ac94013ee31d9e8ad02565ace026d819a903423b085a",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "149f6251-d038-47ae-a2c0-eae5d94b8f84",
+      "label": "Macau Tower check-in, Bungy and partner viewing",
+      "values": {
+        "title": "Macau Tower bungy",
+        "sequence": 160,
+        "transport_instructions": "PLACEHOLDER: target 14:00 jump; check in at 13:30, 30 minutes early. Processing, waiting and finish vary. Confirm Meghana’s spectator/observation ticket and permitted deck; no guaranteed finish.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "PLACEHOLDER: target 14:00 jump; check in at 13:30, 30 minutes early. Processing, waiting and finish vary. Confirm Meghana’s spectator/observation ticket and permitted deck; no guaranteed finish.",
+          "booking": "required",
+          "eventStatus": "PLACEHOLDER — not booked",
+          "carry": [
+            "Passports / required ID",
+            "Actual confirmation once booked",
+            "Comfortable clothing"
+          ],
+          "planningAssumption": "16:00 is an estimated finish; shorten optional browsing/shows if delayed."
+        }
+      },
+      "before": {
+        "title": "dab06bddbde14737140cad6a1683d50534784c253214782ac5b5ca57b92416ed",
+        "sequence": "2abaca4911e68fa9bfbf3482ee797fd5b9045b841fdff7253557c5fe15de6477",
+        "transport_instructions": "7b8ed2d10e99203459b2309f383697c6bf587fd05d7e1238cd75e255f3c01814",
+        "details": "1f74b237f79cacb3c194e9f358570cfc11ab2a2e32632a93bdcc12fa26a3c661"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "d1aab2a5-0b62-4a86-b4f3-c98e019eec77",
+      "label": "Macau Tower → Treasure Hotel",
+      "values": {
+        "title": "Tower → Asia Boutique",
+        "sequence": 170,
+        "transport_instructions": "Taxi to Asia Boutique Inn, 146 Rua Correia da Silva, Taipa. Use the nearest legal drop-off if street access is restricted; no airport detour.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Taxi to Asia Boutique Inn, 146 Rua Correia da Silva, Taipa. Use the nearest legal drop-off if street access is restricted; no airport detour.",
+          "transportOptions": [
+            {
+              "name": "Taxi",
+              "route": "Macau Tower → Asia Boutique Inn / nearest legal Taipa Village drop-off → hotel",
+              "approxDurationMinutes": 30,
+              "approxCost": "MOP70–110/car",
+              "notes": "20–30 min planning estimate; meter/queue/traffic wins."
+            },
+            {
+              "name": "LRT via Barra + walk",
+              "route": "Tower → reach Barra LRT → train towards Taipa Ferry Terminal to Pai Kok → walk to Asia Boutique",
+              "approxDurationMinutes": 60,
+              "approxCost": "MOP8–12/person; MOP16–24/two",
+              "notes": "45–60 min door-to-door including reaching Barra, ticket/wait and hotel walks. Verify token fare band in selector. Indirect and slower; retime hotel/evening if chosen. No direct hotel shuttle verified."
+            }
+          ],
+          "recommended": "Taxi",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "place_id": "60d936b7-571c-5ef4-b24b-56460a705c02",
+        "estimated_cost": 110,
+        "estimated_cost_currency": "MOP"
+      },
+      "before": {
+        "title": "3dc0d74a6f812c09abed13f81184a305228d77dfc7a2b231b22a7f48e08a49f3",
+        "sequence": "38d66d9692ac590000a91b03a88da1c88d51fab2b78f63171f553ecc551a0c6f",
+        "transport_instructions": "61a35532bf5a25c031630edae0dd54c50735839eef1138124a576becc8358462",
+        "details": "7c089c5aa0c4d08c867be9bd555fb0d00b595598168bc871a4a87b9f2db8831b",
+        "place_id": "26aaaedede26c515437db1fdb525d6e9b856912407063daab6b4fb1d7f04b31b",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "0bd1f373-093c-506a-8266-f1780a68dae5",
+      "label": "Treasure Hotel check-in, rest and snack — proposed",
+      "values": {
+        "title": "Asia Boutique Inn check-in",
+        "sequence": 180,
+        "transport_instructions": "Proposed, not booked or paid. One room for two, INR6,500 user quote, unverified. Verify taxes, room type, cancellation, early checkout and late-return access. Rest/snack if wanted; no separate long food crawl. Keep Hong Kong room/main luggage.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Proposed, not booked or paid. One room for two, INR6,500 user quote, unverified. Verify taxes, room type, cancellation, early checkout and late-return access. Rest/snack if wanted; no separate long food crawl. Keep Hong Kong room/main luggage.",
+          "booking": "required",
+          "eventStatus": "PLACEHOLDER — proposed stay",
+          "attractionCost": "INR6,500 estimated room for two; not paid",
+          "costStatus": "Unverified user hotel quote; no financial event",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "place_id": "60d936b7-571c-5ef4-b24b-56460a705c02",
+        "estimated_cost": 6500,
+        "estimated_cost_currency": "INR"
+      },
+      "before": {
+        "title": "2a0dbcffed8009878607a8351fa899c838595563e41a0c10d7eb841975fe0f95",
+        "sequence": "dbae772db29058a88f9bd830e957c695347c41b6162a7eb9a9ea13def34be56b",
+        "transport_instructions": "33157f1542b50fed13f5ac3a768475e76ae35a118bde46c38dcc4120db99079b",
+        "details": "7315b383d5fb145d8ff38f0025621066466ba3ed39529575b3774904956a6624",
+        "place_id": "26aaaedede26c515437db1fdb525d6e9b856912407063daab6b4fb1d7f04b31b",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "bfaf7c13-c1ab-571b-838f-a2550c3ce500",
+      "label": "Airport → Wynn Palace — free shuttle / LRT fallback",
+      "values": {
+        "title": "Asia Boutique → Galaxy",
+        "planned_end_time": "17:15:00",
+        "expected_duration_minutes": 15,
+        "sequence": 190,
+        "transport_instructions": "Use Taipa Village/Pai Kok pedestrian connections and the correct show-lobby entrance. Allow more internal walking if needed; the Galaxy hour includes show waits.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Use Taipa Village/Pai Kok pedestrian connections and the correct show-lobby entrance. Allow more internal walking if needed; the Galaxy hour includes show waits.",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "route": "Asia Boutique → Taipa Village / Pai Kok pedestrian connection → Galaxy show lobby",
+              "approxDurationMinutes": 25,
+              "approxCost": "MOP0 (Free)",
+              "notes": "15–25 min door-to-door to the correct lobby. 17:15 is a target; if access takes longer, use the Galaxy visit’s waiting margin."
+            },
+            {
+              "name": "Taxi",
+              "route": "Asia Boutique / nearest legal village pickup → Galaxy show-lobby access",
+              "approxDurationMinutes": 20,
+              "approxCost": "MOP25–45/car",
+              "notes": "10–20 min with pickup and entrance walks. Useful if tired, often not faster; confirm the correct lobby with staff."
+            }
+          ],
+          "recommended": "Walk",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "place_id": "0f33ab74-5525-5a7a-aab1-2c261ac368df",
+        "estimated_cost": 0,
+        "estimated_cost_currency": "MOP"
+      },
+      "before": {
+        "title": "dd4ffe0e736de2ee850fa588e6f281ddcf4b01483377fe93f627eba7bfe03502",
+        "planned_end_time": "bc9fdfb0e71f625a490ce8b54e53edfb77f771b6b48300ff7c8320c7328a3104",
+        "expected_duration_minutes": "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
+        "sequence": "9ae2bdd7beedc2e766c6b76585530e16925115707dc7a06ab5ee4aa2776b2c7b",
+        "transport_instructions": "1389605b8742e35bea16060db40b2ff84516fc026abeb77ff9ed45e6954e4105",
+        "details": "68f5e6c431986ce2bebcea4822615b63710d7d4849b117802a0a5330fa607932",
+        "place_id": "368f91696cdc7975f9f541f08787909774598044e822897b602941e89c10f647",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "9d5cf6bc-1ceb-5a30-b30e-1d6fedda4d6f",
+      "label": "Galaxy shows & interiors",
+      "values": {
+        "title": "Galaxy shows & interiors",
+        "date": "2026-12-27",
+        "itinerary_day_id": "c7b97815-7fbe-44ab-b71d-3b699f45d42d",
+        "planned_start_time": "17:15:00",
+        "planned_end_time": "18:15:00",
+        "expected_duration_minutes": 60,
+        "sequence": 200,
+        "transport_instructions": "See BOTH Diamond Lobby Show and Crystal Lobby Show in different lobbies. Ask staff for the next pair and internal walk: e.g. Diamond 17:30 then Crystal 17:45 if achievable, or Crystal 17:15 then Diamond 17:30. Allow up to an hour; never promise simultaneous views. Brief gaming-floor look only if desired/access permitted.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "See BOTH Diamond Lobby Show and Crystal Lobby Show in different lobbies. Ask staff for the next pair and internal walk: e.g. Diamond 17:30 then Crystal 17:45 if achievable, or Crystal 17:15 then Diamond 17:30. Allow up to an hour; never promise simultaneous views. Brief gaming-floor look only if desired/access permitted.",
+          "operatingHours": "Sunday Diamond 10:00–00:00 every 30 min; Crystal 10:15–23:45 every 30 min. Reconfirm festive changes.",
+          "attractionCost": "MOP0 (Free shows / public interiors)",
+          "priorityRule": "Longer show wait uses optional Londoner-show slack. Fortune Diamond is the same Diamond attraction, not a third show.",
+          "carry": [
+            "Original passports for any 21+ gaming-floor access"
+          ],
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "recommended_departure_time": null,
+        "item_type": "attraction",
+        "place_id": "0f33ab74-5525-5a7a-aab1-2c261ac368df",
+        "priority": "MUST",
+        "estimated_cost": 0,
+        "estimated_cost_currency": "MOP",
+        "status": "PLANNED"
+      },
+      "match": {
+        "title": "Galaxy shows & interiors",
+        "date": "2026-12-27"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "5458a1a7-cf0e-4700-8625-93101f69fed4",
+      "label": "Wynn Palace → Venetian",
+      "values": {
+        "title": "Galaxy → Venetian",
+        "sequence": 210,
+        "transport_instructions": "Follow signed pedestrian connections to the useful Venetian entrance; include internal walks.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Follow signed pedestrian connections to the useful Venetian entrance; include internal walks.",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "route": "Galaxy show-lobby area → signed pedestrian links → useful Venetian entrance",
+              "approxDurationMinutes": 20,
+              "approxCost": "MOP0 (Free)",
+              "notes": "15–20 min including relevant entrances; recommended."
+            },
+            {
+              "name": "Taxi",
+              "route": "Galaxy → useful Venetian entrance",
+              "approxDurationMinutes": 20,
+              "approxCost": "MOP25–45/car",
+              "notes": "10–20 min including pickup and entrance walks; generally little advantage for this short hop."
+            }
+          ],
+          "recommended": "Walk",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "estimated_cost": 0,
+        "estimated_cost_currency": "MOP"
+      },
+      "before": {
+        "title": "6eeeb1e45705c1b55f5d5ccdc75123cf0873658043e118dbfc2eeb8764fe9aaf",
+        "sequence": "734d0759cdb4e0d0a35e4fd73749aee287e4fdcc8648b71a8d6ed591b7d4cb3f",
+        "transport_instructions": "b60965e2239c25bd35235b5b9853178e6b20c5010781266104d37c2f15cfabcd",
+        "details": "a3f9397c9b953692d89684742475e18fcb48dfafc98207c4355a322ac5a36aab",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "d8486b2e-207d-46ae-892b-349269519886",
+      "label": "The Venetian Macao",
+      "values": {
+        "title": "Venetian interiors",
+        "planned_end_time": "19:15:00",
+        "expected_duration_minutes": 40,
+        "sequence": 220,
+        "transport_instructions": "Canals and painted sky, plus a 10–15 min gaming-floor look if desired and permitted. Public interiors are distinct from gaming areas; no gambling commitment. No gondola/teamLab queue.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Canals and painted sky, plus a 10–15 min gaming-floor look if desired and permitted. Public interiors are distinct from gaming areas; no gambling commitment. No gondola/teamLab queue.",
+          "attractionCost": "MOP0 for public interiors; paid activities excluded",
+          "priorityRule": "Shorten browsing/gaming-floor look if delayed; dinner stays a real meal.",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "estimated_cost": 0,
+        "estimated_cost_currency": "MOP"
+      },
+      "before": {
+        "title": "27c7587f77005530720a7b46949623a19257f47ae0b7239f2f67737756c158f8",
+        "planned_end_time": "5b9f8311a2f15ed6838c1a8f896ed8ed4c95522cd1a01e4cf3c6551a7c3dc119",
+        "expected_duration_minutes": "1a6562590ef19d1045d06c4055742d38288e9e6dcd71ccde5cee80f1d5a774eb",
+        "sequence": "7b69759630f869f2723875f873935fed29d2d12b10ef763c1c33b8e0004cb405",
+        "transport_instructions": "970fbe951d5f378c77c6e2e493147520278f460d9d6741a63dd051c6dc4e78c7",
+        "details": "0c7d8b8c236e38422526a2c1f9f29c57587f73d834f1d9efae505f419e12dedf",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "1fd951a2-0c9e-4260-b29d-ca62272be40e",
+      "label": "Dinner at Londoner / nearby Cotai",
+      "values": {
+        "title": "Dinner near Venetian",
+        "planned_start_time": "19:15:00",
+        "planned_end_time": "20:00:00",
+        "expected_duration_minutes": 45,
+        "transport_instructions": "A proper paid meal; snacks/freebies are not dinner. No beef or beef broth. If queues run late, drop optional Londoner show waiting.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "A proper paid meal; snacks/freebies are not dinner. No beef or beef broth. If queues run late, drop optional Londoner show waiting.",
+          "dietaryNote": "No beef or beef broth.",
+          "priorityRule": "Protect meals; do not gamble or sign up just to qualify for refreshments."
+        }
+      },
+      "before": {
+        "title": "f3aaa457034daa2bea52e17b7f2d543f36617a507bf3a3d70e8a2644bb3adc6d",
+        "planned_start_time": "d9c9ebe0e015a5950686b1312e3c6216d3d4b8b77f712b134eeeb1bdd4ca74c8",
+        "planned_end_time": "173e8e8e9b758905f2623da0dd845cc180f6b5cf06f7f836da08bae696ccc458",
+        "expected_duration_minutes": "9f14025af0065b30e47e23ebb3b491d39ae8ed17d33739e5ff3827ffb3634953",
+        "transport_instructions": "d23c709f5f895cab744f56b24dece34d33185b98bf39e114bb445d02b624ebe1",
+        "details": "875714651b9024f5621e040f901ba260fd5fe1cc706a1084a75dc37907a01737"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "b9b06bb1-e6e5-5990-abf5-06c9e6839d36",
+      "label": "Walk Venetian → Parisian",
+      "values": {
+        "title": "Venetian → Parisian",
+        "planned_start_time": "20:00:00",
+        "planned_end_time": "20:15:00",
+        "expected_duration_minutes": 15,
+        "sequence": 240,
+        "transport_instructions": "Use signed resort/mall connections; shorten browsing if interior-to-exterior access takes longer.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Use signed resort/mall connections; shorten browsing if interior-to-exterior access takes longer.",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "route": "Venetian interiors → signed connections → Parisian Eiffel Tower exterior",
+              "approxDurationMinutes": 20,
+              "approxCost": "MOP0 (Free)",
+              "notes": "15–20 min planning allowance. The 20:15 light cycle is a target; 20:30 is the fallback if walking takes longer."
+            }
+          ],
+          "recommended": "Walk",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "estimated_cost": 0,
+        "estimated_cost_currency": "MOP"
+      },
+      "before": {
+        "title": "9075013dd526c0cf4e135976e6573a8780e5fed72fe43674836bc2ba782741f8",
+        "planned_start_time": "5b9f8311a2f15ed6838c1a8f896ed8ed4c95522cd1a01e4cf3c6551a7c3dc119",
+        "planned_end_time": "fe939546bd384a008068b5e46b449eecdc5263ff74f152047b9c353d44daf311",
+        "expected_duration_minutes": "f5ca38f748a1d6eaf726b8a42fb575c3c71f1864a8143301782de13da2d9202b",
+        "sequence": "2397346b45823e070f6fc72ac94c0a999d234c472479f0e26b30cdf5942db854",
+        "transport_instructions": "ebcfcd0f786ab39f22f9cb042f9235cc5fde502629ed91ad2c6f8b9079d12d7d",
+        "details": "45604c4084581698624d80fe7e0db6c474a60f3e29bd7737e2050bef9baf1c08",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "7f595bdf-80fc-45d1-aff7-1fe9a3640157",
+      "label": "Parisian Eiffel Tower exterior + illumination",
+      "values": {
+        "title": "Parisian exterior lights",
+        "planned_start_time": "20:15:00",
+        "planned_end_time": "20:35:00",
+        "expected_duration_minutes": 20,
+        "sequence": 250,
+        "transport_instructions": "Exterior only. General illumination every 15 min 18:15–00:00: target 20:15, fallback 20:30. Observation decks listed CLOSED 26 Dec–1 Jan; verify festive lighting/maintenance. No deck tickets.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Exterior only. General illumination every 15 min 18:15–00:00: target 20:15, fallback 20:30. Observation decks listed CLOSED 26 Dec–1 Jan; verify festive lighting/maintenance. No deck tickets.",
+          "attractionCost": "MOP0 (Free exterior viewing)",
+          "operatingHours": "General lighting 18:15–00:00 every 15 min; festive suspensions possible.",
+          "eventStatus": "Observation decks listed closed 26 Dec 2026–1 Jan 2027",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "estimated_cost": 0,
+        "estimated_cost_currency": "MOP"
+      },
+      "before": {
+        "title": "2f8bba0795c3e12c799d65f500fe4c210a78b76e11aa2b32697b9884bffdbe8e",
+        "planned_start_time": "fe939546bd384a008068b5e46b449eecdc5263ff74f152047b9c353d44daf311",
+        "planned_end_time": "33106f395a97c18de378fbb137652e5ff6ee0317aeac36484a4dbcd5891ced4a",
+        "expected_duration_minutes": "e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb",
+        "sequence": "27badc983df1780b60c2b3fa9d3a19a00e46aac798451f0febdca52920faaddf",
+        "transport_instructions": "60b42d98c2e78da322712de15c849ead147fe0503ff4df1c4fea166f894a43d7",
+        "details": "4b841ab22dc974a0a777aebe8c6c15c59179c1d87788c1cfc99c23a07c30754c",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "299a94db-3d1b-538a-b7e7-70d74e4e149f",
+      "label": "Walk Parisian → Londoner Crystal Palace",
+      "values": {
+        "title": "Parisian → Londoner",
+        "planned_start_time": "20:35:00",
+        "planned_end_time": "20:55:00",
+        "sequence": 260,
+        "transport_instructions": "Use pedestrian bridges/crossings and signed resort access; no taxi needed between neighbours.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Use pedestrian bridges/crossings and signed resort access; no taxi needed between neighbours.",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "route": "Parisian exterior → pedestrian crossings/bridges → Londoner public interiors",
+              "approxDurationMinutes": 20,
+              "approxCost": "MOP0 (Free)",
+              "notes": "15–20 min including relevant entrances. Default Londoner arrival is AFTER the 20:30 guard show."
+            }
+          ],
+          "recommended": "Walk",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "estimated_cost": 0,
+        "estimated_cost_currency": "MOP"
+      },
+      "before": {
+        "title": "6e99d10ca0facf647b27ed75a3363dccbc96e9184eb9984b5ef1fbbf6c2f1f4c",
+        "planned_start_time": "33106f395a97c18de378fbb137652e5ff6ee0317aeac36484a4dbcd5891ced4a",
+        "planned_end_time": "f4bf6771ca1d0ef856599a1b6ae5677a95b83444e67ab388a4bf4a0f2d973e36",
+        "sequence": "d29d53701d3c859e29e1b90028eec1ca8e2f29439198b6e036c60951fb458aa1",
+        "transport_instructions": "9ecef58d7863b6058cb9e7cda0bdf8b5550fe79be8fbe48fd94eb27121285009",
+        "details": "346814e8f6d5d29cafb7a021795e7ef137c7b2c3b0e2001186efb5d2094ee87b",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "2a3027d0-2f1c-51b7-b6ef-7db91ab6fbbe",
+      "label": "Londoner exterior light show — 21:30 target",
+      "values": {
+        "title": "Londoner interiors & light show",
+        "planned_start_time": "20:55:00",
+        "expected_duration_minutes": 50,
+        "sequence": 270,
+        "transport_instructions": "Explore lobby/public interiors; be outside about 21:25 for the optional 21:30 facade light/sound show. The indoor 20:30 guard show has already passed; it is not included in this default route.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Explore lobby/public interiors; be outside about 21:25 for the optional 21:30 facade light/sound show. The indoor 20:30 guard show has already passed; it is not included in this default route.",
+          "attractionCost": "MOP0 (Free public interiors / facade show)",
+          "operatingHours": "Outdoor facade daily 19:30–23:30 hourly. Recheck festive operation.",
+          "priorityRule": "Skip show waiting after longer dinner/Galaxy waits, then reach MGM/Wynn earlier.",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "estimated_cost": 0,
+        "estimated_cost_currency": "MOP"
+      },
+      "before": {
+        "title": "ebb593d0c61f0266c9829451ae2c5877a635bd40340c996cdbf0fcdebdc4bc66",
+        "planned_start_time": "173e8e8e9b758905f2623da0dd845cc180f6b5cf06f7f836da08bae696ccc458",
+        "expected_duration_minutes": "f5ca38f748a1d6eaf726b8a42fb575c3c71f1864a8143301782de13da2d9202b",
+        "sequence": "6af1f692e9496c6d0b668316eccb93276ae6b6774fa728aac31ff40a38318760",
+        "transport_instructions": "2b24b3bbfa8e998cb21f0ac0989198fa277e4e6517f0ad422a024e8b431b0cd7",
+        "details": "737df9665dc15d7ed4afa2b11fbf25463c7230b018e8daccf4d15b1c31cec07e",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "a3d86268-e6d7-5642-a3e7-bfbb4923c20d",
+      "label": "Londoner → MGM Cotai",
+      "values": {
+        "title": "Londoner → MGM Cotai",
+        "date": "2026-12-27",
+        "itinerary_day_id": "c7b97815-7fbe-44ab-b71d-3b699f45d42d",
+        "planned_start_time": "21:45:00",
+        "planned_end_time": "22:00:00",
+        "expected_duration_minutes": 15,
+        "sequence": 280,
+        "transport_instructions": "Taxi saves legs/time. MGM Cotai is distinct from MGM Macau on the Peninsula.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Taxi saves legs/time. MGM Cotai is distinct from MGM Macau on the Peninsula.",
+          "transportOptions": [
+            {
+              "name": "Taxi",
+              "route": "Londoner → MGM Cotai public/Spectacle entrance",
+              "approxDurationMinutes": 15,
+              "approxCost": "MOP25–45/car",
+              "notes": "About 15 min including pickup and entrance access; planning allowance."
+            },
+            {
+              "name": "Walk",
+              "route": "Londoner → pedestrian route → MGM Cotai public entrance",
+              "approxDurationMinutes": 30,
+              "approxCost": "MOP0 (Free)",
+              "notes": "20–30 min between actual entrances; retime visits if walking."
+            }
+          ],
+          "recommended": "Taxi",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "recommended_departure_time": null,
+        "place_id": "dc822b6e-b4fc-5279-90d5-20e234556c66",
+        "estimated_cost": 45,
+        "estimated_cost_currency": "MOP",
+        "item_type": "transport",
+        "priority": "MUST",
+        "status": "PLANNED"
+      },
+      "match": {
+        "title": "Londoner → MGM Cotai",
+        "date": "2026-12-27"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "f760d7aa-0e12-576d-a29d-30e097450bb6",
+      "label": "MGM Cotai interiors",
+      "values": {
+        "title": "MGM Cotai interiors",
+        "date": "2026-12-27",
+        "itinerary_day_id": "c7b97815-7fbe-44ab-b71d-3b699f45d42d",
+        "planned_start_time": "22:00:00",
+        "planned_end_time": "22:25:00",
+        "expected_duration_minutes": 25,
+        "sequence": 290,
+        "transport_instructions": "Spectacle atrium/public interiors and a 10–15 min gaming-floor glimpse if permitted. This late visit does not promise a dolphin or garden show.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Spectacle atrium/public interiors and a 10–15 min gaming-floor glimpse if permitted. This late visit does not promise a dolphin or garden show.",
+          "attractionCost": "MOP0 for public sightseeing; access subject to security",
+          "eventStatus": "Dolphins / Sea Odyssey unconfirmed for 27 Dec. Current Enchanted Garden Odyssey uses flying ladybugs, not dolphins.",
+          "operatingHours": "Current garden show 13:00 / 15:00 / 16:30 / 18:00 — not caught by this late visit.",
+          "carry": [
+            "Original passports; gaming-floor entry 21+"
+          ],
+          "priorityRule": "Any confirmed daytime show would require re-anchoring and reducing another evening block.",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "recommended_departure_time": null,
+        "item_type": "attraction",
+        "place_id": "dc822b6e-b4fc-5279-90d5-20e234556c66",
+        "priority": "MUST",
+        "estimated_cost": 0,
+        "estimated_cost_currency": "MOP",
+        "status": "PLANNED"
+      },
+      "match": {
+        "title": "MGM Cotai interiors",
+        "date": "2026-12-27"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "a9ae41d7-2117-5556-a917-e095769e24dd",
+      "label": "MGM Cotai → Wynn Palace",
+      "values": {
+        "title": "MGM Cotai → Wynn Palace",
+        "date": "2026-12-27",
+        "itinerary_day_id": "c7b97815-7fbe-44ab-b71d-3b699f45d42d",
+        "planned_start_time": "22:25:00",
+        "planned_end_time": "22:45:00",
+        "expected_duration_minutes": 20,
+        "sequence": 300,
+        "transport_instructions": "Walk between the relevant entrance and lake-viewing area; taxi if tired or pedestrian routing is inconvenient.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Walk between the relevant entrance and lake-viewing area; taxi if tired or pedestrian routing is inconvenient.",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "route": "MGM Cotai → pedestrian route → Wynn Palace Performance Lake viewing area",
+              "approxDurationMinutes": 20,
+              "approxCost": "MOP0 (Free)",
+              "notes": "15–20 min planning allowance; walking usually simpler for the short hop."
+            },
+            {
+              "name": "Taxi",
+              "route": "MGM Cotai → Wynn Palace lake access",
+              "approxDurationMinutes": 20,
+              "approxCost": "MOP25–45/car",
+              "notes": "10–20 min including pickup and final access; use if tired, with its own waiting margin."
+            }
+          ],
+          "recommended": "Walk",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "recommended_departure_time": null,
+        "place_id": "e884cfc2-0ca7-412c-b128-f035a839ba6d",
+        "estimated_cost": 0,
+        "estimated_cost_currency": "MOP",
+        "item_type": "transport",
+        "priority": "MUST",
+        "status": "PLANNED"
+      },
+      "match": {
+        "title": "MGM Cotai → Wynn Palace",
+        "date": "2026-12-27"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "741020b2-fc98-409a-a35c-cd50464f50d6",
+      "label": "Wynn Palace Performance Lake + SkyCab if queue allows",
+      "values": {
+        "title": "Wynn Palace fountains",
+        "planned_start_time": "22:45:00",
+        "planned_end_time": "23:15:00",
+        "expected_duration_minutes": 30,
+        "sequence": 310,
+        "transport_instructions": "Night fountains are the late priority. Current evening pattern 18:00–00:00 every 20 min; catch a display without guaranteeing song or precise minute. No scheduled SkyCab queue.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Night fountains are the late priority. Current evening pattern 18:00–00:00 every 20 min; catch a display without guaranteeing song or precise minute. No scheduled SkyCab queue.",
+          "attractionCost": "MOP0 (Free fountains)",
+          "operatingHours": "18:00–00:00 every 20 min; recheck festive operation.",
+          "priorityRule": "SkyCab is optional only, with no allocated queue/ride time. Stop earlier if tired; this is a long sightseeing day.",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "estimated_cost": 0,
+        "estimated_cost_currency": "MOP"
+      },
+      "before": {
+        "title": "9c2548aed740169d4ca3b4c8957237e97a9ecf70880c39950cf9d6b61a28bbbf",
+        "planned_start_time": "bc9fdfb0e71f625a490ce8b54e53edfb77f771b6b48300ff7c8320c7328a3104",
+        "planned_end_time": "bbab1bcb7e5f3f85b682698ede4c803eb223d2b434a38badb23fe5a6e90e470e",
+        "expected_duration_minutes": "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c",
+        "sequence": "a512db2741cd20693e4b16f19891e72b9ff12cead72761fc5e92d2aaf34740c1",
+        "transport_instructions": "d55088df48adc8aed1f4baf7db47632d03422a8e9fa3c16acc4439e9a3158a88",
+        "details": "75c5d4d965dc57a6d9a03cd2471a34c0c43cf6a27096e20f977bb540cefb78fb",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "b213726f-7398-487f-9c84-bc6cdfbf690f",
+      "label": "Londoner → Treasure Hotel",
+      "values": {
+        "title": "Wynn Palace → Asia Boutique",
+        "planned_start_time": "23:15:00",
+        "planned_end_time": "23:35:00",
+        "expected_duration_minutes": 20,
+        "sequence": 320,
+        "transport_instructions": "Late taxi to Asia Boutique Inn, Taipa Village. No village shuttle after 21:00. Stop earlier if tired.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Late taxi to Asia Boutique Inn, Taipa Village. No village shuttle after 21:00. Stop earlier if tired.",
+          "transportOptions": [
+            {
+              "name": "Taxi",
+              "route": "Wynn Palace → Asia Boutique Inn / nearest legal Taipa Village drop-off → hotel",
+              "approxDurationMinutes": 25,
+              "approxCost": "MOP45–75/car",
+              "notes": "15–25 min planning allowance; 23:35 arrival is a target and may slip. Confirm late-return access."
+            },
+            {
+              "name": "LRT + walk",
+              "route": "Wynn lake → Cotai East → LRT towards Barra → Pai Kok → walk to Asia Boutique",
+              "approxDurationMinutes": 45,
+              "approxCost": "MOP8/person; MOP16/two",
+              "notes": "35–45 min door-to-door; verify token fare and station-specific last departure. Use taxi if last-train timing or energy is unsuitable. No late free village shuttle."
+            }
+          ],
+          "recommended": "Taxi",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "place_id": "60d936b7-571c-5ef4-b24b-56460a705c02",
+        "estimated_cost": 75,
+        "estimated_cost_currency": "MOP"
+      },
+      "before": {
+        "title": "902340f18684f088826a8be8e75eb3872b7d4eb8edb6c059a2b6e88e9ac80686",
+        "planned_start_time": "a094720298c5ddaae0891af716a013d2273d2ae71fa5fb2f9eb60003beb38de0",
+        "planned_end_time": "9d18889a45ce133798263fcc9442da7739c0a64e4583fbe57fdd6b7316d6d880",
+        "expected_duration_minutes": "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
+        "sequence": "1e472b39b105d349bcd069c4a711b44a2fffb8e274714bb07ecfff69a9a7f67b",
+        "transport_instructions": "e8c674be118a22aab4b80217862ec796a352cac104c6fafb3c747f68ed2782e4",
+        "details": "b106f93aedf6e230dd4ad5823356489b45fce97761318eca8e65d85fbf80080e",
+        "place_id": "26aaaedede26c515437db1fdb525d6e9b856912407063daab6b4fb1d7f04b31b",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "aabc73db-5279-44ac-a5c4-a49068fa3e69",
+      "label": "Londoner Changing of the Guard — 20:30 target (optional)",
+      "values": {
+        "title": "Changing of the Guard",
+        "planned_start_time": null,
+        "planned_end_time": null,
+        "expected_duration_minutes": null,
+        "sequence": 1010,
+        "transport_instructions": "Optional earlier-finish substitution only: Crystal Palace lobby Sunday shows 16:00 / 18:00 / 20:30, closed Monday. The default 20:55 Londoner arrival misses 20:30. Reorder/reduce dinner or browsing only if comfortably ahead; indoor guard and outdoor facade are separate.",
+        "details": {
+          "timingType": "OPTIONAL",
+          "quickNote": "Optional earlier-finish substitution only: Crystal Palace lobby Sunday shows 16:00 / 18:00 / 20:30, closed Monday. The default 20:55 Londoner arrival misses 20:30. Reorder/reduce dinner or browsing only if comfortably ahead; indoor guard and outdoor facade are separate.",
+          "attractionCost": "MOP0 (Free)",
+          "eventStatus": "Untimed optional substitution; not included in the default evening.",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "OPTIONAL"
+        },
+        "estimated_cost": 0,
+        "estimated_cost_currency": "MOP"
+      },
+      "before": {
+        "title": "97fe2c202adc5c13ebaee254675a51370caa289b4e498ed100c6695c75570b67",
+        "planned_start_time": "f4bf6771ca1d0ef856599a1b6ae5677a95b83444e67ab388a4bf4a0f2d973e36",
+        "planned_end_time": "d9c9ebe0e015a5950686b1312e3c6216d3d4b8b77f712b134eeeb1bdd4ca74c8",
+        "expected_duration_minutes": "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
+        "sequence": "36790ecd55c2030dc553685bef719df653f413a20cdad1bfd1dc934c76686ddd",
+        "transport_instructions": "d04536a2436d368aea14cdeef561c4e0111750c4c3063ba883b8b720d6d6ab4b",
+        "details": "8f44c31e27914cb0f99a82fb6483a55d72cecddd9b4e97563aef69d18dbe5ff7",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "ccc74da1-4fb6-40b7-ad2f-910e7c129e6a",
+      "label": "Optional reference — Monte Fort (no scheduled visit)",
+      "values": {
+        "title": "Monte Fort",
+        "transport_instructions": "Optional reference only, no timed visit or climb; neither traveller is interested.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Optional reference only, no timed visit or climb; neither traveller is interested."
+        }
+      },
+      "before": {
+        "title": "01c50d79cb37d7f257b98ab08ce44c7be3388a7cba9d94148b12f37d3e169712",
+        "transport_instructions": "1a32f602b5f459757f612b6ef6f3218eeb6a18809b5d9842e1203028b9580ab1",
+        "details": "14f05621397eb0172eb09a74822ef4ef2e3100022883319f23273ecc3af0a02c"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "d7d11aad-5636-44b2-8128-8451f959cb4f",
+      "label": "Optional alternative — Golden Reel (outside core route)",
+      "values": {
+        "title": "Golden Reel",
+        "transport_instructions": "Optional paid substitution at Studio City, not an additional timed commitment. Grand Lisboa Palace in Cotai is also an optional resort substitution; it is not the Peninsula Grand Lisboa.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Optional paid substitution at Studio City, not an additional timed commitment. Grand Lisboa Palace in Cotai is also an optional resort substitution; it is not the Peninsula Grand Lisboa."
+        }
+      },
+      "before": {
+        "title": "bbebb7a27cb53f3da3b45cb1b603c5e097bba334f5efcbfa1ff97148cc92d444",
+        "transport_instructions": "3f8aff4d1661ebd33e4826bcf204855c4e91323b84de87480f8de75a4580b79a",
+        "details": "a1ed6a1c1d55377a66657f438fab971fc41a758101b50e8d7357da40702b745e"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "cf428665-d5cc-5acd-8be3-a4ab49a868c6",
+      "label": "Breakfast & checkout",
+      "values": {
+        "title": "Breakfast & checkout",
+        "date": "2026-12-28",
+        "itinerary_day_id": "8762dac6-a762-453b-a698-bd8a55ba7e3c",
+        "planned_start_time": "06:45:00",
+        "planned_end_time": "07:15:00",
+        "expected_duration_minutes": 30,
+        "sequence": 0,
+        "transport_instructions": "Asia Boutique listing says no breakfast. Buy something the previous evening or confirm an early-opening option; do not assume Rua do Cunha shops open in time. Checkout around 07:15.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Asia Boutique listing says no breakfast. Buy something the previous evening or confirm an early-opening option; do not assume Rua do Cunha shops open in time. Checkout around 07:15.",
+          "hotelReturn": "Retained Hong Kong room/main luggage; only a small overnight bag."
+        },
+        "recommended_departure_time": null,
+        "item_type": "hotel",
+        "place_id": "60d936b7-571c-5ef4-b24b-56460a705c02",
+        "booking_id": "edce73c1-e39e-52ee-b4fd-97c1dc08b737",
+        "priority": "MUST",
+        "status": "PLANNED"
+      },
+      "match": {
+        "title": "Breakfast & checkout",
+        "date": "2026-12-28"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "5b3d1396-6ae9-58bb-b85b-ec676f4a44ea",
+      "label": "Breakfast, checkout, Treasure → Taipa Ferry",
+      "values": {
+        "title": "Asia Boutique → Taipa Ferry",
+        "sequence": 10,
+        "transport_instructions": "Walk to Pai Kok LRT, train towards Taipa Ferry Terminal, then terminal walk. No interchange. Allow 45–55 min with tickets, waiting, walking and contingency. Switch promptly to taxi if LRT timing slips; no Monday village shuttle.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "Walk to Pai Kok LRT, train towards Taipa Ferry Terminal, then terminal walk. No interchange. Allow 45–55 min with tickets, waiting, walking and contingency. Switch promptly to taxi if LRT timing slips; no Monday village shuttle.",
+          "transportOptions": [
+            {
+              "name": "Pai Kok LRT + walk",
+              "route": "Asia Boutique → walk to Pai Kok → Taipa Line towards Taipa Ferry Terminal → terminal walk",
+              "approxDurationMinutes": 55,
+              "approxCost": "MOP10/person; MOP20/two",
+              "notes": "45–55 min door-to-door including contingency; actual travel may be shorter. Monday service currently starts 06:30, roughly every 5–10.5 min; verify station departure/token fare on date."
+            },
+            {
+              "name": "Taxi",
+              "route": "Asia Boutique / nearest legal pickup → Taipa Ferry Terminal",
+              "approxDurationMinutes": 25,
+              "approxCost": "MOP45–75/car",
+              "notes": "15–25 min with pickup, about 10–20 min driving. Arrange around 07:40 the night before; target terminal by 08:10. Use promptly if LRT plan slips."
+            }
+          ],
+          "recommended": "Pai Kok LRT + walk",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "estimated_cost": 20,
+        "estimated_cost_currency": "MOP"
+      },
+      "before": {
+        "title": "9c345ff1b7eb53990d2fca2ee343eb93039a1c40720ccac9b535b3ffee2e6c2d",
+        "sequence": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5",
+        "transport_instructions": "8587c1f2271900f1770740469d508034ef7da6502389a3c31421afed63e72959",
+        "details": "c317ca89a8a36800d533aaaf8734cec8136a24b7192d67488b07140497d1da88",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "72b60c75-d85d-447f-8695-b67378e1dd21",
+      "label": "Cotai Water Jet Taipa → Hong Kong Sheung Wan",
+      "values": {
+        "title": "Cotai Water Jet to Sheung Wan",
+        "transport_instructions": "PLACEHOLDER, 28 Dec 09:00–10:00. Current first published departure; December inventory is unconfirmed. Formalities/disembarkation are separate buffers.",
+        "details": {
+          "timingType": "TARGET",
+          "quickNote": "PLACEHOLDER, 28 Dec 09:00–10:00. Current first published departure; December inventory is unconfirmed. Formalities/disembarkation are separate buffers.",
+          "booking": "required",
+          "eventStatus": "PLACEHOLDER — not booked",
+          "farePerPerson": "MOP192 published weekday daytime Cotai Class",
+          "fareForTwo": "MOP384/two",
+          "costStatus": "Published standard fare; reconfirm actual checkout price",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED",
+          "recommended": "Cotai Water Jet 09:00",
+          "transportOptions": [
+            {
+              "name": "Cotai Water Jet 09:00",
+              "route": "Taipa Ferry Terminal → Sheung Wan, Monday 28 Dec 09:00–10:00",
+              "approxDurationMinutes": 60,
+              "approxCost": "MOP192/person; MOP384/two",
+              "notes": "Current standard weekday daytime Cotai Class; reconfirm inventory/fare. Reach terminal by 08:10 and follow actual ticket cutoff."
+            },
+            {
+              "name": "Cotai Water Jet 10:00 — later fallback",
+              "route": "Same terminals, Monday 28 Dec 10:00 departure if actually available",
+              "approxDurationMinutes": 60,
+              "approxCost": "MOP192/person; MOP384/two",
+              "notes": "Alternative only: retime Monday and cut optional estates/markets as needed. Not another scheduled crossing; inventory/actual fare must be reconfirmed."
+            }
+          ]
+        },
+        "estimated_cost": 384,
+        "estimated_cost_currency": "MOP"
+      },
+      "before": {
+        "title": "b910b627f16851c5ce198bd7797d6f54fdbf0830431a8b8963524e0ba02f0be1",
+        "transport_instructions": "2873222b809e3775d33b81a4d05e86c2808b51e6cb36e3b83b3c158679fb1008",
+        "details": "66298d05489d1eb28656b5bbbc7cc5d6d0c7bcfb54ef09c8008cb2920d4d5fa3",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "43a0c4a2-d7a9-41d6-80f4-be650dfb2215",
+      "label": "Book 08:30 TurboJET Sheung Wan → Outer Harbour — 27 Dec",
+      "values": {
+        "title": "Book 07:30 TurboJET to Outer Harbour",
+        "description": "Sunday 27 Dec, currently first published sailing. Standard weekend daytime economy HKD212/person, HKD424/two; December inventory/fare not confirmed. Arrange licensed hotel taxi at 05:55; target Shun Tak 06:40 and follow actual ticket cutoffs. 08:30 is a later fallback requiring a shorter morning, not the default."
+      },
+      "before": {
+        "title": "06ff1725e5524b55948badb3ba12fa405313156d4dff682734ff235337be780a",
+        "description": "ba83b6bcad2e27445934d72f2ec090b8bccd14c9e1eda540eaa6f7628632fbb9"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "ce87e94f-3d25-5842-9049-37e76597082d",
+      "label": "Book Treasure Hotel for 27–28 Dec — proposed extra night",
+      "values": {
+        "title": "Book Asia Boutique Inn overnight",
+        "description": "27–28 Dec, one room for two. INR6,500 user quote is an unverified estimate, not booked or paid. Verify taxes, room type, cancellation, late-return access and 07:15 checkout. No breakfast listed: buy ahead. Keep Hong Kong room and main luggage.",
+        "linked_place_id": "60d936b7-571c-5ef4-b24b-56460a705c02"
+      },
+      "before": {
+        "title": "225c7acab58a6212456588a4c42ce60fabcb0ea97c1e634d99051342c76e4f58",
+        "description": "0e97a7f09f3cc0d264203cda0f0136b2b08429ef8df8b245c0299ba1a28e1754",
+        "linked_place_id": "26aaaedede26c515437db1fdb525d6e9b856912407063daab6b4fb1d7f04b31b"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "6f3f8b24-478a-4dea-836e-95472d63f168",
+      "label": "Optional alternative — Fisherman’s Wharf (outside core route)",
+      "values": {
+        "title": "Fisherman’s Wharf photos",
+        "description": "Timed WANT stop 27 Dec 09:15–09:50 after Outer Harbour arrival. Walk 10–15 min to Roman-style photo area; exterior/waterfront only, no waiting for shops/restaurants. Shorten if immigration is slow.",
+        "priority": "WANT"
+      },
+      "before": {
+        "title": "0a14e2892117629e23d3b9ef5978a634755acb96db6c6c7fba059fcac85cd1a9",
+        "description": "7e0ff474a00f8798cd5a9aeb310a13666b37ca77513798c97916b6a1c0d07c40",
+        "priority": "8089733e7468dc4a103bec9ba2cd8164358492742dcf78409e13144e30ff840b"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "6c92c81b-d8fd-4451-80f5-00e576638cbe",
+      "label": "See Wynn Palace Performance Lake at night",
+      "values": {
+        "title": "Wynn Palace night fountains",
+        "description": "Core 27 Dec 22:45–23:15. Current evening pattern 18:00–00:00 every 20 min; no guaranteed song/minute. SkyCab optional, no reserved queue time. Taxi to Asia Boutique after 23:15, MOP45–75/car estimate; no late village shuttle."
+      },
+      "before": {
+        "title": "bbd2e9dd0f9959ad1b73ce860d9a373fe3b23f4d6dce8d4adc039dc9a1a12d41",
+        "description": "2b30fea76442a37ba7469eabae72ad65799fee7774c2d9d55740abd3177d9c98"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "17f774aa-3a1b-46aa-88f9-05926c19a42b",
+      "label": "Book 09:00 Cotai Water Jet Taipa → Sheung Wan — 28 Dec",
+      "values": {
+        "description": "Monday 28 Dec 09:00 target, PLACEHOLDER. Current standard weekday daytime Cotai Class MOP192/person, MOP384/two. Breakfast/checkout 06:45–07:15 at Asia Boutique; Pai Kok LRT towards Taipa Ferry, allow 45–55 min to reach terminal 08:10. Arrange 07:40 taxi fallback night before. Verify tickets, price and actual cutoff."
+      },
+      "before": {
+        "description": "6c223b3ded5a8cfef90eaa93d2176bd9a3e013ea263f67b44fc1c2d3b9b383bf"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "20793ec7-dbb3-4855-a586-5f9d4253d86f",
+      "label": "Macau overnight: documents, MOP cash and small bag",
+      "values": {
+        "description": "Both passports, valid Hong Kong re-entry documents, actual confirmations once booked, small MOP cash and overnight bag. Asia Boutique is proposed/unbooked; keep confirmed Hong Kong room and main luggage. Original passports for any 21+ gaming-floor checks; no gaming-floor photos/video/audio. No beef or beef broth."
+      },
+      "before": {
+        "description": "012091ce9a6e739994ed5677fdc8cf918cc85060c2f3c5416f2977687d48e929"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "e46e8ba8-16db-413b-ab37-6a2d145416cd",
+      "label": "Recheck Macau overnight ferries, shuttles and festive shows",
+      "values": {
+        "description": "1–2 weeks before travel: ferry inventory/fares/cutoffs (27 Dec 07:30; 28 Dec 09:00), Asia Boutique terms/late access/early checkout/no-breakfast plan, Galaxy Diamond AND Crystal lobbies, Londoner facade, Parisian deck closure/lighting, Wynn fountains, village shuttle bays/hours and Pai Kok departures. Ask MGM whether dolphins still operate on 27 Dec; late default visit promises interiors only. Do not create an automation."
+      },
+      "before": {
+        "description": "a2d5fe7f2c0e86adae981cc31c2b698d9916c38390d4edfdc81d4529a5d78e75"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "770135ac-9325-4da3-81a0-9931fb8a2e7e",
+      "label": "Verify Macau roaming on both phones for 27 AND 28 Dec",
+      "values": {
+        "description": "Verify both phones have Macau/Greater China data on BOTH calendar days 27 and 28 Dec. Check activation, calendar-day versus rolling validity, expiry/timezone and allowance. SoSIM real-name registration and Jio OTP/call arrangements retained; verify data after arrival."
+      },
+      "before": {
+        "description": "57e5daeb99c3cf8a3cbd6d847c684440cb58573994d6e5b55372d05197b42584"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "0c840d55-7b1a-4965-8e6b-c23e3f5a0210",
+      "label": "Optional alternative — Golden Reel (outside core route)",
+      "values": {
+        "title": "Golden Reel (optional substitution)",
+        "description": "Optional paid substitution at Studio City, outside the timed core route. Choose only by reducing/replacing another resort/show; no allocated block. Recheck hours and prices if selected."
+      },
+      "before": {
+        "title": "bbebb7a27cb53f3da3b45cb1b603c5e097bba334f5efcbfa1ff97148cc92d444",
+        "description": "d9680b5695864bb730c2d4d9a3c2a101707b5888150c81dc958ca44486d1425b"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "5f6aa17f-2995-430b-ac74-dfd13f467783",
+      "label": "Macau overnight essentials — 27–28 Dec",
+      "values": {
+        "summary": "07:30 outbound · Asia Boutique proposed · 14:00 bungy target · Keep HK room · Two-day roaming",
+        "body": "Planned overnight Sunday 27 to Monday 28 December 2026, UTC+8. Asia Boutique Inn, 146 Rua Correia da Silva, Taipa, beside Rua do Cunha, is proposed/unbooked/unpaid. INR6,500 is a user quote for one room for two, unverified. Check all-in taxes, room type, cancellation, early checkout and late-return access before purchase. Listing says no breakfast; buy ahead for Monday 06:45 breakfast/checkout. Keep the confirmed Hong Kong room and main luggage; small overnight bag only.\nOutbound: 27 Dec 07:30 TurboJET Sheung Wan → Outer Harbour, about 60 min. Taxi 05:55, reach Shun Tak around 06:40. Current published weekend daytime economy HKD212/person, HKD424/two. Return: 28 Dec 09:00 Cotai Water Jet Taipa → Sheung Wan, about 60 min; standard weekday daytime Cotai Class MOP192/person, MOP384/two. Both remain placeholders; published patterns are not December ticket inventory. Follow actual cutoffs.\nBungy remains a placeholder: 14:00 target, 13:30 ticketing-counter check-in, allow through an estimated 16:00; no guaranteed finish. Confirm Meghana’s spectator/observation access.\nCarry both passports, valid Hong Kong re-entry documents, actual confirmations once booked and small MOP cash. Verify data for BOTH 27 and 28 Dec, including activation/expiry. Preserve Macau Money / Transport Payments guidance. No beef or beef broth.\nMorning: timed Wharf → historic centre → Grand Lisboa/original Lisboa exteriors → Tower. Evening: Asia → Galaxy (two lobbies) → Venetian/dinner → Parisian → Londoner → MGM Cotai → Wynn fountains → Asia. This is a long day. Protect meals, bungy and ferry buffers; shorten browsing/gaming-floor looks first, then skip Londoner show waiting and reach MGM/Wynn earlier."
+      },
+      "before": {
+        "summary": "c2db5635b043820ce6f9fca7fdd66b4627af0d372ae9db88dfde95d67f02f316",
+        "body": "09a58fd5a26bb62a66111582df961f4087e355a51410427ae88967ca5b984b8f"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "8b513d28-db86-49d9-a74c-2436e0e42904",
+      "label": "Macau LRT — Airport, Cotai and morning ferry",
+      "values": {
+        "title": "Macau LRT — Pai Kok and morning ferry",
+        "summary": "Asia → Pai Kok → Taipa Ferry · MOP10/person budget · 07:15 start · 07:40 taxi fallback",
+        "body": "Asia Boutique is by Rua do Cunha in Taipa Village, NOT next to Airport station. Monday breakfast/checkout 06:45–07:15; listing says no breakfast, so buy ahead. Walk to Pai Kok → direct Taipa Line towards Taipa Ferry Terminal → terminal walk. Allow 45–55 min door-to-door including walking, tickets, waiting and contingency; target terminal 08:10. Current Monday service starts 06:30, roughly every 5–10.5 min; verify station departure on date. Budget MOP10/person, MOP20/two for single tokens, verify actual fare selector.\nSimpler fallback: ask reception the previous evening for a taxi around 07:40; MOP45–75/car planning estimate, 15–25 min including pickup, target 08:10. Switch promptly if the LRT plan slips; do not wait for a Monday village shuttle.\nLate Sunday: Wynn lake → Cotai East LRT towards Barra → Pai Kok → hotel walk, 35–45 min, MOP8/person / MOP16/two token budget; verify last train. Taxi MOP45–75/car, 15–25 min, is the default after 23:15.\nTower → Asia by LRT is indirect via reaching Barra, then towards Taipa Ferry Terminal to Pai Kok and walking; MOP8–12/person / MOP16–24/two token budget, 45–60 min. Taxi MOP70–110/car, 20–30 min is the time-saving default. LRT does not directly serve Senado or Outer Harbour."
+      },
+      "before": {
+        "title": "e5e7f20cd34b8377b14151d506a6980a296e4cbf8ae65d144419f3204a19b7e7",
+        "summary": "8924fe6a4e6efcbb3d8db8380509bc9ef309ee186f9afd9ef1cda27c9c2c142f",
+        "body": "c8ddd63108ffc3ecb8a439faf228fdeffb4fb96c96c667c8e6f166d98e1e9361"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "5739bb16-1cff-5d02-bd75-e6eddc0ac1d6",
+      "label": "Macau transport — practical route and alternatives",
+      "values": {
+        "summary": "Numeric taxi/token allowances · Taipa Village shuttle hours/direction · No late hotel shuttle",
+        "body": "All ranges are one-way planning estimates for two adults unless explicitly a published fare; actual meter, waiting, traffic, tolls and surcharges win. Keep HKD/MOP amounts in their original currency; use a real exchange rate if converting.\nHong Kong hotel → Sheung Wan: licensed taxi HKD180–260/car, 30–45 min; arrange 05:55 to target 06:40. Conditional MTR HKD15–25/person / HKD30–50/two, 45–60 min; not the early default without first-train verification.\nWharf → Senado taxi MOP45–75/car, 20–25 min; walking free MOP0, 40–50 min requires retiming. Lisboa → Tower taxi MOP35–60/car, allow 25 min; walk free MOP0, 35–45 min is unsuitable near 13:30 check-in. Tower → Asia taxi MOP70–110/car, 20–30 min. No guessed bus routes or unverified Senado shuttle.\nAsia → Galaxy walk free MOP0, 15–25 min to the correct lobby; taxi MOP25–45/car, 10–20 min. Galaxy → Venetian walk free MOP0, 15–20 min; taxi MOP25–45/car, 10–20 min. Venetian → Parisian and Parisian → Londoner: walk free MOP0, 15–20 min each. Londoner → MGM taxi MOP25–45/car, 15 min; walk free MOP0, 20–30 min. MGM → Wynn lake walk free MOP0, 15–20 min; taxi MOP25–45/car, 10–20 min. Wynn → Asia late taxi MOP45–75/car, 15–25 min. Pai Kok/token alternatives are in the LRT note.\nOptional published visitor shuttles, not an Asia Boutique service:\n• Taipa Village near Rua do Cunha ↔ Parisian: Fri–Sun 11:00–19:00 every 12–15 min, MOP0; allow 25–40 min door-to-door. Confirm exact stop. It goes to Parisian, so choosing it means reorder/reduce browsing, not a Parisian→Venetian→Parisian detour. No Monday service under this pattern.\n• Wynn Palace → Old Taipa Village → Lisboeta → Palace: Thu–Sun 12:00–21:00 every 30 min, MOP0. Village→Wynn goes via Lisboeta; confirm bay/direction and allow waiting/walks. No 23:15 return and no assumed 21:00 departure at every intermediate stop.\n• MGM Macau ↔ Tower ↔ MGM Cotai: 09:00–23:30 every 10–15 min; Tower stops only 11:00–21:00. MOP0, budget 30–45 min including wait. Useful only for a re-anchored Tower→MGM visit, not direct to Asia and no guaranteed 16:30 show arrival. Confirm bay/direction/capacity.\n• Wynn Palace → HZMB → Taipa Ferry → Airport → Palace: published loop about 30–40 min until 21:00. An airport visitor alternative only; not a direct hotel transfer or a reason to return to the former airport base."
+      },
+      "before": {
+        "summary": "736907c43610ddc3ef5a8c103cf12ce1eedeed892943326c69be7543f6227f06",
+        "body": "d9829169b63d8f2f36623a68f40a91480c04559f2b9fc07f3e2fc758b26cfdff"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "2c816ec7-6a61-50b1-8748-2b4fda0503c2",
+      "label": "Cotai evening — shows, closures and fallback order",
+      "values": {
+        "title": "Cotai shows and evening fallbacks",
+        "summary": "Galaxy: Diamond + Crystal · Dinner protected · Londoner facade 21:30 · MGM interiors · Wynn late fountains",
+        "body": "Default 27 Dec: Asia 17:00 → Galaxy 17:15–18:15 (Diamond AND Crystal) → Venetian 18:35–19:15 → paid dinner 19:15–20:00 → Parisian exterior 20:15–20:35 → Londoner 20:55–21:45 / optional facade 21:30 → MGM Cotai 22:00–22:25 → Wynn fountains 22:45–23:15 → taxi to Asia. Transfer blocks are separate in the itinerary.\nGalaxy shows are in TWO different lobbies: Sunday Diamond Lobby 10:00–00:00 every 30 min, Crystal Lobby 10:15–23:45 every 30 min. Ask staff for the next pair/internal walk, e.g. Diamond 17:30 then Crystal 17:45 if achievable, or Crystal 17:15 then Diamond 17:30. Allow up to an hour, no simultaneous viewing promise. Fortune Diamond is the same diamond attraction, not a third show.\nParisian exterior lights general schedule 18:15–00:00 every 15 min; target 20:15 or 20:30 fallback. Observation decks listed CLOSED 26 Dec–1 Jan; exterior only, verify lighting/maintenance.\nLondoner outdoor facade daily 19:30–23:30 hourly: be outside about 21:25 for 21:30 if timing allows. Indoor guard is Crystal Palace, Sunday 16:00 / 18:00 / 20:30, closed Monday. Default 20:55 arrival misses the guard; earlier guard is an optional substitution only. Different indoor/outdoor locations.\nMGM late visit is for Spectacle atrium/interiors and permitted brief gaming-floor look, not a promised show. Current operator promotes Enchanted Garden Odyssey with flying ladybugs, daily 13:00 / 15:00 / 16:30 / 18:00. Tourism still describes Sea Odyssey dolphins at 13:00/15:00/17:00/19:00 but the old operator URL redirects. Dolphin operation/date remains UNCONFIRMED; ask MGM. Do not relabel ladybugs as dolphins. If a daytime show is prioritised/confirmed, re-anchor MGM and reduce/substitute another block, with recalculated transfers.\nWynn Palace evening fountains 18:00–00:00 every 20 min; catch a display without a guaranteed song/minute. SkyCab optional only, no reserved queue or required last-entry target.\nLong day, not a relaxed plan: protect meals, bungy check-in and ferry margins. Shorten gaming-floor looks and browsing first, skip Londoner show/wait next, and reach MGM/Wynn earlier. Longer Galaxy waits use Londoner slack. Stop earlier if tired; do not promise every show."
+      },
+      "before": {
+        "title": "84d0ab980487fa11e5093522d49ff7793e18201063e5e376ce68916915692f82",
+        "summary": "74050917394e4214544b713f4bf88a374a7b1d6a71dd842c1b74e56cc0c482b2",
+        "body": "f68d212df034961fc2dd808ff587f250f56fade00c61644261956431bad51a81"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "81ad0233-87b6-5441-8357-1ba14cd152ae",
+      "label": "Pandas — skip by default; Sunday alternative only",
+      "values": {
+        "title": "Pandas and optional resort substitutions",
+        "summary": "Untimed early-finish branch · Reduce another resort/show · Monte Fort / Golden Reel / Palace optional",
+        "body": "Pandas are an untimed early-finish branch, not an extra guaranteed attraction. Seac Pai Van pavilion normally closes Mondays; Sunday afternoon closes 17:00 with last entry 16:45. Recheck maintenance/holiday admission. If completely done with bungy around 14:30–15:00, taxi directly to the park allowing 25–35 min driving/queue, view 45–60 min, then hotel. If done after about 15:15, skip. Choosing pandas must reduce a resort block or omit a show. No guaranteed jump finish, panda activity or sightings.\nMonte Fort stays unscheduled/optional; neither traveller is interested. Golden Reel, Grand Lisboa Palace in Cotai, MGM Macau on the Peninsula, Wynn Macau, Studio City/teamLab and extra properties are substitutions only, not additional timed stops. Grand Lisboa/original Hotel Lisboa are different Peninsula properties and are in the morning core. MGM Cotai and both Galaxy shows are now core evening visits; do not silently omit them. Never imply all Macau casinos fit in one evening."
+      },
+      "before": {
+        "title": "e8f0674710ededbec78f60d7c8d9d9b1576700f74b5dc63a8dc7d5fef8f7680f",
+        "summary": "168eaead851bd2fd3a360f09237e5b74d1093352cb82010760eaae5ad85a1b37",
+        "body": "27ba5932e4f5f78428ccf6588f3f1f1d334bb143bcaac1b6d2c79b1afd91caf6"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "07f6e06d-1bc1-52ac-b67e-dc3e9914a628",
+      "label": "Casino sightseeing and refreshments",
+      "values": {
+        "section": "Macau",
+        "title": "Casino sightseeing and refreshments",
+        "body": "Sightseeing without gambling. Public atriums/lobbies/shopping areas are distinct from gaming floors. Brief public gaming-floor looks may be permitted at Grand Lisboa/Lisboa, Galaxy, Venetian, Parisian, Londoner, MGM Cotai and Wynn Palace, subject to security/access; private/salon areas excluded. Macau casino-entry age is 21: carry original passports for checks. No hotel stay or gambling spend is required by this sightseeing plan. Observe from public aisles; do not crowd tables or sit at gaming positions simply to watch. No photography, video or audio recording on gaming floors. Follow local photo signs in public interiors.\nDo not rely on free meals/snacks or unconditional drinks. No current operator guarantee of premium snacks for non-gambling walk-ins was verified; policies can depend on membership, play/points, supply or staff discretion. At MGM/Galaxy, politely ask which refreshments are complimentary without playing or signing up, accept the answer and do not gamble to qualify. Anecdotal freebies are unverified, not confirmed benefits. Keep paid meals in the budget; no beef or beef broth.",
+        "summary": "21+ original passport · No gaming-floor recording · No gambling needed · Free snacks unverified",
+        "icon": "🇲🇴",
+        "sort_order": 27
+      },
+      "match": {
+        "title": "Casino sightseeing and refreshments"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "292e0519-5e39-40c4-840b-3e9a19766afa",
+      "label": "Immigration Q&A",
+      "values": {},
+      "before": {
+        "body": "36375fb3fe26664054dee7fc9275c5d1764771c484a3aa67c969dd74f9ef5db8"
+      },
+      "transforms": {
+        "body": {
+          "replace": [
+            {
+              "from": "Treasure Hotel",
+              "to": "Asia Boutique Inn"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "4b9a2d62-ebef-4f63-9c0b-99cf56768a54",
+      "label": "Shared travel facts",
+      "values": {},
+      "before": {
+        "body": "c2f159c7b3ac6eb46044559d1348334eacded682dcedbd52b69aed5431e1345d"
+      },
+      "transforms": {
+        "body": {
+          "replace": [
+            {
+              "from": "Treasure Hotel",
+              "to": "Asia Boutique Inn"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "c2f40516-432b-5aa3-9b54-1107211dd769",
+      "label": "Macau source links and rechecks",
+      "values": {
+        "summary": "29 Oct revision · Published patterns ≠ December tickets · Recheck hotel, shows, lighting, shuttles and Pai Kok",
+        "body": "Revised 29 October 2026, Hong Kong/Macau UTC+8. Operator patterns and current standard fares are not 27–28 December seat inventory. Taxi/LRT allowances are planning estimates; actual meter/traffic/fare selector wins. Hotel INR6,500 is an unverified user quote. Recheck 1–2 weeks before departure and before purchase: ferry tickets/cutoffs, hotel taxes/cancellation/early checkout/late access/no-breakfast plan, both Galaxy lobbies, MGM dolphin versus current garden show, festive lighting/deck closure, village shuttle stops/directions and Pai Kok/last-train departures. No automation or purchase created.\nIndependently opened: TurboJET April 2026 fare table, Cotai current schedule/fare page, Galaxy Diamond/Crystal pages, MGM current garden-show page. Crystal show timing and hotel details also follow the supplied revision and need holiday reconfirmation; no live ticket inventory checked.\nhttps://www2.turbojet.com.hk/travel-with-us-sea-ferry/\nhttps://www.cotaiwaterjet.com/ferry-schedule/hongkong-macau-taipa\nhttps://www.fishermanswharf.com.mo/visit-us/\nhttps://www.fishermanswharf.com.mo/roman-amphitheatre/\nhttps://www.macaotourism.gov.mo/en/accommodation/asia-boutique-inn/?class=2-star-guest-house\nhttps://us.trip.com/hotels/v2/macau-hotel-detail-1771323/asia-boutique-inn/\nhttps://www.taipavillagemacau.com/getting-here/\nhttps://www.parisianmacao.com/about-us/getting-here.html\nhttps://www.parisianmacao.com/amenities/eiffel-tower.html\nhttps://www.londonermacao.com/macau-attractions.html\nhttps://www.wynnresortsmacau.com/en/wynn-palace/experiences/entertainment/performance-lake-wp\nhttps://www.wynnresortsmacau.com/en/wynn-palace/shuttle-bus\nhttps://www.mlm.com.mo/en/route.html\nhttps://www.skyparkmacau.com/activities/bungy\nhttps://www.macaotourism.gov.mo/en/shows-and-entertainment/family-fun/macao-giant-panda-pavilion\nhttps://www.galaxymacau.com/entertainment/galaxy-macau-diamond-show/\nhttps://www.galaxymacau.com/entertainment/crystal-lobby/\nhttps://www.mgm.mo/en/entertainment/happening/enchanted-garden-odyssey\nhttps://www.macaotourism.gov.mo/en/shows-and-entertainment/family-fun/sea-odyssey-mgm-cotai\nhttps://www.mgm.mo/en/cotai/entertainment/sea-odyssey\nhttps://www.mgm.mo/en/visit/mgm-macau\nhttps://www.grandlisboa.com/en/getting-here\nhttps://www.macaotourism.gov.mo/en/shows-and-entertainment/gaming\nhttps://bo.io.gov.mo/bo/i/2018/52/lei17.asp\nhttps://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1610600672&fid=9898\nhttps://www.td.gov.hk/en/transport_in_hong_kong/public_transport/taxi/taxi_fare_of_hong_kong/index.html\nhttps://www.mlm.com.mo/en/general_ticket.html\nhttps://www2.turbojet.com.hk/announcement/fare-adjustment-effective-from-april-25-2026/\nhttps://www.allinmedia.com.hk/2024/06/20/macau-casinos-tighten-distribution-of-free-snacks-and-drinks-some-items-only-redeemable-with-gaming-loyalty-points/\nhttps://www.tungwah.org.hk/en/heritage/historical-architecture/man-mo-temple/opening-and-address/\nhttps://www.openrice.com/en/hongkong/r-luk-on-kui-sheung-wan-guangdong-r848035"
+      },
+      "before": {
+        "summary": "f29f8285ae0148f2dc5c9522a27ea63e1cdf5214c75dd231585f4eb209bc36b0",
+        "body": "5f4ff40bfa8699290b13404432d1981f4a70c3235b2b0c1b6ec4b51e32e8218a"
+      }
+    }
+  ]
+}
