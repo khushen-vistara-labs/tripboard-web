@@ -1,0 +1,452 @@
+{
+  "tripId": "73c7883d-cff1-4abd-a0b0-ec8a5a543e1f",
+  "timezone": "Asia/Hong_Kong",
+  "changes": [
+    {
+      "table": "itinerary_items",
+      "id": "a36cbe26-db33-43ef-8a7f-d7db69a49a88",
+      "label": "Wharf → Senado",
+      "values": {
+        "title": "Wharf → St Paul’s",
+        "transport_instructions": "Use the Wharf convention-centre taxi stand or nearest legal pickup. Ask for St Paul’s / 大三巴 via the permitted Rua de D. Belchior Carneiro (高園街) taxi area near Macao Museum, then walk about 3–8 minutes to the ruins. The 25-minute block includes pickup, driving and that walk; traffic or temporary controls may take longer. Driver/signs determine the closest legal drop-off; no vehicle access promised to the façade.",
+        "details": {
+          "quickNote": "Use the Wharf convention-centre taxi stand or nearest legal pickup. Ask for St Paul’s / 大三巴 via the permitted Rua de D. Belchior Carneiro (高園街) taxi area near Macao Museum, then walk about 3–8 minutes to the ruins. The 25-minute block includes pickup, driving and that walk; traffic or temporary controls may take longer. Driver/signs determine the closest legal drop-off; no vehicle access promised to the façade.",
+          "timingType": "TARGET",
+          "recommended": "Taxi",
+          "transportOptions": [
+            {
+              "name": "Taxi",
+              "route": "Fisherman’s Wharf → Rua de D. Belchior Carneiro (高園街), near Macao Museum / nearest permitted drop-off → walk to Ruins of St Paul’s",
+              "approxDurationMinutes": 25,
+              "approxCost": "MOP50–80/car (estimate)",
+              "notes": "20–30 min door-to-door planning estimate, including pickup and final 3–8 min walk. Current map drive about 12 min / 3.7 km to the street; December traffic/access may differ. Actual meter applies."
+            },
+            {
+              "name": "Walk — slower alternative",
+              "route": "Fisherman’s Wharf → historic-centre streets → Ruins of St Paul’s",
+              "approxDurationMinutes": 45,
+              "approxCost": "MOP0 (Free)",
+              "notes": "About 35–45 min estimated, with crossings/crowds; requires retiming and is not the scheduled 25-minute transfer."
+            }
+          ],
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "place_id": "9cc203dc-265d-43a6-bd38-cb72e38d22a7",
+        "estimated_cost": 80,
+        "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Macau+Fisherman%E2%80%99s+Wharf&destination=Rua+de+D.+Belchior+Carneiro+Macao&travelmode=driving"
+      },
+      "before": {
+        "title": "17602d01b2124f78058a00ad7298cbf3485bbb5dbf7cb0b03f2a0dd2abde89d9",
+        "transport_instructions": "27618c3930f986c010384cd591b122926434b98d7731820ab8fce2816b5c7a9b",
+        "details": "116dcdc6bbe70a5483ceb003b45ff7e33c5e73c052c05266aa0359dbe048cdbc",
+        "place_id": "cb5a8b772993f97221492a525c74f35439e8a69adcdf663cefa23bac94f7ee83",
+        "estimated_cost": "f369cb89fc627e668987007d121ed1eacdc01db9e28f8bb26f358b7d8c4f08ac",
+        "maps_url": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "ab307caf-eb3c-4288-bea1-1fe447f96a6c",
+      "label": "Ruins of St Paul’s",
+      "values": {
+        "planned_start_time": "10:15:00",
+        "planned_end_time": "10:40:00",
+        "expected_duration_minutes": 25,
+        "sequence": 80,
+        "transport_instructions": "Façade and exterior photos; no Monte Fort climb. Leave at 10:40 for the historic streets towards St Dominic’s.",
+        "details": {
+          "quickNote": "Façade and exterior photos; no Monte Fort climb. Leave at 10:40 for the historic streets towards St Dominic’s.",
+          "timingType": "TARGET",
+          "attractionCost": "MOP0 (Free)",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "maps_url": "https://www.google.com/maps/search/?api=1&query=Ruins+of+St+Pauls+Macao"
+      },
+      "before": {
+        "planned_start_time": "74f056f1dfdf196b99cc378d921c37f11493e6e99802b27fe9a96c07b4c5e2d2",
+        "planned_end_time": "aa9a49b86068124c71ff6b7679c6de1e1fed3b790bb17b822a02eed8f12d398e",
+        "expected_duration_minutes": "9f14025af0065b30e47e23ebb3b491d39ae8ed17d33739e5ff3827ffb3634953",
+        "sequence": "9bdb2af6799204a299c603994b8e400e4b1fd625efdb74066cc869fee42c9df3",
+        "transport_instructions": "09dbc13b4faea15e6fc92c55af7438efcb723c5408cc08016c58c9ad52b292f3",
+        "details": "a0be6ee0b4174bf63bafe2df469a7a4ebbe1da2730566d1689faff8ffbc7671e",
+        "maps_url": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "85fa40ad-24e9-4d34-b00f-e3a440b4e23f",
+      "label": "Walk towards St Paul’s",
+      "values": {
+        "title": "Historic streets → St Dominic’s",
+        "planned_start_time": "10:40:00",
+        "planned_end_time": "11:00:00",
+        "sequence": 90,
+        "transport_instructions": "Follow the St Paul’s steps / Calçada de São Paulo → Travessa de São Paulo → Rua de São Paulo → Rua da Palha → Rua de São Domingos. About 450 m / 5–6 min direct walking; the 20-minute planning block includes browsing and crowds. No beef or beef broth.",
+        "details": {
+          "quickNote": "Follow the St Paul’s steps / Calçada de São Paulo → Travessa de São Paulo → Rua de São Paulo → Rua da Palha → Rua de São Domingos. About 450 m / 5–6 min direct walking; the 20-minute planning block includes browsing and crowds. No beef or beef broth.",
+          "timingType": "TARGET",
+          "recommended": "Walk",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "route": "Ruins of St Paul’s → Rua de São Paulo / Rua da Palha → St Dominic’s exterior",
+              "approxDurationMinutes": 20,
+              "approxCost": "MOP0 (Free)",
+              "notes": "Follow the St Paul’s steps / Calçada de São Paulo → Travessa de São Paulo → Rua de São Paulo → Rua da Palha → Rua de São Domingos. About 450 m / 5–6 min direct walking; the 20-minute planning block includes browsing and crowds. No beef or beef broth."
+            }
+          ],
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Ruins+of+St+Paul%E2%80%99s+Macao&destination=St+Dominic%E2%80%99s+Church+Macao&travelmode=walking"
+      },
+      "before": {
+        "title": "6512675dee4331b075e1a96958ca369f3fdb53f3f1cea3eddda304f5b43967de",
+        "planned_start_time": "b008e9e89e66da2f72bbfa07c5b08be4b07b8ffee61f114222622b272cce10b2",
+        "planned_end_time": "74f056f1dfdf196b99cc378d921c37f11493e6e99802b27fe9a96c07b4c5e2d2",
+        "sequence": "ad57366865126e55649ecb23ae1d48887544976efea46a48eb5d85a6eeb4d306",
+        "transport_instructions": "a6586c894fcf1839616c8b05c068f1bc4c7cdace8383a308b0ee4da07dc2b243",
+        "details": "3f06da1126c61d30fa41ded25e11d352170bebc3cd24d426ebcf5105c595ce31",
+        "maps_url": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "61dab2e7-ccc0-4118-87f4-da4398defaef",
+      "label": "St Dominic’s Church",
+      "values": {
+        "title": "St Dominic’s exterior",
+        "planned_start_time": "11:00:00",
+        "planned_end_time": "11:05:00",
+        "expected_duration_minutes": 5,
+        "sequence": 100,
+        "transport_instructions": "Five-minute exterior/photo stop only; no church interior or museum visit. Continue directly towards Senado at 11:05.",
+        "details": {
+          "quickNote": "Five-minute exterior/photo stop only; no church interior or museum visit. Continue directly towards Senado at 11:05.",
+          "timingType": "TARGET",
+          "attractionCost": "MOP0 (Free)",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        }
+      },
+      "before": {
+        "title": "aa9acde9a46a26c23bfd5b93cb3cef410be997496fe8f7fa29a79e4e7113c873",
+        "planned_start_time": "d5c3289b5ef64afc60eac1a486d5ec9405a8797fcf5b8900fe53c9755db033b4",
+        "planned_end_time": "b008e9e89e66da2f72bbfa07c5b08be4b07b8ffee61f114222622b272cce10b2",
+        "expected_duration_minutes": "e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb",
+        "sequence": "69f59c273b6e669ac32a6dd5e1b2cb63333d8b004f9696447aee2d422ce63763",
+        "transport_instructions": "ab65d9da172438db7c487b08f8649e039cb1760dd4d6dabddfa699efee159c2f",
+        "details": "18a8a5a83f744940f751ef705e19a48075b62ba6202b04fca3b8f70a380bba3f"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "0728455f-d0c7-5bfa-99af-0161be13a153",
+      "label": "St Dominic’s → Senado (one new short walking leg)",
+      "values": {
+        "itinerary_day_id": "c7b97815-7fbe-44ab-b71d-3b699f45d42d",
+        "date": "2026-12-27",
+        "title": "St Dominic’s → Senado",
+        "item_type": "transport",
+        "place_id": "1cd40527-c604-4943-ae13-7d4051984e94",
+        "planned_start_time": "11:05:00",
+        "planned_end_time": "11:10:00",
+        "expected_duration_minutes": 5,
+        "priority": "MUST",
+        "status": "PLANNED",
+        "sequence": 105,
+        "estimated_cost": 0,
+        "estimated_cost_currency": "MOP",
+        "transport_instructions": "Walk south through the pedestrian Largo de São Domingos / Largo do Senado connection. Current map: about 150 m / 2 min; allow 5 min for crowds. No taxi or bus needed.",
+        "maps_url": "https://www.google.com/maps/dir/?api=1&origin=St+Dominic%E2%80%99s+Church+Macao&destination=Senado+Square+Macao&travelmode=walking",
+        "details": {
+          "quickNote": "Walk south through the pedestrian Largo de São Domingos / Largo do Senado connection. Current map: about 150 m / 2 min; allow 5 min for crowds. No taxi or bus needed.",
+          "timingType": "TARGET",
+          "recommended": "Walk",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "route": "St Dominic’s exterior → pedestrian Largo do Senado → Senado Square",
+              "approxDurationMinutes": 5,
+              "approxCost": "MOP0 (Free)",
+              "notes": "2–5 min walking estimate, including crowd margin."
+            }
+          ],
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        }
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "0bc818c7-8998-41e9-8ecb-1d4eaf026669",
+      "label": "Senado Square",
+      "values": {
+        "planned_start_time": "11:10:00",
+        "planned_end_time": "11:25:00",
+        "expected_duration_minutes": 15,
+        "sequence": 110,
+        "transport_instructions": "Fifteen minutes for the square and exterior photos; the walk from St Dominic’s is already in the preceding 11:05 transfer. Lunch nearby at 11:25.",
+        "details": {
+          "quickNote": "Fifteen minutes for the square and exterior photos; the walk from St Dominic’s is already in the preceding 11:05 transfer. Lunch nearby at 11:25.",
+          "timingType": "TARGET",
+          "attractionCost": "MOP0 (Free)",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        }
+      },
+      "before": {
+        "planned_start_time": "81218f88a1a28d58bff1a68ce7b6334d1efda4b97fb0379e3fad1f995e5242eb",
+        "planned_end_time": "d5c3289b5ef64afc60eac1a486d5ec9405a8797fcf5b8900fe53c9755db033b4",
+        "expected_duration_minutes": "b7a56873cd771f2c446d369b649430b65a756ba278ff97ec81bb6f55b2e73569",
+        "sequence": "48449a14a4ff7d79bb7a1b6f3d488eba397c36ef25634c111b49baf362511afc",
+        "transport_instructions": "c9b0f238017dd7dcb54eacbb6c6a304cc2a39da4aa69264856c25e62b0918f0a",
+        "details": "f2e6dc1590875fe1c2816ba42eaa81269e3ce4c6a308b7e48bf36e04a63fb78b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "0fb29cd3-3faa-40ca-8de0-740ec8de088f",
+      "label": "Lunch near Senado",
+      "values": {
+        "planned_start_time": "11:25:00",
+        "planned_end_time": "12:05:00",
+        "expected_duration_minutes": 40,
+        "transport_instructions": "Simple paid lunch near Senado; this 40-minute block includes choosing a nearby place and any short local access walk. No beef or beef broth; follow Skypark’s food guidance before bungy.",
+        "details": {
+          "quickNote": "Simple paid lunch near Senado; this 40-minute block includes choosing a nearby place and any short local access walk. No beef or beef broth; follow Skypark’s food guidance before bungy.",
+          "timingType": "TARGET",
+          "dietaryNote": "No beef or beef broth.",
+          "planningAssumption": "Lunch follows Senado directly. No return walk from St Paul’s or duplicate heritage transfer. Leave at 12:05."
+        }
+      },
+      "before": {
+        "planned_start_time": "aa9a49b86068124c71ff6b7679c6de1e1fed3b790bb17b822a02eed8f12d398e",
+        "planned_end_time": "f990132f4ed557fc004d0708bed28b630d67e25bcf499cde08ad53778f1c1f0e",
+        "expected_duration_minutes": "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c",
+        "transport_instructions": "774f3a811f690bb16714275d02ff223fb1e5cd466ec3439c7ba364610795461a",
+        "details": "bf2d3c6bad402847193eb2c2b26c8d5d8fc9a0166aeeafe7ff890cbd1999a09b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "02be8b9f-01b4-55fa-be68-76e1f0ae8a92",
+      "label": "Walk to Lisboa area",
+      "values": {
+        "planned_start_time": "12:05:00",
+        "planned_end_time": "12:20:00",
+        "transport_instructions": "Walk via Avenida de Almeida Ribeiro → Avenida do Infante Dom Henrique → Avenida de Lisboa, using signed crossings. Google Maps currently gives about 950 m / 14 min for Senado → Grand Lisboa → original Hotel Lisboa; allow 15 min to the photo area, with the short link between exteriors within the photo stop. Estimate; actual lunch location and crowds may add time.",
+        "details": {
+          "quickNote": "Walk via Avenida de Almeida Ribeiro → Avenida do Infante Dom Henrique → Avenida de Lisboa, using signed crossings. Google Maps currently gives about 950 m / 14 min for Senado → Grand Lisboa → original Hotel Lisboa; allow 15 min to the photo area, with the short link between exteriors within the photo stop. Estimate; actual lunch location and crowds may add time.",
+          "timingType": "TARGET",
+          "recommended": "Walk",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "route": "Senado / nearby lunch → Av. de Almeida Ribeiro → Av. do Infante Dom Henrique → Grand Lisboa / original Lisboa area",
+              "approxDurationMinutes": 15,
+              "approxCost": "MOP0 (Free)",
+              "notes": "Walk via Avenida de Almeida Ribeiro → Avenida do Infante Dom Henrique → Avenida de Lisboa, using signed crossings. Google Maps currently gives about 950 m / 14 min for Senado → Grand Lisboa → original Hotel Lisboa; allow 15 min to the photo area, with the short link between exteriors within the photo stop. Estimate; actual lunch location and crowds may add time."
+            }
+          ],
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Senado+Square+Macao&destination=Hotel+Lisboa+Macao&travelmode=walking&waypoints=Grand+Lisboa+Macao"
+      },
+      "before": {
+        "planned_start_time": "f990132f4ed557fc004d0708bed28b630d67e25bcf499cde08ad53778f1c1f0e",
+        "planned_end_time": "0c6c1e382cf4092e3a2ba8f67aa194c74dab4533c2f7830901cf08b48fb745bb",
+        "transport_instructions": "e65844f039a8ced6d66e1800bf9fa1dd55b608ce85487d2a5d5c69d8ae1b8bdd",
+        "details": "dabd4724f8445fda4c701c25ef59d40829a5636bbb7c50807ba85a8f250b0f58",
+        "maps_url": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "27bf2136-7a78-57e4-b225-b770f7a8d4dd",
+      "label": "Grand Lisboa & Lisboa",
+      "values": {
+        "planned_start_time": "12:20:00",
+        "planned_end_time": "12:35:00",
+        "transport_instructions": "Exterior photos of lotus-shaped Grand Lisboa and nearby original Hotel Lisboa on the Peninsula, including the short walk between them. Exterior only; depart from the legal Lisboa taxi stand/pickup at 12:35. Grand Lisboa Palace in Cotai is a different property.",
+        "details": {
+          "quickNote": "Exterior photos of lotus-shaped Grand Lisboa and nearby original Hotel Lisboa on the Peninsula, including the short walk between them. Exterior only; depart from the legal Lisboa taxi stand/pickup at 12:35. Grand Lisboa Palace in Cotai is a different property.",
+          "timingType": "TARGET",
+          "priorityRule": "Shorten photos or browsing if delayed; preserve Tower access and operator check-in requirements.",
+          "attractionCost": "MOP0 for exterior sightseeing",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        }
+      },
+      "before": {
+        "planned_start_time": "0c6c1e382cf4092e3a2ba8f67aa194c74dab4533c2f7830901cf08b48fb745bb",
+        "planned_end_time": "aeac606e8020fe23aad8455d1da08cfbe0d8119556af6f3d8eecb9741ea5f54e",
+        "transport_instructions": "899f2a7299cbba93774c51b525844d69068168ed258c61a0ac4cb841757a5d1e",
+        "details": "ca8a4bc473aa01c72b5121ed27b6aaa983644464cf2be9d8da1a6257e76e3bc3"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "85489255-dbae-473c-bb0c-10870078d9ac",
+      "label": "Lisboa → Macau Tower",
+      "values": {
+        "planned_start_time": "12:35:00",
+        "planned_end_time": "13:00:00",
+        "transport_instructions": "Use the Grand Lisboa or original Hotel Lisboa taxi stand / legal pickup. Allow the full 25 minutes for walking to pickup, queue/wait, driving and reaching Skypark’s ticketing counter. Target Tower arrival by 13:00 or earlier; earlier arrival is buffer only. A 13:00 activity slot requires 12:30 check-in under current operator rules, so this table must be reconciled before booking.",
+        "details": {
+          "quickNote": "Use the Grand Lisboa or original Hotel Lisboa taxi stand / legal pickup. Allow the full 25 minutes for walking to pickup, queue/wait, driving and reaching Skypark’s ticketing counter. Target Tower arrival by 13:00 or earlier; earlier arrival is buffer only. A 13:00 activity slot requires 12:30 check-in under current operator rules, so this table must be reconciled before booking.",
+          "timingType": "TARGET",
+          "recommended": "Taxi",
+          "transportOptions": [
+            {
+              "name": "Taxi",
+              "route": "Grand Lisboa / original Hotel Lisboa taxi stand → Macau Tower → Skypark ticketing counter",
+              "approxDurationMinutes": 25,
+              "approxCost": "MOP35–60/car (estimate)",
+              "notes": "15–25 min door-to-door planning allowance including pickup/queue and final access. Actual meter/traffic wins. Target arrival 13:00; not sufficient for 12:30 check-in for a 13:00 activity."
+            },
+            {
+              "name": "Walk — requires earlier departure",
+              "route": "Lisboa area → public pavements and signed crossings towards Macau Tower → ticketing counter",
+              "approxDurationMinutes": 45,
+              "approxCost": "MOP0 (Free)",
+              "notes": "35–45 min estimate; cannot meet 13:00 arrival from a 12:35 departure. Not recommended for this schedule."
+            }
+          ],
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        },
+        "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Hotel+Lisboa+Macao&destination=Macau+Tower&travelmode=driving"
+      },
+      "before": {
+        "planned_start_time": "aeac606e8020fe23aad8455d1da08cfbe0d8119556af6f3d8eecb9741ea5f54e",
+        "planned_end_time": "6d6b0417f8cd1e2d0a9ad947a17bf59dc534f9e6c841578c7c8584608c6b70e5",
+        "transport_instructions": "5f61a4377bd8c22a913f675c91d781df78dabb4e81ead13dabed46680a4a406b",
+        "details": "19cc8647971c446a38551588f9480854ab29f16636535de3688bc0e813b045d5",
+        "maps_url": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "149f6251-d038-47ae-a2c0-eae5d94b8f84",
+      "label": "Macau Tower bungy",
+      "values": {
+        "title": "Macau Tower bungy + Skywalk",
+        "planned_start_time": "13:00:00",
+        "expected_duration_minutes": 180,
+        "transport_instructions": "Bungy ×1 requested for 13:00; Skywalk ×2 also planned. Both unbooked. Check the 12:30 counter requirement before purchase; retain the full Tower allowance through 16:00.",
+        "details": {
+          "carry": [
+            "Passports / required ID",
+            "Actual confirmation once booked",
+            "Comfortable clothing"
+          ],
+          "booking": "required",
+          "quickNote": "UNBOOKED: requested 27 Dec 13:00 bungy for Harshith (one person), plus Skywalk for both travellers. Skypark currently requires counter arrival 30 minutes before the activity: a 13:00 slot needs 12:30 check-in. The supplied heritage table targets Tower arrival around 13:00 and therefore does not meet that check-in requirement; reconcile the slot or morning before purchase. Confirm the order and compatible timing of both activities. Keep the Tower allowance through 16:00; early arrival is buffer, not an earlier jump or guaranteed earlier finish. Processing, queues, weather and two activities may run later.",
+          "timingType": "TARGET",
+          "eventStatus": "PLACEHOLDER — not booked",
+          "planningAssumption": "13:00–16:00 is the retained Tower planning block, not confirmed activity/finish times. An actual 13:00 slot needs 12:30 check-in; supplied morning timings need resolution before booking. Confirm sequencing for bungy ×1 and Skywalk ×2; no earlier hotel/evening assumed."
+        }
+      },
+      "before": {
+        "title": "98edda7560ca6a4f0c956fb083940f277e125e4015625ce1fa42aa5ddee58e7a",
+        "planned_start_time": "6d6b0417f8cd1e2d0a9ad947a17bf59dc534f9e6c841578c7c8584608c6b70e5",
+        "expected_duration_minutes": "9ae2bdd7beedc2e766c6b76585530e16925115707dc7a06ab5ee4aa2776b2c7b",
+        "transport_instructions": "d2a08f88e0003d29c9392a7a961e92e46481ab64a2c7223b850272bb24f2e0dd",
+        "details": "413f9016ae49651ac829b371ce2728812c1e288d1f0210f7f74bd363edef03e2"
+      }
+    },
+    {
+      "table": "bookings",
+      "id": "44ae113b-6301-4837-a0fc-7fa60b9b7e26",
+      "label": "Macau Tower Bungy",
+      "values": {
+        "title": "Macau Tower Bungy + Skywalk",
+        "starts_at": "2026-12-27T05:00:00+00:00",
+        "notes": "PLACEHOLDER — unbooked/unpaid preference: Sunday 27 Dec 13:00 UTC+8 bungy for Harshith (one person), plus Skywalk for both travellers. UNBOOKED: requested 27 Dec 13:00 bungy for Harshith (one person), plus Skywalk for both travellers. Skypark currently requires counter arrival 30 minutes before the activity: a 13:00 slot needs 12:30 check-in. The supplied heritage table targets Tower arrival around 13:00 and therefore does not meet that check-in requirement; reconcile the slot or morning before purchase. Confirm the order and compatible timing of both activities. Keep the Tower allowance through 16:00; early arrival is buffer, not an earlier jump or guaranteed earlier finish. Processing, queues, weather and two activities may run later. Actual activity times, availability, inclusions and total price remain unconfirmed."
+      },
+      "before": {
+        "title": "1223ca0f1987064a4b7f1ac19bf45ee2bed03d6a442df9edb8ec341664ef59ed",
+        "starts_at": "729e4e4446b55e9337f1e675424a1023d637b92b16487f9eaff43d73d8d822e2",
+        "notes": "faee12c2493e1b68825cd639095cfc3a871e15124df8021fa72621628e9b8caf"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "2c1032e2-4c2d-4c6e-94a3-6fe13a2fd2fd",
+      "label": "Book 14:00 Macau Tower Bungy + verify Meghana’s viewing access",
+      "values": {
+        "title": "Book Macau Tower: bungy ×1 + Skywalk ×2",
+        "description": "UNBOOKED. Requested bungy 27 Dec 13:00 for Harshith and Skywalk for both. Official 30-minute advance check-in means 12:30 for a 13:00 slot; the supplied heritage route arrives about 13:00, so resolve this conflict before booking. Confirm compatible activity order/times, both tickets and package inclusions. Retain the Tower allowance through 16:00; finish is not guaranteed."
+      },
+      "before": {
+        "title": "4838a415f5b3da58530842c9254ce1e77bf12c27053c1be696f6264d5b88c481",
+        "description": "928c336d3f2b7171bfb0ddcd15cfd3a21b0cc4d560457560c00d667f0e60fa7a"
+      }
+    },
+    {
+      "table": "itinerary_days",
+      "id": "c7b97815-7fbe-44ab-b71d-3b699f45d42d",
+      "label": "Macau • Heritage • Bungy • Cotai",
+      "values": {
+        "notes": "Buses: Google Maps for route/stop suggestions; DSAT Bus Travelling System for live tracking. Backup: Macao Smart Go. Check stop direction and diversions."
+      },
+      "before": {
+        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "5739bb16-1cff-5d02-bd75-e6eddc0ac1d6",
+      "label": "Macau transport — practical route and alternatives",
+      "values": {
+        "summary": "Wharf → St Paul’s taxi + walk · Local walks MOP0 · Bus tracking: DSAT / Smart Go",
+        "body": "All ranges are one-way planning estimates for two adults unless explicitly a published fare; actual meter, waiting, traffic, tolls and surcharges win. Keep HKD/MOP amounts in their original currency; use a real exchange rate if converting.\nHong Kong hotel → Sheung Wan: licensed taxi HKD180–260/car, 30–45 min; arrange 05:55 to target 06:40. Conditional MTR HKD15–25/person / HKD30–50/two, 45–60 min; not the early default without first-train verification.\nWharf → St Paul’s: taxi to the permitted Rua de D. Belchior Carneiro (高園街) taxi area near Macao Museum / nearest legal drop-off, then walk about 3–8 min to the ruins. Allow 25 min total (20–30 min estimate including pickup/drive/walk), MOP50–80/car estimated; not a taxi to the façade. DSAT lists a taxi stand here; temporary controls/signs and driver determine access. Walking the whole way needs about 35–45 min and retiming. Lisboa → Tower: taxi MOP35–60/car estimated, 25 min including pickup/wait and counter access, 12:35–13:00 target. Walk MOP0, 35–45 min, cannot meet that arrival without earlier departure. Tower → Asia remains MOP70–110/car, 20–30 min estimated.\nAsia → Galaxy walk free MOP0, 15–25 min to the correct lobby; taxi MOP25–45/car, 10–20 min. Galaxy → Venetian walk free MOP0, 15–20 min; taxi MOP25–45/car, 10–20 min. Venetian → Parisian and Parisian → Londoner: walk free MOP0, 15–20 min each. Londoner → MGM taxi MOP25–45/car, 15 min; walk free MOP0, 20–30 min. MGM → Wynn lake walk free MOP0, 15–20 min; taxi MOP25–45/car, 10–20 min. Wynn → Asia late taxi MOP45–75/car, 15–25 min. Pai Kok/token alternatives are in the LRT note.\nOptional published visitor shuttles, not an Asia Boutique service:\n• Taipa Village near Rua do Cunha ↔ Parisian: Fri–Sun 11:00–19:00 every 12–15 min, MOP0; allow 25–40 min door-to-door. Confirm exact stop. It goes to Parisian, so choosing it means reorder/reduce browsing, not a Parisian→Venetian→Parisian detour. No Monday service under this pattern.\n• Wynn Palace → Old Taipa Village → Lisboeta → Palace: Thu–Sun 12:00–21:00 every 30 min, MOP0. Village→Wynn goes via Lisboeta; confirm bay/direction and allow waiting/walks. No 23:15 return and no assumed 21:00 departure at every intermediate stop.\n• MGM Macau ↔ Tower ↔ MGM Cotai: 09:00–23:30 every 10–15 min; Tower stops only 11:00–21:00. MOP0, budget 30–45 min including wait. Useful only for a re-anchored Tower→MGM visit, not direct to Asia and no guaranteed 16:30 show arrival. Confirm bay/direction/capacity.\n• Wynn Palace → HZMB → Taipa Ferry → Airport → Palace: published loop about 30–40 min until 21:00. An airport visitor alternative only; not a direct hotel transfer or a reason to return to the former airport base.\n\nMacau bus apps: use Google Maps first for candidate routes, bus numbers, boarding/alighting stops and walking access. Check the exact stop code, direction/destination and current diversions in DSAT’s official Bus Travelling System (巴士報站; store name may say Bus Traveling System), then watch the live vehicle position / stops remaining and any displayed arrival estimate. Macao Smart Go (澳門出行), also by DSAT, is a useful backup and offers routes plus live bus information. Tracking/ETAs can lag or fail; neither app guarantees punctuality. Recheck posted stop information and leave waiting margin. This is practical guidance for optional bus use, not a replacement for the morning taxis. Install/update from the official DSAT-linked store listing before travelling.\nOfficial DSAT: https://www.dsat.gov.mo/dsat/index.aspx?lang=en\nSmart Go (DSAT): https://play.google.com/store/apps/details?id=mo.gov.dsat.dis.travel"
+      },
+      "before": {
+        "summary": "4de2027bb47ba0724f38157ed27150331cb0c4314dc9cdef49b7733daeb1fc7d",
+        "body": "a7e96acb6d27257f71d51addc9715367eba40e5922bacb489a004e7fc50e46c6"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "5f6aa17f-2995-430b-ac74-dfd13f467783",
+      "label": "Macau overnight essentials — 27–28 Dec",
+      "values": {
+        "summary": "Wharf → St Paul’s → Senado · Tower 13:00 arrival · Bungy ×1 + Skywalk ×2 unbooked",
+        "body": "Planned overnight Sunday 27 to Monday 28 December 2026, UTC+8. Asia Boutique Inn, 146 Rua Correia da Silva, Taipa, beside Rua do Cunha, is proposed/unbooked/unpaid. INR6,500 is a user quote for one room for two, unverified. Check all-in taxes, room type, cancellation, early checkout and late-return access before purchase. Listing says no breakfast; buy ahead for Monday 06:45 breakfast/checkout. Keep the confirmed Hong Kong room and main luggage; small overnight bag only.\nOutbound: 27 Dec 07:30 TurboJET Sheung Wan → Outer Harbour, about 60 min. Taxi 05:55, reach Shun Tak around 06:40. Current published weekend daytime economy HKD212/person, HKD424/two. Return: 28 Dec 09:00 Cotai Water Jet Taipa → Sheung Wan, about 60 min; standard weekday daytime Cotai Class MOP192/person, MOP384/two. Both remain placeholders; published patterns are not December ticket inventory. Follow actual cutoffs.\nUNBOOKED: requested 27 Dec 13:00 bungy for Harshith (one person), plus Skywalk for both travellers. Skypark currently requires counter arrival 30 minutes before the activity: a 13:00 slot needs 12:30 check-in. The supplied heritage table targets Tower arrival around 13:00 and therefore does not meet that check-in requirement; reconcile the slot or morning before purchase. Confirm the order and compatible timing of both activities. Keep the Tower allowance through 16:00; early arrival is buffer, not an earlier jump or guaranteed earlier finish. Processing, queues, weather and two activities may run later.\nCarry both passports, valid Hong Kong re-entry documents, actual confirmations once booked and small MOP cash. Verify data for BOTH 27 and 28 Dec, including activation/expiry. Preserve Macau Money / Transport Payments guidance. No beef or beef broth.\nMorning: Wharf 09:15–09:50 → taxi plus final walk 09:50–10:15 → St Paul’s 10:15–10:40 → historic streets/browsing towards St Dominic’s 10:40–11:00 → St Dominic’s exterior only 11:00–11:05 → walk to Senado 11:05–11:10 → Senado 11:10–11:25 → lunch nearby 11:25–12:05 → walk to Grand Lisboa/original Lisboa 12:05–12:20 → exterior photos 12:20–12:35 → taxi including pickup/wait to Tower 12:35–13:00. Walking estimates checked on Google Maps: St Paul’s → St Dominic’s about 450 m / 5–6 min direct (20 min includes browsing), St Dominic’s → Senado about 150 m / 2 min (5 min allowed), Senado → both Lisboa properties about 950 m / 14 min. Crossings and crowds may add time; avoid backtracking and interior detours.\nEvening: Asia → Galaxy (two lobbies) → Venetian/dinner → Parisian → Londoner → MGM Cotai → Wynn fountains → Asia. This is a long day. Protect meals, bungy and ferry buffers; shorten browsing/gaming-floor looks first, then skip Londoner show waiting and reach MGM/Wynn earlier."
+      },
+      "before": {
+        "summary": "0a8f25840a7d02691e19344488b1e678486b36acf86ce61d44c05ab617cbe8a4",
+        "body": "c236e64ac398e8c9315efc8ef1953cfd42fd7b97512126bc3246c7bddda74873"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "81ad0233-87b6-5441-8357-1ba14cd152ae",
+      "label": "Pandas and optional resort substitutions",
+      "values": {
+        "body": "Pandas are an untimed early-finish branch, not an extra guaranteed attraction. Seac Pai Van pavilion normally closes Mondays; Sunday afternoon closes 17:00 with last entry 16:45. Recheck maintenance/holiday admission. Only if completely done with BOTH bungy and Skywalk around 14:30–15:00, taxi directly to the park allowing 25–35 min driving/queue, view 45–60 min, then hotel. If done after about 15:15, skip. Choosing pandas must reduce a resort block or omit a show. No assumed earlier finish from the morning optimisation; no guaranteed Tower activity finish, panda activity or sightings.\nMonte Fort stays unscheduled/optional; neither traveller is interested. Golden Reel, Grand Lisboa Palace in Cotai, MGM Macau on the Peninsula, Wynn Macau, Studio City/teamLab and extra properties are substitutions only, not additional timed stops. Grand Lisboa/original Hotel Lisboa are different Peninsula properties and are in the morning core. MGM Cotai and both Galaxy shows are now core evening visits; do not silently omit them. Never imply all Macau casinos fit in one evening."
+      },
+      "before": {
+        "body": "fdabfe3d5012d5c96651d54e8bd739a476fa8e6794832968253edc44800e7af9"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "c2f40516-432b-5aa3-9b54-1107211dd769",
+      "label": "Macau source links and rechecks",
+      "values": {
+        "summary": "31 Oct heritage revision · Walking/taxi access estimates · Resolve Tower check-in before booking",
+        "body": "Revised 29 October 2026, Hong Kong/Macau UTC+8. Operator patterns and current standard fares are not 27–28 December seat inventory. Taxi/LRT allowances are planning estimates; actual meter/traffic/fare selector wins. Hotel INR6,500 is an unverified user quote. Recheck 1–2 weeks before departure and before purchase: ferry tickets/cutoffs, hotel taxes/cancellation/early checkout/late access/no-breakfast plan, both Galaxy lobbies, MGM dolphin versus current garden show, festive lighting/deck closure, village shuttle stops/directions and Pai Kok/last-train departures.\nIndependently opened: TurboJET April 2026 fare table, Cotai current schedule/fare page, Galaxy Diamond/Crystal pages, MGM current garden-show page. Crystal show timing and hotel details also follow the supplied revision and need holiday reconfirmation; no live ticket inventory checked.\nhttps://www2.turbojet.com.hk/travel-with-us-sea-ferry/\nhttps://www.cotaiwaterjet.com/ferry-schedule/hongkong-macau-taipa\nhttps://www.fishermanswharf.com.mo/visit-us/\nhttps://www.fishermanswharf.com.mo/roman-amphitheatre/\nhttps://www.macaotourism.gov.mo/en/accommodation/asia-boutique-inn/?class=2-star-guest-house\nhttps://us.trip.com/hotels/v2/macau-hotel-detail-1771323/asia-boutique-inn/\nhttps://www.taipavillagemacau.com/getting-here/\nhttps://www.parisianmacao.com/about-us/getting-here.html\nhttps://www.parisianmacao.com/amenities/eiffel-tower.html\nhttps://www.londonermacao.com/macau-attractions.html\nhttps://www.wynnresortsmacau.com/en/wynn-palace/experiences/entertainment/performance-lake-wp\nhttps://www.wynnresortsmacau.com/en/wynn-palace/shuttle-bus\nhttps://www.mlm.com.mo/en/route.html\nhttps://www.skyparkmacau.com/activities/bungy\nhttps://www.macaotourism.gov.mo/en/shows-and-entertainment/family-fun/macao-giant-panda-pavilion\nhttps://www.galaxymacau.com/entertainment/galaxy-macau-diamond-show/\nhttps://www.galaxymacau.com/entertainment/crystal-lobby/\nhttps://www.mgm.mo/en/entertainment/happening/enchanted-garden-odyssey\nhttps://www.macaotourism.gov.mo/en/shows-and-entertainment/family-fun/sea-odyssey-mgm-cotai\nhttps://www.mgm.mo/en/cotai/entertainment/sea-odyssey\nhttps://www.mgm.mo/en/visit/mgm-macau\nhttps://www.grandlisboa.com/en/getting-here\nhttps://www.macaotourism.gov.mo/en/shows-and-entertainment/gaming\nhttps://bo.io.gov.mo/bo/i/2018/52/lei17.asp\nhttps://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1610600672&fid=9898\nhttps://www.td.gov.hk/en/transport_in_hong_kong/public_transport/taxi/taxi_fare_of_hong_kong/index.html\nhttps://www.mlm.com.mo/en/general_ticket.html\nhttps://www2.turbojet.com.hk/announcement/fare-adjustment-effective-from-april-25-2026/\nhttps://www.allinmedia.com.hk/2024/06/20/macau-casinos-tighten-distribution-of-free-snacks-and-drinks-some-items-only-redeemable-with-gaming-loyalty-points/\nhttps://www.tungwah.org.hk/en/heritage/historical-architecture/man-mo-temple/opening-and-address/\nhttps://www.openrice.com/en/hongkong/r-luk-on-kui-sheung-wan-guangdong-r848035\n\n31 October heritage revision: St Paul’s before St Dominic’s/Senado; all supplied morning times retained and about 13:00 Tower arrival. Bungy 13:00 is an unbooked preference plus Skywalk for both; official 30-minute advance arrival requires 12:30 and conflicts with the supplied route. Resolve before buying. Google Maps routes were opened for practical walking/driving checks; times/distances are current estimates, not December traffic guarantees. DSAT’s current taxi stand list includes Rua de D. Belchior Carneiro / 高園街 near Macao Museum, the Wharf convention centre, Grand Lisboa/Hotel Lisboa and Tower. Confirm temporary controls on the day. Bus app names and live-information functions checked against DSAT and official app information.\nhttps://www.dsat.gov.mo/dsat/taxi_station_info.aspx\nhttps://www.skyparkmacau.com/activities/skywalk\nhttps://www.dsat.gov.mo/dsat/bus_news_detail.aspx?a_id=C75A52BBCAD0757744B6CD10FE3CC80A\nhttps://www.dsat.gov.mo/dsat/index.aspx?lang=en\nhttps://play.google.com/store/apps/details?id=mo.gov.dsat.dis.travel"
+      },
+      "before": {
+        "summary": "c3b21d9df7dd24bd8e8c4ce76fa58ecc54a31b48df31d6818b3de63e535729cd",
+        "body": "f69d370be60323bc159562e6c833b5796c3909c7a44771a99c681b9ddda0c09a"
+      }
+    }
+  ]
+}
