@@ -126,7 +126,7 @@ Today may derive one short contextual reminder from the same Guide data. For exa
 
 ## Macau revisions (29–31 October 2026)
 
-The latest focused revision uses `data/updates/macau-heritage-2026-10-31.json` and the scoped Supabase updater, on top of the 29 October route. It reorders only the 27 December heritage morning, updates the Tower's unbooked bungy/Skywalk preference, and adds bus-app guidance. It reuses existing IDs, adds one missing short pedestrian transfer, protects confirmed bookings/history, and never writes attachments, accounts, budgets or financial transactions. Each revision is prepared from fresh live data; private snapshots and credentials are not committed.
+The 31 October updates build on the 29 October route: `macau-heritage-2026-10-31.json` reorders the heritage morning and adds bus-app guidance; the follow-up `macau-tower-checkin-2026-10-31.json` shortens that morning to meet the Tower check-in requirement. The default scoped updater now checks/applies the follow-up against the current live trip. The revisions reuse existing IDs, add one missing short pedestrian transfer, protect confirmed bookings/history, and never write attachments, accounts, budgets or financial transactions. Each revision is prepared from fresh live data; private snapshots and credentials are not committed.
 
 ```bash
 pnpm update:macau                              # read-only plan against live state
@@ -135,7 +135,7 @@ pnpm update:macau --apply --backup=/tmp/tripboard-before-macau.json
 
 Use a fresh private backup path for an apply. Each edited field must still match its reviewed old value or already match the desired value. Any newer conflict stops preflight before writes; concurrent changes are protected by database version/timestamp comparisons (and edited-field comparisons for Guide notes). Server triggers manage versions. New IDs are stable; repeating a completed update is a no-op. An interrupted apply can be rerun after reviewing a fresh dry run. Deletions are limited to reviewed, uncompleted obsolete transfers and happen last.
 
-This update is independent of the older developer seed. Do not run the full seed/itinerary/Guide sync to apply it: those commands use older planning content and can replace live edits. Asia Boutique Inn, both ferries and Tower activities remain placeholders. The INR6,500 hotel quote and itinerary travel allowances are estimates, never expenses. Travel cards use the existing rendered transport schema, with numeric scoped fares and exact matching recommendations. The supplied 31 October morning reaches the Tower at 13:00, while an actual 13:00 activity requires 12:30 check-in; that conflict remains explicit before booking. See the [29 October route report](docs/macau-update-2026-10-29.md) and [31 October heritage report](docs/macau-heritage-update-2026-10-31.md).
+This update is independent of the older developer seed. Do not run the full seed/itinerary/Guide sync to apply it: those commands use older planning content and can replace live edits. Asia Boutique Inn, both ferries and Tower activities remain placeholders. The INR6,500 hotel quote and itinerary travel allowances are estimates, never expenses. Travel cards use the existing rendered transport schema, with numeric scoped fares and exact matching recommendations. The user selected a shorter heritage morning: target the Tower counter at 12:25 and check in by 12:30 for the requested 13:00 bungy. Bungy ×1 and Skywalk ×2 remain unbooked, and the 16:00 finish allowance and all later plans remain unchanged. See the [29 October route report](docs/macau-update-2026-10-29.md) and [31 October heritage report](docs/macau-heritage-update-2026-10-31.md).
 
 ### Historical transport correction (28 October)
 
@@ -146,7 +146,7 @@ pnpm update:macau:transport                    # read-only plan
 pnpm update:macau:transport --apply --backup=/tmp/tripboard-before-transport-boxes.json
 ```
 
-The 28 October manifests, header correction and 29 October manifest are historical. The default `update:macau` command applies/checks the focused 31 October revision. Do not apply an older manifest over newer live content; reviewed-value checks reject conflicting changes rather than reverting the revised data.
+The 28 October manifests, header correction, 29 October manifest and initial 31 October heritage manifest are historical. The default `update:macau` command applies/checks the focused 31 October revision. Do not apply an older manifest over newer live content; reviewed-value checks reject conflicting changes rather than reverting the revised data.
 
 ## Search the current section
 
