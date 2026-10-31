@@ -6393,6 +6393,12 @@ html[data-theme="dark"] .guide-warning p {
   .detail-grid .detail-wide {
     grid-column: auto;
   }
+  .detail-actions {
+    flex-wrap: wrap;
+  }
+  .detail-actions .button {
+    flex: 1 1 auto;
+  }
 }
 
 /* Plan row actions are compact labels, not reading copy. Keep their intended
