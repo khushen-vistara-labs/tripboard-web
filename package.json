@@ -22,6 +22,7 @@
     "sync:trip-content": "node --env-file=.env.local --import tsx scripts/seed-trip.ts --sync-trip-content",
     "update:macau:transport": "node --env-file=.env.local --import tsx scripts/update-macau.ts --manifest=macau-transport-2026-10-28.json",
     "update:macau": "node --env-file=.env.local --import tsx scripts/update-macau.ts",
+    "update:roast-meats": "node --env-file=.env.local --import tsx scripts/update-macau.ts --manifest=roast-meats-2026-11-01.json",
     "sync:trip-guide": "node --env-file=.env.local --import tsx scripts/sync-trip-guide.ts",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern .vercel --ignore-pattern .output",
     "db:generate": "drizzle-kit generate"

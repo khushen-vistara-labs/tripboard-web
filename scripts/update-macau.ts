@@ -4,7 +4,7 @@ import { equal, planUpdate, type Snapshot, type Update, type Row } from "./lib/s
 
 const manifestArg = process.argv.find((arg) => arg.startsWith("--manifest="));
 const manifest = manifestArg?.slice("--manifest=".length) ?? "macau-tower-checkin-2026-10-31.json";
-if (!["macau-2026-10-28.json", "macau-transport-2026-10-28.json", "macau-headers-2026-10-28.json", "macau-2026-10-29.json", "macau-heritage-2026-10-31.json", "macau-tower-checkin-2026-10-31.json"].includes(manifest)) throw new Error("Unknown reviewed Macau update manifest");
+if (!["macau-2026-10-28.json", "macau-transport-2026-10-28.json", "macau-headers-2026-10-28.json", "macau-2026-10-29.json", "macau-heritage-2026-10-31.json", "macau-tower-checkin-2026-10-31.json", "roast-meats-2026-11-01.json"].includes(manifest)) throw new Error("Unknown reviewed trip update manifest");
 const update = JSON.parse(await readFile(new URL(`../data/updates/${manifest}`, import.meta.url), "utf8")) as Update;
 const required = (name: string) => { const value = process.env[name]; if (!value) throw new Error(`Missing ${name}`); return value; };
 const client = createClient(required("SUPABASE_URL"), required("SUPABASE_SERVICE_ROLE_KEY"), { auth: { persistSession: false, autoRefreshToken: false } });

@@ -1,0 +1,281 @@
+{
+  "tripId": "73c7883d-cff1-4abd-a0b0-ec8a5a543e1f",
+  "timezone": "Asia/Hong_Kong",
+  "changes": [
+    {
+      "table": "places",
+      "id": "5c8d0e7f-c553-55dc-8d93-7f5a8e2b7d34",
+      "label": "Chung Wah dinner restaurant",
+      "match": {
+        "name": "Chung Wah Roast Goose"
+      },
+      "values": {
+        "name": "Chung Wah Roast Goose",
+        "address": "G/F, 497A Nathan Road, Yau Ma Tei, Kowloon, Hong Kong",
+        "neighbourhood": "Yau Ma Tei",
+        "category": "Restaurant",
+        "priority": "MUST",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Chung%20Wah%20Roast%20Goose%20%E4%B8%AD%E8%8F%AF%E7%87%92%E9%B5%9D%E5%82%B3%E6%89%BF%20497A%20Nathan%20Road%20Hong%20Kong",
+        "opening_hours_notes": "Published regular hours: 10:00–22:00 daily (OpenRice, checked 1 Nov 2026). Opening hours do not guarantee goose stock at 19:00; recheck evening batches and holiday service.",
+        "notes": "29 Dec dinner after Lantau, 19:00–20:30 in the existing dinner slot. Prioritise roast goose rice meals and share so both can taste; add char siu or crispy pork only if available and good value. HK$160–200 total for two is a planning estimate, not a current menu quote. Approx. 170 m / 2 min mapped from Bridal Tea House via Arthur Street and Man Ming Lane; allow 3–5 min door to door. Near Yau Ma Tei Exit C. No beef or beef broth, including optional soup.",
+        "expected_duration_minutes": 90
+      }
+    },
+    {
+      "table": "places",
+      "id": "03bfceea-49a4-56fd-95e7-5ff8fbd97d5c",
+      "label": "Ki’son Mong Kok suggested crawl stop",
+      "match": {
+        "name": "Ki’son Roasted Goose — Mong Kok Road"
+      },
+      "values": {
+        "name": "Ki’son Roasted Goose — Mong Kok Road",
+        "address": "G/F, 34 Mong Kok Road, Mong Kok, Kowloon, Hong Kong",
+        "neighbourhood": "Mong Kok",
+        "category": "Restaurant",
+        "priority": "WANT",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Kison%20Roasted%20Goose%20%E6%A3%8B%E5%AD%90%E7%87%92%E9%B5%9D%2034%20Mong%20Kok%20Road%20Hong%20Kong",
+        "opening_hours_notes": "Published regular hours: 10:00–22:00 daily (OpenRice, checked 1 Nov 2026). New Year’s Day opening and meat availability are unconfirmed; recheck.",
+        "notes": "Suggested stop inside the existing 1 Jan 19:00–21:00 food crawl. Order whichever roast meats remain, ideally one shared char siu + crispy roast pork belly combination rice. Request 半肥瘦叉燒, half-fat, half-lean sweet barbecued pork; 燒肉 / 燒腩仔 is crispy roast pork belly. HK$70–90 total is an estimate for one shared tasting plate, not two full meals. Foodpanda Mong Kok online base prices before promotions: goose rice from HK$70; two-meat rice from HK$70; goose + one meat rice from HK$75. Selection supplements may apply. These are not verified dine-in prices or Yau Ma Tei branch prices. Near Mong Kok Exit B3 (published 3 min walk). From Bridal Tea House: about 1.3 km / 19 min mapped; allow 20–25 min. Skip this stop if all three meats were already tasted. No beef or beef broth.",
+        "expected_duration_minutes": 25
+      }
+    },
+    {
+      "table": "places",
+      "id": "1118005f-32b5-52c4-89e0-ba871843a2e1",
+      "label": "Ki’son near-hotel fallback",
+      "match": {
+        "name": "Ki’son Roasted Goose — Yau Ma Tei"
+      },
+      "values": {
+        "name": "Ki’son Roasted Goose — Yau Ma Tei",
+        "address": "Shops B–C, G/F, Mong Kok Building, 546 Nathan Road, Yau Ma Tei, Kowloon, Hong Kong",
+        "neighbourhood": "Yau Ma Tei",
+        "category": "Restaurant",
+        "priority": "OPTIONAL",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=%E6%A3%8B%E5%AD%90%E7%87%92%E9%B5%9D%20%E6%B2%B9%E9%BA%BB%E5%9C%B0%20546%20Nathan%20Road%20Hong%20Kong",
+        "opening_hours_notes": "Opening hours, 29 Dec evening stock and 1 Jan holiday service need reconfirming for this branch; do not transfer Mong Kok branch hours or prices to it.",
+        "notes": "Nearby fallback if Chung Wah has no goose, and an alternative to the Mong Kok branch for remaining pork tastings. These are alternatives, not two required visits. Near Yau Ma Tei Exit A2 (published 1 min walk). Chung Wah → this branch: about 230 m / 4 min mapped via Nathan Road; allow 5–8 min for crossings. Walk, HK$0. Confirm the displayed dine-in price and whether sharing is accepted; takeaway can suit a shared tasting. No beef or beef broth, including optional soup."
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "fdfbf883-cd20-415c-b244-7243cb9f4483",
+      "label": "Reuse roast goose food checklist item",
+      "before": {
+        "priority": "e6dc3967ddca95b12f6a15d52f979559c6b99bef27f3ea452921efbf88f47299",
+        "planned_day": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "linked_place_id": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "linked_itinerary_item_id": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      },
+      "values": {
+        "priority": "MUST",
+        "planned_day": "2026-12-29",
+        "linked_place_id": "5c8d0e7f-c553-55dc-8d93-7f5a8e2b7d34",
+        "linked_itinerary_item_id": "cb34c752-eea4-49b7-9810-771990e304c9",
+        "description": "Primary opportunity: 29 Dec 19:00–20:30 Chung Wah dinner, G/F 497A Nathan Road. Share reasonably priced goose rice meals so both travellers taste it; Ki’son Yau Ma Tei is a fallback only if open and stocked. Can complete independently at an earlier optional 25 Dec meal or another restaurant. No beef or beef broth, including optional soup.",
+        "notes": "29 Dec: Chung Wah dinner. Both try goose; Ki’son Yau Ma Tei if unavailable. Tick only once tasted."
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "4a94b703-a269-5aa2-925f-ab6a8cdddc09",
+      "label": "Try half-fat, half-lean char siu",
+      "match": {
+        "kind": "FOOD",
+        "title": "Try half-fat, half-lean char siu"
+      },
+      "values": {
+        "title": "Try half-fat, half-lean char siu",
+        "kind": "FOOD",
+        "priority": "WANT",
+        "target_count": 1,
+        "completed_count": 0,
+        "status": "PLANNED",
+        "planned_day": "2027-01-01",
+        "linked_place_id": "03bfceea-49a4-56fd-95e7-5ff8fbd97d5c",
+        "linked_itinerary_item_id": "02ac4ac7-ca6b-47e7-a035-d7c6135b8ccc",
+        "notes": "29 Dec or 1 Jan: 半肥瘦叉燒 (sweet barbecued pork). Share a combo rice; tick independently.",
+        "description": "Taste at Chung Wah on 29 Dec if good value, or at Ki’son inside the 1 Jan 19:00–21:00 crawl. Ask for 半肥瘦叉燒 — half-fat, half-lean char siu, sweet barbecued pork. One shared char siu + crispy pork combination rice can cover both pork tastings affordably. The meats can be tried on different dates or at different restaurants. No beef / no beef broth, including optional soup.",
+        "sort_order": 62
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "5a1a1085-1c44-559e-ae8a-15dd70d8b1be",
+      "label": "Try crispy roast pork belly",
+      "match": {
+        "kind": "FOOD",
+        "title": "Try crispy roast pork belly"
+      },
+      "values": {
+        "title": "Try crispy roast pork belly",
+        "kind": "FOOD",
+        "priority": "WANT",
+        "target_count": 1,
+        "completed_count": 0,
+        "status": "PLANNED",
+        "planned_day": "2027-01-01",
+        "linked_place_id": "03bfceea-49a4-56fd-95e7-5ff8fbd97d5c",
+        "linked_itinerary_item_id": "02ac4ac7-ca6b-47e7-a035-d7c6135b8ccc",
+        "notes": "29 Dec or 1 Jan: 燒肉 / 燒腩仔 (crispy roast pork belly). Tick independently, even at a different meal.",
+        "description": "Taste at Chung Wah on 29 Dec if available and good value, or at Ki’son inside the 1 Jan 19:00–21:00 crawl. 燒肉 / 燒腩仔 is crispy roast pork belly. Share a pork-combination rice plate; do not require a large separate platter or all three meats in one meal. Complete independently whenever tasted. No beef / no beef broth, including optional soup.",
+        "sort_order": 63
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "2f7ce255-9265-564e-b8a7-0c402aa368f1",
+      "label": "Pre-trip roast-meat checks",
+      "match": {
+        "title": "Recheck roast-meat prices and availability"
+      },
+      "values": {
+        "title": "Recheck roast-meat prices and availability",
+        "kind": "OTHER",
+        "priority": "MUST",
+        "target_count": 1,
+        "completed_count": 0,
+        "status": "PLANNED",
+        "due_date": "2026-12-15",
+        "linked_place_id": "5c8d0e7f-c553-55dc-8d93-7f5a8e2b7d34",
+        "notes": "Before travel: check Chung Wah prices, 19:00 goose stock / fresh-batch timing and whether reservation or preorder is useful. Check Ki’son’s 1 Jan opening, meats and sharing / minimum orders.",
+        "description": "Reconfirm current Chung Wah dine-in prices, evening goose stock and fresh-batch timing for 29 Dec; decide whether reservation or preorder is useful. Recheck Ki’son Mong Kok for New Year’s Day opening, roast-meat availability, selection supplements and one-plate sharing / minimum orders. Check the Yau Ma Tei branch separately if using the fallback. Regular daily hours do not confirm holiday service or stock.",
+        "sort_order": 64
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "cb34c752-eea4-49b7-9810-771990e304c9",
+      "label": "Reuse 29 December dinner row",
+      "before": {
+        "title": "70d3dbeca3cf005f88f1c9bc612ef08a84d16d43dc0b31ca1b59254a042adc48",
+        "priority": "e6dc3967ddca95b12f6a15d52f979559c6b99bef27f3ea452921efbf88f47299",
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "place_id": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "checklist_item_id": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "maps_url": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "transport_instructions": "d4a757981996138b9f6bf5dadf2dc06c4bab6b14ba3d9429373b775e409dd9c0",
+        "details": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      },
+      "values": {
+        "title": "Chung Wah roast goose dinner",
+        "priority": "MUST",
+        "description": "Roast goose rice meals for two after Lantau; a short walk near the hotel.",
+        "place_id": "5c8d0e7f-c553-55dc-8d93-7f5a8e2b7d34",
+        "checklist_item_id": "fdfbf883-cd20-415c-b244-7243cb9f4483",
+        "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Yau%20Ma%20Tei%20MTR%20Exit%20C%2C%20Hong%20Kong&destination=Chung%20Wah%20Roast%20Goose%2C%20497A%20Nathan%20Road%2C%20Hong%20Kong&travelmode=walking",
+        "transport_instructions": "After returning from Tung Chung to Yau Ma Tei, walk from Exit C to Chung Wah, G/F 497A Nathan Road. Alternatively drop bags at Bridal Tea House, 6 Arthur Street, then walk via Arthur Street and Man Ming Lane. Use 19:00–20:30 for dinner and a relaxed evening. Goose is the priority; share rice meals, with char siu or crispy pork only if available and good value. No beef or beef broth, including optional soup.",
+        "details": {
+          "timingType": "FLEXIBLE",
+          "recommended": "Walk from Exit C",
+          "transportOptions": [
+            {
+              "name": "Walk from Exit C",
+              "route": "Yau Ma Tei MTR Exit C → Chung Wah, G/F 497A Nathan Road",
+              "approxDurationMinutes": 5,
+              "approxCost": "HK$0",
+              "notes": "Published as about 1 minute from Exit C; allow 3–5 minutes door to door for finding the exit and shop. Remain near Man Ming Lane / Nathan Road; follow signs and use crossings."
+            },
+            {
+              "name": "Walk from hotel",
+              "route": "Bridal Tea House, 6 Arthur Street → Arthur Street / Man Ming Lane → Chung Wah",
+              "approxDurationMinutes": 5,
+              "approxCost": "HK$0",
+              "notes": "About 170 m / 2 minutes mapped; allow 3–5 minutes walking after any bag drop or rest."
+            }
+          ],
+          "quickNote": "Roast goose is the must-try. Start with reasonably priced rice meals for two and share so both taste it. Consider goose with char siu or crispy pork if available and good value; do not force all three meats into this meal or buy large separate platters. Char siu is sweet barbecued pork; request 半肥瘦叉燒 (half-fat, half-lean). 燒肉 / 燒腩仔 is crispy roast pork belly. Any remaining pork tasting can wait until 1 Jan.",
+          "operatingHours": "Published regular hours 10:00–22:00 daily. Being open at 19:00 does not guarantee goose stock or a fresh batch.",
+          "costStatus": "Planning estimate: HK$160–200 total for two. Current dine-in menu prices are unverified; this is not a quotation.",
+          "planningAssumption": "This uses the existing dinner slot and dinner allowance. Do not count it as a second dinner. A third-party guide reports an approximately HK$80 solo goose-and-crispy-pork set; its current contents and price remain unverified.",
+          "fallback": "If goose is unavailable, walk to Ki’son, 546 Nathan Road near Exit A2, subject to opening and stock. About 230 m / 4 minutes mapped; allow 5–8 minutes including crossings, HK$0. This is an alternative to Chung Wah, not an extra compulsory meal.",
+          "hotelReturn": "Walk back to Bridal Tea House via Man Ming Lane and Arthur Street: about 170 m, allow 3–5 minutes, HK$0. The rest of the evening stays free.",
+          "dietaryNote": "No beef and no beef broth, including any complimentary or optional soup. Ask staff to confirm; skip soup if unclear.",
+          "hoursStatus": "Recheck current prices, evening goose stock / fresh-batch timing, and whether a reservation or preorder is useful before travel."
+        }
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "02ac4ac7-ca6b-47e7-a035-d7c6135b8ccc",
+      "label": "Keep Ki’son within 1 January food crawl",
+      "before": {
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "checklist_item_id": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "maps_url": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "transport_instructions": "052a75444ac56b9df2db14d0042a06d1b505034a6177e8588aa3739eca0c2e29",
+        "details": "488e5a830f7dd4ee30b3a193438573e747f116c9efebdc5f5d10ae428173fa83"
+      },
+      "values": {
+        "description": "Small shared tastings; Ki’son is an optional stop for any roast meats still untasted.",
+        "checklist_item_id": "4a94b703-a269-5aa2-925f-ab6a8cdddc09",
+        "maps_url": "https://www.google.com/maps/dir/?api=1&origin=Bridal%20Tea%20House%20Hotel%2C%206%20Arthur%20Street%2C%20Hong%20Kong&destination=Kison%20Roasted%20Goose%2C%2034%20Mong%20Kok%20Road%2C%20Hong%20Kong&travelmode=walking",
+        "transport_instructions": "19:00–21:00 Mong Kok food crawl. Leave the hotel after the 18:00–18:45 rest; walk north along Nathan Road, using signed crossings, then towards 34 Mong Kok Road. Eat small snacks along the route and include Ki’son as a suggested stop, not another dinner. Other small tastings: curry fish balls, siu mai, cheung fun, egg waffles, fried snacks/squid, milk tea and dessert. No beef or beef broth.",
+        "details": {
+          "recommended": "Walk",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "route": "Bridal Tea House, 6 Arthur Street → Nathan Road north → Mong Kok Road → Ki’son / nearby food-crawl streets",
+              "approxDurationMinutes": 25,
+              "approxCost": "HK$0",
+              "notes": "About 1.3 km / 19 minutes mapped directly to Ki’son; allow 20–25 minutes with crossings. Leave after the hotel rest, around 18:45; snacks can start en route, with Ki’son around 19:05–19:10 if going directly. The local approach is on foot."
+            }
+          ],
+          "quickNote": "Try whichever roast meats remain from 29 Dec, ideally one shared char siu + crispy roast pork belly combination rice. Request 半肥瘦叉燒 (half-fat, half-lean sweet barbecued pork); 燒肉 / 燒腩仔 means crispy roast pork belly. Tick each meat separately, across either date or different restaurants. If goose, char siu and crispy pork were all tasted on 29 Dec, Ki’son becomes optional. Keep portions small for the rest of the crawl: curry fish balls, siu mai, cheung fun, egg waffles, fried snacks/squid, milk tea and dessert.",
+          "costStatus": "Planning estimate: HK$70–90 total for one shared pork-combination rice plate as a tasting stop for two, not two full meals. It forms part of the existing crawl allowance; do not add it again as another dinner.",
+          "planningAssumption": "Foodpanda Mong Kok online base prices checked 1 Nov 2026, before promotions: goose rice from HK$70; two-meat rice from HK$70; goose + one other meat rice from HK$75. Selection supplements may apply. These are not verified dine-in prices and do not establish prices for the Yau Ma Tei branch. Confirm sharing / minimum orders; takeaway can suit one shared plate.",
+          "operatingHours": "Mong Kok branch published regular hours 10:00–22:00 daily; 1 Jan New Year’s Day opening and meat availability remain unconfirmed.",
+          "fallback": "Ki’son at 546 Nathan Road near Yau Ma Tei Exit A2 is an alternative near the hotel, subject to its opening, stock and displayed prices. Choose one branch; do not make two required visits. If the tastings are already complete, keep the original crawl foods.",
+          "dietaryNote": "No beef and no beef broth, including any optional soup. Ask staff to confirm, or skip soup.",
+          "hotelReturn": "Keep the existing 21:00–21:25 walk back to Bridal Tea House. Work south through the crawl; walking back from the northern Ki’son branch itself is about 1.3 km / 19 minutes mapped, so allow 20–25 minutes."
+        }
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "b5465b1c-84d0-47f7-bd5e-37228b2616e7",
+      "label": "Keep the existing food-crawl return walk",
+      "before": {
+        "transport_instructions": "0f8f31ca2e17a1c089a06e64e59908b33423f13e3753fdae67d5f76217b3297d",
+        "details": "0fab04bfa21d99ec9af205f75eecccf8c5b148d154bdeccbdea9e1a3d7a5af4c"
+      },
+      "values": {
+        "transport_instructions": "Walk south from the final Mong Kok food stop along Nathan Road, then via Man Ming Lane and Arthur Street to Bridal Tea House, 6 Arthur Street. If ending at Ki’son, 34 Mong Kok Road, allow 20–25 minutes for about 1.3 km including crossings; a last stop farther south will be closer. Head back around 21:00 to reach the hotel by 21:25.",
+        "details": {
+          "recommended": "Walk",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "route": "Final Mong Kok food stop → Nathan Road south → Man Ming Lane / Arthur Street → Bridal Tea House",
+              "approxDurationMinutes": 25,
+              "approxCost": "HK$0",
+              "notes": "Allow 20–25 minutes from the northern Ki’son branch (about 1.3 km / 19 minutes mapped). Shorter if the crawl finishes farther south; no extra meal transfer."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "808ec08c-2a6c-5796-af9b-0e3bdaf07315",
+      "label": "Roast-meat ordering and fallback guide",
+      "match": {
+        "section": "Food strategy",
+        "title": "Roast goose, char siu & crispy pork"
+      },
+      "values": {
+        "section": "Food strategy",
+        "title": "Roast goose, char siu & crispy pork",
+        "summary": "29 Dec: Chung Wah goose dinner. 1 Jan: Ki’son for remaining pork tastings; share small rice combinations.",
+        "icon": "🍚",
+        "body": "29 Dec, 19:00–20:30: Chung Wah Roast Goose / 中華燒鵝傳承, G/F 497A Nathan Road, near Yau Ma Tei Exit C. A relaxed dinner after Lantau. Roast goose is the priority: start with rice meals for two, share, and add char siu or crispy pork only if good value. The three tastings may happen at different meals. Allow HK$160–200 total for two as a planning estimate, not a menu quotation. A third-party guide reports an approximately HK$80 solo goose-and-crispy-pork set; its current contents and price remain unverified. Published regular hours are 10:00–22:00 daily; that does not guarantee goose stock at 19:00. Check current prices, evening stock / fresh-batch timing and whether reservation or preorder is useful before travel.\n\nWalk: from Exit C allow 3–5 minutes, HK$0. From Bridal Tea House, 6 Arthur Street, the mapped walk via Arthur Street and Man Ming Lane is about 170 m / 2 minutes; allow 3–5 minutes, HK$0, and the same for the return. If goose is unavailable, Ki’son at 546 Nathan Road, Shops B–C, G/F, Mong Kok Building, near Exit A2 is about 230 m / 4 minutes from Chung Wah; allow 5–8 minutes with crossings, HK$0. Use it only if open and stocked.\n\n1 Jan, 19:00–21:00: keep the Mong Kok food crawl. Ki’son Roasted Goose / 棋子燒鵝, G/F 34 Mong Kok Road near Mong Kok Exit B3, is a suggested stop for remaining meats. Ideally share one char siu + crispy pork combination rice; HK$70–90 total is an estimate for one tasting plate for two, not two full meals. If all three meats were tasted on 29 Dec, this stop is optional. The 546 Nathan Road branch is an alternative, not another required visit. Ask whether sharing is accepted; takeaway can suit a shared plate.\n\nOrder 半肥瘦叉燒: half-fat, half-lean char siu, sweet barbecued pork. 燒肉 / 燒腩仔 is crispy roast pork belly. Tick goose, char siu and crispy pork independently after tasting. Keep no beef / no beef broth, including any complimentary or optional soup; confirm ingredients or skip soup.\n\nFoodpanda Mong Kok online base prices checked 1 Nov 2026, before promotions: goose rice from HK$70; two-meat rice from HK$70; goose plus one other meat rice from HK$75. Supplements may apply. These are not verified dine-in prices or prices for the Yau Ma Tei branch. Mong Kok’s published regular 10:00–22:00 daily hours do not confirm New Year’s Day opening or meat stock. The hotel → Ki’son Mong Kok walk is about 1.3 km / 19 minutes mapped; allow 20–25 minutes and leave after the 18:45 hotel rest. Snacks can start en route; keep the existing 21:00–21:25 hotel return.\n\n25 Dec stays flexible: nearby roast meats are only an optional early opportunity after Aqua Luna if open and stocked; late-evening goose is not the main plan. No extra compulsory visit. Dinner / tasting allowances replace or form part of existing meal spending; do not count another dinner.\n\nSources and rechecks:\nhttps://www.openrice.com/zh/hongkong/r-中華燒鵝傳承-油麻地-港式-燒臘-r994488\nhttps://www.corner.inc/place/pbToexSa5ALY\nhttps://www.openrice.com/en/hongkong/r-kison-roasted-goose-mong-kok-hong-kong-style-chinese-bbq-r732289\nhttps://www.openrice.com/zh-cn/hongkong/r-棋子燒鵝-油麻地-港式-燒臘-r1147645\nhttps://www.foodpanda.hk/restaurant/szjv/kison-roasted-goose-mongkok",
+        "copy_text": "半肥瘦叉燒",
+        "meaning": "Half-fat, half-lean char siu (sweet barbecued pork)"
+      }
+    }
+  ]
+}
