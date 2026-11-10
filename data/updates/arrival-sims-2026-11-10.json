@@ -1,0 +1,446 @@
+{
+  "tripId": "73c7883d-cff1-4abd-a0b0-ec8a5a543e1f",
+  "timezone": "Asia/Hong_Kong",
+  "changes": [
+    {
+      "table": "places",
+      "id": "f63bdfd5-dcc5-42cd-a239-2edb035a12a2",
+      "label": "1O1O Centre — Hankow Road SIM redemption",
+      "values": {
+        "name": "1O1O Centre — Hankow Road SIM redemption",
+        "address": "Shop 10-11 (G/F) & Shop 9-11 (1/F), Hong Kong Pacific Centre, 28 Hankow Road, Tsim Sha Tsui, Kowloon",
+        "neighbourhood": "Tsim Sha Tsui",
+        "category": "SIM pickup",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=1O1O%2028%20Hankow%20Road%20Tsim%20Sha%20Tsui%20Hong%20Kong",
+        "priority": "MUST",
+        "opening_hours_notes": "Published public-holiday hours 11:00–20:00 (CSL redemption list and 1O1O shop directory, checked 10 Nov 2026). Recheck Christmas hours and stock.",
+        "notes": "Preferred 25 Dec CSL voucher redemption before the Christmas harbour walk. Use this designated branch, not another TST phone shop. Present the Agoda/KKday PDF voucher and passport; allow 20–30 min for queue, real-name registration and data test. https://www.hkcsl.com/en/prepaid-sim-redemption-address-new",
+        "expected_duration_minutes": 25
+      }
+    },
+    {
+      "table": "places",
+      "id": "de0f919f-bfef-470d-bf13-bc38a651ae9a",
+      "label": "csl — Sun Kong House SIM redemption",
+      "values": {
+        "name": "csl — Sun Kong House SIM redemption",
+        "address": "Shop 8, G/F & 1/F, Sun Kong House, 2J-Q Sai Yeung Choi Street South, Mong Kok, Kowloon",
+        "neighbourhood": "Mong Kok",
+        "category": "SIM pickup",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=csl%20Sun%20Kong%20House%202J%20Sai%20Yeung%20Choi%20Street%20South%20Mong%20Kok",
+        "priority": "OPTIONAL",
+        "opening_hours_notes": "Published daily/public-holiday hours 10:30–21:30 (CSL redemption list and shop directory, checked 10 Nov 2026). Recheck Christmas hours and stock.",
+        "notes": "Fallback only: about 15–20 min walk north from Bridal Tea House, followed by a separate transfer south to TST. Later closing helps if Hankow Road cannot redeem. Do not add both stores as compulsory stops. https://www.hkcsl.com/en/prepaid-sim-redemption-address-new",
+        "expected_duration_minutes": 25
+      }
+    },
+    {
+      "table": "bookings",
+      "id": "d09f925c-d2c4-43c0-859e-12f7b158cbb5",
+      "label": "CSL SIM — 15 days, HK & Macau 80GB",
+      "values": {
+        "type": "OTHER",
+        "title": "CSL SIM — 15 days, HK & Macau 80GB",
+        "provider": "Agoda / KKday",
+        "starts_at": "2026-12-25T09:40:00+00:00",
+        "location": "Shop 10-11 (G/F) & Shop 9-11 (1/F), Hong Kong Pacific Centre, 28 Hankow Road, Tsim Sha Tsui, Kowloon",
+        "status": "CONFIRMED",
+        "notes": "One physical 5G Discover Hong Kong Tourist SIM, 15-day pass: 80GB total = 30GB HK/Macau shared + 50GB Hong Kong-only; unlimited Hong Kong local calls and CSL Wi-Fi. Voucher pickup date 25 Dec 2026. The 17:40 HKT time is our flexible pickup target, not a store appointment. Passport real-name registration required: https://rnr.hkcsl.com/csl/ . Prefer designated Hankow Road branch; Sun Kong House is fallback. Airport redemption is unconfirmed and not in the supplied designated-store list. Present the attached original PDF; its 60-day collection wording has no clear start date, so verify voucher validity with Agoda/KKday before departure. https://www.hkcsl.com/en/prepaid-sim-redemption-address-new"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "96205d03-5016-4a5a-89d9-5e5ccac6dff2",
+      "label": "Land at Hong Kong International Airport",
+      "values": {
+        "planned_end_time": "14:35:00",
+        "expected_duration_minutes": 65,
+        "description": "Immigration and bags first; airport pickups follow. Times are targets after the 13:30 landing.",
+        "transport_instructions": "Allow about 60–90 minutes for immigration and baggage; the 14:35 finish is a target, not a guarantee. Use airport Wi-Fi and open the saved Trip.com SIM QR, Octopus voucher and CSL PDF before leaving arrivals.",
+        "details": {
+          "carry": [
+            "Both passports and Hong Kong entry documents",
+            "Offline Trip.com order QR, Octopus voucher and CSL PDF",
+            "SIM eject tool and charged phones"
+          ],
+          "payWith": "Use the collected Tourist Octopus cards for A21 if ready; contactless card is backup.",
+          "fallback": "If clearance slips, shift the pickup/transfer targets together. Do not skip the booked A01/A16 collections to search for 1O1O.",
+          "quickNote": "After customs: SmarTone at A16 → prepaid Tourist Octopus cards at A01 → at most 5 min asking whether an airport 1O1O still operates and accepts this CSL voucher. Historical references place it on T1 L5; current official shop lists omit it. If absent, refused or queued, continue to the hotel and redeem at Hankow Road this evening."
+        }
+      },
+      "before": {
+        "planned_end_time": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "expected_duration_minutes": "69f59c273b6e669ac32a6dd5e1b2cb63333d8b004f9696447aee2d422ce63763",
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "transport_instructions": "5eeaf46be0d40f3c22299cbd0ed451f59df5419e1d122d7efc4a89d813f803b5",
+        "details": "c38975411daf4b1cc564ab3733c4d673f641c549f9249f3ea53318e0459487db"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "30d8fe40-fb82-4c99-828b-8d342ac6b1db",
+      "label": "Collect SmarTone SIM — airport A16",
+      "values": {
+        "itinerary_day_id": "a7fc2bf7-4cad-429d-93a3-a83d18c3bb38",
+        "date": "2026-12-25",
+        "status": "PLANNED",
+        "priority": "MUST",
+        "title": "Collect SmarTone SIM — airport A16",
+        "description": "Trip.com booking: U Roaming, T1 Arrivals counter A16. Show the order QR and passport.",
+        "item_type": "other",
+        "place_id": "0396989a-8f69-4fad-93a5-67252bf60949",
+        "booking_id": "e47dcfe7-c299-4e5e-91b4-858499c17d06",
+        "planned_start_time": "14:35:00",
+        "planned_end_time": "14:55:00",
+        "expected_duration_minutes": 20,
+        "sequence": 2,
+        "transport_instructions": "After customs, go to U Roaming counter A16, Terminal 1 Arrivals Hall. Saved booking hours: daily 07:00–23:30; confirm on the day. Open the Trip.com order detail page with the e-voucher QR or a saved screenshot; the email receipt alone may not be the collection QR.",
+        "details": {
+          "timingType": "TARGET",
+          "booking": "prebooked",
+          "operatingHours": "A16 U Roaming: 07:00–23:30 daily per saved booking; holiday service to recheck.",
+          "carry": [
+            "Passport",
+            "Trip.com order QR / offline screenshot",
+            "SIM eject tool"
+          ],
+          "quickNote": "Complete passport real-name registration and test data before leaving. Receipt: 5GB HK/Macau shared plus 7GB tourist bonus; SmarTone says the bonus starts the next day. Receipt and operator list 15 local-call minutes, while the saved booking title says 300: ask A16 to confirm. The 365-day number validity is not 365 days of included data.",
+          "fallback": "If A16 cannot fulfil, ask the supplier which SmarTone retail branch accepts this exact Trip.com QR; do not assume the CSL/1O1O store can fulfil SmarTone. Use airport Wi-Fi meanwhile."
+        }
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "3dcb4190-98a7-48c7-904a-54b87cdaf6aa",
+      "label": "Collect the two Adult Tourist Octopus cards - check for T-Union",
+      "values": {
+        "planned_start_time": "14:55:00",
+        "planned_end_time": "15:05:00",
+        "expected_duration_minutes": 10,
+        "sequence": 3,
+        "description": "Already booked: two cards with HK$50 value each, at Arrivals Hall A, A01 Eternal East.",
+        "details": {
+          "timingType": "TARGET",
+          "booking": "prebooked",
+          "operatingHours": "Voucher hours: A01 Eternal East 08:00–21:00.",
+          "quickNote": "Collect both prepaid Adult Tourist Octopus cards; check the T-Union logo and actual balance. Each includes HK$50, not HK$150; there is no On-Loan deposit to recover. Top up only as needed. After A01, allow at most 5 min for an information-desk/1O1O inquiry before going to the bus.",
+          "fallback": "Airport CSL shop operation and voucher acceptance are unconfirmed. If unavailable, use the planned Hankow Road redemption after hotel rest."
+        }
+      },
+      "before": {
+        "planned_start_time": "4421dc2145c1e57f219524b25616dfb3a583b3077c2b51f4dc520358e17edb46",
+        "planned_end_time": "ab8ea6e783863fd43b5bf9e299bd6e6162722185da4ee42a3fe16de2281d617b",
+        "expected_duration_minutes": "e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb",
+        "sequence": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "details": "50de9097bff91f4fbeccbd593dc1cdb55f8888be939c5f90c41b5b724ecdb1f1"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "7b24bd58-7f44-49ad-9300-7c4e2e532dfe",
+      "label": "A21 Airport Bus to Yau Ma Tei",
+      "values": {
+        "planned_start_time": "15:15:00",
+        "planned_end_time": "16:30:00",
+        "sequence": 4,
+        "details": {
+          "quickNote": "Use the two Tourist Octopus cards collected at A01 (HK$50 included on each); check balance after A21 and top up as needed. The 15:15 departure includes a short airport inquiry, not a second SIM purchase. Keep the existing 75-minute door-to-door transfer allowance; traffic/queue delays shift the hotel and SIM targets.",
+          "fareForTwo": "about HK$69.20",
+          "recommended": "A21 airport bus",
+          "farePerPerson": "about HK$34.60",
+          "transportOptions": [
+            {
+              "name": "A21 airport bus",
+              "notes": "Direct and luggage-friendly.",
+              "route": "Airport Ground Transportation Centre → Nathan Road / Yau Ma Tei",
+              "approxCost": "~HK$35/person",
+              "approxDurationMinutes": 75
+            },
+            {
+              "name": "Airport Express + taxi",
+              "notes": "Fastest practical option but much more expensive.",
+              "route": "Airport Express → Kowloon Station, then taxi to hotel",
+              "approxCost": "~HK$130-180 total for two",
+              "approxDurationMinutes": 45
+            },
+            {
+              "name": "Airport Express + MTR",
+              "notes": "More transfers with luggage.",
+              "route": "Airport Express → Hong Kong/Kowloon connection → Yau Ma Tei",
+              "approxCost": "~HK$105-120/person",
+              "approxDurationMinutes": 55
+            }
+          ],
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED"
+        }
+      },
+      "before": {
+        "planned_start_time": "7fdfeaffd6c874781ad9bda19199e4be619c5e880d5898b79a415a4742c275b8",
+        "planned_end_time": "8e6e1745e403c0e0f402f0cddd9289f44139ab14911583974049b4671c10ab51",
+        "sequence": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "details": "5a92d2a0d19166eff50c45163e87e840cb8ad1de10415a83cb6edf2af4cff2dd"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "a81bc47f-355c-4fdb-9935-c4a933deb222",
+      "label": "Hotel check-in and rest",
+      "values": {
+        "planned_start_time": "16:30:00",
+        "planned_end_time": "17:10:00",
+        "expected_duration_minutes": 40,
+        "sequence": 5,
+        "description": "Check in, drop luggage and rest before the TST SIM pickup and harbour walk."
+      },
+      "before": {
+        "planned_start_time": "8e6e1745e403c0e0f402f0cddd9289f44139ab14911583974049b4671c10ab51",
+        "planned_end_time": "28a29c63a597c2e450624b8fac421fe5a631a0fd072757ac43ff146eaae6250a",
+        "expected_duration_minutes": "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c",
+        "sequence": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "fd46b5eb-cff4-461c-902a-844ba32a2115",
+      "label": "Collect CSL SIM in Tsim Sha Tsui (if needed)",
+      "values": {
+        "itinerary_day_id": "a7fc2bf7-4cad-429d-93a3-a83d18c3bb38",
+        "date": "2026-12-25",
+        "status": "PLANNED",
+        "priority": "MUST",
+        "title": "Collect CSL SIM in Tsim Sha Tsui (if needed)",
+        "description": "Leave hotel about 17:10; target Hankow Road 17:40–18:05. Skip the shop if already redeemed at the airport.",
+        "item_type": "other",
+        "place_id": "f63bdfd5-dcc5-42cd-a239-2edb035a12a2",
+        "booking_id": "d09f925c-d2c4-43c0-859e-12f7b158cbb5",
+        "maps_url": "https://www.google.com/maps/search/?api=1&query=1O1O%2028%20Hankow%20Road%20Tsim%20Sha%20Tsui%20Hong%20Kong",
+        "planned_start_time": "17:10:00",
+        "planned_end_time": "18:05:00",
+        "expected_duration_minutes": 55,
+        "recommended_departure_time": "17:10:00",
+        "sequence": 6,
+        "transport_instructions": "From Bridal Tea House, walk to the southbound Nathan Road / Wing Sing Lane stop. Take KMB 1 or 1A towards Star Ferry, alight at Tsim Sha Tsui BBI – Middle Road, then walk west via Peking Road to 28 Hankow Road. Allow 25–35 min door to door, including waiting and crossings; reserve 20–30 min in store. Use APP1933 for the exact pole/ETA and holiday diversions.",
+        "details": {
+          "timingType": "TARGET",
+          "booking": "prebooked",
+          "recommended": "Bus to TST",
+          "transportOptions": [
+            {
+              "name": "Bus to TST",
+              "approxDurationMinutes": 30,
+              "approxCost": "Budget HK$6–8/person · HK$12–16/two, estimated; verify boarding fare",
+              "route": "Hotel → southbound Nathan Road / Wing Sing Lane → KMB 1 or 1A towards Star Ferry → Middle Road → walk to 28 Hankow Road.",
+              "notes": "25–35 min door to door. If bus wait exceeds 10 min or roads are congested, use MTR."
+            },
+            {
+              "name": "MTR to TST",
+              "approxDurationMinutes": 25,
+              "approxCost": "Budget HK$5–7/person · HK$10–14/two, estimated",
+              "route": "Hotel → Yau Ma Tei MTR → Tsuen Wan line towards Central, two stops to Tsim Sha Tsui → Exit A1 / Haiphong Road → Hankow Road.",
+              "notes": "20–30 min door to door, including station walks; more predictable if delayed."
+            }
+          ],
+          "operatingHours": "Hankow Road: public holidays 11:00–20:00. Sun Kong House, Mong Kok: 10:30–21:30. Published hours, not confirmed Christmas stock.",
+          "carry": [
+            "Original Agoda/KKday CSL PDF voucher",
+            "Passport",
+            "Charged phone and SIM eject tool"
+          ],
+          "quickNote": "Redeem ONE physical CSL 15-day SIM: 80GB total, of which 30GB is HK/Macau shared and 50GB HK-only. Complete real-name registration, check expiry and test data. From Hankow Road allow 10–15 min to Harbour City / Clock Tower; actual sailing pier follows the eventual Aqua Luna confirmation.",
+          "fallback": "Walking hotel → Hankow Road: about 35–45 min, HK$0; taxi: 15–25 min, budget HK$40–65/car, both estimates. Sun Kong House fallback: walk north 15–20 min, collect 20–30 min, then allow 25–35 min to TST by MTR; about 60–85 min total versus 45–65 via Hankow Road. If late, use MTR, reduce browsing and aim to finish pickup by 18:45–18:55; leave 15–20 min to reach the sailing pier by 19:15. If unresolved, protect the cruise and use SmarTone hotspot where supported. After-cruise Mong Kok pickup is a tight fallback only: leave promptly after 20:30, reach about 21:00, finish before 21:30; dinner must move. Confirm stock/acceptance before travelling."
+        }
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "08b0a80c-6282-4bde-9387-8f98ec1430f3",
+      "label": "Tsim Sha Tsui Christmas walk",
+      "values": {
+        "planned_start_time": "18:05:00",
+        "expected_duration_minutes": 65,
+        "recommended_departure_time": "18:05:00",
+        "sequence": 7,
+        "description": "After the SIM shop, walk to Harbour City, Clock Tower and the waterfront; protect 19:15 pier arrival.",
+        "transport_instructions": "Start at 28 Hankow Road after CSL collection; allow 10–15 min to Harbour City / Clock Tower waterfront. Prioritise Christmas lights and harbour views; add Avenue of Stars/K11 only if comfortably ahead. If the airport redeemed CSL, skip the shop and begin the walk earlier. Head to the actual Aqua Luna boarding point by 19:15; the sailing is still a placeholder until booked.",
+        "details": {
+          "timingType": "FLEXIBLE",
+          "recommended": "Walk from Hankow Road",
+          "transportOptions": [
+            {
+              "name": "Walk from Hankow Road",
+              "approxDurationMinutes": 15,
+              "approxCost": "HK$0",
+              "route": "28 Hankow Road → Harbour City / Clock Tower / Star Ferry waterfront → Christmas harbour walk.",
+              "notes": "10–15 min access walk is part of the 18:05–19:10 sightseeing block. Allow another 15–20 min to the confirmed sailing pier if needed."
+            }
+          ],
+          "quickNote": "A normal pickup leaves about one hour for the Christmas walk. If the SIM queue runs long, shorten sightseeing; aim for the pier by 19:15."
+        }
+      },
+      "before": {
+        "planned_start_time": "bc9fdfb0e71f625a490ce8b54e53edfb77f771b6b48300ff7c8320c7328a3104",
+        "expected_duration_minutes": "ad57366865126e55649ecb23ae1d48887544976efea46a48eb5d85a6eeb4d306",
+        "recommended_departure_time": "2450f77097fcba5a32971f7109008183adfa0a55e7a825b216f13cdcb5c093e6",
+        "sequence": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "transport_instructions": "8b34a33c514521e047e97493b2ed8b1442713ea835dad7a2c37836f84960d538",
+        "details": "20eed5a4d03f08cc61a5c4b337a40966d526e336df17a95f7afc473604347d8c"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "1d26f089-4bdd-4394-b321-9726dfb01ef8",
+      "label": "Aqua Luna and Symphony of Lights",
+      "values": {
+        "sequence": 8
+      },
+      "before": {
+        "sequence": "e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "d164aba1-4d6c-4c0a-b763-a3f43efc97e7",
+      "label": "Dinner around Tsim Sha Tsui / Jordan / Yau Ma Tei",
+      "values": {
+        "sequence": 9
+      },
+      "before": {
+        "sequence": "7902699be42c8a8e46fbbb4501726517e86b22c56a189f7625a6da49081b2451"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "23b1f8ac-51ad-49d1-a721-514b933374e3",
+      "label": "Optional short Temple Street walk and snack",
+      "values": {
+        "sequence": 10
+      },
+      "before": {
+        "sequence": "2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d90ef06fdefb64a3"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "da297e8e-751c-460f-b87e-54f77c76127e",
+      "label": "Arrival at Hong Kong Airport",
+      "values": {
+        "summary": "25 Dec: SmarTone A16 → Tourist Octopus A01 → brief 1O1O inquiry → A21; CSL in TST if needed.",
+        "body": "After the 13:30 landing, clear immigration and collect bags; allow 60–90 min and treat all later times as targets. Use airport Wi-Fi and save the order QR/vouchers offline.\nSmarTone: U Roaming, Terminal 1 Arrivals counter A16; saved booking hours 07:00–23:30 daily. Show the Trip.com order-detail QR and passport, complete real-name registration and test data.\nTourist Octopus: collect the TWO prepaid cards at Arrivals Hall A, A01 Eternal East; voucher hours 08:00–21:00. Each includes HK$50. Check T-Union logo and balance.\nThen spend at most 5 min asking whether a 1O1O still operates on T1 L5 and redeems this exact Agoda/KKday CSL voucher. Older references name it; the current official shop lists and designated redemption list omit the airport. Do not rely on airport redemption or search other floors.\nTarget A21 15:15 → hotel 16:30; rest until 17:10. If CSL is still uncollected, bus/MTR to 1O1O, 28 Hankow Road, for about 17:40–18:05, then walk to the Christmas waterfront. Skip the store if airport redemption succeeded. Withdraw only a small amount of HKD if needed.\nKeep the 19:15 Aqua Luna pier target; the 19:30 sailing remains unbooked. Recheck pickup hours, voucher validity and actual sailing details before travel."
+      },
+      "before": {
+        "summary": "9b4a8321eedb510dd016b6850d075acedb3010c6b5cf859b380b9a1e1a182ca0",
+        "body": "47c5c0ea8158bcaeab47f2058428e8bf78fe85e0618c34808bb3fc153fc8c018"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "47aae15c-dd7a-4fb6-b297-90bb7c6a788f",
+      "label": "Octopus",
+      "values": {
+        "summary": "Booked: TWO Tourist cards · A01 airport pickup · HK$50 each · check T-Union logo and top up as needed.",
+        "body": "Your Agoda/KKday voucher is for two Adult Tourist Octopus cards (upgraded version), collected on 25 Dec at T1 Arrivals Hall A, A01 Eternal East, 08:00–21:00. Each includes HK$50 stored value; show the voucher and check the issued cards/balances. No extra On-Loan card purchase is planned.\nUse one card per traveller. Top up only as needed at supported MTR/convenience-store facilities; do not assume HK$150 initial value or a refundable HK$50 deposit. A21 reduces the included HK$50, so check balance before the next ride.\nAt A01 check the China T-Union logo. A genuine Tourist Octopus–China T-Union can pay on supported Macau public-transport readers with that logo; ordinary Octopus does not gain Macau acceptance. Keep small MOP cash and the existing LRT single-ticket backup.\nThese are sold Tourist cards: the purchase price is non-refundable. A remaining-balance refund deactivates the card; there is no On-Loan deposit to recover. Use up value or, if desired, ask a non-Airport-Express MTR service counter before the final airport ride. Pay that ride separately if the card was deactivated.\nhttps://www.octopus.com.hk/en/consumer/customer-service/faq/get-your-octopus/tourist-mot.html\nhttps://www.octopus.com.hk/en/consumer/tourist/leaving-hk/index.html"
+      },
+      "before": {
+        "summary": "fad19f62413dec05b0acccc09884c311f85b60328233ddb8bc391a2375350f73",
+        "body": "2d8be13523ed05a888cc258af95ac128cbba6985b07a3c4622b592c3f62d62f1"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "c7c9a8b5-79f7-4693-be47-bb8c722c2007",
+      "label": "Mobile data & roaming",
+      "values": {
+        "summary": "Booked SmarTone: airport A16 · Booked CSL: Hankow Road, 25 Dec evening if needed · HK + Macau data on both.",
+        "body": "First phone: SmarTone physical SIM via Trip.com, U Roaming A16 at T1 Arrivals (saved hours 07:00–23:30). Open the order-detail QR, not just the email receipt. Receipt: 5GB HK/Macau shared plus 7GB passport-registration tourist bonus in the first month. SmarTone says the 7GB starts the day after activation; do not count on 12GB immediately on arrival. The receipt/operator list 15 call minutes; the saved booking title says 300, so confirm at pickup. Number retention for 365 days does not mean 365 days of included data.\nSecond phone: Agoda/KKday CSL 5G Discover Hong Kong Tourist SIM, 15 days: 80GB = 30GB HK/Macau shared + 50GB Hong Kong-only; unlimited Hong Kong local calls and CSL Wi-Fi. Bring the attached PDF and passport. Register at https://rnr.hkcsl.com/csl/ . The voucher says collect within 60 days without identifying the start date: verify validity for 25 Dec with Agoda/KKday before departure.\nAirport 1O1O: historical listings only; current official directories omit it and airport redemption is unconfirmed. Ask briefly after A01; proceed if absent/refused. Preferred pickup: 1O1O, 28 Hankow Road, TST; public holidays 11:00–20:00, target 17:40–18:05. Bus from hotel then walk to Christmas lights. Sun Kong House csl, 2J-Q Sai Yeung Choi Street South, Mong Kok, 10:30–21:30, is fallback only. Recheck holiday hours/stock.\nBoth plans include Macau data: verify registration, expiry and remaining shared allowance before 27–28 Dec; enable roaming on the travel SIM as required. Test both phones in Macau. Do not buy a separate one-day add-on by default. Keep Jio available for OTPs as its terms allow, with Jio data roaming off. Use SmarTone hotspot temporarily if supported while CSL is uncollected.\nhttps://www.hkcsl.com/en/prepaid-sim-redemption-address-new\nhttps://www.1010.com.hk/shops\nhttps://www.smartone.com/en/mobile_and_price_plans/prepaid/data_sim_78/charges.jsp"
+      },
+      "before": {
+        "summary": "156a464990a88661e2c043fd9e9896071daffde9bd67361e478225fd85d3dd44",
+        "body": "2476fd0dc3ea9eea0ed0c057055399e5a286ca80d2e416f24d9ebb051681ca97"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "8dcae7b6-972c-4d7f-9891-90686330ec18",
+      "label": "Payments",
+      "values": {
+        "summary": "Collected Tourist Octopus for transport · cards for larger purchases · small HKD/MOP cash as backup.",
+        "body": "Use the two prepaid Tourist Octopus cards for Hong Kong MTR, buses, Ding Ding, Star Ferry and supported small purchases; each includes HK$50, then top up as needed. Use cards for larger meals, tickets and shopping. Carry the cash amount in your latest funding plan, with small HKD notes for markets, street food and older restaurants. Keep small MOP cash for Macau transport. Check the issued T-Union logo before relying on Octopus at a supported Macau reader; retain the cash/LRT token backup."
+      },
+      "before": {
+        "summary": "1ff0abe9d070c76c99906cb616605e627bbaf962dfecfb0ddf2b0075342a67b3",
+        "body": "5f7f6c96d043e5e31a976a941db8496d39605c868dbe8c6fe89c2d4cb786166c"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "6c111a5b-f657-4ef1-9731-87f4a3839750",
+      "label": "Transport planning assumptions",
+      "values": {
+        "summary": "Arrival/SIM plan checked 10 Nov · Christmas hours, traffic, voucher validity and sailing need reconfirming.",
+        "body": "Arrival/SIM pickup locations and official shop hours were checked on 10 Nov 2026 against the booked vouchers and CSL/1O1O/SmarTone sources. Current shop hours are not confirmation of Christmas-day stock or acceptance of every reseller voucher. The historical airport 1O1O location is not verified as currently operating; Hankow Road is the planned redemption. All local journey times, bus/MTR/taxi budgets and queue allowances are estimates, not December departures or fare quotations. Recheck APP1933/MTR, holiday road controls and the final Aqua Luna boarding point/time. The rest of the trip retains its latest scoped updates and their operator rechecks."
+      },
+      "before": {
+        "summary": "8a353332e33babee18bcc0387d81b4e9944d3e0cec3883fe195d3374d40219f5",
+        "body": "212f4b21afc02b278487d4ac1a7236f2b49460df6c626a799bf536aeaf846d1e"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "b94fb9dd-56aa-49c5-90f0-4d59ee89622d",
+      "label": "Macau Money / Transport Payments",
+      "values": {
+        "body": "• Carry some MOP cash, especially small notes and coins.\n• Public buses cost MOP 6; pay exact MOP cash where possible—no change is given.\n• Keep MOP 1, 2 and 5 coins plus MOP 10 notes ready.\n• Adult LRT single-journey fares are MOP 6, 8, 10 or 12 depending on distance.\n• Ticket vending machines accept MOP cash and LRT Card; add-value machines accept MOP cash only.\n• Customer Service Centres accept MOP, HKD, RMB, credit cards, Simple Pay, Alipay and WeChat Pay. HKD/RMB cash is taken at 1:1 and change is returned in MOP.\n• If paying HKD cash at a shop or restaurant, ask for MOP change to build small change.\n• Prefer the zero-forex card for larger payments. Keep HKD as backup, but use MOP for small transport payments when practical.\n25 Dec pickup update: check both upgraded Tourist Octopus cards for the China T-Union logo at A01. The T-Union version can pay on supported Macau public-transport readers bearing that logo, using HKD balance with conversion. An ordinary Octopus is not interchangeable. Keep exact MOP6 bus cash and the existing LRT token plan as fallback; do not assume every reader accepts it.\nhttps://www.octopus.com.hk/en/consumer/customer-service/faq/get-your-octopus/tourist-mot.html"
+      },
+      "before": {
+        "body": "87b00fd17023e8d4c4167b7bfeb4a58909679c4b0fd88a0a15aa959a88d1b8a1"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "376e94c3-e07e-4ddf-87e9-3480cad59c52",
+      "label": "Collect and verify SmarTone + CSL SIMs",
+      "values": {
+        "title": "Collect and verify SmarTone + CSL SIMs",
+        "description": "25 Dec: SmarTone at airport A16; CSL at Hankow Road after hotel rest unless redeemed at airport. Save Trip.com order QR and CSL PDF offline; bring passports, complete registration and test mobile data. Confirm SmarTone call minutes/next-day 7GB bonus and CSL voucher validity.",
+        "notes": "Both SIMs are already booked. SmarTone 5GB + 7GB tourist bonus; CSL 15 days, 30GB HK/Macau shared + 50GB HK-only. Recheck holiday pickup hours/stock and the CSL voucher’s unexplained 60-day collection period before departure."
+      },
+      "before": {
+        "title": "8136bd4c7a3bf9025072d0ea9f75e9752d3d6b060a90521e2adfd43d80772eac",
+        "description": "fc0e5f15eea56350b35c9187c1aba07de8ea16743dcd684e2beed73bacb267cc",
+        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "770135ac-9325-4da3-81a0-9931fb8a2e7e",
+      "label": "Verify Macau roaming on both phones for 27 AND 28 Dec",
+      "values": {
+        "description": "SmarTone and CSL both include Macau data. Before 27–28 Dec, verify both SIMs are registered/activated, expiry covers both dates, and shared allowance remains. Enable travel-SIM roaming as required and test after arrival. Do not buy a separate one-day package by default."
+      },
+      "before": {
+        "description": "400c1ec968575385e0ca6ac508bd1739a7f87b1b2904e5caf984618db487f819"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "a42f38b8-6b8a-4250-8b99-e4001a043f7b",
+      "label": "Use up or optionally refund Tourist Octopus balance",
+      "values": {
+        "title": "Use up or optionally refund Tourist Octopus balance",
+        "priority": "OPTIONAL",
+        "description": "Sold Tourist cards have no refundable On-Loan deposit; their purchase cost is not refundable. Use remaining value, or ask a non-Airport-Express MTR counter about a balance refund before the final airport ride. Refunding deactivates the card; pay the final ride separately.",
+        "notes": "Keep both souvenir cards if desired. Check actual balance and counter availability; this is optional, not an extra timed errand."
+      },
+      "before": {
+        "title": "948ed3019b1a7f9035dd13db1fc7edc9a6b4032f13ea6ddfec517e4376a81f71",
+        "priority": "d5af10d35cfe6401cd2b64d8cbf0c8aedb7953c3606d7d28d85c5ea53d0217c8",
+        "description": "87fe10db3ea60dc56d094e91a5285edaceed4c5a06a410670f1a5870064b94ac",
+        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    }
+  ]
+}
