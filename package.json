@@ -24,6 +24,7 @@
     "update:macau": "node --env-file=.env.local --import tsx scripts/update-macau.ts",
     "update:roast-meats": "node --env-file=.env.local --import tsx scripts/update-macau.ts --manifest=roast-meats-2026-11-01.json",
     "update:arrival-sims": "node --env-file=.env.local --import tsx scripts/update-macau.ts --manifest=arrival-sims-2026-11-10.json",
+    "update:winterfest": "node --env-file=.env.local --import tsx scripts/update-macau.ts --manifest=winterfest-2026-11-11.json",
     "sync:trip-guide": "node --env-file=.env.local --import tsx scripts/sync-trip-guide.ts",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern .vercel --ignore-pattern .output",
     "db:generate": "drizzle-kit generate"

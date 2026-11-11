@@ -1,0 +1,1337 @@
+{
+  "tripId": "73c7883d-cff1-4abd-a0b0-ec8a5a543e1f",
+  "timezone": "Asia/Hong_Kong",
+  "changes": [
+    {
+      "table": "places",
+      "id": "701e5e80-480c-4cf6-8553-63462f7953a4",
+      "label": "Tsim Sha Tsui WinterFest — Cultural Centre and museums",
+      "values": {
+        "name": "Tsim Sha Tsui WinterFest — Cultural Centre and museums",
+        "address": "Hong Kong Cultural Centre Viewing Deck, Clock Tower, Hong Kong Museum of Art and Hong Kong Space Museum, Tsim Sha Tsui",
+        "neighbourhood": "Tsim Sha Tsui",
+        "category": "Festival",
+        "opening_hours_notes": "25 Dec 2026: 19:00–01:00 on 26 Dec. Free outdoor displays; individual show starts/repeats unconfirmed. Both displays suspended 31 Dec; partial suspension 28–30 Dec.",
+        "notes": "The Stars of Christmas Concert at Clock Tower/Cultural Centre, then Northern Lights at Museum of Art/Space Museum. Programme labels follow the trip brief; HKTB currently describes the combined multimedia spectacle. Allow 10–15 min between viewing areas with crowds. https://www.discoverhongkong.com/eng/events/hong-kong-winterfest/winter-wonderland-in-tsim-sha-tsui.html",
+        "priority": "MUST",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Tsim%20Sha%20Tsui%20WinterFest%20%E2%80%94%20Cultural%20Centre%20and%20museums%20Hong%20Kong%20Cultural%20Centre%20Viewing%20Deck%2C%20Clock%20Tower%2C%20Hong%20Kong%20Museum%20of%20Art%20and%20Hong%20Kong%20Space%20Museum%2C%20Tsim%20Sha%20Tsui"
+      }
+    },
+    {
+      "table": "places",
+      "id": "1df8424f-9c48-4dc9-9152-dd41705c6ea2",
+      "label": "Statue Square Gardens WinterFest",
+      "values": {
+        "name": "Statue Square Gardens WinterFest",
+        "address": "North and South Statue Square Gardens, Des Voeux Road Central, Central",
+        "neighbourhood": "Central",
+        "category": "Festival",
+        "opening_hours_notes": "26 Dec Christmas Town: 11:00–01:30 on 27 Dec; lights from 18:00. Projections 19:00–01:00 on 27 Dec, every 30 min. Separate market hours to reconfirm.",
+        "notes": "22-metre tree, Christmas Express, festive booths and Christmas Market if operating; use South Statue Square for the 19:00 projection, 19:30 backup. The brief’s Saturday/public-holiday market window 12:00–22:00 is a separate unverified market reference; the current HKTB page confirms Christmas Town hours rather than that market schedule. https://www.discoverhongkong.com/eng/events/hong-kong-winterfest/winter-wonderland-in-central.html",
+        "priority": "MUST",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Statue%20Square%20Gardens%20WinterFest%20North%20and%20South%20Statue%20Square%20Gardens%2C%20Des%20Voeux%20Road%20Central%2C%20Central"
+      }
+    },
+    {
+      "table": "places",
+      "id": "c0dbd9f5-bfb2-44b5-a07c-221f544ff199",
+      "label": "Causeway Bay WinterFest — Elf Village",
+      "values": {
+        "name": "Causeway Bay WinterFest — Elf Village",
+        "address": "Lan Fong Road and Pak Sha Road, Lee Gardens area, Causeway Bay",
+        "neighbourhood": "Causeway Bay",
+        "category": "Festival",
+        "opening_hours_notes": "25 Nov 2026–3 Jan 2027: light projections 19:00–22:00. Individual repeat times unspecified. Market, parade and workshops have separate date/time checks.",
+        "notes": "Use MTR Exit F2 for Lee Gardens; street viewing within the 19:00–22:00 window, not a reserved 19:00 performance. Keep market/parade/workshop attendance conditional. https://www.discoverhongkong.com/eng/events/hong-kong-winterfest/winter-wonderland-in-causeway-bay.html",
+        "priority": "MUST",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Causeway%20Bay%20WinterFest%20%E2%80%94%20Elf%20Village%20Lan%20Fong%20Road%20and%20Pak%20Sha%20Road%2C%20Lee%20Gardens%20area%2C%20Causeway%20Bay"
+      }
+    },
+    {
+      "table": "places",
+      "id": "957b7f69-36f6-43b2-8436-e7dc83dc494d",
+      "label": "Tong Kee Bao Dim — Canal Road West",
+      "values": {
+        "name": "Tong Kee Bao Dim — Canal Road West",
+        "address": "G/F, 11 Canal Road West, Causeway Bay",
+        "neighbourhood": "Causeway Bay",
+        "category": "Street food",
+        "opening_hours_notes": "New Year’s Day opening to reconfirm; arrive around 18:00.",
+        "notes": "Buns/dim sum option instead of Keung Kee, not an additional required meal. OpenRice bracket below HK$50/person is a listing category, not a menu quote. One HK$80–120/two shared-snack allowance includes any later egg waffle. No beef or beef broth; check fillings and sauces.",
+        "priority": "WANT",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Tong%20Kee%20Bao%20Dim%20%E2%80%94%20Canal%20Road%20West%20G%2FF%2C%2011%20Canal%20Road%20West%2C%20Causeway%20Bay"
+      }
+    },
+    {
+      "table": "places",
+      "id": "3512f8a6-e1d7-48a1-98c2-3411131a18fc",
+      "label": "Keung Kee — Lockhart Road",
+      "values": {
+        "name": "Keung Kee — Lockhart Road",
+        "address": "G/F, 406 Lockhart Road, Wan Chai",
+        "neighbourhood": "Wan Chai / Causeway Bay",
+        "category": "Street food",
+        "opening_hours_notes": "MICHELIN regular hours Tue–Sun 12:00–22:00, Monday closed; 1 Jan holiday hours unconfirmed.",
+        "notes": "Alternative to Tong Kee: pan-fried cheung fun/rice rolls and local snacks. Under-HK$50/person bracket follows the brief; verify displayed menu prices and keep shared portions within the combined snack budget. No beef/broth, including sauce/fillings. MICHELIN lists no credit cards. https://guide.michelin.com/tw/en/hong-kong-region/hong-kong/restaurant/keung-kee-1198877",
+        "priority": "WANT",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Keung%20Kee%20%E2%80%94%20Lockhart%20Road%20G%2FF%2C%20406%20Lockhart%20Road%2C%20Wan%20Chai"
+      }
+    },
+    {
+      "table": "places",
+      "id": "09c5528f-31d5-48b3-9a6a-ccda662a969d",
+      "label": "Mammy Pancake — Jardine’s Bazaar",
+      "values": {
+        "name": "Mammy Pancake — Jardine’s Bazaar",
+        "address": "Shop 5, G/F, 36 Jardine’s Bazaar, Causeway Bay",
+        "neighbourhood": "Causeway Bay",
+        "category": "Street food",
+        "opening_hours_notes": "Official regular daily hours 12:00–20:45; 1 Jan New Year’s Day hours unconfirmed.",
+        "notes": "Optional shared egg waffle about 19:50. Buy before the lights if holiday hours or queue make this tight. Part of the same HK$80–120/two snack allowance, not another dinner. Near Causeway Bay Exit F1. https://mammypancake.com/location/?lang=en",
+        "priority": "OPTIONAL",
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mammy%20Pancake%20%E2%80%94%20Jardine%E2%80%99s%20Bazaar%20Shop%205%2C%20G%2FF%2C%2036%20Jardine%E2%80%99s%20Bazaar%2C%20Causeway%20Bay"
+      }
+    },
+    {
+      "table": "itinerary_days",
+      "id": "a7fc2bf7-4cad-429d-93a3-a83d18c3bb38",
+      "label": "Arrival • Christmas Hong Kong • Tsim Sha Tsui WinterFest",
+      "values": {
+        "title": "Arrival • Christmas Hong Kong • Tsim Sha Tsui WinterFest"
+      },
+      "before": {
+        "title": "a437b13bee74977bd2b9e1004c0faf5522aa14f8da7cb817c3a05de0317aa41d"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "fd46b5eb-cff4-461c-902a-844ba32a2115",
+      "label": "Collect CSL SIM in Tsim Sha Tsui (if needed)",
+      "values": {
+        "details": {
+          "carry": [
+            "Original Agoda/KKday CSL PDF voucher",
+            "Passport",
+            "Charged phone and SIM eject tool"
+          ],
+          "booking": "prebooked",
+          "fallback": "If late, use MTR and reduce browsing. Hankow Road closes at 20:00 under published holiday hours; prioritise redemption, then dinner around 20:30 and the free projections afterward, available until 01:00 on 26 Dec. If Hankow Road cannot fulfil, confirm stock before diverting to Sun Kong House, Mong Kok (published closing 21:30). Use working SmarTone data / hotspot where supported. There is no sailing or pier check-in to protect.",
+          "quickNote": "Redeem ONE physical CSL 15-day SIM: 80GB total, of which 30GB is HK/Macau shared and 50GB HK-only. Complete real-name registration, check expiry and test data. Then walk via Harbour City / Clock Tower to the Cultural Centre Viewing Deck for WinterFest.",
+          "timingType": "TARGET",
+          "recommended": "Bus to TST",
+          "operatingHours": "Hankow Road: public holidays 11:00–20:00. Sun Kong House, Mong Kok: 10:30–21:30. Published hours, not confirmed Christmas stock.",
+          "transportOptions": [
+            {
+              "name": "Bus to TST",
+              "notes": "25–35 min door to door. If bus wait exceeds 10 min or roads are congested, use MTR.",
+              "route": "Hotel → southbound Nathan Road / Wing Sing Lane → KMB 1 or 1A towards Star Ferry → Middle Road → walk to 28 Hankow Road.",
+              "approxCost": "Budget HK$6–8/person · HK$12–16/two, estimated; verify boarding fare",
+              "approxDurationMinutes": 30
+            },
+            {
+              "name": "MTR to TST",
+              "notes": "20–30 min door to door, including station walks; more predictable if delayed.",
+              "route": "Hotel → Yau Ma Tei MTR → Tsuen Wan line towards Central, two stops to Tsim Sha Tsui → Exit A1 / Haiphong Road → Hankow Road.",
+              "approxCost": "Budget HK$5–7/person · HK$10–14/two, estimated",
+              "approxDurationMinutes": 25
+            }
+          ]
+        }
+      },
+      "before": {
+        "details": "11be3c28fb8dade83ed2fdcd367d944120b0718aa1e3802369b0ad043de990ee"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "08b0a80c-6282-4bde-9387-8f98ec1430f3",
+      "label": "Tsim Sha Tsui Christmas walk",
+      "values": {
+        "planned_start_time": "18:05:00",
+        "planned_end_time": "19:00:00",
+        "expected_duration_minutes": 55,
+        "description": "Christmas waterfront walk, finishing at the Cultural Centre Viewing Deck before the 19:00 WinterFest target.",
+        "transport_instructions": "28 Hankow Road → Harbour City surroundings → Clock Tower / Hong Kong Cultural Centre Viewing Deck. Allow 15–20 min walking with crossings and festive crowds, with the rest for photos and finding a viewing position. Finish by 19:00; add Avenue of Stars/K11 only if ahead. If CSL was collected at the airport, begin earlier.",
+        "details": {
+          "timingType": "FLEXIBLE",
+          "recommended": "Walk",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "approxDurationMinutes": 20,
+              "approxCost": "HK$0",
+              "route": "28 Hankow Road → Harbour City → Clock Tower → Cultural Centre Viewing Deck.",
+              "notes": "Allow crossings and holiday crowds; follow on-site access controls."
+            }
+          ],
+          "quickNote": "The next block starts at 19:00. This is a viewing arrival target, not a confirmed show start; individual projection cycles are unconfirmed."
+        }
+      },
+      "before": {
+        "planned_start_time": "e712af151adb029132b42fa0ce148c3b8ca6f109e1c7062caf03198b4a40a05d",
+        "planned_end_time": "8962a6464e6167a739f7243b58195a118f58cc10d59764680294636af37f164a",
+        "expected_duration_minutes": "108c995b953c8a35561103e2014cf828eb654a99e310f87fab94c2f4b7d2a04f",
+        "description": "b3fe7c5463100ae9ca28a96995ac0baa9648c300c6d5f06f419cc92828fa23a7",
+        "transport_instructions": "f8691d0ac52f61d8f37054bb5593a3ed54c1c34898ad396892820c14795cc4aa",
+        "details": "2e6a213e916731c4e1f9c7f4423bcb91d8226ca846642db6baea44518df4eb2b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "1d26f089-4bdd-4394-b321-9726dfb01ef8",
+      "label": "Tsim Sha Tsui WinterFest on foot",
+      "values": {
+        "title": "Tsim Sha Tsui WinterFest on foot",
+        "planned_start_time": "19:00:00",
+        "planned_end_time": "20:20:00",
+        "expected_duration_minutes": 80,
+        "recommended_departure_time": "18:45:00",
+        "item_type": "attraction",
+        "place_id": "701e5e80-480c-4cf6-8553-63462f7953a4",
+        "booking_id": null,
+        "checklist_item_id": null,
+        "estimated_cost": 0,
+        "estimated_cost_currency": "HKD",
+        "description": "Free outdoor displays: Cultural Centre / Clock Tower, then Museum of Art and Space Museum.",
+        "transport_instructions": "Arrive at the Cultural Centre Viewing Deck around 19:00 for The Stars of Christmas Concert across the Clock Tower/Cultural Centre, then walk to the Museum of Art and Space Museum exteriors for Northern Lights. Allow 10–15 min between areas plus 10–15 min finding space; follow the current site programme and crowd controls. This is an 80-minute viewing/walking allowance, not two confirmed performance appointments.",
+        "details": {
+          "timingType": "TARGET",
+          "booking": "not-required",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED",
+          "recommended": "Walk",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "approxDurationMinutes": 15,
+              "approxCost": "HK$0",
+              "route": "Cultural Centre Viewing Deck / Clock Tower → Hong Kong Museum of Art → Space Museum exterior.",
+              "notes": "Allow crossings and holiday crowds; follow on-site access controls."
+            }
+          ],
+          "eventStatus": "Published programme; individual show start times/repeat intervals unconfirmed.",
+          "operatingHours": "25 Dec: 19:00–01:00 on 26 Dec, Hong Kong time. Free outdoor viewing. Both TST projections suspended 31 Dec.",
+          "quickNote": "Symphony of Lights ends on 18 Nov 2026. This free WinterFest walk replaces the unbooked cruise; no cruise ticket purchase or HK$680 planned cruise spend remains.",
+          "fallback": "If CSL pickup runs late, finish collection and have dinner around 20:30 first; view the projections after dinner (e.g. 21:30–22:30), shortening/skipping the optional Temple Street walk. Recheck show operation, weather and access; no guaranteed individual start time.",
+          "costStatus": "Free displays and walking: HK$0."
+        }
+      },
+      "before": {
+        "title": "1f038d7a1f202ef7f0238ebf1192a48d6054273be3862c522ce06afcfd18aa89",
+        "planned_start_time": "8c01967ba47ae2adceab408d872307674a51c299bb210f449238c0062ade03e6",
+        "planned_end_time": "0206b845202eae96dae2bd99a0ee7764003ed6cc257b33db82db1149e185f5d7",
+        "expected_duration_minutes": "39fa9ec190eee7b6f4dff1100d6343e10918d044c75eac8f9e9a2596173f80c9",
+        "recommended_departure_time": "a9f9d235126fefdf1d163a5cecee6dbe11b467e73d054e8571a8b0ca30b5095f",
+        "item_type": "00091aa568cb13873d1e8b761941b4ab506f6fc56867b6d5a6f4fc8c8539d810",
+        "place_id": "3b1ce1c43fae4c37069b55e21eb7f3178894d8a8b60f6968bd6ab4a2b789d995",
+        "booking_id": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "checklist_item_id": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost": "a4c6af0cb6f02dff01ba174e4cf11f24f73d9ed16ca7a1e3c9d831c0139faa5c",
+        "estimated_cost_currency": "fd88ae3483c561e5f3c125cb77723d32fec654259be55edae61386a184f70ee3",
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "transport_instructions": "d858a2db290fb33909c24bc20096cadc1c797f7261c5ab4c090cf486dc33913e",
+        "details": "86613410f8b6406b7302c051deffe14f71826b168cbdb65f4bca16d6f608de31"
+      }
+    },
+    {
+      "table": "bookings",
+      "id": "640651d4-0b15-4307-97b4-fa861a4a11fc",
+      "label": "Aqua Luna Symphony of Lights sailing",
+      "values": {
+        "status": "CANCELLED",
+        "amount": null,
+        "notes": "Retired unbooked placeholder on 11 Nov 2026: Symphony of Lights ends 18 Nov. Replaced by free Tsim Sha Tsui WinterFest on foot, 25 Dec 19:00–20:20. No sailing was purchased; no refund action or planned cruise charge."
+      },
+      "before": {
+        "status": "26d1c369d7d2dd379af17f92239cd5b7f199baa889a800e12afb6a368040aa33",
+        "amount": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "f78ffae5-7675-4c35-88a1-45757acd6518",
+      "label": "Aqua Luna Christmas sailing — retired",
+      "values": {
+        "status": "SKIPPED",
+        "title": "Aqua Luna Christmas sailing — retired",
+        "priority": "OPTIONAL",
+        "description": "Unbooked cruise retired; replaced by the free 25 Dec WinterFest walking visit. Symphony of Lights ends 18 Nov 2026. No booking/purchase required.",
+        "notes": "Retired 11 Nov 2026. Preserve as history; do not book the old Symphony of Lights sailing."
+      },
+      "before": {
+        "status": "94979d3cb64be7b96b30313fc3d3a15865c3d8ee411564418b8951214aaf9f68",
+        "title": "9642f1c424811f29ac96c06214e219f8f79095d6cc30590abf5cbbeeaf6eb453",
+        "priority": "d5af10d35cfe6401cd2b64d8cbf0c8aedb7953c3606d7d28d85c5ea53d0217c8",
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "d164aba1-4d6c-4c0a-b763-a3f43efc97e7",
+      "label": "Dinner around Tsim Sha Tsui / Jordan / Yau Ma Tei",
+      "values": {
+        "transport_instructions": "Keep arrival-night dinner spontaneous. No beef and preferably no beef broth. Optional after WinterFest: share nearby roast goose, char siu or crispy roast pork belly if open and stocked; late-evening goose is not guaranteed.",
+        "details": {
+          "fallback": "If SIM collection delays the lights, keep dinner around 20:30 and see the projections afterward; they run until 01:00 on 26 Dec. Optional Temple Street is the first thing to drop."
+        }
+      },
+      "before": {
+        "transport_instructions": "f5fa43cb65fd59c5f10b44c4a7cd0b3070a284de36bfa87628f0600146d79c85",
+        "details": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      }
+    },
+    {
+      "table": "itinerary_days",
+      "id": "19dce530-942d-44aa-8bcf-611bcb64f5c5",
+      "label": "Boxing Day • Day Peak • Happy Valley • Old Town • Central WinterFest • Night Peak • Star Ferry",
+      "values": {
+        "title": "Boxing Day • Day Peak • Happy Valley • Old Town • Central WinterFest • Night Peak • Star Ferry"
+      },
+      "before": {
+        "title": "be4f4fccad5a7173442c29170236b0461d743b1fb745e382a9fd2b7a69d35ae6"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "2ceda501-9931-4897-b8e9-2fb43fa9d352",
+      "label": "Central festive atmosphere / harbourfront and rest buffer",
+      "values": {
+        "planned_start_time": "15:15:00",
+        "planned_end_time": "17:25:00",
+        "expected_duration_minutes": 130,
+        "transport_instructions": "Keep the Central harbourfront/rest buffer and an early simple meal/snack if needed. Finish around Central/City Hall so the 17:25 walk reaches Statue Square Gardens by 17:45. Do not refill this buffer with another attraction."
+      },
+      "before": {
+        "planned_start_time": "281317c200830be8161c2359f7b83ac37f3340c0c95a31f63dc850e9353608e4",
+        "planned_end_time": "fb2a02e618cbe4a505dcac3de4bfb2d12af60a69ebe6dd089a604167337f9bbf",
+        "expected_duration_minutes": "28dae7c8bde2f3ca608f86d0e16a214dee74c74bee011cdfdd46bc04b655bc14",
+        "transport_instructions": "af9557b461b76bb0911959d8b855446c6b4932e1083e7b30459a523f04e54476"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "2d70a3e5-9b47-4e0f-ac77-d08f82be01c8",
+      "label": "Walk Central → Statue Square Gardens",
+      "values": {
+        "title": "Walk Central → Statue Square Gardens",
+        "planned_start_time": "17:25:00",
+        "planned_end_time": "17:45:00",
+        "expected_duration_minutes": 20,
+        "place_id": "1df8424f-9c48-4dc9-9152-dd41705c6ea2",
+        "estimated_cost": 0,
+        "estimated_cost_currency": "HKD",
+        "transport_instructions": "From the preceding Central stop / City Hall harbourfront, follow signed crossings/underpasses to North and South Statue Square Gardens, near Central Exit K. Allow 10–20 min depending on the actual rest stop and holiday queues.",
+        "details": {
+          "timingType": "TARGET",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED",
+          "recommended": "Walk",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "approxDurationMinutes": 20,
+              "approxCost": "HK$0",
+              "route": "Central / City Hall area → North and South Statue Square Gardens (Central Exit K).",
+              "notes": "Allow crossings and holiday crowds; follow on-site access controls."
+            }
+          ]
+        }
+      },
+      "before": {
+        "title": "1eaa711001b530362390f7c603ce0fe1fae9537bf026e940063144c0bb39f700",
+        "planned_start_time": "fb2a02e618cbe4a505dcac3de4bfb2d12af60a69ebe6dd089a604167337f9bbf",
+        "planned_end_time": "497e5b31af015828d0651fcad24ce560c98976be42ca883f27424beacb575c25",
+        "expected_duration_minutes": "9f14025af0065b30e47e23ebb3b491d39ae8ed17d33739e5ff3827ffb3634953",
+        "place_id": "00fea38081a1d2c3c928e3e5709847ecd91baa0f1f26c2fc6d6c44cad3e5b033",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "transport_instructions": "217c06fb3f55d439464597fd7fcb78628a2befe70f3f53d366ddab68dce48566",
+        "details": "3e05e86f18ccf6ca7b7de4ddbf6e583bfe758029b2f64cb0de2951dc68e3020d"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "f6bb5a2f-03dc-4a2b-98f9-b004c55f48e0",
+      "label": "Statue Square Gardens WinterFest",
+      "values": {
+        "title": "Statue Square Gardens WinterFest",
+        "planned_start_time": "17:45:00",
+        "planned_end_time": "19:30:00",
+        "expected_duration_minutes": 105,
+        "place_id": "1df8424f-9c48-4dc9-9152-dd41705c6ea2",
+        "estimated_cost": 0,
+        "estimated_cost_currency": "HKD",
+        "description": "22-metre tree, Christmas Express and market/booths; lights at 18:00, projection target 19:00.",
+        "transport_instructions": "Browse the Christmas Market if operating, Christmas Express and 22-metre tree. Lights illuminate from 18:00; move to South Statue Square around 18:40–18:45 for the 19:00 projection. It repeats every 30 min; 19:30 is the backup. Crowd controls can affect entry and viewing.",
+        "details": {
+          "timingType": "TARGET",
+          "booking": "not-required",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED",
+          "recommended": "Walk",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "approxDurationMinutes": 10,
+              "approxCost": "HK$0",
+              "route": "Explore North/South Statue Square Gardens; finish at South Statue Square for projections.",
+              "notes": "Allow crossings and holiday crowds; follow on-site access controls."
+            }
+          ],
+          "operatingHours": "26 Dec Christmas Town 11:00–01:30 on 27 Dec; tree lights from 18:00. Projection 19:00–01:00 on 27 Dec, every 30 min. Brief’s market Sat/PH 12:00–22:00 requires separate reconfirmation; current HKTB page does not confirm that market window.",
+          "quickNote": "Target the 19:00 cycle. If you choose 19:30, allow about 30 min later departure and shift Peak/return targets together; shorten Peak viewing if needed.",
+          "fallback": "Night Peak remains the default. Lee Tung snowfall is an alternative only if an official 26 Dec show at 20:00 or later is confirmed. A Causeway Bay market/parade is another alternative only if later dates include 26 Dec but miss 1 Jan; do not add it as a second evening destination."
+        }
+      },
+      "before": {
+        "title": "50d704a982b209e4fc679319af7f2f69b1f7e88e294c8530aa9630304ef306e2",
+        "planned_start_time": "497e5b31af015828d0651fcad24ce560c98976be42ca883f27424beacb575c25",
+        "planned_end_time": "33106f395a97c18de378fbb137652e5ff6ee0317aeac36484a4dbcd5891ced4a",
+        "expected_duration_minutes": "13671077b66a29874a2578b5240319092ef2a1043228e433e9b006b5e53e7513",
+        "place_id": "00fea38081a1d2c3c928e3e5709847ecd91baa0f1f26c2fc6d6c44cad3e5b033",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "transport_instructions": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "details": "278249d74b539fb895ae0b38424be689a9ecc752002b63ccc78afad183c91baf"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "36ed3473-77fd-4241-937c-9ab561ff20cf",
+      "label": "Statue Square → Victoria Peak",
+      "values": {
+        "title": "Statue Square → Victoria Peak",
+        "planned_start_time": "19:30:00",
+        "planned_end_time": "20:25:00",
+        "expected_duration_minutes": 55,
+        "recommended_departure_time": "19:30:00",
+        "estimated_cost": 23.6,
+        "estimated_cost_currency": "HKD",
+        "description": "Road ascent; green minibus 1 by default, Bus 15 or taxi if the queue/traffic makes it better.",
+        "transport_instructions": "From Statue Square walk 10–15 min to Hong Kong Station Public Transport Interchange / minibus terminus beneath IFC; board green minibus 1 to The Peak. Allow waiting and a final viewpoint walk. If the 19:30 projection backup is used, depart about 20:00 and shift later blocks together.",
+        "details": {
+          "timingType": "TARGET",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED",
+          "recommended": "Green minibus 1",
+          "transportOptions": [
+            {
+              "name": "Green minibus 1",
+              "approxDurationMinutes": 55,
+              "approxCost": "HK$11.80/adult · HK$23.60/two",
+              "route": "Statue Square → walk 10–15 min to Hong Kong Station PTI beneath IFC → green minibus 1 → The Peak terminus → viewpoint walk.",
+              "notes": "About 45–60 min door to door; limited seats can cause queues. Fare published by TD; recheck before travel."
+            },
+            {
+              "name": "Bus 15",
+              "approxDurationMinutes": 65,
+              "approxCost": "HK$13/adult · HK$26/two",
+              "route": "Walk about 5–10 min to City Hall, Connaught Road Central, Peak-bound stop → Citybus 15 → The Peak terminus.",
+              "notes": "About 55–75 min door to door, including wait, traffic and viewpoint walk. Confirm Peak-bound stop/direction in Citybus app."
+            },
+            {
+              "name": "Taxi",
+              "approxDurationMinutes": 40,
+              "approxCost": "HK$120–180/car, estimated for both",
+              "route": "Ask staff for an accessible legal taxi pickup / Mandarin Oriental or nearby hotel rank after walking out of controlled roads → The Peak Galleria.",
+              "notes": "About 30–45 min including pickup and final walk; actual meter/traffic applies. No assumed pickup inside closed Chater Road."
+            }
+          ],
+          "farePerPerson": "Green minibus 1 HK$11.80; Bus 15 HK$13. Taxi is per car.",
+          "fareForTwo": "Recommended minibus: HK$23.60. Alternatives replace it; do not add their costs.",
+          "crowdNote": "Use taxi if the minibus queue is excessive and road traffic is reasonable. Bus 15 needs a longer allowance; reduce the Peak stay or move ferry later. Do not return to the Peak Tram queue by default.",
+          "fallback": "If substituting Lee Tung or Causeway Bay for the night Peak, skip this ascent, the Peak visit and descent together. Central → Wan Chai MTR (towards Chai Wan), Exit D for Lee Tung: 20–30 min door to door, HK$5.90/adult / HK$11.80/two. Central → Causeway Bay MTR, Exit F2 for Lee Gardens: 25–35 min, HK$5.90/adult / HK$11.80/two. Attend only confirmed event/date/time, then MTR back towards Kennedy Town to Central and walk to Pier 7 if the late Star Ferry fits; otherwise Admiralty → Yau Ma Tei. These replace the same evening slot and cost allowance."
+        }
+      },
+      "before": {
+        "title": "b198be13c91b939c1c60cac8aa733a190aecc5b3f1b5c38b54d212bd7cb314cd",
+        "planned_start_time": "33106f395a97c18de378fbb137652e5ff6ee0317aeac36484a4dbcd5891ced4a",
+        "planned_end_time": "d9c9ebe0e015a5950686b1312e3c6216d3d4b8b77f712b134eeeb1bdd4ca74c8",
+        "expected_duration_minutes": "1a6562590ef19d1045d06c4055742d38288e9e6dcd71ccde5cee80f1d5a774eb",
+        "recommended_departure_time": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "transport_instructions": "d7665b6fb4e751f85ac8d102108f2b0ba40e1273d9220b1ac21039962ee0d06e",
+        "details": "c1b6bf78f59f625c967e3f0f11ceb1387b52ee3114349651b9d5bec86dd876dd"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "cd2b3af7-0a07-46ac-a91b-3b4e4ad1b17f",
+      "label": "Victoria Peak night skyline",
+      "values": {
+        "planned_start_time": "20:25:00",
+        "planned_end_time": "21:15:00",
+        "expected_duration_minutes": 50,
+        "estimated_cost": 0,
+        "estimated_cost_currency": "HKD",
+        "transport_instructions": "Use free public night viewpoints around the Peak Galleria/Lion’s Pavilion area. Keep the second visit short; the morning Lugard Road visit is retained. If the Central projection/transport runs 30 min late, target about 20:55–21:45 and move the descent/ferry later.",
+        "details": {
+          "crowdNote": "Boxing Day evening can be very busy. Free viewpoints are fine if Sky Terrace queues are not worth it.",
+          "quickNote": "Default night Peak, weather permitting. Sky Terrace and a second Peak Tram ride are optional extras and excluded from planned committed spend.",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED",
+          "fallback": "Substitute this whole evening branch with Lee Tung snowfall only after official confirmation of a 20:00-or-later 26 Dec show. Do not carry forward the old 19:30 snow assumption. Alternatively use Central → Causeway Bay if a confirmed Boxing Day-only market/parade would be missed on 1 Jan. Reduce or replace the Peak; do not stack these visits."
+        }
+      },
+      "before": {
+        "planned_start_time": "d9c9ebe0e015a5950686b1312e3c6216d3d4b8b77f712b134eeeb1bdd4ca74c8",
+        "planned_end_time": "55e16835c12bf378b469cd36e53525e05e49981a4b3f0f2a81b3366841649fff",
+        "expected_duration_minutes": "39fa9ec190eee7b6f4dff1100d6343e10918d044c75eac8f9e9a2596173f80c9",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "transport_instructions": "8d048b535a82d02335ec113314051d1103e0488205600efc01b929772d8e565d",
+        "details": "1eaf54fc3e2880e17cab4c7535aca483046763d9ef8f4b6de30c993a552d7088"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "e06d6033-026b-4356-ba81-cd634d7990d9",
+      "label": "Victoria Peak → Central Pier 7",
+      "values": {
+        "title": "Victoria Peak → Central Pier 7",
+        "planned_start_time": "21:15:00",
+        "planned_end_time": "22:05:00",
+        "expected_duration_minutes": 50,
+        "estimated_cost": 23.6,
+        "estimated_cost_currency": "HKD",
+        "transport_instructions": "Green minibus 1 from The Peak terminus → Hong Kong Station PTI, then walk about 10–15 min via signed waterfront access to Central Pier 7. This block includes the pier walk; keep time for the ferry queue.",
+        "details": {
+          "timingType": "TARGET",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED",
+          "recommended": "Green minibus 1",
+          "transportOptions": [
+            {
+              "name": "Green minibus 1",
+              "approxDurationMinutes": 50,
+              "approxCost": "HK$11.80/adult · HK$23.60/two",
+              "route": "The Peak terminus → Hong Kong Station PTI → walk to Central Pier 7.",
+              "notes": "45–60 min door to door with queue; confirm boarding direction."
+            },
+            {
+              "name": "Bus 15",
+              "approxDurationMinutes": 65,
+              "approxCost": "HK$13/adult · HK$26/two",
+              "route": "The Peak terminus → Central Ferry Piers / Star Ferry stop → Pier 7.",
+              "notes": "55–75 min including waits/traffic; check current last departure."
+            },
+            {
+              "name": "Taxi",
+              "approxDurationMinutes": 40,
+              "approxCost": "HK$120–180/car, estimated",
+              "route": "Peak Galleria legal taxi rank → accessible Central ferry-pier drop-off → Pier 7.",
+              "notes": "30–45 min including pickup and pier walk."
+            }
+          ],
+          "fallback": "For the 19:30 Central projection backup, shift this block to roughly 21:45–22:35. If traffic/queues threaten the ferry, shorten Peak viewing. If not at Pier 7 by about 23:10, use Central MTR → Yau Ma Tei rather than chase the last 23:30 sailing."
+        }
+      },
+      "before": {
+        "title": "2666af35926a40a2fbbcc35417ec0c44d0879473ca96b218fa26dff83b6f0f2f",
+        "planned_start_time": "55e16835c12bf378b469cd36e53525e05e49981a4b3f0f2a81b3366841649fff",
+        "planned_end_time": "daa1e4aebbd70d8472676551415f285714e0bfec995c02c9661683b93fe2a2e2",
+        "expected_duration_minutes": "9f14025af0065b30e47e23ebb3b491d39ae8ed17d33739e5ff3827ffb3634953",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "transport_instructions": "1daaa17930e6c220ed04d36d681a6479f155d2fa0c0d283026db431f64f0040c",
+        "details": "42153781d191aa7761d8d7c269be13754ae462c4a56d880e096f3962329b7f20"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "c546b175-ed05-4988-8895-aad39bebf95c",
+      "label": "Star Ferry Central → Tsim Sha Tsui",
+      "values": {
+        "planned_start_time": "22:05:00",
+        "planned_end_time": "22:35:00",
+        "expected_duration_minutes": 30,
+        "recommended_departure_time": "22:05:00",
+        "estimated_cost": 13,
+        "estimated_cost_currency": "HKD",
+        "transport_instructions": "Central Pier 7 → Tsim Sha Tsui Star Ferry Pier. Published Saturday/public-holiday upper deck HK$6.50/adult, lower deck HK$5.60/adult. Crossing about 9 min; allow 20–30 min for queue/boarding/crossing. Current last Central departure 23:30; holiday operations to recheck.",
+        "details": {
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED",
+          "recommended": "Star Ferry",
+          "transportOptions": [
+            {
+              "name": "Star Ferry",
+              "approxDurationMinutes": 30,
+              "approxCost": "Upper HK$6.50/adult · HK$13/two; lower HK$5.60/adult · HK$11.20/two",
+              "route": "Central Pier 7 → Tsim Sha Tsui Pier.",
+              "notes": "Holiday frequency about 6–8 min until 22:40, then 10–12 min; current final departure 23:30."
+            },
+            {
+              "name": "MTR directly to hotel",
+              "approxDurationMinutes": 40,
+              "approxCost": "HK$13.20/adult · HK$26.40/two",
+              "route": "Walk to Central MTR → Tsuen Wan line towards Tsuen Wan → Yau Ma Tei Exit C → hotel walk.",
+              "notes": "35–45 min door to door; replaces ferry plus the TST-to-hotel leg, not both fares added."
+            }
+          ],
+          "farePerPerson": "Star Ferry upper deck HK$6.50 on 26 Dec public holiday.",
+          "fareForTwo": "HK$13 upper deck; or HK$11.20 lower.",
+          "fallback": "19:30 projection backup: aim ferry around 22:35–23:05. If not at Pier 7 by 23:10, take MTR straight to the hotel; do not also take the next TST transfer."
+        }
+      },
+      "before": {
+        "planned_start_time": "f9cc9054ecc57d22bcd0c62d770d873c064a6aeb1bcf8c9509fa399e4e95783d",
+        "planned_end_time": "a9b27086148a5fa6f8d7f9efceefc2d1d770dd6a006d5b7fd7338460faf0774d",
+        "expected_duration_minutes": "b7a56873cd771f2c446d369b649430b65a756ba278ff97ec81bb6f55b2e73569",
+        "recommended_departure_time": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost": "3fdba35f04dc8c462986c992bcf875546257113072a909c162f7e470e581e278",
+        "estimated_cost_currency": "fd88ae3483c561e5f3c125cb77723d32fec654259be55edae61386a184f70ee3",
+        "transport_instructions": "42c0f242556c143b9e90d53dc74a160b3b77b68b762b53d6f9ba7ca6353bcd34",
+        "details": "905985a557ff8f41387605b0f0a981135227cbfec1c408c95e6e62aecbe06693"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "491b6094-d214-44bc-a03a-623f8dfc3455",
+      "label": "Tsim Sha Tsui → hotel / supper if needed",
+      "values": {
+        "title": "Tsim Sha Tsui → hotel / supper if needed",
+        "planned_start_time": "22:35:00",
+        "planned_end_time": "23:15:00",
+        "expected_duration_minutes": 40,
+        "estimated_cost": 9.8,
+        "estimated_cost_currency": "HKD",
+        "transport_instructions": "From TST Star Ferry Pier walk 10–15 min to Tsim Sha Tsui station, use Tsuen Wan line towards Tsuen Wan via Jordan to Yau Ma Tei, Exit C, then walk 5–8 min to Bridal Tea House. Buy a small takeaway supper only if hungry; do not add a fixed extra meal.",
+        "details": {
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED",
+          "recommended": "MTR + walk",
+          "transportOptions": [
+            {
+              "name": "MTR + walk",
+              "approxDurationMinutes": 40,
+              "approxCost": "HK$4.90/adult · HK$9.80/two",
+              "route": "TST pier → Tsim Sha Tsui MTR → Yau Ma Tei Exit C → 6 Arthur Street.",
+              "notes": "30–40 min including pier/station/hotel walks and train wait."
+            },
+            {
+              "name": "Walk",
+              "approxDurationMinutes": 45,
+              "approxCost": "HK$0",
+              "route": "TST pier → Nathan Road / Jordan → Man Ming Lane / Arthur Street → hotel.",
+              "notes": "40–50 min, more tiring after the long day."
+            }
+          ],
+          "fallback": "Skip this leg if MTR was taken directly from Central. Backup 19:30 projection moves hotel arrival to about 23:45."
+        }
+      },
+      "before": {
+        "title": "5938393177918183a97b1e467a6e1cee88bc201cf9a25519267781e1f476c71d",
+        "planned_start_time": "a9b27086148a5fa6f8d7f9efceefc2d1d770dd6a006d5b7fd7338460faf0774d",
+        "planned_end_time": "2071d94c58a09936eb7b5b0e79feb71360e554a9ee5f8223ecf81a54f9a85ce7",
+        "expected_duration_minutes": "624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "transport_instructions": "6ca88d35c8491cf3d68df07a3a337f891750a5fd30148d7be8ffd1a1e697f54f",
+        "details": "590963cb248bd41cdde124c998118dca8ce26bca0c617365f7e8de4e8aa7da54"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "652cd79d-0eae-4807-b752-29ca7601505f",
+      "label": "Recheck Boxing Day evening alternatives and WinterFest access",
+      "values": {
+        "title": "Recheck Boxing Day evening alternatives and WinterFest access",
+        "description": "Confirm Central Christmas Market’s separate hours, tree lights/projection cycles and crowd controls. Keep night Peak default. Only replace it with Lee Tung snowfall if an official 26 Dec show at 20:00 or later is confirmed; old 19:30 was last season. If a Causeway Bay market/parade includes 26 Dec but misses 1 Jan, consider that instead of Peak. Confirm route/return timing, not extra visits.",
+        "notes": "One evening choice after Central: night Peak by default; conditional Lee Tung or Causeway Bay replaces ascent/view/descent, with transport recalculated."
+      },
+      "before": {
+        "title": "5308794f75f75e60ff19cc027782930f161ef3ca67e7e88eaabd2a291fdc2479",
+        "description": "e5046cae048614663977f785dc92f28ac60b3f5668c979bc21018b3cbc6d027b",
+        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "4a7988af-e07f-4f2d-8e30-3de3854f474a",
+      "label": "MTR to Hong Kong Disneyland",
+      "values": {
+        "estimated_cost": 44.4,
+        "estimated_cost_currency": "HKD",
+        "recommended_departure_time": "08:30:00",
+        "transport_instructions": "Leave Bridal Tea House about 08:30. Walk to Yau Ma Tei, Tsuen Wan line towards Tsuen Wan → Lai King; change to Tung Chung line towards Tung Chung → Sunny Bay; change to Disneyland Resort line → Disneyland Resort. Follow Resort promenade/security signs to the main gate. Target gate arrival 09:30; normal admission opening is provisional 10:00.",
+        "details": {
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED",
+          "recommended": "MTR",
+          "transportOptions": [
+            {
+              "name": "MTR",
+              "approxDurationMinutes": 60,
+              "approxCost": "HK$22.20/adult Octopus · HK$44.40/two, one way",
+              "route": "Hotel → Yau Ma Tei → Lai King → Sunny Bay → Disneyland Resort → 10–15 min station-to-gate walk/security.",
+              "notes": "Allow 55–70 min door to gate, including 5–8 min hotel access, trains/waits and two interchanges. Recheck MTR fare/calendar before travel."
+            },
+            {
+              "name": "Taxi",
+              "approxDurationMinutes": 45,
+              "approxCost": "HK$250–350/car, estimated",
+              "route": "Hotel legal taxi pickup → Disneyland public transport interchange → gate/security walk.",
+              "notes": "40–60 min with traffic; optional comfort fallback replacing the MTR fare."
+            }
+          ],
+          "farePerPerson": "HK$22.20 adult Octopus one way; published matrix effective 20 Sep 2026.",
+          "fareForTwo": "HK$44.40 each way; HK$88.80 for both travellers’ return journeys.",
+          "quickNote": "09:30 is gate-arrival target, not Early Entry admission. Early Entry/Premier Access remain optional and unpurchased."
+        }
+      },
+      "before": {
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "recommended_departure_time": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "transport_instructions": "4e3369e3cfe7f13f298fff4802115d372afe7ee37b80b9c1b22d52ea4658016c",
+        "details": "2ab53fbf75fb06a1dbce4d0fe72b023879d8a143ad42de20da28184e1dad981f"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "3a13846f-1c6f-43f2-87a9-1e6a75623f57",
+      "label": "Hong Kong Disneyland full day",
+      "values": {
+        "booking_id": "20b6a84e-d1ab-4700-bfdd-0f1de4043a4b",
+        "estimated_cost": null,
+        "estimated_cost_currency": "HKD",
+        "description": "Two dated 30 Dec tickets confirmed; rides plus Arendelle market, Santa Goofy tree lighting and Momentous.",
+        "transport_instructions": "Keep World of Frozen, Big Grizzly Mountain, Mystic Manor and Iron Man Experience as ride priorities; fit Lion King/PhilharMagic around queues. While in Arendelle for rides, browse the World of Frozen winter market and festive stalls; Olaf may appear, with no assigned character time. Fit the daytime Mickey/Minnie Christmas castle stage show if it works around rides. Prioritise Santa Goofy’s Main Street tree lighting with artificial snowfall/drone effects and Momentous at the castle; obtain both times from the official daily schedule before choosing ride/dinner order.",
+        "details": {
+          "booking": "prebooked",
+          "quickNote": "The existing private PDF contains ticket 1 of 2 and ticket 2 of 2, both dated 30 Dec 2026. Save the full-page e-tickets; scan at Main Entrance turnstiles rather than the ticket-purchase queue. Keep any Disney reservation lookup as an optional pre-trip verification, following current ticket/supplier instructions.",
+          "costStatus": "Two-person dated admission already booked. The old HK$1,878 admission estimate is removed; do not buy or count admission again. Actual paid amount is not recorded here. Early Entry/Premier Access are optional extras excluded from committed spend.",
+          "hoursStatus": "PROVISIONAL",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "COMMITTED",
+          "operatingHours": "Planned gate arrival 09:30; provisional park hours 10:00–21:30 on 30 Dec. Date-specific Disney calendar must confirm opening, closing and shows.",
+          "eventStatus": "Christmas programme confirmed for the season; tree lighting, Momentous, daytime show and characters have no assumed daily time. Disney Christmas Live in Concert dates (21–22 Nov, 5–6 Dec) are before this visit; no concert ticket planned.",
+          "priorityRule": "Protect Santa Goofy tree lighting and Momentous once the daily timetable is published. Leave 20–30 min to move/find viewing space and settle meals around those times. Character appearances and weather-sensitive snowfall/drone effects are not guaranteed.",
+          "fallback": "If a show changes/cancels, keep ride/market time flexible. Optional Early Entry/Premier Access only if separately chosen later; do not count alternatives as existing purchases."
+        }
+      },
+      "before": {
+        "booking_id": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost": "8a80efe71cf1850186e908f82e61d9ab6c95889d927cfec59d69f8aeb0673ff7",
+        "estimated_cost_currency": "fd88ae3483c561e5f3c125cb77723d32fec654259be55edae61386a184f70ee3",
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "transport_instructions": "69926ba7da2f28922c88207be99fcf98dc4a22a2d0a69bf2225d910976000887",
+        "details": "46cebbc19b83c881728098838557846ebe884a5881a0ee7f6821565bd770f1e9"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "cf78da87-291c-4861-9624-6d3be4278732",
+      "label": "Exit after last show; MTR → Yau Ma Tei",
+      "values": {
+        "title": "Exit after last show; MTR → Yau Ma Tei",
+        "planned_start_time": "21:30:00",
+        "planned_end_time": "23:15:00",
+        "expected_duration_minutes": 105,
+        "recommended_departure_time": "22:00:00",
+        "estimated_cost": 44.4,
+        "estimated_cost_currency": "HKD",
+        "description": "Departure follows the actual final show and exit crowd; displayed times are provisional allowances.",
+        "transport_instructions": "After the actual last show ends, allow 20–30 min to exit and walk to Disneyland Resort station, longer in a heavy crowd. Reverse route: Disneyland Resort → Sunny Bay (Tung Chung line towards Hong Kong) → Lai King (Tsuen Wan line towards Central) → Yau Ma Tei Exit C → hotel. If the final show finishes around 21:30, station departure around 22:00 and hotel about 23:00–23:15 are targets; shift with the confirmed daily programme.",
+        "details": {
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED",
+          "timingType": "TARGET",
+          "recommended": "MTR",
+          "transportOptions": [
+            {
+              "name": "MTR",
+              "approxDurationMinutes": 90,
+              "approxCost": "HK$22.20/adult Octopus · HK$44.40/two, one way",
+              "route": "Last show → 20–30 min crowd/exit/gate-to-station allowance → Disneyland Resort → Sunny Bay → Lai King → Yau Ma Tei Exit C → 5–8 min hotel walk.",
+              "notes": "About 80–105 min show-finish to hotel, including 50–65 min station-to-hotel with waits/interchanges. Confirm last trains once show times are released."
+            },
+            {
+              "name": "Taxi",
+              "approxDurationMinutes": 70,
+              "approxCost": "HK$250–350/car, estimated",
+              "route": "Last show → exit to legal Disneyland taxi rank → Bridal Tea House.",
+              "notes": "About 55–90 min including exit, rank queue and traffic; replaces MTR, not an extra committed fare."
+            }
+          ],
+          "planningAssumption": "21:30 is a provisional last-show/exit-budget anchor, not a published Momentous time. Re-time the park and return windows together after Disney releases the date-specific schedule.",
+          "farePerPerson": "HK$22.20 adult Octopus one way.",
+          "fareForTwo": "HK$44.40 return leg; outbound + return HK$88.80 for two."
+        }
+      },
+      "before": {
+        "title": "2af3d64acf2cb05ad4845ed94029140d2977fa3868809d99398997a58ae21d0d",
+        "planned_start_time": "7a48609cc2abc7dd2a8a11fc1a028daba98d888d75b22ae3d6708fe7d7875689",
+        "planned_end_time": "10d1edc094d3f777a597096deebe1a0d6bf8875f0f5e5729988ddab10493f4e2",
+        "expected_duration_minutes": "f369cb89fc627e668987007d121ed1eacdc01db9e28f8bb26f358b7d8c4f08ac",
+        "recommended_departure_time": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "transport_instructions": "9281cd3482db2d569b61f722f097bae3105474fe91683b4d04ddd9dde1a736e3",
+        "details": "d3ba6fbc844fc60cc4fe22e5829f58982160d5b7e2e4c92931b22f2e6985958d"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "0551e80b-7ee1-4961-ab0a-3bd6020da95b",
+      "label": "Save both confirmed Disneyland e-tickets offline",
+      "values": {
+        "title": "Save both confirmed Disneyland e-tickets offline",
+        "description": "Admission for two is already confirmed for 30 Dec 2026. Keep the existing PDF, which has two dated e-tickets; save both full pages and scan directly at the main turnstiles. Do not purchase admission again. Optional reservation lookup only to verify current Disney/supplier requirements.",
+        "linked_itinerary_item_id": "3a13846f-1c6f-43f2-87a9-1e6a75623f57",
+        "notes": "Replaces the stale “book Disneyland” task; booking and ticket attachment are preserved."
+      },
+      "before": {
+        "title": "4b98f4fe9212d6acfd005ae5a69a673e17a05c50c05ed6fc49cdf4f98189c49b",
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "linked_itinerary_item_id": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "notes": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "0311b3c9-bba1-4591-a1dd-220935d7a0bc",
+      "label": "Recheck Disneyland 30 Dec operating hours and show times",
+      "values": {
+        "description": "Check 30 Dec official park opening/closing and daily times for Santa Goofy tree lighting, Momentous and the daytime Mickey/Minnie castle show. Keep 09:30 gate arrival; 10:00–21:30 hours are provisional. Coordinate Arendelle market/rides, dinner, 20–30 min show viewing buffers, final exit and last MTR. No fixed Olaf appearance; Live in Concert is before the trip."
+      },
+      "before": {
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "2eebb3c3-d5ac-43d7-9d74-5ab1a16823ed",
+      "label": "Tsim Sha Tsui waterfront before countdown",
+      "values": {
+        "details": {
+          "eventStatus": "HKTB has announced Victoria Harbour countdown fireworks; viewing/access, programme, crowd controls and transport details pending.",
+          "quickNote": "Both Tsim Sha Tsui WinterFest projections are suspended on 31 Dec. See them on 25 Dec instead. The midnight fireworks fall on 1 Jan; duration and official viewing/access arrangements remain to be announced."
+        }
+      },
+      "before": {
+        "details": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "64c4f7ec-989e-437b-8d5c-24255314ec33",
+      "label": "Hong Kong New Year's countdown",
+      "values": {
+        "details": {
+          "eventStatus": "HKTB has announced Victoria Harbour countdown fireworks; viewing/access, programme, crowd controls and transport details pending.",
+          "quickNote": "Both Tsim Sha Tsui WinterFest projections are suspended on 31 Dec. See them on 25 Dec instead. The midnight fireworks fall on 1 Jan; duration and official viewing/access arrangements remain to be announced."
+        }
+      },
+      "before": {
+        "details": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "d8171e49-1c0a-4325-9a2f-b7a88d174ef8",
+      "label": "Recheck official NYE fireworks, crowd-control zones and MTR hours",
+      "values": {
+        "description": "HKTB has announced Victoria Harbour New Year fireworks. Recheck exact viewing/access arrangements, crowd controls, closure zones, programme timing and overnight MTR/transport. Both TST WinterFest projections are suspended 31 Dec; keep 25 Dec for them. Do not treat the 00:00–00:15 crowd buffer as a confirmed fireworks duration."
+      },
+      "before": {
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "itinerary_days",
+      "id": "80554de2-23e8-463f-8799-1497b2bdc9c3",
+      "label": "Island neighbourhoods • Monster Building • Causeway Bay WinterFest • Street snacks",
+      "values": {
+        "title": "Island neighbourhoods • Monster Building • Causeway Bay WinterFest • Street snacks"
+      },
+      "before": {
+        "title": "ba4e43c1d30c68abbdc10a4bca8928d93cf953cd4413ac70a32b2356639555b8"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "7a59462e-abb7-4678-a31d-09edb186dbb8",
+      "label": "Daytime buffer / continue east to North Point",
+      "values": {
+        "title": "Daytime buffer / continue east to North Point",
+        "planned_start_time": "14:20:00",
+        "planned_end_time": "15:30:00",
+        "expected_duration_minutes": 70,
+        "item_type": "transport",
+        "place_id": "ac109a50-9b7d-4c31-be44-3d1fa4e15463",
+        "estimated_cost": 6.6,
+        "estimated_cost_currency": "HKD",
+        "description": "Use the former Causeway Bay sightseeing time as lunch/queue and eastbound travel buffer.",
+        "transport_instructions": "After Canal Road Flyover, pause as needed and walk to an eastbound Hennessy Road tram stop. Take a tram signed North Point to its Chun Yeung Street terminus, or a Shau Kei Wan-bound tram to the North Point / Chun Yeung Street area and walk. Allow 30–45 min door to door; keep the remaining time as daytime buffer, not a standalone Causeway Bay sightseeing visit.",
+        "details": {
+          "timingType": "BUFFER",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED",
+          "recommended": "Ding Ding + walk",
+          "transportOptions": [
+            {
+              "name": "Ding Ding + walk",
+              "approxDurationMinutes": 45,
+              "approxCost": "HK$3.30/adult · HK$6.60/two",
+              "route": "Canal Road/Hennessy Road eastbound tram stop → North Point / Chun Yeung Street.",
+              "notes": "30–45 min with access, waiting and street traffic; check destination board."
+            },
+            {
+              "name": "MTR + walk",
+              "approxDurationMinutes": 30,
+              "approxCost": "HK$5.90/adult · HK$11.80/two",
+              "route": "Walk to Causeway Bay MTR → Island line towards Chai Wan → North Point Exit A2 → Chun Yeung Street.",
+              "notes": "25–35 min; use if traffic/late running makes the tram slow."
+            }
+          ],
+          "quickNote": "North Point remains 15:30–16:10 and Monster Building 16:30–17:15 for daylight. Do not refill the released sightseeing buffer."
+        }
+      },
+      "before": {
+        "title": "c0ff1e51ea874e411abddd089019d8ae15622c248e27adf78ed17101563a2247",
+        "planned_start_time": "93bc6af85b3e7dcc8ecc3142bcfbf58a741fae7c16e602883c7dfd5c6d1a4e37",
+        "planned_end_time": "7fdfeaffd6c874781ad9bda19199e4be619c5e880d5898b79a415a4742c275b8",
+        "expected_duration_minutes": "9f14025af0065b30e47e23ebb3b491d39ae8ed17d33739e5ff3827ffb3634953",
+        "item_type": "2b432b17a803dbcbba65499bb3f011514596bc1aff541e84bd8d60b94f78efa4",
+        "place_id": "c00877d87c0375ec6ebe0a5aea74a3bcefb2e8e8ba9ecc19508b757832b6f12a",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "transport_instructions": "55640a9ca68d570d4b7ed520dfb9a2b9ac5d3fc18a506173d7ee6ee8e63b251c",
+        "details": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "1b6427cf-1414-4f4f-b750-49060aaf2359",
+      "label": "Monster Building",
+      "values": {
+        "recommended_departure_time": "16:10:00",
+        "estimated_cost": 6.6,
+        "estimated_cost_currency": "HKD",
+        "details": {
+          "recommended": "Ding Ding + walk",
+          "transportOptions": [
+            {
+              "name": "Ding Ding + walk",
+              "approxDurationMinutes": 20,
+              "approxCost": "HK$3.30/adult · HK$6.60/two",
+              "route": "After North Point, walk to eastbound King’s Road tram stop → Shau Kei Wan-bound tram to Mount Parker Road area → public street access to Yick Cheong / Monster Building.",
+              "notes": "Allow 20–30 min including wait/walk; leave North Point earlier if needed to protect daylight."
+            }
+          ],
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED",
+          "quickNote": "Keep 16:30–17:15 and leave via public King’s Road access. These are homes: follow any no-entry/photo signs and leave if access is restricted."
+        }
+      },
+      "before": {
+        "recommended_departure_time": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "details": "6c95900b4f8a89bf29595852b441784d48b47576bf63de3635a9cb73cf65068f"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "66b6da59-a8c0-46cd-a98f-81adf0d6b6ac",
+      "label": "Monster Building → Causeway Bay",
+      "values": {
+        "title": "Monster Building → Causeway Bay",
+        "planned_start_time": "17:15:00",
+        "planned_end_time": "17:55:00",
+        "expected_duration_minutes": 40,
+        "place_id": "2cdaea32-11b2-4664-beff-f980026310ea",
+        "estimated_cost": 14.8,
+        "estimated_cost_currency": "HKD",
+        "description": "Tai Koo westbound Island line is the default from the King’s Road exit; Quarry Bay if leaving farther west.",
+        "transport_instructions": "From the usual public King’s Road exit by Yick Cheong, prefer walking east about 6–8 min to Tai Koo Exit B, then Island line towards Kennedy Town to Causeway Bay. Allow 0–5 min train wait, about 10–12 min on train and 5–10 min exit/access walk. For Tong Kee / Keung Kee use the Canal Road/Lockhart Road side (Exit C area); for Lee Gardens go via Exit F2. Actual access signs/maps win.",
+        "details": {
+          "timingType": "TARGET",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED",
+          "recommended": "MTR via Tai Koo",
+          "transportOptions": [
+            {
+              "name": "MTR via Tai Koo",
+              "approxDurationMinutes": 35,
+              "approxCost": "HK$7.40/adult Octopus · HK$14.80/two",
+              "route": "Monster Building King’s Road exit → Tai Koo Exit B → westbound Island line towards Kennedy Town → Causeway Bay → food-side exit or F2 for Lee Gardens.",
+              "notes": "About 30–40 min door to door: 6–8 min station walk, 0–5 min wait, 10–12 min train, station/food walk. Default assumes the usual east-facing King’s Road access."
+            },
+            {
+              "name": "MTR via Quarry Bay",
+              "approxDurationMinutes": 40,
+              "approxCost": "HK$5.90/adult Octopus · HK$11.80/two",
+              "route": "If already leaving farther west, walk about 10–12 min to Quarry Bay Exit A → westbound Island line towards Kennedy Town → Causeway Bay.",
+              "notes": "About 30–40 min door to door; 8–10 min train plus waits/exit walk. Slightly cheaper; use if the actual public exit makes the westward walk easier."
+            }
+          ],
+          "quickNote": "Tai Koo has a shorter access walk from the usual King’s Road exit, balanced against one extra rail stop. This is a planning comparison, not a live walking measurement. Recheck the actual exit and route on site; do not return to Yau Ma Tei first.",
+          "farePerPerson": "Tai Koo HK$7.40; Quarry Bay HK$5.90, adult Octopus.",
+          "fareForTwo": "Recommended HK$14.80; alternative HK$11.80, not both."
+        }
+      },
+      "before": {
+        "title": "4e7c72718ab26f67461b24f1e43bfb6e629a0ab0d0e3967f59bca108d5d94e5c",
+        "planned_start_time": "2450f77097fcba5a32971f7109008183adfa0a55e7a825b216f13cdcb5c093e6",
+        "planned_end_time": "add6da2024606423a25ac692cb7440eae2193edcde9686fe93967f640d76a9d9",
+        "expected_duration_minutes": "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c",
+        "place_id": "73c05cc4e700c6eb434fb2e89dfd9fe4eb2027edb8f23868203d7f3cd11a161f",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "transport_instructions": "e7fe3823bfa57d7b4d7030d71f1b1458ccec69b287145a8b4abc1ae184746a93",
+        "details": "68ed7bf2c40a2f34f60b47b7d0300b285218c824c7f5689e65fc4b3963cbb05c"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "b9143694-19d5-4484-8805-a2f4187971ef",
+      "label": "Causeway Bay cheap snacks and rest",
+      "values": {
+        "title": "Causeway Bay cheap snacks and rest",
+        "planned_start_time": "18:00:00",
+        "planned_end_time": "18:45:00",
+        "expected_duration_minutes": 45,
+        "item_type": "food",
+        "place_id": "957b7f69-36f6-43b2-8436-e7dc83dc494d",
+        "estimated_cost": 100,
+        "estimated_cost_currency": "HKD",
+        "description": "Choose Tong Kee Bao Dim OR Keung Kee; small shared takeaway portions and a break.",
+        "transport_instructions": "Choose buns/dim sum at Tong Kee Bao Dim, 11 Canal Road West, OR pan-fried cheung fun/local snacks at Keung Kee, 406 Lockhart Road. They are alternatives. From the Causeway Bay MTR food-side exit allow 5–10 min; from either snack stop allow 10–15 min walking to Lan Fong/Pak Sha Road before 19:00. Rest somewhere lawful without blocking shopfronts.",
+        "details": {
+          "timingType": "TARGET",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED",
+          "recommended": "Walk",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "approxDurationMinutes": 15,
+              "approxCost": "HK$0",
+              "route": "Causeway Bay station / Canal Road West or Lockhart Road snack stop → Lee Gardens / Lan Fong Road / Pak Sha Road.",
+              "notes": "Allow crossings and holiday crowds; follow on-site access controls."
+            }
+          ],
+          "foodNearby": [
+            "Tong Kee Bao Dim: G/F, 11 Canal Road West — buns / dim sum",
+            "OR Keung Kee: G/F, 406 Lockhart Road — pan-fried cheung fun / local snacks"
+          ],
+          "costStatus": "HK$80–120 total for two, estimated, including any later shared egg waffle. HK$100 is the single midpoint allowance; do not add the waffle or both snack-shop alternatives again.",
+          "dietaryNote": "No beef or beef broth, including sauces, soup and fillings. Confirm ingredients; choose pork, chicken or seafood snacks only when clear.",
+          "operatingHours": "Tong Kee / Keung Kee are listed in the under-HK$50/person bracket per the trip brief; verify menu and 1 Jan holiday hours. Keung Kee regular Tue–Sun 12:00–22:00, closed Monday. New Year’s Day service remains unconfirmed.",
+          "fallback": "If Mammy Pancake holiday hours or queue make 19:50 tight, buy the shared egg waffle during this food window before the lights, within the same budget."
+        }
+      },
+      "before": {
+        "title": "d91e66b1033dc4aa2dc8011791c543a8f09d82f146e878a5308512c23c6077a6",
+        "planned_start_time": "add6da2024606423a25ac692cb7440eae2193edcde9686fe93967f640d76a9d9",
+        "planned_end_time": "967a1310edeb20b0c19f324d47e28b042b7b309480cdc64b0b6fe840d77d8f2b",
+        "expected_duration_minutes": "811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c",
+        "item_type": "5511fb5e8a2c96b185213711680081afd9450f21ee303501d25ea1295808d7bc",
+        "place_id": "73c05cc4e700c6eb434fb2e89dfd9fe4eb2027edb8f23868203d7f3cd11a161f",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "transport_instructions": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "details": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "02ac4ac7-ca6b-47e7-a035-d7c6135b8ccc",
+      "label": "Causeway Bay Elf Village projections",
+      "values": {
+        "title": "Causeway Bay Elf Village projections",
+        "planned_start_time": "19:00:00",
+        "planned_end_time": "19:45:00",
+        "expected_duration_minutes": 45,
+        "item_type": "attraction",
+        "place_id": "c0dbd9f5-bfb2-44b5-a07c-221f544ff199",
+        "checklist_item_id": null,
+        "estimated_cost": 0,
+        "estimated_cost_currency": "HKD",
+        "description": "Lan Fong Road and Pak Sha Road projections; market, parade and workshops only if dates are confirmed.",
+        "transport_instructions": "From the snack stop walk about 10–15 min to the Lee Gardens area. View Elf Village projections along Lan Fong Road and Pak Sha Road, allowing a few minutes between streets and 10–15 min for crowds/viewing positions. 19:00 is our arrival target within the published 19:00–22:00 window; no individual cycle is assumed.",
+        "details": {
+          "timingType": "TARGET",
+          "booking": "not-required",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED",
+          "recommended": "Walk",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "approxDurationMinutes": 15,
+              "approxCost": "HK$0",
+              "route": "Snack stop → Lan Fong Road → Pak Sha Road; explore Lee Gardens public streets.",
+              "notes": "Allow crossings and holiday crowds; follow on-site access controls."
+            }
+          ],
+          "operatingHours": "Elf Village projections: 19:00–22:00, 25 Nov 2026–3 Jan 2027. Individual show starts/repeat intervals unconfirmed.",
+          "eventStatus": "Light-show window published. Market, parade and workshops remain conditional on separate confirmed 1 Jan dates/times.",
+          "quickNote": "The Causeway Bay food/lights visit replaces the hotel rest and Mong Kok round trip. No compulsory roast-meat dinner is added.",
+          "fallback": "If Boxing Day later has a market/parade not offered on 1 Jan, consider that as an alternative to the 26 Dec night Peak; keep this 1 Jan projection/snack plan unless deliberately revised."
+        }
+      },
+      "before": {
+        "title": "237c857b90e1b13ab947d1d3dd5f6a895cdfad2d1f2813381e546950d37ed871",
+        "planned_start_time": "404fcde229d10a01e195d1a6dc89d573b1e029ae0398c85f57dd2d6cd0d5daee",
+        "planned_end_time": "8b4f399b31ce8a32245a09ce5ba0e27dc9c11f23e30209580bc96fa838429f77",
+        "expected_duration_minutes": "2abaca4911e68fa9bfbf3482ee797fd5b9045b841fdff7253557c5fe15de6477",
+        "item_type": "90960c7a6145a97cbb09d6478535c2b31f76050310286dabe9ae2463ee003850",
+        "place_id": "943ba44328cdb1380e1391a38c875bf787c8bc623142d6464b58dcbfaab95cb8",
+        "checklist_item_id": "13bbeae10158fe8ef61545c4a7f37c0977c0a77ccce269a8fe9ab9abdf00d1ba",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "description": "396d2d08fbbe8a5ee39d0e9c82391bbf01209ece20ad5d9ff698a5b746ab37e6",
+        "transport_instructions": "550a8dfbf801a88d13ddb846a16a271275b583130a27e456fe69c1f264537ff0",
+        "details": "b194d64fa648a187eb51ad749c9165215abaecc9ac9a866ddc64ee01a573bbf8"
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "8cfb9fb6-5b85-4622-b856-54daa69099b8",
+      "label": "Optional shared egg waffle — Mammy Pancake",
+      "values": {
+        "itinerary_day_id": "80554de2-23e8-463f-8799-1497b2bdc9c3",
+        "date": "2027-01-01",
+        "title": "Optional shared egg waffle — Mammy Pancake",
+        "item_type": "food",
+        "place_id": "09c5528f-31d5-48b3-9a6a-ccda662a969d",
+        "checklist_item_id": "bdbc0715-7adf-4ecf-a126-65dc0eb2f4ed",
+        "status": "PLANNED",
+        "priority": "OPTIONAL",
+        "planned_start_time": "19:50:00",
+        "planned_end_time": "20:10:00",
+        "expected_duration_minutes": 20,
+        "sequence": 115,
+        "description": "Shop 5, 36 Jardine’s Bazaar; skip if already bought before the lights.",
+        "transport_instructions": "Walk about 5–10 min from Lan Fong/Pak Sha Road to Mammy Pancake, Shop 5, 36 Jardine’s Bazaar, near Causeway Bay Exit F1. Share one egg waffle if open and the queue fits.",
+        "details": {
+          "timingType": "OPTIONAL",
+          "recommended": "Walk",
+          "transportOptions": [
+            {
+              "name": "Walk",
+              "approxDurationMinutes": 10,
+              "approxCost": "HK$0",
+              "route": "Lan Fong Road / Pak Sha Road → 36 Jardine’s Bazaar, Shop 5.",
+              "notes": "Allow crossings and holiday crowds; follow on-site access controls."
+            }
+          ],
+          "operatingHours": "Official regular hours 12:00–20:45 daily. 1 Jan holiday hours and last order unconfirmed.",
+          "costStatus": "Included in the earlier HK$80–120/two shared-snack allowance; no second numeric charge.",
+          "fallback": "Get it before the lights if the posted holiday closing/queue makes this late stop tight. Skip this row if already eaten; keep the hotel return/packing time.",
+          "dietaryNote": "Confirm chosen toppings/fillings respect no beef / no beef broth."
+        }
+      }
+    },
+    {
+      "table": "itinerary_items",
+      "id": "b5465b1c-84d0-47f7-bd5e-37228b2616e7",
+      "label": "Causeway Bay → Yau Ma Tei via Admiralty",
+      "values": {
+        "title": "Causeway Bay → Yau Ma Tei via Admiralty",
+        "planned_start_time": "20:10:00",
+        "planned_end_time": "21:00:00",
+        "expected_duration_minutes": 50,
+        "item_type": "transport",
+        "estimated_cost": 26.4,
+        "estimated_cost_currency": "HKD",
+        "recommended_departure_time": "20:10:00",
+        "description": "Go straight back to the hotel; no Mong Kok round trip.",
+        "transport_instructions": "From Jardine’s Bazaar / Lee Gardens, walk 5–10 min to Causeway Bay MTR (F1/F2 as convenient). Island line towards Kennedy Town → Admiralty; change inside the paid area to Tsuen Wan line towards Tsuen Wan → Yau Ma Tei, Exit C; walk 5–8 min to Bridal Tea House. Include train waits and 5–10 min for the interchange. Allow 40–50 min door to door.",
+        "details": {
+          "timingType": "TARGET",
+          "estimatedCostScope": "PARTY",
+          "estimatedCostStatus": "EXPECTED",
+          "recommended": "MTR via Admiralty",
+          "transportOptions": [
+            {
+              "name": "MTR via Admiralty",
+              "approxDurationMinutes": 50,
+              "approxCost": "HK$13.20/adult Octopus · HK$26.40/two",
+              "route": "Causeway Bay → westbound Island line → Admiralty → Tsuen Wan line towards Tsuen Wan → Yau Ma Tei Exit C → hotel.",
+              "notes": "40–50 min including station access, waits, interchange and hotel walk; aim hotel by 21:00."
+            },
+            {
+              "name": "Taxi",
+              "approxDurationMinutes": 40,
+              "approxCost": "HK$130–190/car, estimated including applicable harbour tolls",
+              "route": "Legal Causeway Bay taxi rank outside pedestrian controls → Bridal Tea House, 6 Arthur Street.",
+              "notes": "30–50 min with queues/traffic. Ask for the route/tolls; actual meter applies, replacing MTR fare."
+            }
+          ],
+          "farePerPerson": "HK$13.20 adult Octopus.",
+          "fareForTwo": "HK$26.40 total for both.",
+          "quickNote": "Packing remains 21:25–22:30. If the waffle queue is long, skip it or move it before the lights; protect return and packing time."
+        }
+      },
+      "before": {
+        "title": "90e9b009fd6dabe34ba235f6802532bdfa8ec3492e1df52ef124eeadee9b50e6",
+        "planned_start_time": "8b4f399b31ce8a32245a09ce5ba0e27dc9c11f23e30209580bc96fa838429f77",
+        "planned_end_time": "173e8e8e9b758905f2623da0dd845cc180f6b5cf06f7f836da08bae696ccc458",
+        "expected_duration_minutes": "b7a56873cd771f2c446d369b649430b65a756ba278ff97ec81bb6f55b2e73569",
+        "item_type": "b44b75350f7378905381fb7760c56076471463c57df3db3618811e1fe4149a91",
+        "estimated_cost": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "estimated_cost_currency": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "recommended_departure_time": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "transport_instructions": "e8d08cdcfa116f838cdc401c13b96120925d1f8d219ed8d36038351844a54f69",
+        "details": "6e3fc7842b83975d19f97d0c491fd5a22ee15afde0d3654e9212067cb6116549"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "bdbc0715-7adf-4ecf-a126-65dc0eb2f4ed",
+      "label": "Try egg waffles",
+      "values": {
+        "planned_day": "2027-01-01",
+        "linked_place_id": "09c5528f-31d5-48b3-9a6a-ccda662a969d",
+        "linked_itinerary_item_id": "8cfb9fb6-5b85-4622-b856-54daa69099b8",
+        "description": "Optional shared egg waffle at Mammy Pancake, Shop 5, 36 Jardine’s Bazaar, about 19:50 on 1 Jan. Regular closing 20:45; holiday hours unconfirmed. Buy before the lights if needed. Included in the HK$80–120/two Causeway Bay snack allowance."
+      },
+      "before": {
+        "planned_day": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "linked_place_id": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "linked_itinerary_item_id": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "description": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "4a94b703-a269-5aa2-925f-ab6a8cdddc09",
+      "label": "Try half-fat, half-lean char siu",
+      "values": {
+        "planned_day": "2026-12-29",
+        "linked_place_id": "5c8d0e7f-c553-55dc-8d93-7f5a8e2b7d34",
+        "linked_itinerary_item_id": "cb34c752-eea4-49b7-9810-771990e304c9",
+        "description": "Taste at Chung Wah on 29 Dec if good value, or at another convenient meal if still untasted. Ask for 半肥瘦叉燒 — half-fat, half-lean char siu, sweet barbecued pork. One shared char siu + crispy pork combination rice can cover both pork tastings affordably. The meats can be tried on different dates or at different restaurants. No beef / no beef broth, including optional soup.",
+        "notes": "29 Dec or 1 Jan: 半肥瘦叉燒 (sweet barbecued pork). Share a combo rice; tick independently. The 1 Jan Mong Kok crawl is replaced by Causeway Bay snacks/lights; no extra roast-meat detour that evening."
+      },
+      "before": {
+        "planned_day": "ff883158e65e5b0a81c0913f90cbee1bc8f2ae3f181fe7f615e81a77ce3033d8",
+        "linked_place_id": "d5ddb548f21895b9335f83a3b5ab94b7066faef6c128cb3282572656c14f796b",
+        "linked_itinerary_item_id": "57075e54cb285a00565d2d7d42e14c70ffc0d9a2b5530b0f248ea56081ed0895",
+        "description": "6e57ef0d234f7644866154f5ffece8315930e4c95d01138b34c1e173cba9a507",
+        "notes": "9a5f8e01c5e936fb4778b4625415409c666aa542a2fa41bbd70cc5d766b4f7ce"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "5a1a1085-1c44-559e-ae8a-15dd70d8b1be",
+      "label": "Try crispy roast pork belly",
+      "values": {
+        "planned_day": "2026-12-29",
+        "linked_place_id": "5c8d0e7f-c553-55dc-8d93-7f5a8e2b7d34",
+        "linked_itinerary_item_id": "cb34c752-eea4-49b7-9810-771990e304c9",
+        "description": "Taste at Chung Wah on 29 Dec if available and good value, or at another convenient meal if still untasted. 燒肉 / 燒腩仔 is crispy roast pork belly. Share a pork-combination rice plate; do not require a large separate platter or all three meats in one meal. Complete independently whenever tasted. No beef / no beef broth, including optional soup.",
+        "notes": "29 Dec or 1 Jan: 燒肉 / 燒腩仔 (crispy roast pork belly). Tick independently, even at a different meal. The 1 Jan Mong Kok crawl is replaced by Causeway Bay snacks/lights; no extra roast-meat detour that evening."
+      },
+      "before": {
+        "planned_day": "ff883158e65e5b0a81c0913f90cbee1bc8f2ae3f181fe7f615e81a77ce3033d8",
+        "linked_place_id": "d5ddb548f21895b9335f83a3b5ab94b7066faef6c128cb3282572656c14f796b",
+        "linked_itinerary_item_id": "57075e54cb285a00565d2d7d42e14c70ffc0d9a2b5530b0f248ea56081ed0895",
+        "description": "750a33fd75146e0dc32b2396ccb586783e2ecc26ea19ef7b3b569d3b7f4e53fe",
+        "notes": "48b35d5bc2dfe3c269b8e892b6a536739619a40799ec90a4c5371842d072799e"
+      }
+    },
+    {
+      "table": "places",
+      "id": "03bfceea-49a4-56fd-95e7-5ff8fbd97d5c",
+      "label": "Ki’son Roasted Goose — Mong Kok Road",
+      "values": {
+        "priority": "OPTIONAL",
+        "notes": "Optional roast-meat fallback for another convenient meal, subject to stock and prices. The former 1 Jan Mong Kok crawl is replaced by Causeway Bay street snacks and Elf Village; this branch is no longer a scheduled 1 Jan stop. Half-fat, half-lean char siu: 半肥瘦叉燒; crispy pork: 燒肉 / 燒腩仔. Share small portions if still untasted. No beef / no beef broth, including optional soup. Existing price references are estimates; verify on site."
+      },
+      "before": {
+        "priority": "e6dc3967ddca95b12f6a15d52f979559c6b99bef27f3ea452921efbf88f47299",
+        "notes": "d33730b02f32ded7e5d6f71e095b9ed3b1e6bde041f1ba4b459ad8f204c4494c"
+      }
+    },
+    {
+      "table": "checklist_items",
+      "id": "2f7ce255-9265-564e-b8a7-0c402aa368f1",
+      "label": "Recheck roast-meat prices and availability",
+      "values": {
+        "description": "Reconfirm Chung Wah dine-in prices, evening goose stock and fresh batches for 29 Dec; decide whether reservation/preorder is useful. Ki’son branches remain optional fallbacks at a convenient meal, with their own hours/stock/sharing checks. The former 1 Jan Mong Kok crawl is replaced by Causeway Bay snacks/lights; no extra roast-meat detour.",
+        "notes": "Protect the existing 29 Dec goose dinner and independent pork tastings; no extra 1 Jan restaurant visit."
+      },
+      "before": {
+        "description": "928229ff48d4e1d26b0ad1f6fa231bf8b1193e210f7957cf154943ddb9970e5b",
+        "notes": "65cc5bab5b9d723d1f84bc62bb7424313c98c17d0174a89591272cf6d5308b39"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "808ec08c-2a6c-5796-af9b-0e3bdaf07315",
+      "label": "Roast goose, char siu & crispy pork",
+      "values": {
+        "body": "29 Dec, 19:00–20:30: Chung Wah Roast Goose / 中華燒鵝傳承, G/F 497A Nathan Road, near Yau Ma Tei Exit C. A relaxed dinner after Lantau. Roast goose is the priority: start with rice meals for two, share, and add char siu or crispy pork only if good value. The three tastings may happen at different meals. Allow HK$160–200 total for two as a planning estimate, not a menu quotation. A third-party guide reports an approximately HK$80 solo goose-and-crispy-pork set; its current contents and price remain unverified. Published regular hours are 10:00–22:00 daily; that does not guarantee goose stock at 19:00. Check current prices, evening stock / fresh-batch timing and whether reservation or preorder is useful before travel.\n\nWalk: from Exit C allow 3–5 minutes, HK$0. From Bridal Tea House, 6 Arthur Street, the mapped walk via Arthur Street and Man Ming Lane is about 170 m / 2 minutes; allow 3–5 minutes, HK$0, and the same for the return. If goose is unavailable, Ki’son at 546 Nathan Road, Shops B–C, G/F, Mong Kok Building, near Exit A2 is about 230 m / 4 minutes from Chung Wah; allow 5–8 minutes with crossings, HK$0. Use it only if open and stocked.\n\n1 Jan evening now uses Causeway Bay cheap snacks and Elf Village projections, followed by a direct hotel return. The former Mong Kok/Ki’son crawl is retired. Try remaining roast meats at the 29 Dec dinner or another convenient meal; keep tastings independent and portions small. Ki’son is optional elsewhere, not an extra 1 Jan detour.\n\nOrder 半肥瘦叉燒: half-fat, half-lean char siu, sweet barbecued pork. 燒肉 / 燒腩仔 is crispy roast pork belly. Tick goose, char siu and crispy pork independently after tasting. Keep no beef / no beef broth, including any complimentary or optional soup; confirm ingredients or skip soup.\n\nFoodpanda Mong Kok online base prices checked 1 Nov 2026, before promotions: goose rice from HK$70; two-meat rice from HK$70; goose plus one other meat rice from HK$75. Supplements may apply. These are not verified dine-in prices or prices for the Yau Ma Tei branch. Mong Kok’s published regular 10:00–22:00 daily hours do not confirm New Year’s Day opening or meat stock. Ki’son remains an optional fallback outside the new 1 Jan evening route.\n\n25 Dec stays flexible: nearby roast meats are only an optional early opportunity after Aqua Luna if open and stocked; late-evening goose is not the main plan. No extra compulsory visit. Dinner / tasting allowances replace or form part of existing meal spending; do not count another dinner.\n\nSources and rechecks:\nhttps://www.openrice.com/zh/hongkong/r-中華燒鵝傳承-油麻地-港式-燒臘-r994488\nhttps://www.corner.inc/place/pbToexSa5ALY\nhttps://www.openrice.com/en/hongkong/r-kison-roasted-goose-mong-kok-hong-kong-style-chinese-bbq-r732289\nhttps://www.openrice.com/zh-cn/hongkong/r-棋子燒鵝-油麻地-港式-燒臘-r1147645\nhttps://www.foodpanda.hk/restaurant/szjv/kison-roasted-goose-mongkok",
+        "summary": "29 Dec: Chung Wah goose dinner and independent pork tastings. 1 Jan: Causeway Bay cheap snacks, no Mong Kok detour."
+      },
+      "before": {
+        "body": "05a703f06282621a28c9c6e7fe498c5eb48f613e02c5106c69895cc8de52dfdb",
+        "summary": "395f6719c95d587a2e507ea1865dafd96e5f0aa986074211f0c7256e6f1e344c"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "da297e8e-751c-460f-b87e-54f77c76127e",
+      "label": "Arrival at Hong Kong Airport",
+      "values": {
+        "body": "After the 13:30 landing, clear immigration and collect bags; allow 60–90 min and treat all later times as targets. Use airport Wi-Fi and save the order QR/vouchers offline.\nSmarTone: U Roaming, Terminal 1 Arrivals counter A16; saved booking hours 07:00–23:30 daily. Show the Trip.com order-detail QR and passport, complete real-name registration and test data.\nTourist Octopus: collect the TWO prepaid cards at Arrivals Hall A, A01 Eternal East; voucher hours 08:00–21:00. Each includes HK$50. Check T-Union logo and balance.\nThen spend at most 5 min asking whether a 1O1O still operates on T1 L5 and redeems this exact Agoda/KKday CSL voucher. Older references name it; the current official shop lists and designated redemption list omit the airport. Do not rely on airport redemption or search other floors.\nTarget A21 15:15 → hotel 16:30; rest until 17:10. If CSL is still uncollected, bus/MTR to 1O1O, 28 Hankow Road, for about 17:40–18:05, then walk to the Christmas waterfront. Skip the store if airport redemption succeeded. Withdraw only a small amount of HKD if needed.\nAfter the SIM pickup, walk to the Cultural Centre Viewing Deck by 19:00 for free TST WinterFest, then museums until about 20:20; dinner around 20:30. If pickup is late, dinner first and projections afterward until 01:00 on 26 Dec. The unbooked cruise is retired; there is no pier check-in. Recheck pickup hours, voucher validity and projection access before travel."
+      },
+      "before": {
+        "body": "e30a09d627a85c7bd00b7d1fd86be1ba872df303ddc39de224b25c3ada8727e7"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "6c111a5b-f657-4ef1-9731-87f4a3839750",
+      "label": "Transport planning assumptions",
+      "values": {
+        "body": "Arrival/SIM pickup locations and official shop hours were checked on 10 Nov 2026 against the booked vouchers and CSL/1O1O/SmarTone sources. Current shop hours are not confirmation of Christmas-day stock or acceptance of every reseller voucher. The historical airport 1O1O location is not verified as currently operating; Hankow Road is the planned redemption. All local journey times, bus/MTR/taxi budgets and queue allowances are estimates, not December departures or fare quotations. Recheck APP1933/MTR, holiday road controls and WinterFest crowd/access notices. The rest of the trip retains its latest scoped updates and their operator rechecks.\n11 Nov WinterFest revision: free TST displays replace the unbooked cruise, Central precedes the road-based night Peak, confirmed Disneyland tickets are linked, and 1 Jan returns directly from Causeway Bay via Admiralty. MTR fare matrix currently linked by MTR is effective 20 Sep 2026. Operator fares are published references; journey times, snack/taxi amounts and holiday queues are estimates. Recheck daily Disney hours/showtimes and final NYE transport."
+      },
+      "before": {
+        "body": "a0a2945f7e06e3444cc4b8f2887d29419f373734dacf0aea0f57ec441a768723"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "7438f85f-c9f8-4bc5-a995-8c22c5c534bd",
+      "label": "WinterFest — three evenings and rechecks",
+      "values": {
+        "section": "Planning",
+        "title": "WinterFest — three evenings and rechecks",
+        "summary": "25 Dec TST · 26 Dec Central + night Peak · 1 Jan Causeway Bay · TST projections suspended on NYE",
+        "icon": "🎄",
+        "sort_order": 27,
+        "body": "25 Dec: walk from Hankow Road via Christmas waterfront to the Cultural Centre Viewing Deck by 19:00. The Stars of Christmas Concert at Clock Tower/Cultural Centre, then Northern Lights at Museum of Art/Space Museum; free outdoor viewing and walking. Our 19:00–20:20 block is a visit target, not confirmed individual show times. Published 25 Dec window 19:00–01:00 on 26 Dec. Dinner about 20:30; if SIM pickup is late, dinner first and projections afterward. Both TST displays suspended 31 Dec; partial suspension 28–30 Dec.\n26 Dec: Statue Square Gardens 17:45–19:30; 22-metre tree/Christmas Express/market if operating. Tree lights 18:00, South Statue Square projection 19:00, repeats every 30 min; 19:30 backup shifts onward plan about 30 min. Current Christmas Town window on Boxing Day is 11:00–01:30 on 27 Dec; projection window 19:00–01:00 on 27 Dec. Separate market Sat/public-holiday 12:00–22:00 is from the brief and needs reconfirmation. Night Peak is default via green minibus 1 / Bus 15 / taxi, then Central→TST Star Ferry if timing permits. Lee Tung snowfall only replaces Peak if an official 20:00-or-later 26 Dec show is confirmed. Causeway Bay market/parade can replace the same slot if confirmed for 26 Dec but absent on 1 Jan.\n1 Jan: Monster Building in daylight, westbound MTR to Causeway Bay, shared cheap snacks about 18:00, Elf Village on Lan Fong/Pak Sha Road 19:00–19:45 within the published 19:00–22:00 window, optional Mammy Pancake about 19:50 (regular closes 20:45, holiday hours unconfirmed). Market/parade/workshops need confirmed dates/times. Return via Admiralty directly to Yau Ma Tei for packing.\nNYE: HKTB has announced Victoria Harbour fireworks; detailed viewing/access, crowd-control and transport announcements pending. Symphony of Lights ends 18 Nov 2026 and is not a Christmas/NYE attraction.\nhttps://www.discoverhongkong.com/eng/events/hong-kong-winterfest/winter-wonderland-in-tsim-sha-tsui.html\nhttps://www.discoverhongkong.com/eng/events/hong-kong-winterfest/winter-wonderland-in-central.html\nhttps://www.discoverhongkong.com/eng/events/hong-kong-winterfest/winter-wonderland-in-causeway-bay.html\nhttps://www.discoverhongkong.com/eng/events/hong-kong-winterfest.html"
+      }
+    },
+    {
+      "table": "trip_notes",
+      "id": "beceec11-bb39-4e20-920f-4c5a756bc4f6",
+      "label": "Disneyland — dated tickets and Christmas programme",
+      "values": {
+        "section": "Planning",
+        "title": "Disneyland — dated tickets and Christmas programme",
+        "summary": "30 Dec admission for two confirmed · 09:30 gate target · Santa Goofy + Momentous times pending",
+        "icon": "🏰",
+        "sort_order": 28,
+        "body": "Keep the confirmed two-person 30 Dec 2026 admission and original private PDF. It has two dated full-page e-tickets to scan at the Main Entrance turnstiles; no ticket-purchase queue or duplicate admission purchase. Save both pages offline; optional Disney reservation lookup is a verification step under the current ticket/supplier instructions.\n09:30 gate arrival remains; 10:00–21:30 park hours are provisional until the date-specific calendar confirms them. Yau Ma Tei → Lai King → Sunny Bay → Disneyland Resort, reverse on return. Adult Octopus fare reference HK$22.20 each way: HK$44.40 for two per leg, HK$88.80 round trip. Allow station walks, two transfers, gate/security time and the post-show exit crowd.\nWhile in World of Frozen for rides, visit the winter market/festive stalls; Olaf appearance is possible without an assigned time. Prioritise Santa Goofy’s Main Street tree lighting with snowfall/drone effects alongside castle Momentous. Fit the daytime Mickey/Minnie Christmas castle stage show around rides. Obtain all daily times from Disney; do not assume a fixed show minute. Disney Christmas Live in Concert runs 21–22 Nov and 5–6 Dec, before this visit. January 5 Arendelle Winterfest is also after the trip.\nDeparture follows the actual last show, with 20–30 min exit/station-walk buffer plus MTR time. The displayed 21:30–23:15 return budget is provisional. Early Entry and Premier Access remain optional, unpurchased and outside committed spend.\nhttps://www.hongkongdisneyland.com/hkdl/disney-christmas-intl/\nhttps://www.hongkongdisneyland.com/calendars/day/\nhttps://www.mtr.com.hk/en/customer/tickets/octopus_fares.html"
+      }
+    }
+  ]
+}
